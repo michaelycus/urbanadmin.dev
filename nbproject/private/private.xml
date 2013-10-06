@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/C:/www/Registra_Requerimento/index.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/controllers/home.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/controllers/admin.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/views/bairros/listar_bairros.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/views/requerentes/listar_requerentes.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/views/requerentes/cadastrar_requerente.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/views/requerentes/editar_requerente.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/views/requerimentos/cadastrar_requerimento.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/views/requerimentos/editar_requerimento.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/views/requerimentos/listar_requerimentos.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/views/layouts/home.php</file>
+        <file>file:/C:/www/Registra_Requerimento/application/views/layouts/layout.php</file>
+    </open-files>
+</project-private>
