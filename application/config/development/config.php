@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/sistema_txai/';
+$config['base_url']	= 'http://localhost/registra_requerimento/';
 
 /*
 |--------------------------------------------------------------------------

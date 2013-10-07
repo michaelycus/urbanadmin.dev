@@ -42,6 +42,10 @@ $route['default_controller'] = "admin";
 $route['404_override'] = '';
 $route['logout'] = 'admin/logout';
 
+$route['cadastro'] = 'front_cadastro';
+//$route['cadastro'] = 'front_cadastro';
+$route['cadastro/(:any)'] = "front_cadastro/$1";
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

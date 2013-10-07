@@ -10,7 +10,7 @@ class MY_Controller extends CI_Controller
         session_start();
         
         // Check authentication
-        $no_redirect = array('login_view', 'admin', 'some/controller');
+        $no_redirect = array('login_view', 'admin', 'cadastro', 'some/controller');
         if (!isset($_SESSION['usuario']) && !in_array(uri_string(), $no_redirect))
         {
             redirect('admin');
@@ -27,5 +27,11 @@ class MY_Controller extends CI_Controller
     {
         $this->data['subview'] = $subview;        
         $this->load->view('layouts/layout', $this->data);
+    }
+    
+    public function load_front_view ($subview)
+    {
+        $this->data['subview'] = $subview;        
+        $this->load->view('front/layout', $this->data);
     }
 }

@@ -1,8 +1,14 @@
+<?php
+$main = $this->uri->segment(1);
+$view = $this->uri->segment(2);
+$active_class = ' class="active" ';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
-        <title>Sistema TXAI</title>
+        <title>Cadastro de Requerimentos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -43,12 +49,15 @@
         <link rel="apple-touch-icon-precomposed" href="<?php echo base_url(); ?>ico/apple-touch-icon-57-precomposed.png">
         <link rel="shortcut icon" href="<?php echo base_url(); ?>ico/favicon.png">
 
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>        
+        <link rel="stylesheet" href="<?php echo base_url(); ?>css/jquery-ui.css"/>        
+        
+        <!-- Scripts -->
+        <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/jquery-ui.js"></script>
         
     </head>
 
     <body>
-
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container-fluid">
@@ -57,95 +66,88 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="#">TXAI</a>
+                    <a class="brand" href="#">Cadastro de Requerimentos</a>
                     <div class="nav-collapse collapse">
                         <p class="navbar-text pull-right">
                             <a href="#" class="navbar-link"><?php echo $_SESSION['nome']; ?></a> <?php echo anchor('logout', '(Sair)'); ?>
                         </p>
                         <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
-                            <li><?php echo anchor('usuarios', 'Usuários'); ?></li>
-                            <li><a href="#contact">Sobre</a></li>
+                            <?php
+                            echo '<li';
+                            if ($main == 'usuarios')
+                                echo $active_class; echo '>';
+                            echo anchor('usuarios', 'Usuários') . '</li>';
+                            
+                            echo '<li';
+                            if ($main == 'sobre')
+                                echo $active_class; echo '>';
+                            echo anchor('sobre', 'Sobre') . '</li>'
+                            ?>                            
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <?php
-        $view = $this->uri->segment(2);
-        $class = ' class="active" ';
-        ?>
 
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="span3">
                     <div class="well sidebar-nav">
                         <ul class="nav nav-list">
-                            <li class="nav-header">Plano de Ação</li>
+                            
+                            <!-- Requerimentos -->
+                            <li class="nav-header"><i class="icon-file"></i> Requerimentos</li>
                             <?php
                             echo '<li';
-                            if ($view == 'adicionar_plano_acao')
-                                echo $class; echo '>';
-                            echo anchor('plano_acoes/adicionar_plano_acao', 'Adicionar') . '</li>'
+                            if ($view == 'cadastrar_requerimento')
+                                echo $active_class; echo '>';
+                            echo anchor('requerimentos/cadastrar_requerimento', 'Cadastrar requerimento') . '</li>';
+                          
+                            echo '<li';
+                            if ($view == 'listar_requerimentos')
+                                echo $active_class; echo '>';
+                            echo anchor('requerimentos/listar_requerimentos', 'Listar') . '</li>'
                             ?>
+                            
+                            <!-- Requerentes -->
+                            <li class="nav-header"><i class="icon-user"></i> Requerentes</li>
                             <?php
                             echo '<li';
-                            if ($view == 'lista_plano_acoes')
-                                echo $class; echo '>';
-                            echo anchor('plano_acoes/lista_plano_acoes', 'Listar planos') . '</li>'
-                            ?>
+                            if ($view == 'da_cidade')
+                                echo $active_class; echo '>';
+                            echo anchor('requerentes/da_cidade', 'Da cidade') . '</li>';
+                            
+                            echo '<li';
+                            if ($view == 'de_outras_cidades')
+                                echo $active_class; echo '>';
+                            echo anchor('requerentes/de_outras_cidades', 'De outras cidades') . '</li>';
+                            
+                            echo '<li';
+                            if ($view == 'vereadores')
+                                echo $active_class; echo '>';
+                            echo anchor('requerentes/vereadores', 'Vereadores') . '</li>';
+                            
+                            echo '<li';
+                            if ($view == 'cadastrar_requerente')
+                                echo $active_class; echo '>';
+                            echo anchor('requerentes/cadastrar_requerente', 'Cadastrar requerente') . '</li>'
+                            ?>                            
+                            
+                            <!-- Bairros -->
+                            <li class="nav-header"><i class="icon-home"></i> Bairros</li>
                             <?php
                             echo '<li';
-                            if ($view == 'adicionar_categoria')
-                                echo $class; echo '>';
-                            echo anchor('categorias_pa/adicionar_categoria', 'Adicionar categoria') . '</li>'
-                            ?>
-                            <?php
+                            if ($view == 'cadastrar_bairro')
+                                echo $active_class; echo '>';
+                            echo anchor('bairros/cadastrar_bairro', 'Cadastrar') . '</li>';
+                            
                             echo '<li';
-                            if ($view == 'lista_categorias')
-                                echo $class; echo '>';
-                            echo anchor('categorias_pa/lista_categorias', 'Listar categorias') . '</li>'
+                            if ($view == 'listar_bairros')
+                                echo $active_class; echo '>';
+                            echo anchor('bairros/listar_bairros', 'Listar') . '</li>'
                             ?>
-                            <li class="nav-header">Ações</li>
-                            <?php
-                            echo '<li';
-                            if ($view == 'adicionar_acao_corretiva')
-                                echo $class; echo '>';
-                            echo anchor('acoes/adicionar_acao_corretiva', 'Adicionar ação corretiva') . '</li>'
-                            ?>
-                            <?php
-                            echo '<li';
-                            if ($view == 'lista_acoes_corretivas')
-                                echo $class; echo '>';
-                            echo anchor('acoes/lista_acoes_corretivas', 'Listar ações corretivas') . '</li>'
-                            ?>
-                            <?php
-                            echo '<li';
-                            if ($view == 'adicionar_acao_preventiva')
-                                echo $class; echo '>';
-                            echo anchor('acoes/adicionar_acao_preventiva', 'Adicionar ação preventiva') . '</li>'
-                            ?>
-                            <?php
-                            echo '<li';
-                            if ($view == 'lista_acoes_preventivas')
-                                echo $class; echo '>';
-                            echo anchor('acoes/lista_acoes_preventivas', 'Listar ações preventivas') . '</li>'
-                            ?>
-                            <li class="nav-header">Memória de Reunião</li>
-                            <?php
-                            echo '<li';
-                            if ($view == 'adicionar_memoria')
-                                echo $class; echo '>';
-                            echo anchor('memorias/adicionar_memoria', 'Adicionar') . '</li>'
-                            ?>
-                            <?php
-                            echo '<li';
-                            if ($view == 'lista_memorias')
-                                echo $class; echo '>';
-                            echo anchor('memorias/lista_memorias', 'Listar memórias') . '</li>'
-                            ?>
-                            <li class="nav-header">Indicadores de Desempenho</li>
-                            <li><a href="#">Link</a></li>              
+                            
+                            
                         </ul>
                     </div><!--/.well -->
                 </div><!--/span-->
@@ -158,21 +160,20 @@
             <hr>
 
             <footer>
-                <p>&copy; TXAI 2013</p>
+                <p>&copy; Cadastro Requerimento</p>
             </footer>
 
         </div><!--/.fluid-container-->
 
         <!-- Le javascript
         ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->    
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
+        <!-- Placed at the end of the document so the pages load faster -->          
         <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>    
         <script src="<?php echo base_url(); ?>js/bootbox.min.js"></script>  
         <script src="<?php echo base_url(); ?>js/bootstrap-modalmanager.js"></script>  
         <script src="<?php echo base_url(); ?>js/bootstrap-modal.js"></script>  
-        <script src="<?php echo base_url(); ?>js/functions.js"></script>  
+        <script src="<?php echo base_url(); ?>js/functions.js"></script>          
+        <script src="<?php echo base_url(); ?>js/jquery.maskedinput.min.js"></script>          
         
         <script>
             $(document).ready(function() {

@@ -41,6 +41,29 @@ define('USUARIO_ATIVO', 0);
 
 define('ITENS_POR_PAGINA', 20);
 
+define('REQUERIMENTO_SITUACAO_EM_ANALISE', 0);
+define('REQUERIMENTO_SITUACAO_ANALISADO', 1);
+define('REQUERIMENTO_SITUACAO_PROTOCOLADO', 2);
+define('REQUERIMENTO_SITUACAO_RESOLVIDO', 3);
+
+define('REQUERIMENTO_SITUACOES', serialize (array ( 0 => "Em análise",
+                                                    1 => "Analisado",
+                                                    2 => "Protocolado",
+                                                    3 => "" )));
+
+define('PESSOA_FISICA',0);
+define('PESSOA_JURIDICA',1);
+
+define('MORA_OUTRA_CIDADE',0);
+define('MORA_NA_CIDADE',1);
+
+define('REQUERENTE_TIPO_CIDADAO',0);
+define('REQUERENTE_TIPO_VEREADOR',1);
+
+
+
+
+
 define('ACOES_TIPO_AVERIGUACAO_PROCESSO', 1);
 define('ACOES_TIPO_AVERIGUACAO_AUDITORIA', 2);
 define('ACOES_TIPO_AVERIGUACAO_RECLAMACAO_CLIENTE', 3);
