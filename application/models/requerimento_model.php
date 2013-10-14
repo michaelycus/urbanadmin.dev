@@ -4,11 +4,6 @@ class Requerimento_model extends MY_Model
 {
     public $validation = array(
         array(
-            'field' => 'titulo',
-            'label' => 'TITULO',
-            'rules' => 'trim|required|max_length[256]',
-        ),
-        array(
             'field' => 'descricao',
             'label' => 'DESCRICAO',
             'rules' => 'required',

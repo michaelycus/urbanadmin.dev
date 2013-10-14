@@ -7,6 +7,8 @@ class Requerimentos extends MY_Controller
         parent::__construct();
         $this->load->model('requerimento_model');
         $this->load->model('bairros_model');
+        $this->load->model('cidades_model');
+        $this->load->model('requerente_model');
     }
 
     public function index()
@@ -16,13 +18,13 @@ class Requerimentos extends MY_Controller
 
     public function listar_requerimentos()
     {
-        $this->pagination->initialize(array(
-            'base_url' => base_url().'requerimentos/listar_requerimentos',
-            'total_rows' => $this->db->get('requerimentos')->num_rows()
-        ));
+//        $this->pagination->initialize(array(
+//            'base_url' => base_url().'requerimentos/listar_requerimentos',
+//            'total_rows' => $this->db->get('requerimentos')->num_rows()
+//        ));
 
-        $this->data['paginacao'] = $this->pagination->create_links();
-        $this->requerimento_model->limit(ITENS_POR_PAGINA, $this->uri->segment(3));
+//        $this->data['paginacao'] = $this->pagination->create_links();
+//        $this->requerimento_model->limit(ITENS_POR_PAGINA, $this->uri->segment(3));
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_with_bairros();
 
         $this->load_view('requerimentos/listar_requerimentos');
@@ -36,15 +38,18 @@ class Requerimentos extends MY_Controller
         $config['max_width'] = '2048';
         $config['max_height'] = '1024';
         $config['encrypt_name'] = TRUE;
+        
+        $upload_files = FALSE;
 
         $this->load->library('upload', $config);
 
         $this->form_validation->set_rules($this->requerimento_model->validation);
 
         $this->data['bairros'] = $this->bairros_model->get_all();
-
+        $this->data['requerentes'] = $this->requerente_model->get_vereadores();
+        
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('titulo','descricao','id_bairro'),$this->input->post());
+            $data = elements(array('descricao','id_bairro','id_rua'),$this->input->post());
             $data['data_requerimento'] = date('Y-m-d');
 
             $i = 1;
@@ -69,7 +74,7 @@ class Requerimentos extends MY_Controller
                 $i++;
             }
 
-            if ($upload_files)
+            if (!$this->data['error'])
             {
                 $this->requerimento_model->insert($data);
                 $this->session->set_userdata('requerimento_cadastrado','Requerimento cadastrado com sucesso!');
@@ -91,6 +96,8 @@ class Requerimentos extends MY_Controller
         $config['max_width'] = '2048';
         $config['max_height'] = '1024';
         $config['encrypt_name'] = TRUE;
+        
+        $upload_files = FALSE;
 
         $this->load->library('upload', $config);
 
@@ -99,7 +106,7 @@ class Requerimentos extends MY_Controller
         $this->data['bairros'] = $this->bairros_model->get_all();
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('titulo','descricao','id_bairro'),$this->input->post());
+            $data = elements(array('descricao','id_bairro','id_rua'),$this->input->post());
             $data['data_requerimento'] = date('Y-m-d');
 
             $i = 1;
@@ -124,7 +131,7 @@ class Requerimentos extends MY_Controller
                 $i++;
             }
 
-            if ($upload_files)
+            if (!$this->data['error'])
             {
                 $this->requerimento_model->update($data);
                 $this->session->set_userdata('requerimento_editado','Requerimento editado com sucesso!');
@@ -134,25 +141,12 @@ class Requerimentos extends MY_Controller
         endif;
         
         $this->data['requerimento'] = $this->requerimento_model->get($id);
+                
+        if ($this->data['requerimento']->id_rua != 0)
+            $this->data['ruas'] = $this->cidades_model->getRuas($this->data['requerimento']->id_bairro);
 
         $this->load_view('requerimentos/editar_requerimento');
-                
-        
 
-//        $this->form_validation->set_rules($this->memorias_model->validation);
-//
-//        if ($this->form_validation->run()==TRUE):
-//            $data = elements(array('nome','horario','local','pauta','participantes','principais_topicos','decisoes'),$this->input->post());
-//            $data['quando'] = $this->form_validation->convert_human_to_sql($_POST['quando']);
-//
-//            $this->memorias_model->update($this->input->post('id'), $data);
-//            $this->session->set_userdata('memoria_editada','Memória editada com sucesso!');
-//            redirect('memorias/editar_memoria/'.$this->input->post('id'));
-//        endif;
-//
-//        $this->data['memorias'] = $this->memorias_model->get($id);
-//
-//        $this->load_view('memorias/editar_memoria');
     }
 
     public function excluir_requerimento()

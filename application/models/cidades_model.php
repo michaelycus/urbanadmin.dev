@@ -2,7 +2,6 @@
 
 class Cidades_model extends CI_Model
 {
-
     function __construct()
     {
         parent::__construct();
@@ -22,5 +21,13 @@ class Cidades_model extends CI_Model
                         ->join('cidades', 'cidades.id_uf = estados.id')
                         ->get()->result();
     }
-
+    
+    function getRuas($id_bairro = null)
+    {          
+        return $this->db->select('ruas.id, ruas.nome')
+                        ->from('ruas')
+                        ->join('rua_bairro', 'rua_bairro.id_rua = ruas.id AND rua_bairro.id_bairro='.$id_bairro)
+                        ->get()->result();
+        
+    }
 }

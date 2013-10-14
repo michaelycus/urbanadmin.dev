@@ -16,7 +16,7 @@ class MY_Controller extends CI_Controller
             redirect('admin');
         }
         
-        $this->output->enable_profiler(ENVIRONMENT == 'development');
+//        $this->output->enable_profiler(ENVIRONMENT == 'development');
     }
     
     /**

@@ -15,13 +15,13 @@ class Bairros extends MY_Controller
 
     public function listar_bairros()
     {
-        $this->pagination->initialize(array(
-            'base_url' => base_url().'bairros/listar_bairros',
-            'total_rows' => $this->db->get('bairros')->num_rows()
-        ));
+//        $this->pagination->initialize(array(
+//            'base_url' => base_url().'bairros/listar_bairros',
+//            'total_rows' => $this->db->get('bairros')->num_rows()
+//        ));
         
-        $this->data['paginacao'] = $this->pagination->create_links();
-        $this->bairros_model->limit(ITENS_POR_PAGINA, $this->uri->segment(3));
+//        $this->data['paginacao'] = $this->pagination->create_links();
+//        $this->bairros_model->limit(ITENS_POR_PAGINA, $this->uri->segment(3));
         $this->data['bairros'] = $this->bairros_model->get_all();
 
         $this->load_view('bairros/listar_bairros');
