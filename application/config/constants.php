@@ -37,6 +37,9 @@ define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 
+define('NOME_CIDADE', 'Lajeado');
+define('CODENAME_CIDADE', 'lajeado');
+
 define('USUARIO_ATIVO', 0);
 
 define('ITENS_POR_PAGINA', 20);

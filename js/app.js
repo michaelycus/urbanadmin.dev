@@ -31,7 +31,8 @@ $(document).ready(function() {
         remeberExpandedSub: false, //remeber expanded sub menu by user
         hoverDropDown: false, //set false if not want to show dropdown on hover ( click instead)
         accordionIconShow: 'i-arrow-down-2',//icon for accordion expand
-        accordionIconHide: 'i-arrow-up-2'//icon for accordion hide
+        accordionIconHide: 'i-arrow-up-2',//icon for accordion hide
+        showThemer: false
     });
 
     //Disable certain links
