@@ -75,7 +75,7 @@
 <script src="<?php echo base_url(); ?>js/maps/raphael.js" charset="utf-8" ></script>
 <script src="<?php echo base_url(); ?>js/maps/jquery.mapael.js" charset="utf-8" ></script>
 <script src="<?php echo base_url(); ?>js/maps/cidade.js" charset="utf-8" ></script>
-<script src="<?php echo base_url(); ?>js/maps/requerimentos_por_bairro.js" charset="utf-8" ></script>
+<script src="<?php echo base_url(); ?>js/maps/populacao_por_bairro.js" charset="utf-8" ></script>
 
 
 <div class="crumb">
@@ -88,15 +88,13 @@
 
 <div class="container-fluid">
     <div id="heading" class="page-header">
-        <h1><i class="icon20 i-stack"></i> Requerimentos por bairro</h1>
+        <h1><i class="icon20 i-people"></i> População por bairro</h1>
     </div>
 
     <div class="row">        
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-body">
-
-                    <?php //print_r($teste); ?>
 
                     <div class="maparea1">
                         <div class="map">
@@ -112,5 +110,3 @@
         </div><!-- End .col-lg-6  -->     
     </div><!-- End .row-fluid  -->
 </div>
-
-

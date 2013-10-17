@@ -11,31 +11,21 @@ class Graficos extends MY_Controller
 //        $this->load->model('requerente_model');
     }
 
-    public function index()
+    public function populacao_por_bairro()
     {
-        $this->listar_requerimentos();
+        $this->load_view('graficos/populacao_por_bairro');
     }
-
+    
     public function requerimentos_por_bairro()
     {
-        $this->data['teste'] = $this->requerimento_model->count_requerimentos_with_bairros();
-
         $this->load_view('graficos/requerimentos_por_bairro');
     }
 
     public function gerar()
     {
         $this->data['bairros'] = $this->bairros_model->get_all();
+        $this->data['requerimentos_bairro'] = $this->requerimento_model->count_requerimentos_with_bairros();
         
         $this->load_view('graficos/gerar');
-    }
-
-    public function excluir_requerimento()
-    {
-        $id = $this->uri->segment(3);
-
-        $this->memorias_model->delete($id);
-        $this->session->set_userdata('memoria_excluida','Memória excluída com sucesso!');
-        redirect('memorias/lista_memorias');
     }
 }

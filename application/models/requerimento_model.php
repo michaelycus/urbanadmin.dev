@@ -26,7 +26,7 @@ class Requerimento_model extends MY_Model
     
     public function count_requerimentos_with_bairros()
     {
-        $this->db->select('requerimentos.id_bairro,COUNT(*), bairros.nome AS nome_bairro');
+        $this->db->select('requerimentos.id_bairro, bairros.code_name, COUNT(*) AS count_requerimentos_bairro, bairros.nome AS nome_bairro');
         $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
         $this->db->group_by('id_bairro');
 

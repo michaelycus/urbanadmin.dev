@@ -3,6 +3,8 @@ $this->load->helper('file');
 
 $codename_cidade = CODENAME_CIDADE;
 
+/***** População por bairro ******/
+
 $max=0;
 $segments = 20;
 
@@ -44,42 +46,6 @@ $data .=']
 },
 areas: {';
 
-//$data .='        
-//        {
-//            max: 1000,
-//            attrs: {
-//                fill: "#97e766"
-//            },
-//            label: "Com menos que 1000 habitantes"
-//        },
-//        {
-//            min: 1000,
-//            max: 2500,
-//            attrs: {
-//                fill: "#7fd34d"
-//            },
-//            label: "Entre 1000 e 2500 habitantes"
-//        },
-//        {
-//            min: 2500,
-//            max: 5000,
-//            attrs: {
-//                fill: "#5faa32"
-//            },
-//            label: "Entre 2500 e 5000 habitantes"
-//        },
-//        {
-//            min: 5000,
-//            attrs: {
-//                fill: "#3f7d1a"
-//            },
-//            label: "Mais que 5000 habitantes"
-//        }]
-//    }
-//},
-//areas: {';
-
-
 if (!empty($bairros))
 {        
     foreach ($bairros as $bairro):
@@ -101,14 +67,97 @@ EOF;
 });';
 }
 
+if ( ! write_file('js/maps/populacao_por_bairro.js', $data))
+{
+     echo 'Unable to write the file';
+}
+else
+{
+     echo 'Arquivo populacao_por_bairro.js gerado!<br />';
+}
+
+/***** END - População por bairro - END ******/
+
+
+/***** Requerimentos por bairro ******/
+
+$max=0;
+$segments = 10;
+
+if (!empty($requerimentos_bairro))
+{
+    foreach ($requerimentos_bairro as $r_b):
+        $max = max($r_b->count_requerimentos_bairro, $max);
+    endforeach;    
+}
+
+$max = $max + 1;
+
+$data = <<<EOF
+$(function() {
+    $(".maparea1").mapael({
+        map: {
+            name: "lajeado",
+            width: 700,
+            defaultArea: {
+                attrs: {
+                    fill: "#c9ffc9"
+                }
+            }
+        },
+        legend: {
+            area: {
+                display: true,
+                title: "Requerimentos por bairro",
+                slices: [
+EOF;
+
+for ($i=1; $i<=$segments; $i++)
+{
+    $data .= '{
+                min: '. round( ($max/$segments)*$i - ($max/$segments) )  .',
+                max: '. round( ($max/$segments)*$i ) .',
+                attrs: {
+                    fill: "'. rgb2hex(array(50, (255 - 10 * $i), 50) ) .'"}
+              },';
+}
+
+$data .=']
+    }
+},
+areas: {';
+
+if (!empty($requerimentos_bairro))
+{        
+    foreach ($requerimentos_bairro as $r_b):
+        if ($r_b->code_name!=NULL)
+        {
+            $data .= <<<EOF
+                    "$r_b->code_name":{
+                        value: "$r_b->count_requerimentos_bairro",
+                        href: "#",
+                        tooltip: {content: "<span style=\"font-weight:bold;\">$r_b->nome_bairro </span><br />Requerimentos: $r_b->count_requerimentos_bairro"},
+                    },
+EOF;
+            
+        }
+    endforeach;
+    
+    $data .='}
+    });
+});';
+}
+
 if ( ! write_file('js/maps/requerimentos_por_bairro.js', $data))
 {
      echo 'Unable to write the file';
 }
 else
 {
-     echo 'File written!';
+     echo 'Arquivo requerimentos_por_bairro.js gerado!<br />';
 }
+
+/***** END - Requerimentos por bairro - END ******/
 
 function rgb2hex($rgb) {
    $hex = "#";

@@ -92,7 +92,7 @@
         <script src="<?php echo base_url(); ?>js/app.js"></script><!-- Core js functions -->
         <script src="<?php echo base_url(); ?>js/pages/ui-elements.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/domready.js"></script><!-- Init plugins only for page -->
-        <script src="<?php echo base_url(); ?>js/pages/dashboard.js"></script><!-- Init plugins only for page -->
+        <!--<script src="<?php echo base_url(); ?>js/pages/dashboard.js"></script> Esse puglin impossibilita o carregamento do mapael -->
 
         <!-- Custom script -->
         <script src="<?php echo base_url(); ?>js/functions.js"></script>
@@ -256,9 +256,14 @@
                                 </a>
                                 <ul class="sub">
                                     <li>
+                                        <?php echo anchor('graficos/populacao_por_bairro',
+                                                '<span class="icon"><i class="icon20 i-people"></i></span>
+                                                 <span class="txt">População por bairro</span>');?>
+                                    </li>
+                                    <li>
                                         <?php echo anchor('graficos/requerimentos_por_bairro',
-                                                '<span class="icon"><i class="icon20 i-home-9"></i></span>
-                                                 <span class="txt">Requesições por bairro</span>');?>
+                                                '<span class="icon"><i class="icon20 i-stack"></i></span>
+                                                 <span class="txt">Requerimentos por bairro</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/listar_bairros',
