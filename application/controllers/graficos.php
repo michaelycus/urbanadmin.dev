@@ -7,8 +7,6 @@ class Graficos extends MY_Controller
         parent::__construct();
         $this->load->model('requerimento_model');
         $this->load->model('bairros_model');
-//        $this->load->model('cidades_model');
-//        $this->load->model('requerente_model');
     }
 
     public function populacao_por_bairro()
@@ -19,6 +17,16 @@ class Graficos extends MY_Controller
     public function requerimentos_por_bairro()
     {
         $this->load_view('graficos/requerimentos_por_bairro');
+    }
+    
+    public function requerimentos_por_tipo()
+    {
+        $this->load_view('graficos/requerimentos_por_tipo');
+    }
+    
+    public function requerimentos_por_vereador()
+    {
+        $this->load_view('graficos/requerimentos_por_vereador');
     }
 
     public function gerar()

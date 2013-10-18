@@ -77,15 +77,6 @@
 <script src="<?php echo base_url(); ?>js/maps/cidade.js" charset="utf-8" ></script>
 <script src="<?php echo base_url(); ?>js/maps/populacao_por_bairro.js" charset="utf-8" ></script>
 
-
-<div class="crumb">
-    <ul class="breadcrumb">
-        <li><a href="#"><i class="icon16 i-home-4"></i>Home</a></li>
-        <li><a href="#">Library</a></li>
-        <li class="active">Data</li>
-    </ul>
-</div>
-
 <div class="container-fluid">
     <div id="heading" class="page-header">
         <h1><i class="icon20 i-people"></i> População por bairro</h1>

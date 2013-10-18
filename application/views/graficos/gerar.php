@@ -79,6 +79,7 @@ else
 /***** END - População por bairro - END ******/
 
 
+
 /***** Requerimentos por bairro ******/
 
 $max=0;
@@ -158,6 +159,12 @@ else
 }
 
 /***** END - Requerimentos por bairro - END ******/
+
+
+
+/***** Requerimentos por tipo ******/
+
+/***** END - Requerimentos por tipo - END ******/
 
 function rgb2hex($rgb) {
    $hex = "#";

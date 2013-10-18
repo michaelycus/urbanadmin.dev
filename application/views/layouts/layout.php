@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Genyx admin v1.0</title>
+        <title>Urbis</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="SuggeElson" />
         <meta name="description" content="Genyx admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework" />
@@ -105,57 +105,6 @@
                 <div class="nav-no-collapse">
 
                     <ul class="nav navbar-nav pull-right">
- <!--                        <li class="divider-vertical"></li>
-                       <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="icon24 i-bell-2"></i>
-                                <span class="notification red">6</span>
-                            </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a href="#" class=""><i class="icon16 i-calendar-2"></i> Admin Jenny add event</a></li>
-                                <li role="presentation"><a href="#" class=""><i class="icon16 i-file-zip"></i> User Dexter attach file</a></li>
-                                <li role="presentation"><a href="#" class=""><i class="icon16 i-stack-picture"></i> User Dexter attach 3 pictures</a></li>
-                                <li role="presentation"><a href="#" class=""><i class="icon16 i-cart-add"></i> New orders <span class="notification green">2</span></a></li>
-                                <li role="presentation"><a href="#" class=""><i class="icon16 i-bubbles-2"></i> New comments <span class="notification red">5</span></a></li>
-                                <li role="presentation"><a href="#" class=""><i class="icon16 i-pie-5"></i> Daily stats is generated</a></li>
-                            </ul>
-                        </li>
-                        <li class="divider-vertical"></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="icon24 i-envelop-2"></i>
-                                <span class="notification red">3</span>
-                            </a>
-                            <ul class="dropdown-menu messages" role="menu">
-                                <li class="head" role="presentation">
-                                    <h4>Inbox</h4>
-                                    <span class="count">3 messages</span>
-                                    <span class="new-msg"><a href="#" class="tipB" title="Write message"><i class="icon16 i-pencil-5"></i></a></span>
-                                </li>
-                                <li role="presentation">
-                                    <a href="#" class="clearfix">
-                                        <span class="avatar"><img src="<?php echo base_url(); ?>images/avatars/peter.jpg" alt="avatar"></span>
-                                        <span class="msg">Call me i need to talk with you</span>
-                                        <button class="btn close"><i class="icon12 i-close-2"></i></button>
-                                    </a>
-                                </li>
-                                <li role="presentation">
-                                    <a href="#" class="clearfix">
-                                        <span class="avatar"><img src="<?php echo base_url(); ?>images/avatars/milen.jpg" alt="avatar"></span>
-                                        <span class="msg">Problem with registration</span>
-                                        <button class="btn close"><i class="icon12 i-close-2"></i></button>
-                                    </a>
-                                </li>
-                                <li role="presentation">
-                                    <a href="#" class="clearfix">
-                                        <span class="avatar"><img src="<?php echo base_url(); ?>images/avatars/anonime.jpg" alt="avatar"></span>
-                                        <span class="msg">I have question about ...</span>
-                                        <button class="btn close"><i class="icon12 i-close-2"></i></button>
-                                    </a>
-                                </li>
-                                <li class="foot" role="presentation"><a href="email.html">View all messages</a></li>
-                            </ul>
-                        </li>-->
                         <li class="divider-vertical"></li>
                         <li class="dropdown user">
                             <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
@@ -163,9 +112,8 @@
                                 <span class="more"><i class="icon16 i-arrow-down-2"></i></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a href="#" class=""><i class="icon16 i-cogs"></i> Settings</a></li>
                                 <li role="presentation"><a href="profile.html" class=""><i class="icon16 i-user"></i> Profile</a></li>
-                                <li role="presentation"><a href="index.html" class=""><i class="icon16 i-exit"></i> Logout</a></li>
+                                <li role="presentation"><?php echo anchor('logout', '<i class="icon16 i-exit"></i> Sair'); ?>                                
                             </ul>
                         </li>
                         <li class="divider-vertical"></li>
@@ -173,6 +121,10 @@
                 </div><!--/.nav-collapse -->
             </nav>
         </header> <!-- End #header  -->
+        
+        <?php
+        $cat = $this->uri->segment(1); 
+        ?>
 
         <div class="main">
             <aside id="sidebar">
@@ -184,13 +136,13 @@
 
                 <div class="sidebar-wrapper">
                     <nav id="mainnav">
-                        <ul class="nav nav-list">
+                        <ul class="nav nav-list">                        
                             <li>
                                 <a href="#">
                                     <span class="icon"><i class="icon20 i-drawer-3"></i></span>
                                     <span class="txt">Requerimentos</span>
                                 </a>
-                                <ul class="sub">
+                                <ul class="sub<?php echo ($cat=='requerimentos' ? ' show' : '')?>">
                                     <li>
                                         <?php echo anchor('requerimentos/cadastrar_requerimento',
                                                 '<span class="icon"><i class="icon20 i-stack-empty"></i></span>
@@ -208,7 +160,7 @@
                                     <span class="icon"><i class="icon20 i-users"></i></span>
                                     <span class="txt">Requerentes</span>
                                 </a>
-                                <ul class="sub">
+                                <ul class="sub<?php echo ($cat=='requerentes' ? ' show' : '')?>">
                                     <li>
                                         <?php echo anchor('requerentes/cadastrar_requerente',
                                                 '<span class="icon"><i class="icon20 i-user-plus"></i></span>
@@ -236,7 +188,7 @@
                                     <span class="icon"><i class="icon20 i-home-11"></i></span>
                                     <span class="txt">Bairros</span>
                                 </a>
-                                <ul class="sub">
+                                <ul class="sub<?php echo ($cat=='bairros' ? ' show' : '')?>">
                                     <li>
                                         <?php echo anchor('bairros/cadastrar_bairro',
                                                 '<span class="icon"><i class="icon20 i-home-8"></i></span>
@@ -254,7 +206,7 @@
                                     <span class="icon"><i class="icon20 i-stats-up"></i></span>
                                     <span class="txt">Gráficos</span>
                                 </a>
-                                <ul class="sub">
+                                <ul class="sub<?php echo ($cat=='graficos' ? ' show' : '')?>">
                                     <li>
                                         <?php echo anchor('graficos/populacao_por_bairro',
                                                 '<span class="icon"><i class="icon20 i-people"></i></span>
@@ -264,6 +216,11 @@
                                         <?php echo anchor('graficos/requerimentos_por_bairro',
                                                 '<span class="icon"><i class="icon20 i-stack"></i></span>
                                                  <span class="txt">Requerimentos por bairro</span>');?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('graficos/requerimentos_por_tipo',
+                                                '<span class="icon"><i class="icon20 i-office"></i></span>
+                                                 <span class="txt">Requerimentos por tipo</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/listar_bairros',
@@ -279,6 +236,24 @@
 
             <section id="content">
                 <div class="wrapper">
+                    
+                    <div class="crumb">
+                        <ul class="breadcrumb">
+                            <?php 
+                            echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Requerimentos</li>' :
+                                    '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>Requerimentos') .'</li>');
+                            
+                            echo '<li'. ($cat=='requerentes' ? ' class="active"><i class="icon16 i-users"></i>Requerentes</li>' :
+                                    '>'.anchor('requerentes/da_cidade', '<i class="icon16 i-users"></i>Requerentes') .'</li>');
+                            
+                            echo '<li'. ($cat=='bairros' ? ' class="active"><i class="icon16 i-office"></i>Bairros</li>' :
+                                    '>'.anchor('bairros/listar_bairros', '<i class="icon16 i-office"></i>Bairros') .'</li>');
+                            
+                            echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i>Gráficos</li>' : 
+                                    '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>Gráficos').'</li>');                            
+                            ?>
+                        </ul>
+                    </div>
 
                     <?php $this->load->view($subview); ?>
 
