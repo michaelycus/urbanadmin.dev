@@ -237,7 +237,8 @@ $(function() {
 ////                animDuration: 10
 //            }]);
 
-ESTRATEGIA DESSA FORMA FUNCIONOU... FAAZER ISSO NO GERAR.PHP
+//xxx
+//ESTRATEGIA DESSA FORMA FUNCIONOU... FAAZER ISSO NO GERAR.PHP
 
         console.log(data[value]);
 
