@@ -9,6 +9,7 @@ class Requerimentos extends MY_Controller
         $this->load->model('bairros_model');
         $this->load->model('cidades_model');
         $this->load->model('requerente_model');
+        $this->load->model('categorias_requerimento_model');
     }
 
     public function index()
@@ -47,9 +48,10 @@ class Requerimentos extends MY_Controller
 
         $this->data['bairros'] = $this->bairros_model->get_all();
         $this->data['requerentes'] = $this->requerente_model->get_vereadores();
+        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
         
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('descricao','id_bairro','id_rua'),$this->input->post());
+            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente'),$this->input->post());
             $data['data_requerimento'] = date('Y-m-d');
 
             $i = 1;
@@ -104,9 +106,11 @@ class Requerimentos extends MY_Controller
         $this->form_validation->set_rules($this->requerimento_model->validation);
 
         $this->data['bairros'] = $this->bairros_model->get_all();
+        $this->data['requerentes'] = $this->requerente_model->get_vereadores();
+        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('descricao','id_bairro','id_rua'),$this->input->post());
+            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente'),$this->input->post());
             $data['data_requerimento'] = date('Y-m-d');
 
             $i = 1;
@@ -146,15 +150,14 @@ class Requerimentos extends MY_Controller
             $this->data['ruas'] = $this->cidades_model->getRuas($this->data['requerimento']->id_bairro);
 
         $this->load_view('requerimentos/editar_requerimento');
-
     }
 
     public function excluir_requerimento()
     {
         $id = $this->uri->segment(3);
 
-        $this->memorias_model->delete($id);
-        $this->session->set_userdata('memoria_excluida','Memória excluída com sucesso!');
-        redirect('memorias/lista_memorias');
+        $this->requerimento_model->delete($id);
+        $this->session->set_userdata('requerimento_excluido','Requerimento excluído com sucesso!');
+        redirect('requerimentos/listar_requerimentos');
     }
 }

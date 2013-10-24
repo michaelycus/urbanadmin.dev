@@ -5,7 +5,7 @@
 -- Servidor: localhost
 -- Tempo de Geração: 
 -- Versão do Servidor: 5.5.24-log
--- Versão do PHP: 5.3.13
+-- Versão do PHP: 5.2.11
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -77,20 +77,20 @@ INSERT INTO `bairros` (`id`, `nome`, `code_name`, `descricao`, `nome_presidente`
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `categoria_requerimento`
+-- Estrutura da tabela `categorias_requerimento`
 --
 
-CREATE TABLE IF NOT EXISTS `categoria_requerimento` (
+CREATE TABLE IF NOT EXISTS `categorias_requerimento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `categoria` varchar(255) NOT NULL,
+  `nome` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
--- Extraindo dados da tabela `categoria_requerimento`
+-- Extraindo dados da tabela `categorias_requerimento`
 --
 
-INSERT INTO `categoria_requerimento` (`id`, `categoria`) VALUES
+INSERT INTO `categorias_requerimento` (`id`, `nome`) VALUES
 (1, 'ENTULHO - Remoção, limpeza'),
 (2, 'ILUMINAÇÃO - Instalação, substituição, reparo'),
 (3, 'LIXEIRA - Instalação, substituição, reparo'),
@@ -106,7 +106,8 @@ INSERT INTO `categoria_requerimento` (`id`, `categoria`) VALUES
 (13, 'RUAS - Instalação/Conserto de semáforos'),
 (14, 'RUAS - Patrolamento'),
 (15, 'RUAS - Instalação/Conserto de placas de sinalização/identificação'),
-(16, 'RUAS - Manutenção de bueiros');
+(16, 'RUAS - Manutenção de bueiros'),
+(17, 'OUTROS');
 
 -- --------------------------------------------------------
 
@@ -5774,10 +5775,9 @@ INSERT INTO `requerentes` (`id`, `nome`, `tipo`, `pessoa_fisica`, `cpf`, `cnpj`,
 (4, 'Amelia Siqueira', 0, 0, '896.807.849-16', '', '12.34.56.87.22', 'amelia@amelia.com', '2013-09-26', 13, 'rua das amarguras', '(54) 1255-5525', 'Programador', 0, 129, 3, '55445-555'),
 (5, 'Alicia', 0, 0, '235.208.857-78', '', '45.11.22.55.55', 'aleicia@ammm.com', '2013-09-26', 10, 'sem casa', '(51) 5544-4525', 'caseira', 0, 0, 0, '95822-230'),
 (6, 'Feittooo', 0, 0, '013.524.054-90', '', '15.43.56.45.46', 'cdffv@gdsfd.com', '2013-09-26', 14, 'Sem endereco', '(51) 6542-2455', 'Operador', 0, 40, 2, '95512-455'),
-(7, 'Janice', 0, 0, '447.451.145-08', '', '84.21.24.55.12', 'ajduanten@tdsd.com', '2013-09-26', 8, 'sem destino', '(51) 4574-5454', 'ajudante', 0, 2213, 12, '95584-212'),
+(7, 'Carlos Eduardo Ranzi', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
 (8, 'Antônio de Castro Schefer', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
 (9, 'Carlos Antonio Kayser', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(10, 'Carlos Eduardo Ranzi', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
 (11, 'Círio Arnaldo Schneider', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
 (12, 'Delmar Portz', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
 (13, 'Djalmo da Rosa', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
@@ -5803,6 +5803,7 @@ CREATE TABLE IF NOT EXISTS `requerimentos` (
   `descricao` text NOT NULL,
   `id_bairro` int(11) NOT NULL,
   `id_rua` int(11) NOT NULL,
+  `cat_requerimento` int(11) NOT NULL,
   `data_requerimento` date NOT NULL,
   `id_requerente` int(11) NOT NULL,
   `expediente` varchar(64) NOT NULL,
@@ -5811,51 +5812,42 @@ CREATE TABLE IF NOT EXISTS `requerimentos` (
   `anexo_2` varchar(256) NOT NULL,
   `anexo_3` varchar(256) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
 --
 -- Extraindo dados da tabela `requerimentos`
 --
 
-INSERT INTO `requerimentos` (`id`, `titulo`, `descricao`, `id_bairro`, `id_rua`, `data_requerimento`, `id_requerente`, `expediente`, `situacao`, `anexo_1`, `anexo_2`, `anexo_3`) VALUES
-(1, '', 'Desinfetação dos bueiros do bairro Santo André.', 23, 0, '2013-09-19', 1, '', 0, '', '', ''),
-(2, 'AAA', 'BBB', 10, 0, '2013-09-30', 0, '', 0, 'teste', '', ''),
-(3, 'BBB', 'DDDD', 6, 0, '2013-09-30', 0, '', 0, 'teste', '', ''),
-(4, 'EEE', 'FFF', 16, 0, '2013-09-30', 0, '', 0, 'teste', '', ''),
-(5, 'FFF', 'GGG', 4, 0, '2013-09-30', 0, '', 0, 'teste', '', ''),
-(6, 'XXX', 'XXXX', 19, 0, '2013-09-30', 0, '', 0, 'teste1', '', ''),
-(7, 'BABABA', 'ABABA', 16, 0, '2013-09-30', 0, '', 0, 'anexo_1', '', ''),
-(8, 'dadada', 'adaadadsd', 13, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(9, 'eaeaea', 'eaeaeae', 16, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(10, 'rerer', 'erer', 18, 0, '2013-09-30', 0, '', 0, 'teste.jpg', '', ''),
-(11, 'FEFEFEF', 'EFEFE', 15, 0, '2013-09-30', 0, '', 0, '2013-09-30_5249bfc254649.jpg', '', ''),
-(12, 'ttetetet', 'etete', 15, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(13, 'vavava', 'vavav', 12, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(14, 'zaazaza', 'zaza', 14, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(15, 'fefefe', 'fefefefe', -1, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(16, 'asdfdasf', 'sadfadsfsd', 15, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(17, 'ababababab', 'abbab', 14, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(18, 'sdfsd', 'asdfd', 12, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(19, 'sadfdsfa', 'dfdsfdas', 12, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(20, 'vvb', 'cbcvbbcv', 11, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(21, 'gegege', 'egegegege', 12, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(22, 'hehehe', 'eehheheh', 11, 0, '2013-09-30', 0, '', 0, 'eu12', '', ''),
-(23, 'emememe', 'ememem', 10, 0, '2013-09-30', 0, '', 0, 'eu13.jpg', '', ''),
-(24, 'Sempre testando', 'teste', 5, 0, '2013-09-30', 0, '', 0, 'euuu1.jpg', '', ''),
-(25, 'feitoooo', 'asdfadsfsd', 13, 0, '2013-09-30', 0, '', 0, 'euuu2.jpg', '', ''),
-(26, 'fefef', 'efe', 15, 0, '2013-09-30', 0, '', 0, 'euuu3.jpg', '', ''),
-(27, 'fesfes', 'fsefesf', 15, 0, '2013-09-30', 0, '', 0, 'euuu4.jpg', '', ''),
-(28, 'ADASD', 'ASDAsd', 13, 0, '2013-09-30', 0, '', 0, 'euuu5.jpg', '', ''),
-(29, 'jrjrjr', 'rjjrjjr', 6, 0, '2013-09-30', 0, '', 0, 'euuu6.jpg', '', ''),
-(30, 'xczvxvx', 'zcvxcvx', 18, 0, '2013-10-01', 0, '', 0, 'eu14.jpg', '', ''),
-(31, 'nanana', 'anan', 14, 0, '2013-10-01', 0, '', 0, 'euuu7.jpg', '', ''),
-(32, 'AGHORA', 'DDDD', 14, 0, '2013-10-01', 0, '', 0, 'eu15.jpg', 'euuu8.jpg', 'file2.jpg'),
-(33, 'fafafa', 'afafaf', 16, 0, '2013-10-01', 0, '', 0, '7ce27260a8ff16641f20c511e73d1973.jpg', '58e9a2b1bf1a0b04589c4754197e3281.jpg', ''),
-(34, 'bababa', 'abab', 13, 0, '2013-10-01', 0, '', 0, '', '901d3eec1244d370774f019e2eb4cc65.jpg', 'b2fadb99a1dee3071eac660ee3ae6dff.jpg'),
-(35, 'gagaga', 'agAG', 10, 0, '2013-10-01', 0, '', 0, 'ae0ea303a8bc69c07b926e6d20ef96a4.jpg', '2e12d0e4e2a5fbffcb5064a0030e95fa.jpg', ''),
-(36, 'HAHAA', 'HAHA', 16, 0, '2013-10-01', 0, '', 0, '32972bceadaee504548daa9579615361.jpg', '90f9f65aa69cf0b4cfb38cf5b9363b68.jpg', 'f9853aaab33bf5b0dcde8d914bba3f87.jpg'),
-(37, '', 'GSSGSGSGSG', 2, 130, '2013-10-14', 0, '', 0, '', '', ''),
-(38, '', 'lllll', 2, 173, '2013-10-14', 0, '', 0, '', '', '');
+INSERT INTO `requerimentos` (`id`, `titulo`, `descricao`, `id_bairro`, `id_rua`, `cat_requerimento`, `data_requerimento`, `id_requerente`, `expediente`, `situacao`, `anexo_1`, `anexo_2`, `anexo_3`) VALUES
+(1, '', 'Desinfetação dos bueiros do bairro Santo André.', 23, 0, 0, '2013-09-19', 1, '', 0, '', '', ''),
+(4, 'EEE', 'FFF', 16, 0, 0, '2013-09-30', 0, '', 0, 'teste', '', ''),
+(6, 'XXX', 'XXXX', 19, 0, 0, '2013-09-30', 0, '', 0, 'teste1', '', ''),
+(8, 'dadada', 'adaadadsd', 13, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
+(9, 'eaeaea', 'eaeaeae', 16, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
+(14, 'zaazaza', 'zaza', 14, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
+(17, 'ababababab', 'abbab', 14, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
+(18, 'sdfsd', 'asdfd', 12, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
+(19, 'sadfdsfa', 'dfdsfdas', 12, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
+(20, 'vvb', 'cbcvbbcv', 11, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
+(21, 'gegege', 'egegegege', 12, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
+(22, 'hehehe', 'eehheheh', 11, 0, 0, '2013-09-30', 0, '', 0, 'eu12', '', ''),
+(23, 'emememe', 'ememem', 10, 0, 0, '2013-09-30', 0, '', 0, 'eu13.jpg', '', ''),
+(25, 'feitoooo', 'asdfadsfsd', 13, 0, 0, '2013-09-30', 0, '', 0, 'euuu2.jpg', '', ''),
+(26, 'fefef', 'efe', 15, 0, 0, '2013-09-30', 0, '', 0, 'euuu3.jpg', '', ''),
+(27, 'fesfes', 'fsefesf', 15, 0, 0, '2013-09-30', 0, '', 0, 'euuu4.jpg', '', ''),
+(28, 'ADASD', 'ASDAsd', 13, 0, 0, '2013-09-30', 0, '', 0, 'euuu5.jpg', '', ''),
+(29, 'jrjrjr', 'rjjrjjr', 6, 0, 0, '2013-09-30', 0, '', 0, 'euuu6.jpg', '', ''),
+(30, 'xczvxvx', 'zcvxcvx', 18, 0, 0, '2013-10-01', 0, '', 0, 'eu14.jpg', '', ''),
+(31, 'nanana', 'anan', 14, 0, 0, '2013-10-01', 0, '', 0, 'euuu7.jpg', '', ''),
+(32, 'AGHORA', 'DDDD', 14, 0, 0, '2013-10-01', 0, '', 0, 'eu15.jpg', 'euuu8.jpg', 'file2.jpg'),
+(33, 'fafafa', 'afafaf', 16, 0, 0, '2013-10-01', 0, '', 0, '7ce27260a8ff16641f20c511e73d1973.jpg', '58e9a2b1bf1a0b04589c4754197e3281.jpg', ''),
+(34, 'bababa', 'abab', 13, 0, 0, '2013-10-01', 0, '', 0, '', '901d3eec1244d370774f019e2eb4cc65.jpg', 'b2fadb99a1dee3071eac660ee3ae6dff.jpg'),
+(35, 'gagaga', 'agAG', 10, 0, 0, '2013-10-01', 0, '', 0, 'ae0ea303a8bc69c07b926e6d20ef96a4.jpg', '2e12d0e4e2a5fbffcb5064a0030e95fa.jpg', ''),
+(36, 'HAHAA', 'HAHA', 16, 0, 0, '2013-10-01', 0, '', 0, '32972bceadaee504548daa9579615361.jpg', '90f9f65aa69cf0b4cfb38cf5b9363b68.jpg', 'f9853aaab33bf5b0dcde8d914bba3f87.jpg'),
+(37, '', 'GSSGSGSGSG', 2, 130, 0, '2013-10-14', 0, '', 0, '', '', ''),
+(38, '', 'lllll', 2, 173, 0, '2013-10-14', 0, '', 0, '', '', ''),
+(39, '', 'AAA', 13, 634, 14, '2013-10-18', 8, '', 0, '', '', ''),
+(40, '', 'AGOR AVAIII', 1, 11, 4, '2013-10-21', 7, '', 0, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -7772,8 +7764,6 @@ INSERT INTO `usuarios` (`id`, `nome`, `usuario`, `senha`, `autorizacao`, `setor`
 (1, 'Michael', 'michael', 'd0e516cab32f7ab2b71425ac8a4c2eb8', 1, 1, 'michaelycus@gmail.com', 0),
 (2, 'Denise', 'denise', '968c58d88d981b4ee15e2c8cb1fab06d', 1, 1, 'denise@denise.com', 0),
 (3, 'Felicia', 'felicia', 'd41d8cd98f00b204e9800998ecf8427e', 1, NULL, 'felicia@gmail.com', 0),
-(4, 'denise', 'denise', '968c58d88d981b4ee15e2c8cb1fab06d', 2, NULL, 'denise@txaidesenvolvimento.com.br', 0),
-(5, 'jaque', 'jaque', '524a56e3019d2bf727caad65897b6d8a', 1, NULL, 'jaque@txai.com', 0),
 (6, 'Teste', 'teste', 'd41d8cd98f00b204e9800998ecf8427e', 1, NULL, 'teste@tes.com', 0),
 (7, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, NULL, '', 0),
 (8, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 0, '', 0);

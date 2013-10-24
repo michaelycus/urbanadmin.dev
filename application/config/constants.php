@@ -75,10 +75,8 @@ define('NIVEIS_ACOES', serialize (array ( 1 => "Recomendar",
                                           2 => "Informar",
                                           3 => "Agir" )));
 
-define('TIPOS_AUTORIZACAO', serialize (array ( 1 => "Colaborador",
-                                               2 => "Operador",
-                                               3 => "Administrador",
-                                               4 => "Super admin" )));
+define('TIPOS_AUTORIZACAO', serialize (array ( 1 => "Administrador",
+                                               2 => "Operador" )));
 
 
 

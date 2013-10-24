@@ -10,9 +10,14 @@ class Usuarios extends MY_Controller
 
     public function index ()
     {
+    }
+    
+    public function listar_usuarios()
+    {
+        
         $this->data['usuarios_ativos'] = $this->usuarios_model->get_all();
 
-        $this->load_view('usuarios/lista_usuarios');
+        $this->load_view('usuarios/listar_usuarios');
     }
 
     public function adicionar_usuario ()
@@ -49,5 +54,14 @@ class Usuarios extends MY_Controller
         $this->data['usuario'] = $this->usuarios_model->get($id);
 
         $this->load_view('usuarios/editar_usuario');
+    }
+    
+    public function excluir_usuario()
+    {
+        $id = $this->uri->segment(3);
+
+        $this->usuarios_model->delete($id);
+        $this->session->set_userdata('usuario_excluido','Usuario excluído com sucesso!');
+        redirect('usuarios/listar_usuarios');
     }
 }

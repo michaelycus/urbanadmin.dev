@@ -93,6 +93,9 @@
         <script src="<?php echo base_url(); ?>js/pages/ui-elements.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/domready.js"></script><!-- Init plugins only for page -->
         <!--<script src="<?php echo base_url(); ?>js/pages/dashboard.js"></script> Esse puglin impossibilita o carregamento do mapael -->
+        
+        <!-- Bootstrap script -->
+        <script src="<?php echo base_url(); ?>js/bootstrap/bootbox.min.js"></script>  
 
         <!-- Custom script -->
         <script src="<?php echo base_url(); ?>js/functions.js"></script>
@@ -215,23 +218,50 @@
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_bairro',
                                                 '<span class="icon"><i class="icon20 i-stack"></i></span>
-                                                 <span class="txt">Requerimentos por bairro</span>');?>
+                                                 <span class="txt">Req. por bairro</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_tipo',
                                                 '<span class="icon"><i class="icon20 i-office"></i></span>
-                                                 <span class="txt">Requerimentos por tipo</span>');?>
+                                                 <span class="txt">Req. por tipo</span>');?>
                                     </li>
                                     <li>
-                                        <?php echo anchor('graficos/listar_bairros',
+                                        <?php echo anchor('graficos/requerimentos_por_vereador',
                                                 '<span class="icon"><i class="icon20 i-office"></i></span>
-                                                 <span class="txt">Listar</span>');?>
+                                                 <span class="txt">Req. por vereador</span>');?>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </nav> <!-- End #mainnav -->
                 </div> <!-- End .sidebar-wrapper  -->
+                
+                <div class="sidebar-wrapper">
+                    <h4 class="sidebar-widget-header"><i class="icon i-cogs"></i> Configurações</h4>
+                    <nav id="mainnav">
+                        <ul class="nav nav-list">                        
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="icon20 i-users-4"></i></span>
+                                    <span class="txt">Usuários</span>
+                                </a>
+                                <ul class="sub<?php echo ($cat=='usuarios' ? ' show' : '')?>">
+                                    <li>
+                                        <?php echo anchor('usuarios/adicionar_usuario',
+                                                '<span class="icon"><i class="icon20 i-user-plus-3"></i></span>
+                                                 <span class="txt">Adicionar usuário</span>');?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('usuarios/listar_usuarios',
+                                                '<span class="icon"><i class="icon20 i-users-3"></i></span>
+                                                 <span class="txt">Listar usuários</span>');?>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav> <!-- End #mainnav -->
+                </div> <!-- End .sidebar-wrapper  -->
+                
             </aside><!-- End #sidebar  -->
 
             <section id="content">

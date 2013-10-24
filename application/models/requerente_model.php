@@ -27,6 +27,7 @@ class Requerente_model extends MY_Model
     public function get_vereadores()
     {
         $this->db->where('tipo', REQUERENTE_TIPO_VEREADOR);
+        $this->db->order_by('id');
 
         return $this->get_all();
     }

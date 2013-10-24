@@ -50,6 +50,19 @@
                 echo         form_dropdown('id_rua', array('' => 'Escolha uma Rua'), '','id="id_rua" class="col-lg-10"' );
                 echo    '</div>';
                 echo '</div>';
+                
+                // cat_requerimento
+                echo '<div class="form-group">';
+                echo    '<label for="cat_requerimento" class="col-lg-2 control-label">Tipo Req.</label>';
+                echo    '<div class="col-lg-10">';
+                echo        '<select id="cat_requerimento" name="cat_requerimento" class="col-lg-10">';
+                foreach ($cats_requerimento as $c_r)
+                {
+                    echo        '<option value="'.$c_r->id.'" '.set_select('cat_requerimento', $c_r->id).'>'.$c_r->nome.'</option>';
+                }
+                echo        '</select>';
+                echo    '</div>';
+                echo '</div>';
 
                 echo '<hr>';
                 
@@ -58,7 +71,6 @@
                 echo    '<label for="id_requerente" class="col-lg-2 control-label">Requerente</label>';
                 echo    '<div class="col-lg-10">';
                 echo        '<select id="id_requerente" name="id_requerente">';
-                echo            '<option value=""></option>';
                 foreach ($requerentes as $requerente)
                 {
                     echo        '<option value="'.$requerente->id.'" '.set_select('id_requerente', $requerente->id).'>'.$requerente->nome.'</option>';

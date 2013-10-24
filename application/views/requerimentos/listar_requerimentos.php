@@ -22,7 +22,7 @@
         }
 
         $this->table->set_template($tmpl);
-        $this->table->set_heading('Resumo', "Bairro", "Situação", "Expediente", "");
+        $this->table->set_heading('Resumo', "Bairro", "Tipo Req.", "Requerente", "Situação", "Expediente", "");
 
         $situacoes = unserialize(REQUERIMENTO_SITUACOES);
 
@@ -31,6 +31,8 @@
             foreach ($requerimentos as $requerimento):
                 $this->table->add_row(array('data'=>substr($requerimento->descricao, 0, 255).(strlen($requerimento->descricao)>255?"..." : "")),
                                       array('data'=>$requerimento->nome_bairro),
+                                      array('data'=>$requerimento->nome_categoria),
+                                      array('data'=>$requerimento->nome_requerente),
                                       array('data'=>$situacoes[$requerimento->situacao]),
                                       array('data'=>$requerimento->expediente),
                                       array('data'=>anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
