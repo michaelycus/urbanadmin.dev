@@ -216,6 +216,11 @@
                                                  <span class="txt">População por bairro</span>');?>
                                     </li>
                                     <li>
+                                        <?php echo anchor('graficos/requerentes_por_bairro',
+                                                '<span class="icon"><i class="icon20 i-people"></i></span>
+                                                 <span class="txt">Requerentes por bairro</span>');?>
+                                    </li>
+                                    <li>
                                         <?php echo anchor('graficos/requerimentos_por_bairro',
                                                 '<span class="icon"><i class="icon20 i-stack"></i></span>
                                                  <span class="txt">Req. por bairro</span>');?>

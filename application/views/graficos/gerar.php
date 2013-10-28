@@ -49,10 +49,10 @@ areas: {';
 if (!empty($bairros))
 {
     foreach ($bairros as $bairro):
-        if ($bairro->code_name!=NULL)
+        if ($bairro->codename!=NULL)
         {
             $data .= <<<EOF
-                    "$bairro->code_name":{
+                    "$bairro->codename":{
                         value: "$bairro->populacao",
                         href: "#",
                         tooltip: {content: "<span style=\"font-weight:bold;\">$bairro->nome </span><br />População: $bairro->populacao"},
@@ -131,10 +131,10 @@ areas: {';
 if (!empty($requerimentos_bairro))
 {
     foreach ($requerimentos_bairro as $r_b):
-        if ($r_b->code_name!=NULL)
+        if ($r_b->codename!=NULL)
         {
             $data .= <<<EOF
-                    "$r_b->code_name":{
+                    "$r_b->codename":{
                         value: "$r_b->count_requerimentos_bairro",
                         text: { content:  $r_b->count_requerimentos_bairro , attrs: {fill:"#222"} },
                         href: "#",
@@ -162,7 +162,6 @@ else
 /***** END - Requerimentos por bairro - END *****/
 
 
-
 /***** Requerimentos por tipo *****/
 
 $data = <<<EOF
@@ -170,14 +169,23 @@ $(function() {
     var data = {
 EOF;
 
-
 if (!empty($requerimentos_categoria))
 {
     // areas
-    $i=1;
+    $i=0;
     foreach ($requerimentos_categoria as $r_c)
     {
-        if (!empty($r_c))
+        if ($i==0)
+        {
+            $data .= '"0": { "areas": {';
+            
+            foreach ($bairros as $bairro)
+            {
+                $data .= '"'.$bairro->codename.'": {"text": {"content": ""}},';
+            }
+            $data .= '}},';
+        }
+        else if (!empty($r_c))
         {
             $data .= '"'. $i. '": { "areas": {';
 
@@ -214,26 +222,14 @@ if (!empty($requerimentos_categoria))
         $i++;
     }
     $data .= '};
-        ';
-    
+        ';    
 }
 
 $data .= <<<EOF
 $("#cat_requerimento").change(function() {
     value = $("#cat_requerimento").val();
         
-        var deletedAreas = ["conventos", "sao_bento", "floresta", "santo_antonio", "nacoes", "conservas", "jardim_do_cedro", "moinhos", "moinhos_dagua",
-            "centro", "hidraulica", "americano", "montanha", "bom_pastor", "alto_do_parque", "carneiros", "universitario", "sao_cristovao", "santo_andre", "campestre", "igrejinha",
-            "centenario", "imigrante", "florestal"];
-        
-        var updatedOptions = {'areas' : {}, 'plots' : {}};
-        
-        for (var i=0; i<deletedAreas.length; i++)
-        { 
-            updatedOptions.areas[deletedAreas[i]] = { "text": { "content": "" } };
-        }
-
-        $(".maparea1").trigger('update', [updatedOptions, {}, {}, {animDuration: 100}]);
+      $(".maparea1").trigger('update', [data[0], {}, {}, {animDuration: 500}]);
         
       $(".maparea1").trigger('update', [data[value], {}, {}, {animDuration: 1000,resetPlots:true, resetAreas:true  }]);
   });
@@ -263,7 +259,7 @@ $("#cat_requerimento").change(function() {
                 }
             }            
         },
-        areas: data[5]['areas']
+        areas: data[0]['areas']
     });
 });
 EOF;
@@ -280,6 +276,121 @@ else
 
 /***** END - Requerimentos por tipo - END *****/
 
+
+/***** Requerimentos por vereador *****/
+
+$data = <<<EOF
+$(function() {
+    var data = {
+EOF;
+
+if (!empty($requerimentos_vereadores))
+{
+    // areas
+    $data .= '"0": { "areas": {';
+            
+    foreach ($bairros as $bairro)
+    {
+        $data .= '"'.$bairro->codename.'": {"text": {"content": ""}},';
+    }
+    $data .= '}},';
+    
+    foreach ($requerimentos_vereadores as $key => $r_c)
+    {
+        if (!empty($r_c))
+        {
+            $data .= '"'. $key. '": { "areas": {';
+
+            foreach ($r_c as $r)
+            {
+                $data .= '"'. $r->codename .'": {
+                    "value": '. $r->count_requerimentos .',
+                    "text": { "content":  "'. $r->count_requerimentos .'" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">'. $r->nome_bairro .'</span><br />Requerimentos : '. $r->count_requerimentos .'"
+                    }';
+
+                $data .= '}';
+                $data .= end($r_c)==$r ? '' : ',';
+            }
+            
+            $data .= '},';
+            
+            $data .= '"plots": {';
+            
+            foreach ($r_c as $r)
+            {
+                $data .= '"'. $r->codename .'": {
+                    "value": '. $r->count_requerimentos;
+
+                $data .= '}';
+                $data .= end($r_c)==$r ? '' : ',';
+            }
+            
+            $data .= '}';
+            $data .= '},';
+        }
+    }
+    $data .= '};
+        ';    
+}
+
+$data .= <<<EOF
+$("#vereador").change(function() {
+    value = $("#vereador").val();
+        
+      $(".maparea1").trigger('update', [data[0], {}, {}, {animDuration: 500}]);
+        
+      $(".maparea1").trigger('update', [data[value], {}, {}, {animDuration: 1000,resetPlots:true, resetAreas:true  }]);
+  });
+
+    // Mapael initialisation
+    $(".maparea1").mapael({
+        map: {
+            name: "lajeado",
+            width: 700,
+            defaultArea: {
+                attrs: {
+                    fill: "#99e",
+                    stroke: "#82bfec",
+                    "stroke-width": 0.3
+                }
+            },
+            defaultPlot: {
+                text: {
+                    attrs: {
+                        fill: "#613b1e",
+                        "font-weight": "bold"
+                    },
+                    attrsHover: {
+                        fill: "#f99200",
+                        "font-weight": "bold"
+                    }
+                }
+            }            
+        },
+        areas: data[0]['areas']
+    });
+});
+EOF;
+
+if ( ! write_file('js/maps/requerimentos_por_vereador.js', $data))
+{
+     echo 'Unable to write the file';
+}
+else
+{
+     echo 'Arquivo requerimentos_por_vereador.js gerado!<br />';
+}
+
+/***** END - Requerimentos por vereador - END *****/
+
+
+/***** Requerentes por bairro *****/
+
+
+
+/***** END - Requerentes por bairro - END *****/
 
 function rgb2hex($rgb) {
    $hex = "#";

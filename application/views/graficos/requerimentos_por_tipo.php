@@ -77,22 +77,6 @@
 <script src="<?php echo base_url(); ?>js/maps/cidade.js" charset="utf-8" ></script>
 <script src="<?php echo base_url(); ?>js/maps/requerimentos_por_tipo.js" charset="utf-8" ></script>
 
-<?php //var_dump($requerimentos_categoria); ?>
-
-<?php
-//$array = array(
-//    '1' => array('A' => 'A1', 'B' => 'B1'),
-//    '2' => 'round',
-//    '3' => '10',
-//    '4' => '20'
-//);
-//
-//$array['5'] = 'XXXX';
-//
-//var_dump($array);
-?>
-
-
 <div class="container-fluid">
     <div id="heading" class="page-header">
         <h1><i class="icon20 i-stack"></i> Requerimentos por tipo</h1>
@@ -109,6 +93,7 @@
                     echo    '<label for="cat_requerimento" class="col-lg-2 control-label">Tipo Requerimento</label>';
                     echo    '<div class="col-lg-5">';
                     echo        '<select id="cat_requerimento" name="cat_requerimento" class="col-lg-10">';
+                    echo            '<option value="0">Escolha uma categoria</option>';
                     foreach ($cats_requerimento as $c_r)
                     {
                         echo        '<option value="'.$c_r->id.'" '.set_select('cat_requerimento', $c_r->id).'>'.$c_r->nome.'</option>';
