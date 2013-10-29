@@ -16,6 +16,14 @@ class Graficos extends MY_Controller
         $this->load_view('graficos/populacao_por_bairro');
     }
     
+    public function requerentes_por_bairro()
+    {
+        // apagar
+        $this->data['requerentes_bairro'] = $this->requerente_model->count_requerentes_por_bairro(); 
+        
+        $this->load_view('graficos/requerentes_por_bairro');
+    }
+    
     public function requerimentos_por_bairro()
     {
         $this->load_view('graficos/requerimentos_por_bairro');

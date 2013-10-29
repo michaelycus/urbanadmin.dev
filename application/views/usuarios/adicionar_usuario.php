@@ -15,7 +15,10 @@
                 <div class="panel-body">
 
                 <?php
-                echo form_open('usuarios/adicionar_usuario', 'class="bs-docs-example form-horizontal"');
+                echo form_open_multipart('usuarios/adicionar_usuario', 'class="bs-docs-example form-horizontal"');
+                
+                if (!empty($error))
+                    echo '<div class="alert alert-error">'. $error .'</div>';
 
                 echo validation_errors('<div class="alert alert-error">','</div>');
                 if ($this->session->userdata('usuario_adicionado'))
@@ -40,7 +43,9 @@
                 echo        '<div class="profile-avatar">';
                 echo            '<img src="'. base_url(). 'images/avatars/avatar.png" alt="Avatar">';
                 echo        '</div>';
-                echo        '<input type="file" class="form-control">';
+//                echo        form_upload(array('name'=>'avatar','id'=>'avatar','class'=>'form-control'));
+//                echo        form_upload('avatar');
+                echo        '<input type="file" id="avatar" name="avatar" size="20" />';
                 echo    '</div>';
                 echo '</div>';
 

@@ -12,8 +12,6 @@
             'table_close' => '</table>'
         );
 
-//        echo !empty($paginacao) ? $paginacao : '';
-
         echo validation_errors('<div class="alert alert-error">','</div>');
         if ($this->session->userdata('bairro_excluido'))
         {
@@ -22,12 +20,13 @@
         }
 
         $this->table->set_template($tmpl);
-        $this->table->set_heading('Bairro', 'Presidente', 'Telefone', 'E-mail', '');
+        $this->table->set_heading('Bairro', 'População', 'Presidente', 'Telefone', 'E-mail', '');
 
         if (!empty($bairros))
         {        
             foreach ($bairros as $bairro):
                 $this->table->add_row(array('data'=>'<strong>'.$bairro->nome.'</strong>'),
+                                      array('data'=>$bairro->populacao),
                                       array('data'=>$bairro->nome_presidente),
                                       array('data'=>$bairro->telefone_presidente),
                                       array('data'=>$bairro->email_presidente),

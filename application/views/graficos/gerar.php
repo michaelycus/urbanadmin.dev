@@ -83,7 +83,6 @@ else
 /***** Requerimentos por bairro *****/
 
 $max=0;
-$segments = 10;
 
 if (!empty($requerimentos_bairro))
 {
@@ -91,6 +90,8 @@ if (!empty($requerimentos_bairro))
         $max = max($r_b->count_requerimentos_bairro, $max);
     endforeach;
 }
+
+$segments = ($max > 10) ? 10 : $max;
 
 $max = $max + 1;
 
@@ -102,7 +103,17 @@ $(function() {
             width: 700,
             defaultArea: {
                 attrs: {
-                    fill: "#c9ffc9"
+                    fill: "#cadbed", stroke: "#204a87"
+                },
+                text : {
+                    attrs: {
+                        fill: "#ce5c00",
+                        "font-weight": "bold"
+                    },
+                    attrsHover: {
+                        fill: "#ce5c00",
+                        "font-weight": "normal"
+                    }
                 }
             }
         },
@@ -113,13 +124,17 @@ $(function() {
                 slices: [
 EOF;
 
+$difR = 82 / $segments; // #729fcf
+$difG = 85 / $segments; // to
+$difB = 72 / $segments; // #204a87
+
 for ($i=1; $i<=$segments; $i++)
 {
     $data .= '{
                 min: '. round( ($max/$segments)*$i - ($max/$segments) )  .',
                 max: '. round( ($max/$segments)*$i ) .',
                 attrs: {
-                    fill: "'. rgb2hex(array(50, (255 - 10 * $i), 50) ) .'"}
+                    fill: "'. rgb2hex(array(114 - $i * $difR, 159 - $i * $difG, 207 - $i * $difB )) .'"}
               },';
 }
 
@@ -351,9 +366,17 @@ $("#vereador").change(function() {
             width: 700,
             defaultArea: {
                 attrs: {
-                    fill: "#99e",
-                    stroke: "#82bfec",
-                    "stroke-width": 0.3
+                    fill: "#cadbed", stroke: "#204a87"
+                },
+                text : {
+                    attrs: {
+                        fill: "#204a87",
+                        "font-weight": "bold"
+                    },
+                    attrsHover: {
+                        fill: "#204a87",
+                        "font-weight": "normal"
+                    }
                 }
             },
             defaultPlot: {
@@ -388,7 +411,95 @@ else
 
 /***** Requerentes por bairro *****/
 
+$max=0;
+$segments = 5;
 
+if (!empty($requerentes_bairro))
+{
+    foreach ($requerentes_bairro as $r_b):
+        $max = max($r_b->count_requerentes, $max);
+    endforeach;
+}
+
+$max = $max + 1;
+
+$data = <<<EOF
+$(function() {
+    $(".maparea1").mapael({
+        map: {
+            name: "lajeado",
+            width: 700,
+            defaultArea: {
+                attrs: {
+                    fill: "#fce94f", stroke: "#c4a000"
+                },
+                text : {
+                    attrs: {
+                        fill: "#ce5c00",
+                        "font-weight": "bold"
+                    },
+                    attrsHover: {
+                        fill: "#ce5c00",
+                        "font-weight": "normal"
+                    }
+                }
+            }
+        },
+        legend: {
+            area: {
+                display: true,
+                title: "Requerentes por bairro",
+                slices: [
+EOF;
+
+$difA = 41 / $segments; // #edd400
+$difB = 52 / $segments; // #c4a000
+
+for ($i=1; $i<=$segments; $i++)
+{
+    $data .= '{
+                min: '. round( ($max/$segments)*$i - ($max/$segments) )  .',
+                max: '. round( ($max/$segments)*$i ) .',
+                attrs: {
+                    fill: "'. rgb2hex(array(237 - $i * $difA, (212 - $difB * $i), 0) ) .'"}
+              },';
+}
+
+$data .=']
+    }
+},
+areas: {';
+
+if (!empty($requerentes_bairro))
+{
+    foreach ($requerentes_bairro as $r_b):
+        if ($r_b->codename!=NULL)
+        {
+            $data .= <<<EOF
+                    "$r_b->codename":{
+                        value: "$r_b->count_requerentes",
+                        text: { content:  $r_b->count_requerentes , attrs: {fill:"#222"} },
+                        href: "#",
+                        tooltip: {content: "<span style=\"font-weight:bold;\">$r_b->nome_bairro </span><br />Requerimentos: $r_b->count_requerentes"},
+                    },
+EOF;
+
+        }
+    endforeach;
+
+    $data .='}
+    });
+});';
+}
+
+if ( ! write_file('js/maps/requerentes_por_bairro.js', $data))
+{
+     echo 'Unable to write the file';
+}
+else
+{
+     echo 'Arquivo requerentes_por_bairro.js gerado!<br />';
+}
 
 /***** END - Requerentes por bairro - END *****/
 

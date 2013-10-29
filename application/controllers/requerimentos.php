@@ -40,8 +40,6 @@ class Requerimentos extends MY_Controller
         $config['max_height'] = '1024';
         $config['encrypt_name'] = TRUE;
         
-        $upload_files = FALSE;
-
         $this->load->library('upload', $config);
 
         $this->form_validation->set_rules($this->requerimento_model->validation);
@@ -65,8 +63,6 @@ class Requerimentos extends MY_Controller
                         $file_data = $this->upload->data();
 
                         $data['anexo_'.$i] = $file_data['raw_name'].$file_data['file_ext'];
-
-                        $upload_files = TRUE;
                     }
                     else
                     {
@@ -99,8 +95,6 @@ class Requerimentos extends MY_Controller
         $config['max_height'] = '1024';
         $config['encrypt_name'] = TRUE;
         
-        $upload_files = FALSE;
-
         $this->load->library('upload', $config);
 
         $this->form_validation->set_rules($this->requerimento_model->validation);
@@ -124,8 +118,6 @@ class Requerimentos extends MY_Controller
                         $file_data = $this->upload->data();
 
                         $data['anexo_'.$i] = $file_data['raw_name'].$file_data['file_ext'];
-
-                        $upload_files = TRUE;
                     }
                     else
                     {

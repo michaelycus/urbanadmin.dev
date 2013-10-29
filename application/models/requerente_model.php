@@ -34,10 +34,10 @@ class Requerente_model extends MY_Model
     
     public function count_requerentes_por_bairro()
     {
-        $this->db->select('bairros.nome, bairros.codename, COUNT(requerentes.id)');
+        $this->db->select('bairros.nome AS nome_bairro, bairros.codename, COUNT(requerentes.id) AS count_requerentes');
         $this->db->where('mora_cidade', MORA_NA_CIDADE);
         $this->db->join('bairros', 'requerentes.id_bairro=bairros.id');
-        $this->db->group_by('requerentes.id_bairroid');
+        $this->db->group_by('requerentes.id_bairro');
 
         return $this->get_all();
 //        SELECT bairros.nome, COUNT( requerentes.id ) 

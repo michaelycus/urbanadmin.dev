@@ -212,28 +212,28 @@
                                 <ul class="sub<?php echo ($cat=='graficos' ? ' show' : '')?>">
                                     <li>
                                         <?php echo anchor('graficos/populacao_por_bairro',
-                                                '<span class="icon"><i class="icon20 i-people"></i></span>
-                                                 <span class="txt">População por bairro</span>');?>
+                                                '<i class="icon12 i-people"></i>
+                                                 <span class="txt">Bairros: população</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerentes_por_bairro',
-                                                '<span class="icon"><i class="icon20 i-people"></i></span>
-                                                 <span class="txt">Requerentes por bairro</span>');?>
+                                                '<i class="icon12 i-people"></i>
+                                                 <span class="txt">Requerentes: bairro</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_bairro',
-                                                '<span class="icon"><i class="icon20 i-stack"></i></span>
-                                                 <span class="txt">Req. por bairro</span>');?>
+                                                '<i class="icon12  i-file-9"></i>
+                                                 <span class="txt">Requerimentos: bairro</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_tipo',
-                                                '<span class="icon"><i class="icon20 i-office"></i></span>
-                                                 <span class="txt">Req. por tipo</span>');?>
+                                                '<i class="icon12  i-file-9"></i>
+                                                 <span class="txt">Requerimentos: tipo</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_vereador',
-                                                '<span class="icon"><i class="icon20 i-office"></i></span>
-                                                 <span class="txt">Req. por vereador</span>');?>
+                                                '<i class="icon12  i-file-9"></i>
+                                                <span class="txt">Requerimentos: vereador</span>');?>
                                     </li>
                                 </ul>
                             </li>

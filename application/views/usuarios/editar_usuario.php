@@ -1,86 +1,116 @@
+<div class="container-fluid">
+    <div id="heading" class="page-header">
+        <h1><i class="icon20 i-user-plus-3"></i> Editar usuário</h1>
+    </div>
 
-    <ul class="nav nav-pills">
-        <li><?php echo anchor('usuarios', 'Listar') ?></li>
-        <li><?php echo anchor('usuarios/adicionar_usuario', 'Adicionar') ?></li>
-    </ul>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="icon"><i class="icon20 i-user"></i></div>
+                    <h4>Perfil</h4>
+                    <a href="#" class="minimize"></a>
+                </div><!-- End .panel-heading -->
 
-    <?php
-    echo form_open('usuarios/editar_usuario', 'class="bs-docs-example form-horizontal"');
+                <div class="panel-body">
 
-    echo validation_errors('<div class="alert alert-error">','</div>');
-    if ($this->session->userdata('usuario_editado'))
-    {
-        echo '<div class="alert alert-success">'. $this->session->userdata('usuario_editado') .'</div>';
-        $this->session->unset_userdata('usuario_editado');
-    }
-    
-    dump($usuario);
+                <?php
+                echo form_open_multipart('usuarios/editar_usuario', 'class="bs-docs-example form-horizontal"');
 
-    echo '<h4>Editar usuário</h4>';
+                if (!empty($error))
+                    echo '<div class="alert alert-error">'. $error .'</div>';
 
-    // nome
-    echo '<div class="control-group">';
-    echo form_label('Nome', 'nome', array('class' => 'control-label'));
-    echo    '<div class="controls">';
-    echo    form_input(array('name' => 'nome','id' => 'nome','placeholder' => 'Nome'), set_value('nome', $usuario->nome));
-    echo    '</div>';
-    echo '</div>';
+                echo validation_errors('<div class="alert alert-error">','</div>');
+                if ($this->session->userdata('usuario_editado'))
+                {
+                    echo '<div class="alert alert-success">'. $this->session->userdata('usuario_editado') .'</div>';
+                    $this->session->unset_userdata('usuario_editado');
+                }
 
-    // usuario
-    echo '<div class="control-group">';
-    echo form_label('Usuário', 'usuario', array('class' => 'control-label'));
-    echo    '<div class="controls">';
-    echo    form_input(array('name' => 'usuario','id' => 'usuario','placeholder' => 'Usuário'), set_value('usuario', $usuario->usuario));
-    echo    '</div>';
-    echo '</div>';
+                // nome
+                echo '<div class="form-group">';
+                echo form_label('Nome', 'nome', array('class' => 'col-lg-2 control-label'));
+                echo    '<div class="col-lg-5">';
+                echo    form_input(array('name' => 'nome','id' => 'nome','placeholder' => 'Nome',
+                                'class' => 'form-control','autofocus' => 'autofocus'), set_value('nome', $usuario->nome));
+                echo    '</div>';
+                echo '</div>';
 
-    // password
-    echo '<div class="control-group">';
-    echo form_label('Senha', 'senha', array('class' => 'control-label'));
-    echo    '<div class="controls">';
-    echo    form_password(array('name' => 'senha','id' => 'senha','placeholder' => 'Senha'));
-    echo    '</div>';
-    echo '</div>';
+                // avatar
+                echo '<div class="form-group">';
+                echo form_label('Avatar', 'avatar', array('class' => 'col-lg-2 control-label'));
+                echo    '<div class="col-lg-10">';
+                echo        '<div class="profile-avatar">';
+                echo            '<img src="'. base_url(). 'images/avatars/avatar.png" alt="Avatar">';
+                echo        '</div>';
+                echo        '<input type="file" class="form-control">';
+                echo    '</div>';
+                echo '</div>';
 
-    // password2
-    echo '<div class="control-group">';
-    echo form_label('Repetir Senha', 'senha2', array('class' => 'control-label'));
-    echo    '<div class="controls">';
-    echo    form_password(array('name' => 'senha2','id' => 'senha2','placeholder' => 'Senha'));
-    echo    '</div>';
-    echo '</div>';
+                // usuario
+                echo '<div class="form-group">';
+                echo form_label('Usuário', 'usuario', array('class' => 'col-lg-2 control-label'));
+                echo    '<div class="col-lg-5">';
+                echo    form_input(array('name' => 'usuario','id' => 'usuario', 'class' => 'form-control',
+                            'placeholder' => 'Usuário'), set_value('usuario', $usuario->usuario));
+                echo    '</div>';
+                echo '</div>';
 
-    // email
-    echo '<div class="control-group">';
-    echo form_label('E-mail', 'email', array('class' => 'control-label'));
-    echo    '<div class="controls">';
-    echo    form_input(array('name' => 'email','id' => 'email','placeholder' => 'E-mail'), set_value('email', $usuario->email));
-    echo    '</div>';
-    echo '</div>';
+                // password
+                echo '<div class="form-group">';
+                echo form_label('Senha', 'senha', array('class' => 'col-lg-2 control-label'));
+                echo    '<div class="col-lg-5">';
+                echo    form_password(array('name' => 'senha','id' => 'senha', 'class' => 'form-control',
+                            'placeholder' => 'Senha'));
+                echo    '</div>';
+                echo '</div>';
 
-    // autorizacao
-    echo '<div class="control-group">';
+                // password2
+                echo '<div class="form-group">';
+                echo form_label('Repetir Senha', 'senha2', array('class' => 'col-lg-2 control-label'));
+                echo    '<div class="col-lg-5">';
+                echo    form_password(array('name' => 'senha2','id' => 'senha2', 'class' => 'form-control',
+                            'placeholder' => 'Senha'));
+                echo    '</div>';
+                echo '</div>';
 
-    echo    '<label for="autorizacao" class="control-label">Autorização</label>';
-    echo    '<div class="controls">';
-    echo        '<select id="autorizacao" name="autorizacao">';
-    echo            '<option value="1" '. ($usuario->autorizacao == 1 ? ' selected ' : '') .'>Administrador</option>';
-    echo            '<option value="2" '. ($usuario->autorizacao == 2 ? ' selected ' : '') .'>Operador</option>';
-    echo            '<option value="3" '. ($usuario->autorizacao == 3 ? ' selected ' : '') .'>Colaborador</option>';
-    echo        '</select>';
-    echo    '</div>';
+                // email
+                echo '<div class="form-group">';
+                echo form_label('E-mail', 'email', array('class' => 'col-lg-2 control-label'));
+                echo    '<div class="col-lg-5">';
+                echo    form_input(array('name' => 'email','id' => 'email', 'class' => 'form-control',
+                            'placeholder' => 'E-mail'), set_value('email', $usuario->email));
+                echo    '</div>';
+                echo '</div>';
 
-    echo '</div>';
-    
-    echo form_hidden('id', $usuario->id);
+                // autorizacao
+                echo '<div class="form-group">';
 
-    echo '<div class="control-group">';
-    echo    '<div class="controls">';
-    echo form_submit('submit', 'Editar', 'class="btn btn-primary"');
-    echo    '</div>';
-    echo '</div>';
+                echo    '<label for="autorizacao" class="col-lg-2 control-label">Autorização</label>';
+                echo    '<div class="col-lg-10">';
+                echo        '<select id="autorizacao" name="autorizacao">';
+                echo            '<option value="1" '. ($usuario->autorizacao == 1 ? ' selected ' : '') .'>Administrador</option>';
+                echo            '<option value="2" '. ($usuario->autorizacao == 2 ? ' selected ' : '') .'>Operador</option>';
+                echo        '</select>';
+                echo    '</div>';
 
-    echo form_close();
-    ?>
+                echo '</div>';
 
-    <hr>
+                echo form_hidden('id', $usuario->id);
+
+                echo '<div class="form-group">';
+                echo    '<div class="col-lg-offset-2">';
+                echo        '<div class="pad-left15">';
+                echo        form_submit('submit', 'Editar', 'class="btn btn-primary"');
+                echo        '</div>';
+                echo    '</div>';
+                echo '</div>';
+
+                echo form_close();
+                ?>
+
+                </div><!-- End .panel-body -->
+           </div><!-- End .widget -->
+       </div><!-- End .col-lg-6  -->
+    </div><!-- End .row-fluid  -->
+</div>

@@ -5,7 +5,17 @@ $(function() {
             width: 700,
             defaultArea: {
                 attrs: {
-                    fill: "#c9ffc9"
+                    fill: "#cadbed", stroke: "#204a87"
+                },
+                text : {
+                    attrs: {
+                        fill: "#ce5c00",
+                        "font-weight": "bold"
+                    },
+                    attrsHover: {
+                        fill: "#ce5c00",
+                        "font-weight": "normal"
+                    }
                 }
             }
         },
@@ -15,54 +25,24 @@ $(function() {
                 title: "Requerimentos por bairro",
                 slices: [{
                 min: 0,
-                max: 0,
-                attrs: {
-                    fill: "#32f532"}
-              },{
-                min: 0,
                 max: 1,
                 attrs: {
-                    fill: "#32eb32"}
+                    fill: "#5d89bd"}
               },{
                 min: 1,
-                max: 1,
-                attrs: {
-                    fill: "#32e132"}
-              },{
-                min: 1,
-                max: 2,
-                attrs: {
-                    fill: "#32d732"}
-              },{
-                min: 2,
-                max: 2,
-                attrs: {
-                    fill: "#32cd32"}
-              },{
-                min: 2,
-                max: 2,
-                attrs: {
-                    fill: "#32c332"}
-              },{
-                min: 2,
                 max: 3,
                 attrs: {
-                    fill: "#32b932"}
-              },{
-                min: 3,
-                max: 3,
-                attrs: {
-                    fill: "#32af32"}
+                    fill: "#4974ab"}
               },{
                 min: 3,
                 max: 4,
                 attrs: {
-                    fill: "#32a532"}
+                    fill: "#345f99"}
               },{
                 min: 4,
-                max: 4,
+                max: 5,
                 attrs: {
-                    fill: "#329b32"}
+                    fill: "#204a87"}
               },]
     }
 },
@@ -82,10 +62,10 @@ areas: {                    "carneiros":{
                         href: "#",
                         tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Requerimentos: 1"},
                     },                    "conventos":{
-                        value: "3",
-                        text: { content:  3 , attrs: {fill:"#222"} },
+                        value: "4",
+                        text: { content:  4 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Requerimentos: 3"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Requerimentos: 4"},
                     },                    "floresta":{
                         value: "1",
                         text: { content:  1 , attrs: {fill:"#222"} },
@@ -111,11 +91,16 @@ areas: {                    "carneiros":{
                         text: { content:  3 , attrs: {fill:"#222"} },
                         href: "#",
                         tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerimentos: 3"},
-                    },                    "moinhos":{
+                    },                    "jardim_do_cedro":{
                         value: "1",
                         text: { content:  1 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerimentos: 1"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerimentos: 1"},
+                    },                    "moinhos":{
+                        value: "2",
+                        text: { content:  2 , attrs: {fill:"#222"} },
+                        href: "#",
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerimentos: 2"},
                     },                    "moinhos_dagua":{
                         value: "1",
                         text: { content:  1 , attrs: {fill:"#222"} },
