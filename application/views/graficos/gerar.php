@@ -184,6 +184,14 @@ $(function() {
     var data = {
 EOF;
 
+foreach ($requerimentos_categoria as $r_c)
+{
+    foreach ($r_c as $r)
+    {
+        $max = max($r->count_requerimentos, $max);        
+    }
+}
+
 if (!empty($requerimentos_categoria))
 {
     // areas
@@ -199,8 +207,11 @@ if (!empty($requerimentos_categoria))
                 $data .= '"'.$bairro->codename.'": {"text": {"content": ""}},';
             }
             $data .= '}},';
+            
+            $i++;
         }
-        else if (!empty($r_c))
+        
+        if (!empty($r_c))
         {
             $data .= '"'. $i. '": { "areas": {';
 
@@ -208,6 +219,9 @@ if (!empty($requerimentos_categoria))
             {
                 $data .= '"'. $r->codename .'": {
                     "value": '. $r->count_requerimentos .',
+                    "attrs": { fill: "'. rgb2hex(array(32 + (($max - $r->count_requerimentos) * 82/$max),
+                                                       74 + (($max - $r->count_requerimentos) * 85/$max),
+                                                       135 + (($max - $r->count_requerimentos) * 72/$max))) .'"},
                     "text": { "content":  "'. $r->count_requerimentos .'" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">'. $r->nome_bairro .'</span><br />Requerimentos : '. $r->count_requerimentos .'"
@@ -216,20 +230,6 @@ if (!empty($requerimentos_categoria))
                 $data .= '}';
                 $data .= end($r_c)==$r ? '' : ',';
             }
-            
-            $data .= '},';
-            
-            $data .= '"plots": {';
-            
-            foreach ($r_c as $r)
-            {
-                $data .= '"'. $r->codename .'": {
-                    "value": '. $r->count_requerimentos;
-
-                $data .= '}';
-                $data .= end($r_c)==$r ? '' : ',';
-            }
-
             
             $data .= '}';
             $data .= '},';
@@ -256,7 +256,7 @@ $("#cat_requerimento").change(function() {
             width: 700,
             defaultArea: {
                 attrs: {
-                    fill: "#99e",
+                    fill: "#cadbed",
                     stroke: "#82bfec",
                     "stroke-width": 0.3
                 }
@@ -275,6 +275,7 @@ $("#cat_requerimento").change(function() {
             }            
         },
         areas: data[0]['areas']
+        
     });
 });
 EOF;
@@ -299,6 +300,14 @@ $(function() {
     var data = {
 EOF;
 
+foreach ($requerimentos_vereadores as $r_c)
+{
+    foreach ($r_c as $r)
+    {
+        $max = max($r->count_requerimentos, $max);        
+    }
+}
+
 if (!empty($requerimentos_vereadores))
 {
     // areas
@@ -321,6 +330,9 @@ if (!empty($requerimentos_vereadores))
                 $data .= '"'. $r->codename .'": {
                     "value": '. $r->count_requerimentos .',
                     "text": { "content":  "'. $r->count_requerimentos .'" , attrs: {fill:"#222"} },
+                    "attrs": { fill: "'. rgb2hex(array(32 + (($max - $r->count_requerimentos) * 82/$max),
+                                                       74 + (($max - $r->count_requerimentos) * 85/$max),
+                                                       135 + (($max - $r->count_requerimentos) * 72/$max))) .'"},
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">'. $r->nome_bairro .'</span><br />Requerimentos : '. $r->count_requerimentos .'"
                     }';
@@ -370,7 +382,7 @@ $("#vereador").change(function() {
                 },
                 text : {
                     attrs: {
-                        fill: "#204a87",
+                        fill: "#eee",
                         "font-weight": "bold"
                     },
                     attrsHover: {

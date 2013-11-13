@@ -93,9 +93,9 @@
         <script src="<?php echo base_url(); ?>js/pages/ui-elements.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/domready.js"></script><!-- Init plugins only for page -->
         <!--<script src="<?php echo base_url(); ?>js/pages/dashboard.js"></script> Esse puglin impossibilita o carregamento do mapael -->
-        
+
         <!-- Bootstrap script -->
-        <script src="<?php echo base_url(); ?>js/bootstrap/bootbox.min.js"></script>  
+        <script src="<?php echo base_url(); ?>js/bootstrap/bootbox.min.js"></script>
 
         <!-- Custom script -->
         <script src="<?php echo base_url(); ?>js/functions.js"></script>
@@ -115,8 +115,9 @@
                                 <span class="more"><i class="icon16 i-arrow-down-2"></i></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a href="profile.html" class=""><i class="icon16 i-user"></i> Profile</a></li>
-                                <li role="presentation"><?php echo anchor('logout', '<i class="icon16 i-exit"></i> Sair'); ?>                                
+                                <li role="presentation"><a href="profile.html" class=""><i class="icon16 i-user"></i> Perfil</a></li>
+                                <li role="presentation"><?php echo anchor('usuarios/listar_usuarios', '<i class="icon16 i-users-4"></i> Listar usuários'); ?>
+                                <li role="presentation"><?php echo anchor('logout', '<i class="icon16 i-exit"></i> Sair'); ?>
                             </ul>
                         </li>
                         <li class="divider-vertical"></li>
@@ -124,9 +125,9 @@
                 </div><!--/.nav-collapse -->
             </nav>
         </header> <!-- End #header  -->
-        
+
         <?php
-        $cat = $this->uri->segment(1); 
+        $cat = $this->uri->segment(1);
         ?>
 
         <div class="main">
@@ -139,7 +140,7 @@
 
                 <div class="sidebar-wrapper">
                     <nav id="mainnav">
-                        <ul class="nav nav-list">                        
+                        <ul class="nav nav-list">
                             <li>
                                 <a href="#">
                                     <span class="icon"><i class="icon20 i-drawer-3"></i></span>
@@ -240,52 +241,26 @@
                         </ul>
                     </nav> <!-- End #mainnav -->
                 </div> <!-- End .sidebar-wrapper  -->
-                
-                <div class="sidebar-wrapper">
-                    <h4 class="sidebar-widget-header"><i class="icon i-cogs"></i> Configurações</h4>
-                    <nav id="mainnav">
-                        <ul class="nav nav-list">                        
-                            <li>
-                                <a href="#">
-                                    <span class="icon"><i class="icon20 i-users-4"></i></span>
-                                    <span class="txt">Usuários</span>
-                                </a>
-                                <ul class="sub<?php echo ($cat=='usuarios' ? ' show' : '')?>">
-                                    <li>
-                                        <?php echo anchor('usuarios/adicionar_usuario',
-                                                '<span class="icon"><i class="icon20 i-user-plus-3"></i></span>
-                                                 <span class="txt">Adicionar usuário</span>');?>
-                                    </li>
-                                    <li>
-                                        <?php echo anchor('usuarios/listar_usuarios',
-                                                '<span class="icon"><i class="icon20 i-users-3"></i></span>
-                                                 <span class="txt">Listar usuários</span>');?>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav> <!-- End #mainnav -->
-                </div> <!-- End .sidebar-wrapper  -->
-                
+
             </aside><!-- End #sidebar  -->
 
             <section id="content">
                 <div class="wrapper">
-                    
+
                     <div class="crumb">
                         <ul class="breadcrumb">
-                            <?php 
+                            <?php
                             echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Requerimentos</li>' :
                                     '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>Requerimentos') .'</li>');
-                            
+
                             echo '<li'. ($cat=='requerentes' ? ' class="active"><i class="icon16 i-users"></i>Requerentes</li>' :
                                     '>'.anchor('requerentes/da_cidade', '<i class="icon16 i-users"></i>Requerentes') .'</li>');
-                            
+
                             echo '<li'. ($cat=='bairros' ? ' class="active"><i class="icon16 i-office"></i>Bairros</li>' :
                                     '>'.anchor('bairros/listar_bairros', '<i class="icon16 i-office"></i>Bairros') .'</li>');
-                            
-                            echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i>Gráficos</li>' : 
-                                    '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>Gráficos').'</li>');                            
+
+                            echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i>Gráficos</li>' :
+                                    '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>Gráficos').'</li>');
                             ?>
                         </ul>
                     </div>

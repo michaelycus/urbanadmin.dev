@@ -51,8 +51,6 @@ class Graficos extends MY_Controller
         $this->data['requerimentos_vereadores'] = $this->requerimento_model->count_requerimentos_with_vereadores();
         $this->data['requerentes_bairro'] = $this->requerente_model->count_requerentes_por_bairro();
         
-//        PAREI AKI,,, SÓ COMPLETAR O RESTO
-        
         $this->load_view('graficos/gerar');
     }
 }

@@ -87,19 +87,19 @@
             <div class="panel panel-default">
                 <div class="panel-body">
 
-                    <?php 
+                    <?php
                     // cat_requerimento
                     echo '<div class="form-group">';
-                    echo    '<label for="cat_requerimento" class="col-lg-2 control-label">Tipo Requerimento</label>';
-                    echo    '<div class="col-lg-5">';
-                    echo        '<select id="cat_requerimento" name="cat_requerimento" class="col-lg-10">';
-                    echo            '<option value="0">Escolha uma categoria</option>';
+                    echo '<label for="cat_requerimento" class="col-lg-2 control-label">Tipo Requerimento</label>';
+                    echo '<div class="col-lg-5">';
+                    echo '<select id="cat_requerimento" name="cat_requerimento" class="col-lg-10">';
+                    echo '<option value="0">Escolha uma categoria</option>';
                     foreach ($cats_requerimento as $c_r)
                     {
-                        echo        '<option value="'.$c_r->id.'" '.set_select('cat_requerimento', $c_r->id).'>'.$c_r->nome.'</option>';
+                        echo '<option value="' . $c_r->id . '" ' . set_select('cat_requerimento', $c_r->id) . '>' . $c_r->nome . '</option>';
                     }
-                    echo        '</select>';
-                    echo    '</div>';
+                    echo '</select>';
+                    echo '</div>';
                     echo '</div><br /><hr><br />';
                     ?>
 

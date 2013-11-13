@@ -5,7 +5,11 @@
 
     <div class="row">
         <!-- Start page from here  -->
-    <?php
+    <?php   
+    echo '<p>';
+    echo anchor('usuarios/adicionar_usuario','<i class="i-user-plus-2"></i> Adicionar usuário ', array('class' => 'btn btn-primary'));
+    echo '</p>';
+    
     $tmpl = array(
         'table_open' => '<table class="table table-striped">',
         'table_close' => '</table>'
