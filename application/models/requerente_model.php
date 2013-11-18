@@ -12,6 +12,7 @@ class Requerente_model extends MY_Model
     {
         $this->db->select('requerentes.*, bairros.nome AS nome_bairro');
         $this->db->where('mora_cidade', MORA_NA_CIDADE);
+        $this->db->where('tipo', !REQUERENTE_TIPO_VEREADOR);
         $this->db->join('bairros', 'requerentes.id_bairro=bairros.id');
 
         return $this->get_all();
@@ -19,14 +20,19 @@ class Requerente_model extends MY_Model
     
     public function get_requerentes_outras_cidades()
     {
+        $this->db->select('requerentes.*, cidades.nome AS cidade, estados.sigla AS estado');
         $this->db->where('mora_cidade', MORA_OUTRA_CIDADE);
+        $this->db->join('cidades', 'cidades.id=requerentes.cidade');
+        $this->db->join('estados', 'estados.id=requerentes.estado');
 
         return $this->get_all();
     }
     
     public function get_vereadores()
     {
+        $this->db->select('requerentes.*, bairros.nome AS nome_bairro');
         $this->db->where('tipo', REQUERENTE_TIPO_VEREADOR);
+        $this->db->join('bairros', 'requerentes.id_bairro=bairros.id');        
         $this->db->order_by('id');
 
         return $this->get_all();

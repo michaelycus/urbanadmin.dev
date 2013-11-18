@@ -28,6 +28,7 @@ div.selector, div.selector *, div.radio, div.radio *, div.checker, div.checker *
 div.selector {
   line-height: 36px;
   height: 36px;
+  width: 100% !important;
   padding: 0;
   position: relative;
   overflow: hidden;
@@ -56,6 +57,7 @@ div.selector {
     overflow: hidden;
     white-space: nowrap;
     height: 36px;
+    width: 100% !important;
     line-height: 36px;
     /* padding-right: 30px; */
     cursor: pointer;

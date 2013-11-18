@@ -31,7 +31,7 @@
                                       array('data'=>$requerente->email),
                                       array('data'=>$requerente->nome_bairro),
                                       array('data'=>anchor('requerentes/editar_requerente/'.$requerente->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
-                                                    anchor('requerentes/excluir_requerente/'.$requerente->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:200px'));
+                                                    anchor('requerentes/excluir_requerente/'.$requerente->id.'/da_cidade',' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:200px'));
             endforeach;
 
             echo $this->table->generate();

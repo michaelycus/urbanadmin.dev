@@ -64,6 +64,14 @@ class Requerentes extends MY_Controller
         if ($this->input->post('pessoa_fisica') == PESSOA_JURIDICA)
             $this->form_validation->set_rules('cnpj', 'CNPJ', 'required|valid_cnpj|is_unique[requerentes.cnpj]');            
         $this->form_validation->set_rules('email', 'E-MAIL', 'required|valid_email|is_unique[requerentes.email]');            
+        if ($this->input->post('mora_cidade') == MORA_NA_CIDADE)
+            $this->form_validation->set_rules('id_bairro', 'BAIRRO', 'required');  
+        if ($this->input->post('mora_cidade') == MORA_OUTRA_CIDADE)
+        {
+            $this->form_validation->set_rules('estado', 'CIDADE', 'required');  
+            $this->form_validation->set_rules('cidade', 'ESTADO', 'required');  
+        }
+            
 
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('nome','pessoa_fisica','cpf','cnpj','rg','email','telefone',
@@ -120,10 +128,11 @@ class Requerentes extends MY_Controller
     public function excluir_requerente()
     {
         $id = $this->uri->segment(3);
+        $path = $this->uri->segment(4);
         
         $this->requerente_model->delete($id);
         $this->session->set_userdata('requerente_excluido','Requerente excluído com sucesso!');
-        redirect('requerentes/listar_requerentes');
+        redirect('requerentes/'.$path);
     }
     
     function getCidades($id)

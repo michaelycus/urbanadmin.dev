@@ -89,6 +89,30 @@
                 echo '</div>';
                 
                 echo '<hr>';
+                
+                // anexo_1
+                echo '<div class="form-group">';
+                echo form_label('Anexo 1', 'anexo_1', array('class' => 'col-lg-2 control-label'));    
+                echo    '<div class="col-lg-10">';
+                echo        form_upload('anexo_1',base_url().'/uploads/'.$requerimento->anexo_1) . anchor_popup(base_url().'/uploads/'.$requerimento->anexo_1, ' (Anexo)');
+                echo    '</div>';
+                echo '</div>';                
+
+                // anexo_2
+                echo '<div class="form-group">';
+                echo form_label('Anexo 2', 'anexo_2', array('class' => 'col-lg-2 control-label'));    
+                echo    '<div class="col-lg-10">';
+                echo        form_upload('anexo_2',base_url().'/uploads/'.$requerimento->anexo_2) . anchor_popup(base_url().'/uploads/'.$requerimento->anexo_2, ' (Anexo)');
+                echo    '</div>';
+                echo '</div>';
+
+                // anexo_3
+                echo '<div class="form-group">';
+                echo form_label('Anexo 3', 'anexo_3', array('class' => 'col-lg-2 control-label'));    
+                echo    '<div class="col-lg-10">'; 
+               echo        form_upload('anexo_3',base_url().'/uploads/'.$requerimento->anexo_3) . anchor_popup(base_url().'/uploads/'.$requerimento->anexo_3, ' (Anexo)');
+                echo    '</div>';
+                echo '</div>';
 
                 echo form_hidden('id', $requerimento->id);
 
@@ -106,3 +130,8 @@
        </div><!-- End .col-lg-6  -->     
     </div><!-- End .row-fluid  -->
 </div>
+
+<script type="text/javascript" src="<?php echo base_url() . 'js/bairro_rua.js'; ?>"></script>
+<script type="text/javascript">
+    var path = '<?php echo site_url(); ?>';
+</script>

@@ -559,7 +559,7 @@
             jRes.addFunc({
                 breakpoint: 'small',
                 enter: function() {
-                    resBtnSearch();
+                    /*resBtnSearch();*/
                     resBtn();
                     offCanvasMenuOn();
                     responsiveTables();
@@ -577,7 +577,7 @@
                 breakpoint: 'smart',
                 enter: function() {
                     changeTooltip();
-                    resBtnSearch();
+                    /*resBtnSearch();*/
                     resBtn();
                     offCanvasMenuOn();
                     responsiveTables();
@@ -586,7 +586,7 @@
                 exit: function() {
                     $('.chart-pie-social').css('width', '50%');
                     resBtnDestroy();
-                    resBtnSearchRestore();
+                    /*resBtnSearchRestore();*/
                     offCanvasMenuOff();
                     responsiveTablesOff();
                     restoreTooltip();

@@ -127,12 +127,12 @@ class Requerimentos extends MY_Controller
                 $i++;
             }
 
-            if (!$this->data['error'])
+            if (!array_key_exists('error', $this->data))
             {
-                $this->requerimento_model->update($data);
+                $this->requerimento_model->update($this->input->post('id'),$data);
                 $this->session->set_userdata('requerimento_editado','Requerimento editado com sucesso!');
 
-                redirect('requerimentos/editar_requerimento'.$this->input->post('id'));
+                redirect('requerimentos/editar_requerimento/'.$this->input->post('id'));
             }
         endif;
         

@@ -113,7 +113,7 @@
                 echo '<div class="form-group">';
                 echo form_label('Endereço', 'endereco', array('class' => 'col-lg-2 control-label'));
                 echo    '<div class="col-lg-10">';
-                echo    form_input(array('name' => 'endereco','id' => 'endereco','placeholder' => 'Endereço','class' => 'form-control rg'), set_value('endereco'));
+                echo    form_input(array('name' => 'endereco','id' => 'endereco','placeholder' => 'Endereço','class' => 'form-control'), set_value('endereco'));
                 echo    '</div>';
                 echo '</div>';
 
