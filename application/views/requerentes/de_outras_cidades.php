@@ -8,11 +8,10 @@
 
         <?php
         $tmpl = array(
-            'table_open' => '<table class="table table-striped">',
+            'table_open' => '<table cellpadding="0" cellspacing="0" border="0" 
+                              class="table table-striped table-bordered table-hover" id="dataTable">',
             'table_close' => '</table>'
         );
-
-//        echo !empty($paginacao) ? $paginacao : '';
 
         echo validation_errors('<div class="alert alert-error">','</div>');
         if ($this->session->userdata('requerente_excluido'))

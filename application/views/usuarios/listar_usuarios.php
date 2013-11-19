@@ -11,9 +11,10 @@
     echo '</p>';
     
     $tmpl = array(
-        'table_open' => '<table class="table table-striped">',
-        'table_close' => '</table>'
-    );    
+            'table_open' => '<table cellpadding="0" cellspacing="0" border="0" 
+                              class="table table-striped table-bordered table-hover" id="dataTable">',
+            'table_close' => '</table>'
+        );    
     
     $autorizacoes = unserialize(TIPOS_AUTORIZACAO);
 

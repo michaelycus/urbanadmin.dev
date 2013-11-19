@@ -7,10 +7,6 @@
         <!-- Start page from here  -->
 
         <?php
-//        $tmpl = array(
-//            'table_open' => '<table class="table table-striped">',
-//            'table_close' => '</table>'
-//        );
         $tmpl = array(
             'table_open' => '<table cellpadding="0" cellspacing="0" border="0" 
                               class="table table-striped table-bordered table-hover" id="dataTable">',
@@ -42,90 +38,13 @@
                                                     anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:200px'));
             endforeach;
 
-//            echo $this->table->generate();
+            echo $this->table->generate();
         }
         else
         {
             echo '<div class="alert alert-info">Nenhum requerimento cadastrado!</div>';
         }
         ?>
-        
-        
-        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered table-hover" id="dataTable">
-            <thead>
-                <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="gradeX">
-                    <td>Trident</td>
-                    <td>
-                        Internet
-                         Explorer 
-                        4.0
-                        </td>
-                    <td>Win 95+</td>
-                    <td class="center">4</td>
-                    <td class="center">X</td>
-                </tr>
-                <tr class="gradeC">
-                    <td>Trident</td>
-                    <td>Internet
-                         Explorer 5.0</td>
-                    <td>Win 95+</td>
-                    <td class="center">5</td>
-                    <td class="center">C</td>
-                </tr>
-                <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                         Explorer 5.5</td>
-                    <td>Win 95+</td>
-                    <td class="center">5.5</td>
-                    <td class="center">A</td>
-                </tr>
-                <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                         Explorer 6</td>
-                    <td>Win 98+</td>
-                    <td class="center">6</td>
-                    <td class="center">A</td>
-                </tr>
-                <tr>
-                    <td>Trident</td>
-                    <td>Internet Explorer 7</td>
-                    <td>Win XP SP2+</td>
-                    <td class="center">7</td>
-                    <td class="center">A</td>
-                </tr>
-                <tr>
-                    <td>Trident</td>
-                    <td>AOL browser (AOL desktop)</td>
-                    <td>Win XP</td>
-                    <td class="center">6</td>
-                    <td class="center">A</td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                </tr>
-            </tfoot>
-        </table>
-        
-        
-        AINDA NAO SEI PORQUE NAO FUNCIONOU
-
 
     </div><!-- End .row-fluid  -->
 </div> 

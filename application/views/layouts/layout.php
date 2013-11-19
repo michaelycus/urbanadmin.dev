@@ -31,8 +31,6 @@
         <link href="<?php echo base_url(); ?>js/plugins/forms/uniform/uniform.default.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.css" rel="stylesheet" />
         
-        <!-- Tables plugins -->
-        <script src="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.min.js"></script>
 
         <!-- app stylesheets -->
         <link href="<?php echo base_url(); ?>css/app.css" rel="stylesheet" />
@@ -83,6 +81,10 @@
         <!-- Form plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/forms/uniform/jquery.uniform.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/mask/jquery.mask.min.js"></script>
+        
+        
+        <!-- Tables plugins -->
+        <script src="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.min.js"></script>
 
         <!-- Misc plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/misc/fullcalendar/fullcalendar.min.js"></script>

@@ -19,13 +19,6 @@ class Requerimentos extends MY_Controller
 
     public function listar_requerimentos()
     {
-//        $this->pagination->initialize(array(
-//            'base_url' => base_url().'requerimentos/listar_requerimentos',
-//            'total_rows' => $this->db->get('requerimentos')->num_rows()
-//        ));
-
-//        $this->data['paginacao'] = $this->pagination->create_links();
-//        $this->requerimento_model->limit(ITENS_POR_PAGINA, $this->uri->segment(3));
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_with_bairros();
 
         $this->load_view('requerimentos/listar_requerimentos');
@@ -75,6 +68,8 @@ class Requerimentos extends MY_Controller
             if (!$this->data['error'])
             {
                 $this->requerimento_model->insert($data);
+                generate_charts();
+                
                 $this->session->set_userdata('requerimento_cadastrado','Requerimento cadastrado com sucesso!');
 
                 redirect('requerimentos/cadastrar_requerimento');
@@ -130,6 +125,8 @@ class Requerimentos extends MY_Controller
             if (!array_key_exists('error', $this->data))
             {
                 $this->requerimento_model->update($this->input->post('id'),$data);
+                generate_charts();
+                
                 $this->session->set_userdata('requerimento_editado','Requerimento editado com sucesso!');
 
                 redirect('requerimentos/editar_requerimento/'.$this->input->post('id'));
@@ -149,6 +146,8 @@ class Requerimentos extends MY_Controller
         $id = $this->uri->segment(3);
 
         $this->requerimento_model->delete($id);
+        generate_charts();
+        
         $this->session->set_userdata('requerimento_excluido','Requerimento excluído com sucesso!');
         redirect('requerimentos/listar_requerimentos');
     }

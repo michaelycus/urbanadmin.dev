@@ -79,7 +79,9 @@ class Requerentes extends MY_Controller
                                    'estado','cidade','cep'),$this->input->post());
             $data['data_cadastro'] = date('Y-m-d');
             
-            $this->requerente_model->insert($data);                        
+            $this->requerente_model->insert($data);
+            generate_charts();
+            
             $this->session->set_userdata('requerente_cadastrado','Requerente cadastrado com sucesso!');            
             redirect('requerentes/cadastrar_requerente');     
         endif;
@@ -109,6 +111,8 @@ class Requerentes extends MY_Controller
                                    'estado','cidade','cep'),$this->input->post());
             
             $this->requerente_model->update($this->input->post('id'), $data);
+            generate_charts();
+            
             $this->session->set_userdata('requerente_editado','Requerente editado com sucesso!');
             redirect('requerentes/editar_requerente/'.$this->input->post('id'));   
         endif;
@@ -131,6 +135,8 @@ class Requerentes extends MY_Controller
         $path = $this->uri->segment(4);
         
         $this->requerente_model->delete($id);
+        generate_charts();
+        
         $this->session->set_userdata('requerente_excluido','Requerente excluído com sucesso!');
         redirect('requerentes/'.$path);
     }
