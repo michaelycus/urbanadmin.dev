@@ -1,375 +1,154 @@
-<?php
-$main = $this->uri->segment(1);
-$view = $this->uri->segment(2);
-$active_class = ' class="active" ';
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
     <head>
         <meta charset="utf-8">
-        <title>Title</title>
+        <title>Urbis</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="author" content="SuggeElson" />
+        <meta name="description" content="Genyx admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework" />
+        <meta name="keywords" content="admin, admin template, admin theme, responsive, responsive admin, responsive admin template, responsive theme, themeforest, 960 grid system, grid, grid theme, liquid, jquery, administration, administration template, administration theme, mobile, touch , responsive layout, boostrap, twitter boostrap" />
+        <meta name="application-name" content="Genyx admin template" />
 
-        <!-- Le styles -->
-        <link href="<?php echo base_url(); ?>css/bootstrap.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>css/bootstrap-responsive.css" rel="stylesheet">
-        <style>
+        <!-- Headings -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
+        <!-- Text -->
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
 
-            /* GLOBAL STYLES
-            -------------------------------------------------- */
-            /* Padding below the footer and lighter body text */
+        <!--[if lt IE 9]>
+       <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+       <link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+       <link href="http://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet" type="text/css" />
+       <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+       <link href="http://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+       <![endif]-->
 
-            body {
-                padding-bottom: 40px;
-                color: #5a5a5a;
-            }
-            
-            /* Custom container */
-            .container-narrow {
-              margin: 0 auto;
-              padding-top: 50px;
-              max-width: 700px;
-            }
-            .container-narrow > hr {
-              margin: 30px 0;
-            }
-            
-            /* Supporting marketing content */
-            .marketing {
-              margin: 60px 0;
-            }
-            .marketing p + h4 {
-              margin-top: 28px;
-            }
+        <!-- Core stylesheets do not remove -->
+        <link href="<?php echo base_url(); ?>css/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>css/bootstrap/bootstrap-theme.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>css/icons.css" rel="stylesheet" />
 
+        <!-- Plugins stylesheets -->
+        <link href="<?php echo base_url(); ?>js/plugins/forms/uniform/uniform.default.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.css" rel="stylesheet" />
+        
 
+        <!-- app stylesheets -->
+        <link href="<?php echo base_url(); ?>css/app.css" rel="stylesheet" />
 
-            /* CUSTOMIZE THE NAVBAR
-            -------------------------------------------------- */
+        <!-- Custom stylesheets ( Put your own changes here ) -->
+        <link href="<?php echo base_url(); ?>css/custom.css" rel="stylesheet" />
 
-            /* Special class on .container surrounding .navbar, used for positioning it into place. */
-            .navbar-wrapper {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 10;
-                margin-top: 20px;
-                margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-            }
-            .navbar-wrapper .navbar {
-
-            }
-
-            /* Remove border and change up box shadow for more contrast */
-            .navbar .navbar-inner {
-                border: 0;
-                -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-                -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-                box-shadow: 0 2px 10px rgba(0,0,0,.25);
-            }
-
-            /* Downsize the brand/project name a bit */
-            .navbar .brand {
-                padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
-                font-size: 16px;
-                font-weight: bold;
-                text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-            }
-
-            /* Navbar links: increase padding for taller navbar */
-            .navbar .nav > li > a {
-                padding: 15px 20px;
-            }
-
-            /* Offset the responsive button for proper vertical alignment */
-            .navbar .btn-navbar {
-                margin-top: 10px;
-            }
-
-
-
-            /* CUSTOMIZE THE CAROUSEL
-            -------------------------------------------------- */
-
-            /* Carousel base class */
-            .carousel {
-                margin-bottom: 60px;
-            }
-
-            .carousel .container {
-                position: relative;
-                z-index: 9;
-            }
-
-            .carousel-control {
-                height: 80px;
-                margin-top: 0;
-                font-size: 120px;
-                text-shadow: 0 1px 1px rgba(0,0,0,.4);
-                background-color: transparent;
-                border: 0;
-                z-index: 10;
-            }
-
-            .carousel .item {
-                height: 500px;
-            }
-            .carousel img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                min-width: 100%;
-                height: 500px;
-            }
-
-            .carousel-caption {
-                background-color: transparent;
-                position: static;
-                max-width: 550px;
-                padding: 0 20px;
-                margin-top: 200px;
-            }
-            .carousel-caption h1,
-            .carousel-caption .lead {
-                margin: 0;
-                line-height: 1.25;
-                color: #fff;
-                text-shadow: 0 1px 1px rgba(0,0,0,.4);
-            }
-            .carousel-caption .btn {
-                margin-top: 10px;
-            }
-
-
-
-            /* MARKETING CONTENT
-            -------------------------------------------------- */
-
-            /* Center align the text within the three columns below the carousel */
-            .marketing .span4 {
-                text-align: center;
-            }
-            .marketing h2 {
-                font-weight: normal;
-            }
-            .marketing .span4 p {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-
-
-            /* Featurettes
-            ------------------------- */
-
-            .featurette-divider {
-                margin: 80px 0; /* Space out the Bootstrap <hr> more */
-            }
-            .featurette {
-                padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
-                overflow: hidden; /* Vertically center images part 2: clear their floats. */
-            }
-            .featurette-image {
-                margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
-            }
-
-            /* Give some space on the sides of the floated elements so text doesn't run right into it. */
-            .featurette-image.pull-left {
-                margin-right: 40px;
-            }
-            .featurette-image.pull-right {
-                margin-left: 40px;
-            }
-
-            /* Thin out the marketing headings */
-            .featurette-heading {
-                font-size: 50px;
-                font-weight: 300;
-                line-height: 1;
-                letter-spacing: -1px;
-            }
-
-
-
-            /* RESPONSIVE CSS
-            -------------------------------------------------- */
-
-            @media (max-width: 979px) {
-
-                .container.navbar-wrapper {
-                    margin-bottom: 0;
-                    width: auto;
-                }
-                .navbar-inner {
-                    border-radius: 0;
-                    margin: -20px 0;
-                }
-
-                .carousel .item {
-                    height: 500px;
-                }
-                .carousel img {
-                    width: auto;
-                    height: 500px;
-                }
-
-                .featurette {
-                    height: auto;
-                    padding: 0;
-                }
-                .featurette-image.pull-left,
-                .featurette-image.pull-right {
-                    display: block;
-                    float: none;
-                    max-width: 40%;
-                    margin: 0 auto 20px;
-                }
-            }
-
-
-            @media (max-width: 767px) {
-
-                .navbar-inner {
-                    margin: -20px;
-                }
-
-                .carousel {
-                    margin-left: -20px;
-                    margin-right: -20px;
-                }
-                .carousel .container {
-
-                }
-                .carousel .item {
-                    height: 300px;
-                }
-                .carousel img {
-                    height: 300px;
-                }
-                .carousel-caption {
-                    width: 65%;
-                    padding: 0 70px;
-                    margin-top: 100px;
-                }
-                .carousel-caption h1 {
-                    font-size: 30px;
-                }
-                .carousel-caption .lead,
-                .carousel-caption .btn {
-                    font-size: 18px;
-                }
-
-                .marketing .span4 + .span4 {
-                    margin-top: 40px;
-                }
-
-                .featurette-heading {
-                    font-size: 30px;
-                }
-                .featurette .lead {
-                    font-size: 18px;
-                    line-height: 1.5;
-                }
-
-            }
-        </style>
+        <!--[if IE 8]><link href="css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
-          <script src="../assets/js/html5shiv.js"></script>
+          </script><script src="js/html5shiv.js"></script></script>
         <![endif]-->
 
-
-    </head>
-
-    <body>
-
-        <!-- NAVBAR
-        ================================================== -->
-        <div class="navbar-wrapper">
-            <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-            <div class="container">
-
-                <div class="navbar navbar-inverse">
-                    <div class="navbar-inner">
-                        <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <?php echo anchor('cadastro', 'Cadastro de Requerimentos', 'class="brand"'); ?>
-                        <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-                        <div class="nav-collapse collapse">
-                            <ul class="nav">
-                                <?php
-                            echo '<li';
-                            if ($view == 'cadastrar')
-                                echo $active_class; echo '>';
-                            echo anchor('cadastro/cadastrar', 'Cadastrar') . '</li>';
-                            echo '<li';
-                            
-                            if ($view == 'consultar')
-                                echo $active_class; echo '>';
-                            echo anchor('cadastro/consultar', 'Consultar') . '</li>';
-                            
-                            echo '<li';
-                            if ($view == 'bairros')
-                                echo $active_class; echo '>';
-                            echo anchor('cadastro/bairros', 'Bairros') . '</li>';
-                            
-                            ?>
-                            </ul>
-                        </div><!--/.nav-collapse -->
-                    </div><!-- /.navbar-inner -->
-                </div><!-- /.navbar -->
-
-            </div> <!-- /.container -->
-        </div><!-- /.navbar-wrapper -->
-
-        <?php $this->load->view($subview); ?>        
-
-        <!-- Marketing messaging and featurettes
-        ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
-
-        <div class="container marketing">
-
-            <!-- FOOTER -->
-            <footer>
-                <p class="pull-right"><a href="#">Back to top</a></p>
-                <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-            </footer>
-
-        </div><!-- /.container -->
-
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url(); ?>images/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url(); ?>images/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url(); ?>images/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="<?php echo base_url(); ?>images/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>images/ico/favicon.png">
 
         <!-- Le javascript
         ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-transition.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-alert.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-modal.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-dropdown.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-scrollspy.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-tab.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-tooltip.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-popover.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-button.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-collapse.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-carousel.js"></script>
-        <script src="<?php echo base_url(); ?>js/bootstrap-typeahead.js"></script>
-        <script>
-            !function($) {
-                $(function() {
-                    // carousel demo
-                    $('#myCarousel').carousel()
-                })
-            }(window.jQuery)
-        </script>
-        <script src=<?php echo base_url(); ?>js/holder/holder.js"></script>
+        <!-- Important plugins put in all pages -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/bootstrap/bootstrap.js"></script>
+        <script src="<?php echo base_url(); ?>js/conditionizr.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/core/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/core/jrespond/jRespond.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/jquery.genyxAdmin.js"></script>
+
+
+        <!-- Charts plugins -->
+        <script src="<?php echo base_url(); ?>js/plugins/charts/pie-chart/jquery.easy-pie-chart.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.pie.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.resize.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.tooltip.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.orderBars.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.time.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/charts/sparklines/jquery.sparkline.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/date.js"></script> <!-- Only for generating random data delete in production site-->
+        <script src="<?php echo base_url(); ?>js/plugins/charts/pie-chart/jquery.easy-pie-chart.js"></script>        
+        <script src="<?php echo base_url(); ?>js/plugins/charts/gauge/raphael.2.1.0.min.js"></script>
+        <!--<script src="<?php echo base_url(); ?>js/plugins/charts/gauge/justgage.1.0.1.min.js"></script>-->
+
+        <!-- Form plugins -->
+        <script src="<?php echo base_url(); ?>js/plugins/forms/uniform/jquery.uniform.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/forms/mask/jquery.mask.min.js"></script>
+        
+        
+        <!-- Tables plugins -->
+        <script src="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.min.js"></script>
+
+        <!-- Misc plugins -->
+        <script src="<?php echo base_url(); ?>js/plugins/misc/fullcalendar/fullcalendar.min.js"></script>
+
+        <!-- UI plugins -->
+        <script src="<?php echo base_url(); ?>js/plugins/ui/range-slider/rangeslider-ruler.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/ui/animated-progress-bar/jquery.progressbar.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/ui/jgrowl/jquery.jgrowl.js"></script>
+
+        <!-- Init plugins -->
+        <script src="<?php echo base_url(); ?>js/app.js"></script><!-- Core js functions -->
+        <script src="<?php echo base_url(); ?>js/pages/ui-elements.js"></script><!-- Init plugins only for page -->
+        <script src="<?php echo base_url(); ?>js/pages/domready.js"></script><!-- Init plugins only for page -->        
+        <script src="<?php echo base_url(); ?>js/pages/data-tables.js"></script><!-- Init plugins only for page -->
+        <!--<script src="<?php echo base_url(); ?>js/pages/dashboard.js"></script> Esse puglin impossibilita o carregamento do mapael -->
+
+        <!-- Bootstrap script -->
+        <script src="<?php echo base_url(); ?>js/bootstrap/bootbox.min.js"></script>
+
+        <!-- Custom script -->
+        <script src="<?php echo base_url(); ?>js/functions.js"></script>
+
+    </head>
+    <body>
+        <header id="header">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <a class="navbar-brand" href="dashboard.html"><img src="<?php echo base_url(); ?>images/logo.png" alt="Genyx admin" class="img-responsive"></a>
+                <div class="nav-no-collapse">
+
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown user">
+                            <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
+                                <img src="<?php echo base_url(); ?>images/avatars/sugge.jpg" alt="sugge">
+                                <span class="more"><i class="icon16 i-arrow-down-2"></i></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"><a href="profile.html" class=""><i class="icon16 i-user"></i> Perfil</a></li>
+                                <li role="presentation"><?php echo anchor('usuarios/listar_usuarios', '<i class="icon16 i-users-4"></i> Listar usuários'); ?>
+                                <li role="presentation"><?php echo anchor('logout', '<i class="icon16 i-exit"></i> Sair'); ?>
+                            </ul>
+                        </li>
+                        <li class="divider-vertical"></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </nav>
+        </header> <!-- End #header  -->
+
+        <?php
+        $cat = $this->uri->segment(1);
+        ?>
+
+        <div class="main">            
+
+            <section id="content">
+                <div class="wrapper">
+
+                    
+
+                    <?php $this->load->view($subview); ?>
+
+                </div> <!-- End .wrapper  -->
+            </section>
+
+        </div><!-- End .main  -->
     </body>
 </html>

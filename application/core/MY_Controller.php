@@ -33,5 +33,7 @@ class MY_Controller extends CI_Controller
     {
         $this->data['subview'] = $subview;        
         $this->load->view('front/layout', $this->data);
+        
+//        $this->load->view($subview, $this->data);
     }
 }
