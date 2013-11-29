@@ -10,7 +10,12 @@
 
                 <?php
                 $id = $this->uri->segment(3);
+                
+                // Redireciona quando usuário não é apresentado
                 if ($id==NULL && $requerente==NULL) redirect('requerentes');
+                
+                // Evita de operadores editarem outros usuários
+                if ($_SESSION['autorizacao']==AUTORIZACAO_OPERADOR && $_SESSION['id_user']!=$id) redirect('requerimentos');
 
                 echo form_open('requerentes/editar_requerente/'.$id, 'role="form" class="bs-docs-example form-horizontal"');
 

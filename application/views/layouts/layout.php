@@ -30,7 +30,7 @@
         <!-- Plugins stylesheets -->
         <link href="<?php echo base_url(); ?>js/plugins/forms/uniform/uniform.default.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.css" rel="stylesheet" />
-        
+
 
         <!-- app stylesheets -->
         <link href="<?php echo base_url(); ?>css/app.css" rel="stylesheet" />
@@ -74,15 +74,15 @@
         <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.time.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/charts/sparklines/jquery.sparkline.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/charts/flot/date.js"></script> <!-- Only for generating random data delete in production site-->
-        <script src="<?php echo base_url(); ?>js/plugins/charts/pie-chart/jquery.easy-pie-chart.js"></script>        
+        <script src="<?php echo base_url(); ?>js/plugins/charts/pie-chart/jquery.easy-pie-chart.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/charts/gauge/raphael.2.1.0.min.js"></script>
         <!--<script src="<?php echo base_url(); ?>js/plugins/charts/gauge/justgage.1.0.1.min.js"></script>-->
 
         <!-- Form plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/forms/uniform/jquery.uniform.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/mask/jquery.mask.min.js"></script>
-        
-        
+
+
         <!-- Tables plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.min.js"></script>
 
@@ -97,7 +97,7 @@
         <!-- Init plugins -->
         <script src="<?php echo base_url(); ?>js/app.js"></script><!-- Core js functions -->
         <script src="<?php echo base_url(); ?>js/pages/ui-elements.js"></script><!-- Init plugins only for page -->
-        <script src="<?php echo base_url(); ?>js/pages/domready.js"></script><!-- Init plugins only for page -->        
+        <script src="<?php echo base_url(); ?>js/pages/domready.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/data-tables.js"></script><!-- Init plugins only for page -->
         <!--<script src="<?php echo base_url(); ?>js/pages/dashboard.js"></script> Esse puglin impossibilita o carregamento do mapael -->
 
@@ -118,13 +118,28 @@
                         <li class="divider-vertical"></li>
                         <li class="dropdown user">
                             <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
-                                <img src="<?php echo base_url(); ?>images/avatars/sugge.jpg" alt="sugge">
+                                <!--<img src="<?php echo base_url(); ?>images/avatars/user-icon.png" alt="sugge">-->
+                                <!--<i class="icon32 i-cogs"></i>-->
+                                <i class="icon24 i-user"></i>(<?php echo $_SESSION['nome']; ?>)
                                 <span class="more"><i class="icon16 i-arrow-down-2"></i></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li role="presentation"><a href="profile.html" class=""><i class="icon16 i-user"></i> Perfil</a></li>
-                                <li role="presentation"><?php echo anchor('usuarios/listar_usuarios', '<i class="icon16 i-users-4"></i> Listar usuários'); ?>
+                                <?php
+                                if ($_SESSION['autorizacao'] == AUTORIZACAO_OPERADOR)
+                                {
+                                ?>
+                                <li role="presentation"><?php echo anchor('requerentes/editar_requerente/'.$_SESSION['id_user'], '<i class="icon16 i-user"></i> Editar perfil'); ?>
                                 <li role="presentation"><?php echo anchor('logout', '<i class="icon16 i-exit"></i> Sair'); ?>
+                                <?php
+                                }
+                                else if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
+                                {
+                                ?>
+                                <li role="presentation"><?php echo anchor('requerentes/editar_requerente/'.$_SESSION['id_user'], '<i class="icon16 i-user"></i> Editar perfil'); ?>
+                                <li role="presentation"><?php echo anchor('logout', '<i class="icon16 i-exit"></i> Sair'); ?>
+                                <?php
+                                }
+                                ?>
                             </ul>
                         </li>
                         <li class="divider-vertical"></li>
@@ -148,6 +163,33 @@
                 <div class="sidebar-wrapper">
                     <nav id="mainnav">
                         <ul class="nav nav-list">
+                            <?php
+                            if ($_SESSION['autorizacao'] == AUTORIZACAO_OPERADOR)
+                            {
+                            ?>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="icon20 i-drawer-3"></i></span>
+                                    <span class="txt">Meus Requerimentos</span>
+                                </a>
+                                <ul class="sub show">
+                                    <li>
+                                        <?php echo anchor('requerimentos/cadastrar_requerimento',
+                                                '<span class="icon"><i class="icon20 i-stack-empty"></i></span>
+                                                 <span class="txt">Cadastrar requerimento</span>');?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('requerimentos/meus_requerimentos',
+                                                '<span class="icon"><i class="icon20 i-stack-list"></i></span>
+                                                 <span class="txt">Listar requerimentos</span>');?>
+                                    </li>
+                                </ul>
+                            </li>
+                            <?php
+                            }
+                            else if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
+                            {
+                            ?>
                             <li>
                                 <a href="#">
                                     <span class="icon"><i class="icon20 i-drawer-3"></i></span>
@@ -245,6 +287,9 @@
                                     </li>
                                 </ul>
                             </li>
+                            <?php
+                            }
+                            ?>
                         </ul>
                     </nav> <!-- End #mainnav -->
                 </div> <!-- End .sidebar-wrapper  -->
@@ -257,17 +302,31 @@
                     <div class="crumb">
                         <ul class="breadcrumb">
                             <?php
-                            echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Requerimentos</li>' :
-                                    '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>Requerimentos') .'</li>');
+                            if ($_SESSION['autorizacao'] == AUTORIZACAO_OPERADOR)
+                            {
+                                echo '<li'. ($cat=='home' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
+                                        '>'.anchor('home', '<i class="icon16 i-home-3"></i>Início') .'</li>');
 
-                            echo '<li'. ($cat=='requerentes' ? ' class="active"><i class="icon16 i-users"></i>Requerentes</li>' :
-                                    '>'.anchor('requerentes/da_cidade', '<i class="icon16 i-users"></i>Requerentes') .'</li>');
+                                echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Meus requerimentos</li>' :
+                                        '>'.anchor('requerimentos/meus_requerimentos', '<i class="icon16 i-stack-list"></i>Meus requerimentos') .'</li>');
+                            }
+                            else if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
+                            {
+                                echo '<li'. ($cat=='home' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
+                                        '>'.anchor('home', '<i class="icon16 i-home-3"></i>Início') .'</li>');
+                                
+                                echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Requerimentos</li>' :
+                                        '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>Requerimentos') .'</li>');
 
-                            echo '<li'. ($cat=='bairros' ? ' class="active"><i class="icon16 i-office"></i>Bairros</li>' :
-                                    '>'.anchor('bairros/listar_bairros', '<i class="icon16 i-office"></i>Bairros') .'</li>');
+                                echo '<li'. ($cat=='requerentes' ? ' class="active"><i class="icon16 i-users"></i>Requerentes</li>' :
+                                        '>'.anchor('requerentes/da_cidade', '<i class="icon16 i-users"></i>Requerentes') .'</li>');
 
-                            echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i>Gráficos</li>' :
-                                    '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>Gráficos').'</li>');
+                                echo '<li'. ($cat=='bairros' ? ' class="active"><i class="icon16 i-office"></i>Bairros</li>' :
+                                        '>'.anchor('bairros/listar_bairros', '<i class="icon16 i-office"></i>Bairros') .'</li>');
+
+                                echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i>Gráficos</li>' :
+                                        '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>Gráficos').'</li>');
+                            }
                             ?>
                         </ul>
                     </div>

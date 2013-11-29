@@ -3,14 +3,20 @@
         <h1><i class="icon20 i-drawer-3"></i> Editar requerimento</h1>
     </div>
 
-    <div class="row">        
+    <div class="row">
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-body">
 
                 <?php
                 $id = $this->uri->segment(3);
+                
+                // Redireciona quando usuário não é apresentado
                 if ($id==NULL && $requerimento==NULL) redirect('requerimentos');
+                
+                // Evita de operadores editarem outros usuários
+                if ($_SESSION['autorizacao']==AUTORIZACAO_OPERADOR && $_SESSION['id_user']!=$requerimento->id_criador) redirect('meus_requerimentos');
+                
 
                 echo form_open_multipart('requerimentos/editar_requerimento', 'class="bs-docs-example form-horizontal"');
 
@@ -23,7 +29,7 @@
 
                 // descricao
                 echo '<div class="form-group">';
-                echo form_label('Descrição', 'descricao', array('class' => 'col-lg-2 control-label'));    
+                echo form_label('Descrição', 'descricao', array('class' => 'col-lg-2 control-label'));
                 echo    '<div class="col-lg-10">';
                 echo        form_textarea(array('name' => 'descricao','id' => 'descricao','placeholder' => 'Descrição do requerimento...','class' => 'form-control'), set_value('descricao',$requerimento->descricao));
                 echo    '</div>';
@@ -41,7 +47,7 @@
                 echo        '</select>';
                 echo    '</div>';
                 echo '</div>';
-                
+
                 // id_rua
                 echo '<div class="form-group">';
                 echo form_label('Rua', 'id_rua', array('class' => 'col-lg-2 control-label'));
@@ -59,7 +65,7 @@
                         }
                 echo    '</div>';
                 echo '</div>';
-                
+
                 // cat_requerimento
                 echo '<div class="form-group">';
                 echo    '<label for="cat_requerimento" class="col-lg-2 control-label">Tipo Req.</label>';
@@ -72,9 +78,9 @@
                 echo        '</select>';
                 echo    '</div>';
                 echo '</div>';
-                
+
                 echo '<hr>';
-                
+
                 // id_requerente
                 echo '<div class="form-group">';
                 echo    '<label for="id_requerente" class="col-lg-2 control-label">Requerente</label>';
@@ -87,20 +93,20 @@
                 echo        '</select>';
                 echo    '</div>';
                 echo '</div>';
-                
+
                 echo '<hr>';
-                
+
                 // anexo_1
                 echo '<div class="form-group">';
-                echo form_label('Anexo 1', 'anexo_1', array('class' => 'col-lg-2 control-label'));    
+                echo form_label('Anexo 1', 'anexo_1', array('class' => 'col-lg-2 control-label'));
                 echo    '<div class="col-lg-10">';
                 echo        form_upload('anexo_1',base_url().'/uploads/'.$requerimento->anexo_1) . anchor_popup(base_url().'/uploads/'.$requerimento->anexo_1, ' (Anexo)');
                 echo    '</div>';
-                echo '</div>';                
+                echo '</div>';
 
                 // anexo_2
                 echo '<div class="form-group">';
-                echo form_label('Anexo 2', 'anexo_2', array('class' => 'col-lg-2 control-label'));    
+                echo form_label('Anexo 2', 'anexo_2', array('class' => 'col-lg-2 control-label'));
                 echo    '<div class="col-lg-10">';
                 echo        form_upload('anexo_2',base_url().'/uploads/'.$requerimento->anexo_2) . anchor_popup(base_url().'/uploads/'.$requerimento->anexo_2, ' (Anexo)');
                 echo    '</div>';
@@ -108,8 +114,8 @@
 
                 // anexo_3
                 echo '<div class="form-group">';
-                echo form_label('Anexo 3', 'anexo_3', array('class' => 'col-lg-2 control-label'));    
-                echo    '<div class="col-lg-10">'; 
+                echo form_label('Anexo 3', 'anexo_3', array('class' => 'col-lg-2 control-label'));
+                echo    '<div class="col-lg-10">';
                echo        form_upload('anexo_3',base_url().'/uploads/'.$requerimento->anexo_3) . anchor_popup(base_url().'/uploads/'.$requerimento->anexo_3, ' (Anexo)');
                 echo    '</div>';
                 echo '</div>';
@@ -127,7 +133,7 @@
 
                 </div><!-- End .panel-body -->
            </div><!-- End .widget -->
-       </div><!-- End .col-lg-6  -->     
+       </div><!-- End .col-lg-6  -->
     </div><!-- End .row-fluid  -->
 </div>
 

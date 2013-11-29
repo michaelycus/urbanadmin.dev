@@ -13,32 +13,32 @@ class Graficos extends MY_Controller
 
     public function populacao_por_bairro()
     {
-        $this->load_view('graficos/populacao_por_bairro');
+        $this->load_view('graficos/populacao_por_bairro', TRUE);
     }
-    
+
     public function requerentes_por_bairro()
     {
         // apagar
-        $this->data['requerentes_bairro'] = $this->requerente_model->count_requerentes_por_bairro(); 
-        
-        $this->load_view('graficos/requerentes_por_bairro');
+        $this->data['requerentes_bairro'] = $this->requerente_model->count_requerentes_por_bairro();
+
+        $this->load_view('graficos/requerentes_por_bairro', TRUE);
     }
-    
+
     public function requerimentos_por_bairro()
     {
-        $this->load_view('graficos/requerimentos_por_bairro');
+        $this->load_view('graficos/requerimentos_por_bairro', TRUE);
     }
-    
+
     public function requerimentos_por_tipo()
     {
-        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();        
-        $this->load_view('graficos/requerimentos_por_tipo');        
+        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
+        $this->load_view('graficos/requerimentos_por_tipo', TRUE);
     }
-    
+
     public function requerimentos_por_vereador()
     {
         $this->data['vereadores'] = $this->requerente_model->get_vereadores();
-        $this->load_view('graficos/requerimentos_por_vereador');
+        $this->load_view('graficos/requerimentos_por_vereador', TRUE);
     }
 
     public function gerar()
@@ -50,7 +50,7 @@ class Graficos extends MY_Controller
         $this->data['vereadores'] = $this->requerente_model->get_vereadores();
         $this->data['requerimentos_vereadores'] = $this->requerimento_model->count_requerimentos_with_vereadores();
         $this->data['requerentes_bairro'] = $this->requerente_model->count_requerentes_por_bairro();
-        
-        $this->load_view('graficos/gerar');
+
+        $this->load_view('graficos/gerar', TRUE);
     }
 }

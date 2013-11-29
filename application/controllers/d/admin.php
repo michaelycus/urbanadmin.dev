@@ -18,7 +18,7 @@ class Admin extends MY_Controller
         $this->form_validation->set_rules($this->admin_model->validation);
         
         if ($this->form_validation->run() !== false)
-        {            
+        {
             $res = $this->admin_model->verify_user($this->input->post('usuario'), 
                                                    $this->input->post('senha'));
             

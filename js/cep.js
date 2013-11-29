@@ -28,7 +28,8 @@ $(function() {
     });
 });
 
-function resetaCombo(el) {
+function resetaCombo(el) 
+{
     $("select[name='" + el + "']").empty();
     var option = document.createElement('option');
     $(option).attr({value: ''});

@@ -27,6 +27,18 @@ class Requerimento_model extends MY_Model
         return $this->get_all();
     }
     
+    public function get_meus_requerimentos_with_bairros($id_user)
+    {
+        $this->db->select('requerimentos.*, bairros.nome AS nome_bairro, 
+                    categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente');
+        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+        $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
+        $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
+        $this->db->where('id_criador', $id_user);
+
+        return $this->get_all();
+    }
+    
     public function count_requerimentos_with_bairros()
     {
         $this->db->select('requerimentos.id_bairro, bairros.codename, COUNT(*) AS count_requerimentos_bairro, 

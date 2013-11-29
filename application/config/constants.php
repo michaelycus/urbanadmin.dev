@@ -63,22 +63,13 @@ define('MORA_NA_CIDADE',1);
 define('REQUERENTE_TIPO_CIDADAO',0);
 define('REQUERENTE_TIPO_VEREADOR',1);
 
-
-
-
-
-define('ACOES_TIPO_AVERIGUACAO_PROCESSO', 1);
-define('ACOES_TIPO_AVERIGUACAO_AUDITORIA', 2);
-define('ACOES_TIPO_AVERIGUACAO_RECLAMACAO_CLIENTE', 3);
-
-define('NIVEIS_ACOES', serialize (array ( 1 => "Recomendar",
-                                          2 => "Informar",
-                                          3 => "Agir" )));
-
 define('TIPOS_AUTORIZACAO', serialize (array ( 1 => "Administrador",
                                                2 => "Operador" )));
 
+define('AUTORIZACAO_OPERADOR',0);
+define('AUTORIZACAO_ADMINISTRADOR',1);
 
+define('REQUERENTE_PADRAO_ID', 7);
 
 
 /* End of file constants.php */

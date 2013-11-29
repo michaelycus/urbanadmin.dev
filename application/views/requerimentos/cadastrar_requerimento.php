@@ -63,22 +63,29 @@
                 echo        '</select>';
                 echo    '</div>';
                 echo '</div>';
-
-                echo '<hr>';
                 
-                // id_requerente
-                echo '<div class="form-group">';
-                echo    '<label for="id_requerente" class="col-lg-2 control-label">Requerente</label>';
-                echo    '<div class="col-lg-10">';
-                echo        '<select id="id_requerente" name="id_requerente">';
-                foreach ($requerentes as $requerente)
+                if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
                 {
-                    echo        '<option value="'.$requerente->id.'" '.set_select('id_requerente', $requerente->id).'>'.$requerente->nome.'</option>';
-                }
-                echo        '</select>';
-                echo    '</div>';
-                echo '</div>';
+                    echo '<hr>';    
 
+                    // id_requerente
+                    echo '<div class="form-group">';
+                    echo    '<label for="id_requerente" class="col-lg-2 control-label">Requerente</label>';
+                    echo    '<div class="col-lg-10">';
+                    echo        '<select id="id_requerente" name="id_requerente">';
+                    foreach ($requerentes as $requerente)
+                    {
+                        echo        '<option value="'.$requerente->id.'" '.set_select('id_requerente', $requerente->id).'>'.$requerente->nome.'</option>';
+                    }
+                    echo        '</select>';
+                    echo    '</div>';
+                    echo '</div>';
+                }
+                else
+                {
+                    echo form_hidden('id_requerente', REQUERENTE_PADRAO_ID); 
+                }
+                
                 echo '<hr>';
 
                 // anexo_1
@@ -106,6 +113,7 @@
                 echo '</div>';
 
                 echo form_hidden('id', $bairro->id);
+                echo form_hidden('id_criador', $_SESSION['id_user']);
 
                 echo '<div class="form-group">';
                 echo    '<div class="col-lg-offset-2">';

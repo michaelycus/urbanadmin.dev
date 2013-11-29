@@ -5,7 +5,7 @@
 -- Servidor: localhost
 -- Tempo de Geração: 
 -- Versão do Servidor: 5.5.24-log
--- Versão do PHP: 5.2.11
+-- Versão do PHP: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `bairros` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(64) NOT NULL,
-  `code_name` varchar(64) NOT NULL,
+  `codename` varchar(64) NOT NULL,
   `descricao` text,
   `nome_presidente` varchar(64) DEFAULT NULL,
   `telefone_presidente` varchar(64) DEFAULT NULL,
@@ -37,13 +37,13 @@ CREATE TABLE IF NOT EXISTS `bairros` (
   `email_presidente` varchar(64) NOT NULL,
   `populacao` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
 
 --
 -- Extraindo dados da tabela `bairros`
 --
 
-INSERT INTO `bairros` (`id`, `nome`, `code_name`, `descricao`, `nome_presidente`, `telefone_presidente`, `endereco_presidente`, `email_presidente`, `populacao`) VALUES
+INSERT INTO `bairros` (`id`, `nome`, `codename`, `descricao`, `nome_presidente`, `telefone_presidente`, `endereco_presidente`, `email_presidente`, `populacao`) VALUES
 (-1, 'Todos os bairros', '', NULL, NULL, NULL, '', '', NULL),
 (1, 'Alto do Parque', 'alto_do_parque', 'Bairro em Lajeado, oficialmente criado pela Lei nº 3.658, de 3-7-1985. As atuais confrontações foram estabelecidas pela Lei nº 6.152, de 14-10-1998. O ponto inicial é o encontro da projeção da Av. Lourenço Mayer da Silva com a BR-386. Descrição: Do ponto inicial, segue pelo eixo da Rod. BR-386 até encontrar o prolongamento da Rua Adão Ely, segue por este prolongamento e após pela Rua Adão Ely até a Rua José Alfredo Spohr, segue por esta até a Rua Moisés Cândido Veloso, segue por esta até a Rua Alvino Ritter, segue por esta até a divisa das terras do Estado do Rio Grande do Sul, segue por esta divisa até a Rua Pedro Osvaldo Dahlen, segue por esta até a Av. Lourenço Mayer da Silva, segue por esta até a Rua Ceará, segue por esta até a Rua das Margaridas, segue por esta até a Rua dos Jasmins, segue por esta até Av. Lourenço Mayer da Silva, segue por esta e após pela sua projeção até a Rod. BR-386, ponto inicial e final da descrição. Está encravado entre os Bairros Hidráulica, Carneiros, Universitário e São Cristóvão. Vindo de São Lourenço do Sul, o Padre Cláudio Ritt (* 28-11-1918, + 14-11-2000), em 18-4-1977, estabeleceu na Avenida Parque do Imigrante nº 87 uma capela junto à sua residência, sob a invocação de Nossa Senhora Medianeira.', 'João Reckiegel', '8421- 4847', 'Rua Esperanto, nº 423 - Alto do Parque', 'jbr.estrela@gmail.com', 1618),
 (2, 'Americano', 'americano', 'Bairro em Lajeado, oficialmente criado pela Lei nº 3.658, de 3-7-1985. As atuais confrontações foram estabelecidas pela Lei nº 6.152, de 14-10-1998. O ponto inicial é o cruzamento do Arroio do Engenho com a BR-386. Descrição: Do ponto inicial, segue pelo Arroio do Engenho, águas abaixo até a Rua Saldanha Marinho, segue por esta até a Rua Francisco R. Sulzbach, segue por esta até a Av. Senador Alberto Pasqualini, segue por esta até a Rua Duque de Caxias, segue por esta até a Rua Visconde de Tamandaré, segue por esta e após pelo seu prolongamento até a Rod. BR-386, segue pelo eixo da Rod. BR-386 até o Arroio do Engenho, ponto inicial e final da descrição. Está localizado entre a BR-386, os Bairros Hidráulica, Centro e Florestal. Tem o nome devido a um grupo de técnicos e dirigentes norte-americanos e/ou ingleses, vistos indistintamente, estabelecidos em Santa Cruz do Sul, que ampliaram e diversificaram também no Vale do Taquari a produção fumageira. A Companhia Brasileira de Fumo em Folha, no decorrer dos anos, faliu, sendo adquirida pela empresa fundada por Albino Souza Cruz, especializada na industrialização de cigarros, aliada, a partir de então, com a produção e comercialização do fumo em folha. A sede da Companhia de Cigarros Souza Cruz Indústria e Comércio estava localizada na Av. Sen. Alberto Pasqualini, nº 659, Lajeado, empresa inglesa que tem 75% controlada pela British American Tobacco, razão pela qual perdurou na população, por muitos anos, a imagem de estar ligada a Companhia a dirigentes norte-americanos.', '', '', '', '', 2685),
@@ -65,7 +65,7 @@ INSERT INTO `bairros` (`id`, `nome`, `code_name`, `descricao`, `nome_presidente`
 (18, 'Montanha', 'montanha', 'Bairro em Lajeado, criado pela Lei nº 3.658, de 3-7-1985 e redefinida suas confrontações atuais pela Lei nº 6.152, de 14-10-1998, alterada pela Lei nº 7.735, de 14 de fevereiro de 2007.O ponto inicial é o cruzamento da Rod. RS-130 com a Rod. 386. Descrição: Do ponto inicial segue pela Rod. RS-130 até encontrar a divisa norte da terras de Madereira Semol; deste ponto segue pela divisa norte das terras de Madereira Semol, Alcídio Bruissma, Relindo Bruissma, Hilário Schulte, Maria Alves e Francisco Dullius, todos exclusive até encontrar o eixo da projeção da Rua Extremosas, num ponto onde se encontra a divisa das terras de Francisco Dullius e Romeu Eckert, segue pelo eixo da projeção da Rua Extremosas até encontrar o eixo da Avenida Benjamin Constant, segue direção oeste até se encontrar com a divisa das terras de Élio Hoppen e Guido Weisheimer, segue na direção norte pela divisa das terras de Élio Hoppen e Guido Weisheimer até o eixo da Rod. BR-386, segue pelo eixo da Rod. BR-386 até seu cruzamento com a Rod. RS-130, ponto inicial e final da descrição.No bairro está em construção o Posto de Saúde, na Rua João Sebastiany, proximidades da RS-130, numa área total de 1.395,30 m² e investimento de R$ 453.302,19. As novas instalações compreenderão 4 consultórios médicos, 3 consultórios odontolóicos e outras salas para diferentes tipos de atendimento. A intenção da Sesama é centralizar os atendimentos de Lajeado neste posto cf Vale Notícias, de 23-8-2003. Além da Escola Comunitária de Educação Infantil Pequeno Cidadão (v.), também possui um moderno ginásio de esportes. A Comunidade Católica reunia-se na Escola Estadual Pedro Scherer, desde agosto de 1958. A construção da capela, sob a invocação de Nossa Senhora Aparecida, foi inaugurada em 1967. Em maio de 1980 foi inaugurado o seu pavilhão de festas. Mais distante, uma nova comunidade se organizou, sob a invocação de São Roque. Suas celebrações eram feitas no Ginásio de Esportes da Associação dos Moradores do Bairro Montanha.', 'Neli Ariotti Cereza\n', '9667-8487\n', '', '', 4000),
 (19, 'Morro 25', 'morro_vinte_cinco', ' Bairro de Lajeado, criado pela Lei nº 5.345, de 4-11-1994. As atuais confrontações foram fixadas pela Lei nº 6.152, de 14-10-1998. O ponto inicial é o entroncamento da Travessa Saidan com a Rua Bernardino Pinto. Descrição: Do ponto inicial, segue pela Rua Bernardino Pinto até seu entroncamento com a Av. Beira Rio. Deste entroncamento, segue por linha seca a reta de aproximadamente 300,00 metros, pela projeção da Rua Bernardino Pinto, direção noroeste até o Rio Taquari, segue por este águas abaixo até atingir a projeção da Rua da Divisa. Deste ponto segue pela Projeção da Rua da Divisa e após pela Rua da Divisa (divisa municipal com Cruzeiro do Sul) até a Travessa Saidan, segue por esta até a Rua Bernardino Pinto, ponto inicial e final da descrição. Localizado na margem direita do Rio Taquari, entre a divisa com o Município de Cruzeiro do Sul e os Bairros das Nações e Santo Antônio. Já foi identificado também por Morro dos Wiebbelling, pois lá moravam Teodoro Wiebbelling e Luís Filipe Rodrigo Wiebbelling. A denominação vem de uma antiga Sociedade 25 de Julho, formada pelos sócios da Fábrica de Conservas Oderich e de grande número de imigrantes e teuto-brasileiros residentes na então picada São Bento, hoje dividida em Bairros Conservas, Morro 25 e Passo de Estrela. Havia também sócios da cidade de Estrela, que atravessavam o rio para participar de suas festas e promoções. Um dos líderes que mais se destacou nesta Sociedade Alemã 25 de Julho foi Teodoro Wiebbelling (v.).', 'Jose Gilmar Cardias\n', '9655-3670\n', 'Teodoro Wiebbeling, n.º 95 - Morro 25\n', '', 1316),
 (20, 'Nações', 'nacoes', 'Bairro em Lajeado, oficialmente criado pela Lei nº 5.048, de 9-9-1993. As atuais confrontações foram estabelecidas pela Lei nº 6.152, de 14-10-1998. O ponto inicial é o entroncamento da Travessa Saidan com a Rua Bernardino Pinto. Descrição: Do ponto inicial, segue pela Travessa Saidan até a Rua da Divisa, segue por esta (divisa municipal com Cruzeiro do Sul) até encontrar o eixo da Rod. RS-130. Deste ponto segue pela Projeção da Rua da Divisa (divisa municipal com Cruzeiro do Sul) até encontrar a Estrada do Travessão, segue por esta (divisa municipal com Cruzeiro do Sul) e após pela projeção da Estrada do Travessão até o eixo da Rod. RS-130, segue pelo eixo da Rod. RS-130 até a Rua Bernardino Pinto, segue por esta até a Travessa Saidan, ponto inicial e final da descrição. Está encravado entre a divisa com o Município de Cruzeiro do Sul, Bairro Santo Antônio e Bairro Morro 25. O bairro está sendo servido pela Escola Comunitária de Educação Infantil Mundo Mágico (v.) e pela Escola Municipal de Ensino Fundamental Oscar Koefender (v.). Atendendo a reivindicação da AMBN, a Secretaria Municipal de Agricultura concluiu, no início de setembro de 2002, o canteiro no trevo de acesso ao bairro. Foi feita uma pequena elevação, com plantação de leivas e flores. Em concreto e tijolo, foi montado o letreiro, que identifica o nome do bairro.', 'Carlos Rodrigues da Silva\n', '9972-9518\n', 'Rua Uruguai, n. 42 - Nações\n', 'carloschinelo@gmail.com\n', 584);
-INSERT INTO `bairros` (`id`, `nome`, `code_name`, `descricao`, `nome_presidente`, `telefone_presidente`, `endereco_presidente`, `email_presidente`, `populacao`) VALUES
+INSERT INTO `bairros` (`id`, `nome`, `codename`, `descricao`, `nome_presidente`, `telefone_presidente`, `endereco_presidente`, `email_presidente`, `populacao`) VALUES
 (21, 'Olarias', 'olarias', 'Bairro em Lajeado, criado pela Lei nº 3.658, de 3-7-1985. As atuais confrontações foram estabelecidas pela Lei nº 6.152, de 14-10-1998. O ponto inicial é o entroncamento da Rua (Presidente) João Goulart com a Rua Rio Grande do Sul. Descrição: Do ponto inicial, pela Av. (Rua) Rio Grande do Sul até seu fim. Deste ponto, segue por linha seca e reta em sua projeção até o eixo da Rod. BR 386, segue pelo eixo da Rod. BR-386 até encontrar a Av. (Rua) Paulo Emílio Thiesen (próximo ao posto de gasolina do Bairro Centenário), segue por esta até a Rua Ulysses Guimarães, segue por esta até 200,00 metros além da Rua Bom Retiro do Sul. Deste ponto, segue por linha seca, paralela e distante 200,00 metros da Rua Bom Retiro do Sul até encontrar a Av. (Rua) Romeu Júlio Scherer, segue por esta até a Rua (Presidente) João Goulart, segue por esta até a Rua Alberto Schneider, segue por esta até a Rua Albino Petry, segue por esta até a Rua (Presidente) João Goulart, segue por esta até a Av. (Rua) Rio Grande do Sul, ponto inicial e final da descrição. Como se vê, o próprio legislador não respeita os tipos de artérias, usando indevidamente Avenida em vez de Rua. Primitivamente era conhecido, ora por Neu Österreich ou Nova Áustria, ora por Neu Wien ou Nova Viena, sua capital. No Livro de Eleitores de Estrela, de 1890, a localidade denominava-se Picada dos Conventos, como 4º quarteirão eleitoral, com 33 eleitores. O núcleo era muito forte, havendo quatro casas comerciais: Augusto Jaeger, Jacó Bast, Luís Jaeger e Pedro Noschang. Além da praça, o bairro tem uma lagoa natural, originada de uma vertente de água., situada na Rua Paulo Emílio Thiesen. O primeiro e único oleiro, então, foi Jacó Berwig Filho, com 47 anos de idade. A primeira entidade que se organizou no bairro foi a Comunidade Evangélica, ainda no final do século 19. Da Comunidade Católica Nossa Senhora Aparecida se desmembrou a de São José Operário, cujas primeiras reuniões ocorreram desde 10-10-1982. A primeira festa no prédio novo do Salão da Comunidade em construção foi em 12-3-1989, concluindo-se as obras no ano seguinte. Um novo Núcleo Católico se organizou em 15-8-1991, nas dependências do Esportivo Clube Olarias, sob a invocação de Santa Rita de Cássia. Seus detalhes se encontram em Grão de Mostarda – Caminhada da Paróquia de Santo Inácio, pp.133-134.', 'Ildo Schneider\n', '9101-2781\n', '', '', 2195),
 (22, 'Planalto', 'planalto', 'Bairro de Lajeado, denominação aprovada pela Câmara de Vereadores em 24-6-1997, transformada em Lei nº 5.931, de 1-7-1997. As atuais confrontações são fixadas pela Lei nº 6.152, de 14-10-1998. O ponto inicial é o cruzamento da Rua (Presidente) João Goulart com a Rua Romeu Júlio Scherer. Descrição: Do ponto inicial, segue pela Av. (Rua) Romeu Júlio Scherer até o Rio Forqueta, segue por este, águas abaixo até se defrontar com a projeção da Rua Albino Petry, segue por esta projeção, direção norte-sul até se encontrar com a Rua Alberto Schneider, segue por esta até a Rua (Presidente) João Goulart, segue por esta até a Av. (Rua) Romeu Júlio Scherer, ponto inicial e final da descrição. O termo significa uma grande extensão de terreno plano ou pouco ondulado, elevado, cortado por vales nele encaixados. Também é o nome do Palácio, em Brasília, sede principal da Presidência da República. Um núcleo de famílias católicas se organizou em comunidade, sob a invocação de Nossa Senhora do Caravággio.', 'Luis Scheibler\n', '9656-2623\n', 'Oscar Pedro Scherer, n. 290 - Planalto\n', 'luisscheibler2@hotmail.com\n', 1502),
 (23, 'Santo André', 'santo_andre', 'Bairro em Lajeado, oficialmente criado pela Lei nº 5.034, de 23-8-1993. As atuais confrontações foram estabelecidas pela Lei nº 6.152, de 14-10-1998. O ponto inicial é o cruzamento da RS-130 com a BR-386. Descrição: Do ponto inicial, segue pelo eixo da Rod. BR-386 até a projeção da Av. (Rua!) Rio Grande do Sul, segue pela projeção da Av. (Rua) Rio Grande do Sul e após pela Av. (Rua) Rio Grande do Sul até a Rua João Luiz da Rocha, segue por esta até o eixo da Rod. RS-130, segue pelo eixo da Rod. RS-130 até a Rod. BR-386, ponto inicial e final da descrição. Primitivamente chamava-se Vila Cohab. O nome do bairro se deve à Escola Municipal de Ensino Fundamental Santo André (v.), transferida de Vila Fão, em 1973. Em 1980, com a execução do projeto Profilurb, a população aumentou consideravelmente. Em fase final de construção, o salão comunitário foi duramente atingido na madrugada de 12-9-2002, com a derrubada parcial de uma parede. S. André foi, inicialmente, discípulo de João Batista e, depois, um dos 12 e primeiros Apóstolos de Jesus Cristo, irmão de S. Pedro, ambos pescadores da Betsaida, moradores em Cafarnaum. Antigos autores afirmam que S. André pregou o cristianismo no sul da Rússia e nos Bálcãs, martirizado em Patras, na Grécia. Pela tradição consta ter sido o autor do livro apócrifo dos “Atos de André e de Matias”. É festejado em 30 de novembro.', 'Jair Kern\n', '98319306\n', 'Rua Cecília Catarina Sulzbach, n.º 335\n', '', 1966),
@@ -5750,6 +5750,7 @@ CREATE TABLE IF NOT EXISTS `requerentes` (
   `pessoa_fisica` tinyint(4) NOT NULL,
   `cpf` varchar(64) DEFAULT NULL,
   `cnpj` varchar(64) DEFAULT NULL,
+  `password` varchar(128) NOT NULL,
   `rg` varchar(64) DEFAULT NULL,
   `email` varchar(64) NOT NULL,
   `data_cadastro` date NOT NULL,
@@ -5761,35 +5762,40 @@ CREATE TABLE IF NOT EXISTS `requerentes` (
   `cidade` int(11) DEFAULT NULL,
   `estado` int(11) DEFAULT NULL,
   `cep` varchar(64) DEFAULT NULL,
+  `autorizacao` tinyint(4) NOT NULL,
+  `deleted` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
 
 --
 -- Extraindo dados da tabela `requerentes`
 --
 
-INSERT INTO `requerentes` (`id`, `nome`, `tipo`, `pessoa_fisica`, `cpf`, `cnpj`, `rg`, `email`, `data_cadastro`, `id_bairro`, `endereco`, `telefone`, `profissao`, `mora_cidade`, `cidade`, `estado`, `cep`) VALUES
-(1, 'Michael Janner Marques', 0, 0, '00620732067', NULL, '7063641224', 'michaelycus@gmail.com', '2013-09-19', 2, 'Alberto Pasqualini, 862 ap. 302', '51-9677-5050', 'Programador', 1, 0, 0, ''),
-(2, 'Fulano de Almeida', 0, 0, '514.840.244-00', '', '11.11.11.11.11', 'azul@legista.com', '2013-09-26', 17, '', '', 'Azulegista', 1, 0, 0, ''),
-(3, 'Fim do CNPJ', 0, 1, '', '14.624.903/0001-58', '', 'fim@cpjc.com', '2013-09-26', -1, 'rua sem fim, 200', '(51) 4785-4552', '', 1, 0, 0, ''),
-(4, 'Amelia Siqueira', 0, 0, '896.807.849-16', '', '12.34.56.87.22', 'amelia@amelia.com', '2013-09-26', 13, 'rua das amarguras', '(54) 1255-5525', 'Programador', 0, 129, 3, '55445-555'),
-(5, 'Alicia', 0, 0, '235.208.857-78', '', '45.11.22.55.55', 'aleicia@ammm.com', '2013-09-26', 10, 'sem casa', '(51) 5544-4525', 'caseira', 0, 0, 0, '95822-230'),
-(6, 'Feittooo', 0, 0, '013.524.054-90', '', '15.43.56.45.46', 'cdffv@gdsfd.com', '2013-09-26', 14, 'Sem endereco', '(51) 6542-2455', 'Operador', 0, 40, 2, '95512-455'),
-(7, 'Carlos Eduardo Ranzi', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(8, 'Antônio de Castro Schefer', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(9, 'Carlos Antonio Kayser', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(11, 'Círio Arnaldo Schneider', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(12, 'Delmar Portz', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(13, 'Djalmo da Rosa', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(14, 'Élio José Lenhart', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(15, 'Ernani Teixeira', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(16, 'Heitor Luiz Hoppe', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(17, 'Hugo Luis Vanzin (Biluca Vanzin)', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(18, 'Ildo Paulo Salvi', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(19, 'Lorival Ewerling dos Santos Silveira', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(20, 'Sérgio Luiz Kniphoff', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(21, 'Sérgio Miguel Rambo', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL),
-(22, 'Waldir Gisch', 1, 0, NULL, NULL, NULL, '', '2013-10-10', 0, '', '', '', 0, NULL, NULL, NULL);
+INSERT INTO `requerentes` (`id`, `nome`, `tipo`, `pessoa_fisica`, `cpf`, `cnpj`, `password`, `rg`, `email`, `data_cadastro`, `id_bairro`, `endereco`, `telefone`, `profissao`, `mora_cidade`, `cidade`, `estado`, `cep`, `autorizacao`, `deleted`) VALUES
+(1, 'Michael Janner Marques', 0, 0, '00620732067', NULL, 'f6fd1939bdf31481d27ac4344a2aab58', '7063641224', 'michaelycus@gmail.com', '2013-09-19', 2, 'Alberto Pasqualini, 862 ap. 302', '51-9677-5050', 'Programador', 1, 0, 0, '', 1, 0),
+(3, 'Fim do CNPJ', 0, 1, '', '14.624.903/0001-58', '', '', 'fim@cpjc.com', '2013-09-26', -1, 'rua sem fim, 200', '(51) 4785-4552', '', 1, 0, 0, '', 0, 0),
+(5, 'Alicia', 0, 0, '235.208.857-78', '', '', '45.11.22.55.55', 'aleicia@ammm.com', '2013-09-26', 10, 'sem casa', '(51) 5544-4525', 'caseira', 0, 0, 0, '95822-230', 0, 0),
+(6, 'Feittooo', 0, 0, '013.524.054-90', '', '', '15.43.56.45.46', 'cdffv@gdsfd.com', '2013-09-26', 14, 'Sem endereco', '(51) 6542-2455', 'Operador', 0, 40, 2, '95512-455', 0, 0),
+(7, 'Carlos Eduardo Ranzi', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(8, 'Antônio de Castro Schefer', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(9, 'Carlos Antonio Kayser', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(11, 'Círio Arnaldo Schneider', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(12, 'Delmar Portz', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(13, 'Djalmo da Rosa', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(14, 'Élio José Lenhart', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(15, 'Ernani Teixeira', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(16, 'Heitor Luiz Hoppe', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(17, 'Hugo Luis Vanzin (Biluca Vanzin)', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(18, 'Ildo Paulo Salvi', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(19, 'Lorival Ewerling dos Santos Silveira', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(20, 'Sérgio Luiz Kniphoff', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(21, 'Sérgio Miguel Rambo', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(22, 'Waldir Gisch', 1, 0, NULL, NULL, '', NULL, '', '2013-10-10', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(24, 'jOAO', 0, 0, '307.477.224-71', '', '', '', 'afdsf@sdf.copm', '2013-11-14', -1, '', '', '', 1, 0, 0, '', 0, 0),
+(25, 'Luis', 0, 0, '847.343.894-97', '', 'luis', NULL, 'luis@luis.com', '2013-11-27', 16, '0', '0', '', 1, 0, 0, '', 0, 0),
+(26, 'carlos', 0, 0, '962.054.424-26', '', 'dc599a9972fde3045dab59dbd1ae170b', NULL, 'carlos@carlos.com', '2013-11-27', 12, '0', '0', '', 1, 0, 0, '', 0, 0),
+(27, 'Amanda', 0, 0, '536.888.271-80', '', '6209804952225ab3d14348307b5a4a27', NULL, 'amanda@team.com', '2013-11-27', 14, '0', '0', '', 1, 0, 0, '', 0, 0),
+(28, 'felipe', 0, 0, '936.465.766-77', '', '7e04da88cbb8cc933c7b89fbfe121cca', NULL, 'felicia@gmail.com', '2013-11-28', 15, '0', '0', '', 1, 0, 0, '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -5805,6 +5811,7 @@ CREATE TABLE IF NOT EXISTS `requerimentos` (
   `id_rua` int(11) NOT NULL,
   `cat_requerimento` int(11) NOT NULL,
   `data_requerimento` date NOT NULL,
+  `id_criador` int(11) NOT NULL,
   `id_requerente` int(11) NOT NULL,
   `expediente` varchar(64) NOT NULL,
   `situacao` smallint(6) NOT NULL,
@@ -5812,42 +5819,26 @@ CREATE TABLE IF NOT EXISTS `requerimentos` (
   `anexo_2` varchar(256) NOT NULL,
   `anexo_3` varchar(256) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Extraindo dados da tabela `requerimentos`
 --
 
-INSERT INTO `requerimentos` (`id`, `titulo`, `descricao`, `id_bairro`, `id_rua`, `cat_requerimento`, `data_requerimento`, `id_requerente`, `expediente`, `situacao`, `anexo_1`, `anexo_2`, `anexo_3`) VALUES
-(1, '', 'Desinfetação dos bueiros do bairro Santo André.', 23, 0, 0, '2013-09-19', 1, '', 0, '', '', ''),
-(4, 'EEE', 'FFF', 16, 0, 0, '2013-09-30', 0, '', 0, 'teste', '', ''),
-(6, 'XXX', 'XXXX', 19, 0, 0, '2013-09-30', 0, '', 0, 'teste1', '', ''),
-(8, 'dadada', 'adaadadsd', 13, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(9, 'eaeaea', 'eaeaeae', 16, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(14, 'zaazaza', 'zaza', 14, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(17, 'ababababab', 'abbab', 14, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(18, 'sdfsd', 'asdfd', 12, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(19, 'sadfdsfa', 'dfdsfdas', 12, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(20, 'vvb', 'cbcvbbcv', 11, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(21, 'gegege', 'egegegege', 12, 0, 0, '2013-09-30', 0, '', 0, 'eu.jpg', '', ''),
-(22, 'hehehe', 'eehheheh', 11, 0, 0, '2013-09-30', 0, '', 0, 'eu12', '', ''),
-(23, 'emememe', 'ememem', 10, 0, 0, '2013-09-30', 0, '', 0, 'eu13.jpg', '', ''),
-(25, 'feitoooo', 'asdfadsfsd', 13, 0, 0, '2013-09-30', 0, '', 0, 'euuu2.jpg', '', ''),
-(26, 'fefef', 'efe', 15, 0, 0, '2013-09-30', 0, '', 0, 'euuu3.jpg', '', ''),
-(27, 'fesfes', 'fsefesf', 15, 0, 0, '2013-09-30', 0, '', 0, 'euuu4.jpg', '', ''),
-(28, 'ADASD', 'ASDAsd', 13, 0, 0, '2013-09-30', 0, '', 0, 'euuu5.jpg', '', ''),
-(29, 'jrjrjr', 'rjjrjjr', 6, 0, 0, '2013-09-30', 0, '', 0, 'euuu6.jpg', '', ''),
-(30, 'xczvxvx', 'zcvxcvx', 18, 0, 0, '2013-10-01', 0, '', 0, 'eu14.jpg', '', ''),
-(31, 'nanana', 'anan', 14, 0, 0, '2013-10-01', 0, '', 0, 'euuu7.jpg', '', ''),
-(32, 'AGHORA', 'DDDD', 14, 0, 0, '2013-10-01', 0, '', 0, 'eu15.jpg', 'euuu8.jpg', 'file2.jpg'),
-(33, 'fafafa', 'afafaf', 16, 0, 0, '2013-10-01', 0, '', 0, '7ce27260a8ff16641f20c511e73d1973.jpg', '58e9a2b1bf1a0b04589c4754197e3281.jpg', ''),
-(34, 'bababa', 'abab', 13, 0, 0, '2013-10-01', 0, '', 0, '', '901d3eec1244d370774f019e2eb4cc65.jpg', 'b2fadb99a1dee3071eac660ee3ae6dff.jpg'),
-(35, 'gagaga', 'agAG', 10, 0, 0, '2013-10-01', 0, '', 0, 'ae0ea303a8bc69c07b926e6d20ef96a4.jpg', '2e12d0e4e2a5fbffcb5064a0030e95fa.jpg', ''),
-(36, 'HAHAA', 'HAHA', 16, 0, 0, '2013-10-01', 0, '', 0, '32972bceadaee504548daa9579615361.jpg', '90f9f65aa69cf0b4cfb38cf5b9363b68.jpg', 'f9853aaab33bf5b0dcde8d914bba3f87.jpg'),
-(37, '', 'GSSGSGSGSG', 2, 130, 0, '2013-10-14', 0, '', 0, '', '', ''),
-(38, '', 'lllll', 2, 173, 0, '2013-10-14', 0, '', 0, '', '', ''),
-(39, '', 'AAA', 13, 634, 14, '2013-10-18', 8, '', 0, '', '', ''),
-(40, '', 'AGOR AVAIII', 1, 11, 4, '2013-10-21', 7, '', 0, '', '', '');
+INSERT INTO `requerimentos` (`id`, `titulo`, `descricao`, `id_bairro`, `id_rua`, `cat_requerimento`, `data_requerimento`, `id_criador`, `id_requerente`, `expediente`, `situacao`, `anexo_1`, `anexo_2`, `anexo_3`) VALUES
+(1, '', 'AAA', 17, 129, 5, '2013-10-23', 0, 7, '', 0, '', '', ''),
+(3, '', 'CCCC', 9, 151, 11, '2013-10-23', 0, 7, '', 0, '', '', ''),
+(4, '', 'DDD', 14, 649, 9, '2013-10-23', 0, 7, '', 0, '', '', ''),
+(5, '', 'EEE', 13, 462, 13, '2013-10-23', 0, 7, '', 0, '', '', ''),
+(7, '', 'GGG', 8, 455, 10, '2013-10-23', 0, 7, '', 0, '', '', ''),
+(8, '', 'HHH', 14, 467, 7, '2013-10-23', 0, 7, '', 0, '', '', ''),
+(9, '', 'III', 12, 498, 10, '2013-10-23', 0, 7, '', 0, '', '', ''),
+(10, '', 'JJJ', 9, 268, 7, '2013-10-23', 0, 7, '', 0, '', '', ''),
+(11, '', 'FOTOTO3333', 4, 93, 8, '2013-11-14', 0, 13, '', 0, '480f3bccf187cae52a7d4bcdbc74816b.jpg', '', ''),
+(12, '', 'cadastroo novoov1', 17, 184, 10, '2013-11-14', 0, 16, '', 0, '912de70a0ff363104bff4edbf0e80919.jpg', 'b950e7f3eba8d68aaca9b7c969a99392.png', 'eae8ad9d361caf361635a9aa5cf03598.jpg'),
+(13, '', 'testetstete', 4, 61, 1, '2013-11-28', 0, 7, '', 0, '', '', ''),
+(14, '', 'agora vai', 5, 133, 6, '2013-11-28', 1, 7, '', 0, '', '', ''),
+(15, '', 'sfsafsfdfd', 5, 88, 1, '2013-11-28', 28, 7, '', 0, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -7764,6 +7755,8 @@ INSERT INTO `usuarios` (`id`, `nome`, `usuario`, `senha`, `autorizacao`, `setor`
 (1, 'Michael', 'michael', 'd0e516cab32f7ab2b71425ac8a4c2eb8', 1, 1, 'michaelycus@gmail.com', 0),
 (2, 'Denise', 'denise', '968c58d88d981b4ee15e2c8cb1fab06d', 1, 1, 'denise@denise.com', 0),
 (3, 'Felicia', 'felicia', 'd41d8cd98f00b204e9800998ecf8427e', 1, NULL, 'felicia@gmail.com', 0),
+(4, 'denise', 'denise', '968c58d88d981b4ee15e2c8cb1fab06d', 2, NULL, 'denise@txaidesenvolvimento.com.br', 0),
+(5, 'jaque', 'jaque', '524a56e3019d2bf727caad65897b6d8a', 1, NULL, 'jaque@txai.com', 0),
 (6, 'Teste', 'teste', 'd41d8cd98f00b204e9800998ecf8427e', 1, NULL, 'teste@tes.com', 0),
 (7, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, NULL, '', 0),
 (8, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1, 0, '', 0);

@@ -120,9 +120,9 @@
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />População: 2685"},
                             },                            "bom_pastor":{
-                                value: "1117",
+                                value: "1118",
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />População: 1117"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />População: 1118"},
                             },                            "campestre":{
                                 value: "1985",
                                 href: "#",

@@ -17,7 +17,7 @@ class Bairros extends MY_Controller
     {
         $this->data['bairros'] = $this->bairros_model->get_all();
 
-        $this->load_view('bairros/listar_bairros');
+        $this->load_view('bairros/listar_bairros', TRUE);
     }
 
     public function cadastrar_bairro()
@@ -35,13 +35,11 @@ class Bairros extends MY_Controller
             redirect('bairros/cadastrar_bairro');     
         endif;
         
-        $this->load_view('bairros/cadastrar_bairro');
+        $this->load_view('bairros/cadastrar_bairro', TRUE);
     }
 
-    public function editar_bairro()
+    public function editar_bairro($id)
     {
-        $id = $this->uri->segment(3);
-
         $this->form_validation->set_rules($this->bairros_model->validation);
         
         if ($this->form_validation->run()==TRUE):
@@ -59,17 +57,18 @@ class Bairros extends MY_Controller
         
         $this->data['bairro'] = $this->bairros_model->get($id);
 
-        $this->load_view('bairros/editar_bairro');
+        $this->load_view('bairros/editar_bairro', TRUE);
     }
 
-    public function excluir_bairro()
-    {
-        $id = $this->uri->segment(3);
-        
-        $this->bairros_model->delete($id);
-        generate_charts();
-        
-        $this->session->set_userdata('bairro_excluido','Bairro excluído com sucesso!');
-        redirect('bairros/listar_bairros');
+    public function excluir_bairro($id)
+    {   
+        if ($_SESSION['autorizacao'==AUTORIZACAO_ADMINISTRADOR])
+        {
+            $this->bairros_model->delete($id);
+            generate_charts();
+
+            $this->session->set_userdata('bairro_excluido','Bairro excluído com sucesso!');
+            redirect('bairros/listar_bairros', TRUE);
+        }        
     }
 }

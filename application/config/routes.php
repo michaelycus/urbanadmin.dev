@@ -38,9 +38,9 @@
 |
 */
 
-$route['default_controller'] = "admin";
+$route['default_controller'] = "login";
 $route['404_override'] = '';
-$route['logout'] = 'admin/logout';
+$route['logout'] = 'login/logout';
 
 $route['cadastro'] = 'front_cadastro';
 //$route['cadastro'] = 'front_cadastro';
