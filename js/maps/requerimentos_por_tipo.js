@@ -23,6 +23,12 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 1"
+                            }},"jardim_do_cedro": {
+                            "value": 1,
+                            "attrs": { fill: "#5682b7"},
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 1"
                             }}}},"7": { "areas": {"conventos": {
                             "value": 1,
                             "attrs": { fill: "#5682b7"},
@@ -71,6 +77,12 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 1"
+                            }}}},"12": { "areas": {"moinhos": {
+                            "value": 1,
+                            "attrs": { fill: "#5682b7"},
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 1"
                             }}}},"13": { "areas": {"igrejinha": {
                             "value": 1,
                             "attrs": { fill: "#5682b7"},

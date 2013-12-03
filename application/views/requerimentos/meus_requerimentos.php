@@ -23,23 +23,21 @@
         $this->table->set_template($tmpl);
         $this->table->set_heading('Resumo', "Bairro", "Tipo Req.", "Requerente", "Situação", "Expediente", "");
 
-        $situacoes = unserialize(REQUERIMENTO_SITUACOES);
-
         if (!empty($requerimentos))
         {
             foreach ($requerimentos as $requerimento):
-                $this->table->add_row(array('data'=>substr($requerimento->descricao, 0, 255).(strlen($requerimento->descricao)>255?"..." : ""), 'class'=>'A'),
-                                      array('data'=>$requerimento->nome_bairro),
-                                      array('data'=>$requerimento->nome_categoria),
-                                      array('data'=>$requerimento->nome_requerente),
-                                      array('data'=>$situacoes[$requerimento->situacao]),
-                                      array('data'=>$requerimento->expediente),
+                $this->table->add_row(array('data'=>'<small>'.substr($requerimento->descricao, 0, 255).(strlen($requerimento->descricao)>255?"..." : "").'</small>', 'class'=>'A'),
+                                      array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),
+                                      array('data'=>'<small>'.$requerimento->nome_categoria.'</small>'),
+                                      array('data'=>'<small>'.$requerimento->nome_requerente.'</small>'),
+                                      array('data'=>'<img src="'.base_url().'images/situacao_'.$requerimento->situacao.'.png">'),
+                                      array('data'=>'<small>'.$requerimento->expediente.'</small>'),
                                       array('data'=>($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
                                                         anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ', 
                                                             array('class' => 'btn btn-primary btn-xs')).' '.                                                    
                                                         anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir',
                                                             array('class' => 'confirm_delete btn btn-danger btn-xs')) :''), 
-                                                    'style'=>'width:200px'));
+                                                    'style'=>'width:150px'));
 
             endforeach;
 

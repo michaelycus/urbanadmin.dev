@@ -96,6 +96,8 @@ class Requerentes extends MY_Controller
     public function editar_requerente($id)
     {
         $this->form_validation->set_rules('nome', 'NOME', 'trim|required|max_length[64]');
+        $this->form_validation->set_rules('password', 'PASSWORD', 'trim|required|min_length[5]|matches[password2]');
+        $this->form_validation->set_rules('password2', 'PASSWORD', 'trim|required|min_length[5]');
         if ($this->input->post('pessoa_fisica') == PESSOA_FISICA)
             $this->form_validation->set_rules('cpf', 'CPF', 'required|valid_cpf');
         if ($this->input->post('pessoa_fisica') == PESSOA_JURIDICA)
@@ -107,6 +109,7 @@ class Requerentes extends MY_Controller
                                    'profissao','endereco','mora_cidade','id_bairro',
                                    'estado','cidade','cep'),$this->input->post());
 
+            $data['password'] = md5($this->input->post('password'));
             $this->requerente_model->update($this->input->post('id'), $data);
             generate_charts();
 

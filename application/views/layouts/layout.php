@@ -2,7 +2,7 @@
 <html lang="pt">
     <head>
         <meta charset="utf-8">
-        <title>Urbis</title>
+        <title>Urban Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="SuggeElson" />
         <meta name="description" content="Genyx admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework" />
@@ -30,7 +30,7 @@
         <!-- Plugins stylesheets -->
         <link href="<?php echo base_url(); ?>js/plugins/forms/uniform/uniform.default.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.css" rel="stylesheet" />
-
+        <link href="<?php echo base_url(); ?>js/plugins/forms/datepicker/datepicker.css" rel="stylesheet" />
 
         <!-- app stylesheets -->
         <link href="<?php echo base_url(); ?>css/app.css" rel="stylesheet" />
@@ -81,13 +81,10 @@
         <!-- Form plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/forms/uniform/jquery.uniform.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/mask/jquery.mask.min.js"></script>
-
+        <script src="<?php echo base_url(); ?>js/plugins/forms/datepicker/bootstrap-datepicker.js"></script> 
 
         <!-- Tables plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.min.js"></script>
-
-        <!-- Misc plugins -->
-        <script src="<?php echo base_url(); ?>js/plugins/misc/fullcalendar/fullcalendar.min.js"></script>
 
         <!-- UI plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/ui/range-slider/rangeslider-ruler.js"></script>
@@ -106,6 +103,15 @@
 
         <!-- Custom script -->
         <script src="<?php echo base_url(); ?>js/functions.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $(".data").datepicker({
+                    todayBtn: true,
+                    language: "pt-BR"
+                });
+            });
+        </script>
 
     </head>
     <body>
@@ -115,6 +121,18 @@
                 <div class="nav-no-collapse">
 
                     <ul class="nav navbar-nav pull-right">
+                        
+                        <li class="dropdown">
+                            <?php
+                            if ($_SESSION['requerimentos']>0)
+                            echo anchor('requerimentos/listar_requerimentos', '<i class="icon24 i-bell-2"></i>
+                                <span class="notification red">'.$_SESSION['requerimentos'].'</span>', 'class="dropdown-toggle" data-toggle="dropdown"');
+                            else
+                                echo $_SESSION['requerimentos'];
+                            ?>
+                        </li>
+
+                        
                         <li class="divider-vertical"></li>
                         <li class="dropdown user">
                             <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
@@ -262,27 +280,27 @@
                                 <ul class="sub<?php echo ($cat=='graficos' ? ' show' : '')?>">
                                     <li>
                                         <?php echo anchor('graficos/populacao_por_bairro',
-                                                '<i class="icon12 i-people"></i>
+                                                '<i class="icon20 i-people"></i>
                                                  <span class="txt">Bairros: população</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerentes_por_bairro',
-                                                '<i class="icon12 i-people"></i>
+                                                '<i class="icon20 i-people"></i>
                                                  <span class="txt">Requerentes: bairro</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_bairro',
-                                                '<i class="icon12  i-file-9"></i>
+                                                '<i class="icon20  i-file-9"></i>
                                                  <span class="txt">Requerimentos: bairro</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_tipo',
-                                                '<i class="icon12  i-file-9"></i>
+                                                '<i class="icon20  i-file-9"></i>
                                                  <span class="txt">Requerimentos: tipo</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_vereador',
-                                                '<i class="icon12  i-file-9"></i>
+                                                '<i class="icon20  i-file-9"></i>
                                                 <span class="txt">Requerimentos: vereador</span>');?>
                                     </li>
                                 </ul>
@@ -293,7 +311,6 @@
                         </ul>
                     </nav> <!-- End #mainnav -->
                 </div> <!-- End .sidebar-wrapper  -->
-
             </aside><!-- End #sidebar  -->
 
             <section id="content">

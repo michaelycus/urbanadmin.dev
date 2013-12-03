@@ -71,6 +71,16 @@
                                 text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerimentos: 2"},
+                            },                            "jardim_do_cedro":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerimentos: 1"},
+                            },                            "moinhos":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerimentos: 1"},
                             },                            "moinhos_dagua":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },

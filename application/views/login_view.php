@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Genyx admin v1.0</title>
+        <title>Urban Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="SuggeElson" />
         <meta name="description" content="Genyx admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework" />

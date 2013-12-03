@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
     <div id="heading" class="page-header">
         <h1><i class="icon20 i-stack-empty"></i> Cadastrar requerimento</h1>
@@ -19,12 +20,12 @@
                 {
                     echo '<div class="alert alert-success">'. $this->session->userdata('requerimento_cadastrado') .'</div>';
                     $this->session->unset_userdata('requerimento_cadastrado');
-                }
+                }                
 
                 // descricao
                 echo '<div class="form-group">';
-                echo form_label('Descrição', 'descricao', array('class' => 'col-lg-2 control-label'));    
-                echo    '<div class="col-lg-10">';
+                echo form_label('Descrição', 'descricao', array('class' => 'col-lg-3 control-label'));    
+                echo    '<div class="col-lg-9">';
                 echo    form_textarea(array('name' => 'descricao','id' => 'descricao','placeholder' => 'Descrição do requerimento...',
                             'class' => 'form-control','autofocus' => 'autofocus'), set_value('descricao'));
                 echo    '</div>';
@@ -32,9 +33,9 @@
 
                 // id_bairro
                 echo '<div class="form-group">';
-                echo    '<label for="id_bairro" class="col-lg-2 control-label">Bairro</label>';
-                echo    '<div class="col-lg-10">';
-                echo        '<select id="id_bairro" name="id_bairro" class="col-lg-10">';
+                echo    '<label for="id_bairro" class="col-lg-3 control-label">Bairro</label>';
+                echo    '<div class="col-lg-9">';
+                echo        '<select id="id_bairro" name="id_bairro" class="col-lg-9">';
                 foreach ($bairros as $bairro)
                 {
                     echo        '<option value="'.$bairro->id.'" '.set_select('id_bairro', $bairro->id).'>'.$bairro->nome.'</option>';
@@ -45,17 +46,17 @@
                 
                 // id_rua
                 echo '<div class="form-group">';
-                echo form_label('Rua', 'id_rua', array('class' => 'col-lg-2 control-label'));
-                echo    '<div class="col-lg-10">';
-                echo         form_dropdown('id_rua', array('' => 'Escolha uma Rua'), '','id="id_rua" class="col-lg-10"' );
+                echo form_label('Rua', 'id_rua', array('class' => 'col-lg-3 control-label'));
+                echo    '<div class="col-lg-9">';
+                echo         form_dropdown('id_rua', array('' => 'Escolha uma Rua'), '','id="id_rua" class="col-lg-9"' );
                 echo    '</div>';
                 echo '</div>';
                 
                 // cat_requerimento
                 echo '<div class="form-group">';
-                echo    '<label for="cat_requerimento" class="col-lg-2 control-label">Tipo Req.</label>';
-                echo    '<div class="col-lg-10">';
-                echo        '<select id="cat_requerimento" name="cat_requerimento" class="col-lg-10">';
+                echo    '<label for="cat_requerimento" class="col-lg-3 control-label">Tipo Req.</label>';
+                echo    '<div class="col-lg-9">';
+                echo        '<select id="cat_requerimento" name="cat_requerimento" class="col-lg-9">';
                 foreach ($cats_requerimento as $c_r)
                 {
                     echo        '<option value="'.$c_r->id.'" '.set_select('cat_requerimento', $c_r->id).'>'.$c_r->nome.'</option>';
@@ -70,14 +71,23 @@
 
                     // id_requerente
                     echo '<div class="form-group">';
-                    echo    '<label for="id_requerente" class="col-lg-2 control-label">Requerente</label>';
-                    echo    '<div class="col-lg-10">';
+                    echo    '<label for="id_requerente" class="col-lg-3 control-label">Requerente</label>';
+                    echo    '<div class="col-lg-9">';
                     echo        '<select id="id_requerente" name="id_requerente">';
                     foreach ($requerentes as $requerente)
                     {
                         echo        '<option value="'.$requerente->id.'" '.set_select('id_requerente', $requerente->id).'>'.$requerente->nome.'</option>';
                     }
                     echo        '</select>';
+                    echo    '</div>';
+                    echo '</div>';
+                    
+                    // data_requerimento
+                    echo '<div class="form-group">';
+                    echo form_label('Data', 'data_requerimento', array('class' => 'col-lg-3 control-label'));    
+                    echo    '<div class="col-lg-9">';
+                    echo        form_input(array('name' => 'data_requerimento','id' => 'data_requerimento',
+                                'class' => 'form-control data'), set_value('data_requerimento'));
                     echo    '</div>';
                     echo '</div>';
                 }
@@ -90,30 +100,30 @@
 
                 // anexo_1
                 echo '<div class="form-group">';
-                echo form_label('Anexo 1', 'anexo_1', array('class' => 'col-lg-2 control-label'));    
-                echo    '<div class="col-lg-10">';
+                echo form_label('Anexo 1', 'anexo_1', array('class' => 'col-lg-3 control-label'));    
+                echo    '<div class="col-lg-9">';
                 echo        form_upload('anexo_1');
                 echo    '</div>';
                 echo '</div>';
 
                 // anexo_2
                 echo '<div class="form-group">';
-                echo form_label('Anexo 2', 'anexo_2', array('class' => 'col-lg-2 control-label'));    
-                echo    '<div class="col-lg-10">';
+                echo form_label('Anexo 2', 'anexo_2', array('class' => 'col-lg-3 control-label'));    
+                echo    '<div class="col-lg-9">';
                 echo        form_upload('anexo_2');
                 echo    '</div>';
                 echo '</div>';
 
                 // anexo_3
                 echo '<div class="form-group">';
-                echo form_label('Anexo 3', 'anexo_3', array('class' => 'col-lg-2 control-label'));    
-                echo    '<div class="col-lg-10">';
+                echo form_label('Anexo 3', 'anexo_3', array('class' => 'col-lg-3 control-label'));    
+                echo    '<div class="col-lg-9">';
                 echo        form_upload('anexo_3');
                 echo    '</div>';
                 echo '</div>';
 
                 echo form_hidden('id', $bairro->id);
-                echo form_hidden('id_criador', $_SESSION['id_user']);
+                echo form_hidden('id_solicitante', $_SESSION['id_user']);
 
                 echo '<div class="form-group">';
                 echo    '<div class="col-lg-offset-2">';

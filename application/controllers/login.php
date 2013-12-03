@@ -9,6 +9,7 @@ class Login extends MY_Controller
         $this->load->model('login_model');
         $this->load->model('bairros_model');
         $this->load->model('cidades_model');
+        $this->load->model('requerimento_model');
     }
 
     public function index()
@@ -31,6 +32,8 @@ class Login extends MY_Controller
                 $_SESSION['nome'] = $res->nome;
                 $_SESSION['autorizacao'] = $res->autorizacao;
                 $_SESSION['id_user'] = $res->id;
+                
+                $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
             }
 
             redirect('home');

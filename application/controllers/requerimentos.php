@@ -49,7 +49,7 @@ class Requerimentos extends MY_Controller
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente','id_criador'),$this->input->post());
+            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente','id_solicitante'),$this->input->post());
             $data['data_requerimento'] = date('Y-m-d');
 
             $i = 1;
@@ -156,5 +156,23 @@ class Requerimentos extends MY_Controller
             $this->session->set_userdata('requerimento_excluido','Requerimento excluído com sucesso!');
             redirect('requerimentos/listar_requerimentos');
         }
+    }
+    
+    public function avancar_situacao($id,$situacao)
+    {
+        $this->requerimento_model->avancar_situacao($id,$situacao);
+        
+        $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
+        
+        redirect('requerimentos/listar_requerimentos');
+    }
+    
+    public function retornar_situacao($id,$situacao)
+    {
+        $this->requerimento_model->retornar_situacao($id,$situacao);
+        
+        $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
+        
+        redirect('requerimentos/listar_requerimentos');
     }
 }

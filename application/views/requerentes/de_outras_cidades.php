@@ -26,11 +26,11 @@
         if (!empty($requerentes))
         {        
             foreach ($requerentes as $requerente):
-                $this->table->add_row(array('data'=>$requerente->nome),
-                                      array('data'=>$requerente->email),
-                                      array('data'=>$requerente->cidade . ' - ' .$requerente->estado),
+                $this->table->add_row(array('data'=>'<small>'.$requerente->nome.'</small>'),
+                                      array('data'=>'<small>'.$requerente->email.'</small>'),
+                                      array('data'=>'<small>'.$requerente->cidade . ' - ' .$requerente->estado.'</small>'),
                                       array('data'=>anchor('requerentes/editar_requerente/'.$requerente->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
-                                                    anchor('requerentes/excluir_requerente/'.$requerente->id.'/de_outras_cidades',' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:200px'));
+                                                    anchor('requerentes/excluir_requerente/'.$requerente->id.'/de_outras_cidades',' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:150px'));
             endforeach;
 
             echo $this->table->generate();

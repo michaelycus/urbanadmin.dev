@@ -26,13 +26,13 @@
         if (!empty($bairros))
         {        
             foreach ($bairros as $bairro):
-                $this->table->add_row(array('data'=>'<strong>'.$bairro->nome.'</strong>'),
-                                      array('data'=>$bairro->populacao),
-                                      array('data'=>$bairro->nome_presidente),
-                                      array('data'=>$bairro->telefone_presidente),
-                                      array('data'=>$bairro->email_presidente),
+                $this->table->add_row(array('data'=>'<small><strong>'.$bairro->nome.'</strong>'.'</small>'),
+                                      array('data'=>'<small>'.$bairro->populacao.'</small>'),
+                                      array('data'=>'<small>'.$bairro->nome_presidente.'</small>'),
+                                      array('data'=>'<small>'.$bairro->telefone_presidente.'</small>'),
+                                      array('data'=>'<small>'.$bairro->email_presidente.'</small>'),
                                       array('data'=>anchor('bairros/editar_bairro/'.$bairro->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
-                                                    anchor('bairros/excluir_bairro/'.$bairro->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:200px'));
+                                                    anchor('bairros/excluir_bairro/'.$bairro->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:150px'));
             endforeach;
 
            echo $this->table->generate();
