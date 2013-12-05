@@ -21,8 +21,7 @@ $data = <<<EOF
 $(function() {
     $(".maparea1").mapael({
         map: {
-            name: "lajeado",
-            width: 700
+            name: "lajeado",            
         },
         legend: {
             area: {
@@ -99,8 +98,7 @@ $data = <<<EOF
 $(function() {
     $(".maparea1").mapael({
         map: {
-            name: "lajeado",
-            width: 700,
+            name: "lajeado",            
             defaultArea: {
                 attrs: {
                     fill: "#cadbed", stroke: "#204a87"
@@ -252,8 +250,7 @@ $("#cat_requerimento").change(function() {
     // Mapael initialisation
     $(".maparea1").mapael({
         map: {
-            name: "lajeado",
-            width: 700,
+            name: "lajeado",            
             defaultArea: {
                 attrs: {
                     fill: "#cadbed",
@@ -374,8 +371,7 @@ $("#vereador").change(function() {
     // Mapael initialisation
     $(".maparea1").mapael({
         map: {
-            name: "lajeado",
-            width: 700,
+            name: "lajeado",            
             defaultArea: {
                 attrs: {
                     fill: "#cadbed", stroke: "#204a87"
@@ -439,8 +435,7 @@ $data = <<<EOF
 $(function() {
     $(".maparea1").mapael({
         map: {
-            name: "lajeado",
-            width: 700,
+            name: "lajeado",            
             defaultArea: {
                 attrs: {
                     fill: "#fce94f", stroke: "#c4a000"

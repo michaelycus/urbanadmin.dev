@@ -117,9 +117,9 @@ class Requerimento_model extends MY_Model
         $this->update($id, $data);
     }
     
-    public function gravar_expediente($id, $expediente)
+    public function gravar_expediente($id, $expediente, $ano)
     {
-        $data = array('expediente' => $expediente);
+        $data = array('expediente' => $expediente, 'ano_expediente' => $ano);
         $this->update($id, $data);
     }
 }

@@ -118,6 +118,7 @@
                 else
                 {
                     echo form_hidden('id_requerente', REQUERENTE_PADRAO_ID); 
+                    echo form_hidden('data_requerimento',  date('d/m/Y')); 
                 }
                 
                 echo '<hr>';
@@ -148,6 +149,27 @@
 
                 echo form_hidden('id', $bairro->id);
                 echo form_hidden('id_solicitante', $_SESSION['id_user']);
+                
+                if ($_SESSION['autorizacao'] == AUTORIZACAO_OPERADOR)
+                {
+                    echo '<hr>'; 
+                    
+                    // notificar
+                    echo '<div class="form-group">';
+                    echo    '<label for="notificar" class="col-lg-3 control-label">Notificação</label>';
+                    echo    '<div class="col-lg-9">';
+                    echo        form_checkbox(array('name' => 'notificar','id' => 'notificar',
+                                'class' => 'form-control', 'value' => 'notificar', 'checked' => 'checked'));
+                    echo    ' Receber notificações sobre avanço do requerimento.';
+                    echo    '</div>';
+                    echo '</div>';
+                    
+                    echo '<hr>'; 
+                }
+                else
+                {
+                    echo form_hidden('notificar', 0); 
+                }
 
                 echo '<div class="form-group">';
                 echo    '<div class="col-lg-offset-2">';

@@ -27,35 +27,60 @@
                         min: 0,
                         max: 1,
                         attrs: {
-                            fill: "#5d89bd"}
+                            fill: "#6490c3"}
                       },{
                         min: 1,
-                        max: 3,
+                        max: 2,
+                        attrs: {
+                            fill: "#5682b7"}
+                      },{
+                        min: 2,
+                        max: 4,
                         attrs: {
                             fill: "#4974ab"}
                       },{
-                        min: 3,
-                        max: 4,
-                        attrs: {
-                            fill: "#345f99"}
-                      },{
                         min: 4,
                         max: 5,
+                        attrs: {
+                            fill: "#3b669f"}
+                      },{
+                        min: 5,
+                        max: 6,
+                        attrs: {
+                            fill: "#2d5893"}
+                      },{
+                        min: 6,
+                        max: 7,
                         attrs: {
                             fill: "#204a87"}
                       },]
             }
         },
-        areas: {                            "campestre":{
+        areas: {                            "americano":{
                                 value: "3",
                                 text: { content:  3 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 3"},
-                            },                            "carneiros":{
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerimentos: 3"},
+                            },                            "bom_pastor":{
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 3"},
+                            },                            "campestre":{
                                 value: "4",
                                 text: { content:  4 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 4"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 4"},
+                            },                            "carneiros":{
+                                value: "5",
+                                text: { content:  5 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 5"},
+                            },                            "centenario":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Requerimentos: 1"},
                             },                            "conservas":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },
@@ -66,21 +91,6 @@
                                 text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Requerimentos: 2"},
-                            },                            "hidraulica":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
-                                href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Hidráulica </span><br />Requerimentos: 1"},
-                            },                            "igrejinha":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
-                                href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Igrejinha </span><br />Requerimentos: 1"},
-                            },                            "imigrante":{
-                                value: "2",
-                                text: { content:  2 , attrs: {fill:"#222"} },
-                                href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerimentos: 2"},
                             },                            "moinhos_dagua":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },

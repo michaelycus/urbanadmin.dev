@@ -29,7 +29,7 @@ class MY_Form_validation extends CI_Form_validation
     {
         if (ereg("([0-9]{1,2})/([0-9]{1,2})/([0-9]{4})", $date))
         {
-            $arr = split("/", $date);
+            $arr = explode("/", $date);
 
             $dd = $arr[0];
             $mm = $arr[1];
@@ -47,7 +47,7 @@ class MY_Form_validation extends CI_Form_validation
     {
         if (!empty($date))
         {
-            $date=split("/",$date);
+            $date=explode("/",$date);
             // where the $_POST['date'] is a value posted by form in mm/dd/yy format
             $dated=$date[2]."-".$date[1]."-".$date[0];
             // The string dated is now in yyyy-mm-dd format
@@ -58,7 +58,7 @@ class MY_Form_validation extends CI_Form_validation
     
     public function convert_sql_to_human($date)
     {
-        $date=split("-",$date);
+        $date=explode("-",$date);
         // where the date is a sql value like yyyy-mm-dd
         $dated=$date[2]."/".$date[1]."/".$date[0];
         // The string dated is now in mm/dd/yyyy format

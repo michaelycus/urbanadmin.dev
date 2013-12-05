@@ -10,6 +10,7 @@
                 
                 <?php
                 $id = $this->uri->segment(3);
+                
                 if ($id==NULL && $bairro==NULL) redirect('bairros');
 
                 echo form_open('bairros/editar_bairro', 'class="bs-docs-example form-horizontal"');

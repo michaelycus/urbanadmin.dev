@@ -32,7 +32,7 @@ class Requerimentos extends MY_Controller
     }
 
     public function cadastrar_requerimento()
-    {
+    {        
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|jpeg|png';
         $config['max_size'] = '2048';
@@ -51,7 +51,9 @@ class Requerimentos extends MY_Controller
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento',
                 'id_requerente','id_solicitante'),$this->input->post());
-            $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);            
+            $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);                  
+            
+            $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
 
             $i = 1;
             foreach($_FILES as $field => $file)
@@ -107,6 +109,14 @@ class Requerimentos extends MY_Controller
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente'),$this->input->post());
             $data['data_requerimento'] = date('Y-m-d');
+            
+            $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
+            
+            if ($this->input->post('expediente'))
+            {
+                $data['expediente'] = $this->input->post('expediente');
+                $data['ano_expediente'] = $this->input->post('ano_expediente');
+            }
 
             $i = 1;
             foreach($_FILES as $field => $file)
@@ -161,7 +171,7 @@ class Requerimentos extends MY_Controller
     
     public function avancar_situacao($id,$situacao)
     {
-        $this->requerimento_model->avancar_situacao($id,$situacao);
+        $this->requerimento_model->avancar_situacao($id, $situacao);
         
         $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
         
@@ -170,18 +180,18 @@ class Requerimentos extends MY_Controller
     
     public function retornar_situacao($id,$situacao)
     {
-        $this->requerimento_model->retornar_situacao($id,$situacao);
+        $this->requerimento_model->retornar_situacao($id, $situacao);
         
         $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
         
         redirect('requerimentos/listar_requerimentos');
     }
     
-    public function gravar_expediente($id, $expediente)
+    public function gravar_expediente($id, $expediente, $ano)
     {
-        $this->requerimento_model->gravar_expediente($id,$expediente);
+        $this->requerimento_model->gravar_expediente($id, $expediente, $ano);
         
-        $this->avancar_situacao($id,REQUERIMENTO_SITUACAO_ANALISADO);
+        $this->avancar_situacao($id, REQUERIMENTO_SITUACAO_ANALISADO);
         
         redirect('requerimentos/listar_requerimentos');
     }
