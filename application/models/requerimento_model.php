@@ -7,6 +7,11 @@ class Requerimento_model extends MY_Model
             'field' => 'descricao',
             'label' => 'DESCRICAO',
             'rules' => 'required',
+        ),
+        array(
+            'field' => 'data_requerimento',
+            'label' => 'DATA',
+            'rules' => 'required|valid_date',
         )
     );
 
@@ -109,6 +114,12 @@ class Requerimento_model extends MY_Model
     public function retornar_situacao($id, $situacao)
     {
         $data = array('situacao' => $situacao-1);
+        $this->update($id, $data);
+    }
+    
+    public function gravar_expediente($id, $expediente)
+    {
+        $data = array('expediente' => $expediente);
         $this->update($id, $data);
     }
 }

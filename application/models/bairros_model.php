@@ -15,4 +15,10 @@ class Bairros_model extends MY_Model
         parent::__construct();
         $this->_database = $this->db;
     }
+    
+    public function get_bairros()
+    {
+        $this->db->where('id !=', -1);
+        return $this->get_all();
+    }
 }

@@ -93,6 +93,17 @@
                 echo        '</select>';
                 echo    '</div>';
                 echo '</div>';
+                
+                // expediente
+                if ($requerimento->situacao > REQUERIMENTO_SITUACAO_ANALISADO)
+                {
+                    echo '<div class="form-group">';
+                    echo form_label('Expediente', 'expediente', array('class' => 'col-lg-3 control-label'));
+                    echo    '<div class="col-lg-4">';
+                    echo    form_input(array('name' => 'expediente','id' => 'expediente','class' => 'form-control'), set_value('expediente',$requerimento->expediente));
+                    echo    '</div>';
+                    echo '</div>';
+                }                
 
                 echo '<hr>';
 

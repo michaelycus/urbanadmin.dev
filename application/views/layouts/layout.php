@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <title>Urban Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="SuggeElson" />
-        <meta name="description" content="Genyx admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework" />
-        <meta name="keywords" content="admin, admin template, admin theme, responsive, responsive admin, responsive admin template, responsive theme, themeforest, 960 grid system, grid, grid theme, liquid, jquery, administration, administration template, administration theme, mobile, touch , responsive layout, boostrap, twitter boostrap" />
-        <meta name="application-name" content="Genyx admin template" />
+        <meta name="author" content="Michael Marques" />
+        <meta name="description" content="Urban Admin é um sistema de gerenciamento de requerimentos onde um cidadão comum pode solicitar serviços para a prefeitura de sua cidade através da internet." />
+        <meta name="keywords" content="urban, admin, urban admin, prefeitura, software, sistema, gerencimento cidades, urbano, software cidade, requerimento, prefeitura" />
+        <meta name="application-name" content="Urban Admin" />
 
         <!-- Headings -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
@@ -34,6 +34,9 @@
 
         <!-- app stylesheets -->
         <link href="<?php echo base_url(); ?>css/app.css" rel="stylesheet" />
+        
+        <!-- dialog stylesheets -->
+        <link href="<?php echo base_url(); ?>css/jquery-impromptu.min.css" rel="stylesheet" />
 
         <!-- Custom stylesheets ( Put your own changes here ) -->
         <link href="<?php echo base_url(); ?>css/custom.css" rel="stylesheet" />
@@ -82,6 +85,9 @@
         <script src="<?php echo base_url(); ?>js/plugins/forms/uniform/jquery.uniform.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/mask/jquery.mask.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/datepicker/bootstrap-datepicker.js"></script> 
+        
+        <!-- Dialogs -->
+        <script src="<?php echo base_url(); ?>js/jquery-impromptu.min.js"></script> 
 
         <!-- Tables plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.min.js"></script>
@@ -108,7 +114,8 @@
             $(document).ready(function(){
                 $(".data").datepicker({
                     todayBtn: true,
-                    language: "pt-BR"
+                    language: "pt-BR",
+                    format: "dd/mm/yyyy"
                 });
             });
         </script>
@@ -117,7 +124,7 @@
     <body>
         <header id="header">
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <a class="navbar-brand" href="dashboard.html"><img src="<?php echo base_url(); ?>images/logo.png" alt="Genyx admin" class="img-responsive"></a>
+                <?php echo anchor('home', '<img src="'. base_url() . 'images/logo.png" alt="Genyx admin" class="img-responsive">', 'class="navbar-brand"'); ?>                
                 <div class="nav-no-collapse">
 
                     <ul class="nav navbar-nav pull-right">

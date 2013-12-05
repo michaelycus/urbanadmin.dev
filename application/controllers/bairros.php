@@ -15,7 +15,7 @@ class Bairros extends MY_Controller
 
     public function listar_bairros()
     {
-        $this->data['bairros'] = $this->bairros_model->get_all();
+        $this->data['bairros'] = $this->bairros_model->get_bairros();
 
         $this->load_view('bairros/listar_bairros', TRUE);
     }

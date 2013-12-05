@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `bairros` (
   `email_presidente` varchar(64) NOT NULL,
   `populacao` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
 
 --
 -- Extraindo dados da tabela `bairros`
@@ -5811,7 +5811,7 @@ CREATE TABLE IF NOT EXISTS `requerimentos` (
   `id_rua` int(11) NOT NULL,
   `cat_requerimento` int(11) NOT NULL,
   `data_requerimento` date NOT NULL,
-  `id_criador` int(11) NOT NULL,
+  `id_solicitante` int(11) NOT NULL,
   `id_requerente` int(11) NOT NULL,
   `expediente` varchar(64) NOT NULL,
   `situacao` smallint(6) NOT NULL,
@@ -5819,13 +5819,13 @@ CREATE TABLE IF NOT EXISTS `requerimentos` (
   `anexo_2` varchar(256) NOT NULL,
   `anexo_3` varchar(256) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Extraindo dados da tabela `requerimentos`
 --
 
-INSERT INTO `requerimentos` (`id`, `titulo`, `descricao`, `id_bairro`, `id_rua`, `cat_requerimento`, `data_requerimento`, `id_criador`, `id_requerente`, `expediente`, `situacao`, `anexo_1`, `anexo_2`, `anexo_3`) VALUES
+INSERT INTO `requerimentos` (`id`, `titulo`, `descricao`, `id_bairro`, `id_rua`, `cat_requerimento`, `data_requerimento`, `id_solicitante`, `id_requerente`, `expediente`, `situacao`, `anexo_1`, `anexo_2`, `anexo_3`) VALUES
 (1, '', 'AAA', 17, 129, 5, '2013-10-23', 0, 7, '', 0, '', '', ''),
 (3, '', 'CCCC', 9, 151, 11, '2013-10-23', 0, 7, '', 0, '', '', ''),
 (4, '', 'DDD', 14, 649, 9, '2013-10-23', 0, 7, '', 0, '', '', ''),
@@ -5837,8 +5837,16 @@ INSERT INTO `requerimentos` (`id`, `titulo`, `descricao`, `id_bairro`, `id_rua`,
 (11, '', 'FOTOTO3333', 4, 93, 8, '2013-11-14', 0, 13, '', 0, '480f3bccf187cae52a7d4bcdbc74816b.jpg', '', ''),
 (12, '', 'cadastroo novoov1', 17, 184, 10, '2013-11-14', 0, 16, '', 0, '912de70a0ff363104bff4edbf0e80919.jpg', 'b950e7f3eba8d68aaca9b7c969a99392.png', 'eae8ad9d361caf361635a9aa5cf03598.jpg'),
 (13, '', 'testetstete', 4, 61, 1, '2013-11-28', 0, 7, '', 0, '', '', ''),
-(14, '', 'agora vai', 5, 133, 6, '2013-11-28', 1, 7, '', 0, '', '', ''),
-(15, '', 'sfsafsfdfd', 5, 88, 1, '2013-11-28', 28, 7, '', 0, '', '', '');
+(14, '', 'agora vai', 5, 133, 6, '2013-11-28', 1, 7, '1235', 3, '', '', ''),
+(15, '', 'sfsafsfdfd', 5, 88, 1, '2013-11-28', 28, 7, '987', 3, '', '', ''),
+(16, '', 'Agora fff', 8, 292, 7, '2013-12-03', 1, 7, '', 2, '', '', ''),
+(17, '', 'sdfgsdgd', -1, 0, 1, '2013-03-12', 1, 7, '', 0, '', '', ''),
+(18, '', 'yyyertyrt', 5, 75, 9, '2013-02-14', 1, 7, '', 1, '', '', ''),
+(19, '', 'okf oikf okfds ', 4, 61, 5, '0000-00-00', 1, 7, '741', 2, '', '', ''),
+(20, '', 'gvhfdhfd', 5, 75, 1, '0000-00-00', 1, 7, '159', 2, '', '', ''),
+(21, '', 'gfhsfdgsdfg', -1, 0, 1, '2013-12-04', 1, 7, '748', 2, '', '', ''),
+(22, '', 'fasdfsdf', -1, 0, 1, '2013-12-23', 1, 7, '', 2, '', '', ''),
+(23, '', 'tyurty', -1, 0, 1, '2013-12-04', 1, 7, '', 2, '', '', '');
 
 -- --------------------------------------------------------
 

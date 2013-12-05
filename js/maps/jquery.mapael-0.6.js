@@ -3,7 +3,7 @@
 * Jquery Mapael - Dynamic maps jQuery plugin (based on raphael.js)
 * Requires jQuery and raphael.js
 *
-* Version: 0.7.0 (17-11-2013)
+* Version: 0.6.0 (29-09-2013)
 *
 * Copyright (c) 2013 Vincent Brouté (http://www.neveldo.fr/mapael)
 * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php).
@@ -18,7 +18,7 @@
 		
 		return this.each(function() {
 		
-			var $self = $(this)
+			var self = this
 				, $tooltip = $("<div>").addClass(options.map.tooltip.cssClass).css("display", "none")
 				, $container = $('.' + options.map.cssClass, this).empty().append($tooltip)
 				, mapConf = $.fn.mapael.maps[options.map.name]
@@ -65,7 +65,7 @@
 				
 			// Create the legends for areas
 			if (options.legend.area.slices && options.legend.area.display)
-				areaLegend = $.fn.mapael.createLegend($self, options, 'area', areas, 1);
+				areaLegend = $.fn.mapael.createLegend($(this), options, 'area', areas, 1);
                 
 			/**
 			* 
@@ -75,12 +75,10 @@
 			* @param newPlots new plots to add to the map
 			* @param deletedPlotsplots to delete from the map
 			* @param opt option for the refresh :
-			*  opt.animDuration animation duration in ms (default = 0)
 			*  opt.resetAreas true to reset previous areas options
 			*  opt.resetPlots true to reset previous plots options
-			*  opt.afterUpdate Hook that allows to add custom processing on the map
 			*/
-			$self.on('update', function(e, updatedOptions, newPlots, deletedPlots, opt) {
+			$(this).on('update', function(e, updatedOptions, newPlots, deletedPlots, opt) {
 				var i = 0
 					, id = 0
 					, animDuration = 0
@@ -171,8 +169,6 @@
 					
 					$.fn.mapael.updateElem(elemOptions, plots[id], $tooltip, animDuration);
 				}
-				
-				opt.afterUpdate && opt.afterUpdate($self, paper, areas, plots, options);
 			});
 			
 			// Handle resizing of the map
@@ -181,7 +177,7 @@
 				
 				// Create the legends for plots taking into account the scale of the map
 				if (options.legend.plot.slices && options.legend.plot.display)
-					plotLegend = $.fn.mapael.createLegend($self, options, 'plot', plots, (options.map.width / mapConf.width));
+					plotLegend = $.fn.mapael.createLegend($(this), options, 'plot', plots, (options.map.width / mapConf.width));
 			} else {
 				$(window).on('resize', function() {
 					clearTimeout(resizeTO);
@@ -191,7 +187,7 @@
 				// Create the legends for plots taking into account the scale of the map
 				var createPlotLegend = function() {
 					if (options.legend.plot.slices && options.legend.plot.display)
-						plotLegend = $.fn.mapael.createLegend($self, options, 'plot', plots, ($container.width() / mapConf.width));
+						plotLegend = $.fn.mapael.createLegend($(self), options, 'plot', plots, ($container.width() / mapConf.width));
 					
 					$container.unbind('resizeEnd', createPlotLegend);
 				};
@@ -203,9 +199,6 @@
 					}
 				}).on('resizeEnd', createPlotLegend).trigger('resizeEnd');
 			}
-			
-			// Hook that allows to add custom processing on the map
-			options.map.afterInit && options.map.afterInit($self, paper, areas, plots, options);
 			
 			$(paper.desc).append(" and Mapael (http://neveldo.fr/mapael)");
 		});
@@ -285,22 +278,18 @@
 				if (animDuration > 0) {
 					elem.textElem.attr({'text-anchor' : textPosition.textAnchor});
 					elem.textElem.animate({x : textPosition.x, y : textPosition.y}, animDuration);
-				} else
+				} else {
 					elem.textElem.attr({x : textPosition.x, y : textPosition.y, 'text-anchor' : textPosition.textAnchor});
+				}
 			}
-			
-			$.fn.mapael.setHoverOptions(elem.textElem, elemOptions.text.attrs, elemOptions.text.attrsHover);
-			if (animDuration > 0)
-				elem.textElem.animate(elemOptions.text.attrs, animDuration);
-			else
-				elem.textElem.attr(elemOptions.text.attrs);
 		}
 		
-		$.fn.mapael.setHoverOptions(elem.mapElem, elemOptions.attrs, elemOptions.attrsHover);
-		if (animDuration > 0)
+		$.fn.mapael.setHoverOptions(elem.mapElem, elemOptions.attrs, elem.mapElem.attrsHover);
+		if (animDuration > 0) {
 			elem.mapElem.animate(elemOptions.attrs, animDuration);
-		else
+		} else {
 			elem.mapElem.attr(elemOptions.attrs);
+		}
 		
 		if (elemOptions.tooltip && typeof elemOptions.tooltip.content != 'undefined') {
 			if (typeof elem.mapElem.tooltipContent == "undefined") {
@@ -372,23 +361,20 @@
 	* @param content the content to set in the tooltip
 	*/
 	$.fn.mapael.setTooltip = function(elem, $tooltip) {
-		var tooltipTO = 0
-        	, $container = $tooltip.parent()
-			, containerY2 = $container.offset().left + $container.width();
+		var tooltipTO = 0;
 	
-		$(elem.node).on("mouseover", function(e) {
+		$(elem.node).on("mouseover", function() {
 			tooltipTO = setTimeout(
 				function() {
 					elem.tooltipContent && $tooltip.html(elem.tooltipContent).css("display", "block");
-					$tooltip.css({"left" : Math.min(containerY2 - $tooltip.outerWidth() - 5, e.pageX + 12), "top" : e.pageY + 23 - $(window).scrollTop()});
 				}
 				, 120
 			);
-		}).on("mouseout", function(e) {
+		}).on("mouseout", function() {
 			clearTimeout(tooltipTO);
 			$tooltip.css("display", "none");
 		}).on("mousemove", function(e) {
-			$tooltip.css({"left" : Math.min(containerY2 - $tooltip.outerWidth() - 5, e.pageX + 12), "top" : e.pageY + 23 - $(window).scrollTop()});
+			$tooltip.css("left", e.pageX + 15).css("top", e.pageY + 15 - $(window).scrollTop());
 		});
 	};
 	
@@ -419,39 +405,35 @@
 	* @param options
 	*/
 	$.fn.mapael.initZoom = function($container, paper, mapWidth, mapHeight, options) {
-		var $parentContainer = $container.parent()
-			, $zoomIn = $("<div>").addClass(options.zoomInCssClass).html("+")
+		var $zoomIn = $("<div>").addClass(options.zoomInCssClass).html("+")
 			, $zoomOut = $("<div>").addClass(options.zoomOutCssClass).html("&#x2212;")
+			, currentLevel = 0
+			, vbCenterX = mapWidth / 2
+			, vbCenterY = mapHeight / 2
 			, mousedown  = false
 			, previousX = 0
-			, previousY = 0;
-		
-		// Zoom
-		$parentContainer.data("zoomLevel", 0);
+			, previousY = 0
+			, setZoom = function(e) {
+				// Update zoom level
+				currentLevel = Math.min(Math.max(currentLevel + e.data.offset, 0), options.maxLevel);
+				if (currentLevel == 0) {
+					vbCenterX = mapWidth / 2
+					vbCenterY = mapHeight / 2
+					paper.setViewBox(0, 0, mapWidth, mapHeight);
+				} else {
+					paper.setViewBox(
+						Math.min(Math.max(0, vbCenterX - (mapWidth / (1 + currentLevel * options.step))/2), (mapWidth - (mapWidth / (1 + currentLevel * options.step)))), 
+						Math.min(Math.max(0, vbCenterY - (mapHeight / (1 + currentLevel * options.step))/2), (mapHeight - (mapHeight / (1 + currentLevel * options.step)))), 
+						mapWidth / (1 +currentLevel * options.step), 
+						mapHeight / (1 +currentLevel * options.step)
+					);
+				}
+			};
+			
 		$container.append($zoomIn).append($zoomOut);
 		
-		$parentContainer.on("zoom", function(e, level, x, y) {
-			var currentLevel = Math.min(Math.max(level, 0), options.maxLevel);
-			$parentContainer.data("zoomLevel", currentLevel);
-			
-			(typeof x == "undefined") && (x = (paper._viewBox[0] + paper._viewBox[2] / 2));
-			(typeof y == "undefined") && (y = (paper._viewBox[1] + paper._viewBox[3] / 2));
-			
-			// Update zoom level of the map
-			if (currentLevel == 0) {
-				paper.setViewBox(0, 0, mapWidth, mapHeight);
-			} else {
-				paper.setViewBox(
-					Math.min(Math.max(0, x - (mapWidth / (1 + currentLevel * options.step))/2), (mapWidth - (mapWidth / (1 + currentLevel * options.step)))), 
-					Math.min(Math.max(0, y - (mapHeight / (1 + currentLevel * options.step))/2), (mapHeight - (mapHeight / (1 + currentLevel * options.step)))), 
-					mapWidth / (1 + currentLevel * options.step), 
-					mapHeight / (1 + currentLevel * options.step)
-				);
-			}
-		});
-		
-		$zoomIn.on("click", function() {$parentContainer.trigger("zoom", $parentContainer.data("zoomLevel") + 1);});
-		$zoomOut.on("click", function() {$parentContainer.trigger("zoom", $parentContainer.data("zoomLevel") - 1);});
+		$zoomIn.on("click", null, {offset : 1} , setZoom);
+		$zoomOut.on("click", null, {offset : -1}, setZoom);
 		
 		// Panning
 		$('body').on("mouseup", function(e) {
@@ -465,18 +447,18 @@
 			previousY = e.pageY;
 			return false;
 		}).on("mousemove", function(e) {
-			var currentLevel = $parentContainer.data("zoomLevel");
 			if (mousedown  && currentLevel != 0) {
 				var offsetX = (previousX - e.pageX) / (1 + (currentLevel * options.step)) * (mapWidth / paper.width)
 					, offsetY = (previousY - e.pageY) / (1 + (currentLevel * options.step)) * (mapHeight / paper.height);					
 				
 				if (Math.abs(offsetX) > 5 || Math.abs(offsetY) > 5) {
-					paper.setViewBox(
-						Math.min(Math.max(0, paper._viewBox[0] + offsetX), (mapWidth - paper._viewBox[2])), 
-						Math.min(Math.max(0, paper._viewBox[1] + offsetY), (mapHeight - paper._viewBox[3])),
-						paper._viewBox[2],
-						paper._viewBox[3]
-					);
+					var viewBoxX = Math.min(Math.max(0, paper._viewBox[0] + offsetX), (mapWidth - paper._viewBox[2]))
+						, viewBoxY = Math.min(Math.max(0, paper._viewBox[1] + offsetY), (mapHeight - paper._viewBox[3]));
+					
+					vbCenterX = viewBoxX + paper._viewBox[2] / 2;
+					vbCenterY = viewBoxY + paper._viewBox[3] / 2;
+					
+					paper.setViewBox(viewBoxX, viewBoxY, paper._viewBox[2], paper._viewBox[3]);
 					
 					previousX = e.pageX;
 					previousY = e.pageY;
@@ -557,8 +539,8 @@
 					// Hide/show elements when user clicks on a legend element
 					label.attr({cursor:'pointer'});
 					
-					$.fn.mapael.setHoverOptions(elem, legendOptions.slices[i].attrs, legendOptions.slices[i].attrs);
-					$.fn.mapael.setHoverOptions(label, legendOptions.labelAttrs, legendOptions.labelAttrsHover);
+					$.fn.mapael.setHoverOptions(elem, legendOptions.slices[i].attrs, legendOptions.slices[i].attrsHover);
+					$.fn.mapael.setHoverOptions(label, legendOptions.labelAttrs, legendOptions.labelAttrs);
 					$.fn.mapael.setHover(paper, elem, label);
 					
 					label.hidden = false;
@@ -571,8 +553,8 @@
 							}
 							
 							for (var id in elems) {
-								if ((typeof legendOptions.slices[i].min == 'undefined' || elems[id].value >= legendOptions.slices[i].min) 
-									&& (typeof legendOptions.slices[i].max == 'undefined' || elems[id].value < legendOptions.slices[i].max)
+								if ((!legendOptions.slices[i].min || elems[id].value >= legendOptions.slices[i].min) 
+									&& (!legendOptions.slices[i].max || elems[id].value < legendOptions.slices[i].max)
 								) {
 									(function(id) {
 										if (!label.hidden) {
@@ -730,8 +712,8 @@
 	*/
 	$.fn.mapael.getLegendSlice = function (value, legend) {
 		for(var i = 0, length = legend.slices.length; i < length; ++i) {
-			if ((typeof legend.slices[i].min == 'undefined' || value >= legend.slices[i].min) 
-				&& (typeof legend.slices[i].max == 'undefined' || value < legend.slices[i].max)
+			if ((!legend.slices[i].min || value >= legend.slices[i].min) 
+				&& (!legend.slices[i].max || value < legend.slices[i].max)
 			) {
 				return legend.slices[i];
 			}
@@ -822,10 +804,6 @@
 					, fill : "#343434"
 					, "text-anchor" : "start"
 				}
-				, labelAttrsHover : {
-					fill : "#787878"
-					, animDuration : 300
-				}
 				, hideElemsOnClick : {
 					enabled : true
 					, opacity : 0.2
@@ -848,10 +826,6 @@
 					"font-size" : 15
 					, fill : "#343434"
 					, "text-anchor" : "start"
-				}
-				, labelAttrsHover : {
-					fill : "#787878"
-					, animDuration : 300
 				}
 				, hideElemsOnClick : {
 					enabled : true

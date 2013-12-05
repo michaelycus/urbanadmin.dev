@@ -25,32 +25,42 @@
                         title: "Requerimentos por bairro",
                         slices: [{
                         min: 0,
-                        max: 2,
+                        max: 1,
+                        attrs: {
+                            fill: "#5d89bd"}
+                      },{
+                        min: 1,
+                        max: 3,
                         attrs: {
                             fill: "#4974ab"}
                       },{
-                        min: 2,
-                        max: 3,
+                        min: 3,
+                        max: 4,
+                        attrs: {
+                            fill: "#345f99"}
+                      },{
+                        min: 4,
+                        max: 5,
                         attrs: {
                             fill: "#204a87"}
                       },]
             }
         },
         areas: {                            "campestre":{
-                                value: "2",
-                                text: { content:  2 , attrs: {fill:"#222"} },
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 2"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 3"},
                             },                            "carneiros":{
+                                value: "4",
+                                text: { content:  4 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 4"},
+                            },                            "conservas":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 2"},
-                            },                            "conservas":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
-                                href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Requerimentos: 1"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Requerimentos: 2"},
                             },                            "conventos":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },
@@ -71,16 +81,6 @@
                                 text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerimentos: 2"},
-                            },                            "jardim_do_cedro":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
-                                href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerimentos: 1"},
-                            },                            "moinhos":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
-                                href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerimentos: 1"},
                             },                            "moinhos_dagua":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },

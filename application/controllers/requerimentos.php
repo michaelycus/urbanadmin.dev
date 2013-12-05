@@ -49,8 +49,9 @@ class Requerimentos extends MY_Controller
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente','id_solicitante'),$this->input->post());
-            $data['data_requerimento'] = date('Y-m-d');
+            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento',
+                'id_requerente','id_solicitante'),$this->input->post());
+            $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);            
 
             $i = 1;
             foreach($_FILES as $field => $file)
@@ -172,6 +173,15 @@ class Requerimentos extends MY_Controller
         $this->requerimento_model->retornar_situacao($id,$situacao);
         
         $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
+        
+        redirect('requerimentos/listar_requerimentos');
+    }
+    
+    public function gravar_expediente($id, $expediente)
+    {
+        $this->requerimento_model->gravar_expediente($id,$expediente);
+        
+        $this->avancar_situacao($id,REQUERIMENTO_SITUACAO_ANALISADO);
         
         redirect('requerimentos/listar_requerimentos');
     }

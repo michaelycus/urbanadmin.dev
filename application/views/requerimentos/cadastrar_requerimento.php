@@ -1,3 +1,24 @@
+<style type="text/css">
+    .mapTooltip {
+        position:fixed;
+        background-color : #fff;
+        moz-opacity:0.70;
+        opacity: 0.70;
+        filter:alpha(opacity=70);
+        border-radius:10px;
+        padding : 10px;
+        z-index: 1000;
+        max-width: 200px;
+        display:none;
+        color:#343434;
+    }    
+
+    .map {
+        position:relative;
+    }
+
+</style>
+
 
 <div class="container-fluid">
     <div id="heading" class="page-header">
@@ -86,8 +107,11 @@
                     echo '<div class="form-group">';
                     echo form_label('Data', 'data_requerimento', array('class' => 'col-lg-3 control-label'));    
                     echo    '<div class="col-lg-9">';
-                    echo        form_input(array('name' => 'data_requerimento','id' => 'data_requerimento',
-                                'class' => 'form-control data'), set_value('data_requerimento'));
+                    echo        '<div id="datepicker" class="input-group date" data-date="12-02-2012" data-date-format="dd-mm-yyyy">';
+                    echo            form_input(array('name' => 'data_requerimento','id' => 'data_requerimento',
+                                    'class' => 'form-control data'), set_value('data_requerimento'));
+                    echo            '<span class="input-group-addon"><i class="icon16 i-calendar-4"></i></span>';
+                    echo        '</div>';
                     echo    '</div>';
                     echo '</div>';
                 }
@@ -139,6 +163,27 @@
                 </div><!-- End .panel-body -->
            </div><!-- End .widget -->
        </div><!-- End .col-lg-6  -->     
+       
+       <script src="<?php echo base_url(); ?>js/maps/raphael.js" charset="utf-8" ></script>
+       <script src="<?php echo base_url(); ?>js/maps/jquery.mapael.js" charset="utf-8" ></script>
+       <script src="<?php echo base_url(); ?>js/maps/cidade.js" charset="utf-8" ></script>
+       <!--<script src="<?php echo base_url(); ?>js/maps/requerimentos_por_bairro.js" charset="utf-8" ></script>-->
+       <script src="<?php echo base_url(); ?>js/maps/bairros.js" charset="utf-8" ></script>
+       
+       <div class="col-lg-6">
+           <div class="panel panel-default">                
+               <div class="panel-body">
+                   <div class="maparea1">
+                       <div class="map">
+                           <span>Alternative content for the map</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+       
+       
+       
     </div><!-- End .row-fluid  -->
 </div> 
 

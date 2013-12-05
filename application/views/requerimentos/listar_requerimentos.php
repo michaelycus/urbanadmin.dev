@@ -1,3 +1,36 @@
+<script>   
+    function expediente(id)
+    {
+        var states = {
+            state0: {
+                title: 'Informe o nº do protocolo',
+                html: '<label>Nº: <input type="text" name="n_protocolo" id"n_protocolo" autofocus value=""></label><br />',
+                buttons: {
+                    Informar: 1
+                },
+                submit: function(e, v, m, f) {
+                    window.location.replace("<?php echo base_url(); ?>requerimentos/gravar_expediente/"+id+"/"+f.n_protocolo);
+                }
+            }
+        };
+
+        $.prompt(states, {
+            classes: {
+                box: '',
+                fade: 'modal fade',
+                prompt: 'panel panel-default',
+                close: 'close',
+                title: 'modal-header',
+                message: 'modal-body',
+                buttons: 'modal-footer',
+                button: 'btn',
+                defaultButton: 'btn btn-primary'
+            }
+        });
+    }
+    
+</script>
+
 <div class="container-fluid">
     <div id="heading" class="page-header">
         <h1><i class="icon20 i-user-3"></i> Listar requerimentos</h1>
@@ -30,18 +63,21 @@
                                       array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),
                                       array('data'=>'<small>'.$requerimento->nome_solicitante.'</small>'),
                                       array('data'=>'<small>'.$requerimento->nome_requerente.'</small>'),
-                                      array('data'=>'<div style="display:none;">'.$requerimento->situacao.'</div>'.($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
-                                                    '<img src="'.base_url().'images/retornar_situacao_d.png"> ' :
-                                                    anchor('requerimentos/retornar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
-                                                            '<img src="'.base_url().'images/retornar_situacao.png"> ' )).
-                                                    '<img src="'.base_url().'images/situacao_'.$requerimento->situacao.'.png"> '.
-                                                    ($requerimento->situacao==REQUERIMENTO_SITUACAO_RESOLVIDO ?
-                                                    '<img src="'.base_url().'images/avancar_situacao_d.png">':
-                                                    anchor('requerimentos/avancar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
-                                                    '<img src="'.base_url().'images/avancar_situacao.png">')), 'style'=>'width:130px'),
-                                      array('data'=>'<small>'.$requerimento->expediente.'</small>'),
-                                      array('data'=>anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
-                                                    anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:150px'));
+            array('data'=>'<div style="display:none;">'.$requerimento->situacao.'</div>'.($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
+                              '<img src="'.base_url().'images/retornar_situacao_d.png"> ' :
+                              anchor('requerimentos/retornar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
+                                  '<img src="'.base_url().'images/retornar_situacao.png"> ' )).
+                          '<img src="'.base_url().'images/situacao_'.$requerimento->situacao.'.png"> '.
+                          ($requerimento->situacao==REQUERIMENTO_SITUACAO_RESOLVIDO ?
+                              '<img src="'.base_url().'images/avancar_situacao_d.png">':
+                              ($requerimento->situacao==REQUERIMENTO_SITUACAO_ANALISADO ?                                   
+                                    '<img src="'.base_url().'images/avancar_situacao.png" style="cursor: pointer;" onclick="expediente('.$requerimento->id.')">' : 
+                                  anchor('requerimentos/avancar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
+                                    '<img src="'.base_url().'images/avancar_situacao.png">') ) ),
+                          'style'=>'width:130px'),
+            array('data'=>'<small>'.$requerimento->expediente.'</small>'),
+            array('data'=>anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
+                          anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:150px'));
             endforeach;
 
             echo $this->table->generate();
