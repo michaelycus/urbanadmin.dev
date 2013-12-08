@@ -127,18 +127,16 @@
                 <?php echo anchor('home', '<img src="'. base_url() . 'images/logo.png" alt="Genyx admin" class="img-responsive">', 'class="navbar-brand"'); ?>                
                 <div class="nav-no-collapse">
 
-                    <ul class="nav navbar-nav pull-right">
-                        
+                    <ul class="nav navbar-nav pull-right">                        
                         <li class="dropdown">
                             <?php
-                            if ($_SESSION['requerimentos']>0)
-                            echo anchor('requerimentos/listar_requerimentos', '<i class="icon24 i-bell-2"></i>
-                                <span class="notification red">'.$_SESSION['requerimentos'].'</span>', 'class="dropdown-toggle" data-toggle="dropdown"');
-                            else
-                                echo $_SESSION['requerimentos'];
+                            if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR && $_SESSION['requerimentos']>0)
+                            {
+                                echo anchor('requerimentos/listar_requerimentos', '<i class="icon24 i-bell-2"></i>
+                                    <span class="notification red">'.$_SESSION['requerimentos'].'</span>', 'class="dropdown-toggle" data-toggle="dropdown"');                            
+                            }                            
                             ?>
                         </li>
-
                         
                         <li class="divider-vertical"></li>
                         <li class="dropdown user">

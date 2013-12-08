@@ -44,7 +44,7 @@ class Requerimentos extends MY_Controller
 
         $this->form_validation->set_rules($this->requerimento_model->validation);
 
-        $this->data['bairros'] = $this->bairros_model->get_all();
+        $this->data['bairros'] = $this->bairros_model->get_bairros();
         $this->data['requerentes'] = $this->requerente_model->get_vereadores();
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
 
@@ -159,7 +159,7 @@ class Requerimentos extends MY_Controller
 
     public function excluir_requerimento($id)
     {
-        if ($_SESSION['autorizacao'==AUTORIZACAO_ADMINISTRADOR])
+        if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
         {
             $this->requerimento_model->delete($id);
             generate_charts();

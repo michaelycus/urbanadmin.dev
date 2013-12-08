@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'txai_txai';
-$db['default']['password'] = 'urt765';
-$db['default']['database'] = 'txai_system';
+$db['default']['username'] = 'timelin';
+$db['default']['password'] = 'ltikaio231485ken';
+$db['default']['database'] = 'timelin_urbanadmin';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

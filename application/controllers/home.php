@@ -13,6 +13,8 @@ class Home extends MY_Controller {
 //            'view' => 'templates/production-body'
 //            );
 //            $this->load->view('painel',$data);
+        if ($_SESSION['autorizacao']== AUTORIZACAO_OPERADOR)
+            redirect ('requerimentos/meus_requerimentos/');
 
         $this->load_view('layouts/home');
     }

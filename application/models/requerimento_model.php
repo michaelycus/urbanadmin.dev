@@ -12,6 +12,11 @@ class Requerimento_model extends MY_Model
             'field' => 'data_requerimento',
             'label' => 'DATA',
             'rules' => 'required|valid_date',
+        ),
+        array(
+            'field' => 'id_bairro',
+            'label' => 'BAIRRO',
+            'rules' => 'required',
         )
     );
 

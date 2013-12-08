@@ -36,11 +36,13 @@ $(document).ready(function() {
     $('#table-meus-requerimentos').dataTable( {
             "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
             "sPaginationType": "bootstrap",
-            "aaSorting": [[ 4, "asc" ]],
+            "aaSorting": [[ 3, "asc" ]],
             "bJQueryUI": false,
             "bAutoWidth": false,
             "iDisplayLength": 50,
             "bLengthChange": false,
+            "aoColumnDefs": [
+                { "bSortable": false, "aTargets": [ 5 ] }],
             "oLanguage": {
                     "sSearch": "<span>Buscar:</span> _INPUT_",
                     "sLengthMenu": "<span>_MENU_ registros</span>",

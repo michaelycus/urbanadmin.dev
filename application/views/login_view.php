@@ -5,10 +5,10 @@
         <meta charset="utf-8">
         <title>Urban Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="SuggeElson" />
-        <meta name="description" content="Genyx admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework" />
-        <meta name="keywords" content="admin, admin template, admin theme, responsive, responsive admin, responsive admin template, responsive theme, themeforest, 960 grid system, grid, grid theme, liquid, jquery, administration, administration template, administration theme, mobile, touch , responsive layout, boostrap, twitter boostrap" />
-        <meta name="application-name" content="Genyx admin template" />
+        <meta name="author" content="Michael Marques" />
+        <meta name="description" content="Urban Admin é um sistema de gerenciamento de requerimentos onde um cidadão comum pode solicitar serviços para a prefeitura de sua cidade através da internet." />
+        <meta name="keywords" content="urban, admin, urban admin, prefeitura, software, sistema, gerencimento cidades, urbano, software cidade, requerimento, prefeitura" />
+        <meta name="application-name" content="Urban Admin" />
 
         <!-- Headings -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700' rel='stylesheet' type='text/css'>
@@ -86,13 +86,21 @@
                         <div class="page-header">
                             <h3 class="center">Acesse</h3>
                         </div>
-                        <?php echo form_open('login', 'role="form" id="login-form" name="login-form" class="form-horizontal"'); ?>
+                        <?php 
+                            echo form_open('login', 'role="form" id="login-form" name="login-form" class="form-horizontal"'); 
+                            echo validation_errors('<div class="alert alert-error">','</div>');
+                        ?>
                             <div class="row">
                                 <?php
                                 if ($this->session->userdata('requerente_cadastrado'))
                                 {
                                     echo '<div class="alert alert-success">'. $this->session->userdata('requerente_cadastrado') .'</div>';
                                     $this->session->unset_userdata('requerente_cadastrado');
+                                }
+                                if ($this->session->userdata('usuario_errado'))
+                                {
+                                    echo '<div class="alert alert-error">'. $this->session->userdata('usuario_errado') .'</div>';
+                                    $this->session->unset_userdata('usuario_errado');
                                 }
                                 ?>                                
                                 <div class="form-group relative">
@@ -122,7 +130,7 @@
                         </div>
                         <?php echo form_open('login/cadastrar_requerente', 'role="form" id="reg-form" name="reg-form" class="form-horizontal"');
                         
-                        echo validation_errors('<div class="alert alert-error">','</div>');                        
+                        echo validation_errors('<div class="alert alert-error">','</div>');
                         ?>
                             <div class="row">
                                 <?php
@@ -240,7 +248,7 @@
 
                                 // mora_cidade
                                 echo '<div class="form-group">';
-                                echo form_label('Reside na cidade?', 'mora_cidade', array('class' => 'col-lg-4 control-label'));
+                                echo form_label('Reside em '.NOME_CIDADE.'?', 'mora_cidade', array('class' => 'col-lg-4 control-label'));
                                 echo    '<div class="col-lg-8">';
                                 echo        '<select id="mora_cidade" name="mora_cidade">';
                                 echo            '<option value="1" '.set_select('mora_cidade').'>Sim</option>';

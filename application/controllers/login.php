@@ -35,6 +35,10 @@ class Login extends MY_Controller
                 
                 $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
             }
+            else
+            {
+                $this->session->set_userdata('usuario_errado','Usuário e/ou senha inválidos!<br />Por favor, tente novamente.');
+            }
 
             redirect('home');
         }

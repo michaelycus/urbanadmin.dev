@@ -27,7 +27,7 @@ class MY_Form_validation extends CI_Form_validation
      */
     public function valid_date($date)
     {
-        if (ereg("([0-9]{1,2})/([0-9]{1,2})/([0-9]{4})", $date))
+        if (preg_match("/([0-9]{2})\/([0-9]{2})\/([0-9]{4})/", $date))
         {
             $arr = explode("/", $date);
 

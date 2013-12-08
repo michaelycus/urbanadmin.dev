@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://www.txaidesenvolvimento.com.br/sistema/txai_system/';
+$config['base_url']	= 'http://www.timelinguistico.com.br/urbanadmin/';
 
 /*
 |--------------------------------------------------------------------------

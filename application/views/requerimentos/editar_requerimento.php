@@ -145,7 +145,7 @@
                 echo '<div class="form-group">';
                 echo form_label('Anexo 1', 'anexo_1', array('class' => 'col-lg-3 control-label'));
                 echo    '<div class="col-lg-9">';
-                echo        form_upload('anexo_1',base_url().'/uploads/'.$requerimento->anexo_1) . anchor_popup(base_url().'/uploads/'.$requerimento->anexo_1, ' (Anexo)');
+                echo        form_upload('anexo_1',base_url().'/uploads/'.$requerimento->anexo_1) . ' ' .($requerimento->anexo_1 != NULL ? anchor_popup(base_url().'/uploads/'.$requerimento->anexo_1, '(Anexo)') : '' );
                 echo    '</div>';
                 echo '</div>';
 
@@ -153,7 +153,7 @@
                 echo '<div class="form-group">';
                 echo form_label('Anexo 2', 'anexo_2', array('class' => 'col-lg-3 control-label'));
                 echo    '<div class="col-lg-9">';
-                echo        form_upload('anexo_2',base_url().'/uploads/'.$requerimento->anexo_2) . anchor_popup(base_url().'/uploads/'.$requerimento->anexo_2, ' (Anexo)');
+                echo        form_upload('anexo_2',base_url().'/uploads/'.$requerimento->anexo_2) . ' ' . ($requerimento->anexo_2 != NULL ? anchor_popup(base_url().'/uploads/'.$requerimento->anexo_2, '(Anexo)') : '' );
                 echo    '</div>';
                 echo '</div>';
 
@@ -161,7 +161,7 @@
                 echo '<div class="form-group">';
                 echo form_label('Anexo 3', 'anexo_3', array('class' => 'col-lg-3 control-label'));
                 echo    '<div class="col-lg-9">';
-               echo        form_upload('anexo_3',base_url().'/uploads/'.$requerimento->anexo_3) . anchor_popup(base_url().'/uploads/'.$requerimento->anexo_3, ' (Anexo)');
+                echo        form_upload('anexo_3',base_url().'/uploads/'.$requerimento->anexo_3) . ' ' . ($requerimento->anexo_3 != NULL ? anchor_popup(base_url().'/uploads/'.$requerimento->anexo_3, '(Anexo)') : '' );
                 echo    '</div>';
                 echo '</div>';                
                 

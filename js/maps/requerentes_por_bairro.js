@@ -61,6 +61,11 @@
                                 text: { content:  15 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerimentos: 15"},
+                            },                            "florestal":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Requerimentos: 1"},
                             },                            "hidraulica":{
                                 value: "1",
                                 text: { content:  1 , attrs: {fill:"#222"} },
