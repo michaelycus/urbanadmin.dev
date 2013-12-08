@@ -56,13 +56,14 @@
         }
 
         $this->table->set_template($tmpl);
-        $this->table->set_heading('Resumo', "Bairro", "Solicitante", "Requerente", "Situação", "Expediente", "");
+        $this->table->set_heading('Resumo', "Tipo Req.", "Bairro", "Solicitante", "Requerente", "Situação", "Expediente", "");
 
         if (!empty($requerimentos))
         {
             foreach ($requerimentos as $requerimento):
-                $this->table->add_row(array('data'=>'<small>'.$requerimento->nome_categoria. ' - '.substr($requerimento->descricao, 0, 196).(strlen($requerimento->descricao)>255?"..." : ""), 'class'=>'A'.'</small>'),
-                                      array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),
+                $this->table->add_row(array('data'=>'<small>'.substr($requerimento->descricao, 0, 196).(strlen($requerimento->descricao)>255?"..." : ""), 'class'=>'A'.'</small>'),
+                                      array('data'=>'<small>'.$requerimento->nome_categoria.'</small>'),              
+                                      array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),                                      
                                       array('data'=>'<small>'.$requerimento->nome_solicitante.'</small>'),
                                       array('data'=>'<small>'.$requerimento->nome_requerente.'</small>'),
             array('data'=>'<div style="display:none;">'.$requerimento->situacao.'</div>'.($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
