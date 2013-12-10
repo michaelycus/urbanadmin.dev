@@ -36,9 +36,9 @@ $(document).ready(function() {
 	//------------- Validation -------------//
 	$("#login-form").validate({ 
 		rules: {
-			user: {
+			cpf: {
 				required: true,
-				minlength: 3
+				minlength: 11
 			}, 
 			password: {
 				required: true,
@@ -46,25 +46,25 @@ $(document).ready(function() {
 			}
 		}, 
 		messages: {
-			user: {
-				required: "Please provide a username",
-				minlength: "Username must be at least 3 characters long"
+			cpf: {
+				required: "Por favor, informe seu CPF",
+				minlength: "O CPF/CNPJ deve conter pelo menos 11 digitos"
 			},
 			password: {
-				required: "Please provide a password",
-				minlength: "Your password must be at least 5 characters long"
+				required: "Por favor, informe sua senha",
+				minlength: "A senha deve conter pelo menos 6 caracteres"
 			}
 		},
 		submitHandler: function(form){
 	        var btn = $('#loginBtn');
 	        btn.removeClass('btn-primary');
 	        btn.addClass('btn-danger');
-	        btn.text('Checking ...');
+	        btn.text('Checando ...');
 	        btn.attr('disabled', 'disabled');
 	        setTimeout(function() {
 	        	btn.removeClass('btn-danger');
 	        	btn.addClass('btn-success');
-	        	btn.text('User find ...');
+	        	btn.text('Encontrando usuário ...');
 	        }, 1500);
 	        setTimeout(function () {
 	        	form.submit();

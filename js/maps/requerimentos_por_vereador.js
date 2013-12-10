@@ -18,11 +18,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 3"
                             }},"campestre": {
-                            "value": 5,
-                            "text": { "content":  "5" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#37629b"},
+                            "value": 4,
+                            "text": { "content":  "4" , attrs: {fill:"#222"} },
+                            "attrs": { fill: "#436ea5"},
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 5"
+                                    "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 4"
                             }},"carneiros": {
                             "value": 5,
                             "text": { "content":  "5" , attrs: {fill:"#222"} },
@@ -30,11 +30,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 5"
                             }},"centenario": {
-                            "value": 2,
-                            "text": { "content":  "2" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#5a86ba"},
+                            "value": 1,
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "attrs": { fill: "#6692c4"},
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 2"
+                                    "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 1"
                             }},"conservas": {
                             "value": 1,
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
@@ -47,12 +47,6 @@
                             "attrs": { fill: "#5a86ba"},
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 2"
-                            }},"florestal": {
-                            "value": 1,
-                            "text": { "content":  "1" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#6692c4"},
-                            "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 1"
                             }},"moinhos_dagua": {
                             "value": 1,
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
@@ -63,12 +57,11 @@
                             "value": 6},"americano": {
                             "value": 3},"bom_pastor": {
                             "value": 3},"campestre": {
-                            "value": 5},"carneiros": {
+                            "value": 4},"carneiros": {
                             "value": 5},"centenario": {
-                            "value": 2},"conservas": {
+                            "value": 1},"conservas": {
                             "value": 1},"conventos": {
-                            "value": 2},"florestal": {
-                            "value": 1},"moinhos_dagua": {
+                            "value": 2},"moinhos_dagua": {
                             "value": 1}}},"13": { "areas": {"conservas": {
                             "value": 1,
                             "text": { "content":  "1" , attrs: {fill:"#222"} },

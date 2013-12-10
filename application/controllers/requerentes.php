@@ -85,7 +85,7 @@ class Requerentes extends MY_Controller
             redirect('requerentes/cadastrar_requerente');
         endif;
 
-        $this->data['bairros'] = $this->bairros_model->get_all();
+        $this->data['bairros'] = $this->bairros_model->get_bairros();
 
         $this->load->model('cidades_model');
         $this->data['estados'] = $this->cidades_model->getEstados();
@@ -118,7 +118,7 @@ class Requerentes extends MY_Controller
         endif;
 
         $this->data['requerente'] = $this->requerente_model->get($id);
-        $this->data['bairros'] = $this->bairros_model->get_all();
+        $this->data['bairros'] = $this->bairros_model->get_bairros();
 
         $this->load->model('cidades_model');
         $this->data['estados'] = $this->cidades_model->getEstados();

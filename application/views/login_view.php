@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -105,7 +104,7 @@
                                 ?>                                
                                 <div class="form-group relative">
                                     <div class="icon"><i class="icon20 i-user"></i></div>
-                                    <input class="form-control" type="text" name="cpf" id="cpf" placeholder="CPF" value="">
+                                    <input class="form-control cpf" type="text" name="cpf" id="cpf" placeholder="CPF ou CNPJ" value="">
 
                                 </div><!-- End .control-group  -->
                                 <div class="form-group relative">
@@ -170,22 +169,6 @@
                                 echo    '</div>';
                                 echo '</div>';
 
-                                // rg
-//                                echo '<div class="form-group">';
-//                                echo form_label('RG', 'rg', array('class' => 'col-lg-3 control-label'));
-//                                echo    '<div class="col-lg-9">';
-//                                echo    form_input(array('name' => 'rg','id' => 'rg','placeholder' => 'RG','class' => 'form-control rg'), set_value('rg'));
-//                                echo    '</div>';
-//                                echo '</div>';
-//
-//                                // profissao
-//                                echo '<div class="form-group">';
-//                                echo form_label('Profissão', 'profissao', array('class' => 'col-lg-3 control-label'));
-//                                echo    '<div class="col-lg-9">';
-//                                echo    form_input(array('name' => 'profissao','id' => 'profissao','placeholder' => 'Profissão','class' => 'form-control'), set_value('profissao'));
-//                                echo    '</div>';
-//                                echo '</div>';
-
                                 echo '</div>';
                                 // --- --- --- ---
 
@@ -228,22 +211,6 @@
                                 echo    '</div>';
                                 echo '</div>';
 
-//                                // telefone
-//                                echo '<div class="form-group">';
-//                                echo form_label('Telefone', 'telefone', array('class' => 'col-lg-3 control-label'));
-//                                echo    '<div class="col-lg-9">';
-//                                echo    form_input(array('name' => 'telefone','id' => 'telefone','placeholder' => 'Telefone','class' => 'form-control telefone'), set_value('telefone'));
-//                                echo    '</div>';
-//                                echo '</div>';
-//
-//                                // endereco
-//                                echo '<div class="form-group">';
-//                                echo form_label('Endereço', 'endereco', array('class' => 'col-lg-3 control-label'));
-//                                echo    '<div class="col-lg-9">';
-//                                echo    form_input(array('name' => 'endereco','id' => 'endereco','placeholder' => 'Endereço','class' => 'form-control'), set_value('endereco'));
-//                                echo    '</div>';
-//                                echo '</div>';
-
                                 echo '<hr>';
 
                                 // mora_cidade
@@ -265,6 +232,7 @@
                                 echo    '<label for="id_bairro" class="col-lg-4 control-label">Em qual bairro?</label>';
                                 echo    '<div class="col-lg-8">';
                                 echo        '<select id="id_bairro" name="id_bairro">';
+                                echo            '<option value=""> - Selecione um bairro - </option>';
                                 foreach ($bairros as $bairro)
                                 {
                                     echo        '<option value="'.$bairro->id.'" '.set_select('id_bairro', $bairro->id).'>'.$bairro->nome.'</option>';

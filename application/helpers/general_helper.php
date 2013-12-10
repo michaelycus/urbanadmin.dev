@@ -26,8 +26,8 @@ if (!function_exists('dump')) {
     }
 }
 
-
-if (!function_exists('dump_exit')) {
+if (!function_exists('dump_exit')) 
+{
     function dump_exit($var, $label = 'Dump', $echo = TRUE) {
         dump ($var, $label, $echo);
         exit;
@@ -127,7 +127,7 @@ EOF;
         }
         else
         {
-             echo 'Arquivo populacao_por_bairro.js gerado!<br />';
+//             echo 'Arquivo populacao_por_bairro.js gerado!<br />';
         }
 
         /***** END - População por bairro - END *****/
@@ -225,7 +225,7 @@ EOF;
         }
         else
         {
-             echo 'Arquivo requerimentos_por_bairro.js gerado!<br />';
+//             echo 'Arquivo requerimentos_por_bairro.js gerado!<br />';
         }
 
         /***** END - Requerimentos por bairro - END *****/
@@ -340,7 +340,7 @@ EOF;
         }
         else
         {
-             echo 'Arquivo requerimentos_por_tipo.js gerado!<br />';
+//             echo 'Arquivo requerimentos_por_tipo.js gerado!<br />';
         }
 
 
@@ -469,7 +469,7 @@ EOF;
         }
         else
         {
-             echo 'Arquivo requerimentos_por_vereador.js gerado!<br />';
+//             echo 'Arquivo requerimentos_por_vereador.js gerado!<br />';
         }
 
         /***** END - Requerimentos por vereador - END *****/
@@ -564,7 +564,7 @@ EOF;
         }
         else
         {
-             echo 'Arquivo requerentes_por_bairro.js gerado!<br />';
+//             echo 'Arquivo requerentes_por_bairro.js gerado!<br />';
         }
 
         /***** END - Requerentes por bairro - END *****/        

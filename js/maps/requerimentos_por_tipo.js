@@ -18,11 +18,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 3"
                             }},"campestre": {
-                            "value": 4,
-                            "attrs": { fill: "#436ea5"},
-                            "text": { "content":  "4" , attrs: {fill:"#222"} },
+                            "value": 3,
+                            "attrs": { fill: "#4e7ab0"},
+                            "text": { "content":  "3" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 4"
+                                    "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 3"
                             }},"carneiros": {
                             "value": 3,
                             "attrs": { fill: "#4e7ab0"},
@@ -41,12 +41,6 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 1"
-                            }},"florestal": {
-                            "value": 1,
-                            "attrs": { fill: "#6692c4"},
-                            "text": { "content":  "1" , attrs: {fill:"#222"} },
-                            "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 1"
                             }}}},"5": { "areas": {"campestre": {
                             "value": 1,
                             "attrs": { fill: "#6692c4"},
@@ -95,12 +89,6 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 1"
-                            }}}},"15": { "areas": {"centenario": {
-                            "value": 1,
-                            "attrs": { fill: "#6692c4"},
-                            "text": { "content":  "1" , attrs: {fill:"#222"} },
-                            "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 1"
                             }}}},};
                         $("#cat_requerimento").change(function() {
             value = $("#cat_requerimento").val();
