@@ -57,45 +57,40 @@
             }
         },
         areas: {                            "americano":{
-                                value: "3",
-                                text: { content:  3 , attrs: {fill:"#222"} },
+                                value: "2",
+                                text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerimentos: 3"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerimentos: 2"},
                             },                            "bom_pastor":{
-                                value: "3",
-                                text: { content:  3 , attrs: {fill:"#222"} },
+                                value: "4",
+                                text: { content:  4 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 3"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 4"},
                             },                            "campestre":{
                                 value: "4",
                                 text: { content:  4 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 4"},
                             },                            "carneiros":{
-                                value: "5",
-                                text: { content:  5 , attrs: {fill:"#222"} },
+                                value: "6",
+                                text: { content:  6 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 5"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 6"},
                             },                            "centenario":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
+                                value: "2",
+                                text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Requerimentos: 1"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Requerimentos: 2"},
                             },                            "conservas":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Requerimentos: 2"},
-                            },                            "conventos":{
+                            },                            "florestal":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Requerimentos: 2"},
-                            },                            "moinhos_dagua":{
-                                value: "2",
-                                text: { content:  2 , attrs: {fill:"#222"} },
-                                href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos D' Água </span><br />Requerimentos: 2"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Requerimentos: 2"},
                             },}
             });
         });

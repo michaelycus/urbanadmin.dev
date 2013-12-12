@@ -47,7 +47,7 @@ class Requerimento_model extends MY_Model
                     categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente');
         $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
         $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
-        $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
+        $this->db->join('requerentes', 'requerimentos.id_solicitante=requerentes.id');
         $this->db->where('id_solicitante', $id_user);
 
         return $this->get_all();

@@ -69,7 +69,7 @@ define('TIPOS_AUTORIZACAO', serialize (array ( 1 => "Administrador",
 define('AUTORIZACAO_OPERADOR',0);
 define('AUTORIZACAO_ADMINISTRADOR',1);
 
-define('REQUERENTE_PADRAO_ID', 7);
+define('REQUERENTE_PADRAO_ID', 1);
 
 
 /* End of file constants.php */

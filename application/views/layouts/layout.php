@@ -34,7 +34,7 @@
 
         <!-- app stylesheets -->
         <link href="<?php echo base_url(); ?>css/app.css" rel="stylesheet" />
-        
+
         <!-- dialog stylesheets -->
         <link href="<?php echo base_url(); ?>css/jquery-impromptu.min.css" rel="stylesheet" />
 
@@ -84,10 +84,10 @@
         <!-- Form plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/forms/uniform/jquery.uniform.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/mask/jquery.mask.min.js"></script>
-        <script src="<?php echo base_url(); ?>js/plugins/forms/datepicker/bootstrap-datepicker.js"></script> 
-        
+        <script src="<?php echo base_url(); ?>js/plugins/forms/datepicker/bootstrap-datepicker.js"></script>
+
         <!-- Dialogs -->
-        <script src="<?php echo base_url(); ?>js/jquery-impromptu.min.js"></script> 
+        <script src="<?php echo base_url(); ?>js/jquery-impromptu.min.js"></script>
 
         <!-- Tables plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.min.js"></script>
@@ -109,40 +109,33 @@
 
         <!-- Custom script -->
         <script src="<?php echo base_url(); ?>js/functions.js"></script>
-        
-        <script>
-            $(document).ready(function(){
-                $(".data").datepicker({
-                    todayBtn: true,
-                    language: "pt-BR",
-                    format: "dd/mm/yyyy"
-                });
-            });
-        </script>
-
     </head>
     <body>
         <header id="header">
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <?php echo anchor('home', '<img src="'. base_url() . 'images/logo.png" alt="Genyx admin" class="img-responsive">', 'class="navbar-brand"'); ?>                
-                <div class="nav-no-collapse">
+                <?php echo anchor('home', '<img src="'. base_url() . 'images/logo.png" alt="Urban admin" class="img-responsive">', 'class="navbar-brand"'); ?>
+                <button type="button" class="navbar-toggle btn-danger" data-toggle="collapse" data-target="#navbar-to-collapse">
+                    <span class="sr-only">Toggle right menu</span>
+                    <i class="icon16 i-arrow-8"></i>
+                </button>
 
-                    <ul class="nav navbar-nav pull-right">                        
+                <div class="collapse navbar-collapse" id="navbar-to-collapse">
+
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="divider-vertical"></li>
                         <li class="dropdown">
                             <?php
-                            if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR && $_SESSION['requerimentos']>0)
+                            if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR && $_SESSION['requerimentos'] > 0)
                             {
                                 echo anchor('requerimentos/listar_requerimentos', '<i class="icon24 i-bell-2"></i>
-                                    <span class="notification red">'.$_SESSION['requerimentos'].'</span>', 'class="dropdown-toggle" data-toggle="dropdown"');                            
-                            }                            
+                                    <span class="notification red">'.$_SESSION['requerimentos'].'</span>', 'class="dropdown-toggle" data-toggle="dropdown"');
+                            }
                             ?>
                         </li>
-                        
+
                         <li class="divider-vertical"></li>
                         <li class="dropdown user">
                             <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
-                                <!--<img src="<?php echo base_url(); ?>images/avatars/user-icon.png" alt="sugge">-->
-                                <!--<i class="icon32 i-cogs"></i>-->
                                 <i class="icon24 i-user"></i>(<?php echo $_SESSION['nome']; ?>)
                                 <span class="more"><i class="icon16 i-arrow-down-2"></i></span>
                             </a>
@@ -336,7 +329,7 @@
                             {
                                 echo '<li'. ($cat=='home' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
                                         '>'.anchor('home', '<i class="icon16 i-home-3"></i>Início') .'</li>');
-                                
+
                                 echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Requerimentos</li>' :
                                         '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>Requerimentos') .'</li>');
 

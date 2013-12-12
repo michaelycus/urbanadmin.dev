@@ -1,22 +1,22 @@
         $(function() {
             var data = {"0": { "areas": {"": {"text": {"content": ""}},"alto_do_parque": {"text": {"content": ""}},"americano": {"text": {"content": ""}},"bom_pastor": {"text": {"content": ""}},"campestre": {"text": {"content": ""}},"carneiros": {"text": {"content": ""}},"centenario": {"text": {"content": ""}},"centro": {"text": {"content": ""}},"conservas": {"text": {"content": ""}},"conventos": {"text": {"content": ""}},"floresta": {"text": {"content": ""}},"florestal": {"text": {"content": ""}},"hidraulica": {"text": {"content": ""}},"igrejinha": {"text": {"content": ""}},"imigrante": {"text": {"content": ""}},"jardim_do_cedro": {"text": {"content": ""}},"moinhos": {"text": {"content": ""}},"moinhos_dagua": {"text": {"content": ""}},"montanha": {"text": {"content": ""}},"morro_vinte_cinco": {"text": {"content": ""}},"nacoes": {"text": {"content": ""}},"olarias": {"text": {"content": ""}},"planalto": {"text": {"content": ""}},"santo_andre": {"text": {"content": ""}},"santo_antonio": {"text": {"content": ""}},"sao_bento": {"text": {"content": ""}},"sao_cristovao": {"text": {"content": ""}},"universitario": {"text": {"content": ""}},}},"1": { "areas": {"": {
-                            "value": 6,
-                            "attrs": { fill: "#2b5691"},
-                            "text": { "content":  "6" , attrs: {fill:"#222"} },
+                            "value": 5,
+                            "attrs": { fill: "#37629b"},
+                            "text": { "content":  "5" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Todos os bairros</span><br />Requerimentos : 6"
+                                    "content": "<span style=\"font-weight:bold;\">Todos os bairros</span><br />Requerimentos : 5"
                             }},"americano": {
-                            "value": 3,
-                            "attrs": { fill: "#4e7ab0"},
-                            "text": { "content":  "3" , attrs: {fill:"#222"} },
+                            "value": 2,
+                            "attrs": { fill: "#5a86ba"},
+                            "text": { "content":  "2" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 3"
+                                    "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 2"
                             }},"bom_pastor": {
-                            "value": 3,
-                            "attrs": { fill: "#4e7ab0"},
-                            "text": { "content":  "3" , attrs: {fill:"#222"} },
+                            "value": 4,
+                            "attrs": { fill: "#436ea5"},
+                            "text": { "content":  "4" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 3"
+                                    "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 4"
                             }},"campestre": {
                             "value": 3,
                             "attrs": { fill: "#4e7ab0"},
@@ -24,11 +24,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 3"
                             }},"carneiros": {
-                            "value": 3,
-                            "attrs": { fill: "#4e7ab0"},
-                            "text": { "content":  "3" , attrs: {fill:"#222"} },
+                            "value": 4,
+                            "attrs": { fill: "#436ea5"},
+                            "text": { "content":  "4" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 3"
+                                    "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 4"
                             }},"centenario": {
                             "value": 1,
                             "attrs": { fill: "#6692c4"},
@@ -41,18 +41,18 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 1"
+                            }},"florestal": {
+                            "value": 2,
+                            "attrs": { fill: "#5a86ba"},
+                            "text": { "content":  "2" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 2"
                             }}}},"5": { "areas": {"campestre": {
                             "value": 1,
                             "attrs": { fill: "#6692c4"},
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 1"
-                            }},"moinhos_dagua": {
-                            "value": 1,
-                            "attrs": { fill: "#6692c4"},
-                            "text": { "content":  "1" , attrs: {fill:"#222"} },
-                            "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 1"
                             }}}},"6": { "areas": {"carneiros": {
                             "value": 1,
                             "attrs": { fill: "#6692c4"},
@@ -65,30 +65,18 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 1"
-                            }},"conventos": {
-                            "value": 1,
-                            "attrs": { fill: "#6692c4"},
-                            "text": { "content":  "1" , attrs: {fill:"#222"} },
-                            "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 1"
                             }}}},"9": { "areas": {"carneiros": {
                             "value": 1,
                             "attrs": { fill: "#6692c4"},
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 1"
-                            }}}},"10": { "areas": {"moinhos_dagua": {
+                            }}}},"15": { "areas": {"centenario": {
                             "value": 1,
                             "attrs": { fill: "#6692c4"},
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 1"
-                            }}}},"11": { "areas": {"conventos": {
-                            "value": 1,
-                            "attrs": { fill: "#6692c4"},
-                            "text": { "content":  "1" , attrs: {fill:"#222"} },
-                            "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 1"
+                                    "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 1"
                             }}}},};
                         $("#cat_requerimento").change(function() {
             value = $("#cat_requerimento").val();

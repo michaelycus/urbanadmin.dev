@@ -25,3 +25,11 @@ $(function () {
         });
     });     
 });
+
+$(function () {
+    $(".data").datepicker({
+        todayBtn: true,
+        language: "pt-BR",
+        format: "dd/mm/yyyy"
+    });
+});

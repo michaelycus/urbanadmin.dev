@@ -206,9 +206,7 @@
 </script>
 
 <script>
-
-    $(document).ready(function(){
-        
+    $(document).ready(function(){        
         $('.telefone').mask('(00) 0000-0000'); //telefone
         $('.cep').mask("00000-000");//cep
         $('.rg').mask('00.00.00.00.00'); //RG

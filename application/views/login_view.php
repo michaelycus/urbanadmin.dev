@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
     <head>
         <meta charset="utf-8">
         <title>Urban Admin</title>
@@ -71,7 +71,7 @@
         <!-- Init plugins -->
         <script src="<?php echo base_url(); ?>js/app.js"></script><!-- Core js functions -->
         <script src="<?php echo base_url(); ?>js/pages/login.js"></script><!-- Init plugins only for page -->
-
+        
     </head>
     <body>
         <div class="container-fluid">
@@ -101,12 +101,34 @@
                                     echo '<div class="alert alert-error">'. $this->session->userdata('usuario_errado') .'</div>';
                                     $this->session->unset_userdata('usuario_errado');
                                 }
-                                ?>                                
-                                <div class="form-group relative">
+                                ?>          
+                                
+                                <div class="form-group">
+                                    <label for="pessoa_fisica" class="control-label"></label>
+                                    <div class="col-lg-12">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="pessoa_fisica_login" id="pessoa_fisica_2" class="form-control" value="2" checked>
+                                            Pessoa física
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="pessoa_fisica_login" id="pessoa_fisica_3" class="form-control" value="3">
+                                            Pessoa jurídica
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group relative" id="cpf_login">
                                     <div class="icon"><i class="icon20 i-user"></i></div>
-                                    <input class="form-control cpf" type="text" name="cpf" id="cpf" placeholder="CPF ou CNPJ" value="">
+                                    <input class="form-control cpf" type="text" name="cpf" id="cpf" placeholder="CPF" value="">
 
                                 </div><!-- End .control-group  -->
+                                
+                                <div class="form-group relative" id="cnpj_login">
+                                    <div class="icon"><i class="icon20 i-user"></i></div>
+                                    <input class="form-control cnpj" type="text" name="cnpj" id="cnpj" placeholder="CNPJ" value="">
+
+                                </div><!-- End .control-group  -->                                
+                                
                                 <div class="form-group relative">
                                     <div class="icon"><i class="icon20 i-key"></i></div>
                                     <input class="form-control" type="password" name="password" id="password" placeholder="Senha" value="">
@@ -144,13 +166,15 @@
                                 echo '<hr>';
                                 
                                 // pessoa_fisica
-                                ?>
+                                ?>                                
                                 <div class="form-group">
                                     <label for="pessoa_fisica" class="control-label"></label>
-                                    <div class="col-lg-10">
+                                    <div class="col-lg-12">
                                         <label class="radio-inline">
                                             <input type="radio" name="pessoa_fisica" id="pessoa_fisica_0" class="form-control" value="0" checked>
-                                            Pessoa física 
+                                            Pessoa física
+                                        </label>
+                                        <label class="radio-inline">
                                             <input type="radio" name="pessoa_fisica" id="pessoa_fisica_1" class="form-control" value="1">
                                             Pessoa jurídica
                                         </label>
@@ -321,8 +345,7 @@
         </script>
 
         <script>
-
-            $(document).ready(function(){
+            $(document).ready(function(){                
                 $('.telefone').mask('(00) 0000-0000'); //telefone
                 $('.cep').mask("00000-000");//cep
                 $('.rg').mask('00.00.00.00.00'); //RG
@@ -346,7 +369,8 @@
                     }
                 });
                 
-                $("#pessoa_j").hide();
+                $("#pessoa_j").hide();                
+                $("#cnpj_login").hide();                
                 
                 $(":radio").change(function(){
                     var rad = $('input[name=pessoa_fisica]:checked').val();
@@ -355,11 +379,28 @@
                     {
                         $("#pessoa_f").show(200);
                         $("#pessoa_j").hide(200);
+                        $("#cpf").val('');
                     }
                     else
                     {
                         $("#pessoa_f").hide(200);
-                        $("#pessoa_j").show(200);
+                        $("#cnpj").val('');
+                        $("#pessoa_j").show(200);                        
+                    }
+                    
+                    var rad2 = $('input[name=pessoa_fisica_login]:checked').val();
+
+                    if (rad2 == '2')
+                    {
+                        $("#cpf_login").show(200);
+                        $("#cnpj_login").hide(200);
+                        $("#cnpj").val('');
+                    }
+                    else
+                    {
+                        $("#cpf_login").hide(200);
+                        $("#cpf").val('');                        
+                        $("#cnpj_login").show(200);
                     }
                 });
             });

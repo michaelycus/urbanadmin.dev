@@ -53,6 +53,8 @@ if (!function_exists('generate_charts'))
         $requerimentos_vereadores = $ci->requerimento_model->count_requerimentos_with_vereadores();
         $requerentes_bairro = $ci->requerente_model->count_requerentes_por_bairro();
         
+        $_SESSION['requerimentos'] = $ci->requerimento_model->count_requerimentos_em_analise();
+        
         $ci->load->helper('file');
 
         $codename_cidade = CODENAME_CIDADE;

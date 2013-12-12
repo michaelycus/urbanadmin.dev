@@ -53,7 +53,7 @@ class Requerimentos extends MY_Controller
                 'id_requerente','id_solicitante'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);                  
             
-            $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
+            $data['notificar'] = $this->input->post('notificar') ? 1 : 0;            
 
             $i = 1;
             foreach($_FILES as $field => $file)
@@ -175,6 +175,8 @@ class Requerimentos extends MY_Controller
         
         $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
         
+        send_notification($id);
+        
         redirect('requerimentos/listar_requerimentos');
     }
     
@@ -197,7 +199,60 @@ class Requerimentos extends MY_Controller
     }
     
     public function imprimir_requerimento($id)
-    {
-        imprimir_requerimento($id);
+    {        
+        $this->load->library('Pdf');
+        
+        $requerimento = $this->requerimento_model->get($id);
+        
+        $pdf = new PDF();
+        $pdf->AliasNbPages();
+        $pdf->AddPage();
+        $pdf->SetMargins(20.5, 20.5, 20.5);
+        $pdf->SetFont('Arial', '', 12);
+
+
+        $html = '<b>PROPRIETÁRIO:</b> Vereador Carlos Eduardo Ranzi    <b>EMAIL:</b>  vereadorranzi@gmail.com<br>';
+        $html .= '<b>PROFISSÃO:</b> Vereador        <b>CPF/CNPJ:</b> 976.237.330-87  <b>FONE:</b>    3982-1155 <br>';
+        $html .= '<b>ENDEREÇO:</b>  Av. Benjamin Constant, 670 - 3º andar        <b>BAIRRO:</b> Centro<br>';
+        $html .= '<b>MUNICÍPIO:</b>   Lajeado           <b>ESTADO:</b>   RS                      <b>CEP:</b>       95900-000<br>';
+
+        $pdf->WriteHTML(iconv('utf-8','iso-8859-1',$html));
+
+        $pdf->Ln(20);
+        $pdf->SetFont('Arial', 'B', 12);
+        $pdf->Cell(0, 0, 'Requer:', 0, 0, 'L', false);
+
+        $html = $requerimento->descricao;
+
+        $pdf->Ln(10);
+        $pdf->Cell(20);
+
+        $pdf->SetFont('Arial', '', 12);
+        $pdf->MultiCell(0, 5, iconv('utf-8','iso-8859-1',$html));
+
+        $pdf->Ln(10);
+        $pdf->Cell(20);
+
+        $pdf->Cell(0, 0, 'Nesses termos, pede referimento.', 0, 0, 'L', false);
+        $pdf->Ln(10);
+
+        setlocale(LC_TIME, "pt_BR", 'ptb');
+        $date = strftime("%d de %B de %Y", time());
+        
+        $pdf->Cell(0, 0, 'Lajeado, '. $date, 0, 0, 'R', false);
+
+        $pdf->Ln(40);
+
+        $pdf->Cell(0, 0, '__________________________', 0, 0, 'C', false);
+        $pdf->Ln(5);
+        $pdf->SetFont('Arial', 'I', 12);
+        $pdf->Cell(0, 0, 'Nome do requerente', 0, 0, 'C', false);
+
+        $pdf->Line(10, 10, 10, 285);
+        $pdf->Line(10, 10, 200, 10);
+        $pdf->Line(200, 10, 200, 285);
+        $pdf->Line(10, 285, 200, 285);
+
+        $pdf->Output();
     }
 }

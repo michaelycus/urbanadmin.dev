@@ -42,7 +42,8 @@
         }
         else
         {
-            echo '<div class="alert alert-info">Nenhum requerimento cadastrado!</div>';
+            echo '<div class="alert alert-info">Nenhum requerimento cadastrado! 
+                Você pode criar um '.anchor('requerimentos/cadastrar_requerimento','Novo Requerimento', array('class' => 'btn btn-success')).'.</div>';
         }
         ?>
 

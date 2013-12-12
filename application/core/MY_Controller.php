@@ -11,12 +11,12 @@ class MY_Controller extends CI_Controller
 
         // Check authentication
         $no_redirect = array('login_view', 'login', 'login/cadastrar_requerente', 'cadastro', 'some/controller');
-        if (!isset($_SESSION['cpf']) && !in_array(uri_string(), $no_redirect))
+        if ( (!isset($_SESSION['cpf']) && !isset($_SESSION['cnpj'])) && !in_array(uri_string(), $no_redirect))
         {
             redirect('login');
         }
 
-//        $this->output->enable_profiler(ENVIRONMENT == 'development');
+        $this->output->enable_profiler(ENVIRONMENT == 'development');
     }
 
     /**

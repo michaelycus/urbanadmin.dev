@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'timelin';
-$db['default']['password'] = 'ltikaio231485ken';
-$db['default']['database'] = 'timelin_urbanadmin';
+$db['default']['hostname'] = 'bm90.webservidor.net';
+$db['default']['username'] = 't1045878_michael';
+$db['default']['password'] = 'ranzikaio231485ken';
+$db['default']['database'] = 't1045878_urbanadmin';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

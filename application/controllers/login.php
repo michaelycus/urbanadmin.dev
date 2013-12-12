@@ -14,21 +14,41 @@ class Login extends MY_Controller
 
     public function index()
     {
-        if (isset($_SESSION['cpf']))
+        if (isset($_SESSION['cpf']) || isset($_SESSION['cnpj']))
         {
             redirect('home');
         }
 
-        $this->form_validation->set_rules($this->login_model->validation);
+        if ($this->input->post('pessoa_fisica_login') == PESSOA_FISICA)
+            $this->form_validation->set_rules('cpf', 'CPF', 'required|valid_cpf|is_unique[requerentes.cpf]');
+        if ($this->input->post('pessoa_fisica_login') == PESSOA_JURIDICA)
+            $this->form_validation->set_rules('cnpj', 'CNPJ', 'required|valid_cnpj|is_unique[requerentes.cnpj]');
+        $this->form_validation->set_rules('password', 'SENHA', 'trim|required|min_length[5]');
+        
+//        $this->form_validation->set_rules($this->login_model->validation);
 
         if ($this->form_validation->run() !== false)
         {
-            $res = $this->login_model->verify_user($this->input->post('cpf'),
-                                                   $this->input->post('password'));
-
-            if ($res !== false)
+            if ($this->input->post('cpf'))
             {
+                $res = $this->login_model->verify_user_cpf($this->input->post('cpf'),
+                                                   $this->input->post('password'));
                 $_SESSION['cpf'] = $this->input->post('cpf');
+            }
+            else
+            {
+                $res = $this->login_model->verify_user_cnpj($this->input->post('cnpj'),
+                                                   $this->input->post('password'));
+                $_SESSION['cnpj'] = $this->input->post('cnpj');
+            }        
+//            
+//            echo '<pre>';
+//            die(dump($res));
+            
+            
+            
+            if ($res != false)
+            {
                 $_SESSION['nome'] = $res->nome;
                 $_SESSION['autorizacao'] = $res->autorizacao;
                 $_SESSION['id_user'] = $res->id;
@@ -62,8 +82,8 @@ class Login extends MY_Controller
         $this->load->model('requerente_model');
 
         $this->form_validation->set_rules('nome', 'NOME', 'trim|required|max_length[64]');
-        $this->form_validation->set_rules('password', 'PASSWORD', 'trim|required|min_length[5]|matches[password2]');
-        $this->form_validation->set_rules('password2', 'PASSWORD', 'trim|required|min_length[5]');
+        $this->form_validation->set_rules('password', 'SENHA', 'trim|required|min_length[5]|matches[password2]');
+        $this->form_validation->set_rules('password2', 'SENHA', 'trim|required|min_length[5]');
         if ($this->input->post('pessoa_fisica') == PESSOA_FISICA)
             $this->form_validation->set_rules('cpf', 'CPF', 'required|valid_cpf|is_unique[requerentes.cpf]');
         if ($this->input->post('pessoa_fisica') == PESSOA_JURIDICA)
@@ -88,7 +108,7 @@ class Login extends MY_Controller
             $this->requerente_model->insert($data);
             generate_charts();
 
-            $this->session->set_userdata('requerente_cadastrado','Usuário cadastrado com sucesso!<br />Você já pode acessar com seu CPF e senha.');
+            $this->session->set_userdata('requerente_cadastrado','Usuário cadastrado com sucesso!<br />Você já pode acessar com seu CPF/CNPJ e senha.');
             redirect('login');
         endif;
 

@@ -56,16 +56,31 @@
                                 text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerimentos: 1"},
+                            },                            "bom_pastor":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 1"},
                             },                            "centro":{
                                 value: "15",
                                 text: { content:  15 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerimentos: 15"},
+                            },                            "florestal":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Requerimentos: 1"},
                             },                            "hidraulica":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Hidráulica </span><br />Requerimentos: 2"},
+                            },                            "igrejinha":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Igrejinha </span><br />Requerimentos: 1"},
                             },                            "imigrante":{
                                 value: "1",
                                 text: { content:  1 , attrs: {fill:"#222"} },
