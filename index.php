@@ -42,7 +42,7 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-			error_reporting(-1);
+			error_reporting(0);
 		break;
 	
 		case 'testing':

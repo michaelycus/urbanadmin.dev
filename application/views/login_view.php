@@ -226,6 +226,14 @@
                                 echo '</div>';
 
                                 echo '<hr>';
+                                
+                                // telefone
+                                echo '<div class="form-group">';
+                                echo form_label('Telefone', 'telefone', array('class' => 'col-lg-3 control-label'));
+                                echo    '<div class="col-lg-9">';
+                                echo    form_input(array('name' => 'telefone','id' => 'telefone','placeholder' => '51 0000 0000','class' => 'form-control telefone'), set_value('telefone'));
+                                echo    '</div>';
+                                echo '</div>';
 
                                 // email
                                 echo '<div class="form-group">';

@@ -10,6 +10,7 @@ class Login extends MY_Controller
         $this->load->model('bairros_model');
         $this->load->model('cidades_model');
         $this->load->model('requerimento_model');
+        $this->load->model('requerente_model');
     }
 
     public function index()
@@ -24,36 +25,36 @@ class Login extends MY_Controller
         if ($this->input->post('pessoa_fisica_login') == PESSOA_JURIDICA)
             $this->form_validation->set_rules('cnpj', 'CNPJ', 'required|valid_cnpj|is_unique[requerentes.cnpj]');
         $this->form_validation->set_rules('password', 'SENHA', 'trim|required|min_length[5]');
-        
-//        $this->form_validation->set_rules($this->login_model->validation);
 
         if ($this->form_validation->run() !== false)
         {
             if ($this->input->post('cpf'))
             {
+                
                 $res = $this->login_model->verify_user_cpf($this->input->post('cpf'),
                                                    $this->input->post('password'));
-                $_SESSION['cpf'] = $this->input->post('cpf');
             }
             else
             {
                 $res = $this->login_model->verify_user_cnpj($this->input->post('cnpj'),
                                                    $this->input->post('password'));
-                $_SESSION['cnpj'] = $this->input->post('cnpj');
-            }        
-//            
-//            echo '<pre>';
-//            die(dump($res));
+            }
             
-            
-            
-            if ($res != false)
+            if ($res !== false)
             {
+                if ($this->input->post('cpf'))                
+                    $_SESSION['cpf'] = $this->input->post('cpf');
+                
+                if ($this->input->post('cnpj'))                
+                    $_SESSION['cnpj'] = $this->input->post('cnpj');
+                
                 $_SESSION['nome'] = $res->nome;
                 $_SESSION['autorizacao'] = $res->autorizacao;
                 $_SESSION['id_user'] = $res->id;
                 
                 $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
+                
+                $this->requerente_model->update_last_visit($res->id);
             }
             else
             {
@@ -74,7 +75,10 @@ class Login extends MY_Controller
     public function logout()
     {
         session_destroy();
-        $this->load->view('login_view');
+        
+        redirect('home');
+        
+//        $this->load->view('login_view');
     }
 
     public function cadastrar_requerente()

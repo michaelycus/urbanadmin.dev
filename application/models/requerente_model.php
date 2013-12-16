@@ -46,10 +46,11 @@ class Requerente_model extends MY_Model
         $this->db->group_by('requerentes.id_bairro');
 
         return $this->get_all();
-//        SELECT bairros.nome, COUNT( requerentes.id ) 
-//FROM  `requerentes` 
-//JOIN bairros ON requerentes.id_bairro = bairros.id
-//GROUP BY requerentes.id_bairro
-//LIMIT 0 , 30
     }
+    
+    public function update_last_visit($id)
+    {
+        $data = array('ultima_visita' => date('Y-m-d'));
+        $this->update($id, $data);
+    }    
 }
