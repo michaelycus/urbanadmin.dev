@@ -10,136 +10,271 @@ $(function() {
                 "alto_do_parque": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 1 ).change();
+                        }
                     }
                 },
                 "americano": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 2 ).change();
+                        }
                     }
                 },
                 "bom_pastor": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 3 ).change();
+                        }
                     }
                 },
                 "campestre": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 4 ).change();
+                        }
                     }
                 },
                 "carneiros": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 5 ).change();
+                        }
                     }
                 },
                 "centenario": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 6 ).change();
+                        }
                     }
                 },
                 "centro": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 7 ).change();
+                        }
                     }
                 },
                 "conservas": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 8 ).change();
+                        }
                     }
                 },
                 "conventos": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 9 ).change();
+                        }
                     }
                 },
                 "floresta": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 10 ).change();
+                        }
                     }
                 },
                 "florestal": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 11 ).change();
+                        }
                     }
                 },
                 "hidraulica": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 12 ).change();
+                        }
                     }
                 },
                 "igrejinha": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 13 ).change();
+                        }
                     }
                 },
                 "imigrante": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 14 ).change();
+                        }
                     }
                 },
                 "jardim_do_cedro": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 15 ).change();
+                        }
                     }
                 },
                 "moinhos": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 16 ).change();
+                        }
                     }
                 },
                 "moinhos_dagua": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 17 ).change();
+                        }
                     }
                 },
                 "montanha": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 18 ).change();
+                        }
                     }
                 },
                 "morro_vinte_cinco": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 19 ).change();
+                        }
                     }
                 },
                 "nacoes": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 20 ).change();
+                        }
                     }
                 },
                 "olarias": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 21 ).change();
+                        }
                     }
                 },
                 "planalto": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 22 ).change();
+                        }
                     }
                 },
                 "santo_andre": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 23 ).change();
+                        }
                     }
                 },
                 "santo_antonio": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 24 ).change();
+                        }
                     }
                 },
                 "sao_bento": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 25 ).change();
+                        }
                     }
                 },
                 "sao_cristovao": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 26 ).change();
+                        }
                     }
                 },
                 "universitario": {
                     "text": {
                         "content": ""
+                    },
+                    eventHandlers : {
+                        click : function() {  
+                            $('#id_bairro').val( 27 ).change();
+                        }
                     }
                 },
             }

@@ -30,7 +30,7 @@ class Requerimento_model extends MY_Model
     {
         $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
                     categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente,
-                    r.nome AS nome_solicitante');
+                    r.nome AS nome_solicitante, r.telefone AS telefone');
         $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
         $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
         $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
@@ -52,13 +52,29 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
+    
+    public function get_last($num)
+    {
+        $this->db->order_by('id', 'DESC');
+        $this->db->limit($num);
+        
+        return $this->get_all();
+    }
 
+    public function count_requerimentos_by_situacao($cat)
+    {
+        $this->db->where('situacao', $cat);        
+        $this->db->from('requerimentos');
+
+        return $this->db->count_all_results();;
+    }
+    
     public function count_requerimentos_with_bairros()
     {
         $this->db->select('requerimentos.id_bairro, bairros.codename, COUNT(*) AS count_requerimentos_bairro,
             bairros.nome AS nome_bairro');
         $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
-        $this->db->group_by('id_bairro');
+        $this->db->order_by('id_bairro');
 
         return $this->get_all();
     }

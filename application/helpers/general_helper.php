@@ -34,6 +34,18 @@ if (!function_exists('dump_exit'))
     }
 }
 
+if (!function_exists('generate_key')) 
+{
+    function generate_key($ncaracteres) {
+       $caracterespermitidos = "1234567890abcdefghijklmnopqrstuvwxyz";
+
+       for ($i=0; $i < $ncaracteres; $i++) {
+           $chave .= $caracterespermitidos{rand(0,35)};
+       }
+       return $chave;
+    }
+}
+
 if (!function_exists('generate_charts'))
 {
     function generate_charts()

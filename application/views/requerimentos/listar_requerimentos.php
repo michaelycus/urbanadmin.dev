@@ -63,8 +63,9 @@
             foreach ($requerimentos as $requerimento):
                 $this->table->add_row(array('data'=>'<small>'.substr($requerimento->descricao, 0, 64).(strlen($requerimento->descricao)>255?"..." : ""), 'class'=>'A'.'</small>'),
                                       array('data'=>'<small>'.$requerimento->nome_categoria.'</small>'),              
-                                      array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),                                      
-                                      array('data'=>'<small>'.$requerimento->nome_solicitante.'</small>'),
+                                      array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),
+                                      array('data'=>'<small><a href="#" data-toggle="popover" data-placement="top" data-content="'.$requerimento->telefone.'" title="" 
+                                          data-original-title="Telefone">'.$requerimento->nome_solicitante.'</a></small>'),
                                       array('data'=>'<small>'.$requerimento->nome_requerente.'</small>'),
             array('data'=>'<div style="display:none;">'.$requerimento->situacao.'</div>'.($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
                               '<img src="'.base_url().'images/retornar_situacao_d.png"> ' :
@@ -80,7 +81,6 @@
                           'style'=>'width:130px'),
             array('data'=>'<small>'.$requerimento->expediente.'/'.$requerimento->ano_expediente. '</small>'),
             array('data'=>($requerimento->situacao > REQUERIMENTO_SITUACAO_EM_ANALISE ? 
-//                          anchor_popup(base_url(). 'php/teste.php/'.$requerimento->id,'<i class="i-print-3"></i> Imprimir ', array('class' => 'btn btn-block btn-warning btn-xs')).' ': '') .
                           anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->id,'<i class="i-print-3"></i> Imprimir ', array('class' => 'btn btn-block btn-warning btn-xs')).' ': '') .
                           anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-block btn-primary btn-xs')).' '.
                           anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir ',array('class' => 'confirm_delete btn btn-block btn-danger btn-xs')), 'style'=>'width:100px'));

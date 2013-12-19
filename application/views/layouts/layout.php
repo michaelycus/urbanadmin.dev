@@ -113,7 +113,7 @@
     <body>
         <header id="header">
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <?php echo anchor('home', '<img src="'. base_url() . 'images/logo.png" alt="Urban admin" class="img-responsive">', 'class="navbar-brand"'); ?>
+                <?php echo anchor('login/inicio', '<img src="'. base_url() . 'images/logo.png" alt="Urban admin" class="img-responsive">', 'class="navbar-brand"'); ?>
                 <button type="button" class="navbar-toggle btn-danger" data-toggle="collapse" data-target="#navbar-to-collapse">
                     <span class="sr-only">Toggle right menu</span>
                     <i class="icon16 i-arrow-8"></i>
@@ -319,16 +319,16 @@
                             <?php
                             if ($_SESSION['autorizacao'] == AUTORIZACAO_OPERADOR)
                             {
-                                echo '<li'. ($cat=='home' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
-                                        '>'.anchor('home', '<i class="icon16 i-home-3"></i>Início') .'</li>');
+                                echo '<li'. ($cat=='login/inicio' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
+                                        '>'.anchor('login/inicio', '<i class="icon16 i-home-3"></i>Início') .'</li>');
 
                                 echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Meus requerimentos</li>' :
                                         '>'.anchor('requerimentos/meus_requerimentos', '<i class="icon16 i-stack-list"></i>Meus requerimentos') .'</li>');
                             }
                             else if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
                             {
-                                echo '<li'. ($cat=='home' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
-                                        '>'.anchor('home', '<i class="icon16 i-home-3"></i>Início') .'</li>');
+                                echo '<li'. ($cat=='login/inicio' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
+                                        '>'.anchor('login/inicio', '<i class="icon16 i-home-3"></i>Início') .'</li>');
 
                                 echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Requerimentos</li>' :
                                         '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>Requerimentos') .'</li>');

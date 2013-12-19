@@ -315,25 +315,66 @@
                             </div><!-- End .row-fluid  -->
                         <?php echo form_close(); ?>
                     </div>
+                    
                     <div id="forgot">
                         <div class="page-header">
-                            <h3 class="center">Esqueceu a senha</h3>
+                            <h3 class="center">Esqueceu a senha?</h3>
                         </div>
-                        <form class="form-horizontal" id="forgot-form" name="forgot-form">
-                            <div class="row">
-                                <div class="form-group relative">
+                        
+                        <?php                         
+                            echo form_open('login/resetar_senha', 'role="form" id="forgot-form" name="forgot-form" class="form-horizontal"'); 
+                        ?>
+                        
+                            <div class="row">                                
+                                <?php
+                                if ($this->session->userdata('forgot_email_enviado'))
+                                {
+                                    echo '<div class="alert alert-info">'. $this->session->userdata('forgot_email_enviado') .'</div>';
+                                    $this->session->unset_userdata('forgot_email_enviado');
+                                }
+                                if ($this->session->userdata('forgot_usuario_errado'))
+                                {
+                                    echo '<div class="alert alert-error">'. $this->session->userdata('forgot_usuario_errado') .'</div>';
+                                    $this->session->unset_userdata('forgot_usuario_errado');
+                                }
+                                ?>   
+                                
+                                <div class="form-group">
+                                    <label for="pessoa_fisica_forgot" class="control-label"></label>
+                                    <div class="col-lg-12">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="pessoa_fisica_forgot" id="pessoa_fisica_4" class="form-control" value="0" checked>
+                                            Pessoa física
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="pessoa_fisica_forgot" id="pessoa_fisica_5" class="form-control" value="1">
+                                            Pessoa jurídica
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group relative" id="cpf_forgot">
                                     <div class="icon"><i class="icon20 i-user"></i></div>
-                                    <input class="form-control" type="text" name="user" id="user" placeholder="CPF">
+                                    <input class="form-control cpf" type="text" name="forgot_cpf" id="forgot_cpf" placeholder="CPF" value="">
                                 </div><!-- End .control-group  -->
+                                
+                                <div class="form-group relative" id="cnpj_forgot">
+                                    <div class="icon"><i class="icon20 i-user"></i></div>
+                                    <input class="form-control cnpj" type="text" name="forgot_cnpj" id="forgot_cnpj" placeholder="CNPJ" value="">
+                                </div><!-- End .control-group  -->
+                                
                                 <div class="form-group relative">
                                     <div class="icon"><i class="icon20 i-envelop-2"></i></div>
-                                    <input class="form-control" type="text" name="email" id="email-field" placeholder="Seu email">
+                                    <input class="form-control" type="text" name="forgot_email" id="forget_email" placeholder="Seu email">
                                 </div><!-- End .control-group  -->
+                                
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-lg btn-block btn-success">Recuperar a senha</button>
                                 </div>
                             </div><!-- End .row-fluid  -->
-                        </form>
+                        
+                        <?php echo form_close(); ?>                        
+                        
                     </div>
                 </div>
                 <div id="bar" data-active="log">
@@ -379,6 +420,7 @@
                 
                 $("#pessoa_j").hide();                
                 $("#cnpj_login").hide();                
+                $("#cnpj_forgot").hide();                
                 
                 $(":radio").change(function(){
                     var rad = $('input[name=pessoa_fisica]:checked').val();
@@ -409,6 +451,21 @@
                         $("#cpf_login").hide(200);
                         $("#cpf").val('');                        
                         $("#cnpj_login").show(200);
+                    }
+                    
+                    var rad4 = $('input[name=pessoa_fisica_forgot]:checked').val();
+
+                    if (rad4 == '0')
+                    {
+                        $("#cpf_forgot").show(200);
+                        $("#cnpj_forgot").hide(200);
+                        $("#cnpj_forgot").val('');
+                    }
+                    else
+                    {
+                        $("#cpf_forgot").hide(200);
+                        $("#cpf_forgot").val('');                        
+                        $("#cnpj_forgot").show(200);
                     }
                 });
             });

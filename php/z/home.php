@@ -9,10 +9,6 @@ class Home extends MY_Controller {
 
     public function index()
     {
-//            $data = array(            
-//            'view' => 'templates/production-body'
-//            );
-//            $this->load->view('painel',$data);
         if ($_SESSION['autorizacao']== AUTORIZACAO_OPERADOR)
             redirect ('requerimentos/meus_requerimentos/');
 

@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div id="heading" class="page-header">
-        <h1><i class="icon20 i-user-3"></i> Listar requerimentos</h1>
+        <h1><i class="icon20 i-user-3"></i> Meus requerimentos</h1>
     </div>
 
     <div class="row">
@@ -21,7 +21,7 @@
         }
 
         $this->table->set_template($tmpl);
-        $this->table->set_heading('Resumo', "Bairro", "Tipo Req.", "Situação", "Expediente", "");
+        $this->table->set_heading('Resumo', "Tipo Requerimento", "Bairro", "Situação", "Expediente", "");
 
         if (!empty($requerimentos))
         {

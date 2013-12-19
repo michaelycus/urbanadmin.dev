@@ -37,10 +37,39 @@ if (!function_exists('send_notification')) {
             $message .= "Gabinete do Vereador Ranzi";
 
             $ci->email->subject($subject);
-            $ci->email->message($message);	
+            $ci->email->message($message);
 
             $ci->email->send();
         }
+    }
+}
+
+if (!function_exists('reset_password')) {
+    function reset_password ($email, $senha)
+    {
+        $ci =& get_instance();        
+            
+        $ci->load->library('email');
+
+        $ci->email->from('vereadorranzi@gmail.com', 'Gabinete Vereador Ranzi');
+        $ci->email->to($requerente->email); 
+        
+        $subject = "Recuperar senha";
+
+        $message = "Olá,\n\n";
+        
+        $message .= "Sua nova senha de acesso é: $senha\n";
+        $message .= "Você pode mudar sua senha ao editar seu perfil no site. Basta acessar o sistema, clicar no seu nome no canto superior direito e então em \"Editar Perfil\". \n\n";
+        
+        $message .= "http://www.ranzi.com.br/requerimento \n\n";
+
+        $message .= "Atenciosamente,\n";
+        $message .= "Gabinete do Vereador Ranzi";
+
+        $ci->email->subject($subject);
+        $ci->email->message($message);	
+
+        $ci->email->send();        
     }
 }
 ?>

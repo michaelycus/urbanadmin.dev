@@ -17,7 +17,7 @@ class Login extends MY_Controller
     {
         if (isset($_SESSION['cpf']) || isset($_SESSION['cnpj']))
         {
-            redirect('home');
+            redirect('login/inicio');
         }
 
         if ($this->input->post('pessoa_fisica_login') == PESSOA_FISICA)
@@ -30,7 +30,6 @@ class Login extends MY_Controller
         {
             if ($this->input->post('cpf'))
             {
-                
                 $res = $this->login_model->verify_user_cpf($this->input->post('cpf'),
                                                    $this->input->post('password'));
             }
@@ -61,30 +60,40 @@ class Login extends MY_Controller
                 $this->session->set_userdata('usuario_errado','Usuário e/ou senha inválidos!<br />Por favor, tente novamente.');
             }
 
-            redirect('home');
+            redirect('login/inicio');
         }
 
         $this->data['bairros'] = $this->bairros_model->get_all();
-
-        $this->load->model('cidades_model');
         $this->data['estados'] = $this->cidades_model->getEstados();
 
         $this->load_front_view('login_view');
+    }
+    
+    public function inicio()
+    {
+        if ($_SESSION['autorizacao']== AUTORIZACAO_OPERADOR)
+            redirect ('requerimentos/meus_requerimentos/');
+        
+        $this->data['requerimentos'] = $this->requerimento_model->get_last(8);        
+        $this->data['requerentes'] = $this->requerente_model->get_last(8);
+        
+        $this->data['req_em_analise'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE); 
+        $this->data['req_analisado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_ANALISADO); 
+        $this->data['req_protocolado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO); 
+        $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO); 
+
+        $this->load_view('layouts/inicio');
     }
 
     public function logout()
     {
         session_destroy();
         
-        redirect('home');
-        
-//        $this->load->view('login_view');
+        redirect('login/inicio');
     }
 
     public function cadastrar_requerente()
     {
-        $this->load->model('requerente_model');
-
         $this->form_validation->set_rules('nome', 'NOME', 'trim|required|max_length[64]');
         $this->form_validation->set_rules('password', 'SENHA', 'trim|required|min_length[5]|matches[password2]');
         $this->form_validation->set_rules('password2', 'SENHA', 'trim|required|min_length[5]');
@@ -117,11 +126,40 @@ class Login extends MY_Controller
         endif;
 
         $this->data['bairros'] = $this->bairros_model->get_bairros();
-
-        $this->load->model('cidades_model');
         $this->data['estados'] = $this->cidades_model->getEstados();
 
         $this->data['view'] = 'reg';
+
+        $this->load_front_view('login_view');
+    }
+    
+    public function resetar_senha()
+    {
+        if ($this->input->post('forgot_cpf'))
+        {
+            $res = $this->login_model->verify_user_cpf_exists($this->input->post('forgot_cpf'),
+                                               $this->input->post('forgot_email'));
+        }
+        else
+        {
+            $res = $this->login_model->verify_user_cnpj_exists($this->input->post('forgot_cnpj'),
+                                               $this->input->post('forgot_email'));
+        }
+            
+        if ($res !== false)
+        {
+            $key = $this->requerente_model->generate_key($res);
+            
+            reset_password($res->email, $key);
+            
+            $this->session->set_userdata('forgot_email_enviado','Uma nova senha de acesso foi gerada e enviada para o seu e-mail.');
+        }
+        else
+        {
+            $this->session->set_userdata('forgot_usuario_errado','CPF/CNPJ e e-mail informados não existem no sistema!<br />Por favor, tente novamente.');
+        }        
+        
+        $this->data['view'] = 'forgot';
 
         $this->load_front_view('login_view');
     }

@@ -51,7 +51,7 @@ class Requerimentos extends MY_Controller
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento',
                 'id_requerente','id_solicitante'),$this->input->post());
-            $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);                  
+            $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
             
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;            
 
@@ -108,7 +108,7 @@ class Requerimentos extends MY_Controller
 
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente'),$this->input->post());
-            $data['data_requerimento'] = date('Y-m-d');
+            $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
             
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
             
@@ -203,6 +203,7 @@ class Requerimentos extends MY_Controller
         $this->load->library('Pdf');
         
         $requerimento = $this->requerimento_model->get($id);
+        $solicitante = $this->requerente_model->get($requerimento->id_solicitante);
         
         $pdf = new PDF();
         $pdf->AliasNbPages();
@@ -212,9 +213,10 @@ class Requerimentos extends MY_Controller
 
 
         $html = '<b>PROPRIETÁRIO:</b> Vereador Carlos Eduardo Ranzi    <b>EMAIL:</b>  vereadorranzi@gmail.com<br>';
-        $html .= '<b>PROFISSÃO:</b> Vereador        <b>CPF/CNPJ:</b> 976.237.330-87  <b>FONE:</b>    3982-1155 <br>';
+        $html .= '<b>PROFISSÃO:</b> Vereador        <b>CPF/CNPJ:</b> 976.237.330-87  <b>FONE:</b>    (51) 3982-1155 <br>';
         $html .= '<b>ENDEREÇO:</b>  Av. Benjamin Constant, 670 - 3º andar        <b>BAIRRO:</b> Centro<br>';
         $html .= '<b>MUNICÍPIO:</b>   Lajeado           <b>ESTADO:</b>   RS                      <b>CEP:</b>       95900-000<br>';
+        $html .= '<b>SOLICITANTE:</b>   '.$solicitante->nome.'     <b>FONE:</b>   '.$solicitante->telefone.'<br>';
 
         $pdf->WriteHTML(iconv('utf-8','iso-8859-1',$html));
 

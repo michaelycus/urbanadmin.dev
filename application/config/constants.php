@@ -54,6 +54,43 @@ define('REQUERIMENTO_SITUACOES', serialize (array ( 0 => "Em análise",
                                                     2 => "Protocolado",
                                                     3 => "" )));
 
+define('TIPO_REQ_ENTULHO', 1);
+define('TIPO_REQ_ILUMINACAO', 2);
+define('TIPO_REQ_LIXEIRA', 3);
+define('TIPO_REQ_PARADA_ONIBUS', 4);
+define('TIPO_REQ_PLANTIO', 5);
+define('TIPO_REQ_PODAS', 6);
+define('TIPO_REQ_PRACAS', 7);
+define('TIPO_REQ_RUAS_LIMPEZA_ROCADA', 8);
+define('TIPO_REQ_RUAS_NIVELAMENTO', 9);
+define('TIPO_REQ_RUAS_LOMBADA', 10);
+define('TIPO_REQ_RUAS_CANOS', 11);
+define('TIPO_REQ_RUAS_CALCAMENTO', 12);
+define('TIPO_REQ_RUAS_SEMAFORO', 13);
+define('TIPO_REQ_RUAS_PATROLAMENTO', 14);
+define('TIPO_REQ_RUAS_SINALIZACAO', 15);
+define('TIPO_REQ_RUAS_BUEIROS', 16);
+define('TIPO_REQ_OUTROS', 17);
+
+define('TIPOS_REQUERIMENTOS', serialize (array ( 1 => "ENTULHO - Remoção, limpeza",
+                                                 2 => "ILUMINAÇÃO - Instalação, substituição, reparo",
+                                                 3 => "LIXEIRA - Instalação, substituição, reparo",
+                                                 4 => "PARADA DE ÔNIBUS - Instalação, reparo",
+                                                 5 => "PLANTIO - Mudas e árvores",
+                                                 6 => "PLANTIO - Mudas e árvores",
+                                                 7 => "PRAÇAS - Manutenção, limpeza",
+                                                 8 => "RUAS - Limpeza, Roçada",
+                                                 9 => "RUAS - Nivelamento",
+                                                 10 => "RUAS - Instalação/Conserto de lombada",
+                                                 11 => "RUAS - Instalação/Conserto de canos",
+                                                 12 => "RUAS - Instalação/Conserto calçamento",
+                                                 13 => "RUAS - Instalação/Conserto de semáforos",
+                                                 14 => "RUAS - Patrolamento",
+                                                 15 => "RUAS - Instalação/Conserto de placas de sinalização/identificação",
+                                                 16 => "RUAS - Manutenção de bueiros",
+                                                 17 => "OUTROS" )));
+
+
 define('PESSOA_FISICA',0);
 define('PESSOA_JURIDICA',1);
 

@@ -10,7 +10,7 @@ class MY_Controller extends CI_Controller
         session_start();
 
         // Check authentication
-        $no_redirect = array('login_view', 'login', 'login/cadastrar_requerente', 'cadastro', 'some/controller');
+        $no_redirect = array('login_view', 'login', 'login/cadastrar_requerente', 'login/resetar_senha', 'cadastro', 'some/controller');
         if ( (!isset($_SESSION['cpf']) && !isset($_SESSION['cnpj'])) && !in_array(uri_string(), $no_redirect))
         {
             redirect('login');
