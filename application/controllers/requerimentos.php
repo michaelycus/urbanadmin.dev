@@ -216,7 +216,6 @@ class Requerimentos extends MY_Controller
         $html .= '<b>PROFISSÃO:</b> Vereador        <b>CPF/CNPJ:</b> 976.237.330-87  <b>FONE:</b>    (51) 3982-1155 <br>';
         $html .= '<b>ENDEREÇO:</b>  Av. Benjamin Constant, 670 - 3º andar        <b>BAIRRO:</b> Centro<br>';
         $html .= '<b>MUNICÍPIO:</b>   Lajeado           <b>ESTADO:</b>   RS                      <b>CEP:</b>       95900-000<br>';
-        $html .= '<b>SOLICITANTE:</b>   '.$solicitante->nome.'     <b>FONE:</b>   '.$solicitante->telefone.'<br>';
 
         $pdf->WriteHTML(iconv('utf-8','iso-8859-1',$html));
 
@@ -236,7 +235,26 @@ class Requerimentos extends MY_Controller
         $pdf->Cell(20);
 
         $pdf->Cell(0, 0, 'Nesses termos, pede referimento.', 0, 0, 'L', false);
+        $pdf->Ln(10);        
+        
+        $pdf->SetFont('Arial', 'B', 12);
+        $pdf->Cell(0, 0, 'Dados do solicitante:', 0, 0, 'L', false);
+                       
+        $html = 'Nome: '. $solicitante->nome;
+        if ($solicitante->telefone != '' && $solicitante->telefone != '0')
+        {
+            $html .= ' - Telefone: '. $solicitante->telefone;
+        }
+        
         $pdf->Ln(10);
+        $pdf->Cell(20);
+
+        $pdf->SetFont('Arial', '', 12);
+        $pdf->MultiCell(0, 5, iconv('utf-8','iso-8859-1',$html));
+
+        $pdf->Ln(10);
+        $pdf->Cell(20);
+        
 
         setlocale(LC_TIME, "pt_BR", 'ptb');
         $date = strftime("%d de %B de %Y", time());
