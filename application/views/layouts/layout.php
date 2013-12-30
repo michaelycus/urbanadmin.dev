@@ -85,6 +85,11 @@
         <script src="<?php echo base_url(); ?>js/plugins/forms/uniform/jquery.uniform.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/mask/jquery.mask.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/datepicker/bootstrap-datepicker.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/forms/datepicker/bootstrap-datepicker.js"></script>
+                
+        <script src="<?php echo base_url(); ?>js/plugins/forms/wizard/jquery.form.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/forms/wizard/jquery.form.wizard.js"></script>
+
 
         <!-- Dialogs -->
         <script src="<?php echo base_url(); ?>js/jquery-impromptu.min.js"></script>
@@ -102,8 +107,10 @@
         <script src="<?php echo base_url(); ?>js/pages/ui-elements.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/domready.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/data-tables.js"></script><!-- Init plugins only for page -->
-        <!--<script src="<?php echo base_url(); ?>js/pages/dashboard.js"></script> Esse puglin impossibilita o carregamento do mapael -->
+        <script src="<?php echo base_url(); ?>js/pages/form-wizard.js"></script><!-- Init plugins only for page -->
 
+        <!--<script src="<?php echo base_url(); ?>js/pages/dashboard.js"></script> Esse puglin impossibilita o carregamento do mapael -->
+        
         <!-- Bootstrap script -->
         <script src="<?php echo base_url(); ?>js/bootstrap/bootbox.min.js"></script>
 
@@ -303,6 +310,25 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="icon20 i-stats-up"></i></span>
+                                    <span class="txt">Gráficos Customizados</span>
+                                </a>
+                                <ul class="sub<?php echo ($cat=='graficos_customizados' ? ' show' : '')?>">
+                                    <li>
+                                        <?php echo anchor('graficos_customizados/criar_grafico',
+                                                '<i class="icon20 i-people"></i>
+                                                 <span class="txt">Criar Gráfico</span>');?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('graficos_customizados/listar_graficos',
+                                                '<i class="icon20 i-people"></i>
+                                                 <span class="txt">Listar Gráfico</span>');?>
+                                    </li>
+                                </ul>
+                            </li>      
+                            
                             <?php
                             }
                             ?>

@@ -29,7 +29,7 @@ if (!function_exists('send_notification')) {
             else if ($requerimento->situacao == REQUERIMENTO_SITUACAO_PROTOCOLADO)
             {
                 $subject = "Requerimento Protocolado";
-                $message .= "Seu requerimento foi protocolado e será executado pelos secretarias responsáveis da Prefeitura Municipal de Lajeado.\n";
+                $message .= "Seu requerimento foi protocolado e será executado pelas secretarias responsáveis da Prefeitura Municipal de Lajeado.\n";
                 $message .= "O número do seu protocolo junto à prefeitura é o $requerimento->expediente/$requerimento->ano_expediente.\n\n";                
             }
             
