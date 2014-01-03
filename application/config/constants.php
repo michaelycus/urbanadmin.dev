@@ -108,6 +108,17 @@ define('AUTORIZACAO_ADMINISTRADOR',1);
 
 define('REQUERENTE_PADRAO_ID', 1);
 
+define('TIPO_GRAFICO_MAPA', 0);
+define('TIPO_GRAFICO_BARRAS', 1);
+
+define('GRAFICO_COR_AMARELO', 0);
+define('GRAFICO_COR_VERDE', 1);
+define('GRAFICO_COR_LARANJA', 2);
+define('GRAFICO_COR_AZUL', 3);
+define('GRAFICO_COR_ROXO', 4);
+define('GRAFICO_COR_BEGE', 5);
+define('GRAFICO_COR_VERMELHO', 6);
+
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

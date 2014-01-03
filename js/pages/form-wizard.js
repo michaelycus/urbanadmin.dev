@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	function createSuccessMsg (loc, msg) {
 		loc.append(
-			'<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><i class="icon24 i-checkmark-circle"></i> Well done!</strong> '+ msg + ' </div>'
+			'<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button><strong><i class="icon24 i-checkmark-circle"></i> Pronto!</strong> '+ msg + ' </div>'
 		);
 	}
 
@@ -101,5 +101,35 @@ $(document).ready(function() {
 	 	},
 	 	disableUIStyles: true,
 	 	showSteps: true //show the step
-	});	
+	});        
+        
+	//------------- Form Criar Gráfico -------------//
+ 	$("#form_criar_grafico").formwizard({ 
+	 	formPluginEnabled: true,
+	 	validationEnabled: true,
+	 	validationOptions: {
+	 		rules: {
+	 			titulo: {
+	 				required: true
+	 			}
+	 		}, 
+	 		messages: {
+	 			titulo: {
+	 				required: "É preciso informar o nome do gráfico"
+	 			}
+	 		}
+	 	},
+	 	focusFirstInput : true,
+	 	formOptions :{
+			success: function(data){
+				//produce success message
+				createSuccessMsg($("#form_criar_grafico .msg"), "Gerando gráfico...");
+                                setInterval(generate_chart, 2000);
+			},
+			resetForm: false
+	 	},
+	 	disableUIStyles: true,
+	 	showSteps: true, //show the step
+                vertical: true //activate vertical wizard
+	});
 });

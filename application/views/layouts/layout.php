@@ -89,6 +89,7 @@
                 
         <script src="<?php echo base_url(); ?>js/plugins/forms/wizard/jquery.form.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/wizard/jquery.form.wizard.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/forms/validation/jquery.validate.js"></script>
 
 
         <!-- Dialogs -->
@@ -312,19 +313,19 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="icon"><i class="icon20 i-stats-up"></i></span>
+                                    <span class="icon"><i class="icon20 i-wand-2"></i></span>
                                     <span class="txt">Gráficos Customizados</span>
                                 </a>
                                 <ul class="sub<?php echo ($cat=='graficos_customizados' ? ' show' : '')?>">
                                     <li>
                                         <?php echo anchor('graficos_customizados/criar_grafico',
-                                                '<i class="icon20 i-people"></i>
-                                                 <span class="txt">Criar Gráfico</span>');?>
+                                                '<i class="icon20 i-pencil-5"></i>
+                                                 <span class="txt">Criar gráfico</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos_customizados/listar_graficos',
-                                                '<i class="icon20 i-people"></i>
-                                                 <span class="txt">Listar Gráfico</span>');?>
+                                                '<i class="icon20 i-list-2"></i>
+                                                 <span class="txt">Listar gráficos</span>');?>
                                     </li>
                                 </ul>
                             </li>      
