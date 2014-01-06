@@ -22,33 +22,7 @@
                 legend: {
                     area: {
                         display: true,
-                        title: "Requerentes por bairro",
-                        slices: [{
-                        min: 0,
-                        max: 3,
-                        attrs: {
-                            fill: "#e4c900"}
-                      },{
-                        min: 3,
-                        max: 6,
-                        attrs: {
-                            fill: "#dcbf00"}
-                      },{
-                        min: 6,
-                        max: 10,
-                        attrs: {
-                            fill: "#d4b400"}
-                      },{
-                        min: 10,
-                        max: 13,
-                        attrs: {
-                            fill: "#ccaa00"}
-                      },{
-                        min: 13,
-                        max: 16,
-                        attrs: {
-                            fill: "#c4a000"}
-                      },]
+                        title: "Requerentes por bairro",                        
             }
         },
         areas: {                            "americano":{
@@ -63,6 +37,10 @@
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 1"},
                             },                            "centro":{
                                 value: "15",
+                                attrs: {
+                                    fill: "hsl(120,100,25)", stroke: "#204a87"
+//                                    fill: "hsl(53deg, 98%, 40%)", stroke: "#204a87"
+                                },
                                 text: { content:  15 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerimentos: 15"},

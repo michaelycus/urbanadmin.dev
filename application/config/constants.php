@@ -118,6 +118,7 @@ define('GRAFICO_COR_AZUL', 3);
 define('GRAFICO_COR_ROXO', 4);
 define('GRAFICO_COR_BEGE', 5);
 define('GRAFICO_COR_VERMELHO', 6);
+define('GRAFICO_COR_BRANCO', 7);
 
 
 /* End of file constants.php */

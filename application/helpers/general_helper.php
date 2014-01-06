@@ -611,6 +611,8 @@ if (!function_exists('generate_custom_chart'))
         $segments = ($max > 10) ? 10 : $max;
 
         $max = $max + 1;
+        
+        $hsl = get_static_color($chart->cor_grafico, 1);
 
         $data = <<<EOF
         $(function() {
@@ -620,7 +622,7 @@ if (!function_exists('generate_custom_chart'))
                     width: 700,
                     defaultArea: {
                         attrs: {
-                            fill: "#cadbed", stroke: "#204a87"
+                            fill: "$hsl", stroke: "#204a87"
                         },
                         text : {
                             attrs: {
@@ -637,25 +639,10 @@ if (!function_exists('generate_custom_chart'))
                 legend: {
                     area: {
                         display: true,
-                        title: "Requerimentos por bairro",
-                        slices: [
+                        title: "Requerimentos por bairro"                     
 EOF;
 
-        $difR = 82 / $segments; // #729fcf
-        $difG = 85 / $segments; // to
-        $difB = 72 / $segments; // #204a87
-
-        for ($i=1; $i<=$segments; $i++)
-        {
-            $data .= '{
-                        min: '. round( ($max/$segments)*$i - ($max/$segments) )  .',
-                        max: '. round( ($max/$segments)*$i ) .',
-                        attrs: {
-                            fill: "'. rgb2hex(array(114 - $i * $difR, 159 - $i * $difG, 207 - $i * $difB )) .'"}
-                      },';
-        }
-
-        $data .=']
+        $data .='
             }
         },
         areas: {';
@@ -668,9 +655,13 @@ EOF;
                 $valor = ($c_v->valor!=NULL) ? $c_v->valor : 0;
                 if ($c_v->valor!=NULL)
                 {
-                $data .= <<<EOF
+                    $hsl = get_static_color($chart->cor_grafico, 0, $max, $valor);
+                    $data .= <<<EOF
                         "$bairro->codename":{
                             value: "$valor",
+                            attrs: {
+                                fill: "$hsl", stroke: "#204a87"
+                            },
                             text: { content:  $valor , attrs: {fill:"#222"} },
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">$bairro->nome </span><br />Valor: $valor"},
@@ -716,39 +707,43 @@ function rgb2hex($rgb) {
  {
      if ($color == GRAFICO_COR_AMARELO)
      {
-         $p1 = '53°, 98%';
+         $p1 = '53, 98';
      }
      elseif ($color == GRAFICO_COR_VERDE)
      {
-         $p1 = '90°, 75%';
+         $p1 = '90, 75';
      }
      elseif ($color == GRAFICO_COR_LARANJA)
      {
-         $p1 = '36°, 97%';
+         $p1 = '36, 97';
      }
      elseif ($color == GRAFICO_COR_AZUL)
      {
-         $p1 = '210°, 49%';
+         $p1 = '210, 49';
      }
      elseif ($color == GRAFICO_COR_ROXO)
      {
-         $p1 = '306°, 22%';
+         $p1 = '306, 22';
      }
      elseif ($color == GRAFICO_COR_BEGE)
      {
-         $p1 = '37°, 75%';
+         $p1 = '37, 75';
      }
      elseif ($color == GRAFICO_COR_VERMELHO)
      {
-         $p1 = '0°, 100%';
+         $p1 = '0, 100';
+     }
+     elseif ($color == GRAFICO_COR_BRANCO)
+     {
+         $p1 = '60, 6';
      }
 
      if ($part == 1) // elemento sem valor
-         $p2 = '84%';
+         $p2 = '84';
      elseif ($part == 2) // inicio do gradiente
-         $p2 = '75%';
+         $p2 = '75';
      elseif ($part == 3) // fim do gradiente
-         $p2 = '45%';
+         $p2 = '45';
 
      if ($max)
      {

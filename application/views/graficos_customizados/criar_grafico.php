@@ -46,6 +46,45 @@
                                 <div class="col-lg-10">
                                     <input class="form-control" type="text" id="titulo" name="titulo">
                                 </div>
+                                
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="cor_grafico">Cores do gráfico</label>
+                                <div class="col-lg-10 center">
+                                    <div class="col-lg-2 center">
+                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_AMARELO ?>"  checked="checked">
+                                        <img src="<?php echo base_url(); ?>images/chart/color_0.png"><br /><br />
+                                    </div>
+                                    <div class="col-lg-2 center">
+                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_VERDE ?>">
+                                        <img src="<?php echo base_url(); ?>images/chart/color_1.png"><br /><br />
+                                    </div>
+                                    <div class="col-lg-2 center">
+                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_LARANJA ?>">
+                                        <img src="<?php echo base_url(); ?>images/chart/color_2.png"><br /><br />
+                                    </div>
+                                    <div class="col-lg-2 center">
+                                        <input class="form-control center" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_AZUL ?>">
+                                        <img src="<?php echo base_url(); ?>images/chart/color_3.png"><br /><br />
+                                    </div>
+                                    <div class="col-lg-2 center">
+                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_ROXO ?>">
+                                        <img src="<?php echo base_url(); ?>images/chart/color_4.png"><br /><br />
+                                    </div>
+                                    <div class="col-lg-2 center">
+                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_BEGE ?>">
+                                        <img src="<?php echo base_url(); ?>images/chart/color_5.png"><br /><br />
+                                    </div>
+                                    <div class="col-lg-2 center">
+                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_VERMELHO ?>">
+                                        <img src="<?php echo base_url(); ?>images/chart/color_6.png"><br /><br />
+                                    </div>
+                                    <div class="col-lg-2 center">
+                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_BRANCO ?>">
+                                        <img src="<?php echo base_url(); ?>images/chart/color_7.png"><br /><br />
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                         
@@ -56,10 +95,14 @@
                                 <?php
                                 foreach ($bairros as $bairro)
                                 {
+                                    $v = $v + 11;
                                     echo '<div class="col-lg-4">';
                                     echo    '<label class="col-lg-8 control-label" for="bairro_'.$bairro->codename.'">'.$bairro->nome.'</label>';
                                     echo    '<div class="col-lg-4">';
-                                    echo        '<input class="form-control" name="bairro_'.$bairro->codename.'" type="text">';
+                                    if ($v<120)
+                                        echo        '<input class="form-control" name="bairro_'.$bairro->codename.'" type="text" value="'.$v.'">';
+                                    else
+                                        echo        '<input class="form-control" name="bairro_'.$bairro->codename.'" type="text">';
                                     echo    '</div>';
                                     echo '</div>';
                                 }                                
