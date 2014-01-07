@@ -22,7 +22,33 @@
                 legend: {
                     area: {
                         display: true,
-                        title: "Requerentes por bairro",                        
+                        title: "Requerentes por bairro",
+                        slices: [{
+                        min: 0,
+                        max: 1,
+                        attrs: {
+                            fill: "#e4c900"}
+                      },{
+                        min: 1,
+                        max: 1,
+                        attrs: {
+                            fill: "#dcbf00"}
+                      },{
+                        min: 1,
+                        max: 2,
+                        attrs: {
+                            fill: "#d4b400"}
+                      },{
+                        min: 2,
+                        max: 2,
+                        attrs: {
+                            fill: "#ccaa00"}
+                      },{
+                        min: 2,
+                        max: 3,
+                        attrs: {
+                            fill: "#c4a000"}
+                      },]
             }
         },
         areas: {                            "americano":{
@@ -35,15 +61,6 @@
                                 text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 1"},
-                            },                            "centro":{
-                                value: "15",
-                                attrs: {
-                                    fill: "hsl(120,100,25)", stroke: "#204a87"
-//                                    fill: "hsl(53deg, 98%, 40%)", stroke: "#204a87"
-                                },
-                                text: { content:  15 , attrs: {fill:"#222"} },
-                                href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerimentos: 15"},
                             },                            "florestal":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },

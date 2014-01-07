@@ -558,7 +558,7 @@ EOF;
                                 value: "$r_b->count_requerentes",
                                 text: { content:  $r_b->count_requerentes , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">$r_b->nome_bairro </span><br />Requerimentos: $r_b->count_requerentes"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">$r_b->nome_bairro </span><br />Requerentes: $r_b->count_requerentes"},
                             },
 EOF;
 

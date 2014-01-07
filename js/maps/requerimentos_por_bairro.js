@@ -2,7 +2,7 @@
             $(".maparea1").mapael({
                 map: {
                     name: "lajeado",
-                    width: 700,
+                    width: 500,
                     defaultArea: {
                         attrs: {
                             fill: "#cadbed", stroke: "#204a87"
@@ -106,6 +106,11 @@
                                 text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Requerimentos: 2"},
+                            },                            "jardim_do_cedro":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerimentos: 1"},
                             },}
             });
         });

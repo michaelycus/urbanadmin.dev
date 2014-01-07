@@ -61,9 +61,8 @@ class Graficos_Customizados extends MY_Controller
     {
         $next_id = $this->graficos_customizados_model->get_next_id();
         
-        $data['titulo'] = $this->input->post('titulo');
-        $data['tipo'] = $this->input->post('tipo');
-        $data['cor_grafico'] = $this->input->post('cor_grafico');
+        $data = elements(array('titulo','tipo','fonte','observacoes','cor_grafico'),$this->input->post());
+        
         $data['data'] = date('Y-m-d');
         $data['id_requerente'] = $_SESSION['id_user'];
         

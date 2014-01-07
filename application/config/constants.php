@@ -110,6 +110,7 @@ define('REQUERENTE_PADRAO_ID', 1);
 
 define('TIPO_GRAFICO_MAPA', 0);
 define('TIPO_GRAFICO_BARRAS', 1);
+define('TIPO_GRAFICO_PIZZA', 2);
 
 define('GRAFICO_COR_AMARELO', 0);
 define('GRAFICO_COR_VERDE', 1);

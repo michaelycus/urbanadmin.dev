@@ -13,12 +13,6 @@
         color:#343434;
     }
 
-    .cityFrance {
-        background-color:#343434;
-        border-radius:10px;
-        width:400px;
-    }
-
     .mapLegend {
     }
 

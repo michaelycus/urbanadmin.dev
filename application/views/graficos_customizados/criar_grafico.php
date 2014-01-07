@@ -14,7 +14,7 @@
 
                 <div class="panel-body">
 
-                    <?php echo form_open('graficos_customizados/gerar_grafico', 'id="form_criar_grafico" class="form-vertical"'); ?>
+                    <?php echo form_open('graficos_customizados/gerar_grafico', 'id="form_criar_grafico" class="form-horizontal"'); ?>
                     
                         <div class="msg"></div>
                         <div class="wizard-steps"></div>
@@ -36,56 +36,88 @@
                                         <input class="form-control" type="radio" name="tipo" value="<?php echo TIPO_GRAFICO_BARRAS ?>">
                                     </div>
                                 </div><!-- End .control-group  -->
-                            </div>                            
+                            </div>
+                            
+                            <div class="col-lg-4">
+                                <div class="form-group center">                  
+                                    <div class="col-lg-12">
+                                        <i class="icon64 i-pie blue"></i><br />Gráfico de pizza<br /><br />
+                                        <input class="form-control" type="radio" name="tipo" value="<?php echo TIPO_GRAFICO_PIZZA ?>">
+                                    </div>
+                                </div><!-- End .control-group  -->
+                            </div>                         
                         </div>
                         
                         <div class="step" id="configuracoes">
-                            <span data-icon="i-tools" data-text="Configurações"></span>
+                            <span data-icon="i-tools" data-text="Configurações"></span>                                                        
                             <div class="form-group">
                                 <label class="col-lg-2 control-label" for="nome_grafico">Nome do Gráfico</label>
                                 <div class="col-lg-10">
                                     <input class="form-control" type="text" id="titulo" name="titulo">
-                                </div>
-                                
+                                </div>                                
                             </div>
                             <div class="form-group">
-                                <label class="col-lg-2 control-label" for="cor_grafico">Cores do gráfico</label>
-                                <div class="col-lg-10 center">
-                                    <div class="col-lg-2 center">
-                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_AMARELO ?>"  checked="checked">
-                                        <img src="<?php echo base_url(); ?>images/chart/color_0.png"><br /><br />
-                                    </div>
-                                    <div class="col-lg-2 center">
-                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_VERDE ?>">
-                                        <img src="<?php echo base_url(); ?>images/chart/color_1.png"><br /><br />
-                                    </div>
-                                    <div class="col-lg-2 center">
-                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_LARANJA ?>">
-                                        <img src="<?php echo base_url(); ?>images/chart/color_2.png"><br /><br />
-                                    </div>
-                                    <div class="col-lg-2 center">
-                                        <input class="form-control center" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_AZUL ?>">
-                                        <img src="<?php echo base_url(); ?>images/chart/color_3.png"><br /><br />
-                                    </div>
-                                    <div class="col-lg-2 center">
-                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_ROXO ?>">
-                                        <img src="<?php echo base_url(); ?>images/chart/color_4.png"><br /><br />
-                                    </div>
-                                    <div class="col-lg-2 center">
-                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_BEGE ?>">
-                                        <img src="<?php echo base_url(); ?>images/chart/color_5.png"><br /><br />
-                                    </div>
-                                    <div class="col-lg-2 center">
-                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_VERMELHO ?>">
-                                        <img src="<?php echo base_url(); ?>images/chart/color_6.png"><br /><br />
-                                    </div>
-                                    <div class="col-lg-2 center">
-                                        <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_BRANCO ?>">
-                                        <img src="<?php echo base_url(); ?>images/chart/color_7.png"><br /><br />
-                                    </div>
-                                </div>
-                                
+                                <label class="col-lg-2 control-label" for="fonte">Fonte</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" type="text" id="fonte" name="fonte">
+                                </div>                                
                             </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="observacoes">Observações</label>
+                                <div class="col-lg-10">
+                                    <textarea class="form-control" type="text" id="observacoes" name="observacoes"></textarea>    
+                                </div>                                
+                            </div>
+                            
+                            <div id="chart_map">
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label" for="cor_grafico">Cores do gráfico</label>
+                                    <div class="col-lg-10 center">
+                                        <div class="col-lg-2 center">
+                                            <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_AMARELO ?>"  checked="checked">
+                                            <img src="<?php echo base_url(); ?>images/chart/color_0.png"><br /><br />
+                                        </div>
+                                        <div class="col-lg-2 center">
+                                            <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_VERDE ?>">
+                                            <img src="<?php echo base_url(); ?>images/chart/color_1.png"><br /><br />
+                                        </div>
+                                        <div class="col-lg-2 center">
+                                            <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_LARANJA ?>">
+                                            <img src="<?php echo base_url(); ?>images/chart/color_2.png"><br /><br />
+                                        </div>
+                                        <div class="col-lg-2 center">
+                                            <input class="form-control center" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_AZUL ?>">
+                                            <img src="<?php echo base_url(); ?>images/chart/color_3.png"><br /><br />
+                                        </div>
+                                        <div class="col-lg-2 center">
+                                            <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_ROXO ?>">
+                                            <img src="<?php echo base_url(); ?>images/chart/color_4.png"><br /><br />
+                                        </div>
+                                        <div class="col-lg-2 center">
+                                            <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_BEGE ?>">
+                                            <img src="<?php echo base_url(); ?>images/chart/color_5.png"><br /><br />
+                                        </div>
+                                        <div class="col-lg-2 center">
+                                            <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_VERMELHO ?>">
+                                            <img src="<?php echo base_url(); ?>images/chart/color_6.png"><br /><br />
+                                        </div>
+                                        <div class="col-lg-2 center">
+                                            <input class="form-control" type="radio" name="cor_grafico" value="<?php echo GRAFICO_COR_BRANCO ?>">
+                                            <img src="<?php echo base_url(); ?>images/chart/color_7.png"><br /><br />
+                                        </div>
+                                    </div>                                
+                                </div>
+                            </div>
+                            
+                            <div id="chart_pizza">
+                                <div class="form-group">
+                                    <label class="col-lg-2 control-label" for="teste">teste</label>
+                                    <div class="col-lg-10">
+                                        <textarea class="form-control" type="text" id="teste" name="teste"></textarea>    
+                                    </div>                                
+                                </div>
+                            </div>   
+                            
                         </div>
                         
                         <div class="step submit_step" id="dados">
@@ -128,4 +160,38 @@
     {
         window.location.replace("<?php echo base_url(). 'graficos_customizados/visualizar' ?>");
     }
+    
+    $.fn.disable = function() {
+        return this.each(function() {
+            if (typeof this.disabled != "undefined") this.disabled = true;
+        });
+    }
+
+    $.fn.enable = function() {
+        return this.each(function() {
+            if (typeof this.disabled != "undefined") this.disabled = false;
+        });
+    }
+    
+    $(document).ready(function(){
+        $(":radio").change(function(){
+            var rad = $('input[name=tipo]:checked').val();
+
+            if (rad == '0')
+            {
+                $("div#chart_map *").enable();
+                $("div#chart_map *").show();
+                $("div#chart_pizza *").disable();
+                $("div#chart_pizza *").hide();
+            }
+            else
+            {
+                $("div#chart_map *").disable();
+                $("div#chart_map *").hide();
+                $("div#chart_pizza *").enable();
+                $("div#chart_pizza *").show();
+            }
+        });
+    });
+        
 </script>

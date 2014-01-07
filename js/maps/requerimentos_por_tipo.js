@@ -41,6 +41,12 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 1"
+                            }},"jardim_do_cedro": {
+                            "value": 1,
+                            "attrs": { fill: "#6794c6"},
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 1"
                             }}}},"2": { "areas": {"bom_pastor": {
                             "value": 1,
                             "attrs": { fill: "#6794c6"},
@@ -157,7 +163,7 @@
                                 "font-weight": "bold"
                             }
                         }
-                    }            
+                    }
                 },
                 areas: data[0]['areas']
 

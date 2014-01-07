@@ -59,6 +59,12 @@
                             "attrs": { fill: "#5d89bd"},
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 2"
+                            }},"jardim_do_cedro": {
+                            "value": 1,
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "attrs": { fill: "#6794c6"},
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 1"
                             }}},"plots": {"": {
                             "value": 4},"americano": {
                             "value": 2},"bom_pastor": {
@@ -69,7 +75,8 @@
                             "value": 1},"conservas": {
                             "value": 2},"conventos": {
                             "value": 1},"florestal": {
-                            "value": 2}}},"13": { "areas": {"conservas": {
+                            "value": 2},"jardim_do_cedro": {
+                            "value": 1}}},"13": { "areas": {"conservas": {
                             "value": 1,
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "attrs": { fill: "#6794c6"},
@@ -116,7 +123,7 @@
                                 "font-weight": "bold"
                             }
                         }
-                    }            
+                    }
                 },
                 areas: data[0]['areas']
             });

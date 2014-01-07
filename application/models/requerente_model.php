@@ -50,6 +50,7 @@ class Requerente_model extends MY_Model
     {
         $this->db->select('bairros.nome AS nome_bairro, bairros.codename, COUNT(requerentes.id) AS count_requerentes');
         $this->db->where('mora_cidade', MORA_NA_CIDADE);
+        $this->db->where('requerentes.tipo', !REQUERENTE_TIPO_VEREADOR);
         $this->db->join('bairros', 'requerentes.id_bairro=bairros.id');
         $this->db->group_by('requerentes.id_bairro');
 

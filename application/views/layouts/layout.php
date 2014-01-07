@@ -286,27 +286,27 @@
                                 <ul class="sub<?php echo ($cat=='graficos' ? ' show' : '')?>">
                                     <li>
                                         <?php echo anchor('graficos/populacao_por_bairro',
-                                                '<i class="icon20 i-people"></i>
+                                                '<i class="icon20 i-map-4"></i>
                                                  <span class="txt">Bairros: população</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerentes_por_bairro',
-                                                '<i class="icon20 i-people"></i>
+                                                '<i class="icon20 i-map-4"></i>
                                                  <span class="txt">Requerentes: bairro</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_bairro',
-                                                '<i class="icon20  i-file-9"></i>
+                                                '<i class="icon20  i-map-4"></i>
                                                  <span class="txt">Requerimentos: bairro</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_tipo',
-                                                '<i class="icon20  i-file-9"></i>
+                                                '<i class="icon20  i-map-4"></i>
                                                  <span class="txt">Requerimentos: tipo</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('graficos/requerimentos_por_vereador',
-                                                '<i class="icon20  i-file-9"></i>
+                                                '<i class="icon20  i-map-4"></i>
                                                 <span class="txt">Requerimentos: vereador</span>');?>
                                     </li>
                                 </ul>
@@ -354,20 +354,40 @@
                             }
                             else if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
                             {
-                                echo '<li'. ($cat=='login/inicio' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
-                                        '>'.anchor('login/inicio', '<i class="icon16 i-home-3"></i>Início') .'</li>');
+                                echo '<li'. ($cat=='login/inicio' ? ' class="active"><i class="icon16 i-home-3"></i></li>' :
+                                        '>'.anchor('login/inicio', '<i class="icon16 i-home-3"></i>') .'</li>');
 
-                                echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Requerimentos</li>' :
-                                        '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>Requerimentos') .'</li>');
+                                echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i></li>' :
+                                        '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>') .'</li>');
 
-                                echo '<li'. ($cat=='requerentes' ? ' class="active"><i class="icon16 i-users"></i>Requerentes</li>' :
-                                        '>'.anchor('requerentes/da_cidade', '<i class="icon16 i-users"></i>Requerentes') .'</li>');
+                                echo '<li'. ($cat=='requerentes' ? ' class="active"><i class="icon16 i-users"></i></li>' :
+                                        '>'.anchor('requerentes/da_cidade', '<i class="icon16 i-users"></i>') .'</li>');
 
-                                echo '<li'. ($cat=='bairros' ? ' class="active"><i class="icon16 i-office"></i>Bairros</li>' :
-                                        '>'.anchor('bairros/listar_bairros', '<i class="icon16 i-office"></i>Bairros') .'</li>');
+                                echo '<li'. ($cat=='bairros' ? ' class="active"><i class="icon16 i-office"></i></li>' :
+                                        '>'.anchor('bairros/listar_bairros', '<i class="icon16 i-office"></i>') .'</li>');
 
-                                echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i>Gráficos</li>' :
-                                        '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>Gráficos').'</li>');
+                                echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i></li>' :
+                                        '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>').'</li>');
+                                
+                                echo '<li'. ($cat=='graficos_customizados' ? ' class="active"><i class="icon16 i-wand-2"></i></li>' :
+                                        '>'.anchor('graficos_customizados/listar_graficos', '<i class="icon16 i-wand-2"></i>').'</li>');
+//                                echo '<li'. ($cat=='login/inicio' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
+//                                        '>'.anchor('login/inicio', '<i class="icon16 i-home-3"></i>Início') .'</li>');
+//
+//                                echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Requerimentos</li>' :
+//                                        '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>Requerimentos') .'</li>');
+//
+//                                echo '<li'. ($cat=='requerentes' ? ' class="active"><i class="icon16 i-users"></i>Requerentes</li>' :
+//                                        '>'.anchor('requerentes/da_cidade', '<i class="icon16 i-users"></i>Requerentes') .'</li>');
+//
+//                                echo '<li'. ($cat=='bairros' ? ' class="active"><i class="icon16 i-office"></i>Bairros</li>' :
+//                                        '>'.anchor('bairros/listar_bairros', '<i class="icon16 i-office"></i>Bairros') .'</li>');
+//
+//                                echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i>Gráficos</li>' :
+//                                        '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>Gráficos').'</li>');
+//                                
+//                                echo '<li'. ($cat=='graficos_customizados' ? ' class="active"><i class="icon16 i-wand-2"></i>Gráficos Customizados</li>' :
+//                                        '>'.anchor('graficos_customizados/listar_graficos', '<i class="icon16 i-wand-2"></i>Gráficos Customizados').'</li>');
                             }
                             ?>
                         </ul>
