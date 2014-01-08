@@ -23,6 +23,9 @@ switch ($_SERVER['HTTP_HOST'])
     case 'localhost':
         $env = 'development';
         break;
+    case 'www.timelinguistico.com.br':
+        $env = 'production_tl';
+        break;
     default:
         $env = 'production';
         break;
@@ -47,6 +50,7 @@ if (defined('ENVIRONMENT'))
 	
 		case 'testing':
 		case 'production':
+		case 'production_tl':
 			error_reporting(0);
 		break;
 

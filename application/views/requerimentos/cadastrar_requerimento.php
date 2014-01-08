@@ -20,8 +20,6 @@
 </style>
 
 
-
-
 <div class="container-fluid">
     <div id="heading" class="page-header">
         <h1><i class="icon20 i-stack-empty"></i> Cadastrar requerimento</h1>
@@ -213,26 +211,3 @@
 <script type="text/javascript">
     var path = '<?php echo site_url(); ?>';
 </script>
-
-
-<!--<script type='text/javascript'>//<![CDATA[ 
-$(window).load(function(){
-$(function(){
-        $(".maparea1").mapael({		
-        areas : {
-            'alto_do_parque' : {
-                attrs: {
-                    fill:"red",
-                    cursor:'pointer'
-                },
-                eventHandlers : {
-                    click : function(e, id, mapElem, textElem) {
-                        window.open('http://www.wikipedia.org', '_blank');
-                            }
-                        }
-                    }
-                }
-            });
-        });
-    });//]]>  
-</script>-->

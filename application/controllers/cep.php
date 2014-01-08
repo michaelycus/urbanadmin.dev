@@ -7,13 +7,7 @@ class Cep extends CI_Controller
         parent::__construct();
         
         $this->load->model('cidades_model');
-    }
-
-    function index()
-    {        
-//        $dados['title']   = 'Exemplo de Combos Depe';
-//        $dados['estados'] = $this->cidades_model->getEstados();
-//        $this->load->view('teste_cep', $dados);
+        $this->load->model('requerimento_model');
     }
     
     function getCidades($id)
@@ -50,6 +44,25 @@ class Cep extends CI_Controller
         }
 
         echo '[ ' . implode(",", $arr_rua) . ']';
+
+        return;
+    }
+    
+    function getRequerimentos($id_bairro)
+    {
+        $requerimentos = $this->requerimento_model->get_requerimentos_by_bairro($id_bairro);
+
+        if (empty($requerimentos))
+            return '{ "descricao": "Nenhum requerimento encontrado" }';
+
+        $arr_req = array();
+
+        foreach ($requerimentos as $req)
+        {
+            $arr_req[] = '{"id":' . $req->id . ',"descricao":"' . $req->descricao . '"}';
+        }
+
+        echo '[ ' . implode(",", $arr_req) . ']';
 
         return;
     }

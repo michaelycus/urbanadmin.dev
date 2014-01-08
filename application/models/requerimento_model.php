@@ -40,6 +40,13 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
+    
+    public function get_requerimentos_by_bairro($id_bairro)
+    {
+        $this->db->where('id_bairro', $id_bairro);        
+        
+        return $this->get_all();
+    }
 
     public function get_meus_requerimentos_with_bairros($id_user)
     {
@@ -71,7 +78,7 @@ class Requerimento_model extends MY_Model
     
     public function count_requerimentos_with_bairros()
     {
-        $this->db->select('requerimentos.id_bairro, bairros.codename, COUNT(*) AS count_requerimentos_bairro,
+        $this->db->select('requerimentos.id_bairro AS id_bairro, bairros.codename, COUNT(*) AS count_requerimentos_bairro,
             bairros.nome AS nome_bairro');
         $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
         $this->db->group_by('id_bairro');

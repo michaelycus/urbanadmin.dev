@@ -6,11 +6,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Todos os bairros</span><br />Requerimentos : 4"
                             }},"americano": {
-                            "value": 1,
-                            "attrs": { fill: "#6794c6"},
-                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "value": 2,
+                            "attrs": { fill: "#5d89bd"},
+                            "text": { "content":  "2" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 1"
+                                    "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 2"
                             }},"campestre": {
                             "value": 2,
                             "attrs": { fill: "#5d89bd"},
@@ -41,12 +41,42 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 1"
-                            }},"jardim_do_cedro": {
+                            }},"hidraulica": {
                             "value": 1,
                             "attrs": { fill: "#6794c6"},
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 1"
+                                    "content": "<span style=\"font-weight:bold;\">Hidráulica</span><br />Requerimentos : 1"
+                            }},"jardim_do_cedro": {
+                            "value": 3,
+                            "attrs": { fill: "#537fb4"},
+                            "text": { "content":  "3" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 3"
+                            }},"moinhos": {
+                            "value": 2,
+                            "attrs": { fill: "#5d89bd"},
+                            "text": { "content":  "2" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 2"
+                            }},"moinhos_dagua": {
+                            "value": 1,
+                            "attrs": { fill: "#6794c6"},
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 1"
+                            }},"morro_vinte_cinco": {
+                            "value": 2,
+                            "attrs": { fill: "#5d89bd"},
+                            "text": { "content":  "2" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Morro 25</span><br />Requerimentos : 2"
+                            }},"universitario": {
+                            "value": 1,
+                            "attrs": { fill: "#6794c6"},
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 1"
                             }}}},"2": { "areas": {"bom_pastor": {
                             "value": 1,
                             "attrs": { fill: "#6794c6"},

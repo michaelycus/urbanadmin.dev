@@ -78,7 +78,7 @@
     </div>
 
     <div class="row">        
-        <div class="col-lg-12">
+        <div class="col-lg-8">
             <div class="panel panel-default">
                 <div class="panel-body">
 
@@ -95,8 +95,26 @@
 
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
-        </div><!-- End .col-lg-6  -->     
+        </div><!-- End .col-lg-8  -->     
+        
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-body">     
+                    <ul name="lista_requerimentos">
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Lorem ipsum dolor sit amet</li>
+                    </ul>
+                </div><!-- End .panel-body -->
+            </div><!-- End .widget -->
+        </div><!-- End .col-lg-8  -->
     </div><!-- End .row-fluid  -->
 </div>
 
+<?php
+echo form_input(array('name' => 'id_bairro','id' => 'id_bairro', 'style' => 'visibility:hidden'));
+?>
 
+<script type="text/javascript" src="<?php echo base_url() . 'js/requerimentos.js'; ?>"></script>
+<script type="text/javascript">
+    var path = '<?php echo site_url(); ?>';
+</script>

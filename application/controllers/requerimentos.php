@@ -169,6 +169,19 @@ class Requerimentos extends MY_Controller
         }
     }
     
+    public function visualizar($id)
+    {
+        $this->data['requerimento'] = $this->requerimento_model->get($id);
+        $this->data['bairros'] = $this->bairros_model->get_bairros();
+        $this->data['requerentes'] = $this->requerente_model->get_vereadores();
+        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
+        
+        if ($this->data['requerimento']->id_rua != 0)
+            $this->data['ruas'] = $this->cidades_model->getRuas($this->data['requerimento']->id_bairro);
+
+        $this->load_view('requerimentos/visualizar');
+    }
+    
     public function avancar_situacao($id,$situacao)
     {
         $this->requerimento_model->avancar_situacao($id, $situacao);

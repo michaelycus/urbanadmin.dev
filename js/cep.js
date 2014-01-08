@@ -1,7 +1,6 @@
 // funcao para retornar as cidades conforme o combo dos estados
 
 $(function() {
-
     $("select[name=estado]").change(function() {
 
         estado = $(this).val();

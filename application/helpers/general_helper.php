@@ -92,7 +92,6 @@ if (!function_exists('generate_charts'))
                 },
                 legend: {
                     area: {
-                        display: true,
                         title: "População de Lajeado por bairros",
                         slices: [
 EOF;
@@ -166,7 +165,6 @@ EOF;
             $(".maparea1").mapael({
                 map: {
                     name: "lajeado",
-                    width: 700,
                     defaultArea: {
                         attrs: {
                             fill: "#cadbed", stroke: "#204a87"
@@ -185,7 +183,6 @@ EOF;
                 },
                 legend: {
                     area: {
-                        display: true,
                         title: "Requerimentos por bairro",
                         slices: [
 EOF;
@@ -220,6 +217,11 @@ EOF;
                                 text: { content:  $r_b->count_requerimentos_bairro , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">$r_b->nome_bairro </span><br />Requerimentos: $r_b->count_requerimentos_bairro"},
+                                eventHandlers : {
+                                    click : function() {  
+                                        $('#id_bairro').val( $r_b->id_bairro ).change();                                        
+                                    }
+                                }                    
                             },
 EOF;
 
@@ -525,7 +527,6 @@ EOF;
                 },
                 legend: {
                     area: {
-                        display: true,
                         title: "Requerentes por bairro",
                         slices: [
 EOF;
@@ -619,7 +620,6 @@ if (!function_exists('generate_custom_chart'))
             $(".maparea1").mapael({
                 map: {
                     name: "lajeado",
-                    width: 700,
                     defaultArea: {
                         attrs: {
                             fill: "$hsl", stroke: "#204a87"
@@ -638,7 +638,6 @@ if (!function_exists('generate_custom_chart'))
                 },
                 legend: {
                     area: {
-                        display: true,
                         title: "Requerimentos por bairro"                     
 EOF;
 

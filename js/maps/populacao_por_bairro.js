@@ -6,7 +6,6 @@
                 },
                 legend: {
                     area: {
-                        display: true,
                         title: "População de Lajeado por bairros",
                         slices: [{
                         min: 0,
