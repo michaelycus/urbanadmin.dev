@@ -100,7 +100,7 @@
                         }
                         if ($chart->observacoes!=NULL)
                         {
-                            echo '<p>Observações: '.$chart->observacoes.'</p>';
+                            echo '<p>'.$chart->observacoes.'</p>';
                         }
                         ?>
 <!--                        <div class="areaLegend">

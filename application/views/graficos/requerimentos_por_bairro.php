@@ -101,8 +101,6 @@
             <div class="panel panel-default">
                 <div class="panel-body">     
                     <ul name="lista_requerimentos">
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor sit amet</li>
                     </ul>
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->

@@ -33,6 +33,8 @@ class Requerimentos extends MY_Controller
 
     public function cadastrar_requerimento()
     {        
+        $this->load->library('image_lib');
+        
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|jpeg|png';
         $config['max_size'] = '2048';
@@ -66,6 +68,17 @@ class Requerimentos extends MY_Controller
                         $file_data = $this->upload->data();
 
                         $data['anexo_'.$i] = $file_data['raw_name'].$file_data['file_ext'];
+                                                
+                        $config = array(
+                            'source_image' => $file_data['full_path'],
+                            'new_image' => './uploads/thumbs/',
+                            'maintain_ratio' => true,
+                            'width' => 100,
+                            'height' => 75
+                        );                        
+                        
+                        $this->image_lib->initialize($config);                         
+                        $this->image_lib->resize();
                     }
                     else
                     {
@@ -91,6 +104,8 @@ class Requerimentos extends MY_Controller
 
     public function editar_requerimento($id)
     {
+        $this->load->library('image_lib');
+        
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|jpeg|png';
         $config['max_size'] = '2048';
@@ -129,6 +144,17 @@ class Requerimentos extends MY_Controller
                         $file_data = $this->upload->data();
 
                         $data['anexo_'.$i] = $file_data['raw_name'].$file_data['file_ext'];
+                        
+                        $config = array(
+                            'source_image' => $file_data['full_path'],
+                            'new_image' => './uploads/thumbs/',
+                            'maintain_ratio' => true,
+                            'width' => 100,
+                            'height' => 75
+                        );                        
+                        
+                        $this->image_lib->initialize($config);                         
+                        $this->image_lib->resize();
                     }
                     else
                     {
@@ -171,13 +197,14 @@ class Requerimentos extends MY_Controller
     
     public function visualizar($id)
     {
-        $this->data['requerimento'] = $this->requerimento_model->get($id);
-        $this->data['bairros'] = $this->bairros_model->get_bairros();
-        $this->data['requerentes'] = $this->requerente_model->get_vereadores();
+        $this->data['requerimento'] = $requerimento = $this->requerimento_model->get($id);
+        $this->data['bairro'] = $this->bairros_model->get($requerimento->id_bairro);
+        $this->data['requerente'] = $this->requerente_model->get($requerimento->id_requerente);
+        $this->data['solicitante'] = $this->requerente_model->get($requerimento->id_solicitante);
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
         
-        if ($this->data['requerimento']->id_rua != 0)
-            $this->data['ruas'] = $this->cidades_model->getRuas($this->data['requerimento']->id_bairro);
+        if ($requerimento->id_rua != 0)
+            $this->data['rua'] = $this->cidades_model->get_rua($requerimento->id_rua);
 
         $this->load_view('requerimentos/visualizar');
     }

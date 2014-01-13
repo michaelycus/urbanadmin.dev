@@ -53,7 +53,7 @@
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url(); ?>images/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url(); ?>images/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="<?php echo base_url(); ?>images/ico/apple-touch-icon-57-precomposed.png">
-        <link rel="shortcut icon" href="<?php echo base_url(); ?>images/ico/favicon.png">
+        <link rel="icon" href="<?php echo base_url(); ?>images/ico/favicon.ico">
 
         <!-- Le javascript
         ================================================== -->
@@ -84,7 +84,6 @@
         <!-- Form plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/forms/uniform/jquery.uniform.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/mask/jquery.mask.min.js"></script>
-        <script src="<?php echo base_url(); ?>js/plugins/forms/datepicker/bootstrap-datepicker.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/datepicker/bootstrap-datepicker.js"></script>
                 
         <script src="<?php echo base_url(); ?>js/plugins/forms/wizard/jquery.form.js"></script>

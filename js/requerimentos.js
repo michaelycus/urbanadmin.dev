@@ -13,7 +13,7 @@ $(function() {
         $.getJSON(path + '/cep/getRequerimentos/'+bairro, function(data) {
 
             $.each(data, function(i, obj) {                
-                $('ul[name="lista_requerimentos"]').append('<li><a href="'+path+'requerimentos/visualizar/'+obj.id+'">'+obj.descricao+'</a></li>');
+                $('ul[name="lista_requerimentos"]').append('<li><a href="'+path+'requerimentos/visualizar/'+obj.id+'" target="_blank">'+obj.descricao+'</a></li>');
             });
         });
     });

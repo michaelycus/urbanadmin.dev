@@ -30,4 +30,12 @@ class Cidades_model extends CI_Model
                         ->get()->result();
         
     }
+    
+    function get_rua($id)
+    {
+        $this->db->from('ruas');
+        $this->db->where('id', $id);
+        
+        return $this->db->get()->row();
+    }
 }

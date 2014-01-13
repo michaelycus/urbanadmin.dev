@@ -59,7 +59,7 @@ class Cep extends CI_Controller
 
         foreach ($requerimentos as $req)
         {
-            $arr_req[] = '{"id":' . $req->id . ',"descricao":"' . $req->descricao . '"}';
+            $arr_req[] = '{"id":' . $req->id . ',"descricao":"' . substr($req->descricao, 0, 128)  . '"}';
         }
 
         echo '[ ' . implode(",", $arr_req) . ']';
