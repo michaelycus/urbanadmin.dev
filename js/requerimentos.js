@@ -8,18 +8,14 @@ $(function() {
         if (bairro === '')
             return false;
 
-        resetaLista('lista_requerimentos');
+        $("#table-mapa-requerimentos tr").remove(); 
 
         $.getJSON(path + '/cep/getRequerimentos/'+bairro, function(data) {
 
             $.each(data, function(i, obj) {                
-                $('ul[name="lista_requerimentos"]').append('<li><a href="'+path+'requerimentos/visualizar/'+obj.id+'" target="_blank">'+obj.descricao+'</a></li>');
+//                $('ul[name="lista_requerimentos"]').append('<li><a href="'+path+'requerimentos/visualizar/'+obj.id+'" target="_blank">'+obj.descricao+'</a></li>');
+                $('table[id="table-mapa-requerimentos"]').append('<tr><td><a href="'+path+'requerimentos/visualizar/'+obj.id+'" target="_blank">'+obj.descricao+'</a></td></tr>');
             });
         });
     });
 });
-
-function resetaLista(el) 
-{
-    $("ul[name="+el+"]").empty();
-}

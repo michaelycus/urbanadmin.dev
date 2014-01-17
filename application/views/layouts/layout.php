@@ -31,6 +31,7 @@
         <link href="<?php echo base_url(); ?>js/plugins/forms/uniform/uniform.default.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>js/plugins/forms/datepicker/datepicker.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>js/plugins/forms/switch/bootstrapSwitch.css" rel="stylesheet" />
 
         <!-- app stylesheets -->
         <link href="<?php echo base_url(); ?>css/app.css" rel="stylesheet" />
@@ -89,6 +90,8 @@
         <script src="<?php echo base_url(); ?>js/plugins/forms/wizard/jquery.form.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/wizard/jquery.form.wizard.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/validation/jquery.validate.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/forms/switch/bootstrapSwitch.js"></script>
+
 
 
         <!-- Dialogs -->
@@ -135,7 +138,7 @@
                             if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR && $_SESSION['requerimentos'] > 0)
                             {
                                 echo anchor('requerimentos/listar_requerimentos', '<i class="icon24 i-bell-2"></i>
-                                    <span class="notification red">'.$_SESSION['requerimentos'].'</span>', 'class="dropdown-toggle" data-toggle="dropdown"');
+                                    <span class="notification red">'.$_SESSION['requerimentos'].'</span>', '');
                             }
                             ?>
                         </li>
@@ -179,7 +182,7 @@
             <aside id="sidebar">
                 <div class="side-options">
                     <ul>
-                        <li><a href="#" id="collapse-nav" class="act act-primary tip" title="Collapse navigation"><i class="icon16 i-arrow-left-7"></i></a></li>
+                        <li><a href="#" id="collapse-nav" class="act act-primary tip" title="Colapsar navegação"><i class="icon16 i-arrow-left-7"></i></a></li>
                     </ul>
                 </div>
 

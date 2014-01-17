@@ -13,7 +13,7 @@ $(document).ready(function() {
                     "sSearch": "<span>Buscar:</span> _INPUT_",
                     "sLengthMenu": "<span>_MENU_ registros</span>",
                     "sInfo": "Mostrando _START_ a _END_ de _TOTAL_ registros",
-                    "oPaginate": { "sFirst": "Primeiro", "sLast": "Último" }
+                    "oPaginate": { "sFirst": "Primeiro", "sLast": "Último", "sPrevious": "Anterior", "sNext": "Próximo"  }
             }
     });
 
@@ -25,13 +25,33 @@ $(document).ready(function() {
             "bAutoWidth": false,
             "iDisplayLength": 50,
             "bLengthChange": false,
-            "aoColumnDefs": [
-                { "bSortable": false, "aTargets": [ 7 ] }],
+//            "aoColumnDefs": [
+//                { "bSortable": false, "aTargets": [ 7 ] }],
             "oLanguage": {
                 "sSearch": "<span>Buscar:</span> _INPUT_",
                 "sLengthMenu": "<span>_MENU_ registros</span>",
                 "sInfo": "Mostrando _START_ a _END_ de _TOTAL_ registros",
-                "oPaginate": { "sFirst": "Primeiro", "sLast": "Último" }
+                "oPaginate": { "sFirst": "Primeiro", "sLast": "Último", "sPrevious": "Anterior", "sNext": "Próximo"  }
+            }
+    });
+    
+    $('#table-mapa-requerimentos').dataTable( {
+            "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
+            "sPaginationType": "bootstrap",
+            "aaSorting": [[ 0, "asc" ]],
+            "bJQueryUI": false,
+            "bAutoWidth": false,
+            "bFilter": false,
+            "iDisplayLength": 5,
+            "bLengthChange": false,
+//            "oSearch": false,
+            "oLanguage": {
+//                "sSearch": "<span>Buscar:</span> _INPUT_",
+                "sLengthMenu": "<span>_MENU_ registros</span>",
+//                "sInfo": "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                "sInfoEmpty": "",
+                "sEmptyTable": "Clique no mapa para listar os requerimentos!",
+                "oPaginate": { "sFirst": "Primeiro", "sLast": "Último", "sPrevious": "Anterior", "sNext": "Próximo" }
             }
     });
     
@@ -49,7 +69,7 @@ $(document).ready(function() {
                     "sSearch": "<span>Buscar:</span> _INPUT_",
                     "sLengthMenu": "<span>_MENU_ registros</span>",
                     "sInfo": "Mostrando _START_ a _END_ de _TOTAL_ registros",
-                    "oPaginate": { "sFirst": "Primeiro", "sLast": "Último" }
+                    "oPaginate": { "sFirst": "Primeiro", "sLast": "Último", "sPrevious": "Anterior", "sNext": "Próximo"  }
             }
     });
     
@@ -67,7 +87,7 @@ $(document).ready(function() {
                     "sSearch": "<span>Buscar:</span> _INPUT_",
                     "sLengthMenu": "<span>_MENU_ registros</span>",
                     "sInfo": "Mostrando _START_ a _END_ de _TOTAL_ registros",
-                    "oPaginate": { "sFirst": "Primeiro", "sLast": "Último" }
+                    "oPaginate": { "sFirst": "Primeiro", "sLast": "Último", "sPrevious": "Anterior", "sNext": "Próximo"  }
             }
     });
 

@@ -100,8 +100,14 @@
         <div class="col-lg-4">
             <div class="panel panel-default">
                 <div class="panel-body">     
-                    <ul name="lista_requerimentos">
-                    </ul>
+                    <table cellpadding="0" cellspacing="0" border="0"
+                           class="table table-striped table-bordered table-hover" id="table-mapa-requerimentos">    
+                        <thead><tr><th></th></tr></thead>
+                        <tbody>                            
+                        </tbody>
+                    </table>
+<!--                    <ul name="lista_requerimentos">
+                    </ul>-->
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
         </div><!-- End .col-lg-8  -->

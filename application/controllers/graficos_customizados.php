@@ -22,6 +22,15 @@ class Graficos_Customizados extends MY_Controller
         $this->load_view('graficos_customizados/criar_grafico', TRUE);
     }
     
+    public function editar_grafico($id)
+    {
+        $this->data['bairros'] = $this->bairros_model->get_bairros();        
+        $this->data['grafico'] = $this->graficos_customizados_model->get($id);
+        $this->data['valores_bairros'] = $this->graficos_customizados_model->get_chart_values($id);
+        
+        $this->load_view('graficos_customizados/editar_grafico', TRUE);
+    }
+    
     public function listar_graficos()
     {
         $this->data['charts'] = $this->graficos_customizados_model->get_charts_with_requerentes();
@@ -84,8 +93,5 @@ class Graficos_Customizados extends MY_Controller
         }
         
         generate_custom_chart($next_id);
-        
-//        tem que redirecionar aqui... parece que tudo funciona ok.
-//        $this->load_view('graficos_customizados/visualizar', TRUE);
     }
 }

@@ -32,9 +32,9 @@ class Requerimentos extends MY_Controller
     }
 
     public function cadastrar_requerimento()
-    {        
+    {
         $this->load->library('image_lib');
-        
+
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|jpeg|png';
         $config['max_size'] = '2048';
@@ -54,8 +54,8 @@ class Requerimentos extends MY_Controller
             $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento',
                 'id_requerente','id_solicitante'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
-            
-            $data['notificar'] = $this->input->post('notificar') ? 1 : 0;            
+
+            $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
 
             $i = 1;
             foreach($_FILES as $field => $file)
@@ -68,16 +68,16 @@ class Requerimentos extends MY_Controller
                         $file_data = $this->upload->data();
 
                         $data['anexo_'.$i] = $file_data['raw_name'].$file_data['file_ext'];
-                                                
+
                         $config = array(
                             'source_image' => $file_data['full_path'],
                             'new_image' => './uploads/thumbs/',
                             'maintain_ratio' => true,
                             'width' => 100,
                             'height' => 75
-                        );                        
-                        
-                        $this->image_lib->initialize($config);                         
+                        );
+
+                        $this->image_lib->initialize($config);
                         $this->image_lib->resize();
                     }
                     else
@@ -92,6 +92,11 @@ class Requerimentos extends MY_Controller
             {
                 $this->requerimento_model->insert($data);
                 generate_charts();
+                
+                if ($_SESSION['autorizacao']==AUTORIZACAO_OPERADOR)
+                {
+                    alert_requirement($this->requerimento_model->get_next_id()-1);
+                }
 
                 $this->session->set_userdata('requerimento_cadastrado','Requerimento cadastrado com sucesso!');
 
@@ -105,7 +110,7 @@ class Requerimentos extends MY_Controller
     public function editar_requerimento($id)
     {
         $this->load->library('image_lib');
-        
+
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|jpeg|png';
         $config['max_size'] = '2048';
@@ -124,9 +129,9 @@ class Requerimentos extends MY_Controller
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
-            
+
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
-            
+
             if ($this->input->post('expediente'))
             {
                 $data['expediente'] = $this->input->post('expediente');
@@ -144,16 +149,16 @@ class Requerimentos extends MY_Controller
                         $file_data = $this->upload->data();
 
                         $data['anexo_'.$i] = $file_data['raw_name'].$file_data['file_ext'];
-                        
+
                         $config = array(
                             'source_image' => $file_data['full_path'],
                             'new_image' => './uploads/thumbs/',
                             'maintain_ratio' => true,
                             'width' => 100,
                             'height' => 75
-                        );                        
-                        
-                        $this->image_lib->initialize($config);                         
+                        );
+
+                        $this->image_lib->initialize($config);
                         $this->image_lib->resize();
                     }
                     else
@@ -194,7 +199,7 @@ class Requerimentos extends MY_Controller
             redirect('requerimentos/listar_requerimentos');
         }
     }
-    
+
     public function visualizar($id)
     {
         $this->data['requerimento'] = $requerimento = $this->requerimento_model->get($id);
@@ -202,49 +207,49 @@ class Requerimentos extends MY_Controller
         $this->data['requerente'] = $this->requerente_model->get($requerimento->id_requerente);
         $this->data['solicitante'] = $this->requerente_model->get($requerimento->id_solicitante);
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
-        
+
         if ($requerimento->id_rua != 0)
             $this->data['rua'] = $this->cidades_model->get_rua($requerimento->id_rua);
 
         $this->load_view('requerimentos/visualizar');
     }
-    
+
     public function avancar_situacao($id,$situacao)
     {
         $this->requerimento_model->avancar_situacao($id, $situacao);
-        
+
         $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
-        
+
         send_notification($id);
-        
+
         redirect('requerimentos/listar_requerimentos');
     }
-    
+
     public function retornar_situacao($id,$situacao)
     {
         $this->requerimento_model->retornar_situacao($id, $situacao);
-        
+
         $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
-        
+
         redirect('requerimentos/listar_requerimentos');
     }
-    
+
     public function gravar_expediente($id, $expediente, $ano)
     {
         $this->requerimento_model->gravar_expediente($id, $expediente, $ano);
-        
+
         $this->avancar_situacao($id, REQUERIMENTO_SITUACAO_ANALISADO);
-        
+
         redirect('requerimentos/listar_requerimentos');
     }
-    
+
     public function imprimir_requerimento($id)
-    {        
+    {
         $this->load->library('Pdf');
-        
+
         $requerimento = $this->requerimento_model->get($id);
         $solicitante = $this->requerente_model->get($requerimento->id_solicitante);
-        
+
         $pdf = new PDF();
         $pdf->AliasNbPages();
         $pdf->AddPage();
@@ -275,17 +280,17 @@ class Requerimentos extends MY_Controller
         $pdf->Cell(20);
 
         $pdf->Cell(0, 0, 'Nesses termos, pede referimento.', 0, 0, 'L', false);
-        $pdf->Ln(10);        
-        
+        $pdf->Ln(10);
+
         $pdf->SetFont('Arial', 'B', 12);
         $pdf->Cell(0, 0, 'Dados do solicitante:', 0, 0, 'L', false);
-                       
+
         $html = 'Nome: '. $solicitante->nome;
         if ($solicitante->telefone != '' && $solicitante->telefone != '0')
         {
             $html .= ' - Telefone: '. $solicitante->telefone;
         }
-        
+
         $pdf->Ln(10);
         $pdf->Cell(20);
 
@@ -294,11 +299,11 @@ class Requerimentos extends MY_Controller
 
         $pdf->Ln(10);
         $pdf->Cell(20);
-        
+
 
         setlocale(LC_TIME, "pt_BR", 'ptb');
         $date = strftime("%d de %B de %Y", time());
-        
+
         $pdf->Cell(0, 0, 'Lajeado, '. $date, 0, 0, 'R', false);
 
         $pdf->Ln(40);

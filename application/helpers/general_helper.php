@@ -693,7 +693,7 @@ EOF;
     }
 }
 
-function rgb2hex($rgb) {
+ function rgb2hex($rgb) {
     $hex = "#";
     $hex .= str_pad(dechex($rgb[0]), 2, "0", STR_PAD_LEFT);
     $hex .= str_pad(dechex($rgb[1]), 2, "0", STR_PAD_LEFT);
@@ -751,100 +751,6 @@ function rgb2hex($rgb) {
 
      return 'hsl('.$p1.', '. $p2.')';
  }
-
-// function get_color($color, $part)
-// {
-//     if ($color == GRAFICO_COR_AMARELO)
-//     {
-//         if ($part == 1)
-//             return 'hsl(53°, 98%, 81%)';
-//         elseif ($part == 2)
-//             return 'hsl(53°, 98%, 68%)';
-//         elseif ($part == 3)
-//             return 'hsl(53°, 98%, 42%)';
-//     }
-//     elseif ($color == GRAFICO_COR_VERDE)
-//     {
-//         if ($part == 1)
-//             return 'hsl(90°, 75%, 82%)';
-//         elseif ($part == 2)
-//             return 'hsl(90°, 75%, 61%)';
-//         elseif ($part == 3)
-//             return 'hsl(90°, 75%, 36%)';
-//     }
-//     elseif ($color == GRAFICO_COR_VERDE)
-//     {
-//         if ($part == 1)
-//             return 'hsl(90°, 75%, 82%)';
-//         elseif ($part == 2)
-//             return 'hsl(90°, 75%, 61%)';
-//         elseif ($part == 3)
-//             return 'hsl(90°, 75%, 36%)';
-//     }
-//     elseif ($color == GRAFICO_COR_LARANJA)
-//     {
-//         if ($part == 1)
-//             return 'hsl(36°, 97%, 83%)';
-//         elseif ($part == 2)
-//             return 'hsl(36°, 97%, 61%)';
-//         elseif ($part == 3)
-//             return 'hsl(36°, 97%, 36%)';
-//     }
-//
-//     switch ($color)
-//     {
-//         case GRAFICO_COR_AMARELO:
-//             switch ($part)
-//             {
-//                 case 1:
-//                     $select = 'hsl(53°, 98%, 81%)';
-//                     break;
-//
-//                 case 2:
-//                     $select = 'hsl(53°, 98%, 68%)';
-//                     break;
-//
-//                 case 3:
-//                     $select = 'hsl(53°, 98%, 42%)';
-//                     break;
-//             }
-//             break;
-//
-//         case GRAFICO_COR_AMARELO:
-//             switch ($part)
-//             {
-//                 case 1:
-//                     $select = 'hsl(53°, 98%, 81%)';
-//                     break;
-//
-//                 case 2:
-//                     $select = 'hsl(53°, 98%, 68%)';
-//                     break;
-//
-//                 case 3:
-//                     $select = 'hsl(53°, 98%, 42%)';
-//                     break;
-//             }
-//             break;
-//
-//         case GRAFICO_COR_AMARELO:
-//             switch ($part)
-//             {
-//                 case 1:
-//                     $select = 'hsl(53°, 98%, 81%)';
-//                     break;
-//
-//                 case 2:
-//                     $select = 'hsl(53°, 98%, 68%)';
-//                     break;
-//
-//                 case 3:
-//                     $select = 'hsl(53°, 98%, 42%)';
-//                     break;
-//             }
-//             break;
-//     }
-// }
 
 
  /*

@@ -44,6 +44,36 @@ if (!function_exists('send_notification')) {
     }
 }
 
+if (!function_exists('alert_requirement')) {
+    function alert_requirement ($id)
+    {
+        $ci =& get_instance();
+        
+        $ci->load->model('requerimento_model');
+        $ci->load->model('requerente_model');
+        
+        $requerimento = $ci->requerimento_model->get($id);        
+        
+        $requerente = $ci->requerente_model->get($requerimento->id_solicitante);
+
+        $ci->load->library('email');
+
+        $ci->email->from('vereadorranzi@gmail.com', 'Gabinete Vereador Ranzi');
+        $ci->email->to('vereadorranzi@gmail.com'); 
+
+        $subject = "Novo Requerimento Cadastrado!";
+        $message = "O cidadão $requerente->nome acabou de cadastrar um novo requerimento.\n\n";                
+
+        $message .= "Descrição:\n";
+        $message .= "$requerimento->descricao\n\n";     
+
+        $ci->email->subject($subject);
+        $ci->email->message($message);
+
+        $ci->email->send();        
+    }
+}
+
 if (!function_exists('reset_password')) {
     function reset_password ($email, $senha)
     {

@@ -25,40 +25,50 @@
                         min: 0,
                         max: 1,
                         attrs: {
-                            fill: "#6794c6"}
+                            fill: "#6996c7"}
                       },{
                         min: 1,
                         max: 2,
                         attrs: {
-                            fill: "#5d89bd"}
+                            fill: "#618ec0"}
                       },{
                         min: 2,
-                        max: 3,
+                        max: 4,
                         attrs: {
-                            fill: "#537fb4"}
+                            fill: "#5985b9"}
                       },{
-                        min: 3,
+                        min: 4,
                         max: 5,
                         attrs: {
-                            fill: "#4974ab"}
+                            fill: "#517db2"}
                       },{
                         min: 5,
                         max: 6,
                         attrs: {
-                            fill: "#3e69a2"}
+                            fill: "#4974ab"}
                       },{
                         min: 6,
                         max: 7,
                         attrs: {
-                            fill: "#345f99"}
+                            fill: "#406ca3"}
                       },{
                         min: 7,
                         max: 8,
                         attrs: {
-                            fill: "#2a5490"}
+                            fill: "#38639c"}
                       },{
                         min: 8,
-                        max: 9,
+                        max: 10,
+                        attrs: {
+                            fill: "#305b95"}
+                      },{
+                        min: 10,
+                        max: 11,
+                        attrs: {
+                            fill: "#28528e"}
+                      },{
+                        min: 11,
+                        max: 12,
                         attrs: {
                             fill: "#204a87"}
                       },]
@@ -85,20 +95,20 @@
                                     }
                                 }                    
                             },                            "campestre":{
-                                value: "6",
-                                text: { content:  6 , attrs: {fill:"#222"} },
+                                value: "7",
+                                text: { content:  7 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 6"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 7"},
                                 eventHandlers : {
                                     click : function() {  
                                         $('#id_bairro').val( 4 ).change();                                        
                                     }
                                 }                    
                             },                            "carneiros":{
-                                value: "8",
-                                text: { content:  8 , attrs: {fill:"#222"} },
+                                value: "11",
+                                text: { content:  11 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 8"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 11"},
                                 eventHandlers : {
                                     click : function() {  
                                         $('#id_bairro').val( 5 ).change();                                        

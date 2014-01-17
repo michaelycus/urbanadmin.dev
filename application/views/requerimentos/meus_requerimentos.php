@@ -26,7 +26,7 @@
         if (!empty($requerimentos))
         {
             foreach ($requerimentos as $requerimento):
-                $this->table->add_row(array('data'=>'<small>'.substr($requerimento->descricao, 0, 255).(strlen($requerimento->descricao)>255?"..." : "").'</small>', 'class'=>'A'),
+                $this->table->add_row(array('data'=>anchor('requerimentos/visualizar/'.$requerimento->id, '<small>'.substr($requerimento->descricao, 0, 64).(strlen($requerimento->descricao)>255?"..." : "").'</small>')),                                      
                                       array('data'=>'<small>'.$requerimento->nome_categoria.'</small>'),
                                       array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),                                      
                                       array('data'=>'<div style="display:none;">'.$requerimento->situacao.'</div>'.'<img src="'.base_url().'images/situacao_'.$requerimento->situacao.'.png">'),

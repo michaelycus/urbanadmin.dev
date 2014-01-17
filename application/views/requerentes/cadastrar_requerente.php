@@ -32,7 +32,7 @@
                 // pessoa_fisica
                 ?>
                 <div class="form-group">
-                    <label for="pessoa_fisica" class="control-label"></label>
+                    <label for="pessoa_fisica" class="col-lg-3 control-label"></label>
                     <div class="col-lg-9">
                         <label class="radio-inline">
                             <input type="radio" name="pessoa_fisica" id="pessoa_fisica_0" class="form-control" value="0" checked>
@@ -178,6 +178,17 @@
                 echo    '</div>';
                 echo '</div>';
 
+                echo '</div>';
+                
+                echo '<hr>';
+                
+                echo '<div class="form-group">';
+                echo form_label('É vereador?', 'tipo', array('class' => 'col-lg-3 control-label'));
+                echo    '<div class="col-lg-9">';                
+                echo        '<div class="switch" data-on="primary" data-off="danger" data-on-label="<i class=\'i-checkmark-3\'></i>" data-off-label="<i class=\'i-close\'></i>">';
+                echo            '<input class="toggle"controls-row type="checkbox" id="tipo" name="tipo" />';
+                echo        '</div>';
+                echo    '</div>';
                 echo '</div>';
 
                 // --- --- --- 

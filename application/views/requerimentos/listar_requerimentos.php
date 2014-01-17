@@ -30,14 +30,13 @@
             }
         });
     }
-
 </script>
 
 <div class="container-fluid">
     <div id="heading" class="page-header">
         <h1><i class="icon20 i-user-3"></i> Listar requerimentos</h1>
     </div>
-
+    
     <div class="row">
         <!-- Start page from here  -->
 
@@ -80,7 +79,8 @@
                                     '<img src="'.base_url().'images/avancar_situacao.png">') ) ),
                           'style'=>'width:130px'),
             array('data'=>'<small>'.$requerimento->expediente.'/'.$requerimento->ano_expediente. '</small>'),
-            array('data'=>($requerimento->situacao > REQUERIMENTO_SITUACAO_EM_ANALISE ?
+            array('data'=>'<div style="display:none;">'.$requerimento->data_requerimento.'</div>'.
+                          ($requerimento->situacao > REQUERIMENTO_SITUACAO_EM_ANALISE ?
                           anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->id,'<i class="i-print-3"></i> Imprimir ', array('class' => 'btn btn-block btn-warning btn-xs')).' ': '') .
                           anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-block btn-primary btn-xs')).' '.
                           anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir ',array('class' => 'confirm_delete btn btn-block btn-danger btn-xs')), 'style'=>'width:100px'));

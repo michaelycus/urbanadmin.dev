@@ -76,7 +76,9 @@ class Requerentes extends MY_Controller
             $data = elements(array('nome','pessoa_fisica','cpf','cnpj','rg','email','telefone',
                                    'profissao','endereco','mora_cidade','id_bairro',
                                    'estado','cidade','cep'),$this->input->post());
-            $data['data_cadastro'] = date('Y-m-d');
+            $data['data_cadastro'] = date('Y-m-d');            
+            
+            $data['tipo'] = $this->input->post('tipo') ? 1 : 0;
 
             $this->requerente_model->insert($data);
             generate_charts();

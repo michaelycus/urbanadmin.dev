@@ -90,6 +90,11 @@
                                 text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerentes: 1"},
+                            },                            "montanha":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Montanha </span><br />Requerentes: 1"},
                             },                            "santo_andre":{
                                 value: "1",
                                 text: { content:  1 , attrs: {fill:"#222"} },
