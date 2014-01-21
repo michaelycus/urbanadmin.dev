@@ -89,6 +89,12 @@
 
                     <div class="maparea1">
                         <h3><?php echo $chart->titulo; ?></h3>
+                        <?php
+                        if ($chart->observacoes!=NULL)
+                        {
+                            echo '<p>'.$chart->observacoes.'</p>';
+                        }
+                        ?>
                         <div class="map">
                             <span>Alternative content for the map</span>
                         </div>
@@ -97,11 +103,7 @@
                         if ($chart->fonte!=NULL)
                         {
                             echo '<p><i>Fonte: '.$chart->fonte.'</i></p>';
-                        }
-                        if ($chart->observacoes!=NULL)
-                        {
-                            echo '<p>'.$chart->observacoes.'</p>';
-                        }
+                        }                        
                         ?>
 <!--                        <div class="areaLegend">
                             <span>Alternative content for the legend</span>

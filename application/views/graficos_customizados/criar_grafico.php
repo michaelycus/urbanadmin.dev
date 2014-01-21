@@ -63,7 +63,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-lg-2 control-label" for="observacoes">Observações</label>
+                                <label class="col-lg-2 control-label" for="observacoes">Subtítulo</label>
                                 <div class="col-lg-10">
                                     <textarea class="form-control" type="text" id="observacoes" name="observacoes"></textarea>
                                 </div>

@@ -279,7 +279,7 @@ class Requerimentos extends MY_Controller
         $pdf->Ln(10);
         $pdf->Cell(20);
 
-        $pdf->Cell(0, 0, 'Nesses termos, pede referimento.', 0, 0, 'L', false);
+        $pdf->Cell(0, 0, 'Nesses termos, pede deferimento.', 0, 0, 'L', false);
         $pdf->Ln(10);
 
         $pdf->SetFont('Arial', 'B', 12);
