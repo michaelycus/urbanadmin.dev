@@ -126,6 +126,13 @@ class Requerimento_model extends MY_Model
         return $array_result;
     }
     
+    public function get_requerimento_by_solicitante($id)
+    {
+        $this->db->where('id_solicitante', $id);        
+        
+        return $this->get_all();
+    }
+    
     public function count_requerimentos_em_analise()
     {
         $this->db->where('requerimentos.situacao', REQUERIMENTO_SITUACAO_EM_ANALISE);

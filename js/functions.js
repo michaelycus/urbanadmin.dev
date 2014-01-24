@@ -33,3 +33,35 @@ $(function () {
         format: "dd/mm/yyyy"
     });
 });
+
+function expediente(base_url, id)
+{
+    var currentYear = new Date().getFullYear();
+
+    var states = {
+        state0: {
+            title: 'Informe o nº do protocolo',
+            html: '<label>Nº: <input type="text" name="n_protocolo" id="n_protocolo" autofocus value=""><select name="ano" id="ano"><option value="'+(currentYear-4)+'">'+(currentYear-4)+'</option><option value="'+(currentYear-3)+'">'+(currentYear-3)+'</option><option value="'+(currentYear-2)+'">'+(currentYear-2)+'</option><option value="'+(currentYear-1)+'">'+(currentYear-1)+'</option><option value="'+(currentYear)+'" selected>'+(currentYear)+'</option><option value="'+(currentYear+1)+'">'+(currentYear+1)+'</option><option value="'+(currentYear+2)+'">'+(currentYear+2)+'</option></select></label><br />',
+           buttons: {
+                Informar: 1
+            },
+            submit: function(e, v, m, f) {
+                window.location.replace(base_url + "requerimentos/gravar_expediente/"+id+"/"+f.n_protocolo+"/"+f.ano);
+            }
+        }
+    };
+
+    $.prompt(states, {
+        classes: {
+            box: '',
+            fade: 'modal fade',
+            prompt: 'panel panel-default',
+            close: 'close',
+            title: 'modal-header',
+            message: 'modal-body',
+            buttons: 'modal-footer',
+            button: 'btn',
+            defaultButton: 'btn btn-primary'
+        }
+    });
+}

@@ -26,7 +26,7 @@
         if (!empty($requerentes))
         {
             foreach ($requerentes as $requerente):
-                $this->table->add_row(array('data'=>'<small>'.$requerente->nome.'</small>'),
+                $this->table->add_row(array('data'=>'<small>'. anchor('requerentes/visualizar/'.$requerente->id, $requerente->nome) .'</small>'),
                                       array('data'=>'<small>'.$requerente->email.'</small>'),
                                       array('data'=>'<small>'.$requerente->nome_bairro.'</small>'),
                                       array('data'=>anchor('requerentes/editar_requerente/'.$requerente->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.

@@ -41,10 +41,9 @@
                         break;
                 }
                 
-                $this->table->add_row(array('data'=>'<small><strong><i class="icon24 '. $icon .' blue"></i> '.$chart->titulo.'</strong>'.'</small>'),
+                $this->table->add_row(array('data'=>'<small><strong><i class="icon24 '. $icon .' blue"></i> '. anchor('graficos_customizados/visualizar_grafico/'.$chart->id, $chart->titulo) .'</strong>'.'</small>'),
                                       array('data'=>'<small>'.$chart->nome_requerente.'</small>'),
-                                      array('data'=>'<div style="display:none;">'.$chart->data.'</div>'.
-                                                    anchor('graficos_customizados/visualizar_grafico/'.$chart->id,'<i class="icon-search"></i> Visualizar ', array('class' => 'btn btn-block btn-warning btn-xs')).' '.                                          
+                                      array('data'=>'<div style="display:none;">'.$chart->data.'</div>'.                                                   
                                                     anchor('graficos_customizados/editar_grafico/'.$chart->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-block btn-primary btn-xs')).' '.
                                                     anchor('graficos_customizados/excluir_grafico/'.$chart->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-block btn-danger btn-xs')), 'style'=>'width:100px'));
             endforeach;

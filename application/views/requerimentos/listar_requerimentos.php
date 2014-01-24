@@ -1,37 +1,3 @@
-<script>
-    function expediente(id)
-    {
-        var currentYear = new Date().getFullYear();
-
-        var states = {
-            state0: {
-                title: 'Informe o nº do protocolo',
-                html: '<label>Nº: <input type="text" name="n_protocolo" id="n_protocolo" autofocus value=""><select name="ano" id="ano"><option value="'+(currentYear-4)+'">'+(currentYear-4)+'</option><option value="'+(currentYear-3)+'">'+(currentYear-3)+'</option><option value="'+(currentYear-2)+'">'+(currentYear-2)+'</option><option value="'+(currentYear-1)+'">'+(currentYear-1)+'</option><option value="'+(currentYear)+'" selected>'+(currentYear)+'</option><option value="'+(currentYear+1)+'">'+(currentYear+1)+'</option><option value="'+(currentYear+2)+'">'+(currentYear+2)+'</option></select></label><br />',
-               buttons: {
-                    Informar: 1
-                },
-                submit: function(e, v, m, f) {
-                    window.location.replace("<?php echo base_url(); ?>requerimentos/gravar_expediente/"+id+"/"+f.n_protocolo+"/"+f.ano);
-                }
-            }
-        };
-
-        $.prompt(states, {
-            classes: {
-                box: '',
-                fade: 'modal fade',
-                prompt: 'panel panel-default',
-                close: 'close',
-                title: 'modal-header',
-                message: 'modal-body',
-                buttons: 'modal-footer',
-                button: 'btn',
-                defaultButton: 'btn btn-primary'
-            }
-        });
-    }
-</script>
-
 <div class="container-fluid">
     <div id="heading" class="page-header">
         <h1><i class="icon20 i-user-3"></i> Listar requerimentos</h1>
@@ -66,7 +32,8 @@
                                       array('data'=>'<small><a href="#" data-toggle="popover" data-placement="top" data-content="'.$requerimento->telefone.'" title=""
                                           data-original-title="Telefone">'.$requerimento->nome_solicitante.'</a></small>'),
                                       array('data'=>'<small>'.$requerimento->nome_requerente.'</small>'),
-            array('data'=>'<div style="display:none;">'.$requerimento->situacao.'</div>'.($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
+            array('data'=>'<div style="display:none;">'.$requerimento->situacao.'</div>'.
+                          ($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
                               '<img src="'.base_url().'images/retornar_situacao_d.png"> ' :
                               anchor('requerimentos/retornar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
                                   '<img src="'.base_url().'images/retornar_situacao.png"> ' )).
@@ -74,7 +41,7 @@
                           ($requerimento->situacao==REQUERIMENTO_SITUACAO_RESOLVIDO ?
                               '<img src="'.base_url().'images/avancar_situacao_d.png">':
                               ($requerimento->situacao==REQUERIMENTO_SITUACAO_ANALISADO ?
-                                    '<img src="'.base_url().'images/avancar_situacao.png" style="cursor: pointer;" onclick="expediente('.$requerimento->id.')">' :
+                                    '<img src="'.base_url().'images/avancar_situacao.png" style="cursor: pointer;" onclick="expediente(\''.base_url().'\','.$requerimento->id.')">' :
                                   anchor('requerimentos/avancar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
                                     '<img src="'.base_url().'images/avancar_situacao.png">') ) ),
                           'style'=>'width:130px'),

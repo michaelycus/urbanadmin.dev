@@ -202,6 +202,13 @@ class Requerimentos extends MY_Controller
 
     public function visualizar($id)
     {
+        if ( $this->input->post('user_email') && $this->input->post('user_message') )
+        {
+            send_message($this->input->post('user_email'), $this->input->post('user_message'));
+            
+            $this->session->set_userdata('mensagem_enviada','Mensagem enviada com sucesso!');
+        }
+        
         $this->data['requerimento'] = $requerimento = $this->requerimento_model->get($id);
         $this->data['bairro'] = $this->bairros_model->get($requerimento->id_bairro);
         $this->data['requerente'] = $this->requerente_model->get($requerimento->id_requerente);
@@ -222,7 +229,7 @@ class Requerimentos extends MY_Controller
 
         send_notification($id);
 
-        redirect('requerimentos/listar_requerimentos');
+        redirect('requerimentos/visualizar/'.$id);
     }
 
     public function retornar_situacao($id,$situacao)
@@ -231,7 +238,7 @@ class Requerimentos extends MY_Controller
 
         $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
 
-        redirect('requerimentos/listar_requerimentos');
+        redirect('requerimentos/visualizar/'.$id);
     }
 
     public function gravar_expediente($id, $expediente, $ano)
@@ -240,7 +247,7 @@ class Requerimentos extends MY_Controller
 
         $this->avancar_situacao($id, REQUERIMENTO_SITUACAO_ANALISADO);
 
-        redirect('requerimentos/listar_requerimentos');
+        redirect('requerimentos/visualizar/'.$id);
     }
 
     public function imprimir_requerimento($id)

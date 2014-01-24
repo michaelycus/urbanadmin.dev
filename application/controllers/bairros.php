@@ -62,7 +62,7 @@ class Bairros extends MY_Controller
 
     public function excluir_bairro($id)
     {   
-        if ($_SESSION['autorizacao'==AUTORIZACAO_ADMINISTRADOR])
+        if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
         {
             $this->bairros_model->delete($id);
             generate_charts();

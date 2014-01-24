@@ -48,7 +48,7 @@
 				});
 			}
 			function createLettersHtml() {
-				var html = []; for (var i = 1; i < letters.length; i++) { if (html.length == 0) html.push('<a class="all" href="#">ALL</a><a class="_" href="#">0-9</a>'); html.push('<a class="' + letters[i] + '" href="#">' + ((letters[i] == '-') ? '...' : letters[i].toUpperCase()) + '</a>'); }
+				var html = []; for (var i = 1; i < letters.length; i++) { if (html.length == 0) html.push('<a class="all" href="#">TODOS</a><a class="_" href="#">0-9</a>'); html.push('<a class="' + letters[i] + '" href="#">' + ((letters[i] == '-') ? '...' : letters[i].toUpperCase()) + '</a>'); }
 				return '<div class="ln-letters">' + html.join('') + '</div>' + ((opts.showCounts) ? '<div class="ln-letter-count" style="display:none; position:absolute; top:0; left:0; width:20px;">0</div>' : '');
 			}
 			init();

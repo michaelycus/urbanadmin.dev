@@ -141,7 +141,7 @@ class Requerentes extends MY_Controller
 
     public function excluir_requerente($id)
     {
-        if ($_SESSION['autorizacao'==AUTORIZACAO_ADMINISTRADOR])
+        if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
         {
             $path = $this->uri->segment(4);
 
@@ -172,5 +172,33 @@ class Requerentes extends MY_Controller
         echo '[ ' . implode(",", $arr_cidade) . ']';
 
         return;
+    }
+    
+    public function visualizar($id)
+    {
+        if ( $this->input->post('user_email') && $this->input->post('user_message') )
+        {
+            send_message($this->input->post('user_email'), $this->input->post('user_message'));
+            
+            $this->session->set_userdata('mensagem_enviada','Mensagem enviada com sucesso!');
+        }
+            
+        $this->load->model('requerimento_model');
+        
+        $this->data['requerente'] = $requerente = $this->requerente_model->get($id);
+        
+        $this->data['requerimentos'] = $this->requerimento_model->get_requerimento_by_solicitante($id);
+        
+        if ($requerente->id_bairro)
+            $this->data['bairro'] = $this->bairros_model->get($requerente->id_bairro);
+        
+        if ($requerente->estado)
+        {
+            $this->load->model('cidades_model');
+            $this->data['estado'] = $this->cidades_model->get_estado($requerente->estado);
+            $this->data['cidade'] = $this->cidades_model->get_cidade($requerente->cidade);
+        }
+
+        $this->load_view('requerentes/visualizar');
     }
 }

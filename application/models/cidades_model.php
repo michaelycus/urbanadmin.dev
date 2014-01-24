@@ -31,6 +31,22 @@ class Cidades_model extends CI_Model
         
     }
     
+    function get_estado($id)
+    {
+        $this->db->from('estados');
+        $this->db->where('id', $id);
+        
+        return $this->db->get()->row();
+    }
+    
+    function get_cidade($id)
+    {
+        $this->db->from('cidades');
+        $this->db->where('id', $id);
+        
+        return $this->db->get()->row();
+    }
+    
     function get_rua($id)
     {
         $this->db->from('ruas');

@@ -331,6 +331,24 @@
                                     </li>
                                 </ul>
                             </li>      
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="icon20 i-phone-2"></i></span>
+                                    <span class="txt">Contatos</span>
+                                </a>
+                                <ul class="sub<?php echo ($cat=='contatos' ? ' show' : '')?>">
+                                    <li>
+                                        <?php echo anchor('contatos/cadastrar_contato',
+                                                '<i class="icon20 i-contact-add-2"></i>
+                                                 <span class="txt">Cadastrar contato</span>');?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('contatos/listar_contatos',
+                                                '<i class="icon20 i-address-book-2"></i>
+                                                 <span class="txt">Listar contatos</span>');?>
+                                    </li>
+                                </ul>
+                            </li>      
                             
                             <?php
                             }
@@ -373,23 +391,6 @@
                                 
                                 echo '<li'. ($cat=='graficos_customizados' ? ' class="active"><i class="icon16 i-wand-2"></i></li>' :
                                         '>'.anchor('graficos_customizados/listar_graficos', '<i class="icon16 i-wand-2"></i>').'</li>');
-//                                echo '<li'. ($cat=='login/inicio' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
-//                                        '>'.anchor('login/inicio', '<i class="icon16 i-home-3"></i>Início') .'</li>');
-//
-//                                echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Requerimentos</li>' :
-//                                        '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>Requerimentos') .'</li>');
-//
-//                                echo '<li'. ($cat=='requerentes' ? ' class="active"><i class="icon16 i-users"></i>Requerentes</li>' :
-//                                        '>'.anchor('requerentes/da_cidade', '<i class="icon16 i-users"></i>Requerentes') .'</li>');
-//
-//                                echo '<li'. ($cat=='bairros' ? ' class="active"><i class="icon16 i-office"></i>Bairros</li>' :
-//                                        '>'.anchor('bairros/listar_bairros', '<i class="icon16 i-office"></i>Bairros') .'</li>');
-//
-//                                echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i>Gráficos</li>' :
-//                                        '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>Gráficos').'</li>');
-//                                
-//                                echo '<li'. ($cat=='graficos_customizados' ? ' class="active"><i class="icon16 i-wand-2"></i>Gráficos Customizados</li>' :
-//                                        '>'.anchor('graficos_customizados/listar_graficos', '<i class="icon16 i-wand-2"></i>Gráficos Customizados').'</li>');
                             }
                             ?>
                         </ul>

@@ -102,4 +102,30 @@ if (!function_exists('reset_password')) {
         $ci->email->send();        
     }
 }
+
+if (!function_exists('send_message')) {
+    function send_message ($email, $message)
+    {
+        $ci =& get_instance();        
+            
+        $ci->load->library('email');
+
+        $ci->email->from('vereadorranzi@gmail.com', 'Gabinete Vereador Ranzi');
+        $ci->email->to($email); 
+        
+        $subject = "[Mensagem Protocolo eletrônico]";
+        
+        $message .= " \n\n";        
+
+        $message .= "Atenciosamente,\n";
+        $message .= "Gabinete do Vereador Ranzi  \n\n";
+        
+        $message .= "http://www.ranzi.com.br/requerimento \n\n";
+
+        $ci->email->subject($subject);
+        $ci->email->message($message);	
+
+        $ci->email->send();        
+    }
+}
 ?>
