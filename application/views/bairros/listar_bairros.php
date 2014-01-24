@@ -4,11 +4,11 @@
     </div>
 
     <div class="row">
-        <!-- Start page from here  -->        
-        
+        <!-- Start page from here  -->
+
         <?php
         $tmpl = array(
-            'table_open' => '<table cellpadding="0" cellspacing="0" border="0" 
+            'table_open' => '<table cellpadding="0" cellspacing="0" border="0"
                               class="table table-striped table-bordered table-hover" id="dataTable">',
             'table_close' => '</table>'
         );
@@ -24,7 +24,7 @@
         $this->table->set_heading('Bairro', 'População', 'Presidente', 'Telefone', 'E-mail', '');
 
         if (!empty($bairros))
-        {        
+        {
             foreach ($bairros as $bairro):
                 $this->table->add_row(array('data'=>'<small><strong>'.$bairro->nome.'</strong>'.'</small>'),
                                       array('data'=>'<small>'.$bairro->populacao.'</small>'),
@@ -44,5 +44,4 @@
         ?>
 
     </div><!-- End .row-fluid  -->
-</div> 
-    
+</div>

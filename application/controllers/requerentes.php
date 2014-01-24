@@ -76,8 +76,8 @@ class Requerentes extends MY_Controller
             $data = elements(array('nome','pessoa_fisica','cpf','cnpj','rg','email','telefone',
                                    'profissao','endereco','mora_cidade','id_bairro',
                                    'estado','cidade','cep'),$this->input->post());
-            $data['data_cadastro'] = date('Y-m-d');            
-            
+            $data['data_cadastro'] = date('Y-m-d');
+
             $data['tipo'] = $this->input->post('tipo') ? 1 : 0;
 
             $this->requerente_model->insert($data);
@@ -98,13 +98,13 @@ class Requerentes extends MY_Controller
     public function editar_requerente($id)
     {
         $this->form_validation->set_rules('nome', 'NOME', 'trim|required|max_length[64]');
-        
+
         if ( $this->input->post('password') != '' && $this->input->post('password2') !=''  )
         {
             $this->form_validation->set_rules('password', 'SENHA', 'trim|required|min_length[5]|matches[password2]');
             $this->form_validation->set_rules('password2', 'REPETIR SENHA', 'trim|required|min_length[5]');
-        }        
-        
+        }
+
         if ($this->input->post('pessoa_fisica') == PESSOA_FISICA)
             $this->form_validation->set_rules('cpf', 'CPF', 'required|valid_cpf');
         if ($this->input->post('pessoa_fisica') == PESSOA_JURIDICA)
@@ -119,7 +119,7 @@ class Requerentes extends MY_Controller
             if ( $this->input->post('password') != '' && $this->input->post('password2') !=''  )
                 $data['password'] = md5($this->input->post('password'));
 
-            
+
             $this->requerente_model->update($this->input->post('id'), $data);
             generate_charts();
 
@@ -150,7 +150,7 @@ class Requerentes extends MY_Controller
 
             $this->session->set_userdata('requerente_excluido','Requerente excluído com sucesso!');
             redirect('requerentes/'.$path);
-        }        
+        }
     }
 
     function getCidades($id)
@@ -173,25 +173,25 @@ class Requerentes extends MY_Controller
 
         return;
     }
-    
+
     public function visualizar($id)
     {
         if ( $this->input->post('user_email') && $this->input->post('user_message') )
         {
             send_message($this->input->post('user_email'), $this->input->post('user_message'));
-            
+
             $this->session->set_userdata('mensagem_enviada','Mensagem enviada com sucesso!');
         }
-            
+
         $this->load->model('requerimento_model');
-        
+
         $this->data['requerente'] = $requerente = $this->requerente_model->get($id);
-        
+
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimento_by_solicitante($id);
-        
+
         if ($requerente->id_bairro)
             $this->data['bairro'] = $this->bairros_model->get($requerente->id_bairro);
-        
+
         if ($requerente->estado)
         {
             $this->load->model('cidades_model');

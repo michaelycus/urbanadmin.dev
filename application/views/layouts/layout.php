@@ -67,32 +67,27 @@
         <script src="<?php echo base_url(); ?>js/plugins/core/jrespond/jRespond.min.js"></script>
         <script src="<?php echo base_url(); ?>js/jquery.genyxAdmin.js"></script>
 
-
         <!-- Charts plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/charts/pie-chart/jquery.easy-pie-chart.js"></script>
-        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.js"></script>
-        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.pie.js"></script>
-        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.resize.js"></script>
-        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.tooltip.min.js"></script>
-        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.orderBars.js"></script>
-        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.time.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/charts/sparklines/jquery.sparkline.min.js"></script>
-        <script src="<?php echo base_url(); ?>js/plugins/charts/flot/date.js"></script> <!-- Only for generating random data delete in production site-->
-        <script src="<?php echo base_url(); ?>js/plugins/charts/pie-chart/jquery.easy-pie-chart.js"></script>
-        <script src="<?php echo base_url(); ?>js/plugins/charts/gauge/raphael.2.1.0.min.js"></script>
-        <!--<script src="<?php echo base_url(); ?>js/plugins/charts/gauge/justgage.1.0.1.min.js"></script>-->
+
+
+        <!--<script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.js"></script>-->
+        <!--<script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.pie.js"></script>-->
+        <!--<script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.resize.js"></script>-->
+        <!--<script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.tooltip.min.js"></script>-->
+        <!--<script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.orderBars.js"></script>-->
+        <!--<script src="<?php echo base_url(); ?>js/plugins/charts/flot/jquery.flot.time.min.js"></script>-->
+        <!--<script src="<?php echo base_url(); ?>js/plugins/charts/gauge/raphael.2.1.0.min.js"></script>-->
 
         <!-- Form plugins -->
         <script src="<?php echo base_url(); ?>js/plugins/forms/uniform/jquery.uniform.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/mask/jquery.mask.min.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/datepicker/bootstrap-datepicker.js"></script>
-                
         <script src="<?php echo base_url(); ?>js/plugins/forms/wizard/jquery.form.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/wizard/jquery.form.wizard.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/validation/jquery.validate.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/switch/bootstrapSwitch.js"></script>
-
-
 
         <!-- Dialogs -->
         <script src="<?php echo base_url(); ?>js/jquery-impromptu.min.js"></script>
@@ -105,15 +100,17 @@
         <script src="<?php echo base_url(); ?>js/plugins/ui/animated-progress-bar/jquery.progressbar.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/ui/jgrowl/jquery.jgrowl.js"></script>
 
+        <!-- Misc plugins -->
+        <script src="<?php echo base_url(); ?>js/plugins/misc/listnav/jquery.listnav.min-2.1.js"></script>
+
         <!-- Init plugins -->
         <script src="<?php echo base_url(); ?>js/app.js"></script><!-- Core js functions -->
+        <script src="<?php echo base_url(); ?>js/pages/widgets.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/ui-elements.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/domready.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/data-tables.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/form-wizard.js"></script><!-- Init plugins only for page -->
 
-        <!--<script src="<?php echo base_url(); ?>js/pages/dashboard.js"></script> Esse puglin impossibilita o carregamento do mapael -->
-        
         <!-- Bootstrap script -->
         <script src="<?php echo base_url(); ?>js/bootstrap/bootbox.min.js"></script>
 
@@ -330,7 +327,7 @@
                                                  <span class="txt">Listar gráficos</span>');?>
                                     </li>
                                 </ul>
-                            </li>      
+                            </li>
                             <li>
                                 <a href="#">
                                     <span class="icon"><i class="icon20 i-phone-2"></i></span>
@@ -348,8 +345,8 @@
                                                  <span class="txt">Listar contatos</span>');?>
                                     </li>
                                 </ul>
-                            </li>      
-                            
+                            </li>
+
                             <?php
                             }
                             ?>
@@ -388,7 +385,7 @@
 
                                 echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i></li>' :
                                         '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>').'</li>');
-                                
+
                                 echo '<li'. ($cat=='graficos_customizados' ? ' class="active"><i class="icon16 i-wand-2"></i></li>' :
                                         '>'.anchor('graficos_customizados/listar_graficos', '<i class="icon16 i-wand-2"></i>').'</li>');
                             }

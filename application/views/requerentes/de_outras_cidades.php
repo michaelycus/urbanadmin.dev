@@ -8,7 +8,7 @@
 
         <?php
         $tmpl = array(
-            'table_open' => '<table cellpadding="0" cellspacing="0" border="0" 
+            'table_open' => '<table cellpadding="0" cellspacing="0" border="0"
                               class="table table-striped table-bordered table-hover" id="dataTable">',
             'table_close' => '</table>'
         );
@@ -24,7 +24,7 @@
         $this->table->set_heading('Nome', 'E-mail', 'Cidade', '');
 
         if (!empty($requerentes))
-        {        
+        {
             foreach ($requerentes as $requerente):
                 $this->table->add_row(array('data'=>'<small>'. anchor('requerentes/visualizar/'.$requerente->id, $requerente->nome) .'</small>'),
                                       array('data'=>'<small>'.$requerente->email.'</small>'),
@@ -42,5 +42,4 @@
         ?>
 
     </div><!-- End .row-fluid  -->
-</div> 
-    
+</div>

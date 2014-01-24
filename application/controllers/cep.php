@@ -5,11 +5,11 @@ class Cep extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        
+
         $this->load->model('cidades_model');
         $this->load->model('requerimento_model');
     }
-    
+
     function getCidades($id)
     {
         $cidades = $this->cidades_model->getCidades($id);
@@ -28,7 +28,7 @@ class Cep extends CI_Controller
 
         return;
     }
-    
+
     function getRuas($id)
     {
         $ruas = $this->cidades_model->getRuas($id);
@@ -47,7 +47,7 @@ class Cep extends CI_Controller
 
         return;
     }
-    
+
     function getRequerimentos($id_bairro)
     {
         $requerimentos = $this->requerimento_model->get_requerimentos_by_bairro($id_bairro);

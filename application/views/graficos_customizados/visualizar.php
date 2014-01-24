@@ -55,11 +55,11 @@
         font-weight:bold;
         left : 10px;
 
-        -webkit-user-select: none; 
+        -webkit-user-select: none;
         -khtml-user-select: none;
-        -moz-user-select: none; 
+        -moz-user-select: none;
         -o-user-select: none;
-        user-select: none; 
+        user-select: none;
     }
 
     .zoomOut {
@@ -82,7 +82,7 @@
         <h1><i class="icon20 i-wand"></i>Gráfico: <?php echo $chart->titulo; ?></h1>
     </div>
 
-    <div class="row">        
+    <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -98,12 +98,12 @@
                         <div class="map">
                             <span>Alternative content for the map</span>
                         </div>
-                        
+
                         <?php
                         if ($chart->fonte!=NULL)
                         {
                             echo '<p><i>Fonte: '.$chart->fonte.'</i></p>';
-                        }                        
+                        }
                         ?>
 <!--                        <div class="areaLegend">
                             <span>Alternative content for the legend</span>
@@ -112,6 +112,6 @@
 
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
-        </div><!-- End .col-lg-6  -->     
+        </div><!-- End .col-lg-6  -->
     </div><!-- End .row-fluid  -->
 </div>

@@ -108,15 +108,15 @@ class Pdf extends FPDF
 // Page header
     function Header()
     {
-        // Logo        
-        $this->Image(base_url() . 'images/brasao.jpg', 15, 15, 30);        
-        
+        // Logo
+        $this->Image(base_url() . 'images/brasao.jpg', 15, 15, 30);
+
         $this->SetFont('Arial', 'B', 12);
-        
+
         $this->Ln(5);
-        
+
         $this->Cell(50);
-        $this->MultiCell(100, 6, "Prefeitura Municipal de Lajeado", 0, 'C', false);        
+        $this->MultiCell(100, 6, "Prefeitura Municipal de Lajeado", 0, 'C', false);
 
         $this->Ln(20);
 
@@ -125,7 +125,7 @@ class Pdf extends FPDF
         $this->Cell(0, 0, 'REQUERIMENTO', 0, 0, 'C', false);
 
         $this->Ln(20);
-        
+
         $this->Cell(0);
     }
 
@@ -135,7 +135,7 @@ class Pdf extends FPDF
         $this->SetTextColor(100, 100, 110);
 
         $this->SetY(-30);
-        
+
         $this->SetFont('Arial', 'B', 11);
 
         $this->Cell(20);

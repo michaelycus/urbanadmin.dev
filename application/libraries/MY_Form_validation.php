@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Esta classe estende a biblioteca de validação nativa do CodeIgniter.
  *
  * @author Carlos Eduardo da Silva, Michael Marques
- * @package libraries 
+ * @package libraries
  */
 class MY_Form_validation extends CI_Form_validation
 {
@@ -42,7 +42,7 @@ class MY_Form_validation extends CI_Form_validation
             return FALSE;
         }
     }
-    
+
     public function convert_human_to_sql($date)
     {
         if (!empty($date))
@@ -53,19 +53,19 @@ class MY_Form_validation extends CI_Form_validation
             // The string dated is now in yyyy-mm-dd format
 
             return $dated;
-        }        
+        }
     }
-    
+
     public function convert_sql_to_human($date)
     {
         $date=explode("-",$date);
         // where the date is a sql value like yyyy-mm-dd
         $dated=$date[2]."/".$date[1]."/".$date[0];
         // The string dated is now in mm/dd/yyyy format
-        
+
         return $dated;
     }
-    
+
     /**
      *
      * valid_cpf
@@ -129,7 +129,7 @@ class MY_Form_validation extends CI_Form_validation
             return true;
         }
     }
-    
+
     function valid_cpf_cnpj($cpf_cnpj)
     {
         return ($this->valid_cpf($cpf_cnpj) || $this->valid_cnpj($cpf_cnpj));

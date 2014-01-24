@@ -7,7 +7,7 @@
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <div class="icon"><i class="icon20 i-list-4"></i></div> 
+                    <div class="icon"><i class="icon20 i-list-4"></i></div>
                     <h4>Dados</h4>
                     <a href="#" class="minimize"></a>
                 </div><!-- End .panel-heading -->
@@ -69,12 +69,12 @@
                                     echo '<dd>' . $requerente->cep . '</dd>';
                                 }
 
-                                ?>                        
+                                ?>
                             </dl>
-                            
+
                         </div>
                     </div><!-- End .row-fluid  -->
-                    
+
                     <hr>
 
                     <div class="row">
@@ -93,7 +93,7 @@
                         </div>
                         <div class="col-lg-9" id="messenger">
 
-                            <?php 
+                            <?php
                             echo form_open('requerentes/visualizar/'.$requerente->id, 'class="form-horizontal pad15 pad-bottom0" role="form"');
 
                             if ($this->session->userdata('mensagem_enviada'))
@@ -110,20 +110,20 @@
                                     <textarea name="user_message" id="user_message" class="form-control" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
 
                                 </div><!-- End .form-group  -->
-                                <div class="form-group">                            
+                                <div class="form-group">
                                     <button type="submit" class="btn btn-primary pull-right">Enviar mensagem</button>
                                 </div><!-- End .form-group  -->
                             <?php echo form_close(); ?>
-                            
+
                         </div>
 
                         <?php
 
                         echo form_input(array('name' => 'id_bairro','id' => 'id_bairro', 'style' => 'visibility:hidden'));
-                        ?>    
+                        ?>
 
-                    </div>                        
-                
+                    </div>
+
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
         </div><!-- End .col-lg-6  -->
@@ -131,13 +131,13 @@
         <div class="col-lg-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <div class="icon"><i class="icon20 i-list"></i></div> 
+                    <div class="icon"><i class="icon20 i-list"></i></div>
                     <h4>Requerimentos</h4>
                     <a href="#" class="minimize"></a>
                 </div><!-- End .panel-heading -->
                 <div class="panel-body">
                     <?php
-                    
+
                     $tmpl = array(
                         'table_open' => '<table cellpadding="0" cellspacing="0" border="0"
                                           class="table table-striped table-bordered table-hover" id="table-requerimentos">',
@@ -162,17 +162,17 @@
                     {
                         echo '<div class="alert alert-info">Nenhum requerimento cadastrado!</div>';
                     }
-                    
+
                     ?>
                 </div>
             </div>
         </div>
-    </div><!-- End .row-fluid  -->   
+    </div><!-- End .row-fluid  -->
 </div>
 
 <script>
     $("#messenger").hide();
-    
+
     function show_messenger()
     {
         $("#messenger").show(600);

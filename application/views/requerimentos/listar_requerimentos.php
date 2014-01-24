@@ -2,7 +2,7 @@
     <div id="heading" class="page-header">
         <h1><i class="icon20 i-user-3"></i> Listar requerimentos</h1>
     </div>
-    
+
     <div class="row">
         <!-- Start page from here  -->
 
@@ -27,7 +27,7 @@
         {
             foreach ($requerimentos as $requerimento):
                 $this->table->add_row(array('data'=>anchor('requerimentos/visualizar/'.$requerimento->id, '<small>'.substr($requerimento->descricao, 0, 64).(strlen($requerimento->descricao)>255?"..." : "").'</small>')),
-                                      array('data'=>'<small>'.$requerimento->nome_categoria.'</small>'),                                      
+                                      array('data'=>'<small>'.$requerimento->nome_categoria.'</small>'),
                                       array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),
                                       array('data'=>'<small><a href="#" data-toggle="popover" data-placement="top" data-content="'.$requerimento->telefone.'" title=""
                                           data-original-title="Telefone">'.$requerimento->nome_solicitante.'</a></small>'),

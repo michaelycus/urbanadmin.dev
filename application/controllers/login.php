@@ -38,21 +38,21 @@ class Login extends MY_Controller
                 $res = $this->login_model->verify_user_cnpj($this->input->post('cnpj'),
                                                    $this->input->post('password'));
             }
-            
+
             if ($res !== false)
             {
-                if ($this->input->post('cpf'))                
+                if ($this->input->post('cpf'))
                     $_SESSION['cpf'] = $this->input->post('cpf');
-                
-                if ($this->input->post('cnpj'))                
+
+                if ($this->input->post('cnpj'))
                     $_SESSION['cnpj'] = $this->input->post('cnpj');
-                
+
                 $_SESSION['nome'] = $res->nome;
                 $_SESSION['autorizacao'] = $res->autorizacao;
                 $_SESSION['id_user'] = $res->id;
-                
+
                 $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
-                
+
                 $this->requerente_model->update_last_visit($res->id);
             }
             else
@@ -68,19 +68,19 @@ class Login extends MY_Controller
 
         $this->load_front_view('login_view');
     }
-    
+
     public function inicio()
     {
         if ($_SESSION['autorizacao']== AUTORIZACAO_OPERADOR)
             redirect ('requerimentos/meus_requerimentos/');
-        
-        $this->data['requerimentos'] = $this->requerimento_model->get_last(8);        
+
+        $this->data['requerimentos'] = $this->requerimento_model->get_last(8);
         $this->data['requerentes'] = $this->requerente_model->get_last(8);
-        
-        $this->data['req_em_analise'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE); 
-        $this->data['req_analisado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_ANALISADO); 
-        $this->data['req_protocolado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO); 
-        $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO); 
+
+        $this->data['req_em_analise'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
+        $this->data['req_analisado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_ANALISADO);
+        $this->data['req_protocolado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
+        $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
 
         $this->load_view('layouts/inicio');
     }
@@ -88,7 +88,7 @@ class Login extends MY_Controller
     public function logout()
     {
         session_destroy();
-        
+
         redirect('login/inicio');
     }
 
@@ -132,7 +132,7 @@ class Login extends MY_Controller
 
         $this->load_front_view('login_view');
     }
-    
+
     public function resetar_senha()
     {
         if ($this->input->post('forgot_cpf'))
@@ -145,20 +145,20 @@ class Login extends MY_Controller
             $res = $this->login_model->verify_user_cnpj_exists($this->input->post('forgot_cnpj'),
                                                $this->input->post('forgot_email'));
         }
-            
+
         if ($res !== false)
         {
             $key = $this->requerente_model->generate_key($res);
-            
+
             reset_password($res->email, $key);
-            
+
             $this->session->set_userdata('forgot_email_enviado','Uma nova senha de acesso foi gerada e enviada para o seu e-mail.');
         }
         else
         {
             $this->session->set_userdata('forgot_usuario_errado','CPF/CNPJ e e-mail informados não existem no sistema!<br />Por favor, tente novamente.');
-        }        
-        
+        }
+
         $this->data['view'] = 'forgot';
 
         $this->load_front_view('login_view');

@@ -3,12 +3,12 @@
         <h1><i class="icon20 i-user-3"></i> Cadastrar requerente</h1>
     </div>
 
-    <div class="row">        
+    <div class="row">
         <div class="col-lg-6">
-            <div class="panel panel-default">                
+            <div class="panel panel-default">
                 <div class="panel-body">
 
-                <?php    
+                <?php
                 echo form_open('requerentes/cadastrar_requerente', 'class="bs-docs-example form-horizontal"');
 
                 echo validation_errors('<div class="alert alert-error">','</div>');
@@ -179,19 +179,19 @@
                 echo '</div>';
 
                 echo '</div>';
-                
+
                 echo '<hr>';
-                
+
                 echo '<div class="form-group">';
                 echo form_label('É vereador?', 'tipo', array('class' => 'col-lg-3 control-label'));
-                echo    '<div class="col-lg-9">';                
+                echo    '<div class="col-lg-9">';
                 echo        '<div class="switch" data-on="primary" data-off="danger" data-on-label="<i class=\'i-checkmark-3\'></i>" data-off-label="<i class=\'i-close\'></i>">';
                 echo            '<input class="toggle"controls-row type="checkbox" id="tipo" name="tipo" />';
                 echo        '</div>';
                 echo    '</div>';
                 echo '</div>';
 
-                // --- --- --- 
+                // --- --- ---
 
                 echo '<div class="form-group">';
                 echo    '<div class="col-lg-offset-2">';
@@ -204,12 +204,12 @@
                 echo form_close();
 
                 ?>
-                    
+
                 </div><!-- End .panel-body -->
            </div><!-- End .widget -->
-       </div><!-- End .col-lg-6  -->     
+       </div><!-- End .col-lg-6  -->
     </div><!-- End .row-fluid  -->
-</div> 
+</div>
 
 <script type="text/javascript" src="<?php echo base_url() . 'js/cep.js'; ?>"></script>
 <script type="text/javascript">
@@ -217,13 +217,13 @@
 </script>
 
 <script>
-    $(document).ready(function(){        
+    $(document).ready(function(){
         $('.telefone').mask('(00) 0000-0000'); //telefone
         $('.cep').mask("00000-000");//cep
         $('.rg').mask('00.00.00.00.00'); //RG
         $('.cpf').mask('000.000.000-00'); //CPF
         $('.cnpj').mask('00.000.000/0000-00'); //CNPJ
-    
+
         $("#outra_cidade").hide();
 
         $("#mora_cidade").change(function(){

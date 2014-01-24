@@ -35,7 +35,7 @@
                                         <i class="icon64 i-bars blue"></i><br />Gráfico de barras<br /><br />
                                         <input class="form-control" type="radio" name="tipo" value="<?php echo TIPO_GRAFICO_BARRAS ?>">
                                     </div>
-                                </div> End .control-group  
+                                </div> End .control-group
                             </div>
 
                             <div class="col-lg-4">
@@ -44,7 +44,7 @@
                                         <i class="icon64 i-pie blue"></i><br />Gráfico de pizza<br /><br />
                                         <input class="form-control" type="radio" name="tipo" value="<?php echo TIPO_GRAFICO_PIZZA ?>">
                                     </div>
-                                </div> End .control-group  
+                                </div> End .control-group
                             </div>-->
                         </div>
 

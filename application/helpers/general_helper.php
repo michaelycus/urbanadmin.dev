@@ -218,10 +218,10 @@ EOF;
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">$r_b->nome_bairro </span><br />Requerimentos: $r_b->count_requerimentos_bairro"},
                                 eventHandlers : {
-                                    click : function() {  
-                                        $('#id_bairro').val( $r_b->id_bairro ).change();                                        
+                                    click : function() {
+                                        $('#id_bairro').val( $r_b->id_bairro ).change();
                                     }
-                                }                    
+                                }
                             },
 EOF;
 
@@ -612,7 +612,7 @@ if (!function_exists('generate_custom_chart'))
         $segments = ($max > 10) ? 10 : $max;
 
         $max = $max + 1;
-        
+
         $hsl = get_static_color($chart->cor_grafico, 1);
 
         $data = <<<EOF
@@ -638,7 +638,7 @@ if (!function_exists('generate_custom_chart'))
                 },
                 legend: {
                     area: {
-                        title: "Requerimentos por bairro"                     
+                        title: "Requerimentos por bairro"
 EOF;
 
         $data .='
@@ -746,7 +746,7 @@ EOF;
 
      if ($max)
      {
-         $p2 = 75 - (30 * $value / $max);                 
+         $p2 = 75 - (30 * $value / $max);
      }
 
      return 'hsl('.$p1.', '. $p2.')';

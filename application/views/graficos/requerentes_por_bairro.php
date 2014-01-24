@@ -55,11 +55,11 @@
         font-weight:bold;
         left : 10px;
 
-        -webkit-user-select: none; 
+        -webkit-user-select: none;
         -khtml-user-select: none;
-        -moz-user-select: none; 
+        -moz-user-select: none;
         -o-user-select: none;
-        user-select: none; 
+        user-select: none;
     }
 
     .zoomOut {
@@ -82,7 +82,7 @@
         <h1><i class="icon20 i-people"></i> Requerentes por bairro</h1>
     </div>
 
-    <div class="row">        
+    <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -98,6 +98,6 @@
 
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
-        </div><!-- End .col-lg-6  -->     
+        </div><!-- End .col-lg-6  -->
     </div><!-- End .row-fluid  -->
 </div>

@@ -71,11 +71,11 @@
                                 case TIPO_REQ_CONSERTOS_GERAL:
                                     echo '<span class="icon gray"><i class="icon16 i-wrench"></i></span>';
                                     break;
-                                
+
                                 case TIPO_REQ_SOLICITACAO_SERVICOS:
                                     echo '<span class="icon gray"><i class="icon16 i-tags-2"></i></span>';
                                     break;
-                                
+
                                 case TIPO_REQ_OUTROS:
                                     echo '<span class="icon gray"><i class="icon16 i-tags-2"></i></span>';
                                     break;

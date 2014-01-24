@@ -49,11 +49,11 @@
         font-weight:bold;
         left : 10px;
 
-        -webkit-user-select: none; 
+        -webkit-user-select: none;
         -khtml-user-select: none;
-        -moz-user-select: none; 
+        -moz-user-select: none;
         -o-user-select: none;
-        user-select: none; 
+        user-select: none;
     }
 
     .zoomOut {
@@ -77,7 +77,7 @@
         <h1><i class="icon20 i-stack"></i> Requerimentos por bairro</h1>
     </div>
 
-    <div class="row">        
+    <div class="row">
         <div class="col-lg-8">
             <div class="panel panel-default">
                 <div class="panel-body">
@@ -95,15 +95,15 @@
 
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
-        </div><!-- End .col-lg-8  -->     
-        
+        </div><!-- End .col-lg-8  -->
+
         <div class="col-lg-4">
             <div class="panel panel-default">
-                <div class="panel-body">     
+                <div class="panel-body">
                     <table cellpadding="0" cellspacing="0" border="0"
-                           class="table table-striped table-bordered table-hover" id="table-mapa-requerimentos">    
+                           class="table table-striped table-bordered table-hover" id="table-mapa-requerimentos">
                         <thead><tr><th></th></tr></thead>
-                        <tbody>                            
+                        <tbody>
                         </tbody>
                     </table>
 <!--                    <ul name="lista_requerimentos">

@@ -92,7 +92,7 @@ class Requerimentos extends MY_Controller
             {
                 $this->requerimento_model->insert($data);
                 generate_charts();
-                
+
                 if ($_SESSION['autorizacao']==AUTORIZACAO_OPERADOR)
                 {
                     alert_requirement($this->requerimento_model->get_next_id()-1);
@@ -205,10 +205,10 @@ class Requerimentos extends MY_Controller
         if ( $this->input->post('user_email') && $this->input->post('user_message') )
         {
             send_message($this->input->post('user_email'), $this->input->post('user_message'));
-            
+
             $this->session->set_userdata('mensagem_enviada','Mensagem enviada com sucesso!');
         }
-        
+
         $this->data['requerimento'] = $requerimento = $this->requerimento_model->get($id);
         $this->data['bairro'] = $this->bairros_model->get($requerimento->id_bairro);
         $this->data['requerente'] = $this->requerente_model->get($requerimento->id_requerente);

@@ -3,17 +3,17 @@
         <h1><i class="icon20 i-user-3"></i> Editar requerente</h1>
     </div>
 
-    <div class="row">        
+    <div class="row">
         <div class="col-lg-6">
-            <div class="panel panel-default">                
+            <div class="panel panel-default">
                 <div class="panel-body">
 
                 <?php
                 $id = $this->uri->segment(3);
-                
+
                 // Redireciona quando usuário não é apresentado
                 if ($id==NULL && $requerente==NULL) redirect('requerentes');
-                
+
                 // Evita de operadores editarem outros usuários
                 if ($_SESSION['autorizacao']==AUTORIZACAO_OPERADOR && $_SESSION['id_user']!=$id) redirect('requerimentos');
 
@@ -40,7 +40,7 @@
                 // pessoa_fisica
                 ?>
                 <div class="form-group">
-                    <label for="pessoa_fisica" class="control-label"></label>
+                    <label for="pessoa_fisica" class="col-lg-3 control-label"></label>
                     <div class="col-lg-9">
                         <label class="radio-inline">
                             <input type="radio" name="pessoa_fisica" id="pessoa_fisica_0" class="form-control" value="0" <?php echo $requerente->pessoa_fisica == PESSOA_FISICA ? " checked " : ""; ?> >
@@ -100,7 +100,7 @@
                 // --- --- --- ---
 
                 echo '<hr>';
-                
+
                 echo '<div class="form-group">';
                 echo form_label('Senha', 'rg', array('class' => 'col-lg-3 control-label'));
                 echo    '<div class="col-lg-9">';
@@ -114,7 +114,7 @@
                 echo form_password(array('name' => 'password2','id' => 'password2','placeholder' => '','class' => 'form-control'), set_value(''));
                 echo    '</div>';
                 echo '</div>';
-                
+
                 echo '<hr>';
 
                 // email
@@ -205,7 +205,7 @@
                         }
 
                 echo    '</div>';
-                echo '</div>';    
+                echo '</div>';
 
                 // cep
                 echo '<div class="form-group">';
@@ -230,12 +230,12 @@
                 echo form_close();
 
                 ?>
-                    
+
                 </div><!-- End .panel-body -->
            </div><!-- End .widget -->
-       </div><!-- End .col-lg-6  -->     
+       </div><!-- End .col-lg-6  -->
     </div><!-- End .row-fluid  -->
-</div> 
+</div>
 
 <script type="text/javascript" src="<?php echo base_url() . 'js/cep.js'; ?>"></script>
 <script type="text/javascript">
@@ -243,14 +243,14 @@
 </script>
 
 <script>
-    $(document).ready(function(){    
-         
+    $(document).ready(function(){
+
         $('.telefone').mask('(00) 0000-0000'); //telefone
         $('.cep').mask("00000-000");//cep
         $('.rg').mask('00.00.00.00.00'); //RG
         $('.cpf').mask('000.000.000-00'); //CPF
         $('.cnpj').mask('00.000.000/0000-00'); //CNPJ
-        
+
         //mora cidade
         var mora_c = <?php echo $requerente->mora_cidade; ?>;
 
@@ -279,7 +279,7 @@
                 $("#outra_cidade").show(200);
             }
         });
-        
+
         // pessoa fisica
         var pessoa_f = <?php echo $requerente->pessoa_fisica; ?>;
 
@@ -292,7 +292,7 @@
         {
             $("#pessoa_j").hide();
             $("#pessoa_f").show();
-        } 
+        }
 
         $(":radio").change(function(){
             var rad = $('input[name=pessoa_fisica]:checked').val();

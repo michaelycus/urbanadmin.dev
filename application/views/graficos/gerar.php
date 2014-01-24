@@ -21,7 +21,7 @@ $data = <<<EOF
 $(function() {
     $(".maparea1").mapael({
         map: {
-            name: "lajeado",            
+            name: "lajeado",
         },
         legend: {
             area: {
@@ -98,7 +98,7 @@ $data = <<<EOF
 $(function() {
     $(".maparea1").mapael({
         map: {
-            name: "lajeado",            
+            name: "lajeado",
             defaultArea: {
                 attrs: {
                     fill: "#cadbed", stroke: "#204a87"
@@ -186,7 +186,7 @@ foreach ($requerimentos_categoria as $r_c)
 {
     foreach ($r_c as $r)
     {
-        $max = max($r->count_requerimentos, $max);        
+        $max = max($r->count_requerimentos, $max);
     }
 }
 
@@ -199,16 +199,16 @@ if (!empty($requerimentos_categoria))
         if ($i==0)
         {
             $data .= '"0": { "areas": {';
-            
+
             foreach ($bairros as $bairro)
             {
                 $data .= '"'.$bairro->codename.'": {"text": {"content": ""}},';
             }
             $data .= '}},';
-            
+
             $i++;
         }
-        
+
         if (!empty($r_c))
         {
             $data .= '"'. $i. '": { "areas": {';
@@ -228,29 +228,29 @@ if (!empty($requerimentos_categoria))
                 $data .= '}';
                 $data .= end($r_c)==$r ? '' : ',';
             }
-            
+
             $data .= '}';
             $data .= '},';
         }
         $i++;
     }
     $data .= '};
-        ';    
+        ';
 }
 
 $data .= <<<EOF
 $("#cat_requerimento").change(function() {
     value = $("#cat_requerimento").val();
-        
+
       $(".maparea1").trigger('update', [data[0], {}, {}, {animDuration: 500}]);
-        
+
       $(".maparea1").trigger('update', [data[value], {}, {}, {animDuration: 1000,resetPlots:true, resetAreas:true  }]);
   });
 
     // Mapael initialisation
     $(".maparea1").mapael({
         map: {
-            name: "lajeado",            
+            name: "lajeado",
             defaultArea: {
                 attrs: {
                     fill: "#cadbed",
@@ -269,10 +269,10 @@ $("#cat_requerimento").change(function() {
                         "font-weight": "bold"
                     }
                 }
-            }            
+            }
         },
         areas: data[0]['areas']
-        
+
     });
 });
 EOF;
@@ -301,7 +301,7 @@ foreach ($requerimentos_vereadores as $r_c)
 {
     foreach ($r_c as $r)
     {
-        $max = max($r->count_requerimentos, $max);        
+        $max = max($r->count_requerimentos, $max);
     }
 }
 
@@ -309,13 +309,13 @@ if (!empty($requerimentos_vereadores))
 {
     // areas
     $data .= '"0": { "areas": {';
-            
+
     foreach ($bairros as $bairro)
     {
         $data .= '"'.$bairro->codename.'": {"text": {"content": ""}},';
     }
     $data .= '}},';
-    
+
     foreach ($requerimentos_vereadores as $key => $r_c)
     {
         if (!empty($r_c))
@@ -337,11 +337,11 @@ if (!empty($requerimentos_vereadores))
                 $data .= '}';
                 $data .= end($r_c)==$r ? '' : ',';
             }
-            
+
             $data .= '},';
-            
+
             $data .= '"plots": {';
-            
+
             foreach ($r_c as $r)
             {
                 $data .= '"'. $r->codename .'": {
@@ -350,28 +350,28 @@ if (!empty($requerimentos_vereadores))
                 $data .= '}';
                 $data .= end($r_c)==$r ? '' : ',';
             }
-            
+
             $data .= '}';
             $data .= '},';
         }
     }
     $data .= '};
-        ';    
+        ';
 }
 
 $data .= <<<EOF
 $("#vereador").change(function() {
     value = $("#vereador").val();
-        
+
       $(".maparea1").trigger('update', [data[0], {}, {}, {animDuration: 500}]);
-        
+
       $(".maparea1").trigger('update', [data[value], {}, {}, {animDuration: 1000,resetPlots:true, resetAreas:true  }]);
   });
 
     // Mapael initialisation
     $(".maparea1").mapael({
         map: {
-            name: "lajeado",            
+            name: "lajeado",
             defaultArea: {
                 attrs: {
                     fill: "#cadbed", stroke: "#204a87"
@@ -398,7 +398,7 @@ $("#vereador").change(function() {
                         "font-weight": "bold"
                     }
                 }
-            }            
+            }
         },
         areas: data[0]['areas']
     });
@@ -435,7 +435,7 @@ $data = <<<EOF
 $(function() {
     $(".maparea1").mapael({
         map: {
-            name: "lajeado",            
+            name: "lajeado",
             defaultArea: {
                 attrs: {
                     fill: "#fce94f", stroke: "#c4a000"

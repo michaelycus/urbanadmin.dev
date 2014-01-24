@@ -40,11 +40,11 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
-    
+
     public function get_requerimentos_by_bairro($id_bairro)
     {
-        $this->db->where('id_bairro', $id_bairro);        
-        
+        $this->db->where('id_bairro', $id_bairro);
+
         return $this->get_all();
     }
 
@@ -59,23 +59,23 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
-    
+
     public function get_last($num)
     {
         $this->db->order_by('id', 'DESC');
         $this->db->limit($num);
-        
+
         return $this->get_all();
     }
 
     public function count_requerimentos_by_situacao($cat)
     {
-        $this->db->where('situacao', $cat);        
+        $this->db->where('situacao', $cat);
         $this->db->from('requerimentos');
 
         return $this->db->count_all_results();;
     }
-    
+
     public function count_requerimentos_with_bairros()
     {
         $this->db->select('requerimentos.id_bairro AS id_bairro, bairros.codename, COUNT(*) AS count_requerimentos_bairro,
@@ -125,14 +125,14 @@ class Requerimento_model extends MY_Model
 
         return $array_result;
     }
-    
+
     public function get_requerimento_by_solicitante($id)
     {
-        $this->db->where('id_solicitante', $id);        
-        
+        $this->db->where('id_solicitante', $id);
+
         return $this->get_all();
     }
-    
+
     public function count_requerimentos_em_analise()
     {
         $this->db->where('requerimentos.situacao', REQUERIMENTO_SITUACAO_EM_ANALISE);
@@ -151,7 +151,7 @@ class Requerimento_model extends MY_Model
         $data = array('situacao' => $situacao-1);
         $this->update($id, $data);
     }
-    
+
     public function gravar_expediente($id, $expediente, $ano)
     {
         $data = array('expediente' => $expediente, 'ano_expediente' => $ano);

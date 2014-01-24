@@ -21,37 +21,37 @@ class Cidades_model extends CI_Model
                         ->join('cidades', 'cidades.id_uf = estados.id')
                         ->get()->result();
     }
-    
+
     function getRuas($id_bairro = null)
-    {          
+    {
         return $this->db->select('ruas.id, ruas.nome')
                         ->from('ruas')
                         ->join('rua_bairro', 'rua_bairro.id_rua = ruas.id AND rua_bairro.id_bairro='.$id_bairro)
                         ->get()->result();
-        
+
     }
-    
+
     function get_estado($id)
     {
         $this->db->from('estados');
         $this->db->where('id', $id);
-        
+
         return $this->db->get()->row();
     }
-    
+
     function get_cidade($id)
     {
         $this->db->from('cidades');
         $this->db->where('id', $id);
-        
+
         return $this->db->get()->row();
     }
-    
+
     function get_rua($id)
     {
         $this->db->from('ruas');
         $this->db->where('id', $id);
-        
+
         return $this->db->get()->row();
     }
 }
