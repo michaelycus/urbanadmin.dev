@@ -40,7 +40,19 @@
                         }
 
                         echo '<dt>Situação</dt>';
-                        echo '<dd>' . '<img src="'.base_url().'images/situacao_'.$requerimento->situacao.'.png"> '. '</dd>';
+                        echo '<dd>' . 
+                                ($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
+                              '<img src="'.base_url().'images/retornar_situacao_d.png"> ' :
+                              anchor('requerimentos/retornar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
+                                  '<img src="'.base_url().'images/retornar_situacao.png"> ' )).                          
+                                '<img src="'.base_url().'images/situacao_'.$requerimento->situacao.'.png"> '.
+                                ($requerimento->situacao==REQUERIMENTO_SITUACAO_RESOLVIDO ?
+                              '<img src="'.base_url().'images/avancar_situacao_d.png">':
+                              ($requerimento->situacao==REQUERIMENTO_SITUACAO_ANALISADO ?
+                                    '<img src="'.base_url().'images/avancar_situacao.png" style="cursor: pointer;" onclick="expediente(\''.base_url().'\','.$requerimento->id.')">' :
+                                  anchor('requerimentos/avancar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
+                                    '<img src="'.base_url().'images/avancar_situacao.png">') ) ).
+                             '</dd>';
 
                         ?>
 

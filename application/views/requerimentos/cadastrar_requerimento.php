@@ -109,7 +109,7 @@
                     echo form_label('Data', 'data_requerimento', array('class' => 'col-lg-3 control-label'));
                     echo    '<div class="col-lg-9">';
                     echo        '<div id="datepicker" class="input-group date" data-date="12-02-2012" data-date-format="dd-mm-yyyy">';
-                    echo            form_input(array('name' => 'data_requerimento','id' => 'data_requerimento',
+                    echo            form_input(array('name' => 'data_requerimento','id' => 'data_requerimento', 'value' => date('d/m/Y'),
                                     'class' => 'form-control data'), set_value('data_requerimento'));
                     echo            '<span class="input-group-addon"><i class="icon16 i-calendar-4"></i></span>';
                     echo        '</div>';

@@ -29,22 +29,22 @@
                             fill: "#e4c900"}
                       },{
                         min: 1,
-                        max: 1,
+                        max: 2,
                         attrs: {
                             fill: "#dcbf00"}
                       },{
-                        min: 1,
+                        min: 2,
                         max: 2,
                         attrs: {
                             fill: "#d4b400"}
                       },{
                         min: 2,
-                        max: 2,
+                        max: 3,
                         attrs: {
                             fill: "#ccaa00"}
                       },{
-                        min: 2,
-                        max: 3,
+                        min: 3,
+                        max: 4,
                         attrs: {
                             fill: "#c4a000"}
                       },]
@@ -60,16 +60,21 @@
                                 text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerentes: 1"},
+                            },                            "conventos":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Requerentes: 1"},
                             },                            "florestal":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Requerentes: 2"},
                             },                            "hidraulica":{
-                                value: "2",
-                                text: { content:  2 , attrs: {fill:"#222"} },
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Hidráulica </span><br />Requerentes: 2"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Hidráulica </span><br />Requerentes: 3"},
                             },                            "igrejinha":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },

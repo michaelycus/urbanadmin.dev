@@ -21,13 +21,12 @@
         }
 
         $this->table->set_template($tmpl);
-        $this->table->set_heading('Resumo', "Tipo Requerimento", "Bairro", "Situação", "Expediente", "");
+        $this->table->set_heading('Resumo', "Bairro", "Situação", "Expediente", "");
 
         if (!empty($requerimentos))
         {
             foreach ($requerimentos as $requerimento):
                 $this->table->add_row(array('data'=>anchor('requerimentos/visualizar/'.$requerimento->id, '<small>'.substr($requerimento->descricao, 0, 64).(strlen($requerimento->descricao)>255?"..." : "").'</small>')),
-                                      array('data'=>'<small>'.$requerimento->nome_categoria.'</small>'),
                                       array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),
                                       array('data'=>'<div style="display:none;">'.$requerimento->situacao.'</div>'.'<img src="'.base_url().'images/situacao_'.$requerimento->situacao.'.png">'),
                                       array('data'=>'<small>'.$requerimento->expediente.'/'.$requerimento->ano_expediente. '</small>'),

@@ -42,11 +42,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 1"
                             }},"conservas": {
-                            "value": 2,
-                            "text": { "content":  "2" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#6490c3"},
+                            "value": 3,
+                            "text": { "content":  "3" , attrs: {fill:"#222"} },
+                            "attrs": { fill: "#5d89bd"},
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 2"
+                                    "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 3"
                             }},"conventos": {
                             "value": 1,
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
@@ -73,7 +73,7 @@
                             "value": 11},"centenario": {
                             "value": 2},"centro": {
                             "value": 1},"conservas": {
-                            "value": 2},"conventos": {
+                            "value": 3},"conventos": {
                             "value": 1},"florestal": {
                             "value": 1},"jardim_do_cedro": {
                             "value": 1}}},"13": { "areas": {"conservas": {

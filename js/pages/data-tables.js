@@ -64,7 +64,7 @@ $(document).ready(function() {
             "iDisplayLength": 50,
             "bLengthChange": false,
             "aoColumnDefs": [
-                { "bSortable": false, "aTargets": [ 5 ] }],
+                { "bSortable": false, "aTargets": [ 4 ] }],
             "oLanguage": {
                     "sSearch": "<span>Buscar:</span> _INPUT_",
                     "sLengthMenu": "<span>_MENU_ registros</span>",

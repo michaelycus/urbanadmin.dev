@@ -103,7 +103,7 @@
                                 }
                                 ?>          
                                 
-                                <div class="form-group">
+<!--                                <div class="form-group">
                                     <label for="pessoa_fisica" class="control-label"></label>
                                     <div class="col-lg-12">
                                         <label class="radio-inline">
@@ -115,7 +115,7 @@
                                             Pessoa jurídica
                                         </label>
                                     </div>
-                                </div>
+                                </div>-->
                                 
                                 <div class="form-group relative" id="cpf_login">
                                     <div class="icon"><i class="icon20 i-user"></i></div>
@@ -167,7 +167,7 @@
                                 
                                 // pessoa_fisica
                                 ?>                                
-                                <div class="form-group">
+<!--                                <div class="form-group">
                                     <label for="pessoa_fisica" class="control-label"></label>
                                     <div class="col-lg-12">
                                         <label class="radio-inline">
@@ -179,7 +179,7 @@
                                             Pessoa jurídica
                                         </label>
                                     </div>
-                                </div>
+                                </div>-->
                                 <?php
 
                                 // --- PESSOA FÍSICA ---
@@ -339,7 +339,7 @@
                                 }
                                 ?>   
                                 
-                                <div class="form-group">
+<!--                                <div class="form-group">
                                     <label for="pessoa_fisica_forgot" class="control-label"></label>
                                     <div class="col-lg-12">
                                         <label class="radio-inline">
@@ -351,7 +351,7 @@
                                             Pessoa jurídica
                                         </label>
                                     </div>
-                                </div>
+                                </div>-->
                                 
                                 <div class="form-group relative" id="cpf_forgot">
                                     <div class="icon"><i class="icon20 i-user"></i></div>

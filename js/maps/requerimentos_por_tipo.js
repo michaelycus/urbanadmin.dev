@@ -107,6 +107,12 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 1"
+                            }}}},"8": { "areas": {"conservas": {
+                            "value": 1,
+                            "attrs": { fill: "#6b97c9"},
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 1"
                             }}}},"9": { "areas": {"carneiros": {
                             "value": 1,
                             "attrs": { fill: "#6b97c9"},

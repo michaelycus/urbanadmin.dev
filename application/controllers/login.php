@@ -21,9 +21,9 @@ class Login extends MY_Controller
         }
 
         if ($this->input->post('pessoa_fisica_login') == PESSOA_FISICA)
-            $this->form_validation->set_rules('cpf', 'CPF', 'required|valid_cpf|is_unique[requerentes.cpf]');
+            $this->form_validation->set_rules('cpf', 'CPF', 'required|valid_cpf');
         if ($this->input->post('pessoa_fisica_login') == PESSOA_JURIDICA)
-            $this->form_validation->set_rules('cnpj', 'CNPJ', 'required|valid_cnpj|is_unique[requerentes.cnpj]');
+            $this->form_validation->set_rules('cnpj', 'CNPJ', 'required|valid_cnpj');
         $this->form_validation->set_rules('password', 'SENHA', 'trim|required|min_length[5]');
 
         if ($this->form_validation->run() !== false)

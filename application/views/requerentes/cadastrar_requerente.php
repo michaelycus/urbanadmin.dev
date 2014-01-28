@@ -31,7 +31,7 @@
 
                 // pessoa_fisica
                 ?>
-                <div class="form-group">
+<!--                <div class="form-group">
                     <label for="pessoa_fisica" class="col-lg-3 control-label"></label>
                     <div class="col-lg-9">
                         <label class="radio-inline">
@@ -43,7 +43,7 @@
                             Pessoa jurídica
                         </label>
                     </div>
-                </div>
+                </div>-->
                 <?php
 
                 // --- PESSOA FÍSICA ---
