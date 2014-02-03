@@ -21,7 +21,7 @@ class Contatos extends MY_Controller
             $this->form_validation->set_rules('endereco', 'ENDERECO', 'required');
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('nome','id_bairro','endereco','telefone','celular_1','celular_2','email'),$this->input->post());
+            $data = elements(array('nome','id_bairro','endereco','telefone','email'),$this->input->post());
             $data['data_cadastro'] = date('Y-m-d');
 
             $this->contato_model->insert($data);
@@ -44,7 +44,7 @@ class Contatos extends MY_Controller
             $this->form_validation->set_rules('endereco', 'ENDERECO', 'required');
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('nome','id_bairro','endereco','telefone','celular_1','celular_2','email'),$this->input->post());
+            $data = elements(array('nome','id_bairro','endereco','telefone','email'),$this->input->post());
 
             $this->contato_model->update($id, $data);
 
@@ -73,7 +73,10 @@ class Contatos extends MY_Controller
 
     public function listar_contatos()
     {
+        $this->load->model('requerente_model');
+        
         $this->data['contatos'] = $this->contato_model->get_contatos_with_bairros();
+        $this->data['requerentes'] = $this->requerente_model->get_requerentes_with_bairros();
 
         $this->load_view('contatos/listar_contatos', TRUE);
     }

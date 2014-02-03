@@ -55,6 +55,8 @@ class Requerimentos extends MY_Controller
                 'id_requerente','id_solicitante'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
 
+            $data['descricao_original'] = $this->input->post('descricao')
+;            
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
 
             $i = 1;
@@ -198,6 +200,11 @@ class Requerimentos extends MY_Controller
             $this->session->set_userdata('requerimento_excluido','Requerimento excluído com sucesso!');
             redirect('requerimentos/listar_requerimentos');
         }
+    }
+    
+    public function generate_charts()
+    {
+        generate_charts();
     }
 
     public function visualizar($id)

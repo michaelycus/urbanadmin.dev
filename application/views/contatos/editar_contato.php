@@ -71,30 +71,16 @@
                 echo    '</div>';
                 echo '</div>';
 
-                // celular_1
-                echo '<div class="form-group">';
-                echo form_label('Celular (1)', 'celular_1', array('class' => 'col-lg-3 control-label'));
-                echo    '<div class="col-lg-9">';
-                echo    form_input(array('name' => 'celular_1','id' => 'celular_1','placeholder' => '(xx) xxxx-xxxx','class' => 'form-control celular_1'), set_value('celular_1',$contato->celular_1));
-                echo    '</div>';
-                echo '</div>';
-
-                // celular_2
-                echo '<div class="form-group">';
-                echo form_label('Celular (2)', 'celular_2', array('class' => 'col-lg-3 control-label'));
-                echo    '<div class="col-lg-9">';
-                echo    form_input(array('name' => 'celular_2','id' => 'celular_2','placeholder' => '(xx) xxxx-xxxx','class' => 'form-control celular_2'), set_value('celular_2',$contato->celular_2));
-                echo    '</div>';
-                echo '</div>';
-
                 echo form_hidden('id', $contato->id);
 
                 // --- --- ---
 
                 echo '<div class="form-group">';
-                echo    '<div class="col-lg-offset-2">';
-                echo        '<div class="pad-left15">';
+                echo form_label('', '', array('class' => 'col-lg-3 control-label'));
+                echo    '<div class="col-lg-9">';
+                echo        '<div class="btn-toolbar" style="margin: 0;">';
                 echo            form_submit('submit', 'Salvar', 'class="btn btn-primary"');
+                echo            anchor('contatos/excluir_contato/'.$contato->id, 'Excluir contato', 'class="btn btn-danger confirm_delete"');
                 echo        '</div>';
                 echo    '</div>';
                 echo '</div>';
@@ -129,9 +115,13 @@
 
 <script>
     $(document).ready(function(){
+        function updateMap() {
+            $('#id_bairro').val(<?php echo ($bairro->id) ?>).change();
+        }
+        // use setTimeout() to execute
+        setTimeout(updateMap, 1000);
+        
         $('.telefone').mask('(00) 0000-0000'); //telefone
-        $('.celular_1').mask('(00) 0000-0000'); //telefone
-        $('.celular_2').mask('(00) 0000-0000'); //telefone
 
         $('#div_endereco').hide();
 

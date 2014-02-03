@@ -33,16 +33,16 @@
                             fill: "#618ec0"}
                       },{
                         min: 2,
-                        max: 4,
+                        max: 3,
                         attrs: {
                             fill: "#5985b9"}
                       },{
-                        min: 4,
-                        max: 5,
+                        min: 3,
+                        max: 4,
                         attrs: {
                             fill: "#517db2"}
                       },{
-                        min: 5,
+                        min: 4,
                         max: 6,
                         attrs: {
                             fill: "#4974ab"}
@@ -58,100 +58,110 @@
                             fill: "#38639c"}
                       },{
                         min: 8,
-                        max: 10,
+                        max: 9,
                         attrs: {
                             fill: "#305b95"}
                       },{
-                        min: 10,
-                        max: 11,
+                        min: 9,
+                        max: 10,
                         attrs: {
                             fill: "#28528e"}
                       },{
-                        min: 11,
-                        max: 12,
+                        min: 10,
+                        max: 11,
                         attrs: {
                             fill: "#204a87"}
                       },]
             }
         },
-        areas: {                            "americano":{
-                                value: "4",
-                                text: { content:  4 , attrs: {fill:"#222"} },
+        areas: {                            "alto_do_parque":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerimentos: 4"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Alto do Parque </span><br />Requerimentos: 1"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 1 ).change();
+                                    }
+                                }
+                            },                            "americano":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerimentos: 1"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 2 ).change();
                                     }
                                 }
                             },                            "bom_pastor":{
-                                value: "6",
-                                text: { content:  6 , attrs: {fill:"#222"} },
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 6"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 1"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 3 ).change();
                                     }
                                 }
                             },                            "campestre":{
-                                value: "7",
-                                text: { content:  7 , attrs: {fill:"#222"} },
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 7"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 3"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 4 ).change();
                                     }
                                 }
                             },                            "carneiros":{
-                                value: "11",
-                                text: { content:  11 , attrs: {fill:"#222"} },
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 11"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 1"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 5 ).change();
                                     }
                                 }
                             },                            "centenario":{
-                                value: "2",
-                                text: { content:  2 , attrs: {fill:"#222"} },
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Requerimentos: 2"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Requerimentos: 1"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 6 ).change();
                                     }
                                 }
                             },                            "centro":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
+                                value: "10",
+                                text: { content:  10 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerimentos: 1"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerimentos: 10"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 7 ).change();
                                     }
                                 }
-                            },                            "conservas":{
-                                value: "4",
-                                text: { content:  4 , attrs: {fill:"#222"} },
-                                href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Requerimentos: 4"},
-                                eventHandlers : {
-                                    click : function() {
-                                        $('#id_bairro').val( 8 ).change();
-                                    }
-                                }
                             },                            "conventos":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Requerimentos: 1"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Requerimentos: 3"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 9 ).change();
+                                    }
+                                }
+                            },                            "floresta":{
+                                value: "2",
+                                text: { content:  2 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Floresta </span><br />Requerimentos: 2"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 10 ).change();
                                     }
                                 }
                             },                            "florestal":{
@@ -164,14 +174,104 @@
                                         $('#id_bairro').val( 11 ).change();
                                     }
                                 }
-                            },                            "jardim_do_cedro":{
+                            },                            "hidraulica":{
+                                value: "2",
+                                text: { content:  2 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Hidráulica </span><br />Requerimentos: 2"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 12 ).change();
+                                    }
+                                }
+                            },                            "igrejinha":{
                                 value: "1",
                                 text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerimentos: 1"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Igrejinha </span><br />Requerimentos: 1"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 13 ).change();
+                                    }
+                                }
+                            },                            "imigrante":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerimentos: 1"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 14 ).change();
+                                    }
+                                }
+                            },                            "jardim_do_cedro":{
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerimentos: 3"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 15 ).change();
+                                    }
+                                }
+                            },                            "moinhos":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerimentos: 1"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 16 ).change();
+                                    }
+                                }
+                            },                            "moinhos_dagua":{
+                                value: "2",
+                                text: { content:  2 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos D' Água </span><br />Requerimentos: 2"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 17 ).change();
+                                    }
+                                }
+                            },                            "montanha":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Montanha </span><br />Requerimentos: 1"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 18 ).change();
+                                    }
+                                }
+                            },                            "planalto":{
+                                value: "5",
+                                text: { content:  5 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Planalto </span><br />Requerimentos: 5"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 22 ).change();
+                                    }
+                                }
+                            },                            "sao_cristovao":{
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">São Cristóvão </span><br />Requerimentos: 3"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 26 ).change();
+                                    }
+                                }
+                            },                            "universitario":{
+                                value: "2",
+                                text: { content:  2 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Requerimentos: 2"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 27 ).change();
                                     }
                                 }
                             },}

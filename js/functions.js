@@ -27,6 +27,18 @@ $(function () {
 });
 
 $(function () {
+    $(".confirm_send").click(function(e) {
+        e.preventDefault();
+        var location = $(this).attr('href');
+        bootbox.confirm("Enviar a mensagem agora?", function(confirmed) {
+            if(confirmed) {
+            window.location.replace(location);
+            }
+        });
+    });     
+});
+
+$(function () {
     $(".data").datepicker({
         todayBtn: true,
         language: "pt-BR",

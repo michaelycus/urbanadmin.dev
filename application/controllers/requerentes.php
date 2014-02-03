@@ -22,7 +22,6 @@ class Requerentes extends MY_Controller
         ));
 
         $this->data['paginacao'] = $this->pagination->create_links();
-        $this->requerente_model->limit(ITENS_POR_PAGINA, $this->uri->segment(3));
         $this->data['requerentes'] = $this->requerente_model->get_requerentes_with_bairros();
 
         $this->load_view('requerentes/da_cidade', TRUE);
@@ -36,7 +35,6 @@ class Requerentes extends MY_Controller
         ));
 
         $this->data['paginacao'] = $this->pagination->create_links();
-        $this->requerente_model->limit(ITENS_POR_PAGINA, $this->uri->segment(3));
         $this->data['requerentes'] = $this->requerente_model->get_requerentes_outras_cidades();
 
         $this->load_view('requerentes/de_outras_cidades', TRUE);
@@ -50,7 +48,6 @@ class Requerentes extends MY_Controller
         ));
 
         $this->data['paginacao'] = $this->pagination->create_links();
-        $this->requerente_model->limit(ITENS_POR_PAGINA, $this->uri->segment(3));
         $this->data['requerentes'] = $this->requerente_model->get_vereadores();
 
         $this->load_view('requerentes/vereadores', TRUE);

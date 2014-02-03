@@ -34,32 +34,6 @@
         width:80%;
     }
 
-    .zoomIn, .zoomOut {
-        background-color:#fff;
-        border:1px solid #ccc;
-        color:#000;
-        width:15px;
-        height:15px;
-        line-height: 15px;
-        text-align:center;
-        border-radius:3px;
-        cursor:pointer;
-        position:absolute;
-        top : 10px;
-        font-weight:bold;
-        left : 10px;
-
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-    }
-
-    .zoomOut {
-        top:30px;
-    }
-
     .map {
         position:relative;
     }
@@ -81,8 +55,6 @@
         <div class="col-lg-8">
             <div class="panel panel-default">
                 <div class="panel-body">
-
-                    <?php //print_r($teste); ?>
 
                     <div class="maparea1">
                         <div class="map">
@@ -116,6 +88,19 @@
 
 <?php
 echo form_input(array('name' => 'id_bairro','id' => 'id_bairro', 'style' => 'visibility:hidden'));
+
+//$this->load->model('requerimento_model');
+//
+//
+//
+//for($i=1; $i< 27; $i++)
+//{
+//    $requerimentos = $this->requerimento_model->get_requerimentos_by_bairro($i);
+//    
+//    echo $i . '<br />';
+//    var_dump($requerimentos);
+//}
+
 ?>
 
 <script type="text/javascript" src="<?php echo base_url() . 'js/requerimentos.js'; ?>"></script>

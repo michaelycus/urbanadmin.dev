@@ -14,8 +14,8 @@
 
                 <div class="panel-body">
                     <div class="row">
+                        <h4><i class="icon16 i-resize"></i>Informações</h4>
                         <div class="col-lg-12">
-
                             <dl class="dl-horizontal">
                                 <?php
                                 echo '<dt>Nome</dt>';
@@ -78,20 +78,24 @@
                     <hr>
 
                     <div class="row">
-                        <div class="col-lg-3">
-                            <div class="btn-group">
-                                <button class="btn dropdown-toggle" data-toggle="dropdown">Opções <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <?php
-                                    echo '<li>'.anchor('requerentes/editar_requerente/'.$requerente->id,'<i class="icon-edit"></i> Editar ').'</li>';
-                                    echo '<li>'.anchor('requerentes/excluir_requerente/'.$requerente->id,'<i class="icon-trash"></i> Excluir ',array('class' => 'confirm_delete')).'</li>';
-                                    echo '<li class="divider"></li>';
-                                    echo '<li><a href="#message" onclick="show_messenger()"><i class="i-envelop-2"></i>Enviar mensagem</a></li>';
-                                    ?>
-                                </ul>
+                        <div class="col-lg-12">
+                            <h4><i class="icon16 i-resize"></i>Opções</h4>
+                            <div class="btn-toolbar" style="margin: 0;">
+
+                                <?php
+                                echo anchor('requerentes/editar_requerente/'.$requerente->id,'<i class="icon-edit"></i> Editar ',array('class' => 'btn'));
+                                echo anchor('requerentes/excluir_requerente/'.$requerente->id,'<i class="icon-trash"></i> Excluir ',array('class' => 'btn confirm_delete'));
+                                ?>
+                               
                             </div>
                         </div>
-                        <div class="col-lg-9" id="messenger">
+                    </div>                    
+                    
+                    <hr>
+                    
+                    <div class="row">     
+                        <div class="col-lg-12" id="messenger">
+                            <h4><i class="icon16 i-resize"></i>Mensagem</h4>
 
                             <?php
                             echo form_open('requerentes/visualizar/'.$requerente->id, 'class="form-horizontal pad15 pad-bottom0" role="form"');
@@ -111,14 +115,13 @@
 
                                 </div><!-- End .form-group  -->
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary pull-right">Enviar mensagem</button>
+                                    <button type="submit" class="btn btn-primary pull-right confirm_send">Enviar mensagem</button>
                                 </div><!-- End .form-group  -->
                             <?php echo form_close(); ?>
 
                         </div>
 
                         <?php
-
                         echo form_input(array('name' => 'id_bairro','id' => 'id_bairro', 'style' => 'visibility:hidden'));
                         ?>
 
@@ -169,12 +172,3 @@
         </div>
     </div><!-- End .row-fluid  -->
 </div>
-
-<script>
-    $("#messenger").hide();
-
-    function show_messenger()
-    {
-        $("#messenger").show(600);
-    }
-</script>

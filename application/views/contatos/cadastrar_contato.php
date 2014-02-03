@@ -66,22 +66,6 @@
                 echo    '</div>';
                 echo '</div>';
 
-                // celular_1
-                echo '<div class="form-group">';
-                echo form_label('Celular (1)', 'celular_1', array('class' => 'col-lg-3 control-label'));
-                echo    '<div class="col-lg-9">';
-                echo    form_input(array('name' => 'celular_1','id' => 'celular_1','placeholder' => '(xx) xxxx-xxxx','class' => 'form-control celular_1'), set_value('celular_1'));
-                echo    '</div>';
-                echo '</div>';
-
-                // celular_2
-                echo '<div class="form-group">';
-                echo form_label('Celular (2)', 'celular_2', array('class' => 'col-lg-3 control-label'));
-                echo    '<div class="col-lg-9">';
-                echo    form_input(array('name' => 'celular_2','id' => 'celular_2','placeholder' => '(xx) xxxx-xxxx','class' => 'form-control celular_2'), set_value('celular_2'));
-                echo    '</div>';
-                echo '</div>';
-
                 // --- --- ---
 
                 echo '<div class="form-group">';

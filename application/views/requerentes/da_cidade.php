@@ -22,7 +22,7 @@
 
         $this->table->set_template($tmpl);
         $this->table->set_heading('Nome', 'E-mail', 'Bairro', '');
-
+        
         if (!empty($requerentes))
         {
             foreach ($requerentes as $requerente):
