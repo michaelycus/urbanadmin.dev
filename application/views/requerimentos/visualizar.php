@@ -15,60 +15,71 @@
                                 echo '<dt>Descrição</dt>';
                                 echo '<dd><pre>' . $requerimento->descricao . '</pre></dd>';
                                 
-                                echo '<dt></dt><dd><div id="original"><a href="#"><small>(ver original)</a></small></div></dd>';
+                                if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
+                                {
+                                    echo '<dt></dt><dd><div id="original"><a href="#"><small>(ver original)</a></small></div></dd>';
                                 
-                                echo '<div id="toggle_original">';
-                                echo '<dt>Original</dt>';
-                                echo '<dd><pre>' . $requerimento->descricao_original . '</pre></dd>';
-                                echo '</div>';
+                                    echo '<div id="toggle_original">';
+                                    echo '<dt>Original</dt>';
+                                    echo '<dd><pre>' . $requerimento->descricao_original . '</pre></dd>';
+                                    echo '</div>';
+                                }                                
 
                                 echo '<dt>Bairro</dt>';
                                 echo '<dd>' . $bairro->nome . '</dd>';
 
                                 echo '<dt>Rua</dt>';
                                 echo '<dd>' . $rua->nome . '</dd>';
-
+                                
                                 echo '<dt>Tipo Requerimento</dt>';
                                 echo '<dd>' . $cats_requerimento[$requerimento->cat_requerimento]->nome . '</dd>';
-
-                                echo '<dt>Solicitante</dt>';
-                                echo '<dd>' . anchor('requerentes/visualizar/'.$solicitante->id, $solicitante->nome) . '</dd>';
-
-                                echo '<dt>Telefone</dt>';
-                                echo '<dd>' . $solicitante->telefone . '</dd>';
-
-                                echo '<dt>Requerente</dt>';
-                                echo '<dd>' . $requerente->nome . '</dd>';
-
-                                echo '<dt>Data</dt>';
-                                echo '<dd>' . $this->form_validation->convert_sql_to_human($requerimento->data_requerimento) . '</dd>';
-
-                                if ($requerimento->expediente != 0)
+                                
+                                if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
                                 {
-                                    echo '<dt>Expediente</dt>';
-                                    echo '<dd>' . $requerimento->expediente . '/' . $requerimento->ano_expediente . '</dd>';
-                                }
+                                    echo '<dt>Solicitante</dt>';
+                                    echo '<dd>' . anchor('requerentes/visualizar/'.$solicitante->id, $solicitante->nome) . '</dd>';
 
-                                echo '<dt>Situação</dt>';
-                                echo '<dd>' .
-                                        ($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
-                                      '<img src="'.base_url().'images/retornar_situacao_d.png"> ' :
-                                      anchor('requerimentos/retornar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
-                                          '<img src="'.base_url().'images/retornar_situacao.png"> ' )).
-                                        '<img src="'.base_url().'images/situacao_'.$requerimento->situacao.'.png"> '.
-                                        ($requerimento->situacao==REQUERIMENTO_SITUACAO_RESOLVIDO ?
-                                      '<img src="'.base_url().'images/avancar_situacao_d.png">':
-                                      ($requerimento->situacao==REQUERIMENTO_SITUACAO_ANALISADO ?
-                                            '<img src="'.base_url().'images/avancar_situacao.png" style="cursor: pointer;" onclick="expediente(\''.base_url().'\','.$requerimento->id.')">' :
-                                          anchor('requerimentos/avancar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
-                                            '<img src="'.base_url().'images/avancar_situacao.png">') ) ).
-                                     '</dd>';
+                                    echo '<dt>Telefone</dt>';
+                                    echo '<dd>' . $solicitante->telefone . '</dd>';
+
+                                    echo '<dt>Requerente</dt>';
+                                    echo '<dd>' . $requerente->nome . '</dd>';
+
+                                    echo '<dt>Data</dt>';
+                                    echo '<dd>' . $this->form_validation->convert_sql_to_human($requerimento->data_requerimento) . '</dd>';
+
+                                    if ($requerimento->expediente != 0)
+                                    {
+                                        echo '<dt>Expediente</dt>';
+                                        echo '<dd>' . $requerimento->expediente . '/' . $requerimento->ano_expediente . '</dd>';
+                                    }
+
+                                    echo '<dt>Situação</dt>';
+                                    echo '<dd>' .
+                                            ($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
+                                          '<img src="'.base_url().'images/retornar_situacao_d.png"> ' :
+                                          anchor('requerimentos/retornar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
+                                              '<img src="'.base_url().'images/retornar_situacao.png"> ' )).
+                                            '<img src="'.base_url().'images/situacao_'.$requerimento->situacao.'.png"> '.
+                                            ($requerimento->situacao==REQUERIMENTO_SITUACAO_RESOLVIDO ?
+                                          '<img src="'.base_url().'images/avancar_situacao_d.png">':
+                                          ($requerimento->situacao==REQUERIMENTO_SITUACAO_ANALISADO ?
+                                                '<img src="'.base_url().'images/avancar_situacao.png" style="cursor: pointer;" onclick="expediente(\''.base_url().'\','.$requerimento->id.')">' :
+                                              anchor('requerimentos/avancar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
+                                                '<img src="'.base_url().'images/avancar_situacao.png">') ) ).
+                                         '</dd>';
+                                }
                                 ?>
                             </dl>
                         </div>
                     </div>
 
                     <hr>
+                    
+                    <?php                    
+                    if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
+                    {                        
+                    ?>
 
                     <div class="row">
                         <div class="col-lg-12">
@@ -138,7 +149,10 @@
                             </div>
                         </div>
                     </div>
-
+                    
+                    <?php                    
+                    }                       
+                    ?>
 
                     <?php
 

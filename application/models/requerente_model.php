@@ -56,6 +56,14 @@ class Requerente_model extends MY_Model
 
         return $this->get_all();
     }
+    
+    public function count_requerentes()
+    {
+        $this->db->where('requerentes.tipo', !REQUERENTE_TIPO_VEREADOR);
+        $this->db->from('requerentes');
+
+        return $this->db->count_all_results();
+    }
 
     public function update_last_visit($id)
     {

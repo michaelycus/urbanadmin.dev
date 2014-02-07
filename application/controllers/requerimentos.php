@@ -48,6 +48,7 @@ class Requerimentos extends MY_Controller
 
         $this->data['bairros'] = $this->bairros_model->get_bairros();
         $this->data['requerentes'] = $this->requerente_model->get_vereadores();
+        $this->data['solicitantes'] = $this->requerente_model->get_all();
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
 
         if ($this->form_validation->run()==TRUE):
@@ -55,8 +56,8 @@ class Requerimentos extends MY_Controller
                 'id_requerente','id_solicitante'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
 
-            $data['descricao_original'] = $this->input->post('descricao')
-;            
+            $data['descricao_original'] = $this->input->post('descricao');
+            
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
 
             $i = 1;
@@ -125,6 +126,7 @@ class Requerimentos extends MY_Controller
         $this->form_validation->set_rules($this->requerimento_model->validation);
 
         $this->data['bairros'] = $this->bairros_model->get_bairros();
+        $this->data['solicitantes'] = $this->requerente_model->get_all();
         $this->data['requerentes'] = $this->requerente_model->get_vereadores();
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
 
@@ -272,7 +274,7 @@ class Requerimentos extends MY_Controller
 
 
         $html = '<b>PROPRIETÁRIO:</b> Vereador Carlos Eduardo Ranzi    <b>EMAIL:</b>  vereadorranzi@gmail.com<br>';
-        $html .= '<b>PROFISSÃO:</b> Vereador        <b>CPF/CNPJ:</b> 976.237.330-87  <b>FONE:</b>    (51) 3982-1155 <br>';
+        $html .= '<b>PROFISSÃO:</b> Vereador            <b>CPF:</b> 976.237.330-87  <b>FONE:</b>    (51) 3982-1155 <br>';
         $html .= '<b>ENDEREÇO:</b>  Av. Benjamin Constant, 670 - 3º andar        <b>BAIRRO:</b> Centro<br>';
         $html .= '<b>MUNICÍPIO:</b>   Lajeado           <b>ESTADO:</b>   RS                      <b>CEP:</b>       95900-000<br>';
 

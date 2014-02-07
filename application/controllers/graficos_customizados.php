@@ -54,11 +54,16 @@ class Graficos_Customizados extends MY_Controller
 
         $this->load_view('graficos_customizados/visualizar', TRUE);
     }
-
+   
     public function excluir_grafico($id)
     {
         if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
         {
+            //deleta arquivo js
+            $chart = $this->graficos_customizados_model->get($id);
+            delete_chart($chart->code);
+            
+            //deleta banco
             $this->graficos_customizados_model->delete($id);
 
             $this->session->set_userdata('grafico_excluido','Gráfico excluído com sucesso!');
@@ -71,9 +76,11 @@ class Graficos_Customizados extends MY_Controller
         $next_id = $this->graficos_customizados_model->get_next_id();
 
         $data = elements(array('titulo','tipo','fonte','observacoes','cor_grafico'),$this->input->post());
-
+        
         $data['data'] = date('Y-m-d');
         $data['id_requerente'] = $_SESSION['id_user'];
+        
+        $code = $data['code'] = generate_key(8);
 
         $this->graficos_customizados_model->insert($data);
 
@@ -92,6 +99,15 @@ class Graficos_Customizados extends MY_Controller
             $this->graficos_customizados_model->inserir_dados_bairro($data_bairro);
         }
 
-        generate_custom_chart($next_id);
+        generate_custom_chart($next_id, $data);
+    }
+    
+    public function incorporar($code)
+    {
+        $chart = $this->graficos_customizados_model->get_by_code($code);
+        
+        $this->data['chart'] = $chart;
+        
+        $this->load->view('graficos_customizados/incorporar', $this->data);
     }
 }

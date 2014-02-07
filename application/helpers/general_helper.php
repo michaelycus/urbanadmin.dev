@@ -586,7 +586,7 @@ EOF;
 
 if (!function_exists('generate_custom_chart'))
 {
-    function generate_custom_chart($id)
+    function generate_custom_chart($id, $data)
     {
         $ci =& get_instance();
 
@@ -615,7 +615,7 @@ if (!function_exists('generate_custom_chart'))
 
         $hsl = get_static_color($chart->cor_grafico, 1);
 
-        $data = <<<EOF
+        $data_js = <<<EOF
         $(function() {
             $(".maparea1").mapael({
                 map: {
@@ -641,7 +641,7 @@ if (!function_exists('generate_custom_chart'))
                         title: "Requerimentos por bairro"
 EOF;
 
-        $data .='
+        $data_js .='
             }
         },
         areas: {';
@@ -655,7 +655,7 @@ EOF;
                 if ($c_v->valor!=NULL)
                 {
                     $hsl = get_static_color($chart->cor_grafico, 0, $max, $valor);
-                    $data .= <<<EOF
+                    $data_js .= <<<EOF
                         "$bairro->codename":{
                             value: "$valor",
                             attrs: {
@@ -670,7 +670,7 @@ EOF;
                 }
                 else
                 {
-                    $data .= <<<EOF
+                    $data_js .= <<<EOF
                         "$bairro->codename":{
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">$bairro->nome </span><br /> - Valor não informado -"},
@@ -681,15 +681,23 @@ EOF;
             $i++;
             endforeach;
 
-            $data .='}
+            $data_js .='}
             });
         });';
         }
-
-        if ( ! write_file('files/custom_charts/chart_'.$id.'.js', $data))
+        
+        if ( ! write_file('files/custom_charts/'.$data['code'].'.js', $data_js))
         {
-             echo 'Unable to write the file';
+             echo 'Unable to write the custom chart';
         }
+    }
+}
+
+if (!function_exists('delete_chart'))
+{
+    function delete_chart($code)
+    {
+        unlink('files/custom_charts/'.$code.'.js');
     }
 }
 

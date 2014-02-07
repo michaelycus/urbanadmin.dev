@@ -73,27 +73,8 @@ define('TIPO_REQ_RUAS_BUEIROS', 16);
 define('TIPO_REQ_RUAS_MANUTENCAO_ASFALTO', 17);
 define('TIPO_REQ_RUAS_COLOCACAO_BRITA', 18);
 define('TIPO_REQ_COPIA_DOCUMENTOS', 19);
-define('TIPO_REQ_CONSERTOS_GERAL', 20);
-define('TIPO_REQ_SOLICITACAO_SERVICOS', 21);
-define('TIPO_REQ_OUTROS', 22);
-
-//define('TIPOS_REQUERIMENTOS', serialize (array ( 1 => "ENTULHO - Remoção, limpeza",
-//                                                 2 => "ILUMINAÇÃO - Instalação, substituição, reparo",
-//                                                 3 => "LIXEIRA - Instalação, substituição, reparo",
-//                                                 4 => "PARADA DE ÔNIBUS - Instalação, reparo",
-//                                                 5 => "PLANTIO - Mudas e árvores",
-//                                                 6 => "PODAS - Mudas e árvores",
-//                                                 7 => "PRAÇAS - Manutenção, limpeza",
-//                                                 8 => "RUAS - Limpeza, Roçada",
-//                                                 9 => "RUAS - Nivelamento",
-//                                                 10 => "RUAS - Instalação/Conserto de lombada",
-//                                                 11 => "RUAS - Instalação/Conserto de canos",
-//                                                 12 => "RUAS - Instalação/Conserto calçamento",
-//                                                 13 => "RUAS - Instalação/Conserto de semáforos",
-//                                                 14 => "RUAS - Patrolamento",
-//                                                 15 => "RUAS - Instalação/Conserto de placas de sinalização/identificação",
-//                                                 16 => "RUAS - Manutenção de bueiros",
-//                                                 17 => "OUTROS" )));
+define('TIPO_REQ_CONSERTOS_SOLICITACAO_SERVICOS', 20);
+define('TIPO_REQ_OUTROS', 21);
 
 define('TIPOS_REQUERIMENTOS', serialize (array ( 1 => "ENTULHO - Remoção, limpeza",
                                                  2 => "ILUMINAÇÃO - Instalação, substituição, reparo",
@@ -113,10 +94,9 @@ define('TIPOS_REQUERIMENTOS', serialize (array ( 1 => "ENTULHO - Remoção, limp
                                                  16 => "RUAS - Manutenção de bueiros",
                                                  17 => "RUAS - Manutenção no asfalto",
                                                  18 => "RUAS - Colocação brita, areia, terra, saibro",
-                                                 19 => "Cópia de documentos oficiais",
-                                                 20 => "Consertos em geral",
-                                                 21 => "Solicitação serviços e empréstimos",
-                                                 22 => "OUTROS" )));
+                                                 19 => "PREFEITURA - Cópia de documentos oficiais",
+                                                 20 => "PREFEITURA - Consertos/Solicitação serviços e empréstimos",
+                                                 21 => "OUTROS" )));
 
 define('PESSOA_FISICA',0);
 define('PESSOA_JURIDICA',1);

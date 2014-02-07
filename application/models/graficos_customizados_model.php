@@ -8,6 +8,19 @@ class Graficos_customizados_model extends MY_Model
         $this->_database = $this->db;
         $this->_table = 'graficos_customizados';
     }
+    
+    public function get_by_code($code)
+    {
+        $q = $this->db->where('code', $code)                      
+                      ->limit(1)
+                      ->get('graficos_customizados');
+
+        if ($q->num_rows > 0)
+        {
+            return $q->row();
+        }
+        return false;
+    }
 
     public function inserir_dados_bairro($data)
     {

@@ -15,7 +15,7 @@ if (!function_exists('send_notification')) {
             $requerente = $ci->requerente_model->get($requerimento->id_solicitante);
 
             $ci->load->library('email');
-
+            
             $ci->email->from('vereadorranzi@gmail.com', 'Gabinete Vereador Ranzi');
             $ci->email->to($requerente->email);
 
@@ -31,6 +31,12 @@ if (!function_exists('send_notification')) {
                 $subject = "Requerimento Protocolado";
                 $message .= "Seu requerimento foi protocolado e será executado pelas secretarias responsáveis da Prefeitura Municipal de Lajeado.\n";
                 $message .= "O número do seu protocolo junto à prefeitura é o $requerimento->expediente/$requerimento->ano_expediente.\n\n";
+                
+                $message .= "Para consultar no site da prefeitura, acesse o link abaixo e informe os seguintes dados: \n";
+                $message .= "- Exercício: $requerimento->ano_expediente\n";
+                $message .= "- Número: $requerimento->expediente\n";
+                $message .= "- Nome/CPF/CNPJ: 97623733087 \n\n";
+                $message .= "Link: http://www.lajeado.rs.gov.br/home/pagina.asp?titulo=Situa%E7%E3o%20do%20Processo&categoria=Administra%E7%E3o&codigoCategoria=961&imagemCategoria=&INC=includes/show_servicos.asp&conteudo=3451&servico=70043 \n\n";
             }
 
             $message .= "Atenciosamente,\n";

@@ -73,7 +73,7 @@ class Requerimento_model extends MY_Model
         $this->db->where('situacao', $cat);
         $this->db->from('requerimentos');
 
-        return $this->db->count_all_results();;
+        return $this->db->count_all_results();
     }
 
     public function count_requerimentos_with_bairros()
@@ -124,6 +124,14 @@ class Requerimento_model extends MY_Model
         }
 
         return $array_result;
+    }
+    
+    public function count_meus_requerimentos($id_user)
+    {
+        $this->db->where('id_solicitante', $id_user);
+        $this->db->from('requerimentos');
+
+        return $this->db->count_all_results();
     }
 
     public function get_requerimento_by_solicitante($id)

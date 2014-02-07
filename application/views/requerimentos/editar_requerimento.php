@@ -81,6 +81,19 @@
                 if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
                 {
                     echo '<hr>';
+                    
+                    // id_solicitante
+                    echo '<div class="form-group">';
+                    echo    '<label for="id_solicitante" class="col-lg-3 control-label">Solicitante</label>';
+                    echo    '<div class="col-lg-9">';
+                    echo        '<select id="id_solicitante" name="id_solicitante">';
+                    foreach ($solicitantes as $solicitante)
+                    {
+                        echo        '<option value="'.$solicitante->id.'" '.set_select('id_solicitante', $solicitante->id, $solicitante->id==$requerimento->id_solicitante).'>'.$solicitante->nome.'</option>';
+                    }
+                    echo        '</select>';
+                    echo    '</div>';
+                    echo '</div>';
 
                     // id_requerente
                     echo '<div class="form-group">';

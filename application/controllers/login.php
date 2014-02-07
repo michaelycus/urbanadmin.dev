@@ -72,17 +72,26 @@ class Login extends MY_Controller
     public function inicio()
     {
         if ($_SESSION['autorizacao']== AUTORIZACAO_OPERADOR)
-            redirect ('requerimentos/meus_requerimentos/');
+        {
+            $this->data['requerimentos'] = $this->requerimento_model->get_last(8);
+            $this->data['total_requerimentos'] = $this->requerimento_model->count_all();
+            $this->data['meus_requerimentos'] = $this->requerimento_model->count_meus_requerimentos($_SESSION['id_user']);
+            $this->data['total_requerentes'] = $this->requerente_model->count_requerentes();
+            
+            $this->load_view('layouts/inicio_operador');
+        }
+        else
+        {
+            $this->data['requerimentos'] = $this->requerimento_model->get_last(10);
+            $this->data['requerentes'] = $this->requerente_model->get_last(10);
 
-        $this->data['requerimentos'] = $this->requerimento_model->get_last(8);
-        $this->data['requerentes'] = $this->requerente_model->get_last(8);
+            $this->data['req_em_analise'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
+            $this->data['req_analisado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_ANALISADO);
+            $this->data['req_protocolado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
+            $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
 
-        $this->data['req_em_analise'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
-        $this->data['req_analisado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_ANALISADO);
-        $this->data['req_protocolado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
-        $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
-
-        $this->load_view('layouts/inicio');
+            $this->load_view('layouts/inicio_administrador');
+        }
     }
 
     public function logout()
@@ -121,7 +130,7 @@ class Login extends MY_Controller
             $this->requerente_model->insert($data);
             generate_charts();
 
-            $this->session->set_userdata('requerente_cadastrado','Usuário cadastrado com sucesso!<br />Você já pode acessar com seu CPF/CNPJ e senha.');
+            $this->session->set_userdata('requerente_cadastrado','Usuário cadastrado com sucesso!<br />Você já pode acessar com seu CPF e senha.');
             redirect('login');
         endif;
 
@@ -156,7 +165,7 @@ class Login extends MY_Controller
         }
         else
         {
-            $this->session->set_userdata('forgot_usuario_errado','CPF/CNPJ e e-mail informados não existem no sistema!<br />Por favor, tente novamente.');
+            $this->session->set_userdata('forgot_usuario_errado','CPF e e-mail informados não existem no sistema!<br />Por favor, tente novamente.');
         }
 
         $this->data['view'] = 'forgot';

@@ -86,11 +86,32 @@
                 echo        '</select>';
                 echo    '</div>';
                 echo '</div>';
+                
+                ?>
+                <div class="alert alert-info" id="div_alerta_lixeira">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong><i class="icon24 i-info"></i> Sobre a instalação de lixeiras:</strong> em casos de lixeira instaladas em frente à um imóvel particular, 
+                        o requerimento precisa estar no nome do proprietário do imóvel e assinado pelo mesmo. Se for esse o caso, entraremos em contato para coletar sua assinatura.
+                </div>
 
+                <?php    
                 if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
                 {
                     echo '<hr>';
 
+                    // id_solicitante
+                    echo '<div class="form-group">';
+                    echo    '<label for="id_solicitante" class="col-lg-3 control-label">Solicitante</label>';
+                    echo    '<div class="col-lg-9">';
+                    echo        '<select id="id_solicitante" name="id_solicitante">';
+                    foreach ($solicitantes as $solicitante)
+                    {
+                        echo        '<option value="'.$solicitante->id.'" '.set_select('id_solicitante', $solicitante->id, $solicitante->id==$_SESSION['id_user']).'>'.$solicitante->nome.'</option>';
+                    }
+                    echo        '</select>';
+                    echo    '</div>';
+                    echo '</div>';
+                    
                     // id_requerente
                     echo '<div class="form-group">';
                     echo    '<label for="id_requerente" class="col-lg-3 control-label">Requerente</label>';
@@ -119,6 +140,7 @@
                 else
                 {
                     echo form_hidden('id_requerente', REQUERENTE_PADRAO_ID);
+                    echo form_hidden('id_solicitante', $_SESSION['id_user']);
                     echo form_hidden('data_requerimento',  date('d/m/Y'));
                 }
 
@@ -148,8 +170,7 @@
                 echo    '</div>';
                 echo '</div>';
 
-                echo form_hidden('id', $bairro->id);
-                echo form_hidden('id_solicitante', $_SESSION['id_user']);
+                echo form_hidden('id', $bairro->id);                
 
                 if ($_SESSION['autorizacao'] == AUTORIZACAO_OPERADOR)
                 {
@@ -210,4 +231,17 @@
 <script type="text/javascript" src="<?php echo base_url() . 'js/bairro_rua.js'; ?>"></script>
 <script type="text/javascript">
     var path = '<?php echo site_url(); ?>';
+    
+    $('#div_alerta_lixeira').hide();
+
+    $('#cat_requerimento').change(function() {
+        if ($('#cat_requerimento').val()==<?php echo TIPO_REQ_LIXEIRA; ?>)
+        {
+            $('#div_alerta_lixeira').show(200);
+        }
+        else
+        {
+            $('#div_alerta_lixeira').hide(400);
+        }
+    });
 </script>

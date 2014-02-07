@@ -18,9 +18,6 @@ class Graficos extends MY_Controller
 
     public function requerentes_por_bairro()
     {
-        // apagar
-        $this->data['requerentes_bairro'] = $this->requerente_model->count_requerentes_por_bairro();
-
         $this->load_view('graficos/requerentes_por_bairro', TRUE);
     }
 
