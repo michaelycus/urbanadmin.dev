@@ -33,13 +33,13 @@
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br /> - Valor não informado -"},
                         },                        "campestre":{
-                            value: "4",
+                            value: "2",
                             attrs: {
-                                fill: "hsl(60, 6, 71.1290322581)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 73.064516129)", stroke: "#204a87"
                             },
-                            text: { content:  4 , attrs: {fill:"#222"} },
+                            text: { content:  2 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Valor: 4"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Valor: 2"},
                         },                        "carneiros":{
                             value: "1",
                             attrs: {
@@ -49,13 +49,13 @@
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Valor: 1"},
                         },                        "centenario":{
-                            value: "0",
+                            value: "1",
                             attrs: {
-                                fill: "hsl(60, 6, 75)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 74.0322580645)", stroke: "#204a87"
                             },
-                            text: { content:  0 , attrs: {fill:"#222"} },
+                            text: { content:  1 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Valor: 0"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Valor: 1"},
                         },                        "centro":{
                             value: "30",
                             attrs: {
@@ -65,53 +65,48 @@
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Valor: 30"},
                         },                        "conservas":{
-                            value: "0",
-                            attrs: {
-                                fill: "hsl(60, 6, 75)", stroke: "#204a87"
-                            },
-                            text: { content:  0 , attrs: {fill:"#222"} },
-                            href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Valor: 0"},
-                        },                        "conventos":{
                             value: "1",
                             attrs: {
                                 fill: "hsl(60, 6, 74.0322580645)", stroke: "#204a87"
                             },
                             text: { content:  1 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Valor: 1"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Valor: 1"},
+                        },                        "conventos":{
+                            value: "5",
+                            attrs: {
+                                fill: "hsl(60, 6, 70.1612903226)", stroke: "#204a87"
+                            },
+                            text: { content:  5 , attrs: {fill:"#222"} },
+                            href: "#",
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Valor: 5"},
                         },                        "floresta":{
-                            value: "3",
+                            value: "2",
                             attrs: {
-                                fill: "hsl(60, 6, 72.0967741935)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 73.064516129)", stroke: "#204a87"
                             },
-                            text: { content:  3 , attrs: {fill:"#222"} },
+                            text: { content:  2 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Floresta </span><br />Valor: 3"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Floresta </span><br />Valor: 2"},
                         },                        "florestal":{
-                            value: "7",
+                            value: "11",
                             attrs: {
-                                fill: "hsl(60, 6, 68.2258064516)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 64.3548387097)", stroke: "#204a87"
                             },
-                            text: { content:  7 , attrs: {fill:"#222"} },
+                            text: { content:  11 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Valor: 7"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Valor: 11"},
                         },                        "hidraulica":{
-                            value: "3",
+                            value: "4",
                             attrs: {
-                                fill: "hsl(60, 6, 72.0967741935)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 71.1290322581)", stroke: "#204a87"
                             },
-                            text: { content:  3 , attrs: {fill:"#222"} },
+                            text: { content:  4 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Hidráulica </span><br />Valor: 3"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Hidráulica </span><br />Valor: 4"},
                         },                        "igrejinha":{
-                            value: "0",
-                            attrs: {
-                                fill: "hsl(60, 6, 75)", stroke: "#204a87"
-                            },
-                            text: { content:  0 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Igrejinha </span><br />Valor: 0"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Igrejinha </span><br /> - Valor não informado -"},
                         },                        "imigrante":{
                             value: "0",
                             attrs: {
@@ -129,21 +124,21 @@
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Valor: 1"},
                         },                        "moinhos":{
-                            value: "11",
+                            value: "9",
                             attrs: {
-                                fill: "hsl(60, 6, 64.3548387097)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 66.2903225806)", stroke: "#204a87"
                             },
-                            text: { content:  11 , attrs: {fill:"#222"} },
+                            text: { content:  9 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Valor: 11"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Valor: 9"},
                         },                        "moinhos_dagua":{
-                            value: "0",
+                            value: "1",
                             attrs: {
-                                fill: "hsl(60, 6, 75)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 74.0322580645)", stroke: "#204a87"
                             },
-                            text: { content:  0 , attrs: {fill:"#222"} },
+                            text: { content:  1 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos D' Água </span><br />Valor: 0"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos D' Água </span><br />Valor: 1"},
                         },                        "montanha":{
                             value: "4",
                             attrs: {
@@ -153,37 +148,27 @@
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">Montanha </span><br />Valor: 4"},
                         },                        "morro_vinte_cinco":{
-                            value: "0",
+                            value: "1",
                             attrs: {
-                                fill: "hsl(60, 6, 75)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 74.0322580645)", stroke: "#204a87"
                             },
-                            text: { content:  0 , attrs: {fill:"#222"} },
+                            text: { content:  1 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Morro 25 </span><br />Valor: 0"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Morro 25 </span><br />Valor: 1"},
                         },                        "nacoes":{
-                            value: "0",
-                            attrs: {
-                                fill: "hsl(60, 6, 75)", stroke: "#204a87"
-                            },
-                            text: { content:  0 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Nações </span><br />Valor: 0"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Nações </span><br /> - Valor não informado -"},
                         },                        "olarias":{
-                            value: "3",
+                            value: "1",
                             attrs: {
-                                fill: "hsl(60, 6, 72.0967741935)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 74.0322580645)", stroke: "#204a87"
                             },
-                            text: { content:  3 , attrs: {fill:"#222"} },
+                            text: { content:  1 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Olarias </span><br />Valor: 3"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Olarias </span><br />Valor: 1"},
                         },                        "planalto":{
-                            value: "0",
-                            attrs: {
-                                fill: "hsl(60, 6, 75)", stroke: "#204a87"
-                            },
-                            text: { content:  0 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Planalto </span><br />Valor: 0"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Planalto </span><br /> - Valor não informado -"},
                         },                        "santo_andre":{
                             value: "1",
                             attrs: {
@@ -209,21 +194,21 @@
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">São Bento </span><br />Valor: 0"},
                         },                        "sao_cristovao":{
-                            value: "20",
+                            value: "15",
                             attrs: {
-                                fill: "hsl(60, 6, 55.6451612903)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 60.4838709677)", stroke: "#204a87"
                             },
-                            text: { content:  20 , attrs: {fill:"#222"} },
+                            text: { content:  15 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">São Cristóvão </span><br />Valor: 20"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">São Cristóvão </span><br />Valor: 15"},
                         },                        "universitario":{
-                            value: "3",
+                            value: "1",
                             attrs: {
-                                fill: "hsl(60, 6, 72.0967741935)", stroke: "#204a87"
+                                fill: "hsl(60, 6, 74.0322580645)", stroke: "#204a87"
                             },
-                            text: { content:  3 , attrs: {fill:"#222"} },
+                            text: { content:  1 , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Valor: 3"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Valor: 1"},
                         },}
             });
         });
