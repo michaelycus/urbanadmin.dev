@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: bm90.webservidor.net
--- Tempo de Geração: 11/02/2014 às 11:14
+-- Tempo de Geração: 12/02/2014 às 15:55
 -- Versão do servidor: 5.1.70-community
 -- Versão do PHP: 5.3.17
 
@@ -5710,7 +5710,14 @@ CREATE TABLE IF NOT EXISTS `contatos` (
   `email` varchar(64) NOT NULL,
   `data_cadastro` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+
+--
+-- Fazendo dump de dados para tabela `contatos`
+--
+
+INSERT INTO `contatos` (`id`, `nome`, `id_bairro`, `endereco`, `telefone`, `email`, `data_cadastro`) VALUES
+(11, 'Nelson Kalkmann', 24, '', '(51) 9620-6057', '', '2014-02-11');
 
 -- --------------------------------------------------------
 
@@ -5770,27 +5777,29 @@ CREATE TABLE IF NOT EXISTS `graficos_customizados` (
   `titulo` varchar(255) NOT NULL,
   `fonte` varchar(255) NOT NULL,
   `observacoes` text NOT NULL,
+  `formato` smallint(6) NOT NULL,
   `data` date NOT NULL,
   `cor_grafico` int(11) NOT NULL,
   `tipo` smallint(6) NOT NULL,
   `id_requerente` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=81 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=82 ;
 
 --
 -- Fazendo dump de dados para tabela `graficos_customizados`
 --
 
-INSERT INTO `graficos_customizados` (`id`, `code`, `titulo`, `fonte`, `observacoes`, `data`, `cor_grafico`, `tipo`, `id_requerente`) VALUES
-(71, 'afcd421f', 'Votação de Luís Fernando Schmidt 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação por bairro, na cidade de Lajeado RS', '2014-01-15', 0, 0, 1),
-(73, 'fgc5f1s2', 'Votação Marcelo Caumo 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação por bairro, na cidade de Lajeado RS', '2014-01-15', 0, 0, 1),
-(74, 'g41c5f2d', 'Votação de Luís Fernando Schmidt 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação percentual por bairro, na cidade de Lajeado RS', '2014-01-16', 0, 0, 1),
-(75, 'z45ff15f', 'Votação Marcelo Caumo 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação percentual por bairro, na cidade de Lajeado RS', '2014-01-16', 0, 0, 1),
-(76, 'wrcd95gh', 'Bolsa Família em Lajeado', 'STHAS - Secretaria do Trabalho, Habitação e Assistência Social de Lajeado', 'Quantidade de famílias que receberam o benefício em Janeiro/2014.', '2014-01-16', 2, 0, 1),
-(77, 'vbig123f', 'Votação Ranzi 2012', 'TRE RS (http://www.tre-rs.jus.br/eleicoes/2012/1turno/RS87297.html)', 'Percentual de votação em relação ao total de votantes aptos', '2014-01-16', 3, 0, 1),
-(78, 'fr478rgg', 'Votação proporcional Ranzi', 'TRE (http://www.tre-rs.gov.br/eleicoes/2012/1turno/87297/cand_13_15300.html)', 'Votação em percentual, proporcional à quantidade de votos do próprio candidato', '2014-01-27', 7, 0, 1),
-(79, 'qwer1234', 'Votação Kniphoff 2012', 'TRE (http://www.tre-rs.gov.br/eleicoes/2012/1turno/87297/cand_13_13714.html)', 'Votação proporcional do vereador', '2014-01-27', 7, 0, 1),
-(80, 'fgr56gb1', 'Votação Mozart 2012', 'TRE (http://www.tre-rs.gov.br/eleicoes/2012/1turno/87297/cand_13_11100.html)', 'Votação proporcional do vereador', '2014-01-27', 7, 0, 1);
+INSERT INTO `graficos_customizados` (`id`, `code`, `titulo`, `fonte`, `observacoes`, `formato`, `data`, `cor_grafico`, `tipo`, `id_requerente`) VALUES
+(71, 'afcd421f', 'Votação de Luís Fernando Schmidt 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação por bairro, na cidade de Lajeado RS', 0, '2014-01-15', 0, 0, 1),
+(73, 'fgc5f1s2', 'Votação Marcelo Caumo 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação por bairro, na cidade de Lajeado RS', 0, '2014-01-15', 0, 0, 1),
+(74, 'g41c5f2d', 'Votação de Luís Fernando Schmidt 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação percentual por bairro, na cidade de Lajeado RS', 0, '2014-01-16', 0, 0, 1),
+(75, 'z45ff15f', 'Votação Marcelo Caumo 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação percentual por bairro, na cidade de Lajeado RS', 0, '2014-01-16', 0, 0, 1),
+(76, 'wrcd95gh', 'Bolsa Família em Lajeado', 'STHAS - Secretaria do Trabalho, Habitação e Assistência Social de Lajeado', 'Quantidade de famílias que receberam o benefício em Janeiro/2014.', 0, '2014-01-16', 2, 0, 1),
+(77, 'vbig123f', 'Votação Ranzi 2012', 'TRE RS (http://www.tre-rs.jus.br/eleicoes/2012/1turno/RS87297.html)', 'Percentual de votação em relação ao total de votantes aptos', 0, '2014-01-16', 3, 0, 1),
+(78, 'fr478rgg', 'Votação proporcional Ranzi', 'TRE (http://www.tre-rs.gov.br/eleicoes/2012/1turno/87297/cand_13_15300.html)', 'Votação em percentual, proporcional à quantidade de votos do próprio candidato', 0, '2014-01-27', 7, 0, 1),
+(79, 'qwer1234', 'Votação Kniphoff 2012', 'TRE (http://www.tre-rs.gov.br/eleicoes/2012/1turno/87297/cand_13_13714.html)', 'Votação proporcional do vereador', 0, '2014-01-27', 7, 0, 1),
+(80, 'fgr56gb1', 'Votação Mozart 2012', 'TRE (http://www.tre-rs.gov.br/eleicoes/2012/1turno/87297/cand_13_11100.html)', 'Votação proporcional do vereador', 0, '2014-01-27', 7, 0, 1),
+(81, '7dhgb9tp', 'teste', 'TRERER', 'TESTSERTS', 1, '2014-02-11', 1, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -6078,7 +6087,34 @@ INSERT INTO `graficos_customizados_dados` (`id_grafico`, `id_bairro`, `valor`) V
 (80, 24, 2),
 (80, 25, 1),
 (80, 26, 13),
-(80, 27, 1);
+(80, 27, 1),
+(81, 1, 23),
+(81, 2, 222),
+(81, 3, 44),
+(81, 4, NULL),
+(81, 5, NULL),
+(81, 6, NULL),
+(81, 7, NULL),
+(81, 8, NULL),
+(81, 9, 5),
+(81, 10, NULL),
+(81, 11, NULL),
+(81, 12, NULL),
+(81, 13, NULL),
+(81, 14, NULL),
+(81, 15, NULL),
+(81, 16, NULL),
+(81, 17, NULL),
+(81, 18, NULL),
+(81, 19, NULL),
+(81, 20, NULL),
+(81, 21, NULL),
+(81, 22, NULL),
+(81, 23, NULL),
+(81, 24, NULL),
+(81, 25, NULL),
+(81, 26, NULL),
+(81, 27, NULL);
 
 -- --------------------------------------------------------
 
@@ -6116,8 +6152,8 @@ CREATE TABLE IF NOT EXISTS `requerentes` (
 --
 
 INSERT INTO `requerentes` (`id`, `nome`, `tipo`, `pessoa_fisica`, `cpf`, `cnpj`, `password`, `rg`, `email`, `data_cadastro`, `ultima_visita`, `id_bairro`, `endereco`, `telefone`, `profissao`, `mora_cidade`, `cidade`, `estado`, `cep`, `autorizacao`, `deleted`) VALUES
-(1, 'Carlos Eduardo Ranzi', 1, 0, '976.237.330-87', NULL, 'c6b0997191691cc80851f8786985f7ea', NULL, '', '2013-12-08', '2014-02-11', 2, '', '', '', 1, NULL, NULL, NULL, 1, 0),
-(2, 'Michael Marques', 0, 0, '006.207.320-67', NULL, 'd0e516cab32f7ab2b71425ac8a4c2eb8', '7063641224', 'michaelycus@gmail.com', '2013-12-08', '2014-02-11', 2, '', '', '', 0, 1, NULL, NULL, 1, 0),
+(1, 'Carlos Eduardo Ranzi', 1, 0, '976.237.330-87', NULL, 'c6b0997191691cc80851f8786985f7ea', NULL, '', '2013-12-08', '2014-02-12', 2, '', '', '', 1, NULL, NULL, NULL, 1, 0),
+(2, 'Michael Marques', 0, 0, '006.207.320-67', NULL, 'd0e516cab32f7ab2b71425ac8a4c2eb8', '7063641224', 'michaelycus@gmail.com', '2013-12-08', '2014-02-12', 2, '', '', '', 0, 1, NULL, NULL, 1, 0),
 (3, 'Marcela Roesler', 0, 0, '019.727.000-06', '', 'db6d9d7d2e8584de940868d542b916c0', NULL, 'cela.roesler@gmail.com', '2013-12-14', '0000-00-00', 7, '0', '0', '', 1, 0, 0, '', 0, 0),
 (4, 'Fernando Dall''Azen', 0, 0, '024.133.620-10', '', 'e9194ec61d8272673269a10ae2abb805', NULL, 'fdallazen@hotmail.com', '2013-12-16', '2013-12-17', 7, '0', '0', '', 1, 0, 0, '', 0, 0),
 (5, 'Luiz Fernando Foletto', 0, 0, '926.617.850-00', '', '95afe4780ee1b10579d98859790c0a2f', NULL, 'fernando.foletto@hotmail.com', '2013-12-16', '2013-12-17', 16, '0', '0', '', 1, 0, 0, '', 0, 0),
@@ -6181,10 +6217,10 @@ INSERT INTO `requerentes` (`id`, `nome`, `tipo`, `pessoa_fisica`, `cpf`, `cnpj`,
 (63, 'Gunther Meyer', 0, 0, '166.992.030-53', '', 'bc69de5a6b933a9be7da73d6ff2e4060', NULL, 'meyer@hotelstore.net', '2014-02-05', '2014-02-05', 2, '0', '(51) 9942-4082', '', 1, 0, 0, '', 0, 0),
 (64, 'franciele wendt', 0, 0, '019.788.040-16', '', 'adbf56386de1005fe01e2edf803240b7', NULL, 'fran.wendt.12@facebook.com', '2014-02-05', '2014-02-05', 15, '0', '(51) 9807-7129', '', 1, 0, 0, '', 0, 0),
 (65, 'Ivo de Oliveira', 0, 0, '304.760.200-00', '', '0f2fb5dc4c2c4fb2bb42f4c58ab6ce4a', NULL, 'ivosorio@hotmail.com', '2014-02-06', '2014-02-06', 27, '0', '(51) 8109-8190', '', 1, 0, 0, '', 0, 0),
-(66, 'ana paula lazzaretti', 0, 0, '014.549.310-51', '', 'bf2297f9f60ee95e27ea98b8e2c94d7d', NULL, 'contato@confiancalj.com.br', '2014-02-07', '2014-02-07', 11, '0', '', '', 1, 0, 0, '', 0, 0),
+(66, 'ana paula lazzaretti', 0, 0, '014.549.310-51', '', 'bf2297f9f60ee95e27ea98b8e2c94d7d', NULL, 'contato@confiancalj.com.br', '2014-02-07', '2014-02-12', 11, '0', '', '', 1, 0, 0, '', 0, 0),
 (67, 'jean Zagonel', 0, 0, '010.377.930-21', '', 'e10adc3949ba59abbe56e057f20f883e', NULL, 'jean@zagonel.com', '2014-02-08', '2014-02-10', 7, '0', '', '', 1, 0, 0, '', 0, 0),
 (68, 'melissa schumacher', 0, 0, '790.285.270-87', '', '021af29f812248a14b36386d94b0d80b', NULL, 'melischuma@gmail.com', '2014-02-10', '2014-02-10', 1, '0', '(51) 3714-4466', '', 1, 0, 0, '', 0, 0),
-(69, 'DIEGO RAFAEL MOCINHO', 0, 0, '972.456.820-20', '', '8c8b086e4a46727c25421a476133dd2d', '0', 'diegomocinho@hotmail.com', '2014-02-10', '2014-02-10', 27, 'Rua Erechim, 469 (entre rua Ijui e Ilópolis)', '(51) 9908-6945', '0', 1, 0, 0, '', 0, 0),
+(69, 'DIEGO RAFAEL MOCINHO', 0, 0, '972.456.820-20', '', '8c8b086e4a46727c25421a476133dd2d', '0', 'diegomocinho@hotmail.com', '2014-02-10', '2014-02-11', 27, 'Rua Erechim, 469 (entre rua Ijui e Ilópolis)', '(51) 9908-6945', '0', 1, 0, 0, '', 0, 0),
 (70, 'Anderson', 0, 0, '778.694.860-00', '', '712e61b13844c90d1eda228f0d1846b4', NULL, 'dr.anderson.b@gmail.com', '2014-02-11', '2014-02-11', 16, '0', '(51) 8147-0879', '', 1, 0, 0, '', 0, 0);
 
 -- --------------------------------------------------------
@@ -6212,7 +6248,7 @@ CREATE TABLE IF NOT EXISTS `requerimentos` (
   `anexo_2` varchar(256) NOT NULL,
   `anexo_3` varchar(256) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=124 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=129 ;
 
 --
 -- Fazendo dump de dados para tabela `requerimentos`
@@ -6331,12 +6367,17 @@ INSERT INTO `requerimentos` (`id`, `titulo`, `descricao`, `descricao_original`, 
 (115, '', 'Solicita à Secretaria de Obras e Serviços Urbanos, em resposta ao ofício n° 033-01/2013, indicando o nome do vereador Carlos Eduardo Ranzi para a \nreferida questão. \n', 'Solicita à Secretaria de Obras e Serviços Urbanos, em resposta ao ofício n° 033-01/2013, indicando o nome do vereador Carlos Eduardo Ranzi para a \nreferida questão. \n', 7, 0, 21, '2014-02-04', 1, 1, 0, 0, 0, b'0', '', '', ''),
 (116, '', 'Recolhimento de lixo verde na Rua das Azaléias, atrás do Parque do Imigrante - Bairro Alto do Parque.\n\nRecolhimento de lixo verde dentro do Parque do Imigrante.', 'Recolhimento de lixo verde na Rua das Azaléias, atrás do Parque do Imigrante - Bairro Alto do Parque.\n\nRecolhimento de lixo verde dentro do Parque do Imigrante.', 1, 261, 8, '2014-02-07', 1, 1, 4051, 2014, 2, b'0', '', '', ''),
 (117, '', 'Trabalho na Administradora de Condomínios Confiança, administramos o Edifício Comercial Alvorada Center CNPJ 08.404.746/0001-72, solicito a colocação de uma lixeira, que deve ser instalada na rua lateral ao prédio Alvorada Center, sito a Rua Bento Gonçalves, ao lado de cima da garagem (quem olha de frente), são 27 salas comerciais sem lixeira, se possível com tampa.  ', 'Trabalho na Administradora de Condomínios Confiança, administramos o Edifício Comercial Alvorada Center CNPJ 08.404.746/0001-72, solicito a colocação de uma lixeira, que deve ser instalada na rua lateral ao prédio Alvorada Center, sito a Rua Bento Gonçalves, ao lado de cima da garagem (quem olha de frente), são 27 salas comerciais sem lixeira, se possível com tampa.  ', 7, 6, 3, '2014-02-07', 66, 1, 4050, 2014, 2, b'0', '', '', ''),
-(118, '', 'Limpeza da praça e do campo de areia localizados na esquina das Ruas Vitória e Edvino Henrique Becher - Bairro Universitário.', 'Limpeza da praça e campo de areia', 27, 870, 7, '2014-02-10', 69, 1, 0, 0, 1, b'0', '', '', ''),
-(119, '', 'Instalação de bueiro entre as Ruas Ijui e Ilópolis - Bairro Universitário.', 'Após colocação de canos entre a Rua Ijui e Ilópolis,  não foi feito a boca de lobo, já solicitado diversas vezes a prefeitura e nada foi feito até o momento', 27, 478, 16, '2014-02-10', 69, 1, 0, 0, 1, b'0', '', '', ''),
-(120, '', 'Brita/material na Rua Erechim, entre as Ruas Ijuí e Ilópolis (não apenas no centro da pista) - Bairro Universitário.', 'Após nivelamento sem necessidade  da rua Erechim  entre a Rua Ijuí e Ilópolis, não foi colocado brita suficiente na rua (apenas no meio)  causando transtorno como barro e dificil acesso.\nSolicitado a prefeitura e até o momento nada foi feito.', 27, 0, 18, '2014-02-10', 69, 1, 0, 0, 1, b'0', 'a7451bc090a63e3ea8d0ce64c1989fa6.jpg', '', ''),
-(121, '', 'Roçada de área localizada na esquina da Rua Ludwig Rudolph Ewald com a Rua Fábio Antônio Sartori Bertoglio - Bairro Moinhos.\n\n', 'O MATO TOMA CONTA E SERVE DE ESCONDERIJO PARA LADROES QUE JÁ ROUBARAM AS CASAS EM VOLTA VARIAS VEZES E TAMBEM VIRA AREA DE CRAQUEIROS E DROGADITOS...\n\nESQUINA COM A RUA FABIO ANTONIO SARTORI BERTOGLIO', 16, 607, 8, '2014-02-11', 70, 1, 0, 0, 1, b'0', '', '', ''),
-(122, '', 'Conserto de buraco no asfalto localizado na esquina das Ruas Bento Gonçalves e Saldanha Marinho - Bairro Centro.  ', 'Conserto de buraco no asfalto localizado na esquina das Ruas Bento Gonçalves e Saldanha Marinho - Bairro Centro.  ', 7, 185, 17, '2014-02-11', 1, 1, 0, 0, 1, b'0', '', '', ''),
-(123, '', 'Roçada na Rua Bento Rosa, no trecho compreendido entre o o trevo da BR-386 até a Rua Sabiá - Bairro Hidraulica/Carneiros.', 'Roçada na Rua Bento Rosa, no trecho compreendido entre o o trevo da BR-386 até a Rua Sabiá - Bairro Hidraulica/Carneiros.', 12, 186, 8, '2014-02-11', 1, 1, 0, 0, 1, b'0', '', '', '');
+(118, '', 'Limpeza da praça e do campo de areia localizados na esquina das Ruas Vitória e Edvino Henrique Becher - Bairro Universitário.', 'Limpeza da praça e campo de areia', 27, 870, 7, '2014-02-10', 69, 1, 4356, 2014, 2, b'0', '', '', ''),
+(119, '', 'Instalação de bueiro entre as Ruas Ijui e Ilópolis - Bairro Universitário.', 'Após colocação de canos entre a Rua Ijui e Ilópolis,  não foi feito a boca de lobo, já solicitado diversas vezes a prefeitura e nada foi feito até o momento', 27, 478, 16, '2014-02-10', 69, 1, 4346, 2014, 2, b'0', '', '', ''),
+(120, '', 'Brita/material na Rua Erechim, entre as Ruas Ijuí e Ilópolis (não apenas no centro da pista) - Bairro Universitário.', 'Após nivelamento sem necessidade  da rua Erechim  entre a Rua Ijuí e Ilópolis, não foi colocado brita suficiente na rua (apenas no meio)  causando transtorno como barro e dificil acesso.\nSolicitado a prefeitura e até o momento nada foi feito.', 27, 0, 18, '2014-02-10', 69, 1, 4348, 2014, 2, b'0', 'a7451bc090a63e3ea8d0ce64c1989fa6.jpg', '', ''),
+(121, '', 'Roçada de área localizada na esquina da Rua Ludwig Rudolph Ewald com a Rua Fábio Antônio Sartori Bertoglio - Bairro Moinhos.\n\n', 'O MATO TOMA CONTA E SERVE DE ESCONDERIJO PARA LADROES QUE JÁ ROUBARAM AS CASAS EM VOLTA VARIAS VEZES E TAMBEM VIRA AREA DE CRAQUEIROS E DROGADITOS...\n\nESQUINA COM A RUA FABIO ANTONIO SARTORI BERTOGLIO', 16, 607, 8, '2014-02-11', 70, 1, 4359, 2014, 2, b'0', '', '', ''),
+(122, '', 'Conserto de buraco no asfalto localizado na esquina das Ruas Bento Gonçalves e Saldanha Marinho - Bairro Centro.  ', 'Conserto de buraco no asfalto localizado na esquina das Ruas Bento Gonçalves e Saldanha Marinho - Bairro Centro.  ', 7, 185, 17, '2014-02-11', 1, 1, 4362, 2014, 2, b'0', '', '', ''),
+(123, '', 'Roçada na Rua Bento Rosa, no trecho compreendido entre o o trevo da BR-386 até a Rua Sabiá - Bairro Hidraulica/Carneiros.', 'Roçada na Rua Bento Rosa, no trecho compreendido entre o o trevo da BR-386 até a Rua Sabiá - Bairro Hidraulica/Carneiros.', 12, 186, 8, '2014-02-11', 1, 1, 4336, 2014, 2, b'0', '', '', ''),
+(124, '', 'Nivelamento e brita na Rua Otto Henrique Scherer - Bairro Imigrante.', 'Nivelamento e brita na Rua Otto Henrique Scherer - Bairro Imigrante.', 14, 467, 9, '2014-02-12', 1, 1, 0, 0, 1, b'0', '', '', ''),
+(125, '', 'Fixar lixeira solta na Rua Otto Henrique Scherer, em frente à empresa Folhito - Bairro Imigrante.', 'Fixar lixeira solta na Rua Otto Henrique Scherer, em frente à empresa Folhito - Bairro Imigrante.', 14, 467, 3, '2014-02-12', 1, 1, 0, 0, 1, b'0', '', '', ''),
+(126, '', 'Instalação de bueiro na Rua Otto Henrique Scherer, em frente à empresa Folhito - Bairro Imigrante.', 'Instalação de bueiro na Rua Otto Henrique Scherer, em frente à empresa Folhito - Bairro Imigrante.', 14, 467, 16, '2014-02-12', 1, 1, 0, 0, 1, b'0', '', '', ''),
+(127, '', 'Administradora de Condomínios Confiança que administra o Edifício Residencial  Sorrento,  solicita a colocação de uma lixeira em frente ao prédio - Rua Piauí nº 609, Bairro São Cristóvão.', 'Trabalho na Administradora de Condomínios Confiança, administramos o Edifício Residencial  Sorrento,  solicito a colocação de uma lixeira, que deve ser instalada na rua Piauí nº 609, Bairro São Cristóvão.', 26, 746, 3, '2014-02-12', 66, 1, 0, 0, 1, b'0', '', '', ''),
+(128, '', 'Brita na Rua Linus Lottermann - Bairro Moinhos D''Água', 'Brita na Rua Linus Lottermann - Bairro Moinhos D''Água', 17, 601, 18, '2014-02-12', 1, 1, 0, 0, 1, b'0', '', '', '');
 
 -- --------------------------------------------------------
 
