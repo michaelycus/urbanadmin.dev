@@ -43,7 +43,7 @@
                                     echo '<dd>' . $solicitante->telefone . '</dd>';
 
                                     echo '<dt>Requerente</dt>';
-                                    echo '<dd>' . $requerente->nome . '</dd>';
+                                    echo '<dd>' . anchor('requerentes/visualizar/'.$requerente->id, $requerente->nome) . '</dd>';
 
                                     echo '<dt>Data</dt>';
                                     echo '<dd>' . $this->form_validation->convert_sql_to_human($requerimento->data_requerimento) . '</dd>';

@@ -23,52 +23,52 @@
                         title: "Requerimentos por bairro",
                         slices: [{
                         min: 0,
-                        max: 1,
+                        max: 2,
                         attrs: {
                             fill: "#6996c7"}
                       },{
-                        min: 1,
-                        max: 3,
-                        attrs: {
-                            fill: "#618ec0"}
-                      },{
-                        min: 3,
+                        min: 2,
                         max: 4,
                         attrs: {
-                            fill: "#5985b9"}
+                            fill: "#618ec0"}
                       },{
                         min: 4,
                         max: 6,
                         attrs: {
-                            fill: "#517db2"}
+                            fill: "#5985b9"}
                       },{
                         min: 6,
-                        max: 7,
-                        attrs: {
-                            fill: "#4974ab"}
-                      },{
-                        min: 7,
                         max: 8,
                         attrs: {
-                            fill: "#406ca3"}
+                            fill: "#517db2"}
                       },{
                         min: 8,
-                        max: 10,
-                        attrs: {
-                            fill: "#38639c"}
-                      },{
-                        min: 10,
                         max: 11,
                         attrs: {
-                            fill: "#305b95"}
+                            fill: "#4974ab"}
                       },{
                         min: 11,
                         max: 13,
                         attrs: {
-                            fill: "#28528e"}
+                            fill: "#406ca3"}
                       },{
                         min: 13,
-                        max: 14,
+                        max: 15,
+                        attrs: {
+                            fill: "#38639c"}
+                      },{
+                        min: 15,
+                        max: 17,
+                        attrs: {
+                            fill: "#305b95"}
+                      },{
+                        min: 17,
+                        max: 19,
+                        attrs: {
+                            fill: "#28528e"}
+                      },{
+                        min: 19,
+                        max: 21,
                         attrs: {
                             fill: "#204a87"}
                       },]
@@ -95,10 +95,10 @@
                                     }
                                 }
                             },                            "bom_pastor":{
-                                value: "2",
-                                text: { content:  2 , attrs: {fill:"#222"} },
+                                value: "4",
+                                text: { content:  4 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 2"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 4"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 3 ).change();
@@ -115,40 +115,40 @@
                                     }
                                 }
                             },                            "carneiros":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
+                                value: "2",
+                                text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 1"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 2"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 5 ).change();
                                     }
                                 }
-                            },                            "centro":{
-                                value: "13",
-                                text: { content:  13 , attrs: {fill:"#222"} },
+                            },                            "centenario":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerimentos: 13"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Requerimentos: 1"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 6 ).change();
+                                    }
+                                }
+                            },                            "centro":{
+                                value: "20",
+                                text: { content:  20 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerimentos: 20"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 7 ).change();
                                     }
                                 }
-                            },                            "conservas":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
-                                href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Requerimentos: 1"},
-                                eventHandlers : {
-                                    click : function() {
-                                        $('#id_bairro').val( 8 ).change();
-                                    }
-                                }
                             },                            "conventos":{
-                                value: "4",
-                                text: { content:  4 , attrs: {fill:"#222"} },
+                                value: "8",
+                                text: { content:  8 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Requerimentos: 4"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Requerimentos: 8"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 9 ).change();
@@ -165,40 +165,50 @@
                                     }
                                 }
                             },                            "florestal":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Requerimentos: 1"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Requerimentos: 3"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 11 ).change();
                                     }
                                 }
                             },                            "hidraulica":{
-                                value: "2",
-                                text: { content:  2 , attrs: {fill:"#222"} },
+                                value: "6",
+                                text: { content:  6 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Hidráulica </span><br />Requerimentos: 2"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Hidráulica </span><br />Requerimentos: 6"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 12 ).change();
                                     }
                                 }
-                            },                            "jardim_do_cedro":{
-                                value: "3",
-                                text: { content:  3 , attrs: {fill:"#222"} },
+                            },                            "igrejinha":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerimentos: 3"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Igrejinha </span><br />Requerimentos: 1"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 13 ).change();
+                                    }
+                                }
+                            },                            "jardim_do_cedro":{
+                                value: "8",
+                                text: { content:  8 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerimentos: 8"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 15 ).change();
                                     }
                                 }
                             },                            "moinhos":{
-                                value: "4",
-                                text: { content:  4 , attrs: {fill:"#222"} },
+                                value: "9",
+                                text: { content:  9 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerimentos: 4"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerimentos: 9"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 16 ).change();
@@ -215,40 +225,50 @@
                                     }
                                 }
                             },                            "montanha":{
-                                value: "2",
-                                text: { content:  2 , attrs: {fill:"#222"} },
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Montanha </span><br />Requerimentos: 2"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Montanha </span><br />Requerimentos: 3"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 18 ).change();
                                     }
                                 }
-                            },                            "planalto":{
-                                value: "7",
-                                text: { content:  7 , attrs: {fill:"#222"} },
+                            },                            "olarias":{
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Planalto </span><br />Requerimentos: 7"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Olarias </span><br />Requerimentos: 3"},
+                                eventHandlers : {
+                                    click : function() {
+                                        $('#id_bairro').val( 21 ).change();
+                                    }
+                                }
+                            },                            "planalto":{
+                                value: "8",
+                                text: { content:  8 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Planalto </span><br />Requerimentos: 8"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 22 ).change();
                                     }
                                 }
                             },                            "sao_cristovao":{
-                                value: "3",
-                                text: { content:  3 , attrs: {fill:"#222"} },
+                                value: "8",
+                                text: { content:  8 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">São Cristóvão </span><br />Requerimentos: 3"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">São Cristóvão </span><br />Requerimentos: 8"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 26 ).change();
                                     }
                                 }
                             },                            "universitario":{
-                                value: "2",
-                                text: { content:  2 , attrs: {fill:"#222"} },
+                                value: "8",
+                                text: { content:  8 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Requerimentos: 2"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Requerimentos: 8"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 27 ).change();

@@ -84,7 +84,7 @@
                                     break;
                             }
 
-                            echo '<span class="text">'. anchor('requerimentos/visualizar/'.$r->id ,substr($r->descricao, 0, 64)) . '</span>';
+                            echo '<span class="text">'. anchor('requerimentos/visualizar/'.$r->id ,substr($r->descricao, 0, 48)) . '</span>';
                             echo '<span class="ago">'.$this->form_validation->convert_sql_to_human($r->data_requerimento).'</span>';
                             echo '</li>';
                         }
@@ -121,7 +121,7 @@
                                 echo '<span class="icon blue"><i class="icon16 i-user"></i></span>';
                             }
 
-                            echo '<span class="text">'. anchor('requerentes/visualizar/'.$r->id, substr($r->nome, 0, 32)) .'</span>';
+                            echo '<span class="text">'.substr($r->nome, 0, 32).'</span>';
                             echo '<span class="ago">'.$this->form_validation->convert_sql_to_human($r->ultima_visita).'</span>';
                             echo '</li>';
                         }
@@ -185,56 +185,13 @@
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <div class="item">
-                                        <div class="icon orange"><i class="i-stack-star"></i></div>
-                                        <span class="percent"><?php echo $req_outros;?></span>
-                                        <span class="txt">Outros</span>
-                                    </div>
-                                </a>
-                            </li>
                         </ul>
                     </div><!-- End .vital-stats -->
 
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
 
-        </div><!-- End .col-lg-8 -->
-        
-        <div class="col-lg-4">
-            <div class="panel panel-default closed">
-                <div class="panel-heading">
-                    <div class="icon"><i class="icon20 i-info"></i></div>
-                    <h4>Versão do sistema: <?php echo $versao_atual;?></h4>
-                    <a href="#" class="minimize"></a>
-                </div><!-- End .panel-heading -->
-
-                <div class="panel-body">
-                    <dl>
-
-                        <?php
-                        
-                        foreach ($versoes as $v)
-                        {
-                            echo '<dt>Versão ' . $v->versao . ' - ' . $v->data.'</dt>';
-                            echo '<dd>';
-                            echo    '<ul>';
-                            foreach ($v->changes as $c)
-                            {
-                                echo '<li>'.$c.'</li>';
-                            }
-                            echo    '</ul>';
-                            echo '</dd>';
-                        }
-
-                        ?>
-
-                    </dl>
-                </div><!-- End .panel-body -->
-
-            </div><!-- End .widget -->
-        </div><!-- End .col-lg-4  -->
+        </div><!-- End .col-lg-4 -->
 
     </div><!-- End .row-fluid  -->
 

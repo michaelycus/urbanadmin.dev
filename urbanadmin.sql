@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.0.8
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tempo de Geração: 
--- Versão do Servidor: 5.5.24-log
--- Versão do PHP: 5.3.13
+-- Servidor: bm90.webservidor.net
+-- Tempo de Geração: 11/02/2014 às 11:14
+-- Versão do servidor: 5.1.70-community
+-- Versão do PHP: 5.3.17
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Banco de Dados: `urbanadmin`
+-- Banco de dados: `t1045878_urbanadmin`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `bairros`
+-- Estrutura para tabela `bairros`
 --
 
 CREATE TABLE IF NOT EXISTS `bairros` (
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `bairros` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
 
 --
--- Extraindo dados da tabela `bairros`
+-- Fazendo dump de dados para tabela `bairros`
 --
 
 INSERT INTO `bairros` (`id`, `nome`, `codename`, `descricao`, `nome_presidente`, `telefone_presidente`, `endereco_presidente`, `email_presidente`, `populacao`) VALUES
@@ -77,17 +77,17 @@ INSERT INTO `bairros` (`id`, `nome`, `codename`, `descricao`, `nome_presidente`,
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `categorias_requerimento`
+-- Estrutura para tabela `categorias_requerimento`
 --
 
 CREATE TABLE IF NOT EXISTS `categorias_requerimento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
--- Extraindo dados da tabela `categorias_requerimento`
+-- Fazendo dump de dados para tabela `categorias_requerimento`
 --
 
 INSERT INTO `categorias_requerimento` (`id`, `nome`) VALUES
@@ -107,12 +107,16 @@ INSERT INTO `categorias_requerimento` (`id`, `nome`) VALUES
 (14, 'RUAS - Patrolamento'),
 (15, 'RUAS - Instalação/Conserto de placas de sinalização/identificação'),
 (16, 'RUAS - Manutenção de bueiros'),
-(17, 'OUTROS');
+(17, 'RUAS - Manutenção no asfalto'),
+(18, 'RUAS - Colocação brita, areia, terra, saibro'),
+(19, 'PREFEITURA - Cópia de documentos oficiais'),
+(20, 'PREFEITURA - Consertos/Solicitação serviços e empréstimos'),
+(21, 'OUTROS');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cidades`
+-- Estrutura para tabela `cidades`
 --
 
 CREATE TABLE IF NOT EXISTS `cidades` (
@@ -124,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `cidades` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5561 ;
 
 --
--- Extraindo dados da tabela `cidades`
+-- Fazendo dump de dados para tabela `cidades`
 --
 
 INSERT INTO `cidades` (`id`, `nome`, `id_uf`) VALUES
@@ -5694,7 +5698,24 @@ INSERT INTO `cidades` (`id`, `nome`, `id_uf`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `estados`
+-- Estrutura para tabela `contatos`
+--
+
+CREATE TABLE IF NOT EXISTS `contatos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `id_bairro` int(11) NOT NULL,
+  `endereco` varchar(255) NOT NULL,
+  `telefone` varchar(16) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `data_cadastro` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `estados`
 --
 
 CREATE TABLE IF NOT EXISTS `estados` (
@@ -5705,7 +5726,7 @@ CREATE TABLE IF NOT EXISTS `estados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Extraindo dados da tabela `estados`
+-- Fazendo dump de dados para tabela `estados`
 --
 
 INSERT INTO `estados` (`id`, `sigla`, `nome`) VALUES
@@ -5740,7 +5761,329 @@ INSERT INTO `estados` (`id`, `sigla`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `requerentes`
+-- Estrutura para tabela `graficos_customizados`
+--
+
+CREATE TABLE IF NOT EXISTS `graficos_customizados` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `code` varchar(16) NOT NULL,
+  `titulo` varchar(255) NOT NULL,
+  `fonte` varchar(255) NOT NULL,
+  `observacoes` text NOT NULL,
+  `data` date NOT NULL,
+  `cor_grafico` int(11) NOT NULL,
+  `tipo` smallint(6) NOT NULL,
+  `id_requerente` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=81 ;
+
+--
+-- Fazendo dump de dados para tabela `graficos_customizados`
+--
+
+INSERT INTO `graficos_customizados` (`id`, `code`, `titulo`, `fonte`, `observacoes`, `data`, `cor_grafico`, `tipo`, `id_requerente`) VALUES
+(71, 'afcd421f', 'Votação de Luís Fernando Schmidt 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação por bairro, na cidade de Lajeado RS', '2014-01-15', 0, 0, 1),
+(73, 'fgc5f1s2', 'Votação Marcelo Caumo 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação por bairro, na cidade de Lajeado RS', '2014-01-15', 0, 0, 1),
+(74, 'g41c5f2d', 'Votação de Luís Fernando Schmidt 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação percentual por bairro, na cidade de Lajeado RS', '2014-01-16', 0, 0, 1),
+(75, 'z45ff15f', 'Votação Marcelo Caumo 2012', 'TRE RS (http://www.tre-rs.gov.br/eleicoes/2012/1turno/RS87297.html)', 'Votação percentual por bairro, na cidade de Lajeado RS', '2014-01-16', 0, 0, 1),
+(76, 'wrcd95gh', 'Bolsa Família em Lajeado', 'STHAS - Secretaria do Trabalho, Habitação e Assistência Social de Lajeado', 'Quantidade de famílias que receberam o benefício em Janeiro/2014.', '2014-01-16', 2, 0, 1),
+(77, 'vbig123f', 'Votação Ranzi 2012', 'TRE RS (http://www.tre-rs.jus.br/eleicoes/2012/1turno/RS87297.html)', 'Percentual de votação em relação ao total de votantes aptos', '2014-01-16', 3, 0, 1),
+(78, 'fr478rgg', 'Votação proporcional Ranzi', 'TRE (http://www.tre-rs.gov.br/eleicoes/2012/1turno/87297/cand_13_15300.html)', 'Votação em percentual, proporcional à quantidade de votos do próprio candidato', '2014-01-27', 7, 0, 1),
+(79, 'qwer1234', 'Votação Kniphoff 2012', 'TRE (http://www.tre-rs.gov.br/eleicoes/2012/1turno/87297/cand_13_13714.html)', 'Votação proporcional do vereador', '2014-01-27', 7, 0, 1),
+(80, 'fgr56gb1', 'Votação Mozart 2012', 'TRE (http://www.tre-rs.gov.br/eleicoes/2012/1turno/87297/cand_13_11100.html)', 'Votação proporcional do vereador', '2014-01-27', 7, 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `graficos_customizados_dados`
+--
+
+CREATE TABLE IF NOT EXISTS `graficos_customizados_dados` (
+  `id_grafico` int(11) NOT NULL,
+  `id_bairro` int(11) NOT NULL,
+  `valor` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Fazendo dump de dados para tabela `graficos_customizados_dados`
+--
+
+INSERT INTO `graficos_customizados_dados` (`id_grafico`, `id_bairro`, `valor`) VALUES
+(71, 1, NULL),
+(71, 2, NULL),
+(71, 3, NULL),
+(71, 4, 748),
+(71, 5, 321),
+(71, 6, 666),
+(71, 7, 4439),
+(71, 8, 1598),
+(71, 9, 1548),
+(71, 10, 498),
+(71, 11, 1584),
+(71, 12, 694),
+(71, 13, 140),
+(71, 14, 258),
+(71, 15, 1295),
+(71, 16, 1639),
+(71, 17, 781),
+(71, 18, 1795),
+(71, 19, 727),
+(71, 20, 202),
+(71, 21, 1145),
+(71, 22, 148),
+(71, 23, 1179),
+(71, 24, 1210),
+(71, 25, 685),
+(71, 26, 3522),
+(71, 27, 744),
+(72, 1, NULL),
+(72, 2, NULL),
+(72, 3, NULL),
+(72, 4, NULL),
+(72, 5, NULL),
+(72, 6, NULL),
+(72, 7, NULL),
+(72, 8, NULL),
+(72, 9, NULL),
+(72, 10, NULL),
+(72, 11, NULL),
+(72, 12, NULL),
+(72, 13, NULL),
+(72, 14, NULL),
+(72, 15, NULL),
+(72, 16, NULL),
+(72, 17, NULL),
+(72, 18, NULL),
+(72, 19, NULL),
+(72, 20, NULL),
+(72, 21, NULL),
+(72, 22, NULL),
+(72, 23, NULL),
+(72, 24, NULL),
+(72, 25, NULL),
+(72, 26, NULL),
+(72, 27, NULL),
+(73, 1, NULL),
+(73, 2, NULL),
+(73, 3, NULL),
+(73, 4, 318),
+(73, 5, 197),
+(73, 6, 248),
+(73, 7, 3143),
+(73, 8, 400),
+(73, 9, 782),
+(73, 10, 266),
+(73, 11, 1037),
+(73, 12, 440),
+(73, 13, 41),
+(73, 14, 113),
+(73, 15, 249),
+(73, 16, 1090),
+(73, 17, 299),
+(73, 18, 680),
+(73, 19, 186),
+(73, 20, 60),
+(73, 21, 346),
+(73, 22, 48),
+(73, 23, 387),
+(73, 24, 284),
+(73, 25, 244),
+(73, 26, 1937),
+(73, 27, 220),
+(74, 1, NULL),
+(74, 2, NULL),
+(74, 3, NULL),
+(74, 4, 55),
+(74, 5, 48),
+(74, 6, 59),
+(74, 7, 41),
+(74, 8, 63),
+(74, 9, 53),
+(74, 10, 49),
+(74, 11, 43),
+(74, 12, 47),
+(74, 13, 63),
+(74, 14, 55),
+(74, 15, 69),
+(74, 16, 46),
+(74, 17, 60),
+(74, 18, 57),
+(74, 19, 63),
+(74, 20, 62),
+(74, 21, 63),
+(74, 22, 64),
+(74, 23, 61),
+(74, 24, 61),
+(74, 25, 61),
+(74, 26, 47),
+(74, 27, 62),
+(75, 1, NULL),
+(75, 2, NULL),
+(75, 3, NULL),
+(75, 4, 23),
+(75, 5, 29),
+(75, 6, 22),
+(75, 7, 29),
+(75, 8, 15),
+(75, 9, 27),
+(75, 10, 26),
+(75, 11, 28),
+(75, 12, 30),
+(75, 13, 18),
+(75, 14, 24),
+(75, 15, 13),
+(75, 16, 30),
+(75, 17, 23),
+(75, 18, 21),
+(75, 19, 16),
+(75, 20, 18),
+(75, 21, 19),
+(75, 22, 20),
+(75, 23, 20),
+(75, 24, 14),
+(75, 25, 21),
+(75, 26, 26),
+(75, 27, 18),
+(76, 1, NULL),
+(76, 2, 8),
+(76, 3, 11),
+(76, 4, 16),
+(76, 5, 8),
+(76, 6, 17),
+(76, 7, 127),
+(76, 8, 137),
+(76, 9, 50),
+(76, 10, 2),
+(76, 11, 33),
+(76, 12, 23),
+(76, 13, 22),
+(76, 14, 13),
+(76, 15, 56),
+(76, 16, 41),
+(76, 17, 16),
+(76, 18, 37),
+(76, 19, 72),
+(76, 20, 20),
+(76, 21, 29),
+(76, 22, 27),
+(76, 23, 37),
+(76, 24, 282),
+(76, 25, 16),
+(76, 26, 40),
+(76, 27, 22),
+(77, 1, NULL),
+(77, 2, NULL),
+(77, 3, NULL),
+(77, 4, 2),
+(77, 5, 1),
+(77, 6, 0),
+(77, 7, 1),
+(77, 8, 0),
+(77, 9, 0),
+(77, 10, 2),
+(77, 11, 1),
+(77, 12, 1),
+(77, 13, 0),
+(77, 14, 0),
+(77, 15, 0),
+(77, 16, 2),
+(77, 17, 0),
+(77, 18, 0),
+(77, 19, NULL),
+(77, 20, 0),
+(77, 21, 1),
+(77, 22, 0),
+(77, 23, 0),
+(77, 24, NULL),
+(77, 25, 0),
+(77, 26, 1),
+(77, 27, 1),
+(78, 1, NULL),
+(78, 2, NULL),
+(78, 3, NULL),
+(78, 4, 4),
+(78, 5, 1),
+(78, 6, 0),
+(78, 7, 30),
+(78, 8, 0),
+(78, 9, 1),
+(78, 10, 3),
+(78, 11, 7),
+(78, 12, 3),
+(78, 13, 0),
+(78, 14, 0),
+(78, 15, 1),
+(78, 16, 11),
+(78, 17, 0),
+(78, 18, 4),
+(78, 19, 0),
+(78, 20, 0),
+(78, 21, 3),
+(78, 22, 0),
+(78, 23, 1),
+(78, 24, 0),
+(78, 25, 0),
+(78, 26, 20),
+(78, 27, 3),
+(79, 1, NULL),
+(79, 2, NULL),
+(79, 3, NULL),
+(79, 4, 2),
+(79, 5, 1),
+(79, 6, 1),
+(79, 7, 30),
+(79, 8, 1),
+(79, 9, 5),
+(79, 10, 2),
+(79, 11, 11),
+(79, 12, 4),
+(79, 13, NULL),
+(79, 14, 0),
+(79, 15, 1),
+(79, 16, 9),
+(79, 17, 1),
+(79, 18, 4),
+(79, 19, 1),
+(79, 20, NULL),
+(79, 21, 1),
+(79, 22, NULL),
+(79, 23, 1),
+(79, 24, 0),
+(79, 25, 0),
+(79, 26, 15),
+(79, 27, 1),
+(80, 1, NULL),
+(80, 2, NULL),
+(80, 3, NULL),
+(80, 4, 1),
+(80, 5, 2),
+(80, 6, 0),
+(80, 7, 35),
+(80, 8, 1),
+(80, 9, 7),
+(80, 10, 2),
+(80, 11, 8),
+(80, 12, 4),
+(80, 13, 0),
+(80, 14, 0),
+(80, 15, 1),
+(80, 16, 10),
+(80, 17, 0),
+(80, 18, 4),
+(80, 19, 0),
+(80, 20, NULL),
+(80, 21, 0),
+(80, 22, NULL),
+(80, 23, 0),
+(80, 24, 2),
+(80, 25, 1),
+(80, 26, 13),
+(80, 27, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `requerentes`
 --
 
 CREATE TABLE IF NOT EXISTS `requerentes` (
@@ -5754,6 +6097,7 @@ CREATE TABLE IF NOT EXISTS `requerentes` (
   `rg` varchar(64) DEFAULT NULL,
   `email` varchar(64) NOT NULL,
   `data_cadastro` date NOT NULL,
+  `ultima_visita` date NOT NULL,
   `id_bairro` int(11) NOT NULL,
   `endereco` varchar(256) NOT NULL,
   `telefone` varchar(64) NOT NULL,
@@ -5765,26 +6109,95 @@ CREATE TABLE IF NOT EXISTS `requerentes` (
   `autorizacao` tinyint(4) NOT NULL,
   `deleted` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=71 ;
 
 --
--- Extraindo dados da tabela `requerentes`
+-- Fazendo dump de dados para tabela `requerentes`
 --
 
-INSERT INTO `requerentes` (`id`, `nome`, `tipo`, `pessoa_fisica`, `cpf`, `cnpj`, `password`, `rg`, `email`, `data_cadastro`, `id_bairro`, `endereco`, `telefone`, `profissao`, `mora_cidade`, `cidade`, `estado`, `cep`, `autorizacao`, `deleted`) VALUES
-(1, 'Michael Marques', 0, 0, '00620732067', NULL, 'd0e516cab32f7ab2b71425ac8a4c2eb8', '7063641224', 'michaelycus@gmail.com', '2013-12-08', 2, '', '', '', 0, 1, NULL, NULL, 1, 0),
-(2, 'Carlos Eduardo Ranzi', 1, 0, '9762373087', NULL, '9f7206e0cd72b6c72c8c13f8afb2b3b9', NULL, '', '2013-12-08', 2, '', '', '', 1, NULL, NULL, NULL, 1, 0);
+INSERT INTO `requerentes` (`id`, `nome`, `tipo`, `pessoa_fisica`, `cpf`, `cnpj`, `password`, `rg`, `email`, `data_cadastro`, `ultima_visita`, `id_bairro`, `endereco`, `telefone`, `profissao`, `mora_cidade`, `cidade`, `estado`, `cep`, `autorizacao`, `deleted`) VALUES
+(1, 'Carlos Eduardo Ranzi', 1, 0, '976.237.330-87', NULL, 'c6b0997191691cc80851f8786985f7ea', NULL, '', '2013-12-08', '2014-02-11', 2, '', '', '', 1, NULL, NULL, NULL, 1, 0),
+(2, 'Michael Marques', 0, 0, '006.207.320-67', NULL, 'd0e516cab32f7ab2b71425ac8a4c2eb8', '7063641224', 'michaelycus@gmail.com', '2013-12-08', '2014-02-11', 2, '', '', '', 0, 1, NULL, NULL, 1, 0),
+(3, 'Marcela Roesler', 0, 0, '019.727.000-06', '', 'db6d9d7d2e8584de940868d542b916c0', NULL, 'cela.roesler@gmail.com', '2013-12-14', '0000-00-00', 7, '0', '0', '', 1, 0, 0, '', 0, 0),
+(4, 'Fernando Dall''Azen', 0, 0, '024.133.620-10', '', 'e9194ec61d8272673269a10ae2abb805', NULL, 'fdallazen@hotmail.com', '2013-12-16', '2013-12-17', 7, '0', '0', '', 1, 0, 0, '', 0, 0),
+(5, 'Luiz Fernando Foletto', 0, 0, '926.617.850-00', '', '95afe4780ee1b10579d98859790c0a2f', NULL, 'fernando.foletto@hotmail.com', '2013-12-16', '2013-12-17', 16, '0', '0', '', 1, 0, 0, '', 0, 0),
+(6, 'Antônio de Castro Schefer', 1, 0, '', '', '080d09ef64e396fe90432d2d680f9f7e', NULL, '', '2013-12-16', '2013-12-16', 7, '0', '', '', 1, 0, 0, '', 0, 0),
+(7, 'Carlos Antonio Kayser', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 0, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(8, 'Círio Arnaldo Schneider', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(9, 'Delmar Portz', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(10, 'Djalmo da Rosa', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(11, 'Élio José Lenhart', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(12, 'Ernani Teixeira', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(13, 'Heitor Luiz Hoppe', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(14, 'Hugo Luis Vanzin', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(15, 'Ildo Paulo Salvi', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(16, 'Lorival Ewerling dos Santos Silveira', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(17, 'Sérgio Luiz Kniphoff', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(18, 'Sérgio Migue', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(19, 'Waldir Gisch', 1, 0, NULL, NULL, '111', NULL, '', '2013-12-17', '0000-00-00', 7, '', '', '', 1, NULL, NULL, NULL, 0, 0),
+(20, 'Adriano JS', 0, 0, '678.410.400-59', '', '41e354d2dc11bbe9086d8a2879669b20', NULL, 'qualidade@transtomasi.com.br', '2013-12-17', '0000-00-00', 11, '0', '', '', 1, 0, 0, '', 0, 0),
+(21, 'Gisele Corbellini', 0, 0, '000.423.620-32', '', 'b6eb226acf331b8c4268f22badb125d2', NULL, 'giselecorbellini@hotmail.com', '2013-12-17', '2013-12-17', 11, '0', '', '', 1, 0, 0, '', 0, 0),
+(22, 'filipe', 0, 0, '007.459.500-86', '', 'd797399b0580c8fecaa82c83ce08ffbd', NULL, 'filipe_abnh_@hotmail.com', '2013-12-17', '2013-12-17', 0, '0', '(51) 3065-7103', '', 0, 4200, 23, '93330-230', 0, 0),
+(23, 'JOAO CARLOS RANZI', 0, 0, '186.521.150-87', '', '2591c4a4f39863244d689adb47313360', NULL, 'jcranzi@yahoo.com', '2013-12-18', '2014-02-01', 7, '0', '(51) 8226-5720', '', 1, 0, 0, '', 0, 0),
+(24, 'Leonardo Camargo', 0, 0, '003.748.500-89', '', 'a12b174ea31bf051c46a98c890231c51', NULL, 'leo@leocamargo.com.br', '2013-12-18', '2014-01-20', 11, '0', '', '', 1, 0, 0, '', 0, 0),
+(25, 'Maurício Saatkamp', 0, 0, '673.336.800-53', '', '76c008de4e26ccedbdd58b708b7fa572', NULL, 'mauricio.saatkamp@gmail.com', '2013-12-18', '2013-12-18', 17, '0', '(51) 8211-1188', '', 1, 0, 0, '', 0, 0),
+(26, 'Tiago Wilke de Polo', 0, 0, '006.915.960-26', '', '2871e4f000c60afea905c7ee867b0b8f', NULL, 'tiagocml@hotmail.com', '2013-12-18', '2013-12-18', 9, '0', '(51) 9633-1877', '', 1, 0, 0, '', 0, 0),
+(27, 'Ederson Aparecido Silvério', 0, 0, '355.991.868-57', '', 'e36e2362b1d8378507688253e2442614', NULL, 'alexegustavo@hotmail.com', '2013-12-18', '2013-12-18', 0, '0', '(19) 9812-6651', '', 0, 4814, 26, '13660-606', 0, 0),
+(28, 'Marcelo Villar', 0, 0, '026.452.370-96', '', '9d91067b9ad8d6acbfd190b61f549dc4', NULL, 'marcelovillar@hotmail.com', '2013-12-18', '2013-12-18', 14, '0', '(51) 8166-4740', '', 1, 0, 0, '', 0, 0),
+(29, 'Fernando Bildhauer', 0, 0, '007.755.440-00', '', 'eeba0807656331d8378bfd8df24da8c7', NULL, 'fernando@bildhauer.com.br', '2013-12-18', '2013-12-18', 16, '0', '(51) 8422-9841', '', 1, 0, 0, '', 0, 0),
+(30, 'Oziel Meurer', 0, 0, '009.262.140-63', '', 'e10adc3949ba59abbe56e057f20f883e', NULL, 'ozielmeurer@gmail.com', '2013-12-18', '2013-12-18', 11, '0', '(51) 8242-9696', '', 1, 0, 0, '', 0, 0),
+(31, 'Barbara Henz', 0, 0, '027.099.750-41', '', '2fdcf0eeff1f930d9ba39881c7e1b398', NULL, 'babihenz@hotmail.com', '2013-12-19', '2013-12-19', 27, '0', '(51) 9136-9633', '', 1, 0, 0, '', 0, 0),
+(32, 'Christian Dechery', 0, 0, '080.352.317-31', '', '9aa6e5f2256c17d2d430b100032b997c', NULL, 'cdechery@gmail.com', '2013-12-19', '2013-12-19', 0, '0', '(21) 8703-7816', '', 0, 3654, 19, '22231-090', 0, 0),
+(33, 'André Giacomin', 0, 0, '002.922.050-58', '', 'c234778a193ec65cb37a4c599e26faff', NULL, 'giacomin.andre@gmail.com', '2013-12-19', '2013-12-19', 9, '0', '(51) 8188-3523', '', 1, 0, 0, '', 0, 0),
+(34, 'paulo roberto dallazen', 0, 0, '200.942.480-87', '', 'ea6bac62b3beea0066388d23f5b64083', NULL, 'paulodallazen@gmail.com', '2013-12-19', '2013-12-19', 7, '0', '(51) 9759-8228', '', 1, 0, 0, '', 0, 0),
+(35, 'Alberto Dalla Costa Neto', 0, 0, '248.840.268-02', '', '7450b1b2035b498e3a639fa99f7d5b6e', NULL, 'albertodallacosta@hotmail.com', '2013-12-20', '2013-12-20', 0, '0', '(19) 9488-0630', '', 0, 4814, 26, '13603-019', 0, 0),
+(36, 'Edson Porto Cardoso', 0, 0, '405.236.240-34', '', 'ef8b10bb013d8cf4fd6e78e4dd6515f2', NULL, 'edson.porto.cardoso@terra.com.br', '2013-12-20', '2013-12-20', 16, '0', '(51) 9161-0816', '', 1, 0, 0, '', 0, 0),
+(37, 'ROBERTA BORTOLINI', 0, 0, '024.491.550-40', '', '477201c91d06478cb2828771acea1655', NULL, 'bebe_cct@hotmail.com', '2013-12-27', '2014-02-05', 18, '0', '(51) 9354-4513', '', 1, 0, 0, '', 0, 0),
+(38, 'JANAINA GALIMBERTI STANGE', 0, 0, '963.057.890-53', '', 'fad2f00cfec009aa5685dbb6747b7439', NULL, 'janaina.stange@bol.com.br', '2013-12-28', '2013-12-28', 3, '0', '(51) 9974-8054', '', 1, 0, 0, '', 0, 0),
+(39, 'angélica machado', 0, 0, '950.779.790-49', '', '30f38bc169264392f224d029abb3471d', NULL, 'amarkus37@gmail.com', '2014-01-06', '2014-01-06', 18, '0', '(51) 9991-0128', '', 1, 0, 0, '', 0, 0),
+(40, 'Orlando Selvino Dienstmann', 0, 0, '355.382.280-53', '', 'bc6e1ac23eb06a2f4f337660e83c1291', NULL, 'lojasenayr@ibest.com.br', '2014-01-06', '2014-01-06', 2, '0', '(51) 9688-5015', '', 1, 0, 0, '', 0, 0),
+(41, 'Tiago Guerra', 0, 0, '010.245.890-13', '', '508871ad972fbc81ec392b9defc4d49b', NULL, 'tg.engenharia@yahoo.com.br', '2014-01-07', '2014-01-07', 12, '0', '(51) 9607-3741', '', 1, 0, 0, '', 0, 0),
+(42, 'Daniel Henrique Kreutz', 0, 0, '004.658.640-74', '', '3d756b9b9e99710941076f8fbf6fc288', NULL, 'dhkreutz@gmail.com', '2014-01-12', '2014-01-12', 17, '0', '(51) 8413-9880', '', 1, 0, 0, '', 0, 0),
+(43, 'Jorge Machado de Souza', 0, 0, '889.436.740-15', '', 'b628509c9552f32db3e3039ba7e3bc13', NULL, 'contatocalypso@hotmail.com', '2014-01-13', '2014-01-14', 7, '0', '(51) 3710-2010', '', 1, 0, 0, '', 0, 0),
+(44, 'eduardo thomas', 0, 0, '014.166.860-10', '', '4a36fdafdaaf223ec5226994ed5e804c', NULL, 'eduardo@in2sistemas.com.br', '2014-01-20', '2014-02-10', 7, '0', '', '', 1, 0, 0, '', 0, 0),
+(45, 'RENATO SAVIANO', 0, 0, '000.648.200-76', '', '05c85a184d12450dea6277f27159c7c2', NULL, 'centraldechaves@gmail.com', '2014-01-21', '2014-01-21', 16, '0', '(51) 3707-0752', '', 1, 0, 0, '', 0, 0),
+(46, 'Cezar Augusto Machado', 0, 0, '993.370.100-20', '', 'e1fd3f39337d5f64fd69cf36beca6dcc', NULL, 'cezaraugustomach@hotmail.com', '2014-01-26', '2014-01-26', 12, '0', '(51) 9699-6538', '', 1, 0, 0, '', 0, 0),
+(47, 'Pablo Dall Oglio', 0, 0, '979.790.580-20', '', 'c5c05651c351806d638090aaa8fd2efb', NULL, 'pablo@dalloglio.net', '2014-01-26', '2014-01-27', 12, '0', '', '', 1, 0, 0, '', 0, 0),
+(48, 'Augusto Fleck', 0, 0, '004.450.210-98', '', 'b694cd1920b52145011d9aa12756cf7c', NULL, 'augusto@sol7.com.br', '2014-01-27', '2014-01-27', 18, '0', '(51) 9388-2074', '', 1, 0, 0, '', 0, 0),
+(49, 'Giovani L. Lanzini', 0, 0, '001.461.870-24', '', '96a99441beb56db41b46568bf76185b6', NULL, 'gio.lanzini@gmail.com', '2014-01-27', '2014-02-10', 27, '0', '(51) 8135-0017', '', 1, 0, 0, '', 0, 0),
+(50, 'DANIEL AUGUSTO RAMBO', 0, 0, '004.746.990-05', '', '574be58c131b923b178014fbedeb456f', NULL, 'danielrambo@gmail.com', '2014-01-27', '2014-01-27', 12, '0', '(51) 9203-8975', '', 1, 0, 0, '', 0, 0),
+(51, 'Paulo Roberto Mallmann', 0, 0, '966.323.300-10', '', '90684900ccd8bd8c766a52c3ac0f82d0', NULL, 'beto@univates.br', '2014-01-27', '2014-01-28', 18, '0', '(51) 9659-5903', '', 1, 0, 0, '', 0, 0),
+(52, 'Lucas Ruschel de Assumpção', 0, 0, '010.517.700-84', '', '66173972a2e7a50c3377304b82c6f8f2', NULL, 'lucasruschel@gmail.com', '2014-01-27', '2014-01-27', 27, '0', '(51) 9755-8075', '', 1, 0, 0, '', 0, 0),
+(53, 'marcia elena meith', 0, 0, '884.212.600-49', '', '27a21d3049d921be90cf333ddddda19a', '0', 'marcia-both@hotmail.com', '2014-02-01', '2014-02-08', 22, 'miguel paulus ,975', '(51) 9555-8964', '0', 1, 0, 0, '', 0, 0),
+(54, 'NILSON JOEL AULER', 0, 0, '820.026.300-20', '', '1c6ea3cdbb4eb6ec13bd3f42d635a140', NULL, 'nilsonauler@yahoo.com.br', '2014-02-01', '2014-02-01', 9, '0', '(51) 9784-8960', '', 1, 0, 0, '', 0, 0),
+(55, 'Cassiane Maira Scheibe', 0, 0, '012.016.430-23', '', 'f685b650f12d7e9da3e5d60d06e039bc', NULL, 'kassyscheibe@hotmail.com', '2014-02-01', '2014-02-01', 18, '0', '(51) 8549-9069', '', 1, 0, 0, '', 0, 0),
+(56, 'Ageu Kehrwald', 0, 0, '021.275.800-44', '', 'a66a572c17ad777b90fd781cb474b1c1', NULL, 'ageukehrwald@gmail.com', '2014-02-02', '2014-02-02', 7, '0', '(51) 8147-1500', '', 1, 0, 0, '', 0, 0),
+(57, 'Diego Felipe Schneider', 0, 0, '837.689.800-06', '', '8f763036fd9209361d950670cc4cb981', NULL, 'diego.schneider@gmail.com', '2014-02-02', '2014-02-05', 3, '0', '(51) 9868-7433', '', 1, 0, 0, '', 0, 0),
+(58, 'Márcio Dal Cin', 0, 0, '693.070.670-15', '', '42ba6cd05d34fa25aec3784b6e14ab0c', NULL, 'mdcdalcin@gmail.com', '2014-02-03', '2014-02-03', 16, '0', '', '', 1, 0, 0, '', 0, 0),
+(59, 'Alexsandro Gerhard', 0, 0, '007.278.800-39', '', '4f6e5ab175ed65774a891b2a45af3706', NULL, 'alexsandrogerhard@gmail.com', '2014-02-04', '2014-02-05', 3, '0', '(51) 9614-0741', '', 1, 0, 0, '', 0, 0),
+(60, 'Usuario Teste', 0, 0, '511.511.667-74', '', 'c6b0997191691cc80851f8786985f7ea', NULL, 'ranziranzi@gmail.com', '2014-02-04', '2014-02-05', 0, '0', '(51) 3710-0000', '', 0, 4144, 23, '95900-000', 0, 0),
+(61, 'Edelmir Mathias Eidelwein', 0, 0, '289.015.680-04', '', '865398ec9778af774a98204760835387', NULL, 'edelmir@reeimpex.com.br', '2014-02-05', '0000-00-00', 2, '0', '(51) 9995-5593', '', 1, 0, 0, '', 0, 0),
+(62, 'CASSIANA WOLFART', 0, 0, '014.591.970-62', '', 'bd19b7223a5b45005649e12ac5543828', NULL, 'cassiana.wolfart@hotmail.com', '2014-02-05', '2014-02-05', 3, '0', '(51) 9423-3312', '', 1, 0, 0, '', 0, 0),
+(63, 'Gunther Meyer', 0, 0, '166.992.030-53', '', 'bc69de5a6b933a9be7da73d6ff2e4060', NULL, 'meyer@hotelstore.net', '2014-02-05', '2014-02-05', 2, '0', '(51) 9942-4082', '', 1, 0, 0, '', 0, 0),
+(64, 'franciele wendt', 0, 0, '019.788.040-16', '', 'adbf56386de1005fe01e2edf803240b7', NULL, 'fran.wendt.12@facebook.com', '2014-02-05', '2014-02-05', 15, '0', '(51) 9807-7129', '', 1, 0, 0, '', 0, 0),
+(65, 'Ivo de Oliveira', 0, 0, '304.760.200-00', '', '0f2fb5dc4c2c4fb2bb42f4c58ab6ce4a', NULL, 'ivosorio@hotmail.com', '2014-02-06', '2014-02-06', 27, '0', '(51) 8109-8190', '', 1, 0, 0, '', 0, 0),
+(66, 'ana paula lazzaretti', 0, 0, '014.549.310-51', '', 'bf2297f9f60ee95e27ea98b8e2c94d7d', NULL, 'contato@confiancalj.com.br', '2014-02-07', '2014-02-07', 11, '0', '', '', 1, 0, 0, '', 0, 0),
+(67, 'jean Zagonel', 0, 0, '010.377.930-21', '', 'e10adc3949ba59abbe56e057f20f883e', NULL, 'jean@zagonel.com', '2014-02-08', '2014-02-10', 7, '0', '', '', 1, 0, 0, '', 0, 0),
+(68, 'melissa schumacher', 0, 0, '790.285.270-87', '', '021af29f812248a14b36386d94b0d80b', NULL, 'melischuma@gmail.com', '2014-02-10', '2014-02-10', 1, '0', '(51) 3714-4466', '', 1, 0, 0, '', 0, 0),
+(69, 'DIEGO RAFAEL MOCINHO', 0, 0, '972.456.820-20', '', '8c8b086e4a46727c25421a476133dd2d', '0', 'diegomocinho@hotmail.com', '2014-02-10', '2014-02-10', 27, 'Rua Erechim, 469 (entre rua Ijui e Ilópolis)', '(51) 9908-6945', '0', 1, 0, 0, '', 0, 0),
+(70, 'Anderson', 0, 0, '778.694.860-00', '', '712e61b13844c90d1eda228f0d1846b4', NULL, 'dr.anderson.b@gmail.com', '2014-02-11', '2014-02-11', 16, '0', '(51) 8147-0879', '', 1, 0, 0, '', 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `requerimentos`
+-- Estrutura para tabela `requerimentos`
 --
 
 CREATE TABLE IF NOT EXISTS `requerimentos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(256) NOT NULL,
   `descricao` text NOT NULL,
+  `descricao_original` text NOT NULL,
   `id_bairro` int(11) NOT NULL,
   `id_rua` int(11) NOT NULL,
   `cat_requerimento` int(11) NOT NULL,
@@ -5799,12 +6212,136 @@ CREATE TABLE IF NOT EXISTS `requerimentos` (
   `anexo_2` varchar(256) NOT NULL,
   `anexo_3` varchar(256) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=124 ;
+
+--
+-- Fazendo dump de dados para tabela `requerimentos`
+--
+
+INSERT INTO `requerimentos` (`id`, `titulo`, `descricao`, `descricao_original`, `id_bairro`, `id_rua`, `cat_requerimento`, `data_requerimento`, `id_solicitante`, `id_requerente`, `expediente`, `ano_expediente`, `situacao`, `notificar`, `anexo_1`, `anexo_2`, `anexo_3`) VALUES
+(1, '', 'Incluir rotula no final da Avenida Amazonas, entrada para a RS-130.', 'Incluir rotula no final da Avenida Amazonas, entrada para a RS-130.', 26, 3, 21, '2013-12-14', 3, 1, 2013, 2009, 2, b'0', '', '', ''),
+(6, '', 'Há tempos atrás, já houve início de movimentação por conta do Vereador Ranzi a respeito das goteiras geradas pelos aparelhos de ar condicionado no centro da cidade. O problema persiste, e a todo momento os cidadãos lajeadenses recebem pingoladas na cabeça.\n\nGostaria que as empresas tivessem a obrigação de colocar dutos que direcionem a água para outro local que não em cima de nós!', 'Há tempos atrás, já houve início de movimentação por conta do Vereador Ranzi a respeito das goteiras geradas pelos aparelhos de ar condicionado no centro da cidade. O problema persiste, e a todo momento os cidadãos lajeadenses recebem pingoladas na cabeça.\n\nGostaria que as empresas tivessem a obrigação de colocar dutos que direcionem a água para outro local que não em cima de nós!', 7, 574, 21, '2013-12-18', 24, 1, 34591, 2013, 2, b'0', '', '', ''),
+(7, '', 'Moro no Bairro Moinhos D''Água no condominio residencial Montanha (Imojel). As ruas de frente e fundos  do condomínio não tem nome e nem placas de identificação.\nGostaria que fosse definido um nome para as ruas e colocado placas de identificação.\nIsso ajudaria correio e serviços de tele-entrega a localizar o nosso endereço.\nObrigado', 'Moro no Bairro Moinhos D''Água no condominio residencial Montanha (Imojel)\nAs ruas de frente e fundos  do condomínio não tem nome e nem placas de identificação.\nGostaria que fosse definido um nome para as ruas e colocado placas de identificação.\nIsso ajudaria correio e serviços de tele-entrega a localizar o nosso endereço.\nObrigado', 17, 0, 15, '2013-12-18', 25, 1, 2013, 2010, 2, b'0', '', '', ''),
+(8, '', 'Nivelamento e brita na última rua populada do lado esquerdo de quem sai do bairro Conventos pela Rua José Frantz, em direção a Av. Benjamin Constant, a rua ainda não possui nome.', 'Nivelamento e brita na última rua populada do lado esquerdo de quem sai do bairro Conventos pela Rua José Frantz, em direção a Av. Benjamin Constant, a rua ainda não possui nome.', 9, 560, 9, '2013-12-18', 26, 1, 34587, 2013, 2, b'0', '', '', ''),
+(9, '', 'O poste que fica em frente à minha casa (n° 177)está com defeito na lâmpada. Fica cerca de 5 minutos ligado e desliga por 15. Como a rua é com fim, encontrando um potreiro, fica bastante inseguro sem iluminação.', 'O poste que fica em frente à minha casa (n° 177)está com defeito na lâmpada. Fica cerca de 5 minutos ligado e desliga por 15. Como a rua é com fim, encontrando um potreiro, fica bastante inseguro sem iluminação.', 3, 549, 2, '2013-12-28', 38, 1, 35319, 2013, 2, b'0', '', '', ''),
+(10, '', 'Revisão do calçamento.\nLajotas soltas.', 'Revisão do calçamento.\nLajotas soltas.', 7, 0, 1, '2014-01-02', 1, 1, 123, 2014, 2, b'0', '', '', ''),
+(11, '', 'Temos um problema na calçada da Av. Pasqualini, n° 442. Sempre que chove a água vem debaixo da calçada e pode-se notar que está caindo terra das palmeiras plantadas. Parece que há uma valeta abaixo da calçada que pode chegar a um buraco na própria calçada. Estamos com medo que pde cair a qualquer momento, talvez não seja tão grave, mas vamos prevenir. Já protocolei este pedido em janeiro/13.', 'Temos um problema na calçada da Av. Pasqualini, n° 442. Sempre que chove a água vem debaixo da calçada e pode-se notar que está caindo terra das palmeiras plantadas. Parece que há uma valeta abaixo da calçada que pode chegar a um buraco na própria calçada. Estamos com medo que pde cair a qualquer momento, talvez não seja tão grave, mas vamos prevenir. Já protocolei este pedido em janeiro/13.', 2, 25, 21, '2014-01-06', 40, 1, 1002, 2014, 2, b'1', '', '', ''),
+(12, '', 'O poste de luz liga e desliga durante todo o tempo em que está funcionando. Está localizado na Rua José Schmatz, em frente ao nº 386.', 'O poste de luz liga e desliga durante todo o tempo em que está funcionando. Está localizado na Rua José Schmatz, em frente ao nº 386.', 11, 570, 2, '2014-01-07', 24, 1, 1000, 2014, 2, b'1', '', '', ''),
+(13, '', 'Conserto da sinaleira no bairro São Cristovão, antes do Imec, em frente ao Senai não apresenta o estágio amarelo, não sendo possível saber se a sinaleira esta aberta ou fechada até que a mesma mude para vermelho. Ou ainda se vem alguém que nao conhece e enxerga a sinaleira apagada nao saberá se a mesma realmente funciona.', 'Conserto da sinaleira no bairro São Cristovão, antes do Imec, em frente ao Senai não apresenta o estágio amarelo, não sendo possível saber se a sinaleira esta aberta ou fechada até que a mesma mude para vermelho. Ou ainda se vem alguém que nao conhece e enxerga a sinaleira apagada nao saberá se a mesma realmente funciona.', 26, 25, 13, '2014-01-07', 41, 1, 1007, 2014, 2, b'1', '', '', ''),
+(14, '', 'Solicito notificarem o proprietário do terreno na esquina da Rua João Marques de Freitas com a Av. Aury Sturmer para realizar limpeza do terreno uma vez que o mato esta tomando conta. \nA solicitação deve-se a arrombamento em minha residencia. Fui informado de que se o proprietário do terreno não fizera limpeza, a prefeitura faz e cobra no IPTU. Essa informação confere\nFico no aguardo.', 'Solicito notificarem o proprietário do terreno na esquina da Rua João Marques de Freitas com a Av. Aury Sturmer para realizar limpeza do terreno uma vez que o mato esta tomando conta. A solicitação deve-se a arrombamento em minha residencia. \nFui informado de que se o proprietário do terreno não fizera limpeza, a prefeitura faz e cobra no IPTU. Essa informação confere?\nFico no aguardo.', 17, 527, 21, '2014-01-12', 42, 1, 1005, 2014, 2, b'0', '', '', ''),
+(15, '', 'Solicito demarcação de uma um vaga de estacionamento de 15 min, em frente à Video Locadora Calypso.\nBaseado no grande fluxo de clientes que desejam somente efetuar uma devolução ou retirada rápida de filmes. ', 'Solicito demarcação de uma um vaga de estacionamento de 15 min, em frente à Video Locadora Calypso.\nBaseado no grande fluxo de clientes que desejam somente efetuar uma devolução ou retirada rápida de filmes. ', 7, 185, 21, '2014-01-13', 43, 1, 1114, 2014, 2, b'0', '', '', ''),
+(16, '', 'Instalação de placas de sinalização viária nas Ruas Arthur Bernardes e Miguel Tostes, bairro Alto do Parque.', 'Instalação de placas de sinalização viária nas Ruas Arthur Bernardes e Miguel Tostes, bairro Alto do Parque.', 1, 0, 15, '2014-01-13', 1, 1, 1008, 2014, 2, b'0', '', '', ''),
+(17, '', 'Patrolamento e brita na Rua Anita Garibaldi - Bairro Floresta.', 'Patrolamento e brita na Rua Anita Garibaldi - Bairro Floresta.', 10, 0, 14, '2014-01-13', 1, 1, 1095, 2014, 2, b'0', '', '', ''),
+(19, '', 'Instalação de um bueiro na esquina da Rua Duque de Caxias com a Avenida Senador Alberto Pasqualini - Bairro Centro. O volume de água que vem quando chove sempre passa por cima da calçada, e os pedestres sempre acabam molhando-se.', 'Instalação de um bueiro na esquina da Rua Duque de Caxias com a Avenida Senador Alberto Pasqualini - Bairro Centro. O volume de água que vem quando chove sempre passa por cima da calçada, e os pedestres sempre acabam molhando-se.', 7, 25, 21, '2014-01-15', 1, 1, 1477, 2014, 2, b'0', '5483daa54f3f468dddbccc59174ff327.jpg', '2a9099caa0c2f85d055f732d4270a49d.jpg', '1975d824471a9ea046fa6acf9fdba5c4.jpg'),
+(20, '', 'Varrição do trevo da BR Foods - Avenida Carlos Sphor Filho com ERS - 130 - Bairro Moinhos.', 'Varrição do trevo da BR Foods - Avenida Carlos Sphor Filho com ERS - 130 - Bairro Moinhos.', 16, 224, 8, '2014-01-15', 1, 1, 1475, 2014, 2, b'0', '', '', ''),
+(21, '', 'Roçada em toda extensão da Rua Hermes Jaeger, Bairro Conventos e adjacências. \n\nInteressado: Paula Gerhardt', 'Roçada em toda extensão da Rua Hermes Jaeger, Bairro Conventos e adjacências. \n\nInteressado: Paula Gerhardt', 9, 469, 8, '2014-01-15', 1, 1, 1474, 2014, 2, b'0', '', '', ''),
+(22, '', 'Tapar buracos na ponte de acesso à Cruzeiro do Sul - ERS -130. Próximo do trevo à BR Foods.', 'Tapar buracos na ponte de acesso à Cruzeiro do Sul - ERS -130. Próximo do trevo à BR Foods.', 15, 0, 9, '2014-01-15', 1, 1, 1473, 2014, 2, b'0', '', '', ''),
+(23, '', 'Tapar buraco na esquina das Ruas Bento Gonçalves e Tiradentes, Bairro Centro - junto à faixa de segurança.', 'Tapar buraco na esquina das Ruas Bento Gonçalves e Tiradentes, Bairro Centro - junto à faixa de segurança.', 7, 185, 9, '2014-01-15', 1, 1, 1471, 2014, 2, b'0', '', '', ''),
+(24, '', 'Desentupimento de bueiro na Rua Santos Filho, esquina com a Rua João Abott - Bairro Centro.', 'Desentupimento de bueiro na Rua Santos Filho, esquina com a Rua João Abott - Bairro Centro.', 7, 814, 16, '2014-01-16', 1, 1, 1537, 2014, 2, b'0', '', '', ''),
+(25, '', 'Instalação de iluminação pública no treco da ERS-130, nas proximidades dos Bairro Jardim do Cedro.\n\ninteressada: Ana Paula Labres', 'Instalação de iluminação pública no treco da ERS-130, nas proximidades dos Bairro Jardim do Cedro.\n\ninteressada: Ana Paula Labres', 15, 520, 2, '2014-01-16', 1, 1, 1535, 2014, 2, b'0', '', '', ''),
+(26, '', 'Finalização da obra de contenção da margem do Rio Taquari em frente à Creche Municipal Risque e Rabisque.', 'Finalização da obra de contenção da margem do Rio Taquari em frente à Creche Municipal Risque e Rabisque.', 7, 695, 21, '2014-01-17', 1, 1, 1716, 2014, 2, b'0', '', '', ''),
+(27, '', 'Conserto do calçamento (2 buracos junto ao canteiro central) na Avenida Décio Martins Costa - próximo ao n°41 (próximo à Rua Saldanha Marinho) e próximo ao n° 101 (quase esquina com a Rua Fialho de Vargas).', 'Conserto do calçamento (2 buracos junto ao canteiro central) na Avenida Décio Martins Costa - próximo ao n°41 (próximo à Rua Saldanha Marinho) e próximo ao n° 101 (quase esquina com a Rua Fialho de Vargas).', 12, 0, 12, '2014-01-17', 1, 1, 1717, 2014, 2, b'0', '', '', ''),
+(28, '', 'Conserto de bueiro na esquina da Rua Oscar Pedro Scherer com a Rua Estrela - Bairro Planalto.\n\nRequerimento já protocolado sob expediente n° 31674/2013.\n', 'Conserto de bueiro na esquina da Rua Oscar Pedro Scherer com a Rua Estrela - Bairro Planalto.\n\nRequerimento já protocolado sob expediente n° 31674/2013.\n', 22, 685, 21, '2014-01-17', 1, 1, 1718, 2014, 2, b'0', '', '', ''),
+(29, '', 'Conserto da parada de ônibus na Rua Etwino Thomas, altura nº 412 - Bairro Planalto.', 'Conserto da parada de ônibus na Rua Etwino Thomas, altura nº 412 - Bairro Planalto.', 22, 375, 4, '2014-01-17', 1, 1, 1719, 2014, 2, b'0', '', '', ''),
+(30, '', 'Patrolamento e material na esquina das Ruas Etwino Thomas com Rua Arthur Leopoldo Schneider - Bairro Planalto.', 'Patrolamento e material na esquina das Ruas Etwino Thomas com Rua Arthur Leopoldo Schneider - Bairro Planalto.', 22, 375, 14, '2014-01-17', 1, 1, 2163, 2014, 2, b'0', '', '', ''),
+(31, '', 'Canalização do banhado na esquina das Ruas Etwino Thomas com Rua Arthur Leopoldo Schneider - Bairro Planalto.', 'Canalização do banhado na esquina das Ruas Etwino Thomas com Rua Arthur Leopoldo Schneider - Bairro Planalto.', 22, 375, 11, '2014-01-17', 1, 1, 1722, 2014, 2, b'0', '', '', ''),
+(32, '', 'Conserto de semáforo na ERS - 130, em frente ao Posto do Arco - Bairro São Cristóvão.', 'Conserto de semáforo na ERS - 130, em frente ao Posto do Arco - Bairro São Cristóvão.', 26, 0, 13, '2014-01-17', 1, 1, 1724, 2014, 2, b'0', '', '', ''),
+(33, '', 'Finalização de canalização/bueiro na esquina das Ruas Ireno Schena e Oscar Pedro Scherer - Bairro Planalto.\n\nAtualmente há um buraco no local sem sequer sinalização.', 'Finalização de canalização/bueiro na esquina das Ruas Ireno Schena e Oscar Pedro Scherer - Bairro Planalto.\n\nAtualmente há um buraco no local sem sequer sinalização.', 22, 484, 11, '2014-01-17', 1, 1, 1728, 2014, 2, b'0', '', '', ''),
+(34, '', 'Finalização e fechamento de canalização/bueiro na Avenida Presidente João Goulart, na altura do n° 634 - Bairro Olarias.\n\nHá um grande buraco no local, esperando conclusão da obra.', 'Finalização e fechamento de canalização/bueiro na Avenida Presidente João Goulart, na altura do n° 634 - Bairro Olarias.\n\nHá um grande buraco no local, esperando conclusão da obra.', 4, 521, 11, '2014-01-17', 1, 1, 1715, 2014, 2, b'0', '', '', ''),
+(35, '', 'Conserto/fechamento de bueiro na Rua Alberto Schneider, altura do n° 960 - Bairro Campestre.', 'Conserto/fechamento de bueiro na Rua Alberto Schneider, altura do n° 960 - Bairro Campestre.', 4, 61, 16, '2014-01-17', 1, 1, 1714, 2014, 2, b'0', '', '', ''),
+(36, '', 'Nivelamento do calçamento (paralelepípedo) na Rua João Luiz da Rocha, altura do n° 509 - próximo à esquina com a Rua José de Anchieta - Bairro Campestre.', 'Nivelamento do calçamento (paralelepípedo) na Rua João Luiz da Rocha, altura do n° 509 - próximo à esquina com a Rua José de Anchieta - Bairro Campestre.', 4, 525, 1, '2014-01-17', 1, 1, 1726, 2014, 2, b'0', '', '', ''),
+(37, '', 'Conserto de calçamento na Rua Alex Thomas, quase esquina com a Rua Bento Gonçalves e também junto à lixeira - Bairro Centro.', 'Conserto de calçamento na Rua Alex Thomas, quase esquina com a Rua Bento Gonçalves e também junto à lixeira - Bairro Centro.', 7, 74, 9, '2014-01-17', 1, 1, 1729, 2014, 3, b'0', '', '', ''),
+(38, '', 'Canalização de área verde localizada na esquina das Ruas Emílio Haas e Octávio Trierweiler - Bairro Jardim do Cedro.\n\nSetor = 10 \nQuadra = 19\nLote = 452', 'Canalização de área verde localizada na esquina das Ruas Emílio Haas e Octávio Trierweiler - Bairro Jardim do Cedro.\n\nSetor = 10 \nQuadra = 19\nLote = 452', 15, 667, 11, '2014-01-17', 1, 1, 1713, 2014, 2, b'0', '', '', ''),
+(39, '', 'A rua passou por reformas, ao que nos consta, para substituição de encanamentos. Entretanto, o fechamento dos buracos deixou considerável desnível no asfalto, fazendo com que alguns condutores andem pela faixa oposta ou fiquem na eminência de danificar seus pneus.\n\nO trecho referido está mais ou menos a partir da Rua Quinze de Novembro com a Emílio Conrado, até a sinaleira que antecede a Benjamin Constant.\n\nNeste mesmo trecho, as lombadas estão mal sinalizadas, se agravando com o fato de que parte da pintura foi removida com a abertura do asfalto e não foi refeita após o fechamento.\n\nComo a iluminação do local à noite não é muito boa, sugerimos a pintura com tinta reflexiva.', 'A rua passou por reformas, ao que nos consta, para substituição de encanamentos. Entretanto, o fechamento dos buracos deixou considerável desnível no asfalto, fazendo com que alguns condutores andem pela faixa oposta ou fiquem na eminência de danificar seus pneus.\n\nO trecho referido está mais ou menos a partir da Rua Quinze de Novembro com a Emílio Conrado, até a sinaleira que antecede a Benjamin Constant.\n\nNeste mesmo trecho, as lombadas estão mal sinalizadas, se agravando com o fato de que parte da pintura foi removida com a abertura do asfalto e não foi refeita após o fechamento.\n\nComo a iluminação do local à noite não é muito boa, sugerimos a pintura com tinta reflexiva.', 16, 488, 9, '2014-01-20', 24, 1, 1931, 2014, 2, b'0', '', '', ''),
+(40, '', 'PS: Não sei se os responsáveis por reparos no asfalto são os mesmos pelas pinturas de ruas e lombadas, por isso, crio requerimento igual classificado com um tipo diferente!\n\nA rua passou por reformas, ao que nos consta, para substituição de encanamentos. O trecho referido está mais ou menos a partir da Rua Quinze de Novembro com a Emílio Conrado, até a sinaleira que antecede a Benjamin Constant.\n\nNeste trecho, as lombadas estão mal sinalizadas, se agravando com o fato de que parte da pintura foi removida com a abertura do asfalto e não foi refeita após o fechamento.\n\nComo a iluminação do local à noite não é muito boa, sugerimos a pintura com tinta reflexiva.', 'PS: Não sei se os responsáveis por reparos no asfalto são os mesmos pelas pinturas de ruas e lombadas, por isso, crio requerimento igual classificado com um tipo diferente!\n\nA rua passou por reformas, ao que nos consta, para substituição de encanamentos. O trecho referido está mais ou menos a partir da Rua Quinze de Novembro com a Emílio Conrado, até a sinaleira que antecede a Benjamin Constant.\n\nNeste trecho, as lombadas estão mal sinalizadas, se agravando com o fato de que parte da pintura foi removida com a abertura do asfalto e não foi refeita após o fechamento.\n\nComo a iluminação do local à noite não é muito boa, sugerimos a pintura com tinta reflexiva.', 16, 488, 10, '2014-01-20', 24, 1, 1929, 2014, 3, b'0', '', '', ''),
+(41, '', 'Capina mecanizada na rua Bento Gonçalves, próximo ao portão da padaria Suíça (trecho do lado direito da Avenida Alberto Pasqualini, sentido bairro-centro).\n', 'Capina mecanizada na rua Bento Gonçalves, próximo ao portão da padaria Suíça (trecho do lado direito da Avenida Alberto Pasqualini, sentido bairro-centro).\n', 7, 185, 8, '2014-01-20', 1, 1, 1928, 2014, 2, b'0', '', '', ''),
+(42, '', 'Colocação de Material e Nivelamento da Rua Ludwig Rudolph Ewald - Bairro Moinhos.\nRua intransitável devido a quantidade de buracos, desníveis e valetas', 'Colocação de Material e Nivelamento da Rua Ludwig Rudolph Ewald - Bairro Moinhos.\nRua intransitável devido a quantidade de buracos, desníveis e valetas', 16, 607, 14, '2014-01-21', 45, 1, 2181, 2014, 2, b'0', '', '', ''),
+(43, '', 'Instalação de grade protetora em um bueiro na Rua Bento Rosa, Bairro Carneiros, antes da entrada da obra de construção da Tecnovates.', 'Instalação de grade protetora em um bueiro na Rua Bento Rosa, Bairro Carneiros, antes da entrada da obra de construção da Tecnovates.', 5, 0, 16, '2014-01-26', 46, 1, 2584, 2014, 2, b'0', '', '', ''),
+(44, '', 'Na Rodovia que liga Lajeado à Cruzeiro do Sul (Sentido Cruzeiro do Sul -> Lajeado) nas proximidades da Arena Alviazul, foi construída uma terceira pista, onde era o acostamento e valeta. Acredito que a compactação do aterro tenha sido muito mal executada, uma vez que o asfalto apresenta desníveis (afundamento) em vários pontos. Este problema pode causar acidentes em dias de chuva. Acredito que placas de avisos devem ser colocadas de maneira emergencial para avisar os motoristas antes que uma solução definitiva seja adotada.', 'Na Rodovia que liga Lajeado à Cruzeiro do Sul (Sentido Cruzeiro do Sul -> Lajeado) nas proximidades da Arena Alviazul, foi construída uma terceira pista, onde era o acostamento e valeta. Acredito que a compactação do aterro tenha sido muito mal executada, uma vez que o asfalto apresenta desníveis (afundamento) em vários pontos. Este problema pode causar acidentes em dias de chuva. Acredito que placas de avisos devem ser colocadas de maneira emergencial para avisar os motoristas antes que uma solução definitiva seja adotada.', 10, 0, 9, '2014-01-26', 47, 1, 2582, 2014, 2, b'0', '', '', ''),
+(45, '', 'Acionar o setor de fiscalização da Administração Municipal para verificar junto ao Corpo de Bombeiros como estão os estabelecimentos de entretenimento de Lajeado quanto ao cumprimento das leis/resoluções relativas à prevenção de acidentes, PPCI, dentre outros.', 'Acionar o setor de fiscalização da Administração Municipal para verificar junto ao Corpo de Bombeiros como estão os estabelecimentos de entretenimento de Lajeado quanto ao cumprimento das leis/resoluções relativas à prevenção de acidentes, PPCI, dentre outros.', 7, 0, 1, '2014-01-27', 47, 1, 3144, 2014, 2, b'0', '', '', ''),
+(46, '', 'Instalação de placas de identificação nas ruas transversais à Avenida Amazonas, (Rua Alfredo Bildhauer e ruas logo abaixo dos campos de futebol do Sesi), pois facilita a localização tanto para recebimento de encomendas (correios, etc.) como inclusive de pessoas que só tem como referência atualmente a Avenida principal.', 'Instalação de placas de identificação nas ruas transversais à Avenida Amazonas, (Rua Alfredo Bildhauer e ruas logo abaixo dos campos de futebol do Sesi), pois facilita a localização tanto para recebimento de encomendas (correios, etc.) como inclusive de pessoas que só tem como referência atualmente a Avenida principal.', 27, 77, 15, '2014-01-27', 49, 1, 2581, 2014, 2, b'0', '', '', ''),
+(47, '', 'Pintura dos meio-fios da Rua Oswaldo Mathias Ely, no bairro Montanha. ', 'Pintura dos meio-fios da Rua Oswaldo Mathias Ely, no bairro Montanha. ', 18, 696, 8, '2014-01-27', 51, 1, 2672, 2014, 2, b'0', '', '', ''),
+(48, '', 'Canalização de água parada na Rua Erni Friedholdo Noll, na altura do n° 48 - Bairro Conventos.', 'Canalização de água parada na Rua Erni Friedholdo Noll, na altura do n° 48 - Bairro Conventos.', 9, 358, 11, '2014-01-27', 1, 1, 2793, 2014, 2, b'0', '', '', ''),
+(49, '', 'Instalação de uma lixeira na Rua Gramado, n° 428 - Bairro Universitário (Atrás da sede da Ximango).', 'Instalação de uma lixeira na Rua Gramado, n° 428 - Bairro Universitário (Atrás da sede da Ximango).', 27, 444, 3, '2014-01-27', 52, 1, 2832, 2014, 2, b'0', '', '', ''),
+(50, '', 'Substituição de lâmpada na Rua Rodolfo Germano Hexsel (lateral do predio Vitoria Regia) esquina com a Rua Erwino Heemann, no bairro Hidraulica.\n\nLucas Warken - lucas.warken@gmail.com\n\n', 'Substituição de lâmpada na Rua Rodolfo Germano Hexsel (lateral do predio Vitoria Regia) esquina com a Rua Erwino Heemann, no bairro Hidraulica.\n\nLucas Warken - lucas.warken@gmail.com\n\n', 12, 367, 2, '2014-01-27', 1, 1, 2670, 2014, 3, b'0', '', '', ''),
+(51, '', 'Conserto de buraco na Rua Oswaldo Aranha, na altura do n° 716 (próximo à EMEI Risque e Rabisque) - Bairro Centro.', 'Conserto de buraco na Rua Oswaldo Aranha, na altura do n° 716 (próximo à EMEI Risque e Rabisque) - Bairro Centro.', 7, 695, 12, '2014-01-30', 1, 1, 3064, 2014, 2, b'0', '', '', ''),
+(52, '', 'Conserto de buracos da Rua Santos Dumont (próximo ao CAPS), na altura do n° 760 - Bairro Centro', 'Conserto de buracos da Rua Santos Dumont (próximo ao CAPS), na altura do n° 760 - Bairro Centro', 7, 813, 12, '2014-01-30', 1, 1, 3066, 2014, 2, b'0', '', '', ''),
+(53, '', 'Conserto de pavimentação na Rua Santos Filho (em frente à feira do produtor rural), altura do n°595 - Bairro Centro.', 'Conserto de pavimentação na Rua Santos Filho (em frente à feira do produtor rural), altura do n°595 - Bairro Centro.', 7, 814, 12, '2014-01-30', 1, 1, 3065, 2014, 2, b'0', '', '', ''),
+(54, '', 'Roçada na Avenida Parque do Imigrante, trecho entre a Avenida Lourenço Mayer da Silva e Rua das Margaridas - Bairro Alto do Parque.', 'Roçada na Avenida Parque do Imigrante, trecho entre a Avenida Lourenço Mayer da Silva e Rua das Margaridas - Bairro Alto do Parque.', 1, 11, 8, '2014-01-31', 1, 1, 3159, 2014, 2, b'0', '', '', ''),
+(55, '', 'Patrolamento das Rua Miguel Paulus e demais  ruas próximas - Bairro Planalto.', 'patrolamento das ruas ,miguel paulus e outras que estao em precarias condiçoes ', 22, 640, 14, '2014-02-01', 53, 1, 3353, 2014, 2, b'0', '', '', ''),
+(56, '', 'Instalação de poste de luz na Rua IRENO SCHENA, na altura do n° 920 - Bairro Bom Pastor.', 'colocaçao de iluminaçao na rua IRENO SCHENA,precisa ser colocado poste ,os moradores pedem isto anos ja e ate hoje nada foi resolvido ,pois fica muito escuro ,fica na tranversal o nu de uma das casas e 920,', 22, 484, 2, '2014-02-01', 53, 1, 3350, 2014, 2, b'0', '', '', ''),
+(57, '', 'Roçada do terreno que pertence à Prefeitura e fica junto a área verde no bairro Conventos na subida da Rua José Franz próximo ao Posto de Saúde.', 'Gostaria de solicitar a roçada de um terreno que pertence a Prefeitura e fica junto a área verde no bairro Conventos na subida da Rua José Franz próximo ao Posto de Saúde, pois os fundos da minha casa fazem divisa com este terreno e o matagal está tomando conta de tudo. ', 9, 560, 1, '2014-02-01', 54, 1, 3365, 2014, 2, b'0', '', '', ''),
+(58, '', 'Instalação de duas lixeiras na Rua D, na altura do n°133 (em frente ao terreno baldio)- Bairro Montanha.\n\n\n', '- Lixeira nova na rua, pois a mesma esta estragada e pequena para cerca de 20 famílias.\n- Placa nomeando a rua, pois é  ruim comprar algo e pedir pra entregar, pois não conseguem se localizar.\n- Roçada nos matos em redor das residências, pois existem mtos bichos e insetos, que causam alergias nas crianças.\n- Coleta de entulhos de 15 em 15 dias, pois na lixeira há uma mobilia inteira de uma casa.\n- Recolocar abrigo nas paradas de ônibus em frente a Help Camisetas, na Benjamin Constant e na Rua das Nogueiras em frente a Agropecuária Jéduca.\n-Existe alguma previsão de pavimentação na Av. Ipês e na rua D? Sendo que a UPA tem previsão de inauguração em março.\nFico grata se tiver algum retorno desses pedidos, pois já fiz os mesmos junto com as secretarias e não tive retorno.\nVi na lista abaixo que não existe  o nome de minha rua: Sendo ela "Rua D, 119 Montanha "\n', 18, 12, 21, '2014-02-01', 55, 1, 3346, 2014, 2, b'0', '', '', ''),
+(59, '', 'Roçada nas Ruas Felippe Schneider, Selma Purper e Lauro Schneider - Bairro Bom Pastor.\n\n', 'As ruas Felippe Schneider, Selma Purper e Lauro Schneider, necessitam de limpeza, essas rua já tem calçamento e estão cheias de inço.\nJá liguei na prefeitura 3 vezes e pedi qual o procedimento para fazer um protocolo e a atendente do parque de máquinas pede endereço e diz que alguém irá até o endereço fazer a limpeza, mas até agora ninguém apareceu.\nAgora esse mês de fevereiro vou ter que pagar o IPTU, será que a prefeitura vai ligar 3 vezes para mim e pedir para eu pagar?\nMorro na rua Felippe Schneider 379, esquina com a Lauro Schneider.', 3, 392, 8, '2014-02-02', 57, 1, 3360, 2014, 2, b'0', '', '', ''),
+(60, '', 'Conserto de 2 buracos na esquina da AV. Sete de Setembro com a Rua Dominicus Jacob Mallmann - Bairro Moinhos.\n', 'Na esquina entre a AV. Sete de Setembro e a Rua Dominicus Jacob Mallmann tem 2 buracos enormes no asfalto, isso já ta a mais ou menos uns 2, se não mais e ninguém fez nada ainda.\n\nFora as ruas no bairro Florestal perto do Bairro Moinhos, uma pouca vergonha, estão abrindo tudo novamente, porque não fazem logo uma coisa descente???\n\nAcorda Prefeitura de Lajeado!!!!', 16, 26, 21, '2014-02-03', 37, 1, 2014, 0, 2, b'0', '', '', ''),
+(61, '', 'Nivelamento da via e construção de rampas de acesso para cadeirantes em todas as esquinas da Rua Irmão Emílio Conrado, na altura do número 547 até a Rua Benjamin Constant - Bairro Florestal. \n\nEste requerimento se deve a utilização diária de cadeirantes neste trecho, onde por falta de acesso às calçadas é necessário andar com a cadeira de rodas pelo asfalto.', 'Realizar manutenção e eliminar desníveis nas calçadas, bem como, construir rampas de acesso  em todas as esquinas da rua Irmão Emílio Conrado na altura do número 547 até a rua Benjamin Constant no bairro Florestal. Este requerimento se deve a utilização diária de cadeirante neste trecho, onde por falta de acesso as calçadas é necessário andar com a cadeira de rodas pelo asfalto.', 16, 0, 12, '2014-02-03', 58, 1, 3555, 2014, 2, b'0', '', '', ''),
+(62, '', 'Substituição de lixeira (instalar uma grande) na Rua Santos Filho, em frente ao n° 93 - Bairro Centro.\n\nIva Rockenbach (subsíndica - apartamento 401) - 91152709', 'Substituição de lixeira (instalar uma grande) na Rua Santos Filho, em frente ao n° 93 - Bairro Centro.\n\nIva Rockenbach (subsíndica - apartamento 401) - 91152709', 7, 814, 3, '2014-02-04', 1, 1, 3565, 2014, 2, b'0', '', '', ''),
+(63, '', 'Providências quanto aos bovinos que estão localizados nas proximidades do Condomínio Villa Romana, Rua Professor Theobaldo Dick, n° 08 - Bairro Jardim do Cedro.\n\nO local onde é área verde e os bovinos geram inúmero insetos e mau cheiro.\n\nJulia Hauschild Labres - 8170 7838', 'Providências quanto aos bovinos que estão localizados nas proximidades do Condomínio Villa Romana, Rua Professor Theobaldo Dick, n° 08 - Bairro Jardim do Cedro.\n\nO local onde é área verde e geram inúmero insetos e meu cheio.\n\nJulia Hauschild Labres - 8170 7838', 15, 760, 21, '2014-02-04', 1, 1, 3593, 2014, 2, b'0', '', '', ''),
+(64, '', 'Substituição das lâmpadas queimadas na BR-386, trecho entre o Shopping Lajeado e a passarela.', 'Bom dia. Gostaria de solicitar que trocassem todas as lampadas queimadas ao lado do Unicshopping de Lajeado e principalmente as lampadas da passarela. Minha esposa começou a trabalhar no shopping faz poucas semanas e achamos muito perigoso atravessar a passarela naquela escuridão. Também já tive que retornar algumas vezes e buscar ela exatamente na frente do shopping pois tem vezes que encontrei usuarios de drogas no local. Qualquer duvida passem a noite pelas 10:00, que é o horário que funcionários saem do trabalho, e avaliem o que eu disse. Acredito que iluminando bem o local, trará pelo menos um pouco mais de segurança aos usuarios da passarela. Obrigado pela atenção e fico no aguardo de soluções. ', 26, 416, 2, '2014-02-04', 59, 1, 3719, 2014, 2, b'0', '', '', ''),
+(65, '', 'Limpeza do campo de areia e da praça localizados na Rua Etwino T. Thomas, na altura do n°1300 - Bairro Planalto.\n\nEm frente à EMEF Lauro Mathias Müller.', 'pedimos a limpeza do campo de areia e a praça aqui do bairro com urgencia', 22, 375, 7, '2014-02-04', 53, 1, 3629, 2014, 2, b'0', '', '', ''),
+(66, '', 'Placas de identificação do nome da Rua Alfredo Rafael Schardong - Bairro Bom Pastor.', 'Boa tarde! \nNa verdade a Rua Alfredo Rafael Schardong(rua em que moro) fica no Bairro Bom Pastor, mas isso não vem ao caso de momento. Só gostaria de solicitar placas de identificação da rua. Em toda a extensão dela (são 3 esquinas no total) não se possui nenhuma placa de identificação prejudicando principalmente o trabalho de entregadores. ', 3, 0, 15, '2014-02-04', 59, 1, 3720, 2014, 2, b'0', '', '', ''),
+(67, '', 'Roçada no mato localizado na Rua Olmiro Cardoso Siqueira, no acesso à Avenida Presidente Castelo Branco.\n\nMaria Inês - 93931940.', 'Roçada no mato localizado na Rua Olmiro Cardoso Siqueira, no acesso à Avenida Presidente Castelo Branco.', 16, 675, 8, '2014-02-05', 1, 1, 3712, 2014, 2, b'0', '', '', ''),
+(68, '', 'Desinsetização na Rua Olmiro Cardoso Siqueira, no acesso à Avenida Presidente Castelo Branco.', 'Desinsetização na Rua Olmiro Cardoso Siqueira, no acesso à Avenida Presidente Castelo Branco.', 16, 675, 8, '2014-02-05', 1, 1, 3716, 2014, 2, b'0', '', '', ''),
+(69, '', 'Roçada na RUA FELIPPE SCHNEIDER - Bairro Bom Pastor.', 'BOM DIA, GOSTARIA QUE FOSE FEITA A LIMPEZA DA MINHA RUA, ELA JA TEM CALÇAMENTO MAS O INÇO TA GRANDE , O LOTEAMENTO É NOVO TEM POUCAS OBRAS MAS AOS POUCOS VAI CRESCER , MAS PARA ISSO SERIA BOM TER AS RUAS LIMPAS . A RUA É FELIPPE SCHNEIDER ,', 3, 392, 8, '2014-02-05', 62, 1, 3714, 2014, 2, b'0', '', '', ''),
+(70, '', 'Asfalto/material para tapar valetas Rua Frederico Bertholdo Schneider - Bairro Universitário.\n\nSolicitação já protocolado no mês de novembro de 2013 sob n° de expediente 30321/2013.', 'Asfalto/material para tapar valetas Rua Frederico Bertholdo Schneider - Bairro Universitário.\n\nSolicitação já protocolado no mês de novembro de 2013 sob n° de expediente 30321/2013.', 27, 406, 9, '2014-02-05', 1, 1, 3708, 2014, 2, b'0', '', '', ''),
+(71, '', 'Roçada na área verde da Rua Frederico Bertholdo Schneider - Bairro Universitário.\n\nTácio Borsatto  - 81346110', 'Roçada na área verde da Rua Frederico Bertholdo Schneider - Bairro Universitário.\n\nTácio Borsatto  - 81346110', 27, 406, 8, '2014-02-05', 1, 1, 3705, 2014, 2, b'0', '', '', ''),
+(72, '', 'Instalação de iluminação publica nos trechos da Rua Antônio Silvestre Arenhart que ainda não possuem iluminação pública - Bairro Jardim do Cedro.\n\nSolicitação já protocolada inúmeras vezes.', 'iluminação publica,mais lixeiras ,limpeza do bairro,', 15, 121, 4, '2014-02-05', 64, 1, 3888, 2014, 2, b'0', '', '', ''),
+(73, '', 'Instalação de lixeiras no Bairro Jardim do Cedro, principalmente ao longo da Rua Antônio Silvestre Arenhart.', 'Instalação de lixeiras no Bairro Jardim do Cedro, principalmente ao longo da Rua Antônio Silvestre Arenhart.', 15, 121, 3, '2014-02-06', 1, 1, 3890, 2014, 2, b'0', '', '', ''),
+(74, '', 'Limpeza das ruas do bairro Jardim do Cedro.', 'Limpeza das ruas do bairro Jardim do Cedro.', 15, 121, 8, '2014-02-06', 1, 1, 3911, 2014, 2, b'0', '', '', ''),
+(75, '', 'Conserto de calçada na altura do número 113 (no outro lado da rua - prédio bege e branco com 3 andares de esquina) da Rua Erwino Heemann no Bairro Hidraulica.\n\nSolicitante: Lucas Warken', 'Conserto de calçada na altura do número 113 (no outro lado da rua - prédio bege e branco com 3 andares de esquina) da Rua Erwino Heemann no Bairro Hidraulica.\n\nSolicitante: Lucas Warken', 12, 367, 12, '2014-02-06', 1, 1, 3913, 2014, 2, b'0', '', '', ''),
+(76, '', 'Substituição de lâmpada na Rua Rodolfo Germano Hexsel (lateral do prédio Vitoria Regia) esquina com a Rua Erwino Heemann, no bairro Hidraulica.\n\nLâmpada foi trocada recentemente, porém o temporal da semana passada danificou o poste a a lâmpada.\n\nLucas Warken ', 'Substituição de lâmpada na Rua Rodolfo Germano Hexsel (lateral do prédio Vitoria Regia) esquina com a Rua Erwino Heemann, no bairro Hidraulica.\n\nLâmpada foi trocada recentemente, porém o temporal da semana passada danificou o poste a a lâmpada.\n\nLucas Warken ', 12, 787, 2, '2014-02-06', 1, 1, 3914, 2014, 2, b'0', '', '', ''),
+(78, '', 'Solicita ao DNIT (Departamento Nacional de Infraestrutura de Transportes) para a realização de roçada e capina junto ao acesso do Bairro Conventos.', 'Solicita ao DNIT (Departamento Nacional de Infraestrutura de Transportes) para a realização de roçada e capina junto ao acesso do Bairro Conventos.', 9, 0, 8, '2014-02-04', 1, 14, 0, 0, 0, b'0', '', '', ''),
+(79, '', 'Envio de ofício ao Colégio Madre Bárbara parabenizando por seus 117 anos de fundação.', 'Envio de ofício ao Colégio Madre Bárbara parabenizando por seus 117 anos de fundação.', 7, 0, 21, '2014-02-04', 1, 14, 0, 0, 0, b'0', '', '', ''),
+(80, '', 'Solicita ao Poder Executivo/Órgão responsável, para viabilizar estudo para a realização de campanha ostensiva da divulgação dos horários de recolhimento do lixo no Bairro Centro, com a distribuição de material junto aos moradores, lojas, restaurantes, condomínios, entre outros.', 'Solicita ao Poder Executivo/Órgão responsável, para viabilizar estudo para a realização de campanha ostensiva da divulgação dos horários de recolhimento do lixo no Bairro Centro, com a distribuição de material junto aos moradores, lojas, restaurantes, condomínios, entre outros.', 7, 0, 20, '2014-02-04', 1, 14, 0, 0, 0, b'0', '', '', ''),
+(81, '', 'Solicita a Secretaria de Trânsito e Segurança Pública/Departamento de Trânsito e Conselho Municipal de Trânsito, que estudem a viabilidade da colocação de quebra-molas na Av. Senador Alberto Pasqualini, no trecho compreendido do Posto Fascina até o escritório da empresa A. E. Dörr.', 'Solicita a Secretaria de Trânsito e Segurança Pública/Departamento de Trânsito e Conselho Municipal de Trânsito, que estudem a viabilidade da colocação de quebra-molas na Av. Senador Alberto Pasqualini, no trecho compreendido do Posto Fascina até o escritório da empresa A. E. Dörr.', 26, 25, 10, '2014-02-04', 1, 14, 0, 0, 0, b'0', '', '', ''),
+(82, '', 'Solicita a Secretaria de Trânsito e Segurança Pública/Departamento de Trânsito e Conselho Municipal de Trânsito, que estudem a viabilidade da colocação de placas indicativas ao longo da Av. Benjamin Constant, após o Bairro Montanha.', 'Solicita a Secretaria de Trânsito e Segurança Pública/Departamento de Trânsito e Conselho Municipal de Trânsito, que estudem a viabilidade da colocação de placas indicativas ao longo da Av. Benjamin Constant, após o Bairro Montanha.', 18, 0, 15, '2014-02-04', 1, 14, 0, 0, 0, b'0', '', '', ''),
+(83, '', 'Solicita ao Poder Executivo/Secretaria de Planejamento/Secretaria de Agricultura/Secretaria do Meio Ambiente, que informe a esta Casa Legislativa sobre o projeto de arborização da Rua Júlio de Castilhos.', 'Solicita ao Poder Executivo/Secretaria de Planejamento/Secretaria de Agricultura/Secretaria do Meio Ambiente, que informe a esta Casa Legislativa sobre o projeto de arborização da Rua Júlio de Castilhos.', 7, 574, 5, '2014-02-04', 1, 14, 0, 0, 0, b'0', '', '', ''),
+(84, '', 'Solicita ao Poder Executivo/Secretaria de Planejamento/Secretaria da Agricultura, que informe se existe projeto do plantio de árvores no estacionamento público inaugurado na Av Décio Matins Costa e Julio May.', 'Solicita ao Poder Executivo/Secretaria de Planejamento/Secretaria da Agricultura, que informe se existe projeto do plantio de árvores no estacionamento público inaugurado na Av Décio Matins Costa e Julio May.', 7, 10, 5, '2014-02-04', 1, 14, 0, 0, 0, b'0', '', '', ''),
+(85, '', 'Solicita ao DNIT (Departamento Nacional de Infraestrutura e Transporte), que realizem uma nova pintura de sinalização da pista e colocação de olho de gato no trecho da BR-386 dentro do perímetro urbano de Lajeado, desde a entrada de acesso ao Bairro Montanha até a ponte sobre o Rio Taquari', 'Solicita ao DNIT (Departamento Nacional de Infraestrutura e Transporte), que realizem uma nova pintura de sinalização da pista e colocação de olho de gato no trecho da BR-386 dentro do perímetro urbano de Lajeado, desde a entrada de acesso ao Bairro Montanha até a ponte sobre o Rio Taquari', 12, 0, 21, '2014-02-04', 14, 14, 0, 0, 0, b'0', '', '', ''),
+(86, '', 'Limpeza da Rua Júlio Born, esquina com a Receita Federal - Bairro Florestal.', 'Limpeza da rua Júlio Born, esquina da Receita Federal. Totalmente abandonada. Ao estacionar o carro, o passageiro não consegue descer. ', 11, 576, 1, '2014-02-06', 65, 1, 3948, 2014, 2, b'0', '', '', ''),
+(87, '', 'Desinsetização de bocas de lobo na área central da cidade em função do perigo da proliferação de baratas e roedores.', 'Desinsetização de bocas de lobo na área central da cidade em função do perigo da proliferação de baratas e roedores.', 7, 0, 8, '2014-02-04', 14, 14, 0, 0, 0, b'0', '', '', ''),
+(88, '', 'Recolhimento de lixo na Rua Martim Luther, n° 92 - Bairro Florestal.', 'Recolhimento de lixo na Rua Martim Luther, n° 92 - Bairro Florestal.', 11, 635, 8, '2014-02-04', 14, 14, 0, 0, 0, b'0', '', '', ''),
+(89, '', 'Colocação de lixeiras e recolhimento no Loteamento Parque dos Conventos - Bairro Conventos.', 'Colocação de lixeiras e recolhimento no Loteamento Parque dos Conventos - Bairro Conventos.', 9, 0, 3, '2014-02-04', 14, 14, 0, 0, 0, b'0', '', '', ''),
+(90, '', 'Corte de árvore seca, na Rua Fábio Brito de Azambuja, entre os números 192 e 216 em frente o CTG Tropilha Farrapo - Bairro São Cristóvão.', 'Corte de árvore seca, na Rua Fábio Brito de Azambuja, entre os números 192 e 216 em frente o CTG Tropilha Farrapo - Bairro São Cristóvão.', 26, 386, 6, '2014-02-04', 14, 14, 0, 0, 0, b'0', '', '', ''),
+(91, '', 'Nivelamento da calçada de passeio da Rua Amazonas, esquina com a Av. Senador Alberto Pasqualini, Bairro Universitário.', 'Nivelamento da calçada de passeio da Rua Amazonas, esquina com a Av. Senador Alberto Pasqualini, Bairro Universitário.', 27, 25, 12, '2014-02-04', 12, 12, 0, 0, 0, b'0', '', '', ''),
+(92, '', 'Solicita a colocação de um quebra-molas (redutor de velocidade) na Rua João Pessoa.', 'Solicita a colocação de um quebra-molas (redutor de velocidade) na Rua João Pessoa.', 12, 531, 10, '2014-02-04', 1, 12, 0, 0, 0, b'0', '', '', ''),
+(93, '', 'Solicita a roçada, plantação de flores e colocação de bancos na Praça de Lazer, localizada na esquina das Ruas Padre Theodoro Amstad com a Pedro Kolling, Bairro Moinhos. \nConsiderando para tanto, que na redondeza do referido local, existe muitas \nfamílias e nas quais, encontram-se crianças e idosos, que com certeza saberiam muito \nbem usar este bem público. \n', 'Solicita a roçada, plantação de flores e colocação de bancos na Praça de Lazer, localizada na esquina das Ruas Padre Theodoro Amstad com a Pedro Kolling, Bairro Moinhos. \nConsiderando para tanto, que na redondeza do referido local, existe muitas \nfamílias e nas quais, encontram-se crianças e idosos, que com certeza saberiam muito \nbem usar este bem público. \n', 16, 735, 7, '2014-02-04', 12, 12, 0, 0, 0, b'0', '', '', ''),
+(94, '', 'Roçada em toda extensão da Rua Paulo Emílio Thiesen no Bairro Olarias.\n', 'Roçada em toda extensão da Rua Paulo Emílio Thiesen no Bairro Olarias.\n', 21, 721, 8, '2014-02-04', 11, 11, 0, 0, 0, b'0', '', '', ''),
+(95, '', 'Roçada em toda da Av. Amazonas no Bairro Universitário. \n', 'Roçada em toda da Av. Amazonas no Bairro Universitário. \n', 27, 3, 8, '2014-02-04', 11, 11, 0, 0, 0, b'0', '', '', ''),
+(96, '', 'Solicita à Secretaria da Saúde, para que coloque uma placa em local visível indicando o andar em que se localiza a Secretaria da Saúde, sendo que muitos usuários tem dificuldade para localiza-la.', 'Solicita à Secretaria da Saúde, para que coloque uma placa em local visível indicando o andar em que se localiza a Secretaria da Saúde, sendo que muitos usuários tem dificuldade para localiza-la.', 7, 62, 15, '2014-02-04', 11, 11, 0, 0, 0, b'0', '', '', ''),
+(97, '', 'Solicita um bueiro próximo ao n° 929 na Rua Frederico A. Weber no Bairro Centenário. \n\nSolicitação feita pelos moradores, pois em dias de chuva a água alaga as casas e a rua. \n', 'Solicita um bueiro próximo ao n° 929 na Rua Frederico A. Weber no Bairro Centenário. \n\nSolicitação feita pelos moradores, pois em dias de chuva a água alaga as casas e a rua. \n', 6, 405, 16, '2014-02-04', 11, 11, 0, 0, 0, b'0', '', '', ''),
+(98, '', 'Solicita a colocação de placa indicativa da Rua Safira no Bairro  Igrejinha.\nA falta de identificação da rua traz muitos transtornos aos moradores. \n', 'Solicita a colocação de placa indicativa da Rua Safira no Bairro  Igrejinha.\nA falta de identificação da rua traz muitos transtornos aos moradores. \n', 13, 805, 15, '2014-02-04', 11, 11, 0, 0, 0, b'0', '', '', ''),
+(99, '', 'Solicita a colocação de placa indicativa a Rua das Amizade no Bairro Carneiros. \nA falta de identificação da rua traz muitos transtornos aos moradores. \n', 'Solicita a colocação de placa indicativa a Rua das Amizade no Bairro Carneiros. \nA falta de identificação da rua traz muitos transtornos aos moradores. \n', 5, 0, 15, '2014-02-04', 11, 11, 0, 0, 0, b'0', '', '', ''),
+(100, '', 'Roçada da área verde, pertencente ao município, na Av. Amazonas, próximo ao SESI no Bairro Universitário. \n', 'Roçada da área verde, pertencente ao município, na Av. Amazonas, próximo ao SESI no Bairro Universitário. \n', 27, 3, 8, '2014-02-04', 11, 11, 0, 0, 0, b'0', '', '', ''),
+(101, '', 'Solicita a Secretaria Municipal da Administração para que envie a esta Casa Legislativa informações referentes a construção da Escola de Educação Infantil em Conventos conforme Projeto de Lei nº 229-01/2013, aprovado por esta Casa Legislativa em outubro de 2013. \n- Qual é a previsão de inicio desta importante obra?\n- Quais os motivos pela qual ainda não iniciaram os trabalhos desta construção?\n- Informar também se existe uma previsão de término desta obra?', 'Solicita a Secretaria Municipal da Administração para que envie a esta Casa Legislativa informações referentes a construção da Escola de Educação Infantil em Conventos conforme Projeto de Lei nº 229-01/2013, aprovado por esta Casa Legislativa em outubro de 2013. \n- Qual é a previsão de inicio desta importante obra?\n- Quais os motivos pela qual ainda não iniciaram os trabalhos desta construção?\n- Informar também se existe uma previsão de término desta obra?', 9, 0, 19, '2014-02-04', 8, 8, 0, 0, 0, b'0', '', '', ''),
+(102, '', 'Solicita a Secretaria Municipal da Administração para que envie a esta Casa Legislativa informações referentes a área onde vai ser instalada a Escola Técnica no Bairro Olarias. \n- Informar a data em que foi realizado o empenho para a compra da área?\n- Informar o valor da compra.?\n- Informar se os proprietários desta área já receberam algum valor bem como o esporte \nClube Olarias?\n- Em caso de já haver sido efetuado o pagamento, informar o dia da liberação dos \nvalores.?\n - Em caso de não ter sido liberado o pagamento, informar qual o montante que ficou \npendente para ser pago para o Esporte Clube Olarias?\n', 'Solicita a Secretaria Municipal da Administração para que envie a esta Casa Legislativa informações referentes a área onde vai ser instalada a Escola Técnica no Bairro Olarias. \n- Informar a data em que foi realizado o empenho para a compra da área?\n- Informar o valor da compra.?\n- Informar se os proprietários desta área já receberam algum valor bem como o esporte \nClube Olarias?\n- Em caso de já haver sido efetuado o pagamento, informar o dia da liberação dos \nvalores.?\n - Em caso de não ter sido liberado o pagamento, informar qual o montante que ficou \npendente para ser pago para o Esporte Clube Olarias?\n', 21, 0, 19, '2014-02-04', 8, 8, 0, 0, 0, b'0', '', '', ''),
+(103, '', 'Roçada na Av. Amazonas em toda a extensão, canteiro central, laterais e limpeza no Bairro Univeristário', 'Roçada na Av. Amazonas em toda a extensão, canteiro central, laterais e limpeza no Bairro Univeristário', 27, 3, 8, '2014-02-04', 8, 8, 0, 0, 0, b'0', '', '', ''),
+(104, '', 'Roçada e limpeza na Rua Paulo Emilio Thiesen em toda a extensão do Bairro Olarias.', 'Roçada e limpeza na Rua Paulo Emilio Thiesen em toda a extensão do Bairro Olarias.', 21, 721, 8, '2014-02-04', 8, 8, 0, 0, 0, b'0', '', '', ''),
+(105, '', 'Roçada na Rua João Goulart, Bairro Campestre', 'Roçada na Rua João Goulart, Bairro Campestre', 4, 521, 8, '2014-02-04', 8, 8, 0, 0, 0, b'0', '', '', ''),
+(106, '', 'Solicita ao Poder Executivo a explicação do por quê da proibição de estacionamento na Avenida Senador Alberto Pasqualini, Bairro São Cristóvão, visto que prejudica moradores e comércio local.', 'Solicita ao Poder Executivo a explicação do por quê da proibição de estacionamento na Avenida Senador Alberto Pasqualini, Bairro São Cristóvão, visto que prejudica moradores e comércio local.', 26, 25, 21, '2014-02-04', 6, 6, 0, 0, 0, b'0', '', '', ''),
+(107, '', 'Verificar terrenos na Rua Erni Friedholdo Noll, Bairro Conventos, visto que estão infestados de insetos devido ao mato alto.', 'Verificar terrenos na Rua Erni Friedholdo Noll, Bairro Conventos, visto que estão infestados de insetos devido ao mato alto.', 9, 358, 21, '2014-02-04', 6, 6, 0, 0, 0, b'0', '', '', ''),
+(108, '', 'Realizar limpeza de poço que acumula água da chuva, na Rua Hermes da Fonseca, n° 114, Bairro São Cristóvão, visto que este já transbordou e a água está escorrendo para dentro das casas. \n', 'Realizar limpeza de poço que acumula água da chuva, na Rua Hermes da Fonseca, n° 114, Bairro São Cristóvão, visto que este já transbordou e a água está escorrendo para dentro das casas. \n', 26, 468, 16, '2014-02-04', 6, 6, 0, 0, 0, b'0', '', '', ''),
+(109, '', 'Limpeza de terreno na Rua Arnoldo Uhry, Bairro Jardim do Cedro.', 'Limpeza de terreno na Rua Arnoldo Uhry, Bairro Jardim do Cedro.', 15, 152, 21, '2014-02-04', 6, 6, 0, 0, 0, b'0', '', '', ''),
+(110, '', 'Solicita ao Poder Executivo - Departamento Pessoal que informe todos os ocupantes de cargos CCs E CCTs, nome e cargo.', 'Solicita ao Poder Executivo - Departamento Pessoal que informe todos os ocupantes de cargos CCs E CCTs, nome e cargo.', 7, 577, 19, '2014-02-04', 19, 19, 0, 0, 0, b'0', '', '', ''),
+(111, '', 'Solicita ao Poder Executivo para que informe o número de atendimentos na Secretaria de Saúde em cada posto bem como no Hospital Bruno Born \nmês a mês no ano de 2013. \n', 'Solicita ao Poder Executivo para que informe o número de atendimentos na Secretaria de Saúde em cada posto bem como no Hospital Bruno Born \nmês a mês no ano de 2013. \n', 7, 577, 19, '2014-02-04', 1, 19, 0, 0, 0, b'0', '', '', ''),
+(112, '', 'Solicita à Gerência Regional dos Correios de Santa Cruz do Sul a ampliação da estrutura dos Correios de Lajeado. Tal solicitação visa ampliar a abrangência da distribuição das correspondências para as localidades, notadamente os Loteamentos Johann e Stein – Bairro Jardim do Cedro - e ainda as Ruas Estácio de Sá, Eleolino Zagonel, Tomé de Souza e Antônio Silvestre Arenhardt – Bairro Jardim do \nCedro -, que ainda não recebem os correspondências através dos Correios.', 'Solicita à Gerência Regional dos Correios de Santa Cruz do Sul a ampliação da estrutura dos Correios de Lajeado. Tal solicitação visa ampliar a abrangência da distribuição das correspondências para as localidades, notadamente os Loteamentos Johann e Stein – Bairro Jardim do Cedro - e ainda as Ruas Estácio de Sá, Eleolino Zagonel, Tomé de Souza e Antônio Silvestre Arenhardt – Bairro Jardim do \nCedro -, que ainda não recebem os correspondências através dos Correios.', 15, 0, 21, '2014-02-04', 1, 1, 0, 0, 0, b'0', '', '', '');
+INSERT INTO `requerimentos` (`id`, `titulo`, `descricao`, `descricao_original`, `id_bairro`, `id_rua`, `cat_requerimento`, `data_requerimento`, `id_solicitante`, `id_requerente`, `expediente`, `ano_expediente`, `situacao`, `notificar`, `anexo_1`, `anexo_2`, `anexo_3`) VALUES
+(113, '', 'Solicita a Secretaria de Obras e Serviços Urbanos o término das obras em frente à EMEI Risque e Rabisque, localizada na Rua Osvaldo Aranha, n° 771, Bairro Centro.', 'Solicita a Secretaria de Obras e Serviços Urbanos o término das obras em frente à EMEI Risque e Rabisque, localizada na Rua Osvaldo Aranha, n° 771, Bairro Centro.', 7, 695, 12, '2014-02-04', 1, 1, 0, 0, 0, b'0', '', '', ''),
+(114, '', 'Solicita ao Presidente desta Casa Legislativa que seja dado continuidade aos trâmites do processo de transmissão pela televisão das sessões da \nCâmara de Vereadores iniciado no ano de 2013.', 'Solicita ao Presidente desta Casa Legislativa que seja dado continuidade aos trâmites do processo de transmissão pela televisão das sessões da \nCâmara de Vereadores iniciado no ano de 2013.', 7, 0, 1, '2014-02-04', 1, 1, 0, 0, 0, b'0', '', '', ''),
+(115, '', 'Solicita à Secretaria de Obras e Serviços Urbanos, em resposta ao ofício n° 033-01/2013, indicando o nome do vereador Carlos Eduardo Ranzi para a \nreferida questão. \n', 'Solicita à Secretaria de Obras e Serviços Urbanos, em resposta ao ofício n° 033-01/2013, indicando o nome do vereador Carlos Eduardo Ranzi para a \nreferida questão. \n', 7, 0, 21, '2014-02-04', 1, 1, 0, 0, 0, b'0', '', '', ''),
+(116, '', 'Recolhimento de lixo verde na Rua das Azaléias, atrás do Parque do Imigrante - Bairro Alto do Parque.\n\nRecolhimento de lixo verde dentro do Parque do Imigrante.', 'Recolhimento de lixo verde na Rua das Azaléias, atrás do Parque do Imigrante - Bairro Alto do Parque.\n\nRecolhimento de lixo verde dentro do Parque do Imigrante.', 1, 261, 8, '2014-02-07', 1, 1, 4051, 2014, 2, b'0', '', '', ''),
+(117, '', 'Trabalho na Administradora de Condomínios Confiança, administramos o Edifício Comercial Alvorada Center CNPJ 08.404.746/0001-72, solicito a colocação de uma lixeira, que deve ser instalada na rua lateral ao prédio Alvorada Center, sito a Rua Bento Gonçalves, ao lado de cima da garagem (quem olha de frente), são 27 salas comerciais sem lixeira, se possível com tampa.  ', 'Trabalho na Administradora de Condomínios Confiança, administramos o Edifício Comercial Alvorada Center CNPJ 08.404.746/0001-72, solicito a colocação de uma lixeira, que deve ser instalada na rua lateral ao prédio Alvorada Center, sito a Rua Bento Gonçalves, ao lado de cima da garagem (quem olha de frente), são 27 salas comerciais sem lixeira, se possível com tampa.  ', 7, 6, 3, '2014-02-07', 66, 1, 4050, 2014, 2, b'0', '', '', ''),
+(118, '', 'Limpeza da praça e do campo de areia localizados na esquina das Ruas Vitória e Edvino Henrique Becher - Bairro Universitário.', 'Limpeza da praça e campo de areia', 27, 870, 7, '2014-02-10', 69, 1, 0, 0, 1, b'0', '', '', ''),
+(119, '', 'Instalação de bueiro entre as Ruas Ijui e Ilópolis - Bairro Universitário.', 'Após colocação de canos entre a Rua Ijui e Ilópolis,  não foi feito a boca de lobo, já solicitado diversas vezes a prefeitura e nada foi feito até o momento', 27, 478, 16, '2014-02-10', 69, 1, 0, 0, 1, b'0', '', '', ''),
+(120, '', 'Brita/material na Rua Erechim, entre as Ruas Ijuí e Ilópolis (não apenas no centro da pista) - Bairro Universitário.', 'Após nivelamento sem necessidade  da rua Erechim  entre a Rua Ijuí e Ilópolis, não foi colocado brita suficiente na rua (apenas no meio)  causando transtorno como barro e dificil acesso.\nSolicitado a prefeitura e até o momento nada foi feito.', 27, 0, 18, '2014-02-10', 69, 1, 0, 0, 1, b'0', 'a7451bc090a63e3ea8d0ce64c1989fa6.jpg', '', ''),
+(121, '', 'Roçada de área localizada na esquina da Rua Ludwig Rudolph Ewald com a Rua Fábio Antônio Sartori Bertoglio - Bairro Moinhos.\n\n', 'O MATO TOMA CONTA E SERVE DE ESCONDERIJO PARA LADROES QUE JÁ ROUBARAM AS CASAS EM VOLTA VARIAS VEZES E TAMBEM VIRA AREA DE CRAQUEIROS E DROGADITOS...\n\nESQUINA COM A RUA FABIO ANTONIO SARTORI BERTOGLIO', 16, 607, 8, '2014-02-11', 70, 1, 0, 0, 1, b'0', '', '', ''),
+(122, '', 'Conserto de buraco no asfalto localizado na esquina das Ruas Bento Gonçalves e Saldanha Marinho - Bairro Centro.  ', 'Conserto de buraco no asfalto localizado na esquina das Ruas Bento Gonçalves e Saldanha Marinho - Bairro Centro.  ', 7, 185, 17, '2014-02-11', 1, 1, 0, 0, 1, b'0', '', '', ''),
+(123, '', 'Roçada na Rua Bento Rosa, no trecho compreendido entre o o trevo da BR-386 até a Rua Sabiá - Bairro Hidraulica/Carneiros.', 'Roçada na Rua Bento Rosa, no trecho compreendido entre o o trevo da BR-386 até a Rua Sabiá - Bairro Hidraulica/Carneiros.', 12, 186, 8, '2014-02-11', 1, 1, 0, 0, 1, b'0', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `ruas`
+-- Estrutura para tabela `ruas`
 --
 
 CREATE TABLE IF NOT EXISTS `ruas` (
@@ -5815,10 +6352,10 @@ CREATE TABLE IF NOT EXISTS `ruas` (
   `id_bairro_ext` int(11) DEFAULT NULL,
   `lei_decreto` varchar(64) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=906 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=907 ;
 
 --
--- Extraindo dados da tabela `ruas`
+-- Fazendo dump de dados para tabela `ruas`
 --
 
 INSERT INTO `ruas` (`id`, `codigo`, `nome`, `id_bairro`, `id_bairro_ext`, `lei_decreto`) VALUES
@@ -6727,12 +7264,13 @@ INSERT INTO `ruas` (`id`, `codigo`, `nome`, `id_bairro`, `id_bairro_ext`, `lei_d
 (902, 2021, 'TRAV. PIRATINI', 27, NULL, '3.657/1985'),
 (903, 1819, 'TRAV. ROCHA (RUA NO BAIRRO CAMPESTRE)', 7, NULL, 'SL'),
 (904, 0, 'TRAV. SANTO INÁCIO', 12, NULL, 'DEC. 735/1959'),
-(905, 1931, 'TRAV. SUDBRACK', 16, NULL, '5.800/1996');
+(905, 1931, 'TRAV. SUDBRACK', 16, NULL, '5.800/1996'),
+(906, 0, 'RUA D', 18, NULL, '');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `rua_bairro`
+-- Estrutura para tabela `rua_bairro`
 --
 
 CREATE TABLE IF NOT EXISTS `rua_bairro` (
@@ -6741,7 +7279,7 @@ CREATE TABLE IF NOT EXISTS `rua_bairro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `rua_bairro`
+-- Fazendo dump de dados para tabela `rua_bairro`
 --
 
 INSERT INTO `rua_bairro` (`id_rua`, `id_bairro`) VALUES
@@ -7688,14 +8226,15 @@ INSERT INTO `rua_bairro` (`id_rua`, `id_bairro`) VALUES
 (866, 2),
 (876, 1),
 (25, 2),
-(25, 27);
+(25, 27),
+(906, 18);
 
 --
--- Restrições para as tabelas dumpadas
+-- Restrições para dumps de tabelas
 --
 
 --
--- Restrições para a tabela `cidades`
+-- Restrições para tabelas `cidades`
 --
 ALTER TABLE `cidades`
   ADD CONSTRAINT `cidades_ibfk_1` FOREIGN KEY (`id_uf`) REFERENCES `estados` (`id`);

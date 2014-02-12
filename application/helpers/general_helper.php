@@ -65,7 +65,7 @@ if (!function_exists('generate_charts'))
         $requerimentos_vereadores = $ci->requerimento_model->count_requerimentos_with_vereadores();
         $requerentes_bairro = $ci->requerente_model->count_requerentes_por_bairro();
 
-        $_SESSION['requerimentos'] = $ci->requerimento_model->count_requerimentos_em_analise();
+        $_SESSION['requerimentos'] = $ci->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
 
         $ci->load->helper('file');
 
@@ -586,7 +586,7 @@ EOF;
 
 if (!function_exists('generate_custom_chart'))
 {
-    function generate_custom_chart($id, $data)
+    function generate_custom_chart($id)
     {
         $ci =& get_instance();
 
@@ -655,13 +655,37 @@ EOF;
                 if ($c_v->valor!=NULL)
                 {
                     $hsl = get_static_color($chart->cor_grafico, 0, $max, $valor);
+                    
+                    switch ($chart->formato)
+                    {
+                        case GRAFICO_FORMATO_SEM:
+                            $valor_formatado = $valor;
+                            break;
+                        
+                        case GRAFICO_FORMATO_PERCENTO:
+                            $valor_formatado = $valor.'%';
+                            break;
+                        
+                        case GRAFICO_FORMATO_REAIS:
+                            $valor_formatado = 'R$ '.$valor;
+                            break;
+                        
+                        case GRAFICO_FORMATO_DOLAR:
+                            $valor_formatado = '$ '.$valor;
+                            break;
+
+                        default:
+                            $valor_formatado = $valor;
+                            break;
+                    }
+                    
                     $data_js .= <<<EOF
                         "$bairro->codename":{
                             value: "$valor",
                             attrs: {
                                 fill: "$hsl", stroke: "#204a87"
                             },
-                            text: { content:  $valor , attrs: {fill:"#222"} },
+                            text: { content:  "$valor_formatado" , attrs: {fill:"#222"} },
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">$bairro->nome </span><br />Valor: $valor"},
                         },
@@ -686,7 +710,7 @@ EOF;
         });';
         }
         
-        if ( ! write_file('files/custom_charts/'.$data['code'].'.js', $data_js))
+        if ( ! write_file('files/custom_charts/'.$chart->code.'.js', $data_js))
         {
              echo 'Unable to write the custom chart';
         }

@@ -14,7 +14,14 @@
 
                 <div class="panel-body">
 
-                    <?php echo form_open('graficos_customizados/gerar_grafico', 'id="form_criar_grafico" class="form-horizontal"'); ?>
+                    <?php
+                    
+                    $id = $this->uri->segment(3);
+
+                    // Redireciona quando usuário não é apresentado
+                    if ($id==NULL) redirect('graficos_customizados');
+                    
+                    echo form_open('graficos_customizados/atualizar_grafico/'.$id, 'id="form_editar_grafico" class="form-horizontal"'); ?>
 
                         <div class="msg"></div>
                         <div class="wizard-steps"></div>
@@ -66,6 +73,23 @@
                                 <label class="col-lg-2 control-label" for="observacoes">Subtítulo</label>
                                 <div class="col-lg-10">
                                     <textarea class="form-control" type="text" id="observacoes" name="observacoes"><?php echo $grafico->observacoes?></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="fonte">Formato</label>
+                                <div class="col-lg-2">
+                                    <?php
+                                    $formatos  = unserialize(GRAFICO_FORMATO_UNIDADE);
+                                    $i=0;
+
+                                    echo  '<select id="formato" name="formato">';                                   
+                                    foreach ($formatos as $f)
+                                    {
+                                        echo  '<option value="'.$i.'" '.set_select('formato', $i, $i==$grafico->formato).'>'.$f.'</option>';
+                                        $i++;
+                                    }
+                                    echo  '</select>';
+                                    ?>                                    
                                 </div>
                             </div>
 
@@ -135,14 +159,14 @@
                                 <?php
                                 $i=0;
                                 foreach ($bairros as $bairro)
-                                {
-                                    $i++;
+                                {                                    
                                     echo '<div class="col-lg-4">';
                                     echo    '<label class="col-lg-8 control-label" for="bairro_'.$bairro->codename.'">'.$bairro->nome.'</label>';
                                     echo    '<div class="col-lg-4">';
-                                    echo        '<input class="form-control" name="bairro_'.$bairro->codename.'" type="text" value="'.$valores_bairros[$i]->valor.'">';
+                                    echo        '<input class="form-control" name="bairro_'.$bairro->codename.'" type="text" value="'.str_replace('.',',',$valores_bairros[$i]->valor).'">';
                                     echo    '</div>';
                                     echo '</div>';
+                                    $i++;
                                 }
                                 ?>
 

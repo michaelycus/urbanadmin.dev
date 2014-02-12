@@ -132,4 +132,33 @@ $(document).ready(function() {
 	 	showSteps: true, //show the step
                 vertical: true //activate vertical wizard
 	});
+	//------------- Form Editar Gráfico -------------//
+ 	$("#form_editar_grafico").formwizard({ 
+	 	formPluginEnabled: true,
+	 	validationEnabled: true,
+	 	validationOptions: {
+	 		rules: {
+	 			titulo: {
+	 				required: true
+	 			}
+	 		}, 
+	 		messages: {
+	 			titulo: {
+	 				required: "É preciso informar o nome do gráfico"
+	 			}
+	 		}
+	 	},
+	 	focusFirstInput : true,
+	 	formOptions :{
+			success: function(data){
+				//produce success message
+				createSuccessMsg($("#form_editar_grafico .msg"), "Atualizando gráfico...");
+                                setInterval(generate_chart, 2000);
+			},
+			resetForm: false
+	 	},
+	 	disableUIStyles: true,
+	 	showSteps: true, //show the step
+                vertical: true //activate vertical wizard
+	});
 });

@@ -67,6 +67,23 @@
                                 <div class="col-lg-10">
                                     <textarea class="form-control" type="text" id="observacoes" name="observacoes"></textarea>
                                 </div>
+                            </div>                            
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="fonte">Formato</label>
+                                <div class="col-lg-2">
+                                    <?php
+                                    $formatos  = unserialize(GRAFICO_FORMATO_UNIDADE);
+                                    $i=0;
+
+                                    echo  '<select id="formato" name="formato">';                                   
+                                    foreach ($formatos as $f)
+                                    {
+                                        echo  '<option value="'.$i.'" '.set_select('formato', $i).'>'.$f.'</option>';
+                                        $i++;
+                                    }
+                                    echo  '</select>';
+                                    ?>                                    
+                                </div>
                             </div>
 
                             <div id="chart_map">

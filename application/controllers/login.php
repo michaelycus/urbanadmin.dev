@@ -51,7 +51,7 @@ class Login extends MY_Controller
                 $_SESSION['autorizacao'] = $res->autorizacao;
                 $_SESSION['id_user'] = $res->id;
 
-                $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
+                $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
 
                 $this->requerente_model->update_last_visit($res->id);
             }
@@ -80,7 +80,7 @@ class Login extends MY_Controller
             
             $this->load_view('layouts/inicio_operador');
         }
-        else
+        else if ($_SESSION['autorizacao']== AUTORIZACAO_ADMINISTRADOR)
         {
             $this->data['requerimentos'] = $this->requerimento_model->get_last(10);
             $this->data['requerentes'] = $this->requerente_model->get_last(10);
@@ -89,6 +89,22 @@ class Login extends MY_Controller
             $this->data['req_analisado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_ANALISADO);
             $this->data['req_protocolado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
             $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
+            $this->data['req_outros'] = $this->requerimento_model->count_outros_requerimentos();
+            
+            $this->data['versao_atual'] = "1.1.1";
+
+            $json_str = '{"versoes":[
+                    {"versao":"1.1.1", "data":"11/02/2014", "changes": 
+                         ["Criado sistema de versionamento do sistema", 
+                          "Contabilizando separadamente outros requerimentos", 
+                          "Adicionada possibilidade de escolha de formatação de unidades na criação de gráficos customizados", 
+                          "Adicionado link para requerente ao visualizar requerimento", 
+                          "Os gráficos customizados agora aceitam valores fracionados com vírgula"
+                          ]}
+                    ]}';
+            
+            $jsonObj = json_decode($json_str);
+            $this->data['versoes'] = $jsonObj->versoes;
 
             $this->load_view('layouts/inicio_administrador');
         }

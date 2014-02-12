@@ -30,6 +30,13 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/meus_requerimentos');
     }
+    
+    public function outros_requerimentos()
+    {
+        $this->data['requerimentos'] = $this->requerimento_model->get_outros_requerimentos_with_bairros();
+
+        $this->load_view('requerimentos/outros_requerimentos', TRUE);
+    }
 
     public function cadastrar_requerimento()
     {
@@ -234,7 +241,7 @@ class Requerimentos extends MY_Controller
     {
         $this->requerimento_model->avancar_situacao($id, $situacao);
 
-        $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
+        $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
 
         send_notification($id);
 
@@ -245,7 +252,7 @@ class Requerimentos extends MY_Controller
     {
         $this->requerimento_model->retornar_situacao($id, $situacao);
 
-        $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_em_analise();
+        $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
 
         redirect('requerimentos/visualizar/'.$id);
     }

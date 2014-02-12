@@ -31,6 +31,7 @@ class Requerimento_model extends MY_Model
         $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
                     categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente,
                     r.nome AS nome_solicitante, r.telefone AS telefone');
+        $this->db->where('id_requerente', REQUERENTE_PADRAO_ID);
         $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
         $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
         $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
@@ -59,6 +60,22 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
+    
+    public function get_outros_requerimentos_with_bairros()
+    {
+        $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
+                    categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente,
+                    r.nome AS nome_solicitante, r.telefone AS telefone');
+        $this->db->where('id_requerente !=', REQUERENTE_PADRAO_ID);
+        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+        $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
+        $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
+        $this->db->join('requerentes AS r', 'requerimentos.id_solicitante=r.id');
+
+        $this->order_by('situacao','DESC');
+
+        return $this->get_all();
+    }
 
     public function get_last($num)
     {
@@ -71,6 +88,15 @@ class Requerimento_model extends MY_Model
     public function count_requerimentos_by_situacao($cat)
     {
         $this->db->where('situacao', $cat);
+        $this->db->where('id_requerente', REQUERENTE_PADRAO_ID);
+        $this->db->from('requerimentos');
+
+        return $this->db->count_all_results();
+    }
+    
+    public function count_outros_requerimentos()
+    {
+        $this->db->where('id_requerente !=', REQUERENTE_PADRAO_ID);
         $this->db->from('requerimentos');
 
         return $this->db->count_all_results();
@@ -139,13 +165,6 @@ class Requerimento_model extends MY_Model
         $this->db->where('id_solicitante', $id);
 
         return $this->get_all();
-    }
-
-    public function count_requerimentos_em_analise()
-    {
-        $this->db->where('requerimentos.situacao', REQUERIMENTO_SITUACAO_EM_ANALISE);
-
-        return $this->count_by();
     }
 
     public function avancar_situacao($id, $situacao)

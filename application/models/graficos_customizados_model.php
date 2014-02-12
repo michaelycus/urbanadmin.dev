@@ -27,6 +27,11 @@ class Graficos_customizados_model extends MY_Model
         $this->db->insert('graficos_customizados_dados', $data);
     }
 
+    public function deletar_dados_bairro($id)
+    {
+        $this->db->delete('graficos_customizados_dados', array('id_grafico' => $id));
+    }
+
     public function get_chart_values($id)
     {
         $this->db->from('graficos_customizados_dados');

@@ -51,15 +51,15 @@
             }
         },
         areas: {                            "americano":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerentes: 1"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerentes: 3"},
                             },                            "bom_pastor":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
+                                value: "4",
+                                text: { content:  4 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerentes: 1"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerentes: 4"},
                             },                            "centro":{
                                 value: "7",
                                 text: { content:  7 , attrs: {fill:"#222"} },
@@ -85,11 +85,16 @@
                                 text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerentes: 1"},
-                            },                            "moinhos":{
-                                value: "4",
-                                text: { content:  4 , attrs: {fill:"#222"} },
+                            },                            "jardim_do_cedro":{
+                                value: "1",
+                                text: { content:  1 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerentes: 4"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerentes: 1"},
+                            },                            "moinhos":{
+                                value: "5",
+                                text: { content:  5 , attrs: {fill:"#222"} },
+                                href: "#",
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerentes: 5"},
                             },                            "moinhos_dagua":{
                                 value: "2",
                                 text: { content:  2 , attrs: {fill:"#222"} },
@@ -106,10 +111,10 @@
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Planalto </span><br />Requerentes: 1"},
                             },                            "universitario":{
-                                value: "3",
-                                text: { content:  3 , attrs: {fill:"#222"} },
+                                value: "4",
+                                text: { content:  4 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Requerentes: 3"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Requerentes: 4"},
                             },}
             });
         });

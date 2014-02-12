@@ -75,12 +75,12 @@ class Graficos_Customizados extends MY_Controller
     {
         $next_id = $this->graficos_customizados_model->get_next_id();
 
-        $data = elements(array('titulo','tipo','fonte','observacoes','cor_grafico'),$this->input->post());
+        $data = elements(array('titulo','tipo','fonte','observacoes','cor_grafico','formato'),$this->input->post());
         
         $data['data'] = date('Y-m-d');
         $data['id_requerente'] = $_SESSION['id_user'];
         
-        $code = $data['code'] = generate_key(8);
+        $data['code'] = generate_key(8);
 
         $this->graficos_customizados_model->insert($data);
 
@@ -92,14 +92,40 @@ class Graficos_Customizados extends MY_Controller
             $data_bairro['id_bairro'] = $bairro->id;
 
             if ($this->input->post('bairro_'.$bairro->codename))
-                $data_bairro['valor'] = $this->input->post('bairro_'.$bairro->codename);
+                $data_bairro['valor'] = str_replace(',','.',$this->input->post('bairro_'.$bairro->codename));
             else
                 $data_bairro['valor'] = NULL;
 
             $this->graficos_customizados_model->inserir_dados_bairro($data_bairro);
         }
 
-        generate_custom_chart($next_id, $data);
+        generate_custom_chart($next_id);
+    }
+    
+    public function atualizar_grafico($id)
+    {
+        $data = elements(array('titulo','tipo','fonte','observacoes','cor_grafico','formato'),$this->input->post());
+
+        $this->graficos_customizados_model->update($id, $data);
+
+        $bairros = $this->bairros_model->get_bairros();
+        
+        $this->graficos_customizados_model->deletar_dados_bairro($id);
+
+        foreach ($bairros as $bairro)
+        {
+            $data_bairro['id_grafico'] = $id;
+            $data_bairro['id_bairro'] = $bairro->id;
+
+            if ($this->input->post('bairro_'.$bairro->codename))
+                $data_bairro['valor'] = str_replace(',','.',$this->input->post('bairro_'.$bairro->codename));
+            else
+                $data_bairro['valor'] = NULL;
+
+            $this->graficos_customizados_model->inserir_dados_bairro($data_bairro);
+        }
+
+        generate_custom_chart($id);
     }
     
     public function incorporar($code)

@@ -229,6 +229,11 @@
                                                 '<span class="icon"><i class="icon20 i-stack-list"></i></span>
                                                  <span class="txt">Listar requerimentos</span>');?>
                                     </li>
+                                    <li>
+                                        <?php echo anchor('requerimentos/outros_requerimentos',
+                                                '<span class="icon"><i class="icon20 i-stack-list"></i></span>
+                                                 <span class="txt">Outros requerimentos</span>');?>
+                                    </li>
                                 </ul>
                             </li>
                             <li>

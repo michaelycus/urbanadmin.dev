@@ -128,6 +128,16 @@ define('GRAFICO_COR_BEGE', 5);
 define('GRAFICO_COR_VERMELHO', 6);
 define('GRAFICO_COR_BRANCO', 7);
 
+define('GRAFICO_FORMATO_SEM', 0);
+define('GRAFICO_FORMATO_PERCENTO', 1);
+define('GRAFICO_FORMATO_REAIS', 2);
+define('GRAFICO_FORMATO_DOLAR', 3);
+
+define('GRAFICO_FORMATO_UNIDADE', serialize (array ( 0 => "Sem formato",
+                                                     1 => "%",
+                                                     2 => "R$",
+                                                     3 => "$" )));
+
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
