@@ -53,6 +53,48 @@ if (!function_exists('send_notification')) {
 if (!function_exists('alert_requirement')) {
     function alert_requirement ($id)
     {
+//        $ci =& get_instance();
+//
+//        $ci->load->model('requerimento_model');
+//        $ci->load->model('requerente_model');
+//        $ci->load->library('My_PHPMailer');
+//
+//        $requerimento = $ci->requerimento_model->get($id);
+//
+//        $requerente = $ci->requerente_model->get($requerimento->id_solicitante);
+//        
+//        $mail = get_mail();
+////        $mail = new PHPMailer();
+////        $mail->IsSMTP(); //Definimos que usaremos o protocolo SMTP para envio.
+////        $mail->SMTPAuth = true; //Habilitamos a autenticação do SMTP. (true ou false)
+////        $mail->SMTPSecure = "ssl"; //Estabelecemos qual protocolo de segurança será usado.
+////        $mail->Host = "smtp.gmail.com"; //Podemos usar o servidor do gMail para enviar.
+////        $mail->Port = 465; //Estabelecemos a porta utilizada pelo servidor do gMail.
+////        $mail->Username = "vereadorranzi@gmail.com"; //Usuário do gMail
+////        $mail->Password = "jcilajeado15"; //Senha do gMail
+////        $mail->SetFrom('vereadorranzi@gmail.com', 'Vereador Carlos Ranzi'); //Quem está enviando o e-mail.
+////        $mail->AddReplyTo("vereadorranzi@gmail.com","Vereador Carlos Ranzi"); //Para que a resposta será enviada.
+//        
+//        $mail->Subject = "Novo Requerimento Cadastrado!"; //Assunto do e-mail.       
+//        
+//        
+//        $mail->Body = '<p>O cidadão '. $requerente->nome . ' acabou de cadastrar um novo requerimento.</p>';
+//        $mail->Body .= "<strong>Descrição</strong><br/>";
+//        $mail->Body .= "$requerimento->descricao".'<br/><br/>';
+//        
+//        $mail->AddAddress('vereadorranzi@gmail.com', "Vereador Ranzi");
+//        
+//        if (!$mail->Send())
+//        {
+//            $data["message"] = "ocorreu um erro durante o envio: " . $mail->ErrorInfo;
+//        }
+//        else
+//        {
+//            $data["message"] = "Mensagem enviada com sucesso!";
+//        }
+//        
+//        return $data;
+        
         $ci =& get_instance();
 
         $ci->load->model('requerimento_model');
@@ -110,28 +152,80 @@ if (!function_exists('reset_password')) {
 }
 
 if (!function_exists('send_message')) {
-    function send_message ($email, $message)
+    function send_message ($email_to, $message)
     {
-        $ci =& get_instance();
-
-        $ci->load->library('email');
-
-        $ci->email->from('vereadorranzi@gmail.com', 'Gabinete Vereador Ranzi');
-        $ci->email->to($email);
-
-        $subject = "[Mensagem Protocolo eletrônico]";
-
-        $message .= " \n\n";
-
-        $message .= "Atenciosamente,\n";
-        $message .= "Gabinete do Vereador Ranzi  \n\n";
-
-        $message .= "http://www.ranzi.com.br/requerimento \n\n";
-
-        $ci->email->subject($subject);
-        $ci->email->message($message);
-
-        $ci->email->send();
+        $mail = new PHPMailer();
+        $mail->IsSMTP(); //Definimos que usaremos o protocolo SMTP para envio.
+        $mail->SMTPAuth = true; //Habilitamos a autenticação do SMTP. (true ou false)
+        $mail->SMTPSecure = "ssl"; //Estabelecemos qual protocolo de segurança será usado.
+        $mail->Host = "smtp.gmail.com"; //Podemos usar o servidor do gMail para enviar.
+        $mail->Port = 465; //Estabelecemos a porta utilizada pelo servidor do gMail.
+        $mail->Username = "vereadorranzi@gmail.com"; //Usuário do gMail
+        $mail->Password = "jcilajeado15"; //Senha do gMail
+        $mail->SetFrom('vereadorranzi@gmail.com', 'Vereador Carlos Ranzi'); //Quem está enviando o e-mail.
+        $mail->AddReplyTo("vereadorranzi@gmail.com","Vereador Carlos Ranzi"); //Para que a resposta será enviada.
+        
+        $mail->Subject = "[Mensagem Protocolo eletrônico]"; //Assunto do e-mail.
+        
+//        $mail->AltBody = "Corpo em texto puro.";        
+        
+        $mail->Body = $message;
+        $mail->Body .= "<br/><br/>";
+        $mail->Body .= "Atenciosamente,<br/> Gabinete do Vereador Ranzi<br/><br/>";
+        $mail->Body .= '<a href="http://www.ranzi.com.br/requerimento" target="_blank">http://www.ranzi.com.br/requerimento</a>';
+        
+        $mail->AddAddress($email_to, "");
+        
+        if (!$mail->Send())
+        {
+            $data["message"] = "ocorreu um erro durante o envio: " . $mail->ErrorInfo;
+        }
+        else
+        {
+            $data["message"] = "Mensagem enviada com sucesso!";
+        }
+        
+    
+//        $ci =& get_instance();
+//
+//        $ci->load->library('email');
+//
+//        $ci->email->from('vereadorranzi@gmail.com', 'Gabinete Vereador Ranzi');
+//        $ci->email->to($email_to);
+//
+//        $subject = "[Mensagem Protocolo eletrônico]";
+//
+//        $message .= " \n\n";
+//
+//        $message .= "Atenciosamente,\n";
+//        $message .= "Gabinete do Vereador Ranzi  \n\n";
+//
+//        $message .= "http://www.ranzi.com.br/requerimento \n\n";
+//
+//        $ci->email->subject($subject);
+//        $ci->email->message($message);
+//
+//        $ci->email->send();
+    }
+    
+    function get_mail()
+    {
+        $mail = new PHPMailer();
+        $mail->IsSMTP(); //Definimos que usaremos o protocolo SMTP para envio.
+        $mail->SMTPAuth = true; //Habilitamos a autenticação do SMTP. (true ou false)
+        $mail->SMTPSecure = "ssl"; //Estabelecemos qual protocolo de segurança será usado.
+        $mail->Host = "smtp.gmail.com"; //Podemos usar o servidor do gMail para enviar.
+        $mail->Port = 465; //Estabelecemos a porta utilizada pelo servidor do gMail.
+//        $mail->Username = "vereadorranzi@gmail.com"; //Usuário do gMail
+//        $mail->Password = "jcilajeado15"; //Senha do gMail
+//        $mail->SetFrom('vereadorranzi@gmail.com', 'Vereador Carlos Ranzi'); //Quem está enviando o e-mail.
+//        $mail->AddReplyTo("vereadorranzi@gmail.com","Vereador Carlos Ranzi"); //Para que a resposta será enviada.
+        $mail->Username = "michaelycus@gmail.com"; //Usuário do gMail
+        $mail->Password = "gmailkaio231485ken"; //Senha do gMail
+        $mail->SetFrom('michaelycus@gmail.com', 'Michael A'); //Quem está enviando o e-mail.
+        $mail->AddReplyTo("michaelycus@gmail.com","Michael B"); //Para que a resposta será enviada.
+        
+        return $mail;
     }
 }
 ?>

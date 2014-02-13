@@ -91,14 +91,16 @@
                         </div>
                     </div>                    
                     
-                    <hr>
+<!--                       <hr>
                     
-                    <div class="row">     
+                 <div class="row">     
                         <div class="col-lg-12" id="messenger">
                             <h4><i class="icon16 i-resize"></i>Mensagem</h4>
 
                             <?php
-                            echo form_open('requerentes/visualizar/'.$requerente->id, 'class="form-horizontal pad15 pad-bottom0" role="form"');
+//                            echo form_open('contatos/editar_contato/'.$id, 'class="form-horizontal"');
+                            
+                            echo form_open('requerentes/visualizar/'.$requerente->id, 'id="form_visualizar" class="form-horizontal pad15 pad-bottom0"');
 
                             if ($this->session->userdata('mensagem_enviada'))
                             {
@@ -109,14 +111,18 @@
                             ?>
                                 <div class="form-group">
                                     <input name="user_email" id="user_email" class="form-control" type="text" value="<?php echo $requerente->email; ?>">
-                                </div><!-- End .form-group  -->
+                                </div>
                                 <div class="form-group">
                                     <textarea name="user_message" id="user_message" class="form-control" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
 
-                                </div><!-- End .form-group  -->
+                                </div>
+                                
+                                <?php form_hidden('teste', 'testando')  ?>
+                                
                                 <div class="form-group">
+                                    <?php echo form_submit('submit', 'Enviar mensagem', 'class="btn btn-primary pull-right confirm_send"'); ?>
                                     <button type="submit" class="btn btn-primary pull-right confirm_send">Enviar mensagem</button>
-                                </div><!-- End .form-group  -->
+                                </div> End .form-group  
                             <?php echo form_close(); ?>
 
                         </div>
@@ -125,7 +131,7 @@
                         echo form_input(array('name' => 'id_bairro','id' => 'id_bairro', 'style' => 'visibility:hidden'));
                         ?>
 
-                    </div>
+                    </div>-->
 
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
@@ -172,3 +178,10 @@
         </div>
     </div><!-- End .row-fluid  -->
 </div>
+
+<script>
+    function generate_chart()
+    {
+        window.location.replace("<?php echo base_url(). 'graficos_customizados/visualizar' ?>");
+    }
+</script>    
