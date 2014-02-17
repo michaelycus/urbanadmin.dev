@@ -31,11 +31,19 @@ class Requerimentos extends MY_Controller
         $this->load_view('requerimentos/meus_requerimentos');
     }
     
+    // decrepted
     public function outros_requerimentos()
     {
         $this->data['requerimentos'] = $this->requerimento_model->get_outros_requerimentos_with_bairros();
 
         $this->load_view('requerimentos/outros_requerimentos', TRUE);
+    }
+    
+    public function da_sessao()
+    {
+        $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_da_sessao_with_bairros();
+
+        $this->load_view('requerimentos/da_sessao', TRUE);
     }
 
     public function cadastrar_requerimento()
@@ -60,7 +68,7 @@ class Requerimentos extends MY_Controller
 
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento',
-                'id_requerente','id_solicitante'),$this->input->post());
+                'id_requerente','id_solicitante','da_sessao'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
 
             $data['descricao_original'] = $this->input->post('descricao');
@@ -138,7 +146,7 @@ class Requerimentos extends MY_Controller
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente'),$this->input->post());
+            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente','da_sessao'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
 
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;

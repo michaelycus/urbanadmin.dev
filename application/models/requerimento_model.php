@@ -31,7 +31,7 @@ class Requerimento_model extends MY_Model
         $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
                     categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente,
                     r.nome AS nome_solicitante, r.telefone AS telefone');
-        $this->db->where('id_requerente', REQUERENTE_PADRAO_ID);
+        $this->db->where('da_sessao !=', REQUERIMENTO_DA_SESSAO);
         $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
         $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
         $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
@@ -67,6 +67,22 @@ class Requerimento_model extends MY_Model
                     categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente,
                     r.nome AS nome_solicitante, r.telefone AS telefone');
         $this->db->where('id_requerente !=', REQUERENTE_PADRAO_ID);
+        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+        $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
+        $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
+        $this->db->join('requerentes AS r', 'requerimentos.id_solicitante=r.id');
+
+        $this->order_by('situacao','DESC');
+
+        return $this->get_all();
+    }
+    
+    public function get_requerimentos_da_sessao_with_bairros()
+    {
+        $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
+                    categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente,
+                    r.nome AS nome_solicitante, r.telefone AS telefone');
+        $this->db->where('da_sessao', REQUERIMENTO_DA_SESSAO);
         $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
         $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
         $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');

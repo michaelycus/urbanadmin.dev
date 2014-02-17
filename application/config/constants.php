@@ -49,6 +49,9 @@ define('REQUERIMENTO_SITUACAO_ANALISADO', 1);
 define('REQUERIMENTO_SITUACAO_PROTOCOLADO', 2);
 define('REQUERIMENTO_SITUACAO_RESOLVIDO', 3);
 
+define('REQUERIMENTO_NORMAL', 0);
+define('REQUERIMENTO_DA_SESSAO', 1);
+
 define('REQUERIMENTO_SITUACOES', serialize (array ( 0 => "Em análise",
                                                     1 => "Analisado",
                                                     2 => "Protocolado",

@@ -105,10 +105,10 @@
                                     }
                                 }
                             },                            "campestre":{
-                                value: "6",
-                                text: { content:  6 , attrs: {fill:"#222"} },
+                                value: "7",
+                                text: { content:  7 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 6"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 7"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 4 ).change();

@@ -18,11 +18,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 7"
                             }},"campestre": {
-                            "value": 5,
-                            "text": { "content":  "5" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#6390c2"},
+                            "value": 6,
+                            "text": { "content":  "6" , attrs: {fill:"#222"} },
+                            "attrs": { fill: "#618dc0"},
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 5"
+                                    "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 6"
                             }},"carneiros": {
                             "value": 3,
                             "text": { "content":  "3" , attrs: {fill:"#222"} },
@@ -105,7 +105,7 @@
                             "value": 3},"americano": {
                             "value": 2},"bom_pastor": {
                             "value": 7},"campestre": {
-                            "value": 5},"carneiros": {
+                            "value": 6},"carneiros": {
                             "value": 3},"centro": {
                             "value": 20},"conventos": {
                             "value": 4},"floresta": {

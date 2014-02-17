@@ -26,6 +26,22 @@ if (!function_exists('dump')) {
     }
 }
 
+if (!function_exists('startsWith'))
+{
+    function startsWith($haystack, $needle)
+    {
+        return $needle === "" || strpos($haystack, $needle) === 0;
+    }
+}
+
+if (!function_exists('endsWith'))
+{
+    function endsWith($haystack, $needle)
+    {
+        return $needle === "" || substr($haystack, -strlen($needle)) === $needle;
+    }
+}
+
 if (!function_exists('dump_exit'))
 {
     function dump_exit($var, $label = 'Dump', $echo = TRUE) {
