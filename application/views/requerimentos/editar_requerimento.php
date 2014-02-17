@@ -125,7 +125,7 @@
                     echo form_label('Da sessão?', 'da_sessao', array('class' => 'col-lg-3 control-label'));
                     echo    '<div class="col-lg-9">';
                     echo        '<div class="switch" data-on="primary" data-off="danger" data-on-label="<i class=\'i-checkmark-3\'></i>" data-off-label="<i class=\'i-close\'></i>">';
-                    echo            '<input class="toggle" controls-row type="checkbox" id="da_sessao" name="da_sessao" '. ($requerimento->da_sessao ? 'checked' : '').' />';
+                    echo            '<input class="toggle" controls-row type="checkbox" id="da_sessao" name="da_sessao" '. ($requerimento->da_sessao==REQUERIMENTO_DA_SESSAO ? 'checked' : '').' />';
                     echo        '</div>';
                     echo    '</div>';
                     echo '</div>';

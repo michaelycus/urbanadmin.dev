@@ -89,7 +89,7 @@ class Login extends MY_Controller
             $this->data['req_analisado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_ANALISADO);
             $this->data['req_protocolado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
             $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
-            $this->data['req_outros'] = $this->requerimento_model->count_outros_requerimentos();
+            $this->data['req_da_sessao'] = $this->requerimento_model->count_outros_requerimentos();
             
             $this->data['versao_atual'] = "1.1.1";
 

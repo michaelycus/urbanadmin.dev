@@ -189,8 +189,8 @@
                                 <a href="#">
                                     <div class="item">
                                         <div class="icon orange"><i class="i-stack-star"></i></div>
-                                        <span class="percent"><?php echo $req_outros;?></span>
-                                        <span class="txt">Outros</span>
+                                        <span class="percent"><?php echo $req_da_sessao;?></span>
+                                        <span class="txt">Da sessão</span>
                                     </div>
                                 </a>
                             </li>

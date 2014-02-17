@@ -117,6 +117,14 @@ class Requerimento_model extends MY_Model
 
         return $this->db->count_all_results();
     }
+    
+    public function count_da_sessao()
+    {
+        $this->db->where('da_sessao', REQUERIMENTO_DA_SESSAO);
+        $this->db->from('requerimentos');
+
+        return $this->db->count_all_results();
+    }
 
     public function count_requerimentos_with_bairros()
     {

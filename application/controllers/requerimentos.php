@@ -113,10 +113,11 @@ class Requerimentos extends MY_Controller
 
                 if ($_SESSION['autorizacao']==AUTORIZACAO_OPERADOR)
                 {
-                    alert_requirement($this->requerimento_model->get_next_id()-1);
+                    $message = alert_requirement($this->requerimento_model->get_next_id()-1);
                 }
-
-                $this->session->set_userdata('requerimento_cadastrado','Requerimento cadastrado com sucesso!');
+                
+                $this->session->set_userdata('requerimento_cadastrado',$message->message);
+//                $this->session->set_userdata('requerimento_cadastrado','Requerimento cadastrado com sucesso!');
 
                 redirect('requerimentos/cadastrar_requerimento');
             }
