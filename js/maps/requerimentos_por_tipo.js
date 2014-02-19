@@ -1,10 +1,10 @@
         $(function() {
             var data = {"0": { "areas": {"": {"text": {"content": ""}},"alto_do_parque": {"text": {"content": ""}},"americano": {"text": {"content": ""}},"bom_pastor": {"text": {"content": ""}},"campestre": {"text": {"content": ""}},"carneiros": {"text": {"content": ""}},"centenario": {"text": {"content": ""}},"centro": {"text": {"content": ""}},"conservas": {"text": {"content": ""}},"conventos": {"text": {"content": ""}},"floresta": {"text": {"content": ""}},"florestal": {"text": {"content": ""}},"hidraulica": {"text": {"content": ""}},"igrejinha": {"text": {"content": ""}},"imigrante": {"text": {"content": ""}},"jardim_do_cedro": {"text": {"content": ""}},"moinhos": {"text": {"content": ""}},"moinhos_dagua": {"text": {"content": ""}},"montanha": {"text": {"content": ""}},"morro_vinte_cinco": {"text": {"content": ""}},"nacoes": {"text": {"content": ""}},"olarias": {"text": {"content": ""}},"planalto": {"text": {"content": ""}},"santo_andre": {"text": {"content": ""}},"santo_antonio": {"text": {"content": ""}},"sao_bento": {"text": {"content": ""}},"sao_cristovao": {"text": {"content": ""}},"universitario": {"text": {"content": ""}},}},"1": { "areas": {"campestre": {
-                            "value": 1,
-                            "attrs": { fill: "#709ccd"},
-                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "value": 3,
+                            "attrs": { fill: "#6c98c9"},
+                            "text": { "content":  "3" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 1"
+                                    "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 3"
                             }},"centro": {
                             "value": 3,
                             "attrs": { fill: "#6c98c9"},
@@ -167,7 +167,13 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 1"
-                            }}}},"6": { "areas": {"sao_cristovao": {
+                            }}}},"6": { "areas": {"americano": {
+                            "value": 1,
+                            "attrs": { fill: "#709ccd"},
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 1"
+                            }},"sao_cristovao": {
                             "value": 1,
                             "attrs": { fill: "#709ccd"},
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
@@ -426,11 +432,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 2"
                             }}}},"14": { "areas": {"centenario": {
-                            "value": 2,
-                            "attrs": { fill: "#6e9acb"},
-                            "text": { "content":  "2" , attrs: {fill:"#222"} },
+                            "value": 3,
+                            "attrs": { fill: "#6c98c9"},
+                            "text": { "content":  "3" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 2"
+                                    "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 3"
                             }},"conventos": {
                             "value": 1,
                             "attrs": { fill: "#709ccd"},
@@ -593,7 +599,13 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 1"
-                            }}}},"19": { "areas": {"centro": {
+                            }}}},"19": { "areas": {"alto_do_parque": {
+                            "value": 1,
+                            "attrs": { fill: "#709ccd"},
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 1"
+                            }},"centro": {
                             "value": 3,
                             "attrs": { fill: "#6c98c9"},
                             "text": { "content":  "3" , attrs: {fill:"#222"} },
@@ -623,6 +635,12 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 1"
+                            }},"carneiros": {
+                            "value": 1,
+                            "attrs": { fill: "#709ccd"},
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 1"
                             }},"centro": {
                             "value": 16,
                             "attrs": { fill: "#527db2"},

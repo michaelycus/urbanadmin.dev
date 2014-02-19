@@ -46,6 +46,10 @@ $(function () {
     });
 });
 
+$(function () {
+    $(".start-hidden").hide();
+});
+
 function expediente(base_url, id)
 {
     var currentYear = new Date().getFullYear();

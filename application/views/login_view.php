@@ -121,13 +121,7 @@
                                     <div class="icon"><i class="icon20 i-user"></i></div>
                                     <input class="form-control cpf" type="text" name="cpf" id="cpf" placeholder="CPF" value="">
 
-                                </div><!-- End .control-group  -->
-                                
-                                <div class="form-group relative" id="cnpj_login">
-                                    <div class="icon"><i class="icon20 i-user"></i></div>
-                                    <input class="form-control cnpj" type="text" name="cnpj" id="cnpj" placeholder="CNPJ" value="">
-
-                                </div><!-- End .control-group  -->                                
+                                </div><!-- End .control-group  -->                                                             
                                 
                                 <div class="form-group relative">
                                     <div class="icon"><i class="icon20 i-key"></i></div>
@@ -164,26 +158,6 @@
                                 echo '</div>';
 
                                 echo '<hr>';
-                                
-                                // pessoa_fisica
-                                ?>                                
-<!--                                <div class="form-group">
-                                    <label for="pessoa_fisica" class="control-label"></label>
-                                    <div class="col-lg-12">
-                                        <label class="radio-inline">
-                                            <input type="radio" name="pessoa_fisica" id="pessoa_fisica_0" class="form-control" value="0" checked>
-                                            Pessoa física
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="pessoa_fisica" id="pessoa_fisica_1" class="form-control" value="1">
-                                            Pessoa jurídica
-                                        </label>
-                                    </div>
-                                </div>-->
-                                <?php
-
-                                // --- PESSOA FÍSICA ---
-                                echo '<div id="pessoa_f">';
 
                                 // cpf
                                 echo '<div class="form-group">';
@@ -192,24 +166,6 @@
                                 echo    form_input(array('name' => 'cpf','id' => 'cpf','placeholder' => 'CPF','class' => 'form-control cpf'), set_value('cpf'));
                                 echo    '</div>';
                                 echo '</div>';
-
-                                echo '</div>';
-                                // --- --- --- ---
-
-                                // --- PESSOA JURIDICA ---
-
-                                echo '<div id="pessoa_j">';
-
-                                // cnpj
-                                echo '<div class="form-group">';
-                                echo form_label('CNPJ', 'cnpj', array('class' => 'col-lg-3 control-label'));
-                                echo    '<div class="col-lg-9">';
-                                echo    form_input(array('name' => 'cnpj','id' => 'cnpj','placeholder' => 'CNPJ','class' => 'form-control cnpj'), set_value('cnpj'));
-                                echo    '</div>';
-                                echo '</div>';
-
-                                echo '</div>';
-                                // --- --- --- ---
                                 
                                 echo '<div class="form-group">';
                                 echo form_label('Senha', 'rg', array('class' => 'col-lg-3 control-label'));
@@ -337,30 +293,11 @@
                                     echo '<div class="alert alert-error">'. $this->session->userdata('forgot_usuario_errado') .'</div>';
                                     $this->session->unset_userdata('forgot_usuario_errado');
                                 }
-                                ?>   
-                                
-<!--                                <div class="form-group">
-                                    <label for="pessoa_fisica_forgot" class="control-label"></label>
-                                    <div class="col-lg-12">
-                                        <label class="radio-inline">
-                                            <input type="radio" name="pessoa_fisica_forgot" id="pessoa_fisica_4" class="form-control" value="0" checked>
-                                            Pessoa física
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="pessoa_fisica_forgot" id="pessoa_fisica_5" class="form-control" value="1">
-                                            Pessoa jurídica
-                                        </label>
-                                    </div>
-                                </div>-->
+                                ?>                                   
                                 
                                 <div class="form-group relative" id="cpf_forgot">
                                     <div class="icon"><i class="icon20 i-user"></i></div>
                                     <input class="form-control cpf" type="text" name="forgot_cpf" id="forgot_cpf" placeholder="CPF" value="">
-                                </div><!-- End .control-group  -->
-                                
-                                <div class="form-group relative" id="cnpj_forgot">
-                                    <div class="icon"><i class="icon20 i-user"></i></div>
-                                    <input class="form-control cnpj" type="text" name="forgot_cnpj" id="forgot_cnpj" placeholder="CNPJ" value="">
                                 </div><!-- End .control-group  -->
                                 
                                 <div class="form-group relative">
@@ -399,7 +336,6 @@
                 $('.cep').mask("00000-000");//cep
                 $('.rg').mask('00.00.00.00.00'); //RG
                 $('.cpf').mask('000.000.000-00'); //CPF
-                $('.cnpj').mask('00.000.000/0000-00'); //CNPJ
 
                 $("#outra_cidade").hide();
 
@@ -415,57 +351,6 @@
                     {
                         $("#na_cidade").hide(200);
                         $("#outra_cidade").show(200);
-                    }
-                });
-                
-                $("#pessoa_j").hide();                
-                $("#cnpj_login").hide();                
-                $("#cnpj_forgot").hide();                
-                
-                $(":radio").change(function(){
-                    var rad = $('input[name=pessoa_fisica]:checked').val();
-
-                    if (rad == '0')
-                    {
-                        $("#pessoa_f").show(200);
-                        $("#pessoa_j").hide(200);
-                        $("#cpf").val('');
-                    }
-                    else
-                    {
-                        $("#pessoa_f").hide(200);
-                        $("#cnpj").val('');
-                        $("#pessoa_j").show(200);                        
-                    }
-                    
-                    var rad2 = $('input[name=pessoa_fisica_login]:checked').val();
-
-                    if (rad2 == '2')
-                    {
-                        $("#cpf_login").show(200);
-                        $("#cnpj_login").hide(200);
-                        $("#cnpj").val('');
-                    }
-                    else
-                    {
-                        $("#cpf_login").hide(200);
-                        $("#cpf").val('');                        
-                        $("#cnpj_login").show(200);
-                    }
-                    
-                    var rad4 = $('input[name=pessoa_fisica_forgot]:checked').val();
-
-                    if (rad4 == '0')
-                    {
-                        $("#cpf_forgot").show(200);
-                        $("#cnpj_forgot").hide(200);
-                        $("#cnpj_forgot").val('');
-                    }
-                    else
-                    {
-                        $("#cpf_forgot").hide(200);
-                        $("#cpf_forgot").val('');                        
-                        $("#cnpj_forgot").show(200);
                     }
                 });
             });

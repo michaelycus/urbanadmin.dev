@@ -32,7 +32,7 @@
                                 echo '<dd>' . $rua->nome . '</dd>';
                                 
                                 echo '<dt>Tipo Requerimento</dt>';
-                                echo '<dd>' . $cats_requerimento[$requerimento->cat_requerimento]->nome . '</dd>';
+                                echo '<dd>' . $cats_requerimento[$requerimento->cat_requerimento-1]->nome . '</dd>';
                                 
                                 if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
                                 {
@@ -119,7 +119,7 @@
                         </div>
                     </div>
 
-                    <hr>
+<!--                    <hr>
 
                     <div class="row">
                         <div class="col-lg-12">
@@ -137,18 +137,18 @@
                                     ?>
                                         <div class="form-group">
                                             <input name="user_email" id="user_email" class="form-control" type="text" value="<?php echo $solicitante->email; ?>">
-                                        </div><!-- End .form-group  -->
+                                        </div> End .form-group  
                                         <div class="form-group">
                                             <textarea name="user_message" id="user_message" class="form-control" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
 
-                                        </div><!-- End .form-group  -->
+                                        </div> End .form-group  
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary pull-right confirm_send">Enviar mensagem</button>
-                                        </div><!-- End .form-group  -->
+                                        </div> End .form-group  
                                     <?php echo form_close(); ?>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     
                     <?php                    
                     }                       

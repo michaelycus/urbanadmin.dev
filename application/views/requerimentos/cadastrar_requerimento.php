@@ -88,7 +88,7 @@
                 echo '</div>';
                 
                 ?>
-                <div class="alert alert-info" id="div_alerta_lixeira">
+                <div class="alert alert-info start-hidden" id="div_alerta_lixeira">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                     <strong><i class="icon24 i-info"></i> Sobre a instalação de lixeiras:</strong> em casos de lixeira instaladas em frente à um imóvel particular, 
                         o requerimento precisa estar no nome do proprietário do imóvel e assinado pelo mesmo. Se for esse o caso, entraremos em contato para coletar sua assinatura.
@@ -241,8 +241,6 @@
 <script type="text/javascript">
     var path = '<?php echo site_url(); ?>';
     
-    $('#div_alerta_lixeira').hide();
-
     $('#cat_requerimento').change(function() {
         if ($('#cat_requerimento').val()==<?php echo TIPO_REQ_LIXEIRA; ?>)
         {

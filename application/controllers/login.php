@@ -91,9 +91,16 @@ class Login extends MY_Controller
             $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
             $this->data['req_da_sessao'] = $this->requerimento_model->count_outros_requerimentos();
             
-            $this->data['versao_atual'] = "1.1.1";
+            $this->data['versao_atual'] = "1.1.2";
 
             $json_str = '{"versoes":[
+                    {"versao":"1.1.2", "data":"19/02/2014", "changes": 
+                         ["Utilizando PHPMailer para envio de mensagens", 
+                          "Tela inicial do mobile foi corrigida", 
+                          "Corrigindo /"Tipo de requerimento/" ao visualizar informações do requerimento", 
+                          "Requerimentos cadastrados na sessão ficam separados dos demais", 
+                          "Incorporar iframe dos gráficos customizados foi corrigido"
+                          ]},
                     {"versao":"1.1.1", "data":"11/02/2014", "changes": 
                          ["Criado sistema de versionamento do sistema", 
                           "Contabilizando separadamente outros requerimentos", 
@@ -163,19 +170,14 @@ class Login extends MY_Controller
         if ($this->input->post('forgot_cpf'))
         {
             $res = $this->login_model->verify_user_cpf_exists($this->input->post('forgot_cpf'),
-                                               $this->input->post('forgot_email'));
-        }
-        else
-        {
-            $res = $this->login_model->verify_user_cnpj_exists($this->input->post('forgot_cnpj'),
-                                               $this->input->post('forgot_email'));
+                                                              $this->input->post('forgot_email'));
         }
 
         if ($res !== false)
         {
             $key = $this->requerente_model->generate_key($res);
 
-            reset_password($res->email, $key);
+            reset_password($res, $key);
 
             $this->session->set_userdata('forgot_email_enviado','Uma nova senha de acesso foi gerada e enviada para o seu e-mail.');
         }
