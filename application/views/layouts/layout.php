@@ -32,6 +32,7 @@
         <link href="<?php echo base_url(); ?>js/plugins/tables/datatables/jquery.dataTables.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>js/plugins/forms/datepicker/datepicker.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>js/plugins/forms/switch/bootstrapSwitch.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>js/plugins/forms/select2/select2.css" rel="stylesheet" />
 
         <!-- app stylesheets -->
         <link href="<?php echo base_url(); ?>css/app.css" rel="stylesheet" />
@@ -88,6 +89,7 @@
         <script src="<?php echo base_url(); ?>js/plugins/forms/wizard/jquery.form.wizard.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/validation/jquery.validate.js"></script>
         <script src="<?php echo base_url(); ?>js/plugins/forms/switch/bootstrapSwitch.js"></script>
+        <script src="<?php echo base_url(); ?>js/plugins/forms/select2/select2.js"></script>
 
         <!-- Dialogs -->
         <script src="<?php echo base_url(); ?>js/jquery-impromptu.min.js"></script>
@@ -279,6 +281,11 @@
                                         <?php echo anchor('bairros/listar_bairros',
                                                 '<span class="icon"><i class="icon20 i-office"></i></span>
                                                  <span class="txt">Listar</span>');?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('bairros/editar_rua',
+                                                '<span class="icon"><i class="icon20 i-office"></i></span>
+                                                 <span class="txt">Editar rua</span>');?>
                                     </li>
                                 </ul>
                             </li>

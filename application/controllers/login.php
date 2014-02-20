@@ -97,7 +97,7 @@ class Login extends MY_Controller
                     {"versao":"1.1.2", "data":"19/02/2014", "changes": 
                          ["Utilizando PHPMailer para envio de mensagens", 
                           "Tela inicial do mobile foi corrigida", 
-                          "Corrigindo /"Tipo de requerimento/" ao visualizar informações do requerimento", 
+                          "Corrigindo Tipo de requerimento ao visualizar informações do requerimento", 
                           "Requerimentos cadastrados na sessão ficam separados dos demais", 
                           "Incorporar iframe dos gráficos customizados foi corrigido"
                           ]},

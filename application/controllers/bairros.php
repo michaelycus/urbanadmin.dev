@@ -71,4 +71,9 @@ class Bairros extends MY_Controller
             redirect('bairros/listar_bairros', TRUE);
         }
     }
+    
+    public function editar_rua()
+    {
+        $this->load_view('bairros/editar_rua', TRUE);
+    }
 }

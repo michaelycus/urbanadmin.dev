@@ -30,7 +30,7 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/meus_requerimentos');
     }
-    
+
     // decrepted
     public function outros_requerimentos()
     {
@@ -38,7 +38,7 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/outros_requerimentos', TRUE);
     }
-    
+
     public function da_sessao()
     {
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_da_sessao_with_bairros();
@@ -52,9 +52,9 @@ class Requerimentos extends MY_Controller
 
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|jpeg|png';
-        $config['max_size'] = '2048';
-        $config['max_width'] = '2048';
-        $config['max_height'] = '1024';
+        $config['max_size'] = '8000';
+        $config['max_width'] = '5000';
+        $config['max_height'] = '5000';
         $config['encrypt_name'] = TRUE;
 
         $this->load->library('upload', $config);
@@ -72,7 +72,7 @@ class Requerimentos extends MY_Controller
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
 
             $data['descricao_original'] = $this->input->post('descricao');
-            
+
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
 
             $i = 1;
@@ -87,6 +87,7 @@ class Requerimentos extends MY_Controller
 
                         $data['anexo_'.$i] = $file_data['raw_name'].$file_data['file_ext'];
 
+                        // thumbnail
                         $config = array(
                             'source_image' => $file_data['full_path'],
                             'new_image' => './uploads/thumbs/',
@@ -97,6 +98,21 @@ class Requerimentos extends MY_Controller
 
                         $this->image_lib->initialize($config);
                         $this->image_lib->resize();
+
+                        if ($file_data['image_width'] > 1024 || $file_data['image_height'] > 1024)
+                        {
+                            // resized
+                            $config = array(
+                               'source_image' => $file_data['full_path'],
+                               'new_image' => './uploads/',
+                               'maintain_ratio' => true,
+                               'width' => 1024,
+                               'height' => 1024
+                           );
+
+                            $this->image_lib->initialize($config);
+                            $this->image_lib->resize();
+                        }
                     }
                     else
                     {
@@ -115,8 +131,7 @@ class Requerimentos extends MY_Controller
                 {
                     alert_requirement($this->requerimento_model->get_next_id()-1);
                 }
-                
-//                $this->session->set_userdata('requerimento_cadastrado',$message->message);
+
                 $this->session->set_userdata('requerimento_cadastrado','Requerimento cadastrado com sucesso!');
 
                 redirect('requerimentos/cadastrar_requerimento');
@@ -132,9 +147,9 @@ class Requerimentos extends MY_Controller
 
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|jpeg|png';
-        $config['max_size'] = '2048';
-        $config['max_width'] = '2048';
-        $config['max_height'] = '1024';
+        $config['max_size'] = '8000';
+        $config['max_width'] = '5000';
+        $config['max_height'] = '5000';
         $config['encrypt_name'] = TRUE;
 
         $this->load->library('upload', $config);
@@ -180,6 +195,21 @@ class Requerimentos extends MY_Controller
 
                         $this->image_lib->initialize($config);
                         $this->image_lib->resize();
+                        
+                        if ($file_data['image_width'] > 1024 || $file_data['image_height'] > 1024)
+                        {
+                            // resized
+                            $config = array(
+                               'source_image' => $file_data['full_path'],
+                               'new_image' => './uploads/',
+                               'maintain_ratio' => true,
+                               'width' => 1024,
+                               'height' => 1024
+                           );
+
+                            $this->image_lib->initialize($config);
+                            $this->image_lib->resize();
+                        }
                     }
                     else
                     {
@@ -219,7 +249,7 @@ class Requerimentos extends MY_Controller
             redirect('requerimentos/listar_requerimentos');
         }
     }
-    
+
     public function generate_charts()
     {
         generate_charts();

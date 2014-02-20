@@ -95,40 +95,40 @@
                                     }
                                 }
                             },                            "bom_pastor":{
-                                value: "4",
-                                text: { content:  4 , attrs: {fill:"#222"} },
+                                value: "5",
+                                text: { content:  5 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 4"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 5"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 3 ).change();
                                     }
                                 }
                             },                            "campestre":{
-                                value: "6",
-                                text: { content:  6 , attrs: {fill:"#222"} },
+                                value: "7",
+                                text: { content:  7 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 6"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Requerimentos: 7"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 4 ).change();
                                     }
                                 }
                             },                            "carneiros":{
-                                value: "3",
-                                text: { content:  3 , attrs: {fill:"#222"} },
+                                value: "7",
+                                text: { content:  7 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 3"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 7"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 5 ).change();
                                     }
                                 }
                             },                            "centenario":{
-                                value: "4",
-                                text: { content:  4 , attrs: {fill:"#222"} },
+                                value: "5",
+                                text: { content:  5 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Requerimentos: 4"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Requerimentos: 5"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 6 ).change();
@@ -145,10 +145,10 @@
                                     }
                                 }
                             },                            "conservas":{
-                                value: "2",
-                                text: { content:  2 , attrs: {fill:"#222"} },
+                                value: "3",
+                                text: { content:  3 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Requerimentos: 2"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Requerimentos: 3"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 8 ).change();
