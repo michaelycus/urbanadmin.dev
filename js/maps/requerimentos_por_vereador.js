@@ -12,11 +12,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 2"
                             }},"bom_pastor": {
-                            "value": 5,
-                            "text": { "content":  "5" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#6894c6"},
+                            "value": 6,
+                            "text": { "content":  "6" , attrs: {fill:"#222"} },
+                            "attrs": { fill: "#6692c4"},
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 5"
+                                    "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 6"
                             }},"campestre": {
                             "value": 6,
                             "text": { "content":  "6" , attrs: {fill:"#222"} },
@@ -134,7 +134,7 @@
                             }}},"plots": {"alto_do_parque": {
                             "value": 4},"americano": {
                             "value": 2},"bom_pastor": {
-                            "value": 5},"campestre": {
+                            "value": 6},"campestre": {
                             "value": 6},"carneiros": {
                             "value": 6},"centenario": {
                             "value": 2},"centro": {

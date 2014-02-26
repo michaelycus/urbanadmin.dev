@@ -1,6 +1,6 @@
 $(document).ready(function() {
  	//------------- Form validation -------------//
- 	$('#select1').select2({placeholder: "Select"});
+ 	$('#select1').select2({placeholder: "Selecione"});
 
  	$("#validate").validate({
  		ignore: null,

@@ -112,6 +112,7 @@
         <script src="<?php echo base_url(); ?>js/pages/domready.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/data-tables.js"></script><!-- Init plugins only for page -->
         <script src="<?php echo base_url(); ?>js/pages/form-wizard.js"></script><!-- Init plugins only for page -->
+        <script src="<?php echo base_url(); ?>js/pages/form-validation.js"></script><!-- Init plugins only for page -->
 
         <!-- Bootstrap script -->
         <script src="<?php echo base_url(); ?>js/bootstrap/bootbox.min.js"></script>
@@ -284,7 +285,7 @@
                                     </li>
                                     <li>
                                         <?php echo anchor('bairros/editar_rua',
-                                                '<span class="icon"><i class="icon20 i-office"></i></span>
+                                                '<span class="icon"><i class="icon20 i-road"></i></span>
                                                  <span class="txt">Editar rua</span>');?>
                                     </li>
                                 </ul>

@@ -67,4 +67,31 @@ class Cep extends CI_Controller
 
         return;
     }
+    
+    function getBairros($id_rua)
+    {
+        $bairros = $this->cidades_model->get_bairro_by_rua($id_rua);
+
+        if (empty($bairros))
+            return '{ "descricao": "Nenhum bairro encontrado" }';
+
+        $arr_bair = array();
+
+        foreach ($bairros as $b)
+        {
+            $arr_bair[] = '{"id":' . $b->id_bairro . '}';
+        }
+
+        echo '[ ' . implode(",", $arr_bair) . ']';
+
+        return;
+    }
+    
+    public function salvar_edicao()
+    {
+        $rua  = $this->input->post('rua');
+        $bairros  = $this->input->post('bairros');
+        
+        echo json_encode($rua);
+    }
 }

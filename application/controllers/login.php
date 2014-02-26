@@ -91,9 +91,13 @@ class Login extends MY_Controller
             $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
             $this->data['req_da_sessao'] = $this->requerimento_model->count_outros_requerimentos();
             
-            $this->data['versao_atual'] = "1.1.2";
+            $this->data['versao_atual'] = "1.1.3";
 
             $json_str = '{"versoes":[
+                    {"versao":"1.1.3", "data":"26/02/2014", "changes": 
+                         ["Permite envio de fotos maiores e redimensionamento automático", 
+                          "Editor de ruas"
+                          ]},
                     {"versao":"1.1.2", "data":"19/02/2014", "changes": 
                          ["Utilizando PHPMailer para envio de mensagens", 
                           "Tela inicial do mobile foi corrigida", 

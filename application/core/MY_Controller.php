@@ -18,7 +18,10 @@ class MY_Controller extends CI_Controller
             redirect('login');
         }
 
-        $this->output->enable_profiler(ENVIRONMENT == 'development');
+        if ( !$this->input->is_ajax_request())
+        {
+            $this->output->enable_profiler(ENVIRONMENT == 'development');
+        }
     }
 
     /**

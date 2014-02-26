@@ -15,7 +15,7 @@ bootbox.setDefaults({
 }(jQuery));
 
 $(function () {
-    $("a.confirm_delete").click(function(e) {
+    $(".confirm_delete").click(function(e) {
         e.preventDefault();
         var location = $(this).attr('href');
         bootbox.confirm("Excluir esse item?", function(confirmed) {

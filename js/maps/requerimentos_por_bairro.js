@@ -95,10 +95,10 @@
                                     }
                                 }
                             },                            "bom_pastor":{
-                                value: "5",
-                                text: { content:  5 , attrs: {fill:"#222"} },
+                                value: "6",
+                                text: { content:  6 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 5"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 6"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 3 ).change();
