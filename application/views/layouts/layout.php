@@ -137,7 +137,7 @@
                             <?php
                             if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR && $_SESSION['requerimentos'] > 0)
                             {
-                                echo anchor('requerimentos/listar_requerimentos', '<i class="icon24 i-bell-2"></i>
+                                echo anchor('requerimentos/em_analise', '<i class="icon24 i-bell-2"></i>
                                     <span class="notification red">'.$_SESSION['requerimentos'].'</span>', '');
                             }
                             ?>

@@ -2,6 +2,119 @@
     <div id="heading" class="page-header">
         <h1><i class="icon20 i-stats"></i> Estatísticas</h1>
     </div>
+    
+    <div class="row">
+
+        <div class="col-lg-8">
+            <div class="panel panel-default">
+                <div class="panel-heading plain">
+                    <div class="icon"><i class="icon20 i-pie-2"></i></div>
+                    <h4>Situação dos requerimentos</h4>
+                    <a href="#" class="minimize"></a>
+                </div><!-- End .panel-heading -->
+
+                <div class="panel-body center">
+
+                    <div class="vital-stats">
+                        <ul>
+                            <li>
+                                <?php echo anchor('requerimentos/em_analise', '<div class="item">
+                                        <div class="icon red"><i class="i-stack-empty"></i></div>
+                                        <span class="percent">'. $req_em_analise . '</span>
+                                        <span class="txt">Em análise</span>
+                                    </div>')?>                                
+                            </li>
+                            <li>
+                                <?php echo anchor('requerimentos/analisados', '<div class="item">
+                                        <div class="icon yellow"><i class="i-stack-down"></i></div>
+                                        <span class="percent">' . $req_analisado .'</span>
+                                        <span class="txt">Analisados</span>
+                                    </div>' ) ?>
+                            </li>
+                            <li>
+                                <?php echo anchor('requerimentos/protocolados', '<div class="item">
+                                        <div class="icon green"><i class="i-stack-up"></i></div>
+                                        <span class="percent">'. $req_protocolado .'</span>
+                                        <span class="txt">Protocolados</span>
+                                    </div>')?>
+                            </li>
+                            <li>
+                                <?php echo anchor('requerimentos/concluidos', '<div class="item">
+                                        <div class="icon blue"><i class="i-stack-checkmark"></i></div>
+                                        <span class="percent">'.$req_concluido.'</span>
+                                        <span class="txt">Concluídos</span>
+                                    </div>')?>                                
+                            </li>
+                            <li>
+                                <?php echo anchor('requerimentos/da_sessao', '<div class="item">
+                                        <div class="icon orange"><i class="i-stack-star"></i></div>
+                                        <span class="percent">'. $req_da_sessao . '</span>
+                                        <span class="txt">Da sessão</span>
+                                    </div>' )?>
+                            </li>
+                        </ul>
+                    </div><!-- End .vital-stats -->
+
+                </div><!-- End .panel-body -->
+            </div><!-- End .widget -->
+
+        </div><!-- End .col-lg-8 -->
+        
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="icon"><i class="icon20 i-info"></i></div>
+                    <h4>Versão do sistema: <?php echo $versao_atual;?></h4>
+                    <a href="#" class="minimize"></a>
+                </div><!-- End .panel-heading -->
+
+                <div class="panel-body">
+                    <dl>
+
+                        <?php
+                        
+                        $first = TRUE;
+                        foreach ($versoes as $v)
+                        {   
+                            if ($first)
+                            {
+                                echo '<dt>Versão ' . $v->versao . ' - ' . $v->data.'</dt>';
+                                echo '<dd>';
+                                echo    '<ul>';
+                                foreach ($v->changes as $c)
+                                {
+                                    echo '<li>'.$c . ' <small><a href="#" class="toggle">(Veja mais)</a></small>' .'</li> ';
+                                }
+                                echo    '</ul>';
+                                echo '</dd>';
+                                
+                                $first = FALSE;
+                            }
+                            else
+                            {
+                                echo '<div id="vermais">';
+                                echo '<dt>Versão ' . $v->versao . ' - ' . $v->data.'</dt>';
+                                echo '<dd>';
+                                echo    '<ul>';
+                                foreach ($v->changes as $c)
+                                {
+                                    echo '<li>'.$c.'</li>';
+                                }
+                                echo    '</ul>';
+                                echo '</dd>';
+                                echo '</div>';
+                            }
+                        }
+
+                        ?>
+
+                    </dl>
+                </div><!-- End .panel-body -->
+
+            </div><!-- End .widget -->
+        </div><!-- End .col-lg-4  -->
+
+    </div><!-- End .row-fluid  -->
 
     <div class="row">
 
@@ -133,15 +246,15 @@
             </div><!-- End .widget -->
         </div><!-- End .col-lg-4  -->
 
-    </div><!-- End .row-fluid  -->
-
+    </div><!-- End .row-fluid  -->    
+    
     <div class="row">
 
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading plain">
                     <div class="icon"><i class="icon20 i-pie-2"></i></div>
-                    <h4>Situação dos requerimentos</h4>
+                    <h4>Requerimentos por meses</h4>
                     <a href="#" class="minimize"></a>
                 </div><!-- End .panel-heading -->
 
@@ -150,49 +263,39 @@
                     <div class="vital-stats">
                         <ul>
                             <li>
-                                <a href="#">
-                                    <div class="item">
+                                <?php echo anchor('requerimentos/em_analise', '<div class="item">
                                         <div class="icon red"><i class="i-stack-empty"></i></div>
-                                        <span class="percent"><?php echo $req_em_analise;?></span>
+                                        <span class="percent">'. $req_em_analise . '</span>
                                         <span class="txt">Em análise</span>
-                                    </div>
-                                </a>
+                                    </div>')?>                                
                             </li>
                             <li>
-                                <a href="#">
-                                    <div class="item">
+                                <?php echo anchor('requerimentos/analisados', '<div class="item">
                                         <div class="icon yellow"><i class="i-stack-down"></i></div>
-                                        <span class="percent"><?php echo $req_analisado;?></span>
+                                        <span class="percent">' . $req_analisado .'</span>
                                         <span class="txt">Analisados</span>
-                                    </div>
-                                </a>
+                                    </div>' ) ?>
                             </li>
                             <li>
-                                <a href="#">
-                                    <div class="item">
+                                <?php echo anchor('requerimentos/protocolados', '<div class="item">
                                         <div class="icon green"><i class="i-stack-up"></i></div>
-                                        <span class="percent"><?php echo $req_protocolado;?></span>
+                                        <span class="percent">'. $req_protocolado .'</span>
                                         <span class="txt">Protocolados</span>
-                                    </div>
-                                </a>
+                                    </div>')?>
                             </li>
                             <li>
-                                <a href="#">
-                                    <div class="item">
+                                <?php echo anchor('requerimentos/concluidos', '<div class="item">
                                         <div class="icon blue"><i class="i-stack-checkmark"></i></div>
-                                        <span class="percent"><?php echo $req_concluido;?></span>
+                                        <span class="percent">'.$req_concluido.'</span>
                                         <span class="txt">Concluídos</span>
-                                    </div>
-                                </a>
+                                    </div>')?>                                
                             </li>
                             <li>
-                                <a href="#">
-                                    <div class="item">
+                                <?php echo anchor('requerimentos/da_sessao', '<div class="item">
                                         <div class="icon orange"><i class="i-stack-star"></i></div>
-                                        <span class="percent"><?php echo $req_da_sessao;?></span>
+                                        <span class="percent">'. $req_da_sessao . '</span>
                                         <span class="txt">Da sessão</span>
-                                    </div>
-                                </a>
+                                    </div>' )?>
                             </li>
                         </ul>
                     </div><!-- End .vital-stats -->
@@ -201,41 +304,18 @@
             </div><!-- End .widget -->
 
         </div><!-- End .col-lg-8 -->
-        
-        <div class="col-lg-4">
-            <div class="panel panel-default closed">
-                <div class="panel-heading">
-                    <div class="icon"><i class="icon20 i-info"></i></div>
-                    <h4>Versão do sistema: <?php echo $versao_atual;?></h4>
-                    <a href="#" class="minimize"></a>
-                </div><!-- End .panel-heading -->
-
-                <div class="panel-body">
-                    <dl>
-
-                        <?php
-                        
-                        foreach ($versoes as $v)
-                        {
-                            echo '<dt>Versão ' . $v->versao . ' - ' . $v->data.'</dt>';
-                            echo '<dd>';
-                            echo    '<ul>';
-                            foreach ($v->changes as $c)
-                            {
-                                echo '<li>'.$c.'</li>';
-                            }
-                            echo    '</ul>';
-                            echo '</dd>';
-                        }
-
-                        ?>
-
-                    </dl>
-                </div><!-- End .panel-body -->
-
-            </div><!-- End .widget -->
-        </div><!-- End .col-lg-4  -->
-
-    </div><!-- End .row-fluid  -->
+    </div>
+    
 
 </div> <!-- End .container-fluid  -->
+
+<script>
+    $(document).ready(function()
+    {        
+        $('div#vermais').hide();
+        $('a.toggle').click(function()
+        {
+            $('div#vermais').toggle();
+        });
+    });    
+</script>

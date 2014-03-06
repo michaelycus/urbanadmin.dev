@@ -29,6 +29,7 @@ class Cidades_model extends CI_Model
             $this->db->where(array('estados.id' => $id));
         return $this->db->select('cidades.id, cidades.nome')
                         ->from('estados')
+                        ->where('cidades.id !=',CIDADE_PADRAO_ID)
                         ->join('cidades', 'cidades.id_uf = estados.id')
                         ->get()->result();
     }

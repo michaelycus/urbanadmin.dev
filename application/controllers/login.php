@@ -50,6 +50,7 @@ class Login extends MY_Controller
                 $_SESSION['nome'] = $res->nome;
                 $_SESSION['autorizacao'] = $res->autorizacao;
                 $_SESSION['id_user'] = $res->id;
+                $_SESSION['id_bairro'] = $res->id_bairro;
 
                 $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
 
@@ -89,11 +90,18 @@ class Login extends MY_Controller
             $this->data['req_analisado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_ANALISADO);
             $this->data['req_protocolado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
             $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
-            $this->data['req_da_sessao'] = $this->requerimento_model->count_outros_requerimentos();
+            $this->data['req_da_sessao'] = $this->requerimento_model->count_da_sessao();
             
-            $this->data['versao_atual'] = "1.1.3";
+            $year = date("Y"); // 2011
+            $numericMonth = date("m"); // 01 through 12
+            
+            
+            $this->data['versao_atual'] = "1.1.4";
 
             $json_str = '{"versoes":[
+                    {"versao":"1.1.4", "data":"27/02/2014", "changes": 
+                         ["Adicionado links no painel do administrador para requerimentos por etapa"                           
+                          ]},
                     {"versao":"1.1.3", "data":"26/02/2014", "changes": 
                          ["Permite envio de fotos maiores e redimensionamento automático", 
                           "Editor de ruas"

@@ -30,13 +30,33 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/meus_requerimentos');
     }
-
-    // decrepted
-    public function outros_requerimentos()
+    
+    public function em_analise()            
     {
-        $this->data['requerimentos'] = $this->requerimento_model->get_outros_requerimentos_with_bairros();
-
-        $this->load_view('requerimentos/outros_requerimentos', TRUE);
+        $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
+        
+        $this->load_view('requerimentos/em_analise', TRUE);
+    }
+    
+    public function analisados()            
+    {
+        $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_ANALISADO);
+        
+        $this->load_view('requerimentos/analisados', TRUE);
+    }
+    
+    public function protocolados()            
+    {
+        $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
+        
+        $this->load_view('requerimentos/protocolados', TRUE);
+    }
+    
+    public function concluidos()            
+    {
+        $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
+        
+        $this->load_view('requerimentos/concluidos', TRUE);
     }
 
     public function da_sessao()
@@ -44,6 +64,14 @@ class Requerimentos extends MY_Controller
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_da_sessao_with_bairros();
 
         $this->load_view('requerimentos/da_sessao', TRUE);
+    }
+    
+    // decrepted
+    public function outros_requerimentos()
+    {
+        $this->data['requerimentos'] = $this->requerimento_model->get_outros_requerimentos_with_bairros();
+
+        $this->load_view('requerimentos/outros_requerimentos', TRUE);
     }
 
     public function cadastrar_requerimento()

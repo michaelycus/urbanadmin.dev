@@ -136,9 +136,4 @@ class Graficos_Customizados extends MY_Controller
         
         $this->load->view('graficos_customizados/incorporar', $this->data);
     }
-    
-    public function teste()
-    {
-        echo 'testeddddd';
-    }
 }

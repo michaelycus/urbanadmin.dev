@@ -675,29 +675,29 @@ EOF;
                     switch ($chart->formato)
                     {
                         case GRAFICO_FORMATO_SEM:
-                            $valor_formatado = $valor;
+                            $valor_formatado = number_format($valor, 0, ",", ".");
                             break;
                         
                         case GRAFICO_FORMATO_PERCENTO:
-                            $valor_formatado = $valor.'%';
+                            $valor_formatado = number_format($valor, 1, ",", ".").'%';
                             break;
                         
                         case GRAFICO_FORMATO_REAIS:
-                            $valor_formatado = 'R$ '.$valor;
+                            $valor_formatado = 'R$ '. number_format($valor, 2, ",", ".");
                             break;
                         
                         case GRAFICO_FORMATO_DOLAR:
-                            $valor_formatado = '$ '.$valor;
+                            $valor_formatado = '$ '. number_format($valor, 2, ",", ".");
                             break;
 
                         default:
-                            $valor_formatado = $valor;
+                            $valor_formatado = number_format($valor, 1, ",", ".");
                             break;
                     }
                     
                     $data_js .= <<<EOF
-                        "$bairro->codename":{
-                            value: "$valor",
+                        "$bairro->codename":{ 
+                           value: "$valor",
                             attrs: {
                                 fill: "$hsl", stroke: "#204a87"
                             },

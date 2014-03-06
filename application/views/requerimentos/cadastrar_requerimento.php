@@ -60,7 +60,7 @@
                 echo            '<option value=""> - Selecione um bairro - </option>';
                 foreach ($bairros as $bairro)
                 {
-                    echo        '<option value="'.$bairro->id.'" '.set_select('id_bairro', $bairro->id).'>'.$bairro->nome.'</option>';
+                    echo        '<option value="'.$bairro->id.'" '.set_select('id_bairro', $bairro->id, $bairro->id==$_SESSION['id_bairro']).'>'.$bairro->nome.'</option>';
                 }
                 echo        '</select>';
                 echo    '</div>';

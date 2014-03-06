@@ -188,7 +188,7 @@
 <script>
     function generate_chart()
     {
-        window.location.replace("<?php echo base_url(). 'graficos_customizados/visualizar' ?>");
+        window.location.replace("<?php echo base_url(). 'graficos_customizados/visualizar_grafico/'.$id ?>");
     }
 
     $.fn.disable = function() {

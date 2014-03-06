@@ -116,7 +116,7 @@ define('TIPOS_AUTORIZACAO', serialize (array ( 1 => "Administrador",
 define('AUTORIZACAO_OPERADOR',0);
 define('AUTORIZACAO_ADMINISTRADOR',1);
 
-define('REQUERENTE_PADRAO_ID', 1);
+
 
 define('TIPO_GRAFICO_MAPA', 0);
 define('TIPO_GRAFICO_BARRAS', 1);
@@ -140,6 +140,11 @@ define('GRAFICO_FORMATO_UNIDADE', serialize (array ( 0 => "Sem formato",
                                                      1 => "%",
                                                      2 => "R$",
                                                      3 => "$" )));
+
+
+// padroões do sistema 
+define('REQUERENTE_PADRAO_ID', 1);
+define('CIDADE_PADRAO_ID', 4144);
 
 
 /* End of file constants.php */

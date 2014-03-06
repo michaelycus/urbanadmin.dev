@@ -5,12 +5,15 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <title><?php echo $chart->titulo; ?></title>
-                
+        
+        <link href="<?php echo base_url(); ?>css/bootstrap/bootstrap.css" rel="stylesheet" />
+        
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>        
         <script src="<?php echo base_url(); ?>js/maps/raphael.js" charset="utf-8" ></script>
         <script src="<?php echo base_url(); ?>js/maps/jquery.mapael.js" charset="utf-8" ></script>
         <script src="<?php echo base_url(); ?>js/maps/cidade.js" charset="utf-8" ></script>
         <script src="<?php echo base_url(); ?>files/custom_charts/<?php echo $chart->code; ?>.js" charset="utf-8" ></script>
+        
                 
         <script>
         function getURLParameter(name) {
@@ -26,6 +29,19 @@
             {						
                 $(".desc").show();
             }
+            if (getURLParameter("fullscreen")=='yes')
+            {	                
+                $("span.maximizer").hide();
+            }
+            
+            $('img.max').hide();
+            
+            $('div#info').mouseenter(function() {
+               $('img.max').show(150);
+            });
+            $('div#info').mouseleave(function() {
+               $('img.max').hide(150);
+            });
         });
 
         </script>
@@ -55,8 +71,8 @@
                 max-width: 200px;
                 display:none;
                 color:#343434;
-        }
-        </style>        
+        } 
+       </style>        
     </head>
     <body>
         <div class="maparea1">
@@ -67,8 +83,17 @@
                 echo '<p class="desc">'.$chart->observacoes.'</p>';
             }
             ?>
-            <div class="map">
-                <span>Alternative content for the map</span>
+            <div id="info">
+                <span class="pull-right maximizer">                    
+                    <img src="<?php echo base_url() . 'images/fill.png'?>">
+                    <?php echo anchor('graficos_customizados/incorporar/'.$chart->code.'/?desc=yes&fullscreen=yes', '<img src="'. base_url() . 'images/max.png" title="Maximizar janela" class="max">', 'target="_blank"')?>
+                </span>
+                <div class="map">
+                    <span>Alternative content for the map</span>                
+                </div>
+
+                <span class="pull-right"><img src="<?php echo base_url() . 'images/logodark_inc.png'?>"></span>
+            
             </div>
 
             <?php
