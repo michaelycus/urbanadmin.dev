@@ -14,7 +14,8 @@ class MY_Controller extends CI_Controller
         
         if ( !isset($_SESSION['cpf']) && (!in_array(uri_string(), $no_redirect ) ))                
         {
-            if ( !startsWith(uri_string(), 'graficos_customizados/incorporar') )
+            if ( !startsWith(uri_string(), 'graficos_customizados/incorporar') &&
+                 !startsWith(uri_string(), 'requerimentos/relatorio_por_mes') )
             redirect('login');
         }
 
@@ -37,6 +38,17 @@ class MY_Controller extends CI_Controller
         }
         $this->data['subview'] = $subview;
         $this->load->view('layouts/layout', $this->data);
+    }
+    
+    public function load_config_view ($subview)
+    {
+        // Redireciona usuários operadores instrusos
+        if ( $_SESSION['autorizacao']==AUTORIZACAO_OPERADOR)
+        {
+            redirect('requerimentos/meus_requerimentos');
+        }
+        $this->data['subview'] = $subview;
+        $this->load->view('layouts/layout_config', $this->data);
     }
 
     public function load_front_view ($view)

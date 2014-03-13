@@ -132,21 +132,28 @@
                 <div class="collapse navbar-collapse" id="navbar-to-collapse">
 
                     <ul class="nav navbar-nav pull-right">
-                        <li class="divider-vertical"></li>
-                        <li class="dropdown">
-                            <?php
-                            if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR && $_SESSION['requerimentos'] > 0)
-                            {
-                                echo anchor('requerimentos/em_analise', '<i class="icon24 i-bell-2"></i>
-                                    <span class="notification red">'.$_SESSION['requerimentos'].'</span>', '');
-                            }
-                            ?>
-                        </li>
+                        <?php
+                        if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
+                        {
+                            echo '<li class="dropdown">';
+                            echo    anchor('configuracoes/bairros', '<i class="icon20 i-tools"></i>');
+                            echo '</li>';
+                        }
+                        
+                        if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR && $_SESSION['requerimentos'] > 0)
+                        {
+                            echo '<li class="divider-vertical"></li>';
+                            echo '<li class="dropdown">';
+                            echo    anchor('requerimentos/em_analise', '<i class="icon24 i-bell-2"></i>
+                                        <span class="notification red">'.$_SESSION['requerimentos'].'</span>', '');
+                            echo '</li>';
+                        }
+                        ?>                        
 
                         <li class="divider-vertical"></li>
                         <li class="dropdown user">
                             <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
-                                <i class="icon24 i-user"></i>(<?php echo $_SESSION['nome']; ?>)
+                                <i class="icon20 i-user"></i>(<?php echo $_SESSION['nome']; ?>)
                                 <span class="more"><i class="icon16 i-arrow-down-2"></i></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">

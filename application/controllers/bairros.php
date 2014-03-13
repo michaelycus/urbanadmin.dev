@@ -18,7 +18,7 @@ class Bairros extends MY_Controller
     {
         $this->data['bairros'] = $this->bairros_model->get_bairros();
 
-        $this->load_view('bairros/listar_bairros', TRUE);
+        $this->load_config_view('configuracoes/bairros/listar_bairros');
     }
 
     public function cadastrar_bairro()
@@ -33,10 +33,10 @@ class Bairros extends MY_Controller
             $this->bairros_model->insert($data);
             generate_charts();
             $this->session->set_userdata('bairro_cadastrado','Bairro cadastrado com sucesso!');
-            redirect('bairros/cadastrar_bairro');
+            redirect('configuracoes/bairros/cadastrar_bairro');
         endif;
 
-        $this->load_view('bairros/cadastrar_bairro', TRUE);
+        $this->load_config_view('configuracoes/bairros/cadastrar_bairro');
     }
 
     public function editar_bairro($id)
@@ -50,7 +50,7 @@ class Bairros extends MY_Controller
             $this->session->set_userdata('bairro_editado','Bairro editado com sucesso!');
             generate_charts();
 
-            redirect('bairros/editar_bairro/'.$this->input->post('id'));
+            redirect('configuracoes/bairros/editar_bairro/'.$this->input->post('id'));
         endif;
 
         if ($this->input->post('id')!=NULL)
@@ -58,7 +58,7 @@ class Bairros extends MY_Controller
 
         $this->data['bairro'] = $this->bairros_model->get($id);
 
-        $this->load_view('bairros/editar_bairro', TRUE);
+        $this->load_config_view('configuracoes/bairros/editar_bairro');
     }
 
     public function excluir_bairro($id)
@@ -69,7 +69,7 @@ class Bairros extends MY_Controller
             generate_charts();
 
             $this->session->set_userdata('bairro_excluido','Bairro excluído com sucesso!');
-            redirect('bairros/listar_bairros', TRUE);
+            redirect('configuracoes/bairros/listar_bairros');
         }
     }
     
@@ -78,7 +78,7 @@ class Bairros extends MY_Controller
         $this->data['ruas'] = $this->cidades_model->get_ruas();        
         $this->data['bairros'] = $this->bairros_model->get_bairros();
         
-        $this->load_view('bairros/editar_rua', TRUE);
+        $this->load_config_view('configuracoes/bairros/editar_rua');
     }
     
     public function salvar_edicao()
@@ -104,10 +104,10 @@ class Bairros extends MY_Controller
             
             $this->session->set_userdata('rua_cadastrada','Rua cadastrada com sucesso!');            
             
-            redirect('bairros/editar_rua', TRUE);
+            redirect('configuracoes/bairros/editar_rua');
         endif;
         
-        $this->load_view('bairros/editar_rua', TRUE);
+        $this->load_config_view('bairros/editar_rua');
     }
     
     public function excluir_rua($id)
@@ -115,6 +115,6 @@ class Bairros extends MY_Controller
         $this->cidades_model->delete_rua($id);
         
         $this->session->set_userdata('rua_excluida','Rua excluída com sucesso!');
-        redirect('bairros/editar_rua', TRUE);
+        redirect('configuracoes/bairros/editar_rua');
     }
 }

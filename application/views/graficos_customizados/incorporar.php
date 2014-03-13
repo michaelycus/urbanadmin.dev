@@ -26,7 +26,7 @@
             $(".desc").hide();
 
             if (getURLParameter("desc")=='yes')
-            {						
+            {	
                 $(".desc").show();
             }
             if (getURLParameter("fullscreen")=='yes')

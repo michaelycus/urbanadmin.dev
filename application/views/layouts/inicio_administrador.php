@@ -83,8 +83,9 @@
                                 echo    '<ul>';
                                 foreach ($v->changes as $c)
                                 {
-                                    echo '<li>'.$c . ' <small><a href="#" class="toggle">(Veja mais)</a></small>' .'</li> ';
+                                    echo '<li>'.$c .'</li> ';
                                 }
+                                echo '<small><a href="#" class="toggle">(Veja mais)</a></small>';
                                 echo    '</ul>';
                                 echo '</dd>';
                                 
@@ -259,46 +260,31 @@
                 </div><!-- End .panel-heading -->
 
                 <div class="panel-body center">
-
+                    
                     <div class="vital-stats">
-                        <ul>
-                            <li>
-                                <?php echo anchor('requerimentos/em_analise', '<div class="item">
-                                        <div class="icon red"><i class="i-stack-empty"></i></div>
-                                        <span class="percent">'. $req_em_analise . '</span>
-                                        <span class="txt">Em análise</span>
-                                    </div>')?>                                
-                            </li>
-                            <li>
-                                <?php echo anchor('requerimentos/analisados', '<div class="item">
-                                        <div class="icon yellow"><i class="i-stack-down"></i></div>
-                                        <span class="percent">' . $req_analisado .'</span>
-                                        <span class="txt">Analisados</span>
-                                    </div>' ) ?>
-                            </li>
-                            <li>
-                                <?php echo anchor('requerimentos/protocolados', '<div class="item">
-                                        <div class="icon green"><i class="i-stack-up"></i></div>
-                                        <span class="percent">'. $req_protocolado .'</span>
-                                        <span class="txt">Protocolados</span>
-                                    </div>')?>
-                            </li>
-                            <li>
-                                <?php echo anchor('requerimentos/concluidos', '<div class="item">
-                                        <div class="icon blue"><i class="i-stack-checkmark"></i></div>
-                                        <span class="percent">'.$req_concluido.'</span>
-                                        <span class="txt">Concluídos</span>
-                                    </div>')?>                                
-                            </li>
-                            <li>
-                                <?php echo anchor('requerimentos/da_sessao', '<div class="item">
-                                        <div class="icon orange"><i class="i-stack-star"></i></div>
-                                        <span class="percent">'. $req_da_sessao . '</span>
-                                        <span class="txt">Da sessão</span>
-                                    </div>' )?>
-                            </li>
-                        </ul>
-                    </div><!-- End .vital-stats -->
+                        <ul>                            
+                        <?php
+
+                        foreach ($meses as $mes)
+                        {
+                            foreach ($mes as $key => $value)
+                            {
+                                if ($value != 0)
+                                {
+                                    echo '<li>';
+                                    echo anchor('requerimentos/por_data/'.$key, '<div class="item">
+                                        <div class="icon"><i class="i-calendar"></i></div>
+                                        <span class="percent">'. $value . '</span>
+                                        <span class="txt">'. $key .'</span>
+                                    </div>');
+                                    echo '</li>';
+                                }
+                            }
+                        }
+
+                        ?>
+                        </ul>                        
+                    </div>                    
 
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->

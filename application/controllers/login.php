@@ -78,7 +78,7 @@ class Login extends MY_Controller
             $this->data['total_requerimentos'] = $this->requerimento_model->count_all();
             $this->data['meus_requerimentos'] = $this->requerimento_model->count_meus_requerimentos($_SESSION['id_user']);
             $this->data['total_requerentes'] = $this->requerente_model->count_requerentes();
-            
+
             $this->load_view('layouts/inicio_operador');
         }
         else if ($_SESSION['autorizacao']== AUTORIZACAO_ADMINISTRADOR)
@@ -91,37 +91,52 @@ class Login extends MY_Controller
             $this->data['req_protocolado'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
             $this->data['req_concluido'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
             $this->data['req_da_sessao'] = $this->requerimento_model->count_da_sessao();
-            
-            $year = date("Y"); // 2011
-            $numericMonth = date("m"); // 01 through 12
-            
-            
-            $this->data['versao_atual'] = "1.1.4";
+
+            $meses = array();
+
+            for ($i=0; $i<12; $i++)
+            {
+                $inicio = date("Y-m-01", strtotime("-$i months") ) ;
+                $fim    = date("Y-m-t", strtotime("-$i months") ) ;
+
+                $count = $this->requerimento_model->count_requerimentos_by_mes($inicio, $fim);
+
+                array_push($meses, array(date("m/Y", strtotime("-$i months")) => $count ));
+            }
+            $this->data['meses'] = array_reverse($meses);
+
+            $this->data['versao_atual'] = "1.1.5";
 
             $json_str = '{"versoes":[
-                    {"versao":"1.1.4", "data":"27/02/2014", "changes": 
-                         ["Adicionado links no painel do administrador para requerimentos por etapa"                           
+                    {"versao":"1.1.5", "data":"11/03/2014", "changes":
+                         ["Mudanças no layout do painel do administrador",                          
+                          "Adicionado logotipo, botão maximizar e formatação de milhares nos mapas customizados",
+                          "Bairro é selecionado automaticamente na hora de criar novo requerimento",
+                          "Contagem, listagem e relatário de requerimentos por mês"
                           ]},
-                    {"versao":"1.1.3", "data":"26/02/2014", "changes": 
-                         ["Permite envio de fotos maiores e redimensionamento automático", 
+                    {"versao":"1.1.4", "data":"27/02/2014", "changes":
+                         ["Adicionado links no painel do administrador para requerimentos por etapa"
+                          ]},
+                    {"versao":"1.1.3", "data":"26/02/2014", "changes":
+                         ["Permite envio de fotos maiores e redimensionamento automático",
                           "Editor de ruas"
                           ]},
-                    {"versao":"1.1.2", "data":"19/02/2014", "changes": 
-                         ["Utilizando PHPMailer para envio de mensagens", 
-                          "Tela inicial do mobile foi corrigida", 
-                          "Corrigindo Tipo de requerimento ao visualizar informações do requerimento", 
-                          "Requerimentos cadastrados na sessão ficam separados dos demais", 
+                    {"versao":"1.1.2", "data":"19/02/2014", "changes":
+                         ["Utilizando PHPMailer para envio de mensagens",
+                          "Tela inicial do mobile foi corrigida",
+                          "Corrigindo Tipo de requerimento ao visualizar informações do requerimento",
+                          "Requerimentos cadastrados na sessão ficam separados dos demais",
                           "Incorporar iframe dos gráficos customizados foi corrigido"
                           ]},
-                    {"versao":"1.1.1", "data":"11/02/2014", "changes": 
-                         ["Criado sistema de versionamento do sistema", 
-                          "Contabilizando separadamente outros requerimentos", 
-                          "Adicionada possibilidade de escolha de formatação de unidades na criação de gráficos customizados", 
-                          "Adicionado link para requerente ao visualizar requerimento", 
+                    {"versao":"1.1.1", "data":"11/02/2014", "changes":
+                         ["Criado sistema de versionamento do sistema",
+                          "Contabilizando separadamente outros requerimentos",
+                          "Adicionada possibilidade de escolha de formatação de unidades na criação de gráficos customizados",
+                          "Adicionado link para requerente ao visualizar requerimento",
                           "Os gráficos customizados agora aceitam valores fracionados com vírgula"
                           ]}
                     ]}';
-            
+
             $jsonObj = json_decode($json_str);
             $this->data['versoes'] = $jsonObj->versoes;
 

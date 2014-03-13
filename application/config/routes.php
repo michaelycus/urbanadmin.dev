@@ -42,9 +42,10 @@ $route['default_controller'] = "login";
 $route['404_override'] = '';
 $route['logout'] = 'login/logout';
 
-$route['cadastro'] = 'front_cadastro';
-//$route['cadastro'] = 'front_cadastro';
-$route['cadastro/(:any)'] = "front_cadastro/$1";
+$route['configuracoes/bairros'] = 'bairros';
+$route['configuracoes/bairros/(:any)'] = 'bairros/$1';
+$route['configuracoes/ruas'] = 'ruas';
+$route['configuracoes/ruas/(:any)'] = 'ruas/$1';
 
 
 /* End of file routes.php */

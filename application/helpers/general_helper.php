@@ -703,7 +703,7 @@ EOF;
                             },
                             text: { content:  "$valor_formatado" , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">$bairro->nome </span><br />Valor: $valor"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">$bairro->nome </span><br />Valor: $valor_formatado"},
                         },
 EOF;
 
@@ -799,6 +799,66 @@ if (!function_exists('delete_chart'))
 
      return 'hsl('.$p1.', '. $p2.')';
  }
+ 
+ if (!function_exists('nome_mes'))
+{
+    function nome_mes($mes)
+    {
+        switch ($mes)
+        {
+            case 1:
+            case 01:
+                $nome = "Janeiro";
+                break;
+            case 2:
+            case 02:
+                $nome = "Fevereiro";
+                break;
+            case 3:
+            case 03:
+                $nome = "Março";
+                break;
+            case 4:
+            case 04:
+                $nome = "Abril";
+                break;
+            case 5:
+            case 05:
+                $nome = "Maio";
+                break;
+            case 6:
+            case 06:
+                $nome = "Junho";
+                break;
+            case 7:
+            case 07:
+                $nome = "Julho";
+                break;
+            case 8:
+            case 08:
+                $nome = "Agosto";
+                break;
+            case 9:
+            case 09:
+                $nome = "Setembro";
+                break;
+            case 10:
+                $nome = "Outubro";
+                break;
+            case 11:
+                $nome = "Novembro";
+                break;
+            case 12:
+                $nome = "Dezembro";
+                break;
+
+            default:
+                break;
+        }
+        
+        return $nome;
+    }
+}
 
 
  /*

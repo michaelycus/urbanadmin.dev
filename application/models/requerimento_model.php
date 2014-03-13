@@ -116,6 +116,32 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
+    
+    public function get_requerimentos_by_data($data_inicio, $data_fim)
+    {
+        $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
+                    categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente,
+                    r.nome AS nome_solicitante, r.telefone AS telefone');
+        $this->db->where("data_requerimento BETWEEN '$data_inicio' AND '$data_fim'");
+        $this->db->where('da_sessao !=', REQUERIMENTO_DA_SESSAO);
+        $this->db->where('id_requerente', REQUERENTE_PADRAO_ID);        
+        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+        $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
+        $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
+        $this->db->join('requerentes AS r', 'requerimentos.id_solicitante=r.id');
+
+        return $this->get_all();
+    }
+    
+    public function count_requerimentos_by_mes($data_inicio, $data_fim)
+    {
+        $this->db->where("data_requerimento BETWEEN '$data_inicio' AND '$data_fim'");
+        $this->db->where('da_sessao !=', REQUERIMENTO_DA_SESSAO);
+        $this->db->where('id_requerente', REQUERENTE_PADRAO_ID);
+        $this->db->from('requerimentos');
+
+        return $this->db->count_all_results();
+    }
 
     public function count_requerimentos_by_situacao($cat)
     {

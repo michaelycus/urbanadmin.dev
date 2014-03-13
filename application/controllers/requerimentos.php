@@ -66,6 +66,29 @@ class Requerimentos extends MY_Controller
         $this->load_view('requerimentos/da_sessao', TRUE);
     }
     
+    public function por_data($mes,$ano)
+    {
+        $data_inicio = date("$ano-$mes-01");
+	$data_fim    = date("$ano-$mes-t" );
+        
+        $this->data['mes'] = $mes;
+        $this->data['ano'] = $ano;
+        $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_data($data_inicio, $data_fim);
+        
+        $this->load_view('requerimentos/por_data', TRUE);
+    }
+    
+    public function relatorio_por_mes($mes,$ano)
+    {
+        $data_inicio = date("$ano-$mes-01");
+	$data_fim    = date("$ano-$mes-t" );
+                
+        $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_data($data_inicio, $data_fim);
+        $this->data['titulo'] = 'Requerimentos no mês de ' . nome_mes($mes) . ' de ' . $ano;        
+        
+        $this->load->view('requerimentos/relatorio_por_mes', $this->data);
+    }
+    
     // decrepted
     public function outros_requerimentos()
     {
