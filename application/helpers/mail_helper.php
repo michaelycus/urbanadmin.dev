@@ -26,6 +26,9 @@ if (!function_exists('send_notification')) {
             {
                 $mail->Subject = "Requerimento Analisado";
                 $mail->Body .= "<p>Seu requerimento será analisado pelo nosso gabinete e em breve protocolado na Prefeitura Municipal de Lajeado.</p>";
+                $mail->Body .= "<p>Telefone do gabinete: (51) 3982 1155<br />";
+                $mail->Body .= "Site: <a href='http://ranzi.com.br'>ranzi.com.br</a><br />";
+                $mail->Body .= "Facebook: <a href='facebook.com/ranziranzi'>facebook.com/ranziranzi</a></p>";
             }
             else if ($requerimento->situacao == REQUERIMENTO_SITUACAO_PROTOCOLADO)
             {
@@ -40,6 +43,9 @@ if (!function_exists('send_notification')) {
                 $mail->Body .= "<li> Nome/CPF/CNPJ: 97623733087 </li>";
                 $mail->Body .= "</ul>";
                 $mail->Body .= "<p>Para acessar o sistema da prefeitura, clique <a href='http://www.lajeado.rs.gov.br/home/pagina.asp?titulo=Situa%E7%E3o%20do%20Processo&categoria=Administra%E7%E3o&codigoCategoria=961&imagemCategoria=&INC=includes/show_servicos.asp&conteudo=3451&servico=70043' target='_blank'>aqui</a></p>";
+                $mail->Body .= "<p>Telefone do gabinete: (51) 3982 1155<br />";
+                $mail->Body .= "Site: <a href='http://ranzi.com.br'>ranzi.com.br</a><br />";
+                $mail->Body .= "Facebook: <a href='facebook.com/ranziranzi'>facebook.com/ranziranzi</a></p>";
             }
             
             $mail->Body .= "<p>Atenciosamente,<br/>";

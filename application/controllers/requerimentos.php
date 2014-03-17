@@ -335,7 +335,8 @@ class Requerimentos extends MY_Controller
 
         send_notification($id);
 
-        redirect('requerimentos/visualizar/'.$id);
+//        redirect('requerimentos/visualizar/'.$id);
+        redirect('requerimentos/listar_requerimentos');
     }
 
     public function retornar_situacao($id,$situacao)
@@ -344,7 +345,8 @@ class Requerimentos extends MY_Controller
 
         $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
 
-        redirect('requerimentos/visualizar/'.$id);
+//        redirect('requerimentos/visualizar/'.$id);
+        redirect('requerimentos/listar_requerimentos');
     }
 
     public function gravar_expediente($id, $expediente, $ano)

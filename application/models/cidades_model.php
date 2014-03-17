@@ -83,27 +83,27 @@ class Cidades_model extends CI_Model
         return $this->db->get()->row();
     }
     
-    function delete_rua_from_bairro($rua)
-    {
-        $this->db->delete('rua_bairro', array('id_rua' => $rua)); 
-    }
+//    function delete_rua_from_bairro($rua)
+//    {
+//        $this->db->delete('rua_bairro', array('id_rua' => $rua)); 
+//    }
+//    
+//    function insert_rua_bairros($rua, $bairros)
+//    {
+//        foreach ($bairros as $bairro)
+//        {
+//            $this->db->insert('rua_bairro', array('id_rua' => $rua, 'id_bairro' => $bairro)); 
+//        }
+//    }
     
-    function insert_rua_bairros($rua, $bairros)
-    {
-        foreach ($bairros as $bairro)
-        {
-            $this->db->insert('rua_bairro', array('id_rua' => $rua, 'id_bairro' => $bairro)); 
-        }
-    }
+//    function insert_rua($data)
+//    {
+//        $this->db->insert('ruas', $data); 
+//    }
     
-    function insert_rua($data)
-    {
-        $this->db->insert('ruas', $data); 
-    }
-    
-    function delete_rua($id)
-    {
-        $this->db->delete('rua_bairro', array('id_rua' => $id)); 
-        $this->db->delete('ruas', array('id' => $id)); 
-    }
+//    function delete_rua($id)
+//    {
+//        $this->db->delete('rua_bairro', array('id_rua' => $id)); 
+//        $this->db->delete('ruas', array('id' => $id)); 
+//    }
 }

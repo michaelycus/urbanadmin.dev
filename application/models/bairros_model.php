@@ -21,4 +21,12 @@ class Bairros_model extends MY_Model
         $this->db->where('id !=', -1);
         return $this->get_all();
     }
+    
+    public function get_bairro_by_rua($id_rua)
+    {
+        return $this->db->select('rua_bairro.*')
+                        ->from('rua_bairro')                        
+                        ->where('id_rua', $id_rua)                        
+                        ->get()->result();
+    }
 }

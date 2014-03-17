@@ -23,70 +23,83 @@ class Ruas extends MY_Controller
         $this->load_config_view('configuracoes/ruas/listar_ruas');
     }
     
-//    public function editar_rua()
-//    {
-//        $this->data['ruas'] = $this->cidades_model->get_ruas();
-//        $this->data['bairros'] = $this->bairros_model->get_bairros();
-//        
-//        $this->load_config_view('bairros/editar_rua');
-//    }
-    
-    public function salvar_edicao()
-    {        
-        // deletando rua
-        $this->cidades_model->delete_rua_from_bairro($this->input->post('rua'));
-        
-        // inserindo novos bairros
-        $this->cidades_model->insert_rua_bairros($this->input->post('rua'), 
-                                                 $this->input->post('bairros'));
-        
-        echo json_encode('Edição de bairros realizada com sucesso!');
-    }
-    
     public function cadastrar_rua()
     {
-        $this->form_validation->set_rules($this->cidades_model->validation);
+        $this->form_validation->set_rules($this->ruas_model->validation);
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('nome'),$this->input->post());
-
-            $this->cidades_model->insert_rua($data);
+            $data = elements(array('nome', 'lei_decreto'),$this->input->post());
+            $bairros = $this->input->post('bairros');
+                    
+            $this->ruas_model->insert_rua($data, $bairros);
             
             $this->session->set_userdata('rua_cadastrada','Rua cadastrada com sucesso!');            
             
             redirect('configuracoes/ruas/cadastrar_rua');
         endif;
         
+        $this->data['bairros'] = $this->bairros_model->get_bairros();
+        
         $this->load_config_view('configuracoes/ruas/cadastrar_rua');
     }
     
     public function editar_rua($id)
     {
-        $this->form_validation->set_rules($this->bairros_model->validation);
+        $this->form_validation->set_rules($this->ruas_model->validation);
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('nome'),$this->input->post());
+            $data = elements(array('nome', 'lei_decreto'),$this->input->post());
 
-            $this->bairros_model->update($this->input->post('id'), $data);
-            $this->session->set_userdata('bairro_editado','Bairro editado com sucesso!');
-            generate_charts();
+            $this->ruas_model->update($this->input->post('id'), $data);            
+            
+            // deletando rua
+            $this->ruas_model->delete_rua_from_bairro($this->input->post('id'));
 
-            redirect('configuracoes/bairros/editar_bairro/'.$this->input->post('id'));
+            // inserindo novos bairros
+            $this->ruas_model->insert_rua_bairros($this->input->post('id'), 
+                                                  $this->input->post('bairros'));
+            
+            $this->session->set_userdata('rua_editada','Rua editada com sucesso!');
+
+            redirect('configuracoes/ruas/editar_rua/'.$this->input->post('id'));
         endif;
 
         if ($this->input->post('id')!=NULL)
             $id = $this->input->post('id');
 
-        $this->data['bairro'] = $this->bairros_model->get($id);
+        $this->data['rua'] = $this->ruas_model->get($id);        
+        $this->data['bairros'] = $this->bairros_model->get_bairros();
+        $this->data['bairros_selecionados'] = $this->bairros_model->get_bairro_by_rua($id);
 
-        $this->load_config_view('configuracoes/bairros/editar_bairro');
+        $this->load_config_view('configuracoes/ruas/editar_rua');
     }
     
     public function excluir_rua($id)
     {
-        $this->cidades_model->delete_rua($id);
+        $this->ruas_model->delete($id);
+        $this->ruas_model->delete_rua_from_bairro($id);
         
         $this->session->set_userdata('rua_excluida','Rua excluída com sucesso!');
-        redirect('bairros/editar_rua', TRUE);
+        
+        redirect('configuracoes/ruas/listar_ruas');
     }
+    
+    
+//    public function salvar_edicao()
+//    {        
+//        // deletando rua
+//        $this->cidades_model->delete_rua_from_bairro($this->input->post('rua'));
+//        
+//        // inserindo novos bairros
+//        $this->cidades_model->insert_rua_bairros($this->input->post('rua'), 
+//                                                 $this->input->post('bairros'));
+//        
+//        echo json_encode('Edição de bairros realizada com sucesso!');
+//    }
+//    
+//    
+//    
+    
+    
+    
 }

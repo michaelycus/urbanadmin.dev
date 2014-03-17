@@ -44,8 +44,11 @@ $route['logout'] = 'login/logout';
 
 $route['configuracoes/bairros'] = 'bairros';
 $route['configuracoes/bairros/(:any)'] = 'bairros/$1';
+$route['configuracoes/bairros/(:any)/(:any)'] = 'bairros/$1/$2';
+
 $route['configuracoes/ruas'] = 'ruas';
 $route['configuracoes/ruas/(:any)'] = 'ruas/$1';
+$route['configuracoes/ruas/(:any)/(:any)'] = 'ruas/$1/$2';
 
 
 /* End of file routes.php */
