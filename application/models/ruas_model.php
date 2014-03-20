@@ -44,6 +44,19 @@ class Ruas_model extends MY_Model
         $this->db->delete('rua_bairro', array('id_rua' => $rua)); 
     }
     
+    function get_ruas_by_bairro($id_bairro)
+    {
+        $this->db->select('requerimentos.*');
+        $this->db->join('rua_bairro', 'rua_bairro.id_rua = ruas.id AND rua_bairro.id_bairro='.$id_bairro);
+        
+        return $this->get_all();
+        
+//        return $this->db->select('ruas.id, ruas.nome')
+//                        ->from('ruas')
+//                        ->join('rua_bairro', 'rua_bairro.id_rua = ruas.id AND rua_bairro.id_bairro='.$id_bairro)
+//                        ->get()->result();
+    }
+    
 //    function delete_rua($id)
 //    {
 //        $this->db->delete($id); 

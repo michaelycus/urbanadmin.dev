@@ -50,6 +50,14 @@ $route['configuracoes/ruas'] = 'ruas';
 $route['configuracoes/ruas/(:any)'] = 'ruas/$1';
 $route['configuracoes/ruas/(:any)/(:any)'] = 'ruas/$1/$2';
 
+$route['configuracoes/categorias_requerimento'] = 'categorias_requerimento';
+$route['configuracoes/categorias_requerimento/(:any)'] = 'categorias_requerimento/$1';
+$route['configuracoes/categorias_requerimento/(:any)/(:any)'] = 'categorias_requerimento/$1/$2';
+
+$route['configuracoes/secretarias'] = 'secretarias';
+$route['configuracoes/secretarias/(:any)'] = 'secretarias/$1';
+$route['configuracoes/secretarias/(:any)/(:any)'] = 'secretarias/$1/$2';
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

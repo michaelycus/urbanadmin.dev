@@ -164,7 +164,7 @@ if ($_SESSION['autorizacao'] != AUTORIZACAO_ADMINISTRADOR)
                         <ul class="nav nav-list">
                             <?php
                             echo '<li>'.
-                                anchor('configuracoes/bairros/listar_bairros', '<span class="icon"><i class="icon20 i-home-11"></i></span>
+                                anchor('configuracoes/bairros/listar_bairros', '<span class="icon"><i class="icon20 i-office"></i></span>
                                                                                 <span class="txt">Bairros</span>').
                             '</li>';
 
@@ -172,16 +172,17 @@ if ($_SESSION['autorizacao'] != AUTORIZACAO_ADMINISTRADOR)
                                 anchor('configuracoes/ruas/listar_ruas', '<span class="icon"><i class="icon20 i-road"></i></span>
                                                                           <span class="txt">Ruas</span>').
                             '</li>';
+                            
+                            echo '<li>'.
+                                anchor('configuracoes/secretarias/listar_secretarias', '<span class="icon"><i class="icon20 i-tree-5"></i></span>
+                                                                                        <span class="txt">Secretarias</span>').
+                            '</li>';
 
                             echo '<li>'.
-                                anchor('configuracoes/categorias_requerimento/listar_categorias', '<span class="icon"><i class="icon20 i-road"></i></span>
+                                anchor('configuracoes/categorias_requerimento/listar_categorias', '<span class="icon"><i class="icon20 i-tag-3"></i></span>
                                                                             <span class="txt">Categorias requerimento</span>').
                             '</li>';
                             
-                            echo '<li>'.
-                                anchor('configuracoes/secretarias/listar_secretarias', '<span class="icon"><i class="icon20 i-road"></i></span>
-                                                                                        <span class="txt">Secretarias</span>').
-                            '</li>';
                             ?>
                         </ul>
                     </nav> <!-- End #mainnav -->
@@ -200,6 +201,10 @@ if ($_SESSION['autorizacao'] != AUTORIZACAO_ADMINISTRADOR)
                                     '>'.anchor('configuracoes/bairros/listar_bairros', '<i class="icon16 i-office"></i>') .'</li>');
                             echo '<li'. ($cat=='ruas' ? ' class="active"><i class="icon16 i-road"></i></li>' :
                                     '>'.anchor('configuracoes/ruas/listar_ruas', '<i class="icon16 i-road"></i>') .'</li>');
+                            echo '<li'. ($cat=='secretarias' ? ' class="active"><i class="icon16 i-tree-5"></i></li>' :
+                                    '>'.anchor('configuracoes/secretarias/listar_secretarias', '<i class="icon16 i-tree-5"></i>') .'</li>');
+                            echo '<li'. ($cat=='categorias_requerimento' ? ' class="active"><i class="icon16 i-tag-3"></i></li>' :
+                                    '>'.anchor('configuracoes/categorias_requerimento/listar_categorias', '<i class="icon16 i-tag-3"></i>') .'</li>');
                             ?>
                         </ul>
                     </div>

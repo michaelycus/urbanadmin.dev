@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div id="heading" class="page-header">
-        <h1><i class="icon20 i-home-8"></i> Cadastrar bairro</h1>
+        <h1><i class="icon20 i-office"></i> Cadastrar bairro</h1>
     </div>
 
     <div class="row">
@@ -9,7 +9,7 @@
                 <div class="panel-body">
 
                     <?php
-                    echo form_open('bairros/cadastrar_bairro', 'role="form" class="bs-docs-example form-horizontal"');
+                    echo form_open('configuracoes/bairros/cadastrar_bairro', 'role="form" class="bs-docs-example form-horizontal"');
 
                     echo validation_errors('<div class="alert alert-error">','</div>');
                     if ($this->session->userdata('bairro_cadastrado'))

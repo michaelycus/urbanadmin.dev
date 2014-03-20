@@ -9,6 +9,8 @@ class Bairros_model extends MY_Model
             'rules' => 'trim|required|max_length[64]',
         )
     );
+    
+    protected $soft_delete = TRUE;
 
     function __construct()
     {

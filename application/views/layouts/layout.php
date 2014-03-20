@@ -276,29 +276,6 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="icon"><i class="icon20 i-home-11"></i></span>
-                                    <span class="txt">Bairros</span>
-                                </a>
-                                <ul class="sub<?php echo ($cat=='bairros' ? ' show' : '')?>">
-                                    <li>
-                                        <?php echo anchor('bairros/cadastrar_bairro',
-                                                '<span class="icon"><i class="icon20 i-home-8"></i></span>
-                                                 <span class="txt">Cadastrar</span>');?>
-                                    </li>
-                                    <li>
-                                        <?php echo anchor('bairros/listar_bairros',
-                                                '<span class="icon"><i class="icon20 i-office"></i></span>
-                                                 <span class="txt">Listar</span>');?>
-                                    </li>
-                                    <li>
-                                        <?php echo anchor('bairros/editar_rua',
-                                                '<span class="icon"><i class="icon20 i-road"></i></span>
-                                                 <span class="txt">Editar rua</span>');?>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">
                                     <span class="icon"><i class="icon20 i-stats-up"></i></span>
                                     <span class="txt">Gráficos</span>
                                 </a>
@@ -399,9 +376,6 @@
 
                                 echo '<li'. ($cat=='requerentes' ? ' class="active"><i class="icon16 i-users"></i></li>' :
                                         '>'.anchor('requerentes/da_cidade', '<i class="icon16 i-users"></i>') .'</li>');
-
-                                echo '<li'. ($cat=='bairros' ? ' class="active"><i class="icon16 i-office"></i></li>' :
-                                        '>'.anchor('bairros/listar_bairros', '<i class="icon16 i-office"></i>') .'</li>');
 
                                 echo '<li'. ($cat=='graficos' ? ' class="active"><i class="icon16 i-stats-up"></i></li>' :
                                         '>'.anchor('graficos/populacao_por_bairro', '<i class="icon16 i-stats-up"></i>').'</li>');

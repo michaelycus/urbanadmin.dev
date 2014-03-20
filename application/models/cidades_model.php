@@ -10,12 +10,11 @@ class Cidades_model extends CI_Model
         )
     );
     
-    protected $soft_delete = TRUE;
-    
     function __construct()
     {
         parent::__construct();
         $this->_database = $this->db;
+        $this->_table = 'cidades';
     }
 
     function getEstados()
@@ -33,31 +32,7 @@ class Cidades_model extends CI_Model
                         ->join('cidades', 'cidades.id_uf = estados.id')
                         ->get()->result();
     }
-
-    function getRuas($id_bairro = null)
-    {
-        return $this->db->select('ruas.id, ruas.nome')
-                        ->from('ruas')
-                        ->join('rua_bairro', 'rua_bairro.id_rua = ruas.id AND rua_bairro.id_bairro='.$id_bairro)
-                        ->get()->result();
-    }
     
-    function get_bairro_by_rua($id_rua)
-    {
-        return $this->db->select('rua_bairro.*')
-                        ->from('rua_bairro')                        
-                        ->where('id_rua', $id_rua)                        
-                        ->get()->result();
-    }
-    
-    function get_ruas()
-    {
-        return $this->db->select('ruas.*')
-                        ->from('ruas')                        
-                        ->order_by('nome')                        
-                        ->get()->result();
-    }
-
     function get_estado($id)
     {
         $this->db->from('estados');
@@ -74,14 +49,42 @@ class Cidades_model extends CI_Model
         return $this->db->get()->row();
     }
 
-    function get_rua($id)
+    TENTAR REMOVER ISSO MAANHA
+    
+    function getRuas($id_bairro = null)
     {
-        $this->db->from('ruas');
-        $this->db->order_by('nome');
-        $this->db->where('id', $id);
-
-        return $this->db->get()->row();
+        return $this->db->select('ruas.id, ruas.nome')
+                        ->from('ruas')
+                        ->join('rua_bairro', 'rua_bairro.id_rua = ruas.id AND rua_bairro.id_bairro='.$id_bairro)
+                        ->get()->result();
     }
+    
+//    function get_bairro_by_rua($id_rua)
+//    {
+//        return $this->db->select('rua_bairro.*')
+//                        ->from('rua_bairro')                        
+//                        ->where('id_rua', $id_rua)                        
+//                        ->get()->result();
+//    }
+    
+//    function get_ruas()
+//    {
+//        return $this->db->select('ruas.*')
+//                        ->from('ruas')                        
+//                        ->order_by('nome')                        
+//                        ->get()->result();
+//    }
+
+    
+
+//    function get_rua($id)
+//    {
+//        $this->db->from('ruas');
+//        $this->db->order_by('nome');
+//        $this->db->where('id', $id);
+//
+//        return $this->db->get()->row();
+//    }
     
 //    function delete_rua_from_bairro($rua)
 //    {

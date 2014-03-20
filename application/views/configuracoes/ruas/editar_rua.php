@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div id="heading" class="page-header">
-        <h1><i class="icon20 i-home-8"></i> Editar rua</h1>
+        <h1><i class="icon20 i-road"></i> Editar rua</h1>
     </div>
 
     <div class="row">
@@ -87,47 +87,3 @@
     </div><!-- End .row-fluid  -->    
     
 </div>
-
-
-<!--<script type="text/javascript" src="<?php echo base_url() . 'js/ruas.js'; ?>"></script>
-<script type="text/javascript">
-    var path = '<?php echo site_url(); ?>';
-    
-    $('#bt_salvar').click(function(){ 
-        
-        var val_bairros = [];
-        $(':checkbox:checked').each(function(i){
-          val_bairros[i] = $(this).val();
-        });
-        
-        var form_data = {
-            rua: $('#select1').val(),
-            bairros: val_bairros
-        };        
-
-        $.ajax({
-            url: '<?php echo base_url('bairros/salvar_edicao');?>',
-            type:'POST',
-            data: form_data,
-            dataType: 'json',
-            success: function(output_string){
-                    $('#msg').removeClass('hidden').append(output_string).delay(4000).fadeOut(1000);
-                } // End of success function of ajax form
-            }); // End of ajax call  
-    });    
-    
-    $('#bt_excluir').click(function(e){   
-    
-        e.preventDefault();
-        bootbox.confirm("Excluir esse item?", function(confirmed) {
-            if(confirmed) {
-                var id = $('#select1').val();
-                if (id.length != 0)
-                {
-                    window.location = "<?php echo base_url() . 'bairros/excluir_rua/';?>" + id + "";
-                }
-            }
-        });
-    });    
-    
-</script>-->

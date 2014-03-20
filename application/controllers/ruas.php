@@ -7,7 +7,6 @@ class Ruas extends MY_Controller
         parent::__construct();
         $this->load->model('bairros_model');
         $this->load->model('ruas_model');
-        $this->load->model('cidades_model');
     }
 
     public function index()
@@ -82,6 +81,26 @@ class Ruas extends MY_Controller
         $this->session->set_userdata('rua_excluida','Rua excluída com sucesso!');
         
         redirect('configuracoes/ruas/listar_ruas');
+    }
+    
+    public function get_ruas_ajax($id)
+    {
+//        $ruas = $this->cidades_model->getRuas($id);
+        $ruas = $this->ruas_model->get_ruas_by_bairro($id);
+
+        if (empty($ruas))
+            return '{ "nome": "Nenhuma rua encontrada" }';
+
+        $arr_rua = array();
+
+        foreach ($ruas as $rua)
+        {
+            $arr_rua[] = '{"id":' . $rua->id . ',"nome":"' . $rua->nome . '"}';
+        }
+
+        echo '[ ' . implode(",", $arr_rua) . ']';
+
+        return;
     }
     
     

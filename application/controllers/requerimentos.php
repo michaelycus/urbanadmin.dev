@@ -7,7 +7,7 @@ class Requerimentos extends MY_Controller
         parent::__construct();
         $this->load->model('requerimento_model');
         $this->load->model('bairros_model');
-        $this->load->model('cidades_model');
+        $this->load->model('ruas_model');
         $this->load->model('requerente_model');
         $this->load->model('categorias_requerimento_model');
     }
@@ -284,7 +284,8 @@ class Requerimentos extends MY_Controller
         $this->data['requerimento'] = $this->requerimento_model->get($id);
 
         if ($this->data['requerimento']->id_rua != 0)
-            $this->data['ruas'] = $this->cidades_model->getRuas($this->data['requerimento']->id_bairro);
+            $this->data['ruas'] = $this->ruas_model->get_ruas_by_bairro($this->data['requerimento']->id_bairro);
+//            $this->data['ruas'] = $this->cidades_model->getRuas($this->data['requerimento']->id_bairro);
 
         $this->load_view('requerimentos/editar_requerimento');
     }
@@ -322,7 +323,8 @@ class Requerimentos extends MY_Controller
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
 
         if ($requerimento->id_rua != 0)
-            $this->data['rua'] = $this->cidades_model->get_rua($requerimento->id_rua);
+            $this->data['rua'] = $this->ruas_model->get($requerimento->id_rua);
+//            $this->data['rua'] = $this->cidades_model->get_rua($requerimento->id_rua);
 
         $this->load_view('requerimentos/visualizar');
     }

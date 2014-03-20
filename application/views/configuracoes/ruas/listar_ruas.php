@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div id="heading" class="page-header">
-        <h1><i class="icon20 i-office"></i> Listar ruas</h1>
+        <h1><i class="icon20 i-road"></i> Listar ruas</h1>
     </div>
     
     <div class="row">
