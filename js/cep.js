@@ -10,9 +10,8 @@ $(function() {
 
         resetaCombo('cidade');
 
-        $.getJSON(path + '/cep/getCidades/' + estado, function(data) {
+        $.getJSON(path + 'cep/get_cidades_ajax/' + estado, function(data) {
 
-            //	console.log(data);
             var option = new Array();
 
             $.each(data, function(i, obj) {

@@ -1,7 +1,6 @@
 // funcao para retornar as ruas conforme o combo dos bairros
 
 $(function() {
-
     $("select[name=id_bairro]").change(function() {
 
         bairro = $(this).val();
@@ -11,13 +10,8 @@ $(function() {
 
         resetaCombo('id_rua');
         
-        alert('11111');
-        
-        $.getJSON(path + '/cep/getRuas/' + bairro, function(data) {
-//        $.getJSON(path + '/ruas/get_ruas_ajax/' + bairro, function(data) {
+        $.getJSON(path + 'ruas/get_ruas_ajax/' + bairro, function(data) {
             
-            alert('2222');
-
             //	console.log(data);
             var option = new Array();
             

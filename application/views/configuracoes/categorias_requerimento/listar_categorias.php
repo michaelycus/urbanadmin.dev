@@ -17,7 +17,7 @@
         <?php
         $tmpl = array(
             'table_open' => '<table cellpadding="0" cellspacing="0" border="0"
-                              class="table table-striped table-bordered table-hover" id="dataTable">',
+                              class="table table-striped table-bordered table-hover" id="categorias">',
             'table_close' => '</table>'
         );
 
@@ -29,14 +29,17 @@
         }
 
         $this->table->set_template($tmpl);
-        $this->table->set_heading('Categoria', 'Descrição', 'Secretaria', '');
+        $this->table->set_heading('','Categoria', 'Descrição', 'Secretaria', '');
 
         if (!empty($categorias))
         {
             foreach ($categorias as $categoria):
-                $this->table->add_row(array('data'=>'<small><strong>'.$categoria->nome.'</strong>'.'</small>'),
+                $this->table->add_row(array('data'=>'<div style="display:none;">'. ( $categoria->ordem < 10 ? '0' : ''). $categoria->ordem.'</div>'.                                                                            
+                                                    anchor('configuracoes/categorias_requerimento/diminuir_ordem/'.$categoria->id,'<i class="i-arrow-up-2"></i>') .' '.
+                                                    anchor('configuracoes/categorias_requerimento/aumentar_ordem/'.$categoria->id,'<i class="i-arrow-down-2"></i>'), 'style'=>'width:35px'),
+                                      array('data'=>'<small><strong>'.$categoria->nome.'</strong>'.'</small>'),
                                       array('data'=>'<small>'.$categoria->descricao.'</small>'),
-                                      array('data'=>'<small>'. $categoria->nome_secretaria .'</small>'),
+                                      array('data'=>'<small>'. $categoria->nome_secretaria .'</small>'),                                      
                                       array('data'=>anchor('configuracoes/categorias_requerimento/editar_categoria/'.$categoria->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
                                                     anchor('configuracoes/categorias_requerimento/excluir_categoria/'.$categoria->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:150px'));
             endforeach;

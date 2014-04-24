@@ -65,7 +65,7 @@ class Login extends MY_Controller
         }
 
         $this->data['bairros'] = $this->bairros_model->get_all();
-        $this->data['estados'] = $this->cidades_model->getEstados();
+        $this->data['estados'] = $this->cidades_model->get_estados();
 
         $this->load_front_view('login_view');
     }
@@ -105,9 +105,13 @@ class Login extends MY_Controller
             }
             $this->data['meses'] = array_reverse($meses);
 
-            $this->data['versao_atual'] = "1.1.5";
+            $this->data['versao_atual'] = "1.2.0";
 
             $json_str = '{"versoes":[
+                    {"versao":"1.2.0", "data":"24/04/2014", "changes":
+                         ["Nova versão transfere as opções de configuração do sistema para uma nova tela",
+                          "Possibilidade de cadastrar Secretarias e Categorias de Requerimento"
+                          ]},
                     {"versao":"1.1.5", "data":"11/03/2014", "changes":
                          ["Mudanças no layout do painel do administrador",                          
                           "Adicionado logotipo, botão maximizar e formatação de milhares nos mapas customizados",
@@ -185,7 +189,7 @@ class Login extends MY_Controller
         endif;
 
         $this->data['bairros'] = $this->bairros_model->get_bairros();
-        $this->data['estados'] = $this->cidades_model->getEstados();
+        $this->data['estados'] = $this->cidades_model->get_estados();
 
         $this->data['view'] = 'reg';
 

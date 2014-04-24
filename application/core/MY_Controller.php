@@ -21,7 +21,7 @@ class MY_Controller extends CI_Controller
 
         if ( !$this->input->is_ajax_request())
         {
-//            $this->output->enable_profiler(ENVIRONMENT == 'development');
+            $this->output->enable_profiler(ENVIRONMENT == 'development');
         }
     }
 

@@ -30,7 +30,10 @@
             <div class="panel panel-default">
                 <div class="panel-body">
 
-                <?php
+                <?php                
+                
+                
+                
                 echo form_open_multipart('requerimentos/cadastrar_requerimento', 'class="bs-docs-example form-horizontal"');
 
                 if (!empty($error))

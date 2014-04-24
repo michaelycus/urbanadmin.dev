@@ -115,7 +115,7 @@ class Requerimentos extends MY_Controller
         $this->data['bairros'] = $this->bairros_model->get_bairros();
         $this->data['requerentes'] = $this->requerente_model->get_vereadores();
         $this->data['solicitantes'] = $this->requerente_model->get_all();
-        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
+        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->order_by('ordem')->get_all();
 
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento',
@@ -159,7 +159,7 @@ class Requerimentos extends MY_Controller
                                'maintain_ratio' => true,
                                'width' => 1024,
                                'height' => 1024
-                           );
+                            );
 
                             $this->image_lib->initialize($config);
                             $this->image_lib->resize();
@@ -210,7 +210,7 @@ class Requerimentos extends MY_Controller
         $this->data['bairros'] = $this->bairros_model->get_bairros();
         $this->data['solicitantes'] = $this->requerente_model->get_all();
         $this->data['requerentes'] = $this->requerente_model->get_vereadores();
-        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
+        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->order_by('ordem')->get_all();
 
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente','da_sessao'),$this->input->post());
@@ -285,7 +285,6 @@ class Requerimentos extends MY_Controller
 
         if ($this->data['requerimento']->id_rua != 0)
             $this->data['ruas'] = $this->ruas_model->get_ruas_by_bairro($this->data['requerimento']->id_bairro);
-//            $this->data['ruas'] = $this->cidades_model->getRuas($this->data['requerimento']->id_bairro);
 
         $this->load_view('requerimentos/editar_requerimento');
     }
@@ -320,16 +319,15 @@ class Requerimentos extends MY_Controller
         $this->data['bairro'] = $this->bairros_model->get($requerimento->id_bairro);
         $this->data['requerente'] = $this->requerente_model->get($requerimento->id_requerente);
         $this->data['solicitante'] = $this->requerente_model->get($requerimento->id_solicitante);
-        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
+        $this->data['cat_requerimento'] = $this->categorias_requerimento_model->get($requerimento->cat_requerimento);
 
         if ($requerimento->id_rua != 0)
             $this->data['rua'] = $this->ruas_model->get($requerimento->id_rua);
-//            $this->data['rua'] = $this->cidades_model->get_rua($requerimento->id_rua);
 
         $this->load_view('requerimentos/visualizar');
     }
 
-    public function avancar_situacao($id,$situacao)
+    public function avancar_situacao($id, $situacao)
     {
         $this->requerimento_model->avancar_situacao($id, $situacao);
 
@@ -337,17 +335,15 @@ class Requerimentos extends MY_Controller
 
         send_notification($id);
 
-//        redirect('requerimentos/visualizar/'.$id);
         redirect('requerimentos/listar_requerimentos');
     }
 
-    public function retornar_situacao($id,$situacao)
+    public function retornar_situacao($id, $situacao)
     {
         $this->requerimento_model->retornar_situacao($id, $situacao);
 
         $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
 
-//        redirect('requerimentos/visualizar/'.$id);
         redirect('requerimentos/listar_requerimentos');
     }
 
@@ -436,5 +432,25 @@ class Requerimentos extends MY_Controller
         $pdf->Line(10, 285, 200, 285);
 
         $pdf->Output();
+    }
+    
+    function get_requerimentos_ajax($id_bairro)
+    {
+        $requerimentos = $this->requerimento_model->get_requerimentos_by_bairro($id_bairro);
+
+        if (empty($requerimentos))
+            return '{ "descricao": "Nenhum requerimento encontrado" }';
+
+        $arr_req = array();
+
+        foreach ($requerimentos as $req)
+        {
+            $desc = trim(preg_replace('/\s+/', ' ', $req->descricao));
+            $arr_req[] = '{"id":' . $req->id . ',"descricao":"' . substr($desc, 0, 128)  . '"}';
+        }
+
+        echo '[ ' . implode(",", $arr_req) . ']';
+
+        return;
     }
 }

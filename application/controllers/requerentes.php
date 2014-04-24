@@ -87,7 +87,7 @@ class Requerentes extends MY_Controller
         $this->data['bairros'] = $this->bairros_model->get_bairros();
 
         $this->load->model('cidades_model');
-        $this->data['estados'] = $this->cidades_model->getEstados();
+        $this->data['estados'] = $this->cidades_model->get_estados();
 
         $this->load_view('requerentes/cadastrar_requerente', TRUE);
     }
@@ -128,10 +128,10 @@ class Requerentes extends MY_Controller
         $this->data['bairros'] = $this->bairros_model->get_bairros();
 
         $this->load->model('cidades_model');
-        $this->data['estados'] = $this->cidades_model->getEstados();
+        $this->data['estados'] = $this->cidades_model->get_estados();
 
         if ($this->data['requerente']->estado != 0)
-            $this->data['cidades'] = $this->cidades_model->getCidades($this->data['requerente']->estado);
+            $this->data['cidades'] = $this->cidades_model->get_cidades($this->data['requerente']->estado);
 
         $this->load_view('requerentes/editar_requerente');
     }
@@ -150,47 +150,8 @@ class Requerentes extends MY_Controller
         }
     }
 
-    function getCidades($id)
-    {
-        $this->load->model('cidades_model');
-
-        $cidades = $this->cidades_model->getCidades($id);
-
-        if (empty($cidades))
-            return '{ "nome": "Nenhuma cidade encontrada" }';
-
-        $arr_cidade = array();
-
-        foreach ($cidades as $cidade)
-        {
-            $arr_cidade[] = '{"id":' . $cidade->id . ',"nome":"' . $cidade->nome . '"}';
-        }
-
-        echo '[ ' . implode(",", $arr_cidade) . ']';
-
-        return;
-    }
-
     public function visualizar($id)
-    {
-//        if ( $this->input->post('user_email') && $this->input->post('user_message') )
-//        {
-//            $message = send_message($this->input->post('user_email'), $this->input->post('user_message'));
-//
-//            $this->session->set_userdata('mensagem_enviada',$message.'xxxx');
-////            $this->session->set_userdata('mensagem_enviada','Mensagem enviada com sucesso!');
-//        }
-//        
-//        else
-//        {            
-//            $user = $this->input->post('user_email');
-//            $msg = $this->input->post('user_message');
-////            $this->session->set_userdata('mensagem_enviada',"nem entrou aki");
-//            $this->session->set_userdata('mensagem_enviada',$this->input->post('id') . ' = '. $id . ' - ' .$user . ' e ' . $msg );
-//        }
-        
-        
-        
+    {   
         $this->load->model('requerimento_model');
 
         $this->data['requerente'] = $requerente = $this->requerente_model->get($id);
@@ -215,9 +176,7 @@ class Requerentes extends MY_Controller
         $this->data['teste1'] = $this->input->post('user_email');
         $this->data['teste2'] = $this->input->post('user_message');
                 
-        $this->load_view('requerentes/teste');
-        
-        
+        $this->load_view('requerentes/teste');               
         
         // transformar isso num metdo de teste
         if ( $this->input->post('user_email') && $this->input->post('user_message') )

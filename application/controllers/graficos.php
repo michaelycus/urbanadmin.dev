@@ -28,7 +28,7 @@ class Graficos extends MY_Controller
 
     public function requerimentos_por_tipo()
     {
-        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->get_all();
+        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->order_by('ordem')->get_all();
         $this->load_view('graficos/requerimentos_por_tipo', TRUE);
     }
 

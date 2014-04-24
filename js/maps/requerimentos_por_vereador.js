@@ -1,10 +1,10 @@
         $(function() {
             var data = {"0": { "areas": {"": {"text": {"content": ""}},"alto_do_parque": {"text": {"content": ""}},"americano": {"text": {"content": ""}},"bom_pastor": {"text": {"content": ""}},"campestre": {"text": {"content": ""}},"carneiros": {"text": {"content": ""}},"centenario": {"text": {"content": ""}},"centro": {"text": {"content": ""}},"conservas": {"text": {"content": ""}},"conventos": {"text": {"content": ""}},"floresta": {"text": {"content": ""}},"florestal": {"text": {"content": ""}},"hidraulica": {"text": {"content": ""}},"igrejinha": {"text": {"content": ""}},"imigrante": {"text": {"content": ""}},"jardim_do_cedro": {"text": {"content": ""}},"moinhos": {"text": {"content": ""}},"moinhos_dagua": {"text": {"content": ""}},"montanha": {"text": {"content": ""}},"morro_vinte_cinco": {"text": {"content": ""}},"nacoes": {"text": {"content": ""}},"olarias": {"text": {"content": ""}},"planalto": {"text": {"content": ""}},"santo_andre": {"text": {"content": ""}},"santo_antonio": {"text": {"content": ""}},"sao_bento": {"text": {"content": ""}},"sao_cristovao": {"text": {"content": ""}},"universitario": {"text": {"content": ""}},}},"1": { "areas": {"alto_do_parque": {
-                            "value": 3,
-                            "text": { "content":  "3" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#6d9acb"},
+                            "value": 5,
+                            "text": { "content":  "5" , attrs: {fill:"#222"} },
+                            "attrs": { fill: "#6a97c8"},
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 3"
+                                    "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 5"
                             }},"americano": {
                             "value": 4,
                             "text": { "content":  "4" , attrs: {fill:"#222"} },
@@ -126,7 +126,7 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 10"
                             }}},"plots": {"alto_do_parque": {
-                            "value": 3},"americano": {
+                            "value": 5},"americano": {
                             "value": 4},"bom_pastor": {
                             "value": 6},"campestre": {
                             "value": 4},"carneiros": {

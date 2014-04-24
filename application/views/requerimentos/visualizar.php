@@ -32,7 +32,7 @@
                                 echo '<dd>' . $rua->nome . '</dd>';
                                 
                                 echo '<dt>Tipo Requerimento</dt>';
-                                echo '<dd>' . $cats_requerimento[$requerimento->cat_requerimento-1]->nome . '</dd>';
+                                echo '<dd>' . $cat_requerimento->nome . '</dd>';
                                 
                                 if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
                                 {

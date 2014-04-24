@@ -83,10 +83,9 @@ class Ruas extends MY_Controller
         redirect('configuracoes/ruas/listar_ruas');
     }
     
-    public function get_ruas_ajax($id)
-    {
-//        $ruas = $this->cidades_model->getRuas($id);
-        $ruas = $this->ruas_model->get_ruas_by_bairro($id);
+    public function get_ruas_ajax($id_bairro)
+    {                
+        $ruas = $this->ruas_model->get_ruas_by_bairro($id_bairro);
 
         if (empty($ruas))
             return '{ "nome": "Nenhuma rua encontrada" }';
@@ -102,23 +101,4 @@ class Ruas extends MY_Controller
 
         return;
     }
-    
-    
-//    public function salvar_edicao()
-//    {        
-//        // deletando rua
-//        $this->cidades_model->delete_rua_from_bairro($this->input->post('rua'));
-//        
-//        // inserindo novos bairros
-//        $this->cidades_model->insert_rua_bairros($this->input->post('rua'), 
-//                                                 $this->input->post('bairros'));
-//        
-//        echo json_encode('Edição de bairros realizada com sucesso!');
-//    }
-//    
-//    
-//    
-    
-    
-    
 }

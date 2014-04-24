@@ -10,9 +10,9 @@ class Cep extends CI_Controller
         $this->load->model('requerimento_model');
     }
 
-    function getCidades($id)
+    function get_cidades_ajax($id_estado)
     {
-        $cidades = $this->cidades_model->getCidades($id);
+        $cidades = $this->cidades_model->get_cidades($id_estado);
 
         if (empty($cidades))
             return '{ "nome": "Nenhuma cidade encontrada" }';
@@ -28,64 +28,4 @@ class Cep extends CI_Controller
 
         return;
     }
-
-    function getRuas($id)
-    {
-        $ruas = $this->cidades_model->getRuas($id);
-//        $this->load->model('ruas_model');
-//        $ruas = $this->ruas_model->get_ruas_by_bairro($id);
-
-        if (empty($ruas))
-            return '{ "nome": "Nenhuma rua encontrada" }';
-
-        $arr_rua = array();
-
-        foreach ($ruas as $rua)
-        {
-            $arr_rua[] = '{"id":' . $rua->id . ',"nome":"' . $rua->nome . '"}';
-        }
-
-        echo '[ ' . implode(",", $arr_rua) . ']';
-
-        return;
-    }
-
-    function getRequerimentos($id_bairro)
-    {
-        $requerimentos = $this->requerimento_model->get_requerimentos_by_bairro($id_bairro);
-
-        if (empty($requerimentos))
-            return '{ "descricao": "Nenhum requerimento encontrado" }';
-
-        $arr_req = array();
-
-        foreach ($requerimentos as $req)
-        {
-            $desc = trim(preg_replace('/\s+/', ' ', $req->descricao));
-            $arr_req[] = '{"id":' . $req->id . ',"descricao":"' . substr($desc, 0, 128)  . '"}';
-        }
-
-        echo '[ ' . implode(",", $arr_req) . ']';
-
-        return;
-    }
-    
-//    function getBairros($id_rua)
-//    {
-//        $bairros = $this->cidades_model->get_bairro_by_rua($id_rua);
-//
-//        if (empty($bairros))
-//            return '{ "descricao": "Nenhum bairro encontrado" }';
-//
-//        $arr_bair = array();
-//
-//        foreach ($bairros as $b)
-//        {
-//            $arr_bair[] = '{"id":' . $b->id_bairro . '}';
-//        }
-//
-//        echo '[ ' . implode(",", $arr_bair) . ']';
-//
-//        return;
-//    }
 }

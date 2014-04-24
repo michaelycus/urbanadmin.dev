@@ -75,10 +75,10 @@
             }
         },
         areas: {                            "alto_do_parque":{
-                                value: "3",
-                                text: { content:  3 , attrs: {fill:"#222"} },
+                                value: "5",
+                                text: { content:  5 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Alto do Parque </span><br />Requerimentos: 3"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Alto do Parque </span><br />Requerimentos: 5"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 1 ).change();

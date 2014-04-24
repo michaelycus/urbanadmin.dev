@@ -27,6 +27,9 @@ class Categorias_requerimento extends MY_Controller
 
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('nome','descricao','id_secretaria'),$this->input->post());
+        
+            $this->db->select_max('ordem');
+            $data['ordem'] = $this->db->get('categorias_requerimento')->row()->ordem + 1;
 
             $this->categorias_requerimento_model->insert($data);
             
@@ -66,9 +69,25 @@ class Categorias_requerimento extends MY_Controller
         if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
         {
             $this->categorias_requerimento_model->delete($id);
+            
+            $this->categorias_requerimento_model->reordenar();
 
             $this->session->set_userdata('categoria_excluida','Categoria excluída com sucesso!');
             redirect('configuracoes/categorias_requerimento/listar_categorias');
         }
     }
+    
+    public function diminuir_ordem($id)
+    {
+        $this->categorias_requerimento_model->diminuir_ordem($id);
+        
+        redirect('configuracoes/categorias_requerimento/listar_categorias');
+    }
+    
+    public function aumentar_ordem($id)
+    {
+        $this->categorias_requerimento_model->aumentar_ordem($id);
+        
+        redirect('configuracoes/categorias_requerimento/listar_categorias');
+    }    
 }
