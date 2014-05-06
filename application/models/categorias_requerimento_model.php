@@ -6,7 +6,7 @@ class Categorias_requerimento_model extends MY_Model
         array(
             'field' => 'nome',
             'label' => 'NOME',
-            'rules' => 'trim|required|max_length[64]',
+            'rules' => 'trim|required|max_length[128]',
         )
     );
     
@@ -22,10 +22,22 @@ class Categorias_requerimento_model extends MY_Model
     
     public function get_categorias_with_secretarias()
     {
-        $this->db->select('categorias_requerimento.*, secretarias.nome AS nome_secretaria');
-        $this->db->join('secretarias', 'secretarias.id=categorias_requerimento.id_secretaria','LEFT');
-
-        return $this->get_all();
+        $this->load->model('secretarias_model');
+        $query = $this->get_all();    
+                
+        foreach ($query as $value)
+        {
+            $list = $this->get_secretarias_by_categoria($value->id);
+            
+            foreach ($list as $id_sec)
+            {
+                $nomes[] = $this->secretarias_model->get($id_sec->id_secretaria)->sigla;
+            }
+            
+            $value->secretarias = implode (", ", $nomes);
+        }
+        
+        return $query;
     }
         
     public function diminuir_ordem($id)
@@ -66,5 +78,27 @@ class Categorias_requerimento_model extends MY_Model
         {
             $this->update($cat->id, array('ordem' => ++$i));
         }
+    }
+    
+    public function relacao_secretarias($id_categoria, $ids_secretarias)
+    {
+        $this->db->delete('rel_categorias_secretarias', array('id_categoria' => $id_categoria)); 
+        
+        foreach ($ids_secretarias as $id_secretaria)
+        {
+            $data = array(
+                'id_categoria' => $id_categoria,
+                'id_secretaria' => $id_secretaria
+            );
+            $this->db->insert('rel_categorias_secretarias', $data); 
+        }        
+    }
+    
+    public function get_secretarias_by_categoria($id_categoria)
+    {
+        return $this->db->select('rel_categorias_secretarias.id_secretaria')
+                        ->from('rel_categorias_secretarias')                        
+                        ->where('id_categoria', $id_categoria)                        
+                        ->get()->result();
     }
 }

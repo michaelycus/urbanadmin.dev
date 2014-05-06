@@ -19,7 +19,7 @@ class Graficos_Customizados extends MY_Controller
     {
         $this->data['bairros'] = $this->bairros_model->get_bairros();
 
-        $this->load_view('graficos_customizados/criar_grafico', TRUE);
+        $this->load_view('graficos_customizados/criar_grafico');
     }
 
     public function editar_grafico($id)
@@ -27,37 +27,52 @@ class Graficos_Customizados extends MY_Controller
         $this->data['bairros'] = $this->bairros_model->get_bairros();
         $this->data['grafico'] = $this->graficos_customizados_model->get($id);
         $this->data['valores_bairros'] = $this->graficos_customizados_model->get_chart_values($id);
-
-        $this->load_view('graficos_customizados/editar_grafico', TRUE);
+        
+        // Checa se o gráfico pertence ao usuário
+        if ($this->data['grafico']->id_requerente == $_SESSION['id_user'])
+        {
+            $this->load_view('graficos_customizados/editar_grafico');
+        }        
+        else
+        {
+            $this->listar_graficos();
+        }
     }
 
     public function listar_graficos()
     {
-        $this->data['charts'] = $this->graficos_customizados_model->get_charts_with_requerentes();
+        $this->data['charts'] = $this->graficos_customizados_model->get_charts_with_requerentes_by_requerente($_SESSION['id_user']);
 
-        $this->load_view('graficos_customizados/listar_graficos', TRUE);
+        $this->load_view('graficos_customizados/listar_graficos');
     }
 
     public function visualizar()
-    {
+    {        
         $id = $this->graficos_customizados_model->get_next_id() - 1;
         $this->data['chart_values'] = $this->graficos_customizados_model->get_chart_values($id);
         $this->data['chart'] = $this->graficos_customizados_model->get($id);
 
-        $this->load_view('graficos_customizados/visualizar', TRUE);
+        $this->load_view('graficos_customizados/visualizar');
     }
 
     public function visualizar_grafico($id)
     {
         $this->data['chart_values'] = $this->graficos_customizados_model->get_chart_values($id);
-        $this->data['chart'] = $this->graficos_customizados_model->get($id);
-
-        $this->load_view('graficos_customizados/visualizar', TRUE);
+        $this->data['chart'] = $this->graficos_customizados_model->get($id);        
+        
+        if ($this->data['chart']->id_requerente == $_SESSION['id_user'])
+        {
+            $this->load_view('graficos_customizados/visualizar');
+        }        
+        else
+        {
+            $this->listar_graficos();
+        }
     }
    
     public function excluir_grafico($id)
     {
-        if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
+        if ($this->data['chart']->id_requerente == $_SESSION['id_user'])
         {
             //deleta arquivo js
             $chart = $this->graficos_customizados_model->get($id);
@@ -68,6 +83,10 @@ class Graficos_Customizados extends MY_Controller
 
             $this->session->set_userdata('grafico_excluido','Gráfico excluído com sucesso!');
             redirect('graficos_customizados/listar_graficos');
+        }        
+        else
+        {
+            $this->listar_graficos();
         }
    }
 

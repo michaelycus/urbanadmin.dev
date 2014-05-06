@@ -30,6 +30,10 @@ class Categorias_requerimento extends MY_Controller
         
             $this->db->select_max('ordem');
             $data['ordem'] = $this->db->get('categorias_requerimento')->row()->ordem + 1;
+            
+            $secretarias = $this->input->post('secretarias');
+            $next_id = $this->categorias_requerimento_model->get_next_id();
+            $this->categorias_requerimento_model->relacao_secretarias($next_id, $secretarias);
 
             $this->categorias_requerimento_model->insert($data);
             
@@ -48,6 +52,9 @@ class Categorias_requerimento extends MY_Controller
 
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('nome','descricao','id_secretaria'),$this->input->post());
+        
+            $secretarias = $this->input->post('secretarias');            
+            $this->categorias_requerimento_model->relacao_secretarias($this->input->post('id'), $secretarias);
 
             $this->categorias_requerimento_model->update($this->input->post('id'), $data);
             $this->session->set_userdata('categoria_editada','Categoria editada com sucesso!');
@@ -60,6 +67,7 @@ class Categorias_requerimento extends MY_Controller
 
         $this->data['categoria'] = $this->categorias_requerimento_model->get($id);
         $this->data['secretarias'] = $this->secretarias_model->get_all();
+        $this->data['secretarias_sel'] = $this->categorias_requerimento_model->get_secretarias_by_categoria($id);
 
         $this->load_config_view('configuracoes/categorias_requerimento/editar_categoria');
     }

@@ -60,7 +60,7 @@
                 echo    '<label for="id_bairro" class="col-lg-3 control-label">Bairro</label>';
                 echo    '<div class="col-lg-9">';
                 echo        '<select id="id_bairro" name="id_bairro" class="col-lg-9">';
-                echo            '<option value=""> - Selecione um bairro - </option>';
+                echo            '<option value=""> - Todos os bairros - </option>';
                 foreach ($bairros as $bairro)
                 {
                     echo        '<option value="'.$bairro->id.'" '.set_select('id_bairro', $bairro->id).'>'.$bairro->nome.'</option>';

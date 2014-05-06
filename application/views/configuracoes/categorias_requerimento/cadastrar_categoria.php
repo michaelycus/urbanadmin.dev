@@ -35,16 +35,31 @@
                                 'class' => 'form-control'), set_value('descricao'));
                     echo    '</div>';
                     echo '</div>';
+                    
+//                    $options = array();
+//                    $options_list = array();
+//                    foreach ($secretarias as $secretaria)
+//                    {
+//                        $options[$secretaria->id]=$secretaria->nome;
+//                        $options_list[]=$secretaria->id;
+//                    }                    
 
                     // id_secretaria
+//                    echo '<div class="form-group">';
+//                    echo    '<label for="id_secretaria" class="col-lg-3 control-label">Secretária</label>';
+//                    echo    '<div class="col-lg-9">';
+//                    echo        form_dropdown('secretarias[]', $options, $options_list);
+//                    echo    '</div>';
+//                    echo '</div>';
+                    
+                    // id_secretaria
                     echo '<div class="form-group">';
-                    echo    '<label for="id_secretaria" class="col-lg-3 control-label">Bairro</label>';
+                    echo    '<label for="id_secretaria" class="col-lg-3 control-label">Secretária</label>';
                     echo    '<div class="col-lg-9">';
-                    echo        '<select id="id_secretaria" name="id_secretaria">';
-                    echo            '<option value=""> - Selecione uma secretaria - </option>';
+                    echo        '<select id="secretarias[]" name="secretarias[]" multiple>';
                     foreach ($secretarias as $secretaria)
                     {
-                        echo        '<option value="'.$secretaria->id.'" '.set_select('id_secretaria', $secretaria->id).'>'.$secretaria->nome.'</option>';
+                        echo        '<option value="'.$secretaria->id.'">'.$secretaria->nome.'</option>';
                     }
                     echo        '</select>';
                     echo    '</div>';
@@ -56,8 +71,7 @@
                     echo            form_submit('submit', 'Cadastrar', 'class="btn btn-primary"');
                     echo        '</div>';
                     echo    '</div>';
-                    echo '</div>';
-                    
+                    echo '</div>';                    
 
                     echo form_close();
                     ?>

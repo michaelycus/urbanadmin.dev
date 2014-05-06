@@ -195,6 +195,7 @@
                                     break;
 
                                 default:
+                                    echo '<span class="icon gray"><i class="icon16 i-tags-2"></i></span>';
                                     break;
                             }
 

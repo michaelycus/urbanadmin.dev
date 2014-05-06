@@ -12,11 +12,6 @@ class Requerimento_model extends MY_Model
             'field' => 'data_requerimento',
             'label' => 'DATA',
             'rules' => 'required|valid_date',
-        ),
-        array(
-            'field' => 'id_bairro',
-            'label' => 'BAIRRO',
-            'rules' => 'required',
         )
     );
 
@@ -32,7 +27,7 @@ class Requerimento_model extends MY_Model
                     categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente,
                     r.nome AS nome_solicitante, r.telefone AS telefone');
         $this->db->where('da_sessao !=', REQUERIMENTO_DA_SESSAO);
-        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id', 'LEFT');
         $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
         $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
         $this->db->join('requerentes AS r', 'requerimentos.id_solicitante=r.id');
@@ -83,7 +78,7 @@ class Requerimento_model extends MY_Model
                     categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente,
                     r.nome AS nome_solicitante, r.telefone AS telefone');
         $this->db->where('da_sessao', REQUERIMENTO_DA_SESSAO);
-        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id', 'LEFT');
         $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
         $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
         $this->db->join('requerentes AS r', 'requerimentos.id_solicitante=r.id');

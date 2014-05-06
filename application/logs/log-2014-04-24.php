@@ -9974,3 +9974,4900 @@ ERROR - 2014-04-24 17:19:59 --> Could not find the language line "profiler_secti
 ERROR - 2014-04-24 17:19:59 --> Could not find the language line "profiler_section_show"
 DEBUG - 2014-04-24 17:19:59 --> Final output sent to browser
 DEBUG - 2014-04-24 17:19:59 --> Total execution time: 0.0579
+DEBUG - 2014-04-24 18:07:29 --> Config Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:07:29 --> URI Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Router Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Output Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Security Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Input Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:07:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:07:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:07:29 --> Language Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:07:29 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:07:29 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:07:29 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:07:29 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:07:29 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Table Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Session Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:07:29 --> Session routines successfully run
+DEBUG - 2014-04-24 18:07:29 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:07:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:07:29 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:07:29 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:07:29 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:07:29 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:29 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:07:29 --> Final output sent to browser
+DEBUG - 2014-04-24 18:07:29 --> Total execution time: 0.0483
+DEBUG - 2014-04-24 18:07:33 --> Config Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:07:33 --> URI Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Router Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Output Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Security Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Input Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:07:33 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:07:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:07:33 --> Language Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:07:33 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:07:33 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:07:33 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:07:33 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:07:33 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Table Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Session Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:07:33 --> Session routines successfully run
+DEBUG - 2014-04-24 18:07:33 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:07:33 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:33 --> Final output sent to browser
+DEBUG - 2014-04-24 18:07:33 --> Total execution time: 0.0341
+DEBUG - 2014-04-24 18:07:35 --> Config Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:07:35 --> URI Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Router Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Output Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Security Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Input Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:07:35 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:07:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:07:35 --> Language Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:07:35 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:07:35 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:07:35 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:07:35 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:07:35 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Table Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Session Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:07:35 --> Session routines successfully run
+DEBUG - 2014-04-24 18:07:35 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:07:35 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:35 --> File loaded: application/views/requerentes/cadastrar_requerente.php
+DEBUG - 2014-04-24 18:07:35 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:07:35 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:07:35 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:35 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:07:35 --> Final output sent to browser
+DEBUG - 2014-04-24 18:07:35 --> Total execution time: 0.0489
+DEBUG - 2014-04-24 18:07:40 --> Config Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:07:40 --> URI Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Router Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Output Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Security Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Input Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:07:40 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:07:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:07:40 --> Language Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:07:40 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:07:40 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:07:40 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:07:40 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:07:40 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Table Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Session Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:07:40 --> Session routines successfully run
+DEBUG - 2014-04-24 18:07:40 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:07:40 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:40 --> Final output sent to browser
+DEBUG - 2014-04-24 18:07:40 --> Total execution time: 0.0764
+DEBUG - 2014-04-24 18:07:47 --> Config Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:07:47 --> URI Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Router Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Output Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Security Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Input Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:07:47 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:07:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:07:47 --> Language Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:07:47 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:07:47 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:07:47 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:07:47 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:07:47 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Table Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Session Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:07:47 --> Session routines successfully run
+DEBUG - 2014-04-24 18:07:47 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:07:47 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> Model Class Initialized
+DEBUG - 2014-04-24 18:07:47 --> File loaded: application/views/requerentes/cadastrar_requerente.php
+DEBUG - 2014-04-24 18:07:47 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:07:48 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:07:48 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:07:48 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:07:48 --> Final output sent to browser
+DEBUG - 2014-04-24 18:07:48 --> Total execution time: 0.0383
+DEBUG - 2014-04-24 18:16:31 --> Config Class Initialized
+DEBUG - 2014-04-24 18:16:31 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:16:31 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:16:31 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:16:31 --> URI Class Initialized
+DEBUG - 2014-04-24 18:16:31 --> Router Class Initialized
+DEBUG - 2014-04-24 18:16:31 --> Output Class Initialized
+DEBUG - 2014-04-24 18:16:31 --> Security Class Initialized
+DEBUG - 2014-04-24 18:16:31 --> Input Class Initialized
+DEBUG - 2014-04-24 18:16:31 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:16:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:16:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:16:32 --> Language Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:16:32 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Table Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Session Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:16:32 --> Session routines successfully run
+DEBUG - 2014-04-24 18:16:32 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Config Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:16:32 --> URI Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Router Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Output Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Security Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Input Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:16:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:16:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:16:32 --> Language Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:16:32 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Table Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Session Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:16:32 --> Session routines successfully run
+DEBUG - 2014-04-24 18:16:32 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Config Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:16:32 --> URI Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Router Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Output Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Security Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Input Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:16:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:16:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:16:32 --> Language Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:16:32 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Table Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Session Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:16:32 --> Session routines successfully run
+DEBUG - 2014-04-24 18:16:32 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:16:32 --> File loaded: application/views/login_view.php
+DEBUG - 2014-04-24 18:16:32 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:16:32 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:16:32 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:16:32 --> Final output sent to browser
+DEBUG - 2014-04-24 18:16:32 --> Total execution time: 0.0346
+DEBUG - 2014-04-24 18:17:16 --> Config Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:17:16 --> URI Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Router Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Output Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Security Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Input Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:17:16 --> Language Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:17:16 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Table Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Session Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:17:16 --> Session routines successfully run
+DEBUG - 2014-04-24 18:17:16 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Language file loaded: language/pt-BR/form_validation_lang.php
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:17:16 --> Config Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:17:16 --> URI Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Router Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Output Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Security Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Input Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:17:16 --> Language Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:17:16 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Table Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Session Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:17:16 --> Session routines successfully run
+DEBUG - 2014-04-24 18:17:16 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:16 --> File loaded: application/views/login_view.php
+DEBUG - 2014-04-24 18:17:16 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:17:16 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:16 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:17:16 --> Final output sent to browser
+DEBUG - 2014-04-24 18:17:16 --> Total execution time: 0.0347
+DEBUG - 2014-04-24 18:17:23 --> Config Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:17:23 --> URI Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Router Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Output Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Security Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Input Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:17:23 --> Language Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:17:23 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Table Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Session Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:17:23 --> Session routines successfully run
+DEBUG - 2014-04-24 18:17:23 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Language file loaded: language/pt-BR/form_validation_lang.php
+DEBUG - 2014-04-24 18:17:23 --> Config Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:17:23 --> URI Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Router Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Output Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Security Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Input Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:17:23 --> Language Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:17:23 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Table Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Session Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:17:23 --> Session routines successfully run
+DEBUG - 2014-04-24 18:17:23 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:23 --> File loaded: application/views/layouts/inicio_operador.php
+DEBUG - 2014-04-24 18:17:23 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:17:23 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:17:23 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:23 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:17:23 --> Final output sent to browser
+DEBUG - 2014-04-24 18:17:23 --> Total execution time: 0.0455
+DEBUG - 2014-04-24 18:17:29 --> Config Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:17:29 --> URI Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Router Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Output Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Security Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Input Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:17:29 --> Language Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:17:29 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:17:29 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:17:29 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:17:29 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:17:29 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Table Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Session Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:17:29 --> Session routines successfully run
+DEBUG - 2014-04-24 18:17:29 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:17:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:17:29 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:17:29 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:17:29 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:17:29 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:29 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:17:29 --> Final output sent to browser
+DEBUG - 2014-04-24 18:17:29 --> Total execution time: 0.0611
+DEBUG - 2014-04-24 18:17:35 --> Config Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:17:35 --> URI Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Router Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Output Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Security Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Input Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:35 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:17:35 --> Language Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:17:35 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:17:35 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:17:35 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:17:35 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:17:35 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Table Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Session Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:17:35 --> Session routines successfully run
+DEBUG - 2014-04-24 18:17:35 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:17:35 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:35 --> Final output sent to browser
+DEBUG - 2014-04-24 18:17:35 --> Total execution time: 0.0325
+DEBUG - 2014-04-24 18:17:37 --> Config Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:17:37 --> URI Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Router Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Output Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Security Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Input Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:17:37 --> Language Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:17:37 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Table Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Session Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:17:37 --> Session routines successfully run
+DEBUG - 2014-04-24 18:17:37 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:17:37 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: file_helper
+ERROR - 2014-04-24 18:17:37 --> Severity: Warning  --> stream_socket_client(): unable to connect to ssl://smtp.gmail.com:465 (Unable to find the socket transport &quot;ssl&quot; - did you forget to enable it when you configured PHP?) C:\wamp\www\registra_requerimento\application\libraries\PHPMailer\class.smtp.php 218
+DEBUG - 2014-04-24 18:17:37 --> Config Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:17:37 --> URI Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Router Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Output Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Security Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Input Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:17:37 --> Language Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:17:37 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Table Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Session Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:17:37 --> Session routines successfully run
+DEBUG - 2014-04-24 18:17:37 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:17:37 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:17:37 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:17:37 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:17:37 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:37 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:17:37 --> Final output sent to browser
+DEBUG - 2014-04-24 18:17:37 --> Total execution time: 0.0423
+DEBUG - 2014-04-24 18:17:39 --> Config Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:17:39 --> URI Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Router Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Output Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Security Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Input Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:17:39 --> Language Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:17:39 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:17:39 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:17:39 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:17:39 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:17:39 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Table Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Session Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:17:39 --> Session routines successfully run
+DEBUG - 2014-04-24 18:17:39 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:17:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:39 --> File loaded: application/views/requerimentos/meus_requerimentos.php
+DEBUG - 2014-04-24 18:17:39 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:17:39 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:17:39 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:39 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:17:39 --> Final output sent to browser
+DEBUG - 2014-04-24 18:17:39 --> Total execution time: 0.0442
+DEBUG - 2014-04-24 18:17:49 --> Config Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:17:49 --> URI Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Router Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Output Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Security Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Input Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:17:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:17:49 --> Language Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:17:49 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:17:49 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:17:49 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:17:49 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:17:49 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Table Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Session Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:17:49 --> Session routines successfully run
+DEBUG - 2014-04-24 18:17:49 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:17:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:17:49 --> File loaded: application/views/layouts/inicio_operador.php
+DEBUG - 2014-04-24 18:17:49 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:17:49 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:17:49 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:17:49 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:17:49 --> Final output sent to browser
+DEBUG - 2014-04-24 18:17:49 --> Total execution time: 0.0354
+DEBUG - 2014-04-24 18:18:08 --> Config Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:18:08 --> URI Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Router Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Output Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Security Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Input Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:18:08 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:18:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:18:08 --> Language Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:18:08 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:18:08 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:18:08 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:18:08 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:18:08 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Table Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Session Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:18:08 --> Session routines successfully run
+DEBUG - 2014-04-24 18:18:08 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Model Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:18:08 --> Model Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Model Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Model Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Model Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Model Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:18:08 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:18:08 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:18:08 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:18:08 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:18:08 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:18:08 --> Final output sent to browser
+DEBUG - 2014-04-24 18:18:08 --> Total execution time: 0.0543
+DEBUG - 2014-04-24 18:24:07 --> Config Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:24:07 --> URI Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Router Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Output Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Security Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Input Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:24:07 --> Language Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:24:07 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Table Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Session Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:24:07 --> Session routines successfully run
+DEBUG - 2014-04-24 18:24:07 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Config Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:24:07 --> URI Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Router Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Output Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Security Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Input Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:24:07 --> Language Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:24:07 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Table Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Session Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:24:07 --> Session routines successfully run
+DEBUG - 2014-04-24 18:24:07 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Config Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:24:07 --> URI Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Router Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Output Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Security Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Input Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:24:07 --> Language Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:24:07 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Table Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Session Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:24:07 --> Session routines successfully run
+DEBUG - 2014-04-24 18:24:07 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:07 --> File loaded: application/views/login_view.php
+DEBUG - 2014-04-24 18:24:07 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:24:07 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:07 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:24:07 --> Final output sent to browser
+DEBUG - 2014-04-24 18:24:07 --> Total execution time: 0.0353
+DEBUG - 2014-04-24 18:24:18 --> Config Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:24:18 --> URI Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Router Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Output Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Security Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Input Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:18 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:18 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:18 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:24:18 --> Language Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:24:18 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Table Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Session Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:24:18 --> Session routines successfully run
+DEBUG - 2014-04-24 18:24:18 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Language file loaded: language/pt-BR/form_validation_lang.php
+DEBUG - 2014-04-24 18:24:18 --> Config Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:24:18 --> URI Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Router Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Output Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Security Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Input Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:18 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:24:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:24:18 --> Language Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:24:18 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Table Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Session Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:24:18 --> Session routines successfully run
+DEBUG - 2014-04-24 18:24:18 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> Model Class Initialized
+DEBUG - 2014-04-24 18:24:18 --> File loaded: application/views/layouts/inicio_administrador.php
+DEBUG - 2014-04-24 18:24:18 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:24:18 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:24:18 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:24:18 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:24:18 --> Final output sent to browser
+DEBUG - 2014-04-24 18:24:18 --> Total execution time: 0.0484
+DEBUG - 2014-04-24 18:25:06 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:06 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:06 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:06 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:06 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:06 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:06 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:06 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:06 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:06 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:06 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:06 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:06 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:06 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:25:06 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:25:06 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:25:06 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:06 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:25:06 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:06 --> Total execution time: 0.0579
+DEBUG - 2014-04-24 18:25:14 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:14 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:14 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:14 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:14 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:14 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:14 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:14 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:14 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:14 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:14 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:14 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:14 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:14 --> Total execution time: 0.0323
+DEBUG - 2014-04-24 18:25:20 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:20 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:20 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:20 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:20 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:20 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:25:20 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:25:20 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:20 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:20 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:20 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:20 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:20 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:20 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:25:20 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:25:20 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:25:20 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:20 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:25:20 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:20 --> Total execution time: 0.0447
+DEBUG - 2014-04-24 18:25:24 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:24 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:24 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:24 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:24 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:24 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:24 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:24 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:24 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:24 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:24 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:24 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:24 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:24 --> Total execution time: 0.0318
+DEBUG - 2014-04-24 18:25:29 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:29 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:29 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:29 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:29 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:29 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:25:29 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:25:29 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:29 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:29 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:29 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:29 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:29 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:29 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:25:29 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:25:29 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:25:29 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:29 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:25:29 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:29 --> Total execution time: 0.0440
+DEBUG - 2014-04-24 18:25:34 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:34 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:34 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:34 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:34 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:34 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:34 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:34 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:34 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:34 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:34 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:34 --> Total execution time: 0.0318
+DEBUG - 2014-04-24 18:25:39 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:39 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:39 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:39 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:39 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:39 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:25:39 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:25:39 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:39 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:39 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:39 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:39 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:39 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:39 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:25:39 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:25:39 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:25:39 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:39 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:25:39 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:39 --> Total execution time: 0.0445
+DEBUG - 2014-04-24 18:25:42 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:42 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:42 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:42 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:42 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:42 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:42 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:42 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:42 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:42 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:42 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:42 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:43 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:43 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:43 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:43 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:43 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:43 --> Total execution time: 0.0317
+DEBUG - 2014-04-24 18:25:49 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:49 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:49 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:49 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:49 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:49 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:25:49 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:25:49 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:49 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:49 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:49 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:49 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:49 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:49 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:25:49 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:25:49 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:25:49 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:49 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:25:49 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:49 --> Total execution time: 0.0443
+DEBUG - 2014-04-24 18:25:52 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:52 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:52 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:52 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:52 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:52 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:52 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:52 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:52 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:52 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:52 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:52 --> Total execution time: 0.0319
+DEBUG - 2014-04-24 18:25:59 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:59 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:59 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:59 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:59 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:59 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:25:59 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:25:59 --> Config Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:25:59 --> URI Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Router Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Output Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Security Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Input Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:25:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:25:59 --> Language Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:25:59 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Table Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Session Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:25:59 --> Session routines successfully run
+DEBUG - 2014-04-24 18:25:59 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Model Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:25:59 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:25:59 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:25:59 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:25:59 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:25:59 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:25:59 --> Final output sent to browser
+DEBUG - 2014-04-24 18:25:59 --> Total execution time: 0.0443
+DEBUG - 2014-04-24 18:26:03 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:03 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:03 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:03 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:03 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:03 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:03 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:03 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:03 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:03 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:03 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:03 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:03 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:03 --> Final output sent to browser
+DEBUG - 2014-04-24 18:26:03 --> Total execution time: 0.0318
+DEBUG - 2014-04-24 18:26:11 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:11 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:11 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:11 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:11 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:11 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:26:11 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:26:11 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:11 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:11 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:11 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:11 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:11 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:26:11 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:26:11 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:26:11 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:26:11 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:11 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:26:11 --> Final output sent to browser
+DEBUG - 2014-04-24 18:26:11 --> Total execution time: 0.0444
+DEBUG - 2014-04-24 18:26:14 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:14 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:14 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:14 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:14 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:14 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:14 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:14 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:14 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:14 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:14 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:14 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:14 --> Final output sent to browser
+DEBUG - 2014-04-24 18:26:14 --> Total execution time: 0.0323
+DEBUG - 2014-04-24 18:26:23 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:23 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:23 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:23 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:23 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:23 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:26:23 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:26:23 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:23 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:23 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:23 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:23 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:23 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:26:23 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:26:23 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:26:23 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:26:23 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:23 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:26:23 --> Final output sent to browser
+DEBUG - 2014-04-24 18:26:23 --> Total execution time: 0.0438
+DEBUG - 2014-04-24 18:26:25 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:25 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:25 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:25 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:25 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:25 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:25 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:25 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:25 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:25 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:25 --> Final output sent to browser
+DEBUG - 2014-04-24 18:26:25 --> Total execution time: 0.0318
+DEBUG - 2014-04-24 18:26:34 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:34 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:34 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:34 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:34 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:34 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:26:34 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:26:34 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:34 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:34 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:34 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:34 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:34 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:26:34 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:26:34 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:26:34 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:26:34 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:34 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:26:34 --> Final output sent to browser
+DEBUG - 2014-04-24 18:26:34 --> Total execution time: 0.0441
+DEBUG - 2014-04-24 18:26:37 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:37 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:37 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:37 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:37 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:37 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:37 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:37 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:37 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:37 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:37 --> Final output sent to browser
+DEBUG - 2014-04-24 18:26:37 --> Total execution time: 0.0325
+DEBUG - 2014-04-24 18:26:45 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:45 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:45 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:45 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:45 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:45 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:26:45 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:26:45 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:45 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:45 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:45 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:45 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:45 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:26:45 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:26:45 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:26:45 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:26:45 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:45 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:26:45 --> Final output sent to browser
+DEBUG - 2014-04-24 18:26:45 --> Total execution time: 0.0442
+DEBUG - 2014-04-24 18:26:51 --> Config Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:26:51 --> URI Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Router Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Output Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Security Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Input Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:51 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:26:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:26:51 --> Language Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:26:51 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:26:51 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:26:51 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:26:51 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:26:51 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Table Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Session Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:26:51 --> Session routines successfully run
+DEBUG - 2014-04-24 18:26:51 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:26:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:26:51 --> File loaded: application/views/layouts/inicio_administrador.php
+DEBUG - 2014-04-24 18:26:51 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:26:51 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:26:51 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:26:51 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:26:51 --> Final output sent to browser
+DEBUG - 2014-04-24 18:26:51 --> Total execution time: 0.0669
+DEBUG - 2014-04-24 18:27:07 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:07 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:07 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:07 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:07 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:07 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:07 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:07 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:07 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:07 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:27:07 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:27:07 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:27:07 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:27:07 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:07 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:27:07 --> Final output sent to browser
+DEBUG - 2014-04-24 18:27:07 --> Total execution time: 0.0612
+DEBUG - 2014-04-24 18:27:12 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:12 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:12 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:12 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:12 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:12 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:12 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:12 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:12 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:12 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:12 --> Final output sent to browser
+DEBUG - 2014-04-24 18:27:12 --> Total execution time: 0.0320
+DEBUG - 2014-04-24 18:27:25 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:25 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:25 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:25 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:25 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:25 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:27:25 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:27:25 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:25 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:25 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:25 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:25 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:25 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:27:25 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:27:25 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:27:25 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:27:25 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:25 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:27:25 --> Final output sent to browser
+DEBUG - 2014-04-24 18:27:25 --> Total execution time: 0.0444
+DEBUG - 2014-04-24 18:27:28 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:28 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:28 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:28 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:28 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:28 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:28 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:28 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:28 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:28 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:28 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:28 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:28 --> Final output sent to browser
+DEBUG - 2014-04-24 18:27:28 --> Total execution time: 0.0316
+DEBUG - 2014-04-24 18:27:34 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:34 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:34 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:34 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:34 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:34 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:27:34 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:27:34 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:34 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:34 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:34 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:34 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:34 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:27:34 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:27:34 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:27:34 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:27:34 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:34 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:27:34 --> Final output sent to browser
+DEBUG - 2014-04-24 18:27:34 --> Total execution time: 0.0441
+DEBUG - 2014-04-24 18:27:39 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:39 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:39 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:39 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:39 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:39 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:39 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:39 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:39 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:39 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:39 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:39 --> Final output sent to browser
+DEBUG - 2014-04-24 18:27:39 --> Total execution time: 0.0324
+DEBUG - 2014-04-24 18:27:48 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:48 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:48 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:48 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:48 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:48 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:27:48 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:27:48 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:48 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:48 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:48 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:48 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:48 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:27:48 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:27:48 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:27:48 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:27:48 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:48 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:27:48 --> Final output sent to browser
+DEBUG - 2014-04-24 18:27:48 --> Total execution time: 0.0448
+DEBUG - 2014-04-24 18:27:51 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:51 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:51 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:51 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:51 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:51 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:51 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:51 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:51 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:51 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:51 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:51 --> Final output sent to browser
+DEBUG - 2014-04-24 18:27:51 --> Total execution time: 0.0320
+DEBUG - 2014-04-24 18:27:56 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:56 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:56 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:56 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:56 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:56 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:56 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:56 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:56 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:56 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:56 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:56 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:27:56 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:27:57 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:27:57 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:27:57 --> Config Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:27:57 --> URI Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Router Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Output Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Security Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Input Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:57 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:27:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:27:57 --> Language Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:27:57 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:27:57 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:27:57 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:27:57 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:27:57 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Table Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Session Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:27:57 --> Session routines successfully run
+DEBUG - 2014-04-24 18:27:57 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:27:57 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Model Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:27:57 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:27:57 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:27:57 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:27:57 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:27:57 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:27:57 --> Final output sent to browser
+DEBUG - 2014-04-24 18:27:57 --> Total execution time: 0.0747
+DEBUG - 2014-04-24 18:28:01 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:01 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:01 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:01 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:01 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:01 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:01 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:01 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:01 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:01 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:01 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:01 --> Total execution time: 0.0329
+DEBUG - 2014-04-24 18:28:12 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:12 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:12 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:12 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:12 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:12 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:28:12 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:28:12 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:12 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:12 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:12 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:12 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:12 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:28:12 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:28:12 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:28:12 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:28:12 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:12 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:28:12 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:12 --> Total execution time: 0.0439
+DEBUG - 2014-04-24 18:28:15 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:15 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:15 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:15 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:15 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:15 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:15 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:15 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:15 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:15 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:15 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:15 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:15 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:15 --> Total execution time: 0.0324
+DEBUG - 2014-04-24 18:28:22 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:22 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:22 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:22 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:22 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:22 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:28:22 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:28:22 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:22 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:22 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:22 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:22 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:22 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:28:22 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:28:22 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:28:22 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:28:22 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:22 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:28:22 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:22 --> Total execution time: 0.0447
+DEBUG - 2014-04-24 18:28:25 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:25 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:25 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:25 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:25 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:25 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:25 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:25 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:25 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:25 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:25 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:25 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:25 --> Total execution time: 0.0320
+DEBUG - 2014-04-24 18:28:32 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:32 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:32 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:32 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:32 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:32 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:28:32 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:28:32 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:32 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:32 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:32 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:32 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:32 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:28:32 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:28:32 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:28:32 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:28:32 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:32 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:28:32 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:32 --> Total execution time: 0.0445
+DEBUG - 2014-04-24 18:28:37 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:37 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:37 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:37 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:37 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:37 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:37 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:37 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:37 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:37 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:37 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:37 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:37 --> Total execution time: 0.0320
+DEBUG - 2014-04-24 18:28:44 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:44 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:44 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:44 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:44 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:44 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:28:44 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:28:44 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:44 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:44 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:44 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:44 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:44 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:28:44 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:28:44 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:28:44 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:28:44 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:44 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:28:44 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:44 --> Total execution time: 0.0442
+DEBUG - 2014-04-24 18:28:51 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:51 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:51 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:51 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:51 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:51 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:51 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:51 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:51 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:51 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:51 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:51 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:51 --> Total execution time: 0.0330
+DEBUG - 2014-04-24 18:28:54 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:54 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:54 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:54 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:54 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:54 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:28:54 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:28:54 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:54 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:54 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:54 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:54 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:54 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:28:54 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:28:54 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:28:54 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:28:54 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:28:54 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:28:54 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:54 --> Total execution time: 0.0439
+DEBUG - 2014-04-24 18:28:58 --> Config Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:28:58 --> URI Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Router Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Output Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Security Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Input Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:58 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:28:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:28:58 --> Language Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:28:58 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:28:58 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:28:58 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:28:58 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:28:58 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Table Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Session Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:28:58 --> Session routines successfully run
+DEBUG - 2014-04-24 18:28:58 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:28:58 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Model Class Initialized
+DEBUG - 2014-04-24 18:28:58 --> Final output sent to browser
+DEBUG - 2014-04-24 18:28:58 --> Total execution time: 0.0314
+DEBUG - 2014-04-24 18:29:07 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:07 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:07 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:07 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:07 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:07 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:29:07 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:29:07 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:07 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:07 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:07 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:07 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:07 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:29:07 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:29:07 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:29:07 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:29:07 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:07 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:29:07 --> Final output sent to browser
+DEBUG - 2014-04-24 18:29:07 --> Total execution time: 0.0448
+DEBUG - 2014-04-24 18:29:10 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:10 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:10 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:10 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:10 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:10 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:10 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:10 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:10 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:10 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:10 --> File loaded: application/views/layouts/inicio_administrador.php
+DEBUG - 2014-04-24 18:29:10 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:29:10 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:29:10 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:10 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:29:10 --> Final output sent to browser
+DEBUG - 2014-04-24 18:29:10 --> Total execution time: 0.0479
+DEBUG - 2014-04-24 18:29:22 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:22 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:22 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:22 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:22 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:22 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:22 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:22 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:22 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:22 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:22 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:29:22 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:29:22 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:29:22 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:29:22 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:22 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:29:22 --> Final output sent to browser
+DEBUG - 2014-04-24 18:29:22 --> Total execution time: 0.0583
+DEBUG - 2014-04-24 18:29:27 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:27 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:27 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:27 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:27 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:27 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:27 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:27 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:27 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:27 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:27 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:27 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:27 --> Final output sent to browser
+DEBUG - 2014-04-24 18:29:27 --> Total execution time: 0.0319
+DEBUG - 2014-04-24 18:29:41 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:41 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:41 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:41 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:41 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:41 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:29:41 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:29:41 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:41 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:41 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:41 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:41 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:41 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:29:41 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:29:41 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:29:41 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:29:41 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:41 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:29:41 --> Final output sent to browser
+DEBUG - 2014-04-24 18:29:41 --> Total execution time: 0.0444
+DEBUG - 2014-04-24 18:29:44 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:44 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:44 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:44 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:44 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:44 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:44 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:44 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:44 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:44 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:44 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:44 --> Final output sent to browser
+DEBUG - 2014-04-24 18:29:44 --> Total execution time: 0.0317
+DEBUG - 2014-04-24 18:29:52 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:52 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:52 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:52 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:52 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:52 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:29:52 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:29:52 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:52 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:52 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:52 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:52 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:52 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:29:52 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:29:52 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:29:52 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:29:52 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:29:52 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:29:52 --> Final output sent to browser
+DEBUG - 2014-04-24 18:29:52 --> Total execution time: 0.0446
+DEBUG - 2014-04-24 18:29:55 --> Config Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:29:55 --> URI Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Router Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Output Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Security Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Input Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:55 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:29:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:29:55 --> Language Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:29:55 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:29:55 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:29:55 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:29:55 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:29:55 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Table Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Session Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:29:55 --> Session routines successfully run
+DEBUG - 2014-04-24 18:29:55 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:29:55 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Model Class Initialized
+DEBUG - 2014-04-24 18:29:55 --> Final output sent to browser
+DEBUG - 2014-04-24 18:29:55 --> Total execution time: 0.0343
+DEBUG - 2014-04-24 18:30:01 --> Config Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:30:01 --> URI Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Router Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Output Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Security Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Input Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:30:01 --> Language Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:30:01 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Table Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Session Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:30:01 --> Session routines successfully run
+DEBUG - 2014-04-24 18:30:01 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:30:01 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:30:01 --> Config Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:30:01 --> URI Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Router Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Output Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Security Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Input Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:30:01 --> Language Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:30:01 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Table Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Session Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:30:01 --> Session routines successfully run
+DEBUG - 2014-04-24 18:30:01 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:30:01 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:30:01 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:30:01 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:30:01 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:01 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:30:01 --> Final output sent to browser
+DEBUG - 2014-04-24 18:30:01 --> Total execution time: 0.0443
+DEBUG - 2014-04-24 18:30:04 --> Config Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:30:04 --> URI Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Router Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Output Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Security Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Input Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:04 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:30:04 --> Language Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:30:04 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:30:04 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:30:04 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:30:04 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:30:04 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Table Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Session Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:30:04 --> Session routines successfully run
+DEBUG - 2014-04-24 18:30:04 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:30:04 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:04 --> Final output sent to browser
+DEBUG - 2014-04-24 18:30:04 --> Total execution time: 0.0316
+DEBUG - 2014-04-24 18:30:10 --> Config Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:30:10 --> URI Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Router Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Output Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Security Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Input Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:30:10 --> Language Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:30:10 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Table Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Session Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:30:10 --> Session routines successfully run
+DEBUG - 2014-04-24 18:30:10 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Language file loaded: language/pt-BR/form_validation_lang.php
+ERROR - 2014-04-24 18:30:10 --> Severity: Notice  --> Undefined index: error C:\wamp\www\registra_requerimento\application\controllers\requerimentos.php 176
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: file_helper
+DEBUG - 2014-04-24 18:30:10 --> Config Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:30:10 --> URI Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Router Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Output Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Security Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Input Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:30:10 --> Language Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:30:10 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Table Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Session Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:30:10 --> Session routines successfully run
+DEBUG - 2014-04-24 18:30:10 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Image Lib Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> Upload Class Initialized
+DEBUG - 2014-04-24 18:30:10 --> File loaded: application/views/requerimentos/cadastrar_requerimento.php
+DEBUG - 2014-04-24 18:30:10 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:30:10 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:30:10 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:10 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:30:10 --> Final output sent to browser
+DEBUG - 2014-04-24 18:30:10 --> Total execution time: 0.0446
+DEBUG - 2014-04-24 18:30:13 --> Config Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:30:13 --> URI Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Router Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Output Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Security Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Input Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:13 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:30:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:30:13 --> Language Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:30:13 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:30:13 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:30:13 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:30:13 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:30:13 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Table Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Session Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:30:13 --> Session routines successfully run
+DEBUG - 2014-04-24 18:30:13 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:30:13 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Model Class Initialized
+DEBUG - 2014-04-24 18:30:13 --> Model Class Initialized
+ERROR - 2014-04-24 18:30:13 --> Severity: Notice  --> Use of undefined constant TIPO_REQ_CONSERTOS_GERAL - assumed 'TIPO_REQ_CONSERTOS_GERAL' C:\wamp\www\registra_requerimento\application\views\layouts\inicio_administrador.php 185
+ERROR - 2014-04-24 18:30:13 --> Severity: Notice  --> Use of undefined constant TIPO_REQ_SOLICITACAO_SERVICOS - assumed 'TIPO_REQ_SOLICITACAO_SERVICOS' C:\wamp\www\registra_requerimento\application\views\layouts\inicio_administrador.php 189
+DEBUG - 2014-04-24 18:30:13 --> File loaded: application/views/layouts/inicio_administrador.php
+DEBUG - 2014-04-24 18:30:13 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:30:13 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:30:13 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:30:13 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:30:13 --> Final output sent to browser
+DEBUG - 2014-04-24 18:30:13 --> Total execution time: 0.0569
+DEBUG - 2014-04-24 18:32:52 --> Config Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Hooks Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 18:32:52 --> URI Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Router Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Output Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Security Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Input Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:32:52 --> XSS Filtering completed
+DEBUG - 2014-04-24 18:32:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 18:32:52 --> Language Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Loader Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 18:32:52 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 18:32:52 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 18:32:52 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 18:32:52 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 18:32:52 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Table Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Session Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 18:32:52 --> Session routines successfully run
+DEBUG - 2014-04-24 18:32:52 --> Pagination Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Controller Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 18:32:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Model Class Initialized
+DEBUG - 2014-04-24 18:32:52 --> Model Class Initialized
+ERROR - 2014-04-24 18:32:52 --> Severity: Notice  --> Use of undefined constant TIPO_REQ_CONSERTOS_GERAL - assumed 'TIPO_REQ_CONSERTOS_GERAL' C:\wamp\www\registra_requerimento\application\views\layouts\inicio_administrador.php 185
+ERROR - 2014-04-24 18:32:52 --> Severity: Notice  --> Use of undefined constant TIPO_REQ_SOLICITACAO_SERVICOS - assumed 'TIPO_REQ_SOLICITACAO_SERVICOS' C:\wamp\www\registra_requerimento\application\views\layouts\inicio_administrador.php 189
+DEBUG - 2014-04-24 18:32:52 --> File loaded: application/views/layouts/inicio_administrador.php
+DEBUG - 2014-04-24 18:32:52 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 18:32:52 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 18:32:52 --> Helper loaded: text_helper
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 18:32:52 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 18:32:52 --> Final output sent to browser
+DEBUG - 2014-04-24 18:32:52 --> Total execution time: 0.0525
+DEBUG - 2014-04-24 19:13:31 --> Config Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Hooks Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 19:13:31 --> URI Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Router Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Output Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Security Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Input Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> XSS Filtering completed
+DEBUG - 2014-04-24 19:13:31 --> XSS Filtering completed
+DEBUG - 2014-04-24 19:13:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 19:13:31 --> Language Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Loader Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 19:13:31 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 19:13:31 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 19:13:31 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 19:13:31 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 19:13:31 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Table Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Session Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 19:13:31 --> Session routines successfully run
+DEBUG - 2014-04-24 19:13:31 --> Pagination Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Controller Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Model Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 19:13:31 --> Model Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> Model Class Initialized
+DEBUG - 2014-04-24 19:13:31 --> File loaded: application/views/requerentes/da_cidade.php
+DEBUG - 2014-04-24 19:13:31 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 19:13:31 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 19:13:31 --> Helper loaded: text_helper
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:13:31 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 19:13:31 --> Final output sent to browser
+DEBUG - 2014-04-24 19:13:31 --> Total execution time: 0.0484
+DEBUG - 2014-04-24 19:17:21 --> Config Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Hooks Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Utf8 Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> UTF-8 Support Enabled
+DEBUG - 2014-04-24 19:17:21 --> URI Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Router Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Output Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Security Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Input Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> XSS Filtering completed
+DEBUG - 2014-04-24 19:17:21 --> XSS Filtering completed
+DEBUG - 2014-04-24 19:17:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-04-24 19:17:21 --> Language Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Loader Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Helper loaded: url_helper
+DEBUG - 2014-04-24 19:17:21 --> Helper loaded: form_helper
+DEBUG - 2014-04-24 19:17:21 --> Helper loaded: array_helper
+DEBUG - 2014-04-24 19:17:21 --> Helper loaded: general_helper
+DEBUG - 2014-04-24 19:17:21 --> Helper loaded: mail_helper
+DEBUG - 2014-04-24 19:17:21 --> Database Driver Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Table Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Form Validation Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Session Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Helper loaded: string_helper
+DEBUG - 2014-04-24 19:17:21 --> Session routines successfully run
+DEBUG - 2014-04-24 19:17:21 --> Pagination Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Controller Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Model Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Helper loaded: inflector_helper
+DEBUG - 2014-04-24 19:17:21 --> Model Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Model Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Model Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> Model Class Initialized
+DEBUG - 2014-04-24 19:17:21 --> File loaded: application/views/graficos/requerentes_por_bairro.php
+DEBUG - 2014-04-24 19:17:21 --> File loaded: application/views/layouts/layout.php
+DEBUG - 2014-04-24 19:17:21 --> Language file loaded: language/pt-BR/profiler_lang.php
+DEBUG - 2014-04-24 19:17:21 --> Helper loaded: text_helper
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_session_data"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_hide"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_show"
+ERROR - 2014-04-24 19:17:21 --> Could not find the language line "profiler_section_show"
+DEBUG - 2014-04-24 19:17:21 --> Final output sent to browser
+DEBUG - 2014-04-24 19:17:21 --> Total execution time: 0.0560

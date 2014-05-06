@@ -13,7 +13,7 @@
 
                 if ($id==NULL && $secretaria==NULL) redirect('secretarias');
 
-                echo form_open('configuracoes/categorias_requerimento/editar_categoria', 'class="bs-docs-example form-horizontal"');
+                echo form_open('configuracoes/secretarias/editar_secretaria', 'class="bs-docs-example form-horizontal"');
 
                 echo validation_errors('<div class="alert alert-error">','</div>');
                 if ($this->session->userdata('secretaria_editada'))

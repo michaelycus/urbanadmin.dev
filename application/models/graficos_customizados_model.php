@@ -40,10 +40,11 @@ class Graficos_customizados_model extends MY_Model
         return $this->db->get()->result();
     }
 
-    public function get_charts_with_requerentes()
+    public function get_charts_with_requerentes_by_requerente($id)
     {
         $this->db->select('graficos_customizados.*, requerentes.nome AS nome_requerente');
         $this->db->join('requerentes', 'requerentes.id=graficos_customizados.id_requerente');
+        $this->db->where('id_requerente', $id);
 
         return $this->get_all();
     }

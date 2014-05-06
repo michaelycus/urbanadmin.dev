@@ -37,8 +37,8 @@
                 $this->table->add_row(array('data'=>'<small><strong>'.$secretaria->nome.'</strong>'.'</small>'),
                                       array('data'=>'<small>'.$secretaria->email.'</small>'),
                                       array('data'=>'<small>'.$secretaria->telefone.'</small>'),
-                                      array('data'=>anchor('configuracoes/categorias_requerimento/editar_categoria/'.$secretaria->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
-                                                    anchor('configuracoes/categorias_requerimento/excluir_categoria/'.$secretaria->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:150px'));
+                                      array('data'=>anchor('configuracoes/secretarias/editar_secretaria/'.$secretaria->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
+                                                    anchor('configuracoes/secretarias/excluir_secretaria/'.$secretaria->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:150px'));
             endforeach;
 
            echo $this->table->generate();

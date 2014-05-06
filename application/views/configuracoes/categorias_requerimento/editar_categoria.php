@@ -38,15 +38,21 @@
                 echo    '</div>';
                 echo '</div>';
                 
+                
+                // revisar no futuro
+                foreach ($secretarias_sel as $item)
+                {
+                    $list[] = $item->id_secretaria;
+                }
+                
                 // id_secretaria
                 echo '<div class="form-group">';
-                echo    '<label for="id_secretaria" class="col-lg-3 control-label">Bairro</label>';
+                echo    '<label for="id_secretaria" class="col-lg-3 control-label">Secretária</label>';
                 echo    '<div class="col-lg-9">';
-                echo        '<select id="id_secretaria" name="id_secretaria">';
-                echo            '<option value=""> - Selecione uma secretaria - </option>';
+                echo        '<select id="secretarias[]" name="secretarias[]" multiple>';
                 foreach ($secretarias as $secretaria)
                 {
-                    echo        '<option value="'.$secretaria->id.'" '.set_select('id_secretaria', $secretaria->id, $secretaria->id==$categoria->id_secretaria).'>'.$secretaria->nome.'</option>';
+                    echo        '<option value="'.$secretaria->id.'" '. (in_array($secretaria->id, $list) ? 'selected="selected"' : '') .' >'.$secretaria->nome.'</option>';
                 }
                 echo        '</select>';
                 echo    '</div>';

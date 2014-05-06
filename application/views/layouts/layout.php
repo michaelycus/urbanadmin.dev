@@ -218,6 +218,24 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="icon20 i-wand-2"></i></span>
+                                    <span class="txt">Gráficos Customizados</span>
+                                </a>
+                                <ul class="sub<?php echo ($cat=='graficos_customizados' ? ' show' : '')?>">
+                                    <li>
+                                        <?php echo anchor('graficos_customizados/criar_grafico',
+                                                '<i class="icon20 i-pencil-5"></i>
+                                                 <span class="txt">Criar gráfico</span>');?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('graficos_customizados/listar_graficos',
+                                                '<i class="icon20 i-list-2"></i>
+                                                 <span class="txt">Listar gráficos</span>');?>
+                                    </li>
+                                </ul>
+                            </li>
                             <?php
                             }
                             else if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
@@ -360,16 +378,19 @@
                             <?php
                             if ($_SESSION['autorizacao'] == AUTORIZACAO_OPERADOR)
                             {
-                                echo '<li'. ($cat=='login/inicio' ? ' class="active"><i class="icon16 i-home-3"></i>Início</li>' :
-                                        '>'.anchor('login/inicio', '<i class="icon16 i-home-3"></i>Início') .'</li>');
+                                echo '<li'. ($cat=='login' ? ' class="active"><i class="icon16 i-home-3"></i></li>' :
+                                        '>'.anchor('login', '<i class="icon16 i-home-3"></i>') .'</li>');
 
-                                echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i>Meus requerimentos</li>' :
-                                        '>'.anchor('requerimentos/meus_requerimentos', '<i class="icon16 i-stack-list"></i>Meus requerimentos') .'</li>');
+                                echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i></li>' :
+                                        '>'.anchor('requerimentos/meus_requerimentos', '<i class="icon16 i-stack-list"></i>') .'</li>');
+                                
+                                echo '<li'. ($cat=='graficos_customizados' ? ' class="active"><i class="icon16 i-wand-2"></i></li>' :
+                                        '>'.anchor('graficos_customizados/listar_graficos', '<i class="icon16 i-wand-2"></i>').'</li>');
                             }
                             else if ($_SESSION['autorizacao'] == AUTORIZACAO_ADMINISTRADOR)
                             {
-                                echo '<li'. ($cat=='login/inicio' ? ' class="active"><i class="icon16 i-home-3"></i></li>' :
-                                        '>'.anchor('login/inicio', '<i class="icon16 i-home-3"></i>') .'</li>');
+                                echo '<li'. ($cat=='login' ? ' class="active"><i class="icon16 i-home-3"></i></li>' :
+                                        '>'.anchor('login', '<i class="icon16 i-home-3"></i>') .'</li>');
 
                                 echo '<li'. ($cat=='requerimentos' ? ' class="active"><i class="icon16 i-stack-list"></i></li>' :
                                         '>'.anchor('requerimentos/listar_requerimentos', '<i class="icon16 i-stack-list"></i>') .'</li>');

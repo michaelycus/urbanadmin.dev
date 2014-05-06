@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div id="heading" class="page-header">
-        <h1><i class="icon20 i-user-3"></i> Criar Gráfico</h1>
+        <h1><i class="icon20 i-pencil-5"></i> Criar Gráfico</h1>
     </div>
 
     <div class="row">
