@@ -20,7 +20,7 @@ class Requerimento_model extends MY_Model
         parent::__construct();
         $this->_database = $this->db;
     }
-
+    
     public function get_requerimentos_with_bairros()
     {
         $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
@@ -193,6 +193,33 @@ class Requerimento_model extends MY_Model
 
         return $array_result;
     }
+    
+    public function count_requerimentos_with_situacao()
+    {
+        $array_result = array();
+        
+        // 0 - Em análise
+        // 1 - Analisado
+        // 2 - Protocolado
+        // 3 - Concluído
+        
+        for ($i=0; $i < 4; $i++)
+        {
+            $this->db->select('bairros.nome AS nome_bairro, bairros.codename AS codename,
+                COUNT(bairros.codename) AS count_requerimentos');
+            $this->db->where('situacao', $i);
+            $this->db->where('da_sessao', 0);
+            $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+            $this->db->group_by('codename');
+            
+            $array_result[$i] = $this->get_all();
+        }
+        
+//        var_dump($array_result);
+//        die();
+
+        return $array_result;
+    }
 
     public function count_requerimentos_with_vereadores()
     {
@@ -227,6 +254,19 @@ class Requerimento_model extends MY_Model
         $this->db->where('id_solicitante', $id);
 
         return $this->get_all();
+    }
+    
+    public function get_requerimento_by_code($code)
+    {
+        $q = $this->db->where('code', $code)                      
+                      ->limit(1)
+                      ->get('requerimentos');
+
+        if ($q->num_rows > 0)
+        {
+            return $q->row();
+        }
+        return false;
     }
 
     public function avancar_situacao($id, $situacao)

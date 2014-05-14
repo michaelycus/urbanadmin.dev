@@ -84,7 +84,7 @@
 
                                 <?php
                                 echo anchor('requerentes/editar_requerente/'.$requerente->id,'<i class="icon-edit"></i> Editar ',array('class' => 'btn'));
-                                echo anchor('requerentes/excluir_requerente/'.$requerente->id,'<i class="icon-trash"></i> Excluir ',array('class' => 'btn confirm_delete'));
+                                echo anchor('requerentes/excluir_requerente/'.$requerente->id,'<i class="icon-trash"></i> Excluir ',array('class' => 'btn confirmdelete'));
                                 ?>
                                
                             </div>

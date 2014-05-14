@@ -29,6 +29,8 @@ class Categorias_requerimento_model extends MY_Model
         {
             $list = $this->get_secretarias_by_categoria($value->id);
             
+            $nomes = NULL;
+            
             foreach ($list as $id_sec)
             {
                 $nomes[] = $this->secretarias_model->get($id_sec->id_secretaria)->sigla;

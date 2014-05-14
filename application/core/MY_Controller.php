@@ -14,14 +14,16 @@ class MY_Controller extends CI_Controller
         
         if ( !isset($_SESSION['cpf']) && (!in_array(uri_string(), $no_redirect ) ))                
         {
-            if ( !startsWith(uri_string(), 'graficos_customizados/incorporar') &&
+            if ( !startsWith(uri_string(), 'requerimentos/visualizar_requerimento') &&
+                 !startsWith(uri_string(), 'requerimentos/imprimir_requerimento') &&
+                 !startsWith(uri_string(), 'graficos_customizados/incorporar') &&
                  !startsWith(uri_string(), 'requerimentos/relatorio_por_mes') )
             redirect('login');
         }
 
         if ( !$this->input->is_ajax_request())
         {
-            $this->output->enable_profiler(ENVIRONMENT == 'development');
+//            $this->output->enable_profiler(ENVIRONMENT == 'development');
         }
     }
 

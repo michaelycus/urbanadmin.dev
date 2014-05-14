@@ -37,7 +37,7 @@
                 $this->table->add_row(array('data'=>'<small><strong>'.$rua->nome.'</strong></small>'),
                                       array('data'=>'<small>'.$rua->lei_decreto.'</small>'),
                                       array('data'=>anchor('configuracoes/ruas/editar_rua/'.$rua->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
-                                                    anchor('configuracoes/ruas/excluir_rua/'.$rua->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:150px'));
+                                                    anchor('configuracoes/ruas/excluir_rua/'.$rua->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirmdelete btn btn-danger btn-xs')), 'style'=>'width:150px'));
             endforeach;
 
            echo $this->table->generate();

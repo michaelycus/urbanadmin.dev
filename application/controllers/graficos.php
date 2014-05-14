@@ -31,6 +31,12 @@ class Graficos extends MY_Controller
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->order_by('ordem')->get_all();
         $this->load_view('graficos/requerimentos_por_tipo', TRUE);
     }
+    
+    public function requerimentos_por_situacao()
+    {
+        $this->data['status'] = array('Em análise', 'Analisados', 'Protocolados', 'Concluídos', 'Sessão');
+        $this->load_view('graficos/requerimentos_por_situacao', TRUE);
+    }
 
     public function requerimentos_por_vereador()
     {

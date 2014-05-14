@@ -140,6 +140,16 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="dados_tabela">Apresentar dados em tabela</label>
+                                <label class="checkbox-inline">
+                                    <?php
+                                     echo form_checkbox(array('name' => 'dados_tabela','id' => 'dados_tabela',
+                                                              'class' => 'form-control', 'value' => 'dados_tabela', 'checked' => $grafico->dados_tabela==1 ? TRUE: FALSE));
+                                    ?>                                    
+                                </label>
+                            </div>
 
 <!--                            <div id="chart_pizza">
                                 <div class="form-group">

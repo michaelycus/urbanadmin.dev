@@ -40,7 +40,7 @@
                                       array('data'=>'<small>'.$bairro->telefone_presidente.'</small>'),
                                       array('data'=>'<small>'.$bairro->email_presidente.'</small>'),
                                       array('data'=>anchor('bairros/editar_bairro/'.$bairro->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
-                                                    anchor('bairros/excluir_bairro/'.$bairro->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:150px'));
+                                                    anchor('bairros/excluir_bairro/'.$bairro->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirmdelete btn btn-danger btn-xs')), 'style'=>'width:150px'));
             endforeach;
 
            echo $this->table->generate();

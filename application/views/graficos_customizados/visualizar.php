@@ -52,7 +52,7 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-9">
             <div class="panel panel-default">
                 <div class="panel-body">
 
@@ -80,17 +80,75 @@
                     
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label class="col-lg-1 control-label" for="normal">Incorporar</label>
-                            <div class="col-lg-5">
+                            <label class="col-lg-2 control-label" for="normal">Incorporar</label>
+                            <div class="col-lg-10">
                                 <textarea class="form-control" id="textarea" rows="3"><iframe width="640" height="640" src="<?php echo base_url(); ?>graficos_customizados/incorporar/<?php echo $chart->code; ?>?desc=yes" frameborder="0"></iframe>
                                 </textarea>
                             </div>
                         </div>
                     </form>
 
-
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
         </div><!-- End .col-lg-6  -->
+        
+        <?php
+        if ($chart->dados_tabela)
+        {
+        ?>
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table style="width:100%">
+                        <?php
+                        
+                        $i = 1;
+                        foreach ($chart_values as $c_v):
+                            $bairro = $bairros[$i];
+                            $valor = ($c_v->valor!=NULL) ? $c_v->valor : 0;
+                            if ($c_v->valor!=NULL)
+                            {
+                                switch ($chart->formato)
+                                {
+                                    case GRAFICO_FORMATO_SEM:
+                                        $valor_formatado = number_format($valor, 0, ",", ".");
+                                        break;
+
+                                    case GRAFICO_FORMATO_PERCENTO:
+                                        $valor_formatado = number_format($valor, 1, ",", ".").'%';
+                                        break;
+
+                                    case GRAFICO_FORMATO_REAIS:
+                                        $valor_formatado = 'R$ '. number_format($valor, 2, ",", ".");
+                                        break;
+
+                                    case GRAFICO_FORMATO_DOLAR:
+                                        $valor_formatado = '$ '. number_format($valor, 2, ",", ".");
+                                        break;
+
+                                    default:
+                                        $valor_formatado = number_format($valor, 1, ",", ".");
+                                        break;
+                                }
+                                
+                                echo '<tr>';
+                                echo '<td>' . $bairro->nome . '</td>';
+                                echo '<td>' . $valor_formatado . '</td>';
+                                echo '</tr>';
+                            }
+
+                        $i++;
+                        endforeach;
+                        
+                        ?>
+                    </table>
+                </div>                
+            </div>            
+        </div>
+        
+        <?php
+        }
+        ?>
+        
     </div><!-- End .row-fluid  -->
 </div>

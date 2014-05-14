@@ -136,6 +136,41 @@ if (!function_exists('reset_password')) {
     }
 }
 
+if (!function_exists('send_message_secretaria')) {
+    function send_message_secretaria ($email_to, $title, $message, $code)
+    {
+        $ci =& get_instance();
+
+        $ci->load->library('MY_PHPMailer');
+        
+        $mail = get_mail();
+        
+        $mail->Subject = $title; //Assunto do e-mail.        
+        
+        $mail->Body = $message;
+        $mail->Body .= "<br/><br/>";
+        $mail->Body .= "<p>Atenciosamente,<br/> Gabinete do Vereador Ranzi</p>";
+        $mail->Body .= '<p>Mais informações e impressão do requerimento:<br/>';
+        $mail->Body .= '<a href="http://www.ranzi.com.br/requerimento/requerimentos/visualizar_requerimento/'.$code.'" target="_blank">http://www.ranzi.com.br/requerimento/requerimentos/visualizar_requerimento/'.$code.'</a></p>';
+        
+        foreach ($email_to as $e)
+        {
+            $mail->AddCC($e, "");
+        }
+        
+        if (!$mail->Send())
+        {
+            $data["message"] = "Ocorreu um erro durante o envio: " . $mail->ErrorInfo;
+        }
+        else
+        {
+            $data["message"] = "Mensagem enviada com sucesso!";
+        }
+        
+        return $data;
+    }
+}
+
 if (!function_exists('send_message')) {
     function send_message ($email_to, $message)
     {
@@ -177,8 +212,8 @@ if (!function_exists('send_message')) {
         $mail->Port = 465; //Estabelecemos a porta utilizada pelo servidor do gMail.
         $mail->IsHTML(true);         
         
-        $mail->Username = "vereadorranzi@gmail.com"; //Usuário do gMail
-        $mail->Password = "jcilajeado15"; //Senha do gMail
+        $mail->Username = "vereadorranzi@gmail.com"; 
+        $mail->Password = "jcilajeado15";
         $mail->SetFrom('vereadorranzi@gmail.com', 'Vereador Carlos Ranzi'); //Quem está enviando o e-mail.
         $mail->AddReplyTo("vereadorranzi@gmail.com","Vereador Carlos Ranzi"); //Para que a resposta será enviada.
           

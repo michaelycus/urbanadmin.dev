@@ -80,7 +80,7 @@
                 echo    '<div class="col-lg-9">';
                 echo        '<div class="btn-toolbar" style="margin: 0;">';
                 echo            form_submit('submit', 'Salvar', 'class="btn btn-primary"');
-                echo            anchor('contatos/excluir_contato/'.$contato->id, 'Excluir contato', 'class="btn btn-danger confirm_delete"');
+                echo            anchor('contatos/excluir_contato/'.$contato->id, 'Excluir contato', 'class="btn btn-danger confirmdelete"');
                 echo        '</div>';
                 echo    '</div>';
                 echo '</div>';

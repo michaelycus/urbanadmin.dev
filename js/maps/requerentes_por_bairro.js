@@ -34,17 +34,17 @@
                             fill: "#dcbf00"}
                       },{
                         min: 6,
-                        max: 8,
+                        max: 9,
                         attrs: {
                             fill: "#d4b400"}
                       },{
-                        min: 8,
-                        max: 11,
+                        min: 9,
+                        max: 12,
                         attrs: {
                             fill: "#ccaa00"}
                       },{
-                        min: 11,
-                        max: 14,
+                        min: 12,
+                        max: 15,
                         attrs: {
                             fill: "#c4a000"}
                       },]
@@ -81,10 +81,10 @@
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Centenário </span><br />Requerentes: 2"},
                             },                            "centro":{
-                                value: "13",
-                                text: { content:  13 , attrs: {fill:"#222"} },
+                                value: "14",
+                                text: { content:  14 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerentes: 13"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerentes: 14"},
                             },                            "conventos":{
                                 value: "8",
                                 text: { content:  8 , attrs: {fill:"#222"} },
@@ -111,20 +111,20 @@
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerentes: 1"},
                             },                            "jardim_do_cedro":{
-                                value: "8",
-                                text: { content:  8 , attrs: {fill:"#222"} },
+                                value: "7",
+                                text: { content:  7 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerentes: 8"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerentes: 7"},
                             },                            "moinhos":{
                                 value: "11",
                                 text: { content:  11 , attrs: {fill:"#222"} },
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerentes: 11"},
                             },                            "moinhos_dagua":{
-                                value: "5",
-                                text: { content:  5 , attrs: {fill:"#222"} },
+                                value: "6",
+                                text: { content:  6 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos D' Água </span><br />Requerentes: 5"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos D' Água </span><br />Requerentes: 6"},
                             },                            "montanha":{
                                 value: "9",
                                 text: { content:  9 , attrs: {fill:"#222"} },
@@ -146,20 +146,20 @@
                                 href: "#",
                                 tooltip: {content: "<span style=\"font-weight:bold;\">Planalto </span><br />Requerentes: 1"},
                             },                            "sao_bento":{
-                                value: "1",
-                                text: { content:  1 , attrs: {fill:"#222"} },
+                                value: "2",
+                                text: { content:  2 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">São Bento </span><br />Requerentes: 1"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">São Bento </span><br />Requerentes: 2"},
                             },                            "sao_cristovao":{
-                                value: "5",
-                                text: { content:  5 , attrs: {fill:"#222"} },
+                                value: "6",
+                                text: { content:  6 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">São Cristóvão </span><br />Requerentes: 5"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">São Cristóvão </span><br />Requerentes: 6"},
                             },                            "universitario":{
-                                value: "11",
-                                text: { content:  11 , attrs: {fill:"#222"} },
+                                value: "12",
+                                text: { content:  12 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Requerentes: 11"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Requerentes: 12"},
                             },}
             });
         });

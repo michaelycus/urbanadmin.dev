@@ -45,7 +45,7 @@
                                       array('data'=>'<small>'.$chart->nome_requerente.'</small>'),
                                       array('data'=>'<div style="display:none;">'.$chart->data.'</div>'.
                                                     anchor('graficos_customizados/editar_grafico/'.$chart->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-block btn-primary btn-xs')).' '.
-                                                    anchor('graficos_customizados/excluir_grafico/'.$chart->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-block btn-danger btn-xs')), 'style'=>'width:100px'));
+                                                    anchor('graficos_customizados/excluir_grafico/'.$chart->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirmdelete btn btn-block btn-danger btn-xs')), 'style'=>'width:100px'));
             endforeach;
 
            echo $this->table->generate();

@@ -41,7 +41,7 @@
                                       array('data'=>'<small>'.$categoria->descricao.'</small>'),
                                       array('data'=>'<small>'. $categoria->secretarias .'</small>'),                                      
                                       array('data'=>anchor('configuracoes/categorias_requerimento/editar_categoria/'.$categoria->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-primary btn-xs')).' '.
-                                                    anchor('configuracoes/categorias_requerimento/excluir_categoria/'.$categoria->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirm_delete btn btn-danger btn-xs')), 'style'=>'width:150px'));
+                                                    anchor('configuracoes/categorias_requerimento/excluir_categoria/'.$categoria->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirmdelete btn btn-danger btn-xs')), 'style'=>'width:150px'));
             endforeach;
 
            echo $this->table->generate();

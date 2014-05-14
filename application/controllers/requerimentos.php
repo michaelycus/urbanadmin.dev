@@ -119,12 +119,15 @@ class Requerimentos extends MY_Controller
 
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento',
-                'id_requerente','id_solicitante','da_sessao'),$this->input->post());
+                'id_requerente','id_solicitante'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
 
             $data['descricao_original'] = $this->input->post('descricao');
 
+            $data['da_sessao'] = $this->input->post('da_sessao') ? 1 : 0;
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
+            
+            $data['code'] = generate_key(8);
 
             $i = 1;
             foreach($_FILES as $field => $file)
@@ -213,9 +216,10 @@ class Requerimentos extends MY_Controller
         $this->data['cats_requerimento'] = $this->categorias_requerimento_model->order_by('ordem')->get_all();
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente','da_sessao'),$this->input->post());
+            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento','id_requerente'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
 
+            $data['da_sessao'] = $this->input->post('da_sessao') ? 1 : 0;
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
 
             if ($this->input->post('expediente'))
@@ -335,8 +339,9 @@ class Requerimentos extends MY_Controller
 
         send_notification($id);
 
-        redirect('requerimentos/listar_requerimentos');
-    }
+        if ($situacao != REQUERIMENTO_SITUACAO_ANALISADO)
+            redirect('requerimentos/listar_requerimentos');
+    }        
 
     public function retornar_situacao($id, $situacao)
     {
@@ -349,18 +354,62 @@ class Requerimentos extends MY_Controller
 
     public function gravar_expediente($id, $expediente, $ano)
     {
-        $this->requerimento_model->gravar_expediente($id, $expediente, $ano);
+        if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
+        {
+            $this->requerimento_model->gravar_expediente($id, $expediente, $ano);
 
-        $this->avancar_situacao($id, REQUERIMENTO_SITUACAO_ANALISADO);
-
-        redirect('requerimentos/visualizar/'.$id);
+            $this->avancar_situacao($id, REQUERIMENTO_SITUACAO_ANALISADO);
+        
+            redirect('requerimentos/preparar_mensagem/'.$id);
+        }
     }
+    
+    public function preparar_mensagem($id)
+    {
+        $this->requerimento_model->get($id);
+        
+        $this->data['requerimento'] = $requerimento = $this->requerimento_model->get($id);
+        $this->data['bairro'] = $this->bairros_model->get($requerimento->id_bairro);
+        $this->data['solicitante'] = $this->requerente_model->get($requerimento->id_solicitante);
+        $this->data['cat_requerimento'] = $categoria = $this->categorias_requerimento_model->get($requerimento->cat_requerimento);
+        
+        if ($requerimento->id_rua != 0)
+            $this->data['rua'] = $this->ruas_model->get($requerimento->id_rua);
+        
+        $secretarias = $this->categorias_requerimento_model->get_secretarias_by_categoria($categoria->id);
+        
+        $this->load->model('secretarias_model');
+        
+        foreach ($secretarias as $s)
+        {
+            $emails[] = $this->secretarias_model->get($s->id_secretaria)->email;            
+        }
+        
+        $this->data['emails'] = implode(',', $emails);
 
-    public function imprimir_requerimento($id)
+        if ($requerimento->id_rua != 0)
+            $this->data['rua'] = $this->ruas_model->get($requerimento->id_rua);
+
+        $this->load_view('requerimentos/enviar_mensagem');
+    }
+    
+    public function enviar_mensagem()
+    {
+        send_message_secretaria($lista_end = explode(",", $this->input->post('enviar_para')) ,
+                                $this->input->post('titulo'), 
+                                nl2br($this->input->post('descricao')), 
+                                $this->input->post('code'));       
+        
+        $this->session->set_userdata('mensagem_enviada','Mensagem enviada com sucesso!');
+        
+        redirect('requerimentos/listar_requerimentos');
+    }
+    
+    public function imprimir_requerimento($code)
     {
         $this->load->library('Pdf');
 
-        $requerimento = $this->requerimento_model->get($id);
+        $requerimento = $this->requerimento_model->get_requerimento_by_code($code);
         $solicitante = $this->requerente_model->get($requerimento->id_solicitante);
 
         $pdf = new PDF();
@@ -378,8 +427,8 @@ class Requerimentos extends MY_Controller
         $pdf->WriteHTML(iconv('utf-8','iso-8859-1',$html));
 
         $pdf->Ln(20);
-        $pdf->SetFont('Arial', 'B', 12);
-        $pdf->Cell(0, 0, 'Requer:', 0, 0, 'L', false);
+        $pdf->SetFont('Arial', 'B', 12); 
+       $pdf->Cell(0, 0, 'Requer:', 0, 0, 'L', false);
 
         $html = $requerimento->descricao;
 
@@ -452,5 +501,35 @@ class Requerimentos extends MY_Controller
         echo '[ ' . implode(",", $arr_req) . ']';
 
         return;
+    }    
+    
+    public function visualizar_requerimento($code)
+    {        
+        $this->data['requerimento'] = $requerimento = $this->requerimento_model->get_requerimento_by_code($code);
+        
+        $this->data['bairro'] = $this->bairros_model->get($requerimento->id_bairro);
+        $this->data['requerente'] = $this->requerente_model->get($requerimento->id_requerente);
+        $this->data['requerente'] = $this->requerente_model->get($requerimento->id_requerente);
+        $this->data['solicitante'] = $this->requerente_model->get($requerimento->id_solicitante);
+        $this->data['cat_requerimento'] = $this->categorias_requerimento_model->get($requerimento->cat_requerimento);
+        
+        if ($requerimento->id_rua != 0)
+            $this->data['rua'] = $this->ruas_model->get($requerimento->id_rua);
+        
+        $this->load->view('requerimentos/visualizar_requerimento', $this->data);
     }
+    
+//    public function generate_code()
+//    {
+//        $requerimentos = $this->requerimento_model->get_all();        
+//        
+//        foreach ($requerimentos as $req)
+//        {
+//            $req->code = generate_key(8);
+//            
+//            $this->requerimento_model->update($req->id,$req);
+//            
+//            echo $req->id . ' - ' .$req->code . ' - ' . $req->da_sessao . ' - ' . $req->notificar .'<br/>';
+//        }
+//    }
 }

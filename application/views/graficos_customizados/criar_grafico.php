@@ -68,6 +68,7 @@
                                     <textarea class="form-control" type="text" id="observacoes" name="observacoes"></textarea>
                                 </div>
                             </div>                            
+                            
                             <div class="form-group">
                                 <label class="col-lg-2 control-label" for="fonte">Formato</label>
                                 <div class="col-lg-2">
@@ -124,6 +125,16 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label" for="dados_tabela">Apresentar dados em tabela</label>
+                                <label class="checkbox-inline">
+                                    <?php
+                                     echo form_checkbox(array('name' => 'dados_tabela','id' => 'dados_tabela',
+                                                              'class' => 'form-control', 'value' => 'dados_tabela'));
+                                    ?>                                    
+                                </label>
                             </div>
 
 <!--                            <div id="chart_pizza">

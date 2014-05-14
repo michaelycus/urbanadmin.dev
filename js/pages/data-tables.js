@@ -109,4 +109,5 @@ $(document).ready(function() {
 
     $('.dataTables_length select').uniform();
     $('.dataTables_paginate > ul').addClass('pagination');
+    
 });

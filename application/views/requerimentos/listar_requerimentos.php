@@ -19,6 +19,11 @@
             echo '<div class="alert alert-success">'. $this->session->userdata('requerimento_excluido') .'</div>';
             $this->session->unset_userdata('requerimento_excluido');
         }
+        elseif ($this->session->userdata('mensagem_enviada'))
+        {
+            echo '<div class="alert alert-success">'. $this->session->userdata('mensagem_enviada') .'</div>';
+            $this->session->unset_userdata('mensagem_enviada');
+        }
 
         $this->table->set_template($tmpl);
         $this->table->set_heading('Resumo', "Tipo Req.", "Bairro", "Solicitante", "Requerente", "Situação", "Expediente", "");
@@ -48,9 +53,9 @@
             array('data'=>'<small>'.$requerimento->expediente.'/'.$requerimento->ano_expediente. '</small>'),
             array('data'=>'<div style="display:none;">'.$requerimento->data_requerimento.'</div>'.
                           ($requerimento->situacao > REQUERIMENTO_SITUACAO_EM_ANALISE ?
-                          anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->id,'<i class="i-print-3"></i> Imprimir ', array('class' => 'btn btn-block btn-warning btn-xs')).' ': '') .
+                          anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code,'<i class="i-print-3"></i> Imprimir ', array('class' => 'btn btn-block btn-warning btn-xs')).' ': '') .
                           anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-block btn-primary btn-xs')).' '.
-                          anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir ',array('class' => 'confirm_delete btn btn-block btn-danger btn-xs')), 'style'=>'width:100px'));
+                          anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir ',array('class' => 'confirmdelete btn btn-block btn-danger btn-xs')), 'style'=>'width:100px'));
             endforeach;
 
             echo $this->table->generate();

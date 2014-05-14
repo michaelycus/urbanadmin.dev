@@ -105,9 +105,21 @@ class Login extends MY_Controller
             }
             $this->data['meses'] = array_reverse($meses);
 
-            $this->data['versao_atual'] = "1.2.0";
+            $this->data['versao_atual'] = "1.2.3";
 
             $json_str = '{"versoes":[
+                    {"versao":"1.2.3", "data":"13/05/2014", "changes":
+                         ["Nova opção de configuração nos gráficos customizados"
+                          ]},
+                    {"versao":"1.2.2", "data":"12/05/2014", "changes":
+                         ["Envio de mensagem para secretarias",
+                          "Permite que usuários não logados consigam visualizar requerimentos através de um link",
+                          "Mapa de requerimentos por situação"
+                          ]},
+                    {"versao":"1.2.1", "data":"06/05/2014", "changes":
+                         ["Multipla seleção de secretarias por categoria de requerimento",
+                          "Usuário pode criar mapa customizados"
+                          ]},
                     {"versao":"1.2.0", "data":"24/04/2014", "changes":
                          ["Nova versão transfere as opções de configuração do sistema para uma nova tela",
                           "Possibilidade de cadastrar Secretarias e Categorias de Requerimento"

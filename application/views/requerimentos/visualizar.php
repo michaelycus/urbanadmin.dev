@@ -111,9 +111,9 @@
                             <div class="btn-toolbar" style="margin: 0;">
                                 <?php
                                     if ($requerimento->situacao > REQUERIMENTO_SITUACAO_EM_ANALISE)
-                                        echo anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->id,'<i class="i-print-3"></i> Imprimir ', array('class' => 'btn'));
+                                        echo anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code,'<i class="i-print-3"></i> Imprimir ', array('class' => 'btn'));
                                     echo anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ',array('class' => 'btn'));
-                                    echo anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir ',array('class' => 'btn confirm_delete' ));
+                                    echo anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir ',array('class' => 'btn confirmdelete' ));
                                 ?>
                             </div>
                         </div>
