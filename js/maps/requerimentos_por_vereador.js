@@ -6,11 +6,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 11"
                             }},"americano": {
-                            "value": 11,
-                            "text": { "content":  "11" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#6c99ca"},
+                            "value": 12,
+                            "text": { "content":  "12" , attrs: {fill:"#222"} },
+                            "attrs": { fill: "#6c98c9"},
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 11"
+                                    "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 12"
                             }},"bom_pastor": {
                             "value": 15,
                             "text": { "content":  "15" , attrs: {fill:"#222"} },
@@ -24,11 +24,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 5"
                             }},"carneiros": {
-                            "value": 5,
-                            "text": { "content":  "5" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#6f9ccc"},
+                            "value": 7,
+                            "text": { "content":  "7" , attrs: {fill:"#222"} },
+                            "attrs": { fill: "#6e9bcc"},
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 5"
+                                    "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 7"
                             }},"centenario": {
                             "value": 3,
                             "text": { "content":  "3" , attrs: {fill:"#222"} },
@@ -36,11 +36,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 3"
                             }},"centro": {
-                            "value": 51,
-                            "text": { "content":  "51" , attrs: {fill:"#222"} },
+                            "value": 53,
+                            "text": { "content":  "53" , attrs: {fill:"#222"} },
                             "attrs": { fill: "#5884b8"},
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 51"
+                                    "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 53"
                             }},"conservas": {
                             "value": 1,
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
@@ -50,7 +50,7 @@
                             }},"conventos": {
                             "value": 7,
                             "text": { "content":  "7" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#6e9bcb"},
+                            "attrs": { fill: "#6e9bcc"},
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 7"
                             }},"floresta": {
@@ -110,7 +110,7 @@
                             }},"olarias": {
                             "value": 7,
                             "text": { "content":  "7" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#6e9bcb"},
+                            "attrs": { fill: "#6e9bcc"},
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 7"
                             }},"planalto": {
@@ -139,12 +139,12 @@
                                     "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 23"
                             }}},"plots": {"alto_do_parque": {
                             "value": 11},"americano": {
-                            "value": 11},"bom_pastor": {
+                            "value": 12},"bom_pastor": {
                             "value": 15},"campestre": {
                             "value": 5},"carneiros": {
-                            "value": 5},"centenario": {
+                            "value": 7},"centenario": {
                             "value": 3},"centro": {
-                            "value": 51},"conservas": {
+                            "value": 53},"conservas": {
                             "value": 1},"conventos": {
                             "value": 7},"floresta": {
                             "value": 3},"florestal": {
@@ -400,7 +400,7 @@
                             }},"conservas": {
                             "value": 7,
                             "text": { "content":  "7" , attrs: {fill:"#222"} },
-                            "attrs": { fill: "#6e9bcb"},
+                            "attrs": { fill: "#6e9bcc"},
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 7"
                             }},"conventos": {

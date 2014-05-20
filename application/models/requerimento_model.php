@@ -286,4 +286,22 @@ class Requerimento_model extends MY_Model
         $data = array('expediente' => $expediente, 'ano_expediente' => $ano);
         $this->update($id, $data);
     }
+    
+    public function get_requerimentos_notificar()
+    {
+        $data = date('Y-m-d', strtotime(date('Y-m-d'). ' - 30 days'));
+        
+        $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
+                    categorias_requerimento.nome AS nome_categoria, requerentes.nome AS nome_requerente,
+                    r.nome AS nome_solicitante, r.email AS email');
+        $this->db->where("data_requerimento = '$data'");
+        $this->db->where('da_sessao !=', REQUERIMENTO_DA_SESSAO);
+        $this->db->where('id_requerente', REQUERENTE_PADRAO_ID);
+        $this->db->where('situacao', REQUERIMENTO_SITUACAO_PROTOCOLADO);
+        $this->db->where('notificar', 1);        
+        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+        $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
+        $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
+        $this->db->join('requerentes AS r', 'requerimentos.id_solicitante=r.id');
+    }
 }

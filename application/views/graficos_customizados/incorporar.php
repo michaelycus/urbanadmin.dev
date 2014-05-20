@@ -112,8 +112,8 @@
         .table thead > tr > td,
         .table tbody > tr > td,
         .table tfoot > tr > td {
-            padding: 5px;
-            line-height: 1.0;
+            padding: 4px;
+            line-height: 0.8;
             vertical-align: top;
             border-top: 1px solid #dddddd;
         }

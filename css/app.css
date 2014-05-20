@@ -39,6 +39,7 @@ body {display: inline-block; overflow-x: hidden;}
 .green {color: #72b110;}
 .yellow {color: #f7cb38;}
 .orange {color: #F88C00;}
+.purple {color: #9955BB;}
 
 /*Text Shadows*/
 .tshadow {text-shadow: 0px 1px 0px #ffffff; filter: dropshadow(color=#ffffff, offx=0, offy=1);}
@@ -1990,7 +1991,8 @@ border-color: #c9c9c9;
 			.vital-stats .item .icon.green {background: #72b110;}
 			.vital-stats .item .icon.yellow {background: #f7cb38;}
 			.vital-stats .item .icon.orange {background: #F88C00;}
-				.vital-stats .item .icon i {font-size: 24px; padding: 12px; color: white; margin-left: 0;margin-right: 0;}
+			.vital-stats .item .icon.purple {background: #9955BB;}
+                        .vital-stats .item .icon i {font-size: 24px; padding: 12px; color: white; margin-left: 0;margin-right: 0;}
 
 			.vital-stats .item .percent {float: right; width: 90px; font-weight: bold; font-size: 24px; color: #666;height: 25px; line-height: 32px;}
 			.vital-stats .item .txt {float: right; width: 90px; color: #b3b0b0; text-transform: uppercase; height: 25px; font-size: 11px; line-height: 25px;}
@@ -2054,6 +2056,7 @@ border-color: #c9c9c9;
 		.stats-buttons li a .icon.green {background: #72b110;border: 1px solid #72b110;}
 		.stats-buttons li a .icon.blue {background: #62aeef;border: 1px solid #3693e2;}
 		.stats-buttons li a .icon.yellow {background: #e7d246;border: 1px solid #d0ba24;}
+                .stats-buttons li a .icon.purple {background: #9955BB;border: 1px solid #CA2C92;}
 			.stats-buttons li a .icon.gray {background: #777777;border: 1px solid #5b5a5a;}
 			.stats-buttons li a .icon i {color: white; padding: 9px 1px 9px 1px;}
 		.stats-buttons li a .number {width: 100%; float: left; font-weight: 700; font-size: 24px; margin:5px 0 5px; color: #777777;}

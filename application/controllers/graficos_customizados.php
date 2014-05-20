@@ -74,6 +74,8 @@ class Graficos_Customizados extends MY_Controller
    
     public function excluir_grafico($id)
     {
+        $this->data['chart'] = $this->graficos_customizados_model->get($id);
+        
         if ($this->data['chart']->id_requerente == $_SESSION['id_user'])
         {
             //deleta arquivo js

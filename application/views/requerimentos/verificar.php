@@ -48,7 +48,7 @@
                     case REQUERIMENTO_RETORNO_SERVICO_NAO_EFETIVADO:
                         $status_retorno = '<span class="icon red"><i class="icon16 i-close-3"></i></span>';
                         break;
-                }
+                }                
                 
                 $this->table->add_row(array('data'=>$status_retorno . anchor('requerimentos/visualizar/'.$requerimento->id, '<small>'.substr($requerimento->descricao, 0, 96).(strlen($requerimento->descricao)>255?"..." : "").'</small>')),
                                       array('data'=>'<small>'.$requerimento->nome_categoria.'</small>'),

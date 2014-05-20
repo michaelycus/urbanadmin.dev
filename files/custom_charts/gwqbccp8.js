@@ -26,7 +26,7 @@
         areas: {                        "alto_do_parque":{ 
                            value: "865785",
                             attrs: {
-                                fill: "hsl(306, 22, 69.271118805432)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 70.23722785392)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -34,7 +34,7 @@
                         },                        "americano":{ 
                            value: "453453",
                             attrs: {
-                                fill: "hsl(306, 22, 71.999511005249)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 72.505508506204)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -42,7 +42,7 @@
                         },                        "bom_pastor":{ 
                            value: "435369",
                             attrs: {
-                                fill: "hsl(306, 22, 72.119172454134)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 72.604990446281)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -50,7 +50,7 @@
                         },                        "campestre":{ 
                            value: "7638",
                             attrs: {
-                                fill: "hsl(306, 22, 74.949459514124)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.957982578063)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -58,7 +58,7 @@
                         },                        "carneiros":{ 
                            value: "21386",
                             attrs: {
-                                fill: "hsl(306, 22, 74.858489286339)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.882353419017)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -66,7 +66,7 @@
                         },                        "centenario":{ 
                            value: "8987",
                             attrs: {
-                                fill: "hsl(306, 22, 74.940533209405)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.950561590606)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -74,7 +74,7 @@
                         },                        "centro":{ 
                            value: "3377",
                             attrs: {
-                                fill: "hsl(306, 22, 74.977654461796)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.981422776397)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -82,23 +82,23 @@
                         },                        "conservas":{ 
                            value: "785687",
                             attrs: {
-                                fill: "hsl(306, 22, 69.801125592247)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 70.677855172893)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Valor: R$ 785.687,00"},
                         },                        "conventos":{ 
-                           value: "4533",
+                           value: "4533.89013671875",
                             attrs: {
-                                fill: "hsl(306, 22, 74.97000523403)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.975058605016)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Valor: R$ 4.533,00"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Conventos </span><br />Valor: R$ 4.533,89"},
                         },                        "floresta":{ 
                            value: "453687",
                             attrs: {
-                                fill: "hsl(306, 22, 71.997962632155)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 72.504221248187)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -106,7 +106,7 @@
                         },                        "florestal":{ 
                            value: "6877",
                             attrs: {
-                                fill: "hsl(306, 22, 74.95449503517)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.962168917169)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -114,7 +114,7 @@
                         },                        "hidraulica":{ 
                            value: "757575",
                             attrs: {
-                                fill: "hsl(306, 22, 69.987142106903)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 70.832502170208)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -122,7 +122,7 @@
                         },                        "igrejinha":{ 
                            value: "25253",
                             attrs: {
-                                fill: "hsl(306, 22, 74.832901428407)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.861080655122)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -130,7 +130,7 @@
                         },                        "imigrante":{ 
                            value: "76786",
                             attrs: {
-                                fill: "hsl(306, 22, 74.491908647752)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.577592332959)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -138,7 +138,7 @@
                         },                        "jardim_do_cedro":{ 
                            value: "453453",
                             attrs: {
-                                fill: "hsl(306, 22, 71.999511005249)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 72.505508506204)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -146,7 +146,7 @@
                         },                        "moinhos":{ 
                            value: "786786",
                             attrs: {
-                                fill: "hsl(306, 22, 69.793853532287)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 70.671809461095)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -154,7 +154,7 @@
                         },                        "moinhos_dagua":{ 
                            value: "786867",
                             attrs: {
-                                fill: "hsl(306, 22, 69.793317556985)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 70.671363871782)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -162,7 +162,7 @@
                         },                        "montanha":{ 
                            value: "45343",
                             attrs: {
-                                fill: "hsl(306, 22, 74.699966319577)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.750563503156)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -170,7 +170,7 @@
                         },                        "morro_vinte_cinco":{ 
                            value: "54358",
                             attrs: {
-                                fill: "hsl(306, 22, 74.640314253568)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.700971062889)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -178,7 +178,7 @@
                         },                        "nacoes":{ 
                            value: "45788",
                             attrs: {
-                                fill: "hsl(306, 22, 74.697021763906)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.748115512483)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -186,7 +186,7 @@
                         },                        "olarias":{ 
                            value: "458",
                             attrs: {
-                                fill: "hsl(306, 22, 74.996969423602)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.997480494993)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -194,7 +194,7 @@
                         },                        "planalto":{ 
                            value: "786867",
                             attrs: {
-                                fill: "hsl(306, 22, 69.793317556985)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 70.671363871782)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -202,23 +202,23 @@
                         },                        "santo_andre":{ 
                            value: "786887",
                             attrs: {
-                                fill: "hsl(306, 22, 69.793185217404)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 70.671253849729)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
                             tooltip: {content: "<span style=\"font-weight:bold;\">Santo André </span><br />Valor: R$ 786.887,00"},
                         },                        "santo_antonio":{ 
-                           value: "453453",
+                           value: "5453451.15",
                             attrs: {
-                                fill: "hsl(306, 22, 71.999511005249)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 45.000005501103)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
-                            tooltip: {content: "<span style=\"font-weight:bold;\">Santo Antônio </span><br />Valor: R$ 453.453,00"},
+                            tooltip: {content: "<span style=\"font-weight:bold;\">Santo Antônio </span><br />Valor: R$ 5.453.451,15"},
                         },                        "sao_bento":{ 
                            value: "4533790",
                             attrs: {
-                                fill: "hsl(306, 22, 45.000006616979)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 50.059155877988)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -226,7 +226,7 @@
                         },                        "sao_cristovao":{ 
                            value: "56378",
                             attrs: {
-                                fill: "hsl(306, 22, 74.626947955916)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 74.689858835563)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",
@@ -234,7 +234,7 @@
                         },                        "universitario":{ 
                            value: "775575",
                             attrs: {
-                                fill: "hsl(306, 22, 69.868036484258)", stroke: "#204a87"
+                                fill: "hsl(306, 22, 70.733482322752)", stroke: "#204a87"
                             },
                             text: { content:  "" , attrs: {fill:"#222"} },
                             href: "#",

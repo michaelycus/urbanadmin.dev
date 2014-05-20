@@ -6,11 +6,11 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 4"
                             }},"americano": {
-                            "value": 2,
-                            "attrs": { fill: "#719dce"},
-                            "text": { "content":  "2" , attrs: {fill:"#222"} },
+                            "value": 3,
+                            "attrs": { fill: "#709dcd"},
+                            "text": { "content":  "3" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 2"
+                                    "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 3"
                             }},"bom_pastor": {
                             "value": 2,
                             "attrs": { fill: "#719dce"},
@@ -24,17 +24,17 @@
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 1"
                             }},"carneiros": {
-                            "value": 1,
-                            "attrs": { fill: "#719ece"},
-                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "value": 3,
+                            "attrs": { fill: "#709dcd"},
+                            "text": { "content":  "3" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 1"
+                                    "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 3"
                             }},"centro": {
-                            "value": 4,
-                            "attrs": { fill: "#709ccd"},
-                            "text": { "content":  "4" , attrs: {fill:"#222"} },
+                            "value": 5,
+                            "attrs": { fill: "#6f9ccc"},
+                            "text": { "content":  "5" , attrs: {fill:"#222"} },
                             "tooltip": {
-                                    "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 4"
+                                    "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 5"
                             }},"conventos": {
                             "value": 2,
                             "attrs": { fill: "#719dce"},
@@ -433,7 +433,7 @@
                                     "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 1"
                             }},"bom_pastor": {
                             "value": 7,
-                            "attrs": { fill: "#6e9bcb"},
+                            "attrs": { fill: "#6e9bcc"},
                             "text": { "content":  "7" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 7"
@@ -619,7 +619,7 @@
                                     "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 1"
                             }},"conservas": {
                             "value": 7,
-                            "attrs": { fill: "#6e9bcb"},
+                            "attrs": { fill: "#6e9bcc"},
                             "text": { "content":  "7" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 7"
@@ -1127,6 +1127,12 @@
                             "text": { "content":  "1" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 1"
+                            }},"centro": {
+                            "value": 1,
+                            "attrs": { fill: "#719ece"},
+                            "text": { "content":  "1" , attrs: {fill:"#222"} },
+                            "tooltip": {
+                                    "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 1"
                             }},"hidraulica": {
                             "value": 1,
                             "attrs": { fill: "#719ece"},
@@ -1231,7 +1237,7 @@
                                     "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 4"
                             }},"centro": {
                             "value": 70,
-                            "attrs": { fill: "#4f7bb0"},
+                            "attrs": { fill: "#4f7bb1"},
                             "text": { "content":  "70" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 70"
@@ -1339,7 +1345,7 @@
                                     "content": "<span style=\"font-weight:bold;\">São Bento</span><br />Requerimentos : 2"
                             }},"sao_cristovao": {
                             "value": 14,
-                            "attrs": { fill: "#6b97c8"},
+                            "attrs": { fill: "#6b97c9"},
                             "text": { "content":  "14" , attrs: {fill:"#222"} },
                             "tooltip": {
                                     "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 14"

@@ -39,6 +39,13 @@
                                     </div>')?>
                             </li>
                             <li>
+                                <?php echo anchor('requerimentos/verificar', '<div class="item">
+                                        <div class="icon purple"><i class="i-stack-4"></i></div>
+                                        <span class="percent">'.$req_verificar.'</span>
+                                        <span class="txt">Verificar</span>
+                                    </div>')?>                                
+                            </li>
+                            <li>
                                 <?php echo anchor('requerimentos/concluidos', '<div class="item">
                                         <div class="icon blue"><i class="i-stack-checkmark"></i></div>
                                         <span class="percent">'.$req_concluido.'</span>

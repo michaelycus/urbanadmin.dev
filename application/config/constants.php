@@ -47,15 +47,17 @@ define('ITENS_POR_PAGINA', 20);
 define('REQUERIMENTO_SITUACAO_EM_ANALISE', 0);
 define('REQUERIMENTO_SITUACAO_ANALISADO', 1);
 define('REQUERIMENTO_SITUACAO_PROTOCOLADO', 2);
-define('REQUERIMENTO_SITUACAO_RESOLVIDO', 3);
+define('REQUERIMENTO_SITUACAO_VERIFICAR', 3);
+define('REQUERIMENTO_SITUACAO_RESOLVIDO', 4);
 
 define('REQUERIMENTO_NORMAL', 0);
 define('REQUERIMENTO_DA_SESSAO', 1);
 
-define('REQUERIMENTO_SITUACOES', serialize (array ( 0 => "Em análise",
-                                                    1 => "Analisado",
-                                                    2 => "Protocolado",
-                                                    3 => "" )));
+define('REQUERIMENTO_RETORNO_NAO_NOTIFICADO', 0);
+define('REQUERIMENTO_RETORNO_NOTIFICADO', 1);
+define('REQUERIMENTO_RETORNO_DEMORADO', 2);
+define('REQUERIMENTO_RETORNO_SERVICO_EFETIVADO', 3);
+define('REQUERIMENTO_RETORNO_SERVICO_NAO_EFETIVADO', 4);
 
 define('TIPO_REQ_ENTULHO', 1);
 define('TIPO_REQ_ILUMINACAO', 2);

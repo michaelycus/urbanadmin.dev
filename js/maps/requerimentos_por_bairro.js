@@ -28,47 +28,47 @@
                             fill: "#6996c7"}
                       },{
                         min: 17,
-                        max: 33,
+                        max: 34,
                         attrs: {
                             fill: "#618ec0"}
                       },{
-                        min: 33,
+                        min: 34,
                         max: 50,
                         attrs: {
                             fill: "#5985b9"}
                       },{
                         min: 50,
-                        max: 66,
+                        max: 67,
                         attrs: {
                             fill: "#517db2"}
                       },{
-                        min: 66,
-                        max: 83,
+                        min: 67,
+                        max: 84,
                         attrs: {
                             fill: "#4974ab"}
                       },{
-                        min: 83,
-                        max: 100,
+                        min: 84,
+                        max: 101,
                         attrs: {
                             fill: "#406ca3"}
                       },{
-                        min: 100,
-                        max: 116,
+                        min: 101,
+                        max: 118,
                         attrs: {
                             fill: "#38639c"}
                       },{
-                        min: 116,
-                        max: 133,
+                        min: 118,
+                        max: 134,
                         attrs: {
                             fill: "#305b95"}
                       },{
-                        min: 133,
-                        max: 149,
+                        min: 134,
+                        max: 151,
                         attrs: {
                             fill: "#28528e"}
                       },{
-                        min: 149,
-                        max: 166,
+                        min: 151,
+                        max: 168,
                         attrs: {
                             fill: "#204a87"}
                       },]
@@ -85,10 +85,10 @@
                                     }
                                 }
                             },                            "americano":{
-                                value: "13",
-                                text: { content:  13 , attrs: {fill:"#222"} },
+                                value: "14",
+                                text: { content:  14 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerimentos: 13"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerimentos: 14"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 2 ).change();
@@ -115,10 +115,10 @@
                                     }
                                 }
                             },                            "carneiros":{
-                                value: "10",
-                                text: { content:  10 , attrs: {fill:"#222"} },
+                                value: "12",
+                                text: { content:  12 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 10"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Carneiros </span><br />Requerimentos: 12"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 5 ).change();
@@ -135,10 +135,10 @@
                                     }
                                 }
                             },                            "centro":{
-                                value: "165",
-                                text: { content:  165 , attrs: {fill:"#222"} },
+                                value: "167",
+                                text: { content:  167 , attrs: {fill:"#222"} },
                                 href: "#",
-                                tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerimentos: 165"},
+                                tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerimentos: 167"},
                                 eventHandlers : {
                                     click : function() {
                                         $('#id_bairro').val( 7 ).change();

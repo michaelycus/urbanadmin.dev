@@ -25,8 +25,32 @@
 
         if (!empty($requerimentos))
         {
+            
+            switch ($requerimento->status_retorno)
+            {
+                case REQUERIMENTO_RETORNO_NAO_NOTIFICADO:
+                    $status_retorno = '<span class="icon yellow"><i class="icon16 i-bubble-10"></i></span>';
+                    break;
+
+                case REQUERIMENTO_RETORNO_NOTIFICADO:
+                    $status_retorno = '<span class="icon orange"><i class="icon16 i-bubble-reply"></i></span>';
+                    break;
+
+                case REQUERIMENTO_RETORNO_DEMORADO:
+                    $status_retorno = '<span class="icon blue"><i class="icon16 i-history-2"></i></span>';
+                    break;
+
+                case REQUERIMENTO_RETORNO_SERVICO_EFETIVADO:
+                    $status_retorno = '<span class="icon green"><i class="icon16 i-checkmark-3"></i></span>';
+                    break;
+
+                case REQUERIMENTO_RETORNO_SERVICO_NAO_EFETIVADO:
+                    $status_retorno = '<span class="icon red"><i class="icon16 i-close-3"></i></span>';
+                    break;
+            }  
+                
             foreach ($requerimentos as $requerimento):
-                $this->table->add_row(array('data'=>anchor('requerimentos/visualizar/'.$requerimento->id, '<small>'.substr($requerimento->descricao, 0, 96).(strlen($requerimento->descricao)>255?"..." : "").'</small>')),
+                $this->table->add_row(array('data'=>$status_retorno . anchor('requerimentos/visualizar/'.$requerimento->id, '<small>'.substr($requerimento->descricao, 0, 96).(strlen($requerimento->descricao)>255?"..." : "").'</small>')),
                                       array('data'=>'<small>'.$requerimento->nome_categoria.'</small>'),
                                       array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),
                                       array('data'=>'<small><a href="#" data-toggle="popover" data-placement="top" data-content="'.$requerimento->telefone.'" title=""

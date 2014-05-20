@@ -46,10 +46,17 @@ class Requerimentos extends MY_Controller
     }
     
     public function protocolados()            
-    {
-        $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
+    { 
+       $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
         
         $this->load_view('requerimentos/protocolados', TRUE);
+    }
+    
+    public function verificar()
+    {
+        $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_VERIFICAR);
+        
+        $this->load_view('requerimentos/verificar', TRUE);
     }
     
     public function concluidos()            
@@ -341,7 +348,7 @@ class Requerimentos extends MY_Controller
 
         if ($situacao != REQUERIMENTO_SITUACAO_ANALISADO)
             redirect('requerimentos/listar_requerimentos');
-    }        
+    }
 
     public function retornar_situacao($id, $situacao)
     {
@@ -428,7 +435,7 @@ class Requerimentos extends MY_Controller
 
         $pdf->Ln(20);
         $pdf->SetFont('Arial', 'B', 12); 
-       $pdf->Cell(0, 0, 'Requer:', 0, 0, 'L', false);
+        $pdf->Cell(0, 0, 'Requer:', 0, 0, 'L', false);
 
         $html = $requerimento->descricao;
 
@@ -517,6 +524,27 @@ class Requerimentos extends MY_Controller
             $this->data['rua'] = $this->ruas_model->get($requerimento->id_rua);
         
         $this->load->view('requerimentos/visualizar_requerimento', $this->data);
+    }
+    
+    public function informar_resultado($code)
+    {
+        $this->data['requerimento'] = $requerimento = $this->requerimento_model->get_requerimento_by_code($code);
+        
+        $this->load->view('requerimentos/informar_resultado', $this->data);
+    }
+    
+    public function resultado_informado()
+    {        
+        // poderia ter usado o id, mas por segurança mantive o 'code'
+        $requerimento = $this->requerimento_model->get_requerimento_by_code($this->input->post('code'));
+        
+        $data['retorno'] = $this->input->post('retorno');
+        $data['situacao'] = REQUERIMENTO_SITUACAO_VERIFICAR;
+        $data['status_retorno'] = $this->input->post('status_retorno');
+        
+        $this->requerimento_model->update($requerimento->id,$data);
+        
+        $this->load->view('requerimentos/resultado_informado');
     }
     
 //    public function generate_code()

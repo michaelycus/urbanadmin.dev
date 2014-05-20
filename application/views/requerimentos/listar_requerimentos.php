@@ -49,7 +49,7 @@
                                     '<img src="'.base_url().'images/avancar_situacao.png" style="cursor: pointer;" onclick="expediente(\''.base_url().'\','.$requerimento->id.')">' :
                                   anchor('requerimentos/avancar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
                                     '<img src="'.base_url().'images/avancar_situacao.png">') ) ),
-                          'style'=>'width:130px'),
+                          'style'=>'width:140px;'),
             array('data'=>'<small>'.$requerimento->expediente.'/'.$requerimento->ano_expediente. '</small>'),
             array('data'=>'<div style="display:none;">'.$requerimento->data_requerimento.'</div>'.
                           ($requerimento->situacao > REQUERIMENTO_SITUACAO_EM_ANALISE ?
