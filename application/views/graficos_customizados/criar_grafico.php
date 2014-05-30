@@ -128,6 +128,16 @@
                             </div>
                             
                             <div class="form-group">
+                                <label class="col-lg-2 control-label" for="dados_grafico">Mostrar valores no gráfico</label>
+                                <label class="checkbox-inline">
+                                    <?php
+                                     echo form_checkbox(array('name' => 'dados_grafico','id' => 'dados_grafico',
+                                                              'class' => 'form-control', 'value' => 'dados_grafico', 'checked' => TRUE));
+                                    ?>                                    
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
                                 <label class="col-lg-2 control-label" for="dados_tabela">Apresentar dados em tabela</label>
                                 <label class="checkbox-inline">
                                     <?php
@@ -136,15 +146,6 @@
                                     ?>                                    
                                 </label>
                             </div>
-
-<!--                            <div id="chart_pizza">
-                                <div class="form-group">
-                                    <label class="col-lg-2 control-label" for="teste">teste</label>
-                                    <div class="col-lg-10">
-                                        <textarea class="form-control" type="text" id="teste" name="teste"></textarea>
-                                    </div>
-                                </div>
-                            </div>-->
 
                         </div>
 
@@ -158,13 +159,21 @@
                                     echo '<div class="col-lg-4">';
                                     echo    '<label class="col-lg-8 control-label" for="bairro_'.$bairro->codename.'">'.$bairro->nome.'</label>';
                                     echo    '<div class="col-lg-4">';
-                                    echo        '<input class="form-control" name="bairro_'.$bairro->codename.'" type="text">';
+                                    echo        '<input class="form-control" onkeyup="SubstituiVirgulaPorPonto(this)" id="bairro_'.$bairro->id.'" name="bairro_'.$bairro->codename.'" type="text">';
                                     echo    '</div>';
                                     echo '</div>';
                                 }
                                 ?>
 
                                 <br /><br />&nbsp;
+                                
+                                <div class="col-lg-4">
+                                    <label class="col-lg-8 control-label" for="bairro_total">Total</label>
+                                    <div class="col-lg-4">
+                                        <input class="form-control" id="bairro_total" name="bairro_total" type="text">
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
 
@@ -197,7 +206,25 @@
         });
     }
 
-    $(document).ready(function(){
+    $(document).ready(function(){        
+        var numBairros = <?php echo count($bairros);?>;
+        
+        var i;
+        for (i=1; i<numBairros; i++)
+        {
+            $("#bairro_"+i).change(function(){                
+                var sum = 0;
+
+                var j;
+                for (j=1; j<numBairros; j++)
+                {
+                    sum += Number($("#bairro_"+j).val());                
+                }
+
+                $('#bairro_total').val(sum);            
+            });
+        }
+        
         $(":radio").change(function(){
             var rad = $('input[name=tipo]:checked').val();
 
@@ -218,4 +245,8 @@
         });
     });
 
+    function SubstituiVirgulaPorPonto(campo)
+    {
+        campo.value = campo.value.replace(/,/gi, ".");
+    }
 </script>

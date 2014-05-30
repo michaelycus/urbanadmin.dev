@@ -92,7 +92,7 @@
                                 {
                                     echo '<li>'.$c .'</li> ';
                                 }
-                                echo '<small><a href="#" class="toggle">(Veja mais)</a></small>';
+                                echo '<small>'. anchor('sistema', '(Veja mais)').'</small>';
                                 echo    '</ul>';
                                 echo '</dd>';
                                 

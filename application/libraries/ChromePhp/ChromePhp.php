@@ -147,12 +147,7 @@ class ChromePhp
             self::$_instance = new self();
         }
         return self::$_instance;
-    }
-    
-    public static function teste($text)
-    {
-        echo $text;
-    }
+    }    
 
     /**
      * logs a variable to the console

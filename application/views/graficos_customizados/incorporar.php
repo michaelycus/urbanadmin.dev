@@ -165,6 +165,7 @@
                         </thead>
                         
                         <?php
+                        $soma = 0;
 
                         $i = 1;
                         foreach ($chart_values as $c_v):
@@ -172,26 +173,33 @@
                             $valor = ($c_v->valor!=NULL) ? $c_v->valor : 0;
                             if ($c_v->valor!=NULL)
                             {
+                                $soma += $valor;
+                                
                                 switch ($chart->formato)
                                 {
                                     case GRAFICO_FORMATO_SEM:
                                         $valor_formatado = number_format($valor, 0, ",", ".");
+                                        $somaFinal = number_format($soma, 0, ",", ".");
                                         break;
 
                                     case GRAFICO_FORMATO_PERCENTO:
                                         $valor_formatado = number_format($valor, 1, ",", ".").'%';
+                                        $somaFinal = number_format($soma, 1, ",", ".").'%';
                                         break;
 
                                     case GRAFICO_FORMATO_REAIS:
                                         $valor_formatado = 'R$ '. number_format($valor, 2, ",", ".");
+                                        $somaFinal = 'R$ '. number_format($soma, 2, ",", ".");
                                         break;
 
                                     case GRAFICO_FORMATO_DOLAR:
                                         $valor_formatado = '$ '. number_format($valor, 2, ",", ".");
+                                        $somaFinal = '$ '. number_format($soma, 2, ",", ".");
                                         break;
 
                                     default:
                                         $valor_formatado = number_format($valor, 1, ",", ".");
+                                        $somaFinal = number_format($soma, 1, ",", ".");
                                         break;
                                 }
 
@@ -206,11 +214,18 @@
                         endforeach;
 
                         ?>
+                        <tfoot>
+                            <tr>
+                                <td><small>Total</small></td>
+                                <td><small><?php echo $somaFinal;?></small></td>
+                            </tr>
+                        </tfoot>
                     </table>
                 <?php
                 }
                 ?>
             </div>
-        </div>
+        </div>        
+        
     </body>
 </html>

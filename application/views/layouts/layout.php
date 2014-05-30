@@ -319,6 +319,11 @@
                                                  <span class="txt">Requerimentos: tipo</span>');?>
                                     </li>
                                     <li>
+                                        <?php echo anchor('graficos/requerimentos_por_secretaria',
+                                                '<i class="icon20  i-map-4"></i>
+                                                 <span class="txt">Requerimentos: secretaria</span>');?>
+                                    </li>
+                                    <li>
                                         <?php echo anchor('graficos/requerimentos_por_situacao',
                                                 '<i class="icon20  i-map-4"></i>
                                                  <span class="txt">Requerimentos: situação</span>');?>

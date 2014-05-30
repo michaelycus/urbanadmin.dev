@@ -102,6 +102,7 @@ class Graficos_Customizados extends MY_Controller
         
         $data['data'] = date('Y-m-d');
         $data['id_requerente'] = $_SESSION['id_user'];
+        $data['dados_grafico'] = $this->input->post('dados_grafico') ? 1 : 0;
         $data['dados_tabela'] = $this->input->post('dados_tabela') ? 1 : 0;
         
         $data['code'] = generate_key(8);
@@ -116,8 +117,9 @@ class Graficos_Customizados extends MY_Controller
             $data_bairro['id_bairro'] = $bairro->id;
 
             if ($this->input->post('bairro_'.$bairro->codename))
-                $data_bairro['valor'] = str_replace(',','.',$this->input->post('bairro_'.$bairro->codename));
-            else
+                $data_bairro['valor'] = $this->input->post('bairro_'.$bairro->codename);
+//                $data_bairro['valor'] = str_replace(',','.',$this->input->post('bairro_'.$bairro->codename)); 
+           else
                 $data_bairro['valor'] = NULL;
 
             $this->graficos_customizados_model->inserir_dados_bairro($data_bairro);
@@ -130,6 +132,7 @@ class Graficos_Customizados extends MY_Controller
     {
         $data = elements(array('titulo','tipo','fonte','observacoes','cor_grafico','formato'),$this->input->post());
         
+        $data['dados_grafico'] = $this->input->post('dados_grafico') ? 1 : 0;
         $data['dados_tabela'] = $this->input->post('dados_tabela') ? 1 : 0;
 
         $this->graficos_customizados_model->update($id, $data);
@@ -144,7 +147,8 @@ class Graficos_Customizados extends MY_Controller
             $data_bairro['id_bairro'] = $bairro->id;
 
             if ($this->input->post('bairro_'.$bairro->codename))
-                $data_bairro['valor'] = str_replace(',','.',$this->input->post('bairro_'.$bairro->codename));
+                $data_bairro['valor'] = $this->input->post('bairro_'.$bairro->codename);
+//                $data_bairro['valor'] = str_replace(',','.',$this->input->post('bairro_'.$bairro->codename));
             else
                 $data_bairro['valor'] = NULL;
 
@@ -155,7 +159,7 @@ class Graficos_Customizados extends MY_Controller
     }
     
     public function incorporar($code)
-    {   
+    {
         $this->data['chart'] = $chart = $this->graficos_customizados_model->get_by_code($code);        
         $this->data['chart_values'] = $this->graficos_customizados_model->get_chart_values($chart->id);        
         

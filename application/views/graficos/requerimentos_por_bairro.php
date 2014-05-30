@@ -78,8 +78,6 @@
                         <tbody>
                         </tbody>
                     </table>
-<!--                    <ul name="lista_requerimentos">
-                    </ul>-->
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
         </div><!-- End .col-lg-8  -->

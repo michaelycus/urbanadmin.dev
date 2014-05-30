@@ -9,6 +9,7 @@ class Graficos extends MY_Controller
         $this->load->model('bairros_model');
         $this->load->model('categorias_requerimento_model');
         $this->load->model('requerente_model');
+        $this->load->model('secretarias_model');
     }
 
     public function populacao_por_bairro()
@@ -32,6 +33,12 @@ class Graficos extends MY_Controller
         $this->load_view('graficos/requerimentos_por_tipo', TRUE);
     }
     
+    public function requerimentos_por_secretaria()
+    {
+        $this->data['secretarias'] = $this->secretarias_model->get_all();
+        $this->load_view('graficos/requerimentos_por_secretaria', TRUE);
+    }
+    
     public function requerimentos_por_situacao()
     {
         $this->data['status'] = array('Em análise', 'Analisados', 'Protocolados', 'Concluídos', 'Sessão');
@@ -42,5 +49,10 @@ class Graficos extends MY_Controller
     {
         $this->data['vereadores'] = $this->requerente_model->get_vereadores();
         $this->load_view('graficos/requerimentos_por_vereador', TRUE);
+    }
+    
+    public function gerar()            
+    {
+        generate_charts();
     }
 }

@@ -217,6 +217,19 @@
                 </div><!-- End .panel-body -->
            </div><!-- End .widget -->
        </div><!-- End .col-lg-6  -->
+       
+       <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <?php
+                    echo anchor('requerimentos/duplicar_requerimento/'.$requerimento->id,
+                                '<i class="icon24 i-copy-4"></i> Duplicar requerimento ', 
+                                array('class' => 'btn btn-success btn-lg','target' => '_blank' ));
+                    ?>
+                </div>
+            </div>
+        </div>
+       
     </div><!-- End .row-fluid  -->
 </div>
 

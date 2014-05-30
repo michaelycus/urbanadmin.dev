@@ -117,8 +117,6 @@
 
                                 </div>
                                 
-                                <?php form_hidden('teste', 'testando')  ?>
-                                
                                 <div class="form-group">
                                     <?php echo form_submit('submit', 'Enviar mensagem', 'class="btn btn-primary pull-right confirm_send"'); ?>
                                     <button type="submit" class="btn btn-primary pull-right confirm_send">Enviar mensagem</button>

@@ -26,17 +26,40 @@
         }
 
         $this->table->set_template($tmpl);
-        $this->table->set_heading('Resumo', "Tipo Req.", "Bairro", "Solicitante", "Requerente", "Situação", "Expediente", "");
+        $this->table->set_heading('Resumo', "Tipo Req.", "Bairro", "Solicitante", "Situação", "Expediente", "");
 
         if (!empty($requerimentos))
         {
             foreach ($requerimentos as $requerimento):
-                $this->table->add_row(array('data'=>anchor('requerimentos/visualizar/'.$requerimento->id, '<small>'.substr($requerimento->descricao, 0, 96).(strlen($requerimento->descricao)>255?"..." : "").'</small>')),
+                
+                switch ($requerimento->status_retorno)
+                {
+                    case REQUERIMENTO_RETORNO_NAO_NOTIFICADO:
+                        $status_retorno = '<span class="icon yellow"><i class="icon16 i-bubble-10"></i></span>';
+                        break;
+                    
+                    case REQUERIMENTO_RETORNO_NOTIFICADO:
+                        $status_retorno = '<span class="icon orange"><i class="icon16 i-bubble-reply"></i></span>';
+                        break;
+                    
+                    case REQUERIMENTO_RETORNO_DEMORADO:
+                        $status_retorno = '<span class="icon blue"><i class="icon16 i-history-2"></i></span>';
+                        break;
+                    
+                    case REQUERIMENTO_RETORNO_SERVICO_EFETIVADO:
+                        $status_retorno = '<span class="icon green"><i class="icon16 i-checkmark-3"></i></span>';
+                        break;
+                    
+                    case REQUERIMENTO_RETORNO_SERVICO_NAO_EFETIVADO:
+                        $status_retorno = '<span class="icon red"><i class="icon16 i-close-3"></i></span>';
+                        break;
+                }
+                
+                $this->table->add_row(array('data'=>$status_retorno . anchor('requerimentos/visualizar/'.$requerimento->id, '<small>'.substr($requerimento->descricao, 0, 96).(strlen($requerimento->descricao)>255?"..." : "").'</small>')),
                                       array('data'=>'<small>'.$requerimento->nome_categoria.'</small>'),
                                       array('data'=>'<small>'.$requerimento->nome_bairro.'</small>'),
                                       array('data'=>'<small><a href="#" data-toggle="popover" data-placement="top" data-content="'.$requerimento->telefone.'" title=""
-                                          data-original-title="Telefone">'.$requerimento->nome_solicitante.'</a></small>'),
-                                      array('data'=>'<small>'.$requerimento->nome_requerente.'</small>'),
+                                          data-original-title="Telefone">'.$requerimento->nome_solicitante.'</a></small>'),                                      
             array('data'=>'<div style="display:none;">'.$requerimento->situacao.'</div>'.
                           ($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
                               '<img src="'.base_url().'images/retornar_situacao_d.png"> ' :
@@ -53,9 +76,11 @@
             array('data'=>'<small>'.$requerimento->expediente.'/'.$requerimento->ano_expediente. '</small>'),
             array('data'=>'<div style="display:none;">'.$requerimento->data_requerimento.'</div>'.
                           ($requerimento->situacao > REQUERIMENTO_SITUACAO_EM_ANALISE ?
-                          anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code,'<i class="i-print-3"></i> Imprimir ', array('class' => 'btn btn-block btn-warning btn-xs')).' ': '') .
-                          anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-block btn-primary btn-xs')).' '.
-                          anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir ',array('class' => 'confirmdelete btn btn-block btn-danger btn-xs')), 'style'=>'width:100px'));
+                          anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code,'<i class="icon12 i-print-3"></i> ', array('class' => 'btn btn-warning btn-xs')).' ': '') .
+                          ($requerimento->situacao > REQUERIMENTO_SITUACAO_ANALISADO ?
+                          anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code.'/reiterar','<i class="icon12 i-transmission-2"></i> ', array('class' => 'btn btn-info btn-xs')).' ': '') .
+                          anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon12 icon-edit"></i> ', array('class' => 'btn btn-primary btn-xs')).' '.
+                          anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon12 icon-trash"></i> ',array('class' => 'confirmdelete btn btn-danger btn-xs')), 'style'=>'width:150px'));
             endforeach;
 
             echo $this->table->generate();

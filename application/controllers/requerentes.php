@@ -197,4 +197,24 @@ class Requerentes extends MY_Controller
 //        
 //        redirect('requerentes/visualizar/'.$this->input->post('id'));
     }
+    
+    function get_requerentes_ajax($id_bairro)
+    {
+        $requerentes = $this->requerente_model->get_requerentes_by_bairro($id_bairro);
+
+        if (empty($requerentes))
+            return '{ "descricao": "Nenhum requerente encontrado" }';
+
+        $arr_req = array();
+
+        foreach ($requerentes as $req)
+        {
+            $desc = trim(preg_replace('/\s+/', ' ', $req->nome));
+            $arr_req[] = '{"id":' . $req->id . ',"nome":"' . substr($desc, 0, 128)  . '"}';
+        }
+
+        echo '[ ' . implode(",", $arr_req) . ']';
+
+        return;
+    }
 }

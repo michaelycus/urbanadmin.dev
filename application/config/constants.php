@@ -59,6 +59,12 @@ define('REQUERIMENTO_RETORNO_DEMORADO', 2);
 define('REQUERIMENTO_RETORNO_SERVICO_EFETIVADO', 3);
 define('REQUERIMENTO_RETORNO_SERVICO_NAO_EFETIVADO', 4);
 
+define('REQUERIMENTO_RETORNOS', serialize (array ( 0 => "Solicitante ainda não recebeu notificação de retorno",
+                                                   1 => "Solicitante recebeu notificação de retorno",
+                                                   2 => "Solicitante está demorando pra responder notificação de retorno",
+                                                   3 => "Conclusão do requerimento confirmada pelo solicitante",
+                                                   4 => "Solicitação não foi realizada" )));
+
 define('TIPO_REQ_ENTULHO', 1);
 define('TIPO_REQ_ILUMINACAO', 2);
 define('TIPO_REQ_LIXEIRA', 3);

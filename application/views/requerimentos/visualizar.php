@@ -11,7 +11,9 @@
                         <div class="col-lg-12">
                             <h4><i class="icon16 i-resize"></i>Informações</h4>
                             <dl class="dl-horizontal">
-                                <?php
+                                <?php                                
+                                $retornos  = unserialize(REQUERIMENTO_RETORNOS);
+                                
                                 echo '<dt>Descrição</dt>';
                                 echo '<dd><pre>' . $requerimento->descricao . '</pre></dd>';
                                 
@@ -67,7 +69,15 @@
                                                 '<img src="'.base_url().'images/avancar_situacao.png" style="cursor: pointer;" onclick="expediente(\''.base_url().'\','.$requerimento->id.')">' :
                                               anchor('requerimentos/avancar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
                                                 '<img src="'.base_url().'images/avancar_situacao.png">') ) ).
+                                                ' <em>('. $retornos[$requerimento->status_retorno].')</em>'.
                                          '</dd>';
+                                    
+                                    if ($requerimento->situacao>REQUERIMENTO_SITUACAO_PROTOCOLADO)
+                                    {
+                                        echo '<br/>';
+                                        echo '<dt>Retorno solicitante</dt>';
+                                        echo '<dd><pre>' . $requerimento->retorno . '</pre></dd>';
+                                    }
                                 }
                                 ?>
                             </dl>
@@ -112,6 +122,8 @@
                                 <?php
                                     if ($requerimento->situacao > REQUERIMENTO_SITUACAO_EM_ANALISE)
                                         echo anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code,'<i class="i-print-3"></i> Imprimir ', array('class' => 'btn'));
+                                    if ($requerimento->situacao > REQUERIMENTO_SITUACAO_PROTOCOLADO)
+                                        echo anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code.'/reiteirar','<i class="i-transmission-2"></i> Reiteirar ', array('class' => 'btn'));
                                     echo anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ',array('class' => 'btn'));
                                     echo anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir ',array('class' => 'btn confirmdelete' ));
                                 ?>

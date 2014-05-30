@@ -190,6 +190,47 @@ class Requerimento_model extends MY_Model
 
             $array_result[$cat->id] = $this->get_all();
         }
+        
+//        var_dump($array_result);
+//        
+//        echo '===============';
+
+        return $array_result;
+    }
+    
+    public function count_requerimentos_with_secretarias()
+    {
+        $array_sec = $this->secretarias_model->get_all();
+        $array_result = array();
+
+        foreach ($array_sec as $sec)
+        {
+            $array_cat = $this->categorias_requerimento_model->get_categorias_by_secretaria($sec->id);
+            
+//            echo '############### '.$sec->id ;
+//             var_dump($array_cat);             
+            
+            foreach ($array_cat as $cat)
+            {
+                $this->db->select('bairros.nome AS nome_bairro, bairros.codename AS codename, bairros.id AS bairro_id,
+                    COUNT(bairros.codename) AS count_requerimentos');
+                $this->db->where('cat_requerimento', $cat->id_categoria);
+                $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
+                $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+                $this->db->group_by('codename');
+
+                $array_result[$sec->id][$cat->id_categoria] = $this->get_all();
+                
+//                echo '<<<<<<<<<< '. $sec->id . ' - '. $cat->id_categoria;                
+//                var_dump($array_result[$sec->id][$cat->id_categoria]);
+//                echo '>>>>>>>>>>';
+//                echo nl2br("\n",false);
+            }
+        }
+        echo '<pre>';
+        print_r($array_result);
+        echo '</pre>';
+//        die();
 
         return $array_result;
     }

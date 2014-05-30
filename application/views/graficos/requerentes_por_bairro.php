@@ -13,15 +13,6 @@
         color:#343434;
     }
 
-    .cityFrance {
-        background-color:#343434;
-        border-radius:10px;
-        width:400px;
-    }
-
-    .mapLegend {
-    }
-
     h1 {
         font-size:30px;
         color:#3d3d3d;
@@ -83,7 +74,7 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-8">
             <div class="panel panel-default">
                 <div class="panel-body">
 
@@ -99,5 +90,29 @@
                 </div><!-- End .panel-body -->
             </div><!-- End .widget -->
         </div><!-- End .col-lg-6  -->
+        
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table cellpadding="0" cellspacing="0" border="0"
+                           class="table table-striped table-bordered table-hover" id="table-mapa-requerentes">
+                        <thead><tr><th></th></tr></thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div><!-- End .panel-body -->
+            </div><!-- End .widget -->
+        </div>
+        
     </div><!-- End .row-fluid  -->
 </div>
+
+
+<?php
+echo form_input(array('name' => 'id_bairro','id' => 'id_bairro', 'style' => 'visibility:hidden'));
+?>
+
+<script type="text/javascript" src="<?php echo base_url() . 'js/requerentes_bairro.js'; ?>"></script>
+<script type="text/javascript">
+    var path = '<?php echo site_url(); ?>';
+</script>

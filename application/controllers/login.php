@@ -106,51 +106,12 @@ class Login extends MY_Controller
             }
             $this->data['meses'] = array_reverse($meses);
 
-            $this->data['versao_atual'] = "1.2.3";
+            $this->data['versao_atual'] = "1.3.1";
 
             $json_str = '{"versoes":[
-                    {"versao":"1.2.3", "data":"13/05/2014", "changes":
-                         ["Nova opção de configuração nos gráficos customizados"
-                          ]},
-                    {"versao":"1.2.2", "data":"12/05/2014", "changes":
-                         ["Envio de mensagem para secretarias",
-                          "Permite que usuários não logados consigam visualizar requerimentos através de um link",
-                          "Mapa de requerimentos por situação"
-                          ]},
-                    {"versao":"1.2.1", "data":"06/05/2014", "changes":
-                         ["Multipla seleção de secretarias por categoria de requerimento",
-                          "Usuário pode criar mapa customizados"
-                          ]},
-                    {"versao":"1.2.0", "data":"24/04/2014", "changes":
-                         ["Nova versão transfere as opções de configuração do sistema para uma nova tela",
-                          "Possibilidade de cadastrar Secretarias e Categorias de Requerimento"
-                          ]},
-                    {"versao":"1.1.5", "data":"11/03/2014", "changes":
-                         ["Mudanças no layout do painel do administrador",                          
-                          "Adicionado logotipo, botão maximizar e formatação de milhares nos mapas customizados",
-                          "Bairro é selecionado automaticamente na hora de criar novo requerimento",
-                          "Contagem, listagem e relatário de requerimentos por mês"
-                          ]},
-                    {"versao":"1.1.4", "data":"27/02/2014", "changes":
-                         ["Adicionado links no painel do administrador para requerimentos por etapa"
-                          ]},
-                    {"versao":"1.1.3", "data":"26/02/2014", "changes":
-                         ["Permite envio de fotos maiores e redimensionamento automático",
-                          "Editor de ruas"
-                          ]},
-                    {"versao":"1.1.2", "data":"19/02/2014", "changes":
-                         ["Utilizando PHPMailer para envio de mensagens",
-                          "Tela inicial do mobile foi corrigida",
-                          "Corrigindo Tipo de requerimento ao visualizar informações do requerimento",
-                          "Requerimentos cadastrados na sessão ficam separados dos demais",
-                          "Incorporar iframe dos gráficos customizados foi corrigido"
-                          ]},
-                    {"versao":"1.1.1", "data":"11/02/2014", "changes":
-                         ["Criado sistema de versionamento do sistema",
-                          "Contabilizando separadamente outros requerimentos",
-                          "Adicionada possibilidade de escolha de formatação de unidades na criação de gráficos customizados",
-                          "Adicionado link para requerente ao visualizar requerimento",
-                          "Os gráficos customizados agora aceitam valores fracionados com vírgula"
+                    {"versao":"1.3.1", "data":"26/05/2014", "changes":
+                         ["Adicionando cron jobs",
+                          "Possibilidade de duplicar requerimento"
                           ]}
                     ]}';
 

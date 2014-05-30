@@ -49,7 +49,7 @@
                 echo form_label('Descrição', 'descricao', array('class' => 'col-lg-3 control-label'));
                 echo    '<div class="col-lg-9">';
                 echo    form_textarea(array('name' => 'descricao','id' => 'descricao','placeholder' => 'Descrição do requerimento...',
-                            'class' => 'form-control','autofocus' => 'autofocus'), set_value('descricao'));
+                            'class' => 'form-control','autofocus' => 'autofocus'), set_value('descricao',$requerimento->descricao));
                 echo    '</div>';
                 echo '</div>';
 
@@ -61,7 +61,7 @@
                 echo            '<option value=""> - Todos os bairros - </option>';
                 foreach ($bairros as $bairro)
                 {
-                    echo        '<option value="'.$bairro->id.'" '.set_select('id_bairro', $bairro->id).'>'.$bairro->nome.'</option>';
+                    echo        '<option value="'.$bairro->id.'" '.set_select('id_bairro', $bairro->id, $bairro->id==$requerimento->id_bairro).'>'.$bairro->nome.'</option>';
                 }
                 echo        '</select>';
                 echo    '</div>';
@@ -71,7 +71,17 @@
                 echo '<div class="form-group">';
                 echo form_label('Rua', 'id_rua', array('class' => 'col-lg-3 control-label'));
                 echo    '<div class="col-lg-9">';
-                echo         form_dropdown('id_rua', array('' => 'Escolha uma Rua'), '','id="id_rua" class="col-lg-9"' );
+                        $options = array ('' => 'Escolha um Rua');
+                        if (!empty($ruas))
+                        {
+                            foreach($ruas as $rua)
+                                $options[$rua->id] = $rua->nome;
+                            echo form_dropdown('id_rua', $options, $requerimento->id_rua);
+                        }
+                        else
+                        {
+                            echo form_dropdown('id_rua', array('' => 'Escolha uma Rua'), '','id="id_rua" class="col-lg-9"' );
+                        }
                 echo    '</div>';
                 echo '</div>';
 
@@ -82,7 +92,7 @@
                 echo        '<select id="cat_requerimento" name="cat_requerimento" class="col-lg-9">';
                 foreach ($cats_requerimento as $c_r)
                 {
-                    echo        '<option value="'.$c_r->id.'" '.set_select('cat_requerimento', $c_r->id).'>'.$c_r->nome.'</option>';
+                    echo        '<option value="'.$c_r->id.'" '.set_select('cat_requerimento', $c_r->id, $c_r->id==$requerimento->cat_requerimento).'>'.$c_r->nome.'</option>';
                 }
                 echo        '</select>';
                 echo    '</div>';
@@ -107,7 +117,7 @@
                     echo        '<select id="id_solicitante" name="id_solicitante">';
                     foreach ($solicitantes as $solicitante)
                     {
-                        echo        '<option value="'.$solicitante->id.'" '.set_select('id_solicitante', $solicitante->id, $solicitante->id==$_SESSION['id_user']).'>'.$solicitante->nome.'</option>';
+                        echo        '<option value="'.$solicitante->id.'" '.set_select('id_solicitante', $solicitante->id, $solicitante->id==$requerimento->id_solicitante).'>'.$solicitante->nome.'</option>';
                     }
                     echo        '</select>';
                     echo    '</div>';
@@ -120,7 +130,7 @@
                     echo        '<select id="id_requerente" name="id_requerente">';
                     foreach ($requerentes as $requerente)
                     {
-                        echo        '<option value="'.$requerente->id.'" '.set_select('id_requerente', $requerente->id).'>'.$requerente->nome.'</option>';
+                        echo    '<option value="'.$requerente->id.'" '.set_select('id_requerente', $requerente->id, $requerente->id==$requerimento->id_requerente).'>'.$requerente->nome.'</option>';
                     }
                     echo        '</select>';
                     echo    '</div>';
@@ -130,19 +140,22 @@
                     echo '<div class="form-group">';
                     echo form_label('Data', 'data_requerimento', array('class' => 'col-lg-3 control-label'));
                     echo    '<div class="col-lg-9">';
-                    echo        '<div id="datepicker" class="input-group date" data-date="12-02-2012" data-date-format="dd-mm-yyyy">';
-                    echo            form_input(array('name' => 'data_requerimento','id' => 'data_requerimento', 'value' => date('d/m/Y'),
-                                    'class' => 'form-control data'), set_value('data_requerimento'));
+                    echo        '<div id="datepicker" class="input-group date" data-date="12-02-2012" data-date-format="dd-mm-yyyy">';                    
+                    echo            form_input(array('name' => 'data_requerimento','id' => 'data_requerimento',
+                                    'class' => 'form-control data'),
+                                        set_value('data_requerimento', 
+                                            $requerimento->data_requerimento ? $this->form_validation->convert_sql_to_human($requerimento->data_requerimento) : date('d/m/Y') ));                    
                     echo            '<span class="input-group-addon"><i class="icon16 i-calendar-4"></i></span>';
                     echo        '</div>';
                     echo    '</div>';
                     echo '</div>';                    
                     
+                    // da_sessao
                     echo '<div class="form-group">';
                     echo form_label('Da sessão?', 'da_sessao', array('class' => 'col-lg-3 control-label'));
                     echo    '<div class="col-lg-9">';
                     echo        '<div class="switch" data-on="primary" data-off="danger" data-on-label="<i class=\'i-checkmark-3\'></i>" data-off-label="<i class=\'i-close\'></i>">';
-                    echo            '<input class="toggle"controls-row type="checkbox" id="da_sessao" name="da_sessao" />';
+                    echo            '<input class="toggle" controls-row type="checkbox" id="da_sessao" name="da_sessao" '. ($requerimento->da_sessao==REQUERIMENTO_DA_SESSAO ? 'checked' : '').' />';
                     echo        '</div>';
                     echo    '</div>';
                     echo '</div>';
@@ -180,28 +193,21 @@
                 echo    '</div>';
                 echo '</div>';
 
-                echo form_hidden('id', $bairro->id);                
+                echo form_hidden('id', $bairro->id);
+               
+                echo '<hr>';
 
-                if ($_SESSION['autorizacao'] == AUTORIZACAO_OPERADOR)
-                {
-                    echo '<hr>';
+                // notificar
+                echo '<div class="form-group">';
+                echo    '<label for="notificar" class="col-lg-3 control-label">Notificação</label>';
+                echo    '<div class="col-lg-9">';
+                echo        form_checkbox(array('name' => 'notificar','id' => 'notificar',
+                            'class' => 'form-control', 'value' => 'notificar', 'checked' => $requerimento->notificar==1 ? TRUE: FALSE));
+                echo    ' Receber notificações sobre avanço do requerimento.';
+                echo    '</div>';
+                echo '</div>';
 
-                    // notificar
-                    echo '<div class="form-group">';
-                    echo    '<label for="notificar" class="col-lg-3 control-label">Notificação</label>';
-                    echo    '<div class="col-lg-9">';
-                    echo        form_checkbox(array('name' => 'notificar','id' => 'notificar',
-                                'class' => 'form-control', 'value' => 'notificar', 'checked' => 'checked'));
-                    echo    ' Receber notificações sobre avanço do requerimento.';
-                    echo    '</div>';
-                    echo '</div>';
-
-                    echo '<hr>';
-                }
-                else
-                {
-                    echo form_hidden('notificar', 0);
-                }
+                echo '<hr>';               
 
                 echo '<div class="form-group">';
                 echo    '<div class="col-lg-offset-2">';
