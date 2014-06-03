@@ -77,7 +77,35 @@
         </script>
             
     </head>
-    <body>
+    <body>        
+        <?php 
+
+        if ($requerimento->status_retorno>REQUERIMENTO_RETORNO_DEMORADO)
+        {
+        ?>
+        <div class="container-fluid">
+            <div class="messageContainer">
+
+                <div class="page-header">
+                    <h1 class="center">Obrigado!</h1>
+                </div>
+
+                <h2 class="center gap20">Sua contribuição é fundamental para o funcionamento desse trabalho.</h2>
+
+                <hr class="seperator">
+
+                <div class="center">
+                    <?php echo anchor('login/inicio', '<img src="'. base_url() . 'images/logodark.png" alt="Urban admin" width="300px">'); ?>
+                </div>
+        
+            </div>
+        </div>
+        <?php
+        }
+        else
+        {
+
+        ?>
         <header id="header">
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <?php echo anchor('login/inicio', '<img src="'. base_url() . 'images/logo.png" alt="Urban admin" class="img-responsive">', 'class="navbar-brand"'); ?>
@@ -168,7 +196,7 @@
                                             <?php
                                             echo '<div class="form-group">';
                                             echo    '<div class="col-lg-9">';
-                                            echo    form_textarea(array('name' => 'retorno','id' => 'retorno',
+                                            echo    form_textarea(array('name' => 'retorno_solicitante','id' => 'retorno_solicitante',
                                                         'class' => 'form-control'), '');
                                             echo    '</div>';
                                             echo '</div>';
@@ -196,6 +224,10 @@
             </div>
 
         </div><!-- End .main  -->
+        
+        <?php
+        }
+        ?>
         
         <script type="text/javascript">
             $(document).ready(function()

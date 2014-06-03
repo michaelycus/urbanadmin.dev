@@ -72,8 +72,6 @@
             array('data'=>'<div style="display:none;">'.$requerimento->data_requerimento.'</div>'.
                           ($requerimento->situacao > REQUERIMENTO_SITUACAO_EM_ANALISE ?
                           anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code,'<i class="icon12 i-print-3"></i> ', array('class' => 'btn btn-warning btn-xs')).' ': '') .
-                          ($requerimento->situacao > REQUERIMENTO_SITUACAO_ANALISADO ?
-                          anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code.'/reiterar','<i class="icon12 i-transmission-2"></i> ', array('class' => 'btn btn-info btn-xs')).' ': '') .
                           anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon12 icon-edit"></i> ', array('class' => 'btn btn-primary btn-xs')).' '.
                           anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon12 icon-trash"></i> ',array('class' => 'confirmdelete btn btn-danger btn-xs')), 'style'=>'width:150px'));
             endforeach;

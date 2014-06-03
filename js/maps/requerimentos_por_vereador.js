@@ -6,11 +6,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 17"
                     }},"americano": {
-                    "value": 11,
-                    "text": { "content":  "11" , attrs: {fill:"#222"} },
-                    "attrs": { fill: "#6c99ca"},
+                    "value": 12,
+                    "text": { "content":  "12" , attrs: {fill:"#222"} },
+                    "attrs": { fill: "#6c98c9"},
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 11"
+                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 12"
                     }},"bom_pastor": {
                     "value": 16,
                     "text": { "content":  "16" , attrs: {fill:"#222"} },
@@ -139,7 +139,7 @@ $(function() {
                             "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 25"
                     }}},"plots": {"alto_do_parque": {
                     "value": 17},"americano": {
-                    "value": 11},"bom_pastor": {
+                    "value": 12},"bom_pastor": {
                     "value": 16},"campestre": {
                     "value": 5},"carneiros": {
                     "value": 7},"centenario": {

@@ -316,6 +316,32 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/cadastrar_requerimento');
     }
+    
+    public function reiterar_requerimento($id)
+    {
+        $this->load->library('image_lib');
+        
+        $this->data['requerimento'] = $requerimento = $this->requerimento_model->get($id);
+        
+        $data['retorno_admin'] = $requerimento->retorno_admin . ' Requerimento foi reiterado no dia '. date('d/m/Y') . '.';
+        $data['situacao'] = REQUERIMENTO_SITUACAO_RESOLVIDO;
+        $data['status_retorno'] = REQUERIMENTO_RETORNO_REITERADO;
+        
+        $this->requerimento_model->update($id,$data);
+        
+        $this->data['requerimento']->descricao = 'Reitero o Expediente '. $requerimento->expediente . '/' . $requerimento->ano_expediente . '.
+    '. $requerimento->descricao;
+
+        $this->data['bairros'] = $this->bairros_model->get_bairros();
+        $this->data['solicitantes'] = $this->requerente_model->get_all();
+        $this->data['requerentes'] = $this->requerente_model->get_vereadores();
+        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->order_by('ordem')->get_all();        
+
+        if ($this->data['requerimento']->id_rua != 0)
+            $this->data['ruas'] = $this->ruas_model->get_ruas_by_bairro($this->data['requerimento']->id_bairro);
+
+        $this->load_view('requerimentos/cadastrar_requerimento');
+    }
 
     public function excluir_requerimento($id)
     {
@@ -353,6 +379,14 @@ class Requerimentos extends MY_Controller
             $this->data['rua'] = $this->ruas_model->get($requerimento->id_rua);
 
         $this->load_view('requerimentos/visualizar');
+    }
+    
+    public function editar_conclusao($id)
+    {
+        $data['retorno_admin'] = $this->input->post('retorno_admin');
+        $this->requerimento_model->update($id,$data);
+        
+        $this->visualizar($id);
     }
 
     public function avancar_situacao($id, $situacao)
@@ -561,13 +595,16 @@ class Requerimentos extends MY_Controller
         // poderia ter usado o id, mas por segurança mantive o 'code'
         $requerimento = $this->requerimento_model->get_requerimento_by_code($this->input->post('code'));
         
-        $data['retorno'] = $this->input->post('retorno');
-        $data['situacao'] = REQUERIMENTO_SITUACAO_VERIFICAR;
-        $data['status_retorno'] = $this->input->post('status_retorno');
-        
-        $this->requerimento_model->update($requerimento->id,$data);
-        
-        $this->load->view('requerimentos/resultado_informado');
+        if ($requerimento->situacao==REQUERIMENTO_SITUACAO_PROTOCOLADO)
+        {
+            $data['retorno_solicitante'] = $this->input->post('retorno_solicitante');
+            $data['situacao'] = REQUERIMENTO_SITUACAO_VERIFICAR;
+            $data['status_retorno'] = $this->input->post('status_retorno');
+
+            $this->requerimento_model->update($requerimento->id,$data);
+
+            $this->load->view('requerimentos/resultado_informado');
+        }
     }
     
 //    public function generate_code()

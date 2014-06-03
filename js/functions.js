@@ -27,6 +27,18 @@ $(function () {
 });
 
 $(function () {
+    $(".confirmreiterar").click(function(e) {
+        e.preventDefault();
+        var location = $(this).attr('href');
+        bootbox.confirm("Deseja mesmo reiterar esse requerimento? <br/><br/><strong>Atenção:</strong> o documento atual será marcado como concluído!", function(confirmed) {
+            if(confirmed) {
+            window.location.replace(location);
+            }
+        });
+    });     
+});
+
+$(function () {
     $(".confirm_send").click(function(e) {
         e.preventDefault();
         var location = $(this).attr('href');

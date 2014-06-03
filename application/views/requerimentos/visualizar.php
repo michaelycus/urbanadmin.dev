@@ -76,7 +76,24 @@
                                     {
                                         echo '<br/>';
                                         echo '<dt>Retorno solicitante</dt>';
-                                        echo '<dd><pre>' . $requerimento->retorno . '</pre></dd>';
+                                        echo '<dd><pre>' . $requerimento->retorno_solicitante . '</pre></dd>';
+                                        
+                                        echo '<br/>';
+                                        echo '<dt>Conclusão</dt>';
+                                        echo '<dd><pre>' . $requerimento->retorno_admin . '</pre></dd>';
+                                        
+                                        echo form_open('requerimentos/editar_conclusao/'.$requerimento->id, 'id="form_conclusao" class="bs-docs-example form-horizontal"');
+                                        
+                                        echo '<dt></dt>';
+                                        echo '<dd>' . form_textarea(array('name' => 'retorno_admin','id' => 'retorno_admin',
+                                                                          'class' => 'form-control'), $requerimento->retorno_admin );
+                                        
+                                        echo '<br/>';
+                                        echo form_submit('submit', 'Salvar', 'class="btn btn-primary"');                               
+                                        echo form_close();                                        
+                                        echo '</dd>';
+                                        
+                                        echo '<dt></dt><dd><div id="editar_conclusao"><a href="#"><small>(Editar conclusão)</a></small></div></dd>';
                                     }
                                 }
                                 ?>
@@ -122,51 +139,17 @@
                                 <?php
                                     if ($requerimento->situacao > REQUERIMENTO_SITUACAO_EM_ANALISE)
                                         echo anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code,'<i class="i-print-3"></i> Imprimir ', array('class' => 'btn'));
-                                    if ($requerimento->situacao > REQUERIMENTO_SITUACAO_PROTOCOLADO)
-                                        echo anchor_popup('requerimentos/imprimir_requerimento/'.$requerimento->code.'/reiteirar','<i class="i-transmission-2"></i> Reiteirar ', array('class' => 'btn'));
+                                    if ($requerimento->situacao > REQUERIMENTO_SITUACAO_ANALISADO)
+                                        echo anchor('requerimentos/reiterar_requerimento/'.$requerimento->id,'<i class="i-transmission-2"></i> Reiteirar ', array('class' => 'btn confirmreiterar'));
                                     echo anchor('requerimentos/editar_requerimento/'.$requerimento->id,'<i class="icon-edit"></i> Editar ',array('class' => 'btn'));
                                     echo anchor('requerimentos/excluir_requerimento/'.$requerimento->id,' <i class="icon-trash"></i> Excluir ',array('class' => 'btn confirmdelete' ));
                                 ?>
                             </div>
                         </div>
                     </div>
-
-<!--                    <hr>
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h4><i class="icon16 i-resize"></i>Mensagem</h4>
-                            <div class="btn-toolbar" style="margin: 0;">
-                                <?php
-                                    echo form_open('requerimentos/visualizar/'.$requerimento->id, 'class="form-horizontal pad15 pad-bottom0" role="form"');
-
-                                    if ($this->session->userdata('mensagem_enviada'))
-                                    {
-                                        echo '<div class="alert alert-success">'. $this->session->userdata('mensagem_enviada') .'</div>';
-                                        $this->session->unset_userdata('mensagem_enviada');
-                                    }
-
-                                    ?>
-                                        <div class="form-group">
-                                            <input name="user_email" id="user_email" class="form-control" type="text" value="<?php echo $solicitante->email; ?>">
-                                        </div> End .form-group  
-                                        <div class="form-group">
-                                            <textarea name="user_message" id="user_message" class="form-control" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
-
-                                        </div> End .form-group  
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary pull-right confirm_send">Enviar mensagem</button>
-                                        </div> End .form-group  
-                                    <?php echo form_close(); ?>
-                            </div>
-                        </div>
-                    </div>-->
                     
                     <?php                    
-                    }                       
-                    ?>
-
-                    <?php
+                    }
 
                     echo form_input(array('name' => 'id_bairro','id' => 'id_bairro', 'style' => 'visibility:hidden'));
 
@@ -222,10 +205,14 @@
         });
     });
     
-    $( "#toggle_original" ).hide();
-    
+    $( "#toggle_original" ).hide();    
     $( "#original" ).click(function() {
         $( "#toggle_original" ).toggle( "slow" );
+    });
+    
+    $( "#form_conclusao" ).hide();
+    $( "#editar_conclusao" ).click(function() {
+        $( "#form_conclusao" ).toggle( "slow" );
     });
 </script>
 

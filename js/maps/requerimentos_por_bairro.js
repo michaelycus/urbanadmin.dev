@@ -85,10 +85,10 @@ areas: {                    "alto_do_parque":{
                             }
                         }
                     },                    "americano":{
-                        value: "13",
-                        text: { content:  13 , attrs: {fill:"#222"} },
+                        value: "14",
+                        text: { content:  14 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerimentos: 13"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerimentos: 14"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 2 ).change();

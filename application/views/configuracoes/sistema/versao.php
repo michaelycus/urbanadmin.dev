@@ -6,6 +6,12 @@
     <div class="row">
         <ul class="search-results">
             <li>
+                <a href="#" class="search-string">1.3.2 - 30/05/2014</a>
+                <ul>
+                    <li>Novo mapa de requerimentos por secretaria</li>
+                </ul>                        
+            </li>
+            <li>
                 <a href="#" class="search-string">1.3.1 - 26/05/2014</a>
                 <ul>
                     <li>Adicionando cron jobs</li>

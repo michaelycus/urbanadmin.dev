@@ -1224,11 +1224,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 2"
                     }},"americano": {
-                    "value": 2,
-                    "attrs": { fill: "#719dce"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 2"
+                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 3"
                     }},"bom_pastor": {
                     "value": 3,
                     "attrs": { fill: "#709dcd"},
