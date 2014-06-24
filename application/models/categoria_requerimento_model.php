@@ -1,6 +1,6 @@
 <?php
 
-class Categorias_requerimento_model extends MY_Model
+class Categoria_requerimento_model extends MY_Model
 {
     public $validation = array(
         array(
@@ -22,7 +22,7 @@ class Categorias_requerimento_model extends MY_Model
 
     public function get_categorias_with_secretarias()
     {
-        $this->load->model('secretarias_model');
+        $this->load->model('secretaria_model');
         $query = $this->get_all();
 
         foreach ($query as $value)
@@ -33,7 +33,7 @@ class Categorias_requerimento_model extends MY_Model
 
             foreach ($list as $id_sec)
             {
-                $nomes[] = $this->secretarias_model->get($id_sec->id_secretaria)->sigla;
+                $nomes[] = $this->secretaria_model->get($id_sec->id_secretaria)->sigla;
             }
 
             $value->secretarias = implode (", ", $nomes);

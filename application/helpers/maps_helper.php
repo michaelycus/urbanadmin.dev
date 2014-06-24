@@ -7,15 +7,15 @@ if (!function_exists('generate_charts'))
         $ci =& get_instance();
 
         $ci->load->model('requerimento_model');
-        $ci->load->model('bairros_model');
-        $ci->load->model('categorias_requerimento_model');
+        $ci->load->model('bairro_model');
+        $ci->load->model('categoria_requerimento_model');
         $ci->load->model('requerente_model');
-        $ci->load->model('secretarias_model');
+        $ci->load->model('secretaria_model');
 
-        $bairros = $ci->bairros_model->get_all();
+        $bairros = $ci->bairro_model->get_all();
         
         $requerimentos_bairro = $ci->requerimento_model->count_requerimentos_with_bairros();
-        $cats_requerimento = $ci->categorias_requerimento_model->get_all();
+        $cats_requerimento = $ci->categoria_requerimento_model->get_all();
         $requerimentos_categoria = $ci->requerimento_model->count_requerimentos_with_categorias();
         $vereadores = $ci->requerente_model->get_vereadores();
         $requerimentos_vereadores = $ci->requerimento_model->count_requerimentos_with_vereadores();
@@ -43,13 +43,13 @@ if (!function_exists('generate_custom_chart'))
     {
         $ci =& get_instance();
 
-        $ci->load->model('bairros_model');
-        $ci->load->model('graficos_customizados_model');
+        $ci->load->model('bairro_model');
+        $ci->load->model('grafico_customizado_model');
 
-        $bairros = $ci->bairros_model->get_all();
-        $chart = $ci->graficos_customizados_model->get($id);
+        $bairros = $ci->bairro_model->get_all();
+        $chart = $ci->grafico_customizado_model->get($id);
 
-        $chart_values = $ci->graficos_customizados_model->get_chart_values($id);
+        $chart_values = $ci->grafico_customizado_model->get_chart_values($id);
 
         $max=0;
 

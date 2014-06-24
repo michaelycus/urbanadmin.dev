@@ -119,6 +119,9 @@
 
         <!-- Custom script -->
         <script src="<?php echo base_url(); ?>js/functions.js"></script>
+        
+        <!-- On demand -->
+        <?php $this->load->view('layouts/scripts'); ?>
     </head>
     <body>
         <header id="header">
@@ -350,6 +353,19 @@
                                         <?php echo anchor('graficos_customizados/listar_graficos',
                                                 '<i class="icon20 i-list-2"></i>
                                                  <span class="txt">Listar gráficos</span>');?>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="icon20 i-mail-send"></i></span>
+                                    <span class="txt">Newsletter (Em construção)</span>
+                                </a>
+                                <ul class="sub<?php echo ($cat=='newsletter' ? ' show' : '')?>">
+                                    <li>
+                                        <?php echo anchor('newsletter/compor_mensagem',
+                                                '<i class="icon20 i-envelop-opened"></i>
+                                                 <span class="txt">Compor mensagem</span>');?>
                                     </li>
                                 </ul>
                             </li>

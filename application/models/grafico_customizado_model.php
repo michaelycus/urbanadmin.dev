@@ -1,6 +1,6 @@
 <?php
 
-class Graficos_customizados_model extends MY_Model
+class Grafico_customizado_model extends MY_Model
 {
     function __construct()
     {

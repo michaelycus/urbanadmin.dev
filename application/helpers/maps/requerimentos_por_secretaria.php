@@ -32,7 +32,7 @@ if (!empty($requerimentos_secretaria))
 
         foreach ($bairros as $bairro)
         {
-            $data .= '"'.$bairro->codename.'": {"text": {"content": ""}},
+            $data .= '"'.$bairro->codename.'": {"text": {"content": ""} , eventHandlers : { click : function() { $("#id_bairro").val( '.$bairro->id.' ).change(); ;} } },
                 ';
         }
         $data .= '
@@ -40,15 +40,18 @@ if (!empty($requerimentos_secretaria))
         },
         ';
         
-    foreach ($requerimentos_secretaria as $r_s)
+        
+        
+    foreach ($requerimentos_secretaria as $id_sec => $r_s)
     {
-        foreach ($r_s as $id_sec => $r_c)
-        {
-            $bairro_cat = NULL;
+        $bairro_cat = NULL;
+        foreach ($r_s as $r_c)
+        {            
             foreach ($r_c as $r_b)
             {
                 $bairro_cat[$r_b->bairro_id] += $r_b->count_requerimentos;
             }
+        }   
 
             $data .= '"' . $id_sec . '": { 
             "areas": {
@@ -92,7 +95,7 @@ if (!empty($requerimentos_secretaria))
             $data .= '
         },
         ';
-        }       
+               
         
     }
     $data .= '};

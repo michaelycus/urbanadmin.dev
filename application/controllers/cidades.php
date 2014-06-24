@@ -6,13 +6,13 @@ class Cidades extends CI_Controller
     {
         parent::__construct();
 
-        $this->load->model('cidades_model');
+        $this->load->model('cidade_model');
         $this->load->model('requerimento_model');
     }
 
     function get_cidades_ajax($id_estado)
     {
-        $cidades = $this->cidades_model->get_cidades($id_estado);
+        $cidades = $this->cidade_model->get_cidades($id_estado);
 
         if (empty($cidades))
             return '{ "nome": "Nenhuma cidade encontrada" }';

@@ -12,8 +12,9 @@ $(function() {
 
         $.getJSON(path + 'requerentes/get_requerentes_ajax/'+bairro, function(data) {
 
+            count = 1;
             $.each(data, function(i, obj) {                
-                $('table[id="table-mapa-requerentes"]').append('<tr><td><a href="'+path+'requerentes/visualizar/'+obj.id+'" target="_blank">'+obj.nome+'</a></td></tr>');
+                $('table[id="table-mapa-requerentes"]').append('<tr><td>('+count++ +') <a href="'+path+'requerentes/visualizar/'+obj.id+'" target="_blank">'+obj.nome+'</a></td></tr>');
             });
         });
     });

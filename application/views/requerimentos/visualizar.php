@@ -50,12 +50,6 @@
                                     echo '<dt>Data</dt>';
                                     echo '<dd>' . $this->form_validation->convert_sql_to_human($requerimento->data_requerimento) . '</dd>';
 
-                                    if ($requerimento->expediente != 0)
-                                    {
-                                        echo '<dt>Expediente</dt>';
-                                        echo '<dd>' . $requerimento->expediente . '/' . $requerimento->ano_expediente . '</dd>';
-                                    }
-
                                     echo '<dt>Situação</dt>';
                                     echo '<dd>' .
                                             ($requerimento->situacao==REQUERIMENTO_SITUACAO_EM_ANALISE ?
@@ -71,6 +65,12 @@
                                                 '<img src="'.base_url().'images/avancar_situacao.png">') ) ).
                                                 ' <em>('. $retornos[$requerimento->status_retorno].')</em>'.
                                          '</dd>';
+                                    
+                                    if ($requerimento->expediente != 0)
+                                    {
+                                        echo '<dt>Expediente</dt>';
+                                        echo '<dd><strong>' . $requerimento->expediente . '/' . $requerimento->ano_expediente . '</strong></dd>';
+                                    }
                                     
                                     if ($requerimento->situacao>REQUERIMENTO_SITUACAO_PROTOCOLADO)
                                     {

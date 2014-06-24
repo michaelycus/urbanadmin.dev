@@ -1,6 +1,6 @@
 <?php
 
-class Cidades_model extends CI_Model
+class Cidade_model extends CI_Model
 {
     public $validation = array(
         array(

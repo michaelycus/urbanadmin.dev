@@ -5,7 +5,7 @@ class Bairros extends MY_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('bairros_model');
+        $this->load->model('bairro_model');
     }
 
     public function index()
@@ -15,21 +15,21 @@ class Bairros extends MY_Controller
 
     public function listar_bairros()
     {
-        $this->data['bairros'] = $this->bairros_model->get_bairros();
+        $this->data['bairros'] = $this->bairro_model->get_bairros();
 
         $this->load_config_view('configuracoes/bairros/listar_bairros');
     }
 
     public function cadastrar_bairro()
     {
-        $this->form_validation->set_rules($this->bairros_model->validation);
+        $this->form_validation->set_rules($this->bairro_model->validation);
 
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('nome','descricao','nome_presidente','telefone_presidente',
                                    'endereco_presidente','email_presidente',
                                    'populacao'),$this->input->post());
 
-            $this->bairros_model->insert($data);
+            $this->bairro_model->insert($data);
             generate_charts();
             $this->session->set_userdata('bairro_cadastrado','Bairro cadastrado com sucesso!');
             redirect('configuracoes/bairros/cadastrar_bairro');
@@ -40,12 +40,12 @@ class Bairros extends MY_Controller
 
     public function editar_bairro($id)
     {
-        $this->form_validation->set_rules($this->bairros_model->validation);
+        $this->form_validation->set_rules($this->bairro_model->validation);
 
         if ($this->form_validation->run()==TRUE):
             $data = elements(array('nome','descricao','nome_presidente','telefone_presidente','endereco_presidente','email_presidente','populacao'),$this->input->post());
 
-            $this->bairros_model->update($this->input->post('id'), $data);
+            $this->bairro_model->update($this->input->post('id'), $data);
             $this->session->set_userdata('bairro_editado','Bairro editado com sucesso!');
             generate_charts();
 
@@ -55,7 +55,7 @@ class Bairros extends MY_Controller
         if ($this->input->post('id')!=NULL)
             $id = $this->input->post('id');
 
-        $this->data['bairro'] = $this->bairros_model->get($id);
+        $this->data['bairro'] = $this->bairro_model->get($id);
 
         $this->load_config_view('configuracoes/bairros/editar_bairro');
     }
@@ -64,7 +64,7 @@ class Bairros extends MY_Controller
     {
         if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
         {
-            $this->bairros_model->delete($id);
+            $this->bairro_model->delete($id);
             generate_charts();
 
             $this->session->set_userdata('bairro_excluido','Bairro excluído com sucesso!');

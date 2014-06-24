@@ -30,8 +30,8 @@ class Contatos extends MY_Controller
             redirect('contatos/cadastrar_contato');
         endif;
 
-        $this->load->model('bairros_model');
-        $this->data['bairros'] = $this->bairros_model->get_bairros();
+        $this->load->model('bairro_model');
+        $this->data['bairros'] = $this->bairro_model->get_bairros();
 
         $this->load_view('contatos/cadastrar_contato', TRUE);
     }
@@ -52,8 +52,8 @@ class Contatos extends MY_Controller
             redirect('contatos/editar_contato/'.$id);
         endif;
 
-        $this->load->model('bairros_model');
-        $this->data['bairros'] = $this->bairros_model->get_bairros();
+        $this->load->model('bairro_model');
+        $this->data['bairros'] = $this->bairro_model->get_bairros();
 
         $this->data['contato'] = $this->contato_model->get($id);
 

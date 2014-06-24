@@ -7,8 +7,8 @@ class Login extends MY_Controller
         parent::__construct();
 
         $this->load->model('login_model');
-        $this->load->model('bairros_model');
-        $this->load->model('cidades_model');
+        $this->load->model('bairro_model');
+        $this->load->model('cidade_model');
         $this->load->model('requerimento_model');
         $this->load->model('requerente_model');
     }
@@ -64,8 +64,8 @@ class Login extends MY_Controller
             redirect('login/inicio');
         }
 
-        $this->data['bairros'] = $this->bairros_model->get_all();
-        $this->data['estados'] = $this->cidades_model->get_estados();
+        $this->data['bairros'] = $this->bairro_model->get_all();
+        $this->data['estados'] = $this->cidade_model->get_estados();
 
         $this->load_front_view('login_view');
     }
@@ -106,11 +106,11 @@ class Login extends MY_Controller
             }
             $this->data['meses'] = array_reverse($meses);
 
-            $this->data['versao_atual'] = "1.3.2";
+            $this->data['versao_atual'] = "1.3.4";
 
             $json_str = '{"versoes":[
-                    {"versao":"1.3.2", "data":"30/05/2014", "changes":
-                         ["Novo mapa de requerimentos por secretaria"
+                    {"versao":"1.3.4", "data":"16/06/2014", "changes":
+                         ["Mapa de requerimentos por secretarias consegue listar os requerimentos"
                           ]}
                     ]}';
 
@@ -161,8 +161,8 @@ class Login extends MY_Controller
             redirect('login');
         endif;
 
-        $this->data['bairros'] = $this->bairros_model->get_bairros();
-        $this->data['estados'] = $this->cidades_model->get_estados();
+        $this->data['bairros'] = $this->bairro_model->get_bairros();
+        $this->data['estados'] = $this->cidade_model->get_estados();
 
         $this->data['view'] = 'reg';
 

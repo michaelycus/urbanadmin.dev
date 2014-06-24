@@ -1,6 +1,6 @@
 <?php
 
-class Bairros_model extends MY_Model
+class Bairro_model extends MY_Model
 {
     public $validation = array(
         array(
@@ -16,6 +16,7 @@ class Bairros_model extends MY_Model
     {
         parent::__construct();
         $this->_database = $this->db;
+        $this->_table = 'bairros';
     }
 
     public function get_bairros()

@@ -1,6 +1,6 @@
 <?php
 
-class Secretarias_model extends MY_Model
+class Secretaria_model extends MY_Model
 {
     public $validation = array(
         array(

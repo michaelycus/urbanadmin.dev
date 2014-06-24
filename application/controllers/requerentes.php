@@ -6,7 +6,7 @@ class Requerentes extends MY_Controller
     {
         parent::__construct();
         $this->load->model('requerente_model');
-        $this->load->model('bairros_model');
+        $this->load->model('bairro_model');
     }
 
     public function index()
@@ -84,10 +84,10 @@ class Requerentes extends MY_Controller
             redirect('requerentes/cadastrar_requerente');
         endif;
 
-        $this->data['bairros'] = $this->bairros_model->get_bairros();
+        $this->data['bairros'] = $this->bairro_model->get_bairros();
 
-        $this->load->model('cidades_model');
-        $this->data['estados'] = $this->cidades_model->get_estados();
+        $this->load->model('cidade_model');
+        $this->data['estados'] = $this->cidade_model->get_estados();
 
         $this->load_view('requerentes/cadastrar_requerente', TRUE);
     }
@@ -125,13 +125,13 @@ class Requerentes extends MY_Controller
         endif;
 
         $this->data['requerente'] = $this->requerente_model->get($id);
-        $this->data['bairros'] = $this->bairros_model->get_bairros();
+        $this->data['bairros'] = $this->bairro_model->get_bairros();
 
-        $this->load->model('cidades_model');
-        $this->data['estados'] = $this->cidades_model->get_estados();
+        $this->load->model('cidade_model');
+        $this->data['estados'] = $this->cidade_model->get_estados();
 
         if ($this->data['requerente']->estado != 0)
-            $this->data['cidades'] = $this->cidades_model->get_cidades($this->data['requerente']->estado);
+            $this->data['cidades'] = $this->cidade_model->get_cidades($this->data['requerente']->estado);
 
         $this->load_view('requerentes/editar_requerente');
     }
@@ -159,13 +159,13 @@ class Requerentes extends MY_Controller
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimento_by_solicitante($id);
 
         if ($requerente->id_bairro)
-            $this->data['bairro'] = $this->bairros_model->get($requerente->id_bairro);
+            $this->data['bairro'] = $this->bairro_model->get($requerente->id_bairro);
 
         if ($requerente->estado)
         {
-            $this->load->model('cidades_model');
-            $this->data['estado'] = $this->cidades_model->get_estado($requerente->estado);
-            $this->data['cidade'] = $this->cidades_model->get_cidade($requerente->cidade);
+            $this->load->model('cidade_model');
+            $this->data['estado'] = $this->cidade_model->get_estado($requerente->estado);
+            $this->data['cidade'] = $this->cidade_model->get_cidade($requerente->cidade);
         }
 
         $this->load_view('requerentes/visualizar');

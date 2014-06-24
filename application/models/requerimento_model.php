@@ -87,6 +87,49 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
+    
+    
+    
+    
+    public function get_requerimentos_by_secretaria_bairro($id_secretaria, $id_bairro)
+    {        
+        // SELECT * FROM `requerimentos` WHERE `cat_requerimento` IN (SELECT id_categoria FROM rel_categorias_secretarias WHERE id_categoria = 1 ) and `id_bairro` =5;
+        
+        $query = $this->db->query("SELECT * FROM `requerimentos` WHERE `cat_requerimento` 
+                IN (SELECT id_categoria FROM rel_categorias_secretarias WHERE id_secretaria = $id_secretaria ) and `id_bairro` = $id_bairro");
+        
+        return $query->result();  
+        
+//        pareki aqui testasr
+        
+//        $this->db->select('*');
+//        $this->db->where_in('cat_requerimento', $this->db->select('id_categoria'));
+//        
+//        
+//        $array_sec = $this->secretaria_model->get_all();
+//        $array_result = array();
+//
+//        foreach ($array_sec as $sec)
+//        {
+//            $array_cat = $this->categoria_requerimento_model->get_categorias_by_secretaria($sec->id);
+//            
+//            foreach ($array_cat as $cat)
+//            {
+//                $this->db->select('bairros.nome AS nome_bairro, bairros.codename AS codename, bairros.id AS bairro_id,
+//                    COUNT(bairros.codename) AS count_requerimentos');
+//                $this->db->where('cat_requerimento', $cat->id_categoria);
+//                $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
+//                $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+//                $this->db->group_by('codename');
+//
+//                $array_result[$sec->id][$cat->id_categoria] = $this->get_all();
+//            }
+//        }
+//
+//        return $array_result;
+    }
+    
+    
 
     public function get_last($num)
     {
@@ -176,7 +219,7 @@ class Requerimento_model extends MY_Model
 
     public function count_requerimentos_with_categorias()
     {
-        $array_cat = $this->categorias_requerimento_model->get_all();
+        $array_cat = $this->categoria_requerimento_model->get_all();
         $array_result = array();
 
         foreach ($array_cat as $cat)
@@ -196,12 +239,12 @@ class Requerimento_model extends MY_Model
     
     public function count_requerimentos_with_secretarias()
     {
-        $array_sec = $this->secretarias_model->get_all();
+        $array_sec = $this->secretaria_model->get_all();
         $array_result = array();
 
         foreach ($array_sec as $sec)
         {
-            $array_cat = $this->categorias_requerimento_model->get_categorias_by_secretaria($sec->id);
+            $array_cat = $this->categoria_requerimento_model->get_categorias_by_secretaria($sec->id);
             
             foreach ($array_cat as $cat)
             {

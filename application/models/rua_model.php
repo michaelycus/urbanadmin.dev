@@ -1,6 +1,6 @@
 <?php
 
-class Ruas_model extends MY_Model
+class Rua_model extends MY_Model
 {
     public $validation = array(
         array(

@@ -6,10 +6,10 @@ class Graficos extends MY_Controller
     {
         parent::__construct();
         $this->load->model('requerimento_model');
-        $this->load->model('bairros_model');
-        $this->load->model('categorias_requerimento_model');
+        $this->load->model('bairro_model');
+        $this->load->model('categoria_requerimento_model');
         $this->load->model('requerente_model');
-        $this->load->model('secretarias_model');
+        $this->load->model('secretaria_model');
     }
 
     public function populacao_por_bairro()
@@ -29,13 +29,13 @@ class Graficos extends MY_Controller
 
     public function requerimentos_por_tipo()
     {
-        $this->data['cats_requerimento'] = $this->categorias_requerimento_model->order_by('ordem')->get_all();
+        $this->data['cats_requerimento'] = $this->categoria_requerimento_model->order_by('ordem')->get_all();
         $this->load_view('graficos/requerimentos_por_tipo', TRUE);
     }
     
     public function requerimentos_por_secretaria()
     {
-        $this->data['secretarias'] = $this->secretarias_model->get_all();
+        $this->data['secretarias'] = $this->secretaria_model->get_all();
         $this->load_view('graficos/requerimentos_por_secretaria', TRUE);
     }
     

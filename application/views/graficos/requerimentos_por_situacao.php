@@ -33,7 +33,6 @@
                 <div class="panel-body">
 
                     <?php
-                    // cat_requerimento
                     echo '<div class="form-group">';
                     echo '<label for="situacao" class="col-lg-2 control-label">Situação</label>';
                     echo '<div class="col-lg-5">';
@@ -58,9 +57,6 @@
                         <div class="map">
                             <span>Alternative content for the map</span>
                         </div>
-                        <!--                        <div class="areaLegend">
-                                                    <span>Alternative content for the legend</span>
-                                                </div>-->
                     </div>
 
                 </div><!-- End .panel-body -->
