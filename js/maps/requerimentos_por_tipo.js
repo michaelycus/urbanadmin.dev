@@ -815,7 +815,13 @@ $(function() {
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 1"
-                    }}}},"13": { "areas": {"centro": {
+                    }}}},"13": { "areas": {"bom_pastor": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 1"
+                    }},"centro": {
                     "value": 4,
                     "attrs": { fill: "#709dcd"},
                     "text": { "content":  "4" , attrs: {fill:"#222"} },

@@ -801,11 +801,11 @@ $(function() {
                     }
                 },
                 "bom_pastor": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 2"
+                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 3"
                     }
                 },
                 "campestre": {

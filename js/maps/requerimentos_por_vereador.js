@@ -12,11 +12,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 13"
                     }},"bom_pastor": {
-                    "value": 14,
-                    "text": { "content":  "14" , attrs: {fill:"#222"} },
-                    "attrs": { fill: "#6b98c9"},
+                    "value": 15,
+                    "text": { "content":  "15" , attrs: {fill:"#222"} },
+                    "attrs": { fill: "#6b97c8"},
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 14"
+                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 15"
                     }},"campestre": {
                     "value": 4,
                     "text": { "content":  "4" , attrs: {fill:"#222"} },
@@ -140,7 +140,7 @@ $(function() {
                     }}},"plots": {"alto_do_parque": {
                     "value": 17},"americano": {
                     "value": 13},"bom_pastor": {
-                    "value": 14},"campestre": {
+                    "value": 15},"campestre": {
                     "value": 4},"carneiros": {
                     "value": 4},"centenario": {
                     "value": 3},"centro": {

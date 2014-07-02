@@ -30,39 +30,39 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/meus_requerimentos');
     }
-    
-    public function em_analise()            
+
+    public function em_analise()
     {
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
-        
+
         $this->load_view('requerimentos/por_situacao', TRUE);
     }
-    
-    public function analisados()            
+
+    public function analisados()
     {
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_ANALISADO);
-        
+
         $this->load_view('requerimentos/por_situacao', TRUE);
     }
-    
-    public function protocolados()            
-    { 
+
+    public function protocolados()
+    {
        $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_PROTOCOLADO);
-        
+
         $this->load_view('requerimentos/por_situacao', TRUE);
     }
-    
+
     public function verificar()
     {
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_VERIFICAR);
-        
+
         $this->load_view('requerimentos/por_situacao', TRUE);
     }
-    
-    public function concluidos()            
+
+    public function concluidos()
     {
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_RESOLVIDO);
-        
+
         $this->load_view('requerimentos/por_situacao', TRUE);
     }
 
@@ -72,30 +72,30 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/da_sessao', TRUE);
     }
-    
+
     public function por_data($mes,$ano)
     {
         $data_inicio = date("$ano-$mes-01");
 	$data_fim    = date("$ano-$mes-t" );
-        
+
         $this->data['mes'] = $mes;
         $this->data['ano'] = $ano;
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_data($data_inicio, $data_fim);
-        
+
         $this->load_view('requerimentos/por_data', TRUE);
     }
-    
+
     public function relatorio_por_mes($mes,$ano)
     {
         $data_inicio = date("$ano-$mes-01");
 	$data_fim    = date("$ano-$mes-t" );
-                
+
         $this->data['requerimentos'] = $this->requerimento_model->get_requerimentos_by_data($data_inicio, $data_fim);
-        $this->data['titulo'] = 'Requerimentos no mês de ' . nome_mes($mes) . ' de ' . $ano;        
-        
+        $this->data['titulo'] = 'Requerimentos no mês de ' . nome_mes($mes) . ' de ' . $ano;
+
         $this->load->view('requerimentos/relatorio_por_mes', $this->data);
     }
-    
+
     // decrepted
     public function outros_requerimentos()
     {
@@ -133,8 +133,8 @@ class Requerimentos extends MY_Controller
 
             $data['da_sessao'] = $this->input->post('da_sessao') ? 1 : 0;
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
-            
-            $data['code'] = generate_key(8);
+
+            $data['code'] = generate_key(16);
 
             $i = 1;
             foreach($_FILES as $field => $file)
@@ -257,7 +257,7 @@ class Requerimentos extends MY_Controller
 
                         $this->image_lib->initialize($config);
                         $this->image_lib->resize();
-                        
+
                         if ($file_data['image_width'] > 1024 || $file_data['image_height'] > 1024)
                         {
                             // resized
@@ -299,7 +299,7 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/editar_requerimento');
     }
-    
+
     public function duplicar_requerimento($id)
     {
         $this->load->library('image_lib');
@@ -316,26 +316,26 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/cadastrar_requerimento');
     }
-    
+
     public function reiterar_requerimento($id)
     {
         $this->load->library('image_lib');
-        
+
         $this->data['requerimento'] = $requerimento = $this->requerimento_model->get($id);
-        
+
         $data['retorno_admin'] = $requerimento->retorno_admin . ' Requerimento foi reiterado no dia '. date('d/m/Y') . '.';
         $data['situacao'] = REQUERIMENTO_SITUACAO_RESOLVIDO;
         $data['status_retorno'] = REQUERIMENTO_RETORNO_REITERADO;
-        
+
         $this->requerimento_model->update($id,$data);
-        
+
         $this->data['requerimento']->descricao = 'Reitero o Expediente '. $requerimento->expediente . '/' . $requerimento->ano_expediente . '.
     '. $requerimento->descricao;
 
         $this->data['bairros'] = $this->bairro_model->get_bairros();
         $this->data['solicitantes'] = $this->requerente_model->get_all();
         $this->data['requerentes'] = $this->requerente_model->get_vereadores();
-        $this->data['cats_requerimento'] = $this->categoria_requerimento_model->order_by('ordem')->get_all();        
+        $this->data['cats_requerimento'] = $this->categoria_requerimento_model->order_by('ordem')->get_all();
 
         if ($this->data['requerimento']->id_rua != 0)
             $this->data['ruas'] = $this->rua_model->get_ruas_by_bairro($this->data['requerimento']->id_bairro);
@@ -380,12 +380,12 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/visualizar');
     }
-    
+
     public function editar_conclusao($id)
     {
         $data['retorno_admin'] = $this->input->post('retorno_admin');
         $this->requerimento_model->update($id,$data);
-        
+
         $this->visualizar($id);
     }
 
@@ -417,32 +417,32 @@ class Requerimentos extends MY_Controller
             $this->requerimento_model->gravar_expediente($id, $expediente, $ano);
 
             $this->avancar_situacao($id, REQUERIMENTO_SITUACAO_ANALISADO);
-        
+
             redirect('requerimentos/preparar_mensagem/'.$id);
         }
     }
-    
+
     public function preparar_mensagem($id)
     {
         $this->requerimento_model->get($id);
-        
+
         $this->data['requerimento'] = $requerimento = $this->requerimento_model->get($id);
         $this->data['bairro'] = $this->bairro_model->get($requerimento->id_bairro);
         $this->data['solicitante'] = $this->requerente_model->get($requerimento->id_solicitante);
         $this->data['cat_requerimento'] = $categoria = $this->categoria_requerimento_model->get($requerimento->cat_requerimento);
-        
+
         if ($requerimento->id_rua != 0)
             $this->data['rua'] = $this->rua_model->get($requerimento->id_rua);
-        
+
         $secretarias = $this->categoria_requerimento_model->get_secretarias_by_categoria($categoria->id);
-        
+
         $this->load->model('secretaria_model');
-        
+
         foreach ($secretarias as $s)
         {
-            $emails[] = $this->secretaria_model->get($s->id_secretaria)->email;            
+            $emails[] = $this->secretaria_model->get($s->id_secretaria)->email;
         }
-        
+
         $this->data['emails'] = implode(',', $emails);
 
         if ($requerimento->id_rua != 0)
@@ -450,19 +450,19 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/enviar_mensagem');
     }
-    
+
     public function enviar_mensagem()
     {
         send_message_secretaria($lista_end = explode(",", $this->input->post('enviar_para')) ,
-                                $this->input->post('titulo'), 
-                                nl2br($this->input->post('descricao')), 
-                                $this->input->post('code'));       
-        
+                                $this->input->post('titulo'),
+                                nl2br($this->input->post('descricao')),
+                                $this->input->post('code'));
+
         $this->session->set_userdata('mensagem_enviada','Mensagem enviada com sucesso!');
-        
+
         redirect('requerimentos/listar_requerimentos');
     }
-    
+
     public function imprimir_requerimento($code,$reitarar=NULL)
     {
         $this->load->library('Pdf');
@@ -485,15 +485,15 @@ class Requerimentos extends MY_Controller
         $pdf->WriteHTML(iconv('utf-8','iso-8859-1',$html));
 
         $pdf->Ln(20);
-        $pdf->SetFont('Arial', 'B', 12); 
+        $pdf->SetFont('Arial', 'B', 12);
         $pdf->Cell(0, 0, 'Requer:', 0, 0, 'L', false);
 
         $html = '';
         if ($reitarar!=NULL)
         {
             $html = 'Reitero o Expediente '. $requerimento->expediente . '/' . $requerimento->ano_expediente . '.
-';            
-        }        
+';
+        }
         $html .= $requerimento->descricao;
 
         $pdf->Ln(10);
@@ -546,7 +546,7 @@ class Requerimentos extends MY_Controller
 
         $pdf->Output();
     }
-    
+
     function get_requerimentos_ajax($id_bairro)
     {
         $requerimentos = $this->requerimento_model->get_requerimentos_by_bairro($id_bairro);
@@ -566,11 +566,11 @@ class Requerimentos extends MY_Controller
 
         return;
     }
-    
+
     function get_requerimentos_secretarias_ajax($id_secretaria, $id_bairro)
     {
         $requerimentos = $this->requerimento_model->get_requerimentos_by_secretaria_bairro($id_secretaria,$id_bairro);
-        
+
 //        die(var_dump($requerimentos));
 
         if (empty($requerimentos))
@@ -588,35 +588,35 @@ class Requerimentos extends MY_Controller
 
         return;
     }
-    
+
     public function visualizar_requerimento($code)
-    {        
+    {
         $this->data['requerimento'] = $requerimento = $this->requerimento_model->get_requerimento_by_code($code);
-        
+
         $this->data['bairro'] = $this->bairro_model->get($requerimento->id_bairro);
         $this->data['requerente'] = $this->requerente_model->get($requerimento->id_requerente);
         $this->data['requerente'] = $this->requerente_model->get($requerimento->id_requerente);
         $this->data['solicitante'] = $this->requerente_model->get($requerimento->id_solicitante);
         $this->data['cat_requerimento'] = $this->categoria_requerimento_model->get($requerimento->cat_requerimento);
-        
+
         if ($requerimento->id_rua != 0)
             $this->data['rua'] = $this->rua_model->get($requerimento->id_rua);
-        
+
         $this->load->view('requerimentos/visualizar_requerimento', $this->data);
     }
-    
+
     public function informar_resultado($code)
     {
         $this->data['requerimento'] = $requerimento = $this->requerimento_model->get_requerimento_by_code($code);
-        
+
         $this->load->view('requerimentos/informar_resultado', $this->data);
     }
-    
+
     public function resultado_informado()
-    {        
+    {
         // poderia ter usado o id, mas por segurança mantive o 'code'
         $requerimento = $this->requerimento_model->get_requerimento_by_code($this->input->post('code'));
-        
+
         if ($requerimento->situacao==REQUERIMENTO_SITUACAO_PROTOCOLADO)
         {
             $data['retorno_solicitante'] = $this->input->post('retorno_solicitante');
@@ -628,17 +628,17 @@ class Requerimentos extends MY_Controller
             $this->load->view('requerimentos/resultado_informado');
         }
     }
-    
+
 //    public function generate_code()
 //    {
-//        $requerimentos = $this->requerimento_model->get_all();        
-//        
+//        $requerimentos = $this->requerimento_model->get_all();
+//
 //        foreach ($requerimentos as $req)
 //        {
 //            $req->code = generate_key(8);
-//            
+//
 //            $this->requerimento_model->update($req->id,$req);
-//            
+//
 //            echo $req->id . ' - ' .$req->code . ' - ' . $req->da_sessao . ' - ' . $req->notificar .'<br/>';
 //        }
 //    }

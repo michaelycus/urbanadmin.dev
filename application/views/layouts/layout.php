@@ -361,11 +361,16 @@
                                     <span class="icon"><i class="icon20 i-mail-send"></i></span>
                                     <span class="txt">Newsletter (Em construção)</span>
                                 </a>
-                                <ul class="sub<?php echo ($cat=='newsletter' ? ' show' : '')?>">
+                                <ul class="sub<?php echo ($cat=='newsletters' ? ' show' : '')?>">
                                     <li>
-                                        <?php echo anchor('newsletter/compor_mensagem',
+                                        <?php echo anchor('newsletters/compor_mensagem',
                                                 '<i class="icon20 i-envelop-opened"></i>
                                                  <span class="txt">Compor mensagem</span>');?>
+                                    </li>
+                                    <li>
+                                        <?php echo anchor('newsletters/listar_newsletters',
+                                                '<i class="icon20 i-envelop-opened"></i>
+                                                 <span class="txt">Listar newsletters</span>');?>
                                     </li>
                                 </ul>
                             </li>

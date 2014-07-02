@@ -51,6 +51,18 @@ $(function () {
 });
 
 $(function () {
+    $(".confirm_newsletter").click(function(e) {
+        e.preventDefault();
+        var location = $(this).attr('href');
+        bootbox.confirm("Enviar a newsletter agora?", function(confirmed) {
+            if(confirmed) {
+            window.location.replace(location);
+            }
+        });
+    });     
+});
+
+$(function () {
     $(".data").datepicker({
         todayBtn: true,
         language: "pt-BR",

@@ -2,34 +2,11 @@ $(function() {
     var data = {
 "-1": { "areas": {"": {"text": {"content": ""}},"alto_do_parque": {"text": {"content": ""}},"americano": {"text": {"content": ""}},"bom_pastor": {"text": {"content": ""}},"campestre": {"text": {"content": ""}},"carneiros": {"text": {"content": ""}},"centenario": {"text": {"content": ""}},"centro": {"text": {"content": ""}},"conservas": {"text": {"content": ""}},"conventos": {"text": {"content": ""}},"floresta": {"text": {"content": ""}},"florestal": {"text": {"content": ""}},"hidraulica": {"text": {"content": ""}},"igrejinha": {"text": {"content": ""}},"imigrante": {"text": {"content": ""}},"jardim_do_cedro": {"text": {"content": ""}},"moinhos": {"text": {"content": ""}},"moinhos_dagua": {"text": {"content": ""}},"montanha": {"text": {"content": ""}},"morro_vinte_cinco": {"text": {"content": ""}},"nacoes": {"text": {"content": ""}},"olarias": {"text": {"content": ""}},"planalto": {"text": {"content": ""}},"santo_andre": {"text": {"content": ""}},"santo_antonio": {"text": {"content": ""}},"sao_bento": {"text": {"content": ""}},"sao_cristovao": {"text": {"content": ""}},"universitario": {"text": {"content": ""}},}},"0": { 
             "areas": {
-                "americano": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
-                    "tooltip": { "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos: 2"}                             
-                },
-                "centro": {
+                "bom_pastor": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": { "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos: 1"}                             
-                }
-                    
-            }
-        },
-        "1": { 
-            "areas": {
-                "centro": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": { "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos: 1"}                             
-                },
-                "sao_cristovao": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": { "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos: 1"}                             
+                    "tooltip": { "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos: 1"}                             
                 }
                     
             }
@@ -43,10 +20,10 @@ $(function() {
                     "tooltip": { "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos: 17"}                             
                 },
                 "americano": {
-                    "value": 9,
-                    "attrs": { fill: "#6d9acb"},
-                    "text": { "content":  "9" , attrs: {fill:"#222"} },
-                    "tooltip": { "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos: 9"}                             
+                    "value": 12,
+                    "attrs": { fill: "#6c99ca"},
+                    "text": { "content":  "12" , attrs: {fill:"#222"} },
+                    "tooltip": { "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos: 12"}                             
                 },
                 "bom_pastor": {
                     "value": 13,
@@ -73,10 +50,10 @@ $(function() {
                     "tooltip": { "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos: 1"}                             
                 },
                 "centro": {
-                    "value": 41,
-                    "attrs": { fill: "#5f8bbe"},
-                    "text": { "content":  "41" , attrs: {fill:"#222"} },
-                    "tooltip": { "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos: 41"}                             
+                    "value": 45,
+                    "attrs": { fill: "#5d89bc"},
+                    "text": { "content":  "45" , attrs: {fill:"#222"} },
+                    "tooltip": { "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos: 45"}                             
                 },
                 "conservas": {
                     "value": 1,
@@ -85,10 +62,10 @@ $(function() {
                     "tooltip": { "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos: 1"}                             
                 },
                 "conventos": {
-                    "value": 7,
-                    "attrs": { fill: "#6e9bcc"},
-                    "text": { "content":  "7" , attrs: {fill:"#222"} },
-                    "tooltip": { "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos: 7"}                             
+                    "value": 8,
+                    "attrs": { fill: "#6e9bcb"},
+                    "text": { "content":  "8" , attrs: {fill:"#222"} },
+                    "tooltip": { "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos: 8"}                             
                 },
                 "floresta": {
                     "value": 2,
@@ -163,10 +140,10 @@ $(function() {
                     "tooltip": { "content": "<span style=\"font-weight:bold;\">São Bento</span><br />Requerimentos: 1"}                             
                 },
                 "sao_cristovao": {
-                    "value": 32,
-                    "attrs": { fill: "#638fc2"},
-                    "text": { "content":  "32" , attrs: {fill:"#222"} },
-                    "tooltip": { "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos: 32"}                             
+                    "value": 34,
+                    "attrs": { fill: "#628ec1"},
+                    "text": { "content":  "34" , attrs: {fill:"#222"} },
+                    "tooltip": { "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos: 34"}                             
                 },
                 "universitario": {
                     "value": 24,

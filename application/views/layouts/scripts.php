@@ -1,9 +1,9 @@
 <?php
 
-if (startsWith(uri_string(), 'newsletter/compor_mensagem'))
+if (startsWith(uri_string(), 'newsletters/compor_mensagem'))
 {
     ?>
-        <link href="<?php echo base_url(); ?>css/google-code-prettify/prettify.css" rel="stylesheet">        
+        <link href="<?php echo base_url(); ?>css/google-code-prettify/prettify.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">        
         <script src="<?php echo base_url(); ?>js/jquery.hotkeys.js"></script>        
         <script src="<?php echo base_url(); ?>js/google-code-prettify/prettify.js"></script>

@@ -95,10 +95,10 @@ areas: {                    "alto_do_parque":{
                             }
                         }
                     },                    "bom_pastor":{
-                        value: "19",
-                        text: { content:  19 , attrs: {fill:"#222"} },
+                        value: "20",
+                        text: { content:  20 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 19"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Requerimentos: 20"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 3 ).change();

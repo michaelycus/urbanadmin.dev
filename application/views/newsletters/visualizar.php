@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div id="heading" class="page-header">
+        <h1><i class="icon20 i-stack-empty"></i> Enviar mensagem</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    
+                    <?php
+                    echo '<iframe width="600" height="600" src="'. base_url() . 'newsletters/preview/'. $newsletter->id .'" frameborder="1"></iframe>';
+                    ?>
+                
+                </div><!-- End .panel-body -->
+           </div><!-- End .widget -->
+       </div><!-- End .col-lg-6  -->
+    </div><!-- End .row-fluid  -->
+</div>
+
+<?php
+
+echo '<div class="form-group">';
+echo    '<div class="col-lg-offset-2">';
+echo        '<div class="pad-left15">';
+echo        anchor('newsletters/enviar_newsletter/'.$newsletter->id,' Enviar Newsletter ', array('class' => 'btn btn-primary confirm_newsletter'));
+echo        '</div>';
+echo    '</div>';
+echo '</div>';
+                
+?>
+

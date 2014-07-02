@@ -52,9 +52,7 @@
                             $mensagem .= $this->form_validation->convert_sql_to_human($requerimento->data_requerimento) . "\n\n";
                             
                             $mensagem .= "Expediente:\n";
-                            $mensagem .= $requerimento->expediente . '/' . $requerimento->ano_expediente . "\n\n";
-                            
-                            $mensagem .= "[Essa é uma mensagem automática gerada pelo Gabinete do Vereador Ranzi]";
+                            $mensagem .= $requerimento->expediente . '/' . $requerimento->ano_expediente;
                             
                             // descricao
                             echo '<div class="form-group">';

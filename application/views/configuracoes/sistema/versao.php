@@ -6,6 +6,12 @@
     <div class="row">
         <ul class="search-results">
             <li>
+                <a href="#" class="search-string">1.3.5 - 24/06/2014</a>
+                <ul>
+                    <li>Todas as mensagens de e-mail enviadas pelo sistema agora são formatadas com um novo template.</li>
+                </ul>
+            </li>
+            <li>
                 <a href="#" class="search-string">1.3.4 - 18/06/2014</a>
                 <ul>
                     <li>Mapa de requerimentos por secretarias consegue listar os requerimentos</li>
