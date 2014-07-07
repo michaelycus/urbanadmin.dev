@@ -153,6 +153,7 @@ class Login extends MY_Controller
             $data['data_cadastro'] = date('Y-m-d');
             $data['password'] = md5($this->input->post('password'));
             $data['autorizacao'] = AUTORIZACAO_OPERADOR;
+            $data['recebe_emails'] = REQUERENTE_RECEBE_EMAILS;
 
             $this->requerente_model->insert($data);
             generate_charts();

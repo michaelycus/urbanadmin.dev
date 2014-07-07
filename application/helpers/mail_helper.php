@@ -231,7 +231,7 @@ if (!function_exists('send_newsletter')) {
             $mail->Body .= "Atenciosamente,<br>";
             $mail->Body .= "Gabinete do Vereador Ranzi<br><br>";
             
-            $mail->Body .= rodape;
+//            $mail->Body .= rodape;
             
             $mail->Body .= MESSAGE_ENDING;
 

@@ -10,6 +10,7 @@ class Graficos extends MY_Controller
         $this->load->model('categoria_requerimento_model');
         $this->load->model('requerente_model');
         $this->load->model('secretaria_model');
+        $this->load->model('newsletter_model');
     }
 
     public function populacao_por_bairro()
@@ -49,6 +50,12 @@ class Graficos extends MY_Controller
     {
         $this->data['vereadores'] = $this->requerente_model->get_vereadores();
         $this->load_view('graficos/requerimentos_por_vereador', TRUE);
+    }
+    
+    public function newsletters_por_bairro()
+    {
+        $this->data['newsletters'] = $this->newsletter_model->get_all();
+        $this->load_view('graficos/newsletters_por_bairro', TRUE);
     }
     
     public function gerar()            

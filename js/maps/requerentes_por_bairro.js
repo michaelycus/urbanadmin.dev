@@ -161,20 +161,20 @@ areas: {                    "alto_do_parque":{
                             }
                         }
                     },                    "imigrante":{
-                        value: "1",
-                        text: { content:  1 , attrs: {fill:"#222"} },
+                        value: "2",
+                        text: { content:  2 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerentes: 1"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerentes: 2"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 14 ).change();
                             }
                         }
                     },                    "jardim_do_cedro":{
-                        value: "7",
-                        text: { content:  7 , attrs: {fill:"#222"} },
+                        value: "8",
+                        text: { content:  8 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerentes: 7"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerentes: 8"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 15 ).change();

@@ -11,6 +11,7 @@ if (!function_exists('generate_charts'))
         $ci->load->model('categoria_requerimento_model');
         $ci->load->model('requerente_model');
         $ci->load->model('secretaria_model');
+        $ci->load->model('newsletter_model');
 
         $bairros = $ci->bairro_model->get_all();
         
@@ -34,6 +35,7 @@ if (!function_exists('generate_charts'))
         include('maps/requerimentos_por_tipo.php');
         include('maps/requerimentos_por_secretaria.php');
         include('maps/requerimentos_por_vereador.php');        
+        include('maps/newsletters_por_bairro.php');        
     }
 }
 

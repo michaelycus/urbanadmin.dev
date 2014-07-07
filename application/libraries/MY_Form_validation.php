@@ -58,11 +58,31 @@ class MY_Form_validation extends CI_Form_validation
 
     public function convert_sql_to_human($date)
     {
-        $date=explode("-",$date);
-        // where the date is a sql value like yyyy-mm-dd
-        $dated=$date[2]."/".$date[1]."/".$date[0];
-        // The string dated is now in mm/dd/yyyy format
-
+        if (strlen($date) > 10 )
+        {
+            $date=explode(" ",$date);
+            
+            $date_day=$date[0];
+            $date_time=$date[1];
+            
+            $date_day=explode("-",$date_day);
+            // where the date is a sql value like yyyy-mm-dd
+            $dated=$date_day[2]."/".$date_day[1]."/".$date_day[0];
+            // The string dated is now in dd/mm/yyyy format
+            
+            $date_time=explode(":",$date_time);
+            // where the date is a sql value like hh:mm
+            $dated.=' - ' . $date_time[2].":".$date_time[1];
+            // The string dated is now in hh/mm format
+        }
+        else
+        {
+            $date=explode("-",$date);
+            // where the date is a sql value like yyyy-mm-dd
+            $dated=$date[2]."/".$date[1]."/".$date[0];
+            // The string dated is now in dd/mm/yyyy format
+        }
+        
         return $dated;
     }
 

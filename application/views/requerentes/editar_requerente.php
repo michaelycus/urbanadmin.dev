@@ -216,6 +216,18 @@
                 echo '</div>';
 
                 echo '</div>';
+                
+                echo '<hr>';
+
+                // recebe_emails
+                echo '<div class="form-group">';
+                echo    '<label for="recebe_emails" class="col-lg-3 control-label">Notificações</label>';
+                echo    '<div class="col-lg-9">';
+                echo        form_checkbox(array('name' => 'recebe_emails','id' => 'recebe_emails',
+                            'class' => 'form-control', 'value' => 'recebe_emails', 'checked' => $requerente->recebe_emails==1 ? TRUE: FALSE));
+                echo    ' Receber mensagens por e-mail.';
+                echo    '</div>';
+                echo '</div>';
 
                 echo form_hidden('id', $requerente->id);
 

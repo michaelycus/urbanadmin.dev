@@ -4,7 +4,7 @@ class Cronjobs extends CI_Controller {
     public function start_cronjobs()
     {
         $this->notificacao_mensal();
-        $this->teste();
+        //$this->teste();
     }
     
     public function notificacao_mensal()

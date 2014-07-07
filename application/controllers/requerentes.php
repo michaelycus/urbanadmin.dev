@@ -76,6 +76,8 @@ class Requerentes extends MY_Controller
             $data['data_cadastro'] = date('Y-m-d');
 
             $data['tipo'] = $this->input->post('tipo') ? 1 : 0;
+            
+            $data['recebe_emails'] = REQUERENTE_RECEBE_EMAILS;
 
             $this->requerente_model->insert($data);
             generate_charts();
@@ -112,6 +114,8 @@ class Requerentes extends MY_Controller
             $data = elements(array('nome','pessoa_fisica','cpf','cnpj','rg','email','telefone',
                                    'profissao','endereco','mora_cidade','id_bairro',
                                    'estado','cidade','cep'),$this->input->post());
+        
+            $data['recebe_emails'] = $this->input->post('recebe_emails') ? 1 : 0;
 
             if ( $this->input->post('password') != '' && $this->input->post('password2') !=''  )
                 $data['password'] = md5($this->input->post('password'));

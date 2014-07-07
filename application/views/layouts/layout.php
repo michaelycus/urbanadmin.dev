@@ -336,6 +336,11 @@
                                                 '<i class="icon20  i-map-4"></i>
                                                 <span class="txt">Requerimentos: vereador</span>');?>
                                     </li>
+                                    <li>
+                                        <?php echo anchor('graficos/newsletters_por_bairro',
+                                                '<i class="icon20  i-map-4"></i>
+                                                <span class="txt">Newsletters: bairro</span>');?>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -363,13 +368,13 @@
                                 </a>
                                 <ul class="sub<?php echo ($cat=='newsletters' ? ' show' : '')?>">
                                     <li>
-                                        <?php echo anchor('newsletters/compor_mensagem',
-                                                '<i class="icon20 i-envelop-opened"></i>
-                                                 <span class="txt">Compor mensagem</span>');?>
+                                        <?php echo anchor('newsletters/criar_newsletter',
+                                                '<i class="icon20 i-pencil-5"></i>
+                                                 <span class="txt">Criar newsletter</span>');?>
                                     </li>
                                     <li>
                                         <?php echo anchor('newsletters/listar_newsletters',
-                                                '<i class="icon20 i-envelop-opened"></i>
+                                                '<i class="icon20 i-list"></i>
                                                  <span class="txt">Listar newsletters</span>');?>
                                     </li>
                                 </ul>
@@ -434,6 +439,12 @@
 
                                 echo '<li'. ($cat=='graficos_customizados' ? ' class="active"><i class="icon16 i-wand-2"></i></li>' :
                                         '>'.anchor('graficos_customizados/listar_graficos', '<i class="icon16 i-wand-2"></i>').'</li>');
+                                
+                                echo '<li'. ($cat=='newsletters' ? ' class="active"><i class="icon16 i-mail-send"></i></li>' :
+                                        '>'.anchor('newsletters/listar_newsletters', '<i class="icon16 i-mail-send"></i>').'</li>');
+                                
+                                echo '<li'. ($cat=='contatos' ? ' class="active"><i class="icon16 i-phone-2"></i></li>' :
+                                        '>'.anchor('contatos/listar_contatos', '<i class="icon16 i-phone-2"></i>').'</li>');
                             }
                             ?>
                         </ul>

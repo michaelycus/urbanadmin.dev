@@ -229,6 +229,14 @@ class MY_Model extends CI_Model
     {
         return $this->get($this->get_next_id() - 1);
     }
+    
+    /*
+     * Return the last id in the table
+     */
+    public function get_last_id()
+    {
+        return ($this->get_next_id() - 1);
+    }
 
     /**
      * Insert a new row into the table. $data should be an associative array

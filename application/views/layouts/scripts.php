@@ -1,6 +1,6 @@
 <?php
 
-if (startsWith(uri_string(), 'newsletters/compor_mensagem'))
+if (startsWith(uri_string(), 'newsletters/criar_newsletter') || startsWith(uri_string(), 'newsletters/editar_newsletter'))
 {
     ?>
         <link href="<?php echo base_url(); ?>css/google-code-prettify/prettify.css" rel="stylesheet">

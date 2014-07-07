@@ -87,4 +87,12 @@ class Requerente_model extends MY_Model
 
         return $key;
     }
+    
+    public function descadastrar_email($email)
+    {
+        $data = array('recebe_emails' => REQUERENTE_NAO_RECEBE_EMAILS);
+        
+        $this->db->where('email', $email);
+        $this->db->update('requerentes', $data);
+    }
 }

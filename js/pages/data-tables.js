@@ -55,6 +55,23 @@ $(document).ready(function() {
             }
     });
     
+    $('#table-mapa-newsletters').dataTable( {
+            "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
+            "sPaginationType": "bootstrap",
+            "aaSorting": [[ 0, "asc" ]],
+            "bJQueryUI": false,
+            "bAutoWidth": false,
+            "bFilter": false,
+            "iDisplayLength": 5,
+            "bLengthChange": false,
+            "oLanguage": {
+                "sLengthMenu": "<span>_MENU_ registros</span>",
+                "sInfoEmpty": "",
+                "sEmptyTable": "Clique no mapa para listar os requerimentos!",
+                "oPaginate": { "sFirst": "Primeiro", "sLast": "Último", "sPrevious": "Anterior", "sNext": "Próximo" }
+            }
+    });
+    
     $('#table-meus-requerimentos').dataTable( {
             "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
             "sPaginationType": "bootstrap",

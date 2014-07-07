@@ -155,6 +155,11 @@ define('GRAFICO_FORMATO_UNIDADE', serialize (array ( 0 => "Sem formato",
 define('NEWSLETTER_EDITADA', 0);
 define('NEWSLETTER_ENVIADA', 1);
 
+
+define('REQUERENTE_RECEBE_EMAILS', 1);
+define('REQUERENTE_NAO_RECEBE_EMAILS', 0);
+
+
 // padrões do sistema 
 define('REQUERENTE_PADRAO_ID', 1);
 define('CIDADE_PADRAO_ID', 4144);

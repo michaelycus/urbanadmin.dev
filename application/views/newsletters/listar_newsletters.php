@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div id="heading" class="page-header">
-        <h1><i class="icon20 i-list-2"></i> Listar newsletters</h1>
+        <h1><i class="icon20 i-list"></i> Listar newsletters</h1>
     </div>
 
     <div class="row">
@@ -21,31 +21,17 @@
         }
 
         $this->table->set_template($tmpl);
-        $this->table->set_heading('Assunto', 'Bairro', '');
+        $this->table->set_heading('Assunto', 'Bairro', 'Enviado em','');
 
         if (!empty($newsletters))
         {
             foreach ($newsletters as $newsletter):
-                
-                switch ($newsletter->tipo)
-                {
-                    case NEWSLETTER_EDITADA:
-                        $icon = 'i-file-8';
-                        break;
 
-                    case NEWSLETTER_ENVIADA:
-                        $icon = 'i-file-check-2';
-                        break;
-
-                    default:
-                        break;
-                }
-
-                $this->table->add_row(array('data'=>'<small><strong><i class="icon24 '. $icon .' blue"></i> '. anchor('graficos_customizados/visualizar_grafico/'.$chart->id, $chart->titulo) .'</strong>'.'</small>'),
-                                      array('data'=>'<small>'.$newsletter->nome_requerente.'</small>'),
-                                      array('data'=>'<div style="display:none;">'.$newsletter->nome_bairro.'</div>'.
-                                                    anchor('graficos_customizados/editar_grafico/'.$newsletter->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-block btn-primary btn-xs')).' '.
-                                                    anchor('graficos_customizados/excluir_grafico/'.$newsletter->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirmdelete btn btn-block btn-danger btn-xs')), 'style'=>'width:100px'));
+                $this->table->add_row(array('data'=>'<small>'. anchor('newsletters/visualizar/'.$newsletter->id, $newsletter->assunto) .'</strong>'.'</small>'),
+                                      array('data'=>'<small>'.$newsletter->nome_bairro.'</small>'),
+                                      array('data'=>'<small>'. (startsWith($newsletter->data_envio, '000') ? '' : $this->form_validation->convert_sql_to_human($newsletter->data_envio)) .'</small>'),
+                                      array('data'=>anchor('newsletters/editar_newsletter/'.$newsletter->id,'<i class="icon-edit"></i> Editar ', array('class' => 'btn btn-block btn-primary btn-xs')).' '.
+                                                    anchor('newsletters/excluir_newsletter/'.$newsletter->id,' <i class="icon-trash"></i> Excluir',array('class' => 'confirmdelete btn btn-block btn-danger btn-xs')), 'style'=>'width:100px'));
             endforeach;
 
            echo $this->table->generate();

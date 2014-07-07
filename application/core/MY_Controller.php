@@ -19,6 +19,7 @@ class MY_Controller extends CI_Controller
                  !startsWith(uri_string(), 'requerimentos/informar_resultado') &&
                  !startsWith(uri_string(), 'requerimentos/resultado_informado') &&
                  !startsWith(uri_string(), 'graficos_customizados/incorporar') &&
+                 !startsWith(uri_string(), 'newsletters/descadastrar') &&
                  !startsWith(uri_string(), 'requerimentos/relatorio_por_mes') )
             redirect('login');
         }
