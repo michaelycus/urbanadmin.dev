@@ -364,7 +364,7 @@
                             <li>
                                 <a href="#">
                                     <span class="icon"><i class="icon20 i-mail-send"></i></span>
-                                    <span class="txt">Newsletter (Em construção)</span>
+                                    <span class="txt">Newsletter</span>
                                 </a>
                                 <ul class="sub<?php echo ($cat=='newsletters' ? ' show' : '')?>">
                                     <li>

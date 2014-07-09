@@ -72,7 +72,7 @@ class MY_Form_validation extends CI_Form_validation
             
             $date_time=explode(":",$date_time);
             // where the date is a sql value like hh:mm
-            $dated.=' - ' . $date_time[2].":".$date_time[1];
+            $dated.=' - ' . $date_time[2].":".$date_time[1].":".$date_time[0];
             // The string dated is now in hh/mm format
         }
         else

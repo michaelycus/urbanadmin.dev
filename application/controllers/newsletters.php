@@ -22,7 +22,7 @@ class Newsletters extends MY_Controller
         $this->form_validation->set_rules($this->newsletter_model->validation);
             
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('assunto','mensagem','id_bairro'),$this->input->post());
+            $data = elements(array('assunto','mensagem','id_bairro','enviar_para'),$this->input->post());
         
             $this->newsletter_model->insert($data);
             
@@ -44,7 +44,7 @@ class Newsletters extends MY_Controller
         $this->form_validation->set_rules($this->newsletter_model->validation);
             
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('assunto','mensagem','id_bairro'),$this->input->post());
+            $data = elements(array('assunto','mensagem','id_bairro','enviar_para'),$this->input->post());
         
             $this->newsletter_model->update($this->input->post('id'), $data);
             
@@ -65,14 +65,14 @@ class Newsletters extends MY_Controller
 
     function enviar_newsletter($id)
     {
-        $newsletter = $this->newsletter_model->get($id);
+        $newsletter = $this->newsletter_model->get($id);        
         
-//        send_newsletter($newsletter);
+        $error = send_newsletter($newsletter);
         
         $data['data_envio'] = date('Y-m-d H:i:s');        
         $this->newsletter_model->update($id, $data);
         
-        $this->session->set_userdata('newsletter_enviada','Newsletter enviada com sucesso!');
+        $this->session->set_userdata('newsletter_enviada', $error == '' ? 'Newsletter enviada com sucesso!' : $error);
 
         redirect('newsletters/listar_newsletters', TRUE);
     }
@@ -80,6 +80,7 @@ class Newsletters extends MY_Controller
     public function preview($id)
     {
         $data['mensagem'] = $this->newsletter_model->get($id)->mensagem;
+        $data['assunto'] = $this->newsletter_model->get($id)->assunto;
         
         $this->load->view('newsletters/preview', $data);
     }

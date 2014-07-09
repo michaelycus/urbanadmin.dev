@@ -6,6 +6,12 @@
     <div class="row">
         <ul class="search-results">
             <li>
+                <a href="#" class="search-string">1.4.0 - 08/07/2014</a>
+                <ul>
+                    <li>Ferramenta envio de Newsletter adicionada.</li>
+                </ul>
+            </li>
+            <li>
                 <a href="#" class="search-string">1.3.5 - 24/06/2014</a>
                 <ul>
                     <li>Todas as mensagens de e-mail enviadas pelo sistema agora são formatadas com um novo template.</li>

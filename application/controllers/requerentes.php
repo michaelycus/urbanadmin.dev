@@ -221,4 +221,24 @@ class Requerentes extends MY_Controller
 
         return;
     }
+    
+    function get_requerentes_newsletter($id_bairro)
+    {
+        $requerentes = $this->requerente_model->get_requerentes_newsletter_by_bairro($id_bairro);
+
+        if (empty($requerentes))
+            return '{ "descricao": "Nenhum requerente encontrado" }';
+
+        $arr_req = array();
+
+        foreach ($requerentes as $req)
+        {
+            $desc = trim(preg_replace('/\s+/', ' ', $req->email));
+            $arr_req[] = '{"id":' . $req->id . ',"email":"' . substr($desc, 0, 128)  . '"}';
+        }
+
+        echo '[ ' . implode(",", $arr_req) . ']';
+
+        return;
+    }
 }

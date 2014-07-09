@@ -9,7 +9,16 @@
                 <div class="panel-body">
                     
                     <?php
-                    echo '<h3>Assunto: <em>'. $newsletter->assunto .'</em></h3>';
+                    echo '<h4>Assunto: <em>'. $newsletter->assunto .'</em></h4>';
+                    
+                    echo '<h4>Enviar para: <em>'. $newsletter->enviar_para .'</em></h4>';
+                    
+                    $emails = explode(',', $newsletter->enviar_para );
+                    
+                    foreach ($emails as $email)
+                    {
+                        echo trim($email) . ' ';
+                    }
                     
                     echo '<iframe width="600" height="600" src="'. base_url() . 'newsletters/preview/'. $newsletter->id .'" frameborder="1"></iframe>';
                     ?>

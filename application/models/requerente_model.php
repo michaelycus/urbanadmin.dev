@@ -21,6 +21,18 @@ class Requerente_model extends MY_Model
     public function get_requerentes_by_bairro($id_bairro)
     {
         $this->db->where('id_bairro', $id_bairro);
+        $this->db->where('tipo', !REQUERENTE_TIPO_VEREADOR);
+        $this->db->where('mora_cidade', MORA_NA_CIDADE);
+
+        return $this->get_all();
+    }
+    
+    public function get_requerentes_newsletter_by_bairro($id_bairro)
+    {
+        $this->db->where('id_bairro', $id_bairro);
+        $this->db->where('recebe_emails', REQUERENTE_RECEBE_EMAILS);
+        $this->db->where('tipo', REQUERENTE_TIPO_CIDADAO);
+        $this->db->where('mora_cidade', MORA_NA_CIDADE);
 
         return $this->get_all();
     }

@@ -11,8 +11,8 @@ if (startsWith(uri_string(), 'newsletters/criar_newsletter') || startsWith(uri_s
         
         <style type="text/css">
         #editor {
-            max-height: 250px;
-            height: 250px;
+            max-height: 350px;
+            height: 350px;
             background-color: white;
             border-collapse: separate; 
             border: 1px solid rgb(204, 204, 204); 

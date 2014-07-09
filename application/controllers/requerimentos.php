@@ -201,6 +201,104 @@ class Requerimentos extends MY_Controller
 
         $this->load_view('requerimentos/cadastrar_requerimento');
     }
+    
+    public function cadastrar_requerimento_teste()
+    {
+        $this->load->library('image_lib');
+
+        $config['upload_path'] = './uploads/';
+        $config['allowed_types'] = 'gif|jpg|jpeg|png';
+        $config['max_size'] = '8000';
+        $config['max_width'] = '5000';
+        $config['max_height'] = '5000';
+        $config['encrypt_name'] = TRUE;
+
+        $this->load->library('upload', $config);
+
+        $this->form_validation->set_rules($this->requerimento_model->validation);
+
+        $this->data['bairros'] = $this->bairro_model->get_bairros();
+        $this->data['requerentes'] = $this->requerente_model->get_vereadores();
+        $this->data['solicitantes'] = $this->requerente_model->get_all();
+        $this->data['cats_requerimento'] = $this->categoria_requerimento_model->order_by('ordem')->get_all();
+
+        if ($this->form_validation->run()==TRUE):
+            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento',
+                'id_requerente','id_solicitante'),$this->input->post());
+            $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
+
+            $data['descricao_original'] = $this->input->post('descricao');
+
+            $data['da_sessao'] = $this->input->post('da_sessao') ? 1 : 0;
+            $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
+
+            $data['code'] = generate_key(16);
+
+            $i = 1;
+            foreach($_FILES as $field => $file)
+            {
+                if ( $_FILES AND $_FILES['anexo_'.$i]['name'] )
+                {
+                    // So lets upload
+                    if ($this->upload->do_upload($field))
+                    {
+                        $file_data = $this->upload->data();
+
+                        $data['anexo_'.$i] = $file_data['raw_name'].$file_data['file_ext'];
+
+                        // thumbnail
+                        $config = array(
+                            'source_image' => $file_data['full_path'],
+                            'new_image' => './uploads/thumbs/',
+                            'maintain_ratio' => true,
+                            'width' => 100,
+                            'height' => 75
+                        );
+
+                        $this->image_lib->initialize($config);
+                        $this->image_lib->resize();
+
+                        if ($file_data['image_width'] > 1024 || $file_data['image_height'] > 1024)
+                        {
+                            // resized
+                            $config = array(
+                               'source_image' => $file_data['full_path'],
+                               'new_image' => './uploads/',
+                               'maintain_ratio' => true,
+                               'width' => 1024,
+                               'height' => 1024
+                            );
+
+                            $this->image_lib->initialize($config);
+                            $this->image_lib->resize();
+                        }
+                    }
+                    else
+                    {
+                        $this->data['error'] = $this->upload->display_errors();
+                    }
+                }
+                $i++;
+            }
+
+            if (!$this->data['error'])
+            {
+                $this->requerimento_model->insert($data);
+                generate_charts();
+
+                if ($_SESSION['autorizacao']==AUTORIZACAO_OPERADOR)
+                {
+                    alert_requirement($this->requerimento_model->get_next_id()-1);
+                }
+
+                $this->session->set_userdata('requerimento_cadastrado','Requerimento cadastrado com sucesso!');
+
+                redirect('requerimentos/cadastrar_requerimento_teste');
+            }
+        endif;
+
+        $this->load_view('requerimentos/cadastrar_requerimento_teste');
+    }
 
     public function editar_requerimento($id)
     {
