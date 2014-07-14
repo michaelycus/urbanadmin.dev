@@ -20,7 +20,7 @@ class Requerimento_model extends MY_Model
         parent::__construct();
         $this->_database = $this->db;
     }
-    
+
     public function get_requerimentos_with_bairros()
     {
         $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
@@ -55,7 +55,7 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
-    
+
     public function get_outros_requerimentos_with_bairros()
     {
         $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
@@ -71,7 +71,7 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
-    
+
     public function get_requerimentos_da_sessao_with_bairros()
     {
         $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
@@ -87,49 +87,16 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
-    
-    
-    
-    
+
     public function get_requerimentos_by_secretaria_bairro($id_secretaria, $id_bairro)
-    {        
+    {
         // SELECT * FROM `requerimentos` WHERE `cat_requerimento` IN (SELECT id_categoria FROM rel_categorias_secretarias WHERE id_categoria = 1 ) and `id_bairro` =5;
-        
-        $query = $this->db->query("SELECT * FROM `requerimentos` WHERE `cat_requerimento` 
+
+        $query = $this->db->query("SELECT * FROM `requerimentos` WHERE `cat_requerimento`
                 IN (SELECT id_categoria FROM rel_categorias_secretarias WHERE id_secretaria = $id_secretaria ) and `id_bairro` = $id_bairro");
-        
-        return $query->result();  
-        
-//        pareki aqui testasr
-        
-//        $this->db->select('*');
-//        $this->db->where_in('cat_requerimento', $this->db->select('id_categoria'));
-//        
-//        
-//        $array_sec = $this->secretaria_model->get_all();
-//        $array_result = array();
-//
-//        foreach ($array_sec as $sec)
-//        {
-//            $array_cat = $this->categoria_requerimento_model->get_categorias_by_secretaria($sec->id);
-//            
-//            foreach ($array_cat as $cat)
-//            {
-//                $this->db->select('bairros.nome AS nome_bairro, bairros.codename AS codename, bairros.id AS bairro_id,
-//                    COUNT(bairros.codename) AS count_requerimentos');
-//                $this->db->where('cat_requerimento', $cat->id_categoria);
-//                $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
-//                $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
-//                $this->db->group_by('codename');
-//
-//                $array_result[$sec->id][$cat->id_categoria] = $this->get_all();
-//            }
-//        }
-//
-//        return $array_result;
+
+        return $query->result();
     }
-    
-    
 
     public function get_last($num)
     {
@@ -138,7 +105,7 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
-    
+
     public function get_requerimentos_by_situacao($cat)
     {
         $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
@@ -154,7 +121,7 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
-    
+
     public function get_requerimentos_by_data($data_inicio, $data_fim)
     {
         $this->db->select('requerimentos.*, bairros.nome AS nome_bairro,
@@ -162,15 +129,15 @@ class Requerimento_model extends MY_Model
                     r.nome AS nome_solicitante, r.telefone AS telefone');
         $this->db->where("data_requerimento BETWEEN '$data_inicio' AND '$data_fim'");
         $this->db->where('da_sessao !=', REQUERIMENTO_DA_SESSAO);
-        $this->db->where('id_requerente', REQUERENTE_PADRAO_ID);        
-        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
+        $this->db->where('id_requerente', REQUERENTE_PADRAO_ID);
+        $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id', 'LEFT');
         $this->db->join('categorias_requerimento', 'requerimentos.cat_requerimento=categorias_requerimento.id');
         $this->db->join('requerentes', 'requerimentos.id_requerente=requerentes.id');
         $this->db->join('requerentes AS r', 'requerimentos.id_solicitante=r.id');
 
         return $this->get_all();
     }
-    
+
     public function count_requerimentos_by_mes($data_inicio, $data_fim)
     {
         $this->db->where("data_requerimento BETWEEN '$data_inicio' AND '$data_fim'");
@@ -190,7 +157,7 @@ class Requerimento_model extends MY_Model
 
         return $this->db->count_all_results();
     }
-    
+
     public function count_outros_requerimentos()
     {
         $this->db->where('id_requerente !=', REQUERENTE_PADRAO_ID);
@@ -198,7 +165,7 @@ class Requerimento_model extends MY_Model
 
         return $this->db->count_all_results();
     }
-    
+
     public function count_da_sessao()
     {
         $this->db->where('da_sessao', REQUERIMENTO_DA_SESSAO);
@@ -233,10 +200,10 @@ class Requerimento_model extends MY_Model
 
             $array_result[$cat->id] = $this->get_all();
         }
-        
+
         return $array_result;
     }
-    
+
     public function count_requerimentos_with_secretarias()
     {
         $array_sec = $this->secretaria_model->get_all();
@@ -245,7 +212,7 @@ class Requerimento_model extends MY_Model
         foreach ($array_sec as $sec)
         {
             $array_cat = $this->categoria_requerimento_model->get_categorias_by_secretaria($sec->id);
-            
+
             foreach ($array_cat as $cat)
             {
                 $this->db->select('bairros.nome AS nome_bairro, bairros.codename AS codename, bairros.id AS bairro_id,
@@ -261,16 +228,16 @@ class Requerimento_model extends MY_Model
 
         return $array_result;
     }
-    
+
     public function count_requerimentos_with_situacao()
     {
         $array_result = array();
-        
+
         // 0 - Em análise
         // 1 - Analisado
         // 2 - Protocolado
         // 3 - Concluído
-        
+
         for ($i=0; $i < 4; $i++)
         {
             $this->db->select('bairros.nome AS nome_bairro, bairros.codename AS codename,
@@ -279,12 +246,9 @@ class Requerimento_model extends MY_Model
             $this->db->where('da_sessao', 0);
             $this->db->join('bairros', 'requerimentos.id_bairro=bairros.id');
             $this->db->group_by('codename');
-            
+
             $array_result[$i] = $this->get_all();
         }
-        
-//        var_dump($array_result);
-//        die();
 
         return $array_result;
     }
@@ -308,7 +272,7 @@ class Requerimento_model extends MY_Model
 
         return $array_result;
     }
-    
+
     public function count_meus_requerimentos($id_user)
     {
         $this->db->where('id_solicitante', $id_user);
@@ -323,10 +287,10 @@ class Requerimento_model extends MY_Model
 
         return $this->get_all();
     }
-    
+
     public function get_requerimento_by_code($code)
     {
-        $q = $this->db->where('code', $code)                      
+        $q = $this->db->where('code', $code)
                       ->limit(1)
                       ->get('requerimentos');
 
@@ -354,11 +318,11 @@ class Requerimento_model extends MY_Model
         $data = array('expediente' => $expediente, 'ano_expediente' => $ano);
         $this->update($id, $data);
     }
-    
+
     public function get_requerimentos_notificar()
     {
         $data = date('Y-m-d', strtotime(date('Y-m-d'). ' - 30 days'));
-        
+
         $this->db->select('requerimentos.*, requerentes.nome AS nome_solicitante,
                            requerentes.email AS email');
         $this->db->where('data_requerimento', $data);
@@ -366,9 +330,9 @@ class Requerimento_model extends MY_Model
         $this->db->where('id_requerente', REQUERENTE_PADRAO_ID);
         $this->db->where('situacao', REQUERIMENTO_SITUACAO_PROTOCOLADO);
         $this->db->where('status_retorno', REQUERIMENTO_RETORNO_NAO_NOTIFICADO);
-        $this->db->where('notificar', 1);        
+        $this->db->where('notificar', 1);
         $this->db->join('requerentes', 'requerimentos.id_solicitante=requerentes.id');
-        
+
         return $this->get_all();
     }
 }

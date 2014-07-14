@@ -52,5 +52,27 @@ if (startsWith(uri_string(), 'newsletters/criar_newsletter') || startsWith(uri_s
     
     <?php
 }
+else if (startsWith(uri_string(), 'requerimentos/cadastrar_requerimento_teste') ) // colocar no EDITAR mais tarde
+{
+    ?>
+    <link href="<?php echo base_url(); ?>js/plugins/ui/jgrowl/jquery.jgrowl.css" rel="stylesheet" /> 
+    
+    <style type="text/css">
+    div.jGrowl div.jGrowl-notification.info {
+	background: #1a8eed; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */	
+	background: -moz-linear-gradient(top,  #1a8eed 1%, #62aeef 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#1a8eed), color-stop(100%,#62aeef)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #1a8eed 1%,#62aeef 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #1a8eed 1%,#62aeef 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #1a8eed 1%,#62aeef 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #1a8eed 1%,#62aeef 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a8eed', endColorstr='#62aeef',GradientType=0 ); /* IE6-8 */
+	border-color: #0483EA #1a8eed #1a8eed #1a8eed;
+    }
+    </style> 
+    <script src="<?php echo base_url(); ?>js/plugins/ui/jgrowl/jquery.jgrowl.js"></script>
+    <?php
+}
 
 ?>

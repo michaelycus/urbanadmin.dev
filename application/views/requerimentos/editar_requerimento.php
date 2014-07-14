@@ -206,8 +206,10 @@
                 echo form_hidden('id', $requerimento->id);
 
                 echo '<div class="form-group">';
-                echo    '<div class="col-lg-9">';
+                echo    '<div class="col-lg-offset-3">';
+                echo        '<div class="col-lg-9">';
                 echo        form_submit('submit', 'Editar requerimento', 'class="btn btn-primary"');
+                echo        '</div>';
                 echo    '</div>';
                 echo '</div>';
 

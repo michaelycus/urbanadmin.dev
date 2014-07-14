@@ -194,7 +194,7 @@
                 // --- --- ---
 
                 echo '<div class="form-group">';
-                echo    '<div class="col-lg-offset-2">';
+                echo    '<div class="col-lg-offset-3">';
                 echo        '<div class="pad-left15">';
                 echo            form_submit('submit', 'Cadastrar', 'class="btn btn-primary"');
                 echo        '</div>';

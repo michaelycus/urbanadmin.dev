@@ -669,8 +669,6 @@ class Requerimentos extends MY_Controller
     {
         $requerimentos = $this->requerimento_model->get_requerimentos_by_secretaria_bairro($id_secretaria,$id_bairro);
 
-//        die(var_dump($requerimentos));
-
         if (empty($requerimentos))
             return '{ "descricao": "Nenhum requerimento encontrado" }';
 
@@ -683,6 +681,32 @@ class Requerimentos extends MY_Controller
         }
 
         echo '[ ' . implode(",", $arr_req) . ']';
+
+        return;
+    }
+    
+    function get_descricao_ajax($id_cat, $id_bairro, $id_rua)
+    {
+        $categoria = $this->categoria_requerimento_model->get($id_cat);
+        $bairro = $this->bairro_model->get($id_bairro);
+        $rua = $this->rua_model->get($id_rua);
+        
+        if ($id_cat != 0)
+        {
+            $descricao = "Solicito ". $categoria->descricao;
+            
+            if ($id_bairro != 0)
+            {
+                $descricao .= " no bairro ". $bairro->nome;
+            }
+            if ($id_rua != 0)
+            {
+                $descricao .= ", na ". $rua->nome;
+            }
+            $descricao .= '.';
+        }
+        
+        echo '[{ "descricao": "'. $descricao .'" }]';
 
         return;
     }

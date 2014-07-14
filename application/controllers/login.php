@@ -106,11 +106,13 @@ class Login extends MY_Controller
             }
             $this->data['meses'] = array_reverse($meses);
 
-            $this->data['versao_atual'] = "1.4.0";
+            $this->data['versao_atual'] = "1.4.1";
 
             $json_str = '{"versoes":[
-                    {"versao":"1.4.0", "data":"08/07/2014", "changes":
-                         ["Ferramenta envio de Newsletter adicionada."
+                    {"versao":"1.4.1", "data":"10/07/2014", "changes":
+                         ["Testando novos campos de cadastro de requerimento",
+                          "Padronizando posicionamento de botões",
+                          "Corrigindo contagem de requerimentos por mês"
                           ]}
                     ]}';
 

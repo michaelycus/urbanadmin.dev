@@ -56,10 +56,8 @@
                     echo '</div>';
 
                     echo '<div class="form-group">';
-                    echo    '<div class="col-lg-offset-2">';
-                    echo        '<div class="pad-left15">';
+                    echo    '<div class="pad-left15">';
                     echo            form_submit('submit', 'Cadastrar rua', 'class="btn btn-primary"');
-                    echo        '</div>';
                     echo    '</div>';
                     echo '</div>';
 

@@ -68,12 +68,10 @@
                     
                     echo form_hidden('id', $id);
 
-                    echo '<div class="form-group">';
-                    echo    '<div class="col-lg-offset-1">';
-                    echo        '<div class="pad-left15">';
-                    echo            form_submit('submit', 'Editar rua', 'class="btn btn-primary"');
-                    echo        '</div>';
-                    echo    '</div>';
+                    echo '<div class="form-group">';                    
+                    echo    '<div class="pad-left15">';
+                    echo        form_submit('submit', 'Editar rua', 'class="btn btn-primary"');
+                    echo    '</div>';                    
                     echo '</div>';
 
                     echo form_close();
