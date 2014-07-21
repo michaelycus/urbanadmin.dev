@@ -25,6 +25,11 @@
                     echo '<div class="alert alert-success">'. $this->session->userdata('requerente_editado') .'</div>';
                     $this->session->unset_userdata('requerente_editado');
                 }
+                if ($this->session->userdata('primeiro_acesso'))
+                {
+                    echo '<div class="alert alert-info">'. $this->session->userdata('primeiro_acesso') .'</div>';
+                    $this->session->unset_userdata('primeiro_acesso');
+                }
 
                 // nome
                 echo '<div class="form-group">';
@@ -100,28 +105,34 @@
                 // --- --- --- ---
 
                 echo '<hr>';
+                
+                if (!$requerente->id_facebook)
+                {
+                    echo '<div class="form-group">';
+                    echo form_label('Senha', 'rg', array('class' => 'col-lg-3 control-label'));
+                    echo    '<div class="col-lg-9">';
+                    echo form_password(array('name' => 'password','id' => 'password','placeholder' => '','class' => 'form-control'), set_value(''));
+                    echo    '</div>';
+                    echo '</div>';
 
-                echo '<div class="form-group">';
-                echo form_label('Senha', 'rg', array('class' => 'col-lg-3 control-label'));
-                echo    '<div class="col-lg-9">';
-                echo form_password(array('name' => 'password','id' => 'password','placeholder' => '','class' => 'form-control'), set_value(''));
-                echo    '</div>';
-                echo '</div>';
+                    echo '<div class="form-group">';
+                    echo form_label('Repita a senha', 'rg', array('class' => 'col-lg-3 control-label'));
+                    echo    '<div class="col-lg-9">';
+                    echo form_password(array('name' => 'password2','id' => 'password2','placeholder' => '','class' => 'form-control'), set_value(''));
+                    echo    '</div>';
+                    echo '</div>';
 
-                echo '<div class="form-group">';
-                echo form_label('Repita a senha', 'rg', array('class' => 'col-lg-3 control-label'));
-                echo    '<div class="col-lg-9">';
-                echo form_password(array('name' => 'password2','id' => 'password2','placeholder' => '','class' => 'form-control'), set_value(''));
-                echo    '</div>';
-                echo '</div>';
-
-                echo '<hr>';
+                    echo '<hr>';
+                }
 
                 // email
                 echo '<div class="form-group">';
                 echo form_label('E-mail', 'email', array('class' => 'col-lg-3 control-label'));
                 echo    '<div class="col-lg-9">';
-                echo    form_input(array('name' => 'email','id' => 'email','placeholder' => 'e-mail','class' => 'form-control'), set_value('email',$requerente->email));
+                if ($requerente->id_facebook)
+                    echo    form_input(array('name' => 'email','id' => 'email','placeholder' => 'e-mail','class' => 'form-control', 'readonly' => 'readonly'), set_value('email',$requerente->email));
+                else
+                    echo    form_input(array('name' => 'email','id' => 'email','placeholder' => 'e-mail','class' => 'form-control'), set_value('email',$requerente->email));
                 echo    '</div>';
                 echo '</div>';
 
@@ -225,11 +236,12 @@
                 echo    '<div class="col-lg-9">';
                 echo        form_checkbox(array('name' => 'recebe_emails','id' => 'recebe_emails',
                             'class' => 'form-control', 'value' => 'recebe_emails', 'checked' => $requerente->recebe_emails==1 ? TRUE: FALSE));
-                echo    ' Receber mensagens por e-mail.';
+                echo    ' Receber mensagens sobre meu bairro por e-mail.';
                 echo    '</div>';
                 echo '</div>';
 
                 echo form_hidden('id', $requerente->id);
+                echo form_hidden('id_facebook', $requerente->id_facebook);
 
                 echo '<div class="form-group">';
                 echo    '<div class="col-lg-offset-3">';

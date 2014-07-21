@@ -104,10 +104,8 @@ class Requerentes extends MY_Controller
             $this->form_validation->set_rules('password2', 'REPETIR SENHA', 'trim|required|min_length[5]');
         }
 
-        if ($this->input->post('pessoa_fisica') == PESSOA_FISICA)
+        if (!$this->input->post('id_facebook'))
             $this->form_validation->set_rules('cpf', 'CPF', 'required|valid_cpf');
-        if ($this->input->post('pessoa_fisica') == PESSOA_JURIDICA)
-            $this->form_validation->set_rules('cnpj', 'CNPJ', 'required|valid_cnpj');
         $this->form_validation->set_rules('email', 'E-MAIL', 'required|valid_email');
 
         if ($this->form_validation->run()==TRUE):
@@ -125,7 +123,7 @@ class Requerentes extends MY_Controller
             generate_charts();
 
             $this->session->set_userdata('requerente_editado','Requerente editado com sucesso!');
-            redirect('requerentes/editar_requerente/'.$this->input->post('id'));
+            redirect('requerimentos');
         endif;
 
         $this->data['requerente'] = $this->requerente_model->get($id);
@@ -222,7 +220,7 @@ class Requerentes extends MY_Controller
         return;
     }
     
-    function get_requerentes_newsletter($id_bairro)
+    function get_requerentes_newsletter_ajax($id_bairro)
     {
         $requerentes = $this->requerente_model->get_requerentes_newsletter_by_bairro($id_bairro);
 

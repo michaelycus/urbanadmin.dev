@@ -134,10 +134,9 @@
                             </div><!-- End .row-fluid  -->
                         <?php echo form_close(); ?>
                         <p class="center">Não possui uma conta? <a href="#" id="register"><strong>Crie uma agora</strong></a></p>
-<!--                        <div class="or center"><strong>or</strong></div>
+                        <div class="or center"><strong>ou</strong></div>
                         <hr class="seperator">
-                        <a href="#" class="btn btn-primary pull-left"><i class="icon16 i-facebook gap-left0"></i> Conectar</a>
-                        <a href="#" class="btn btn-info pull-right"><i class="icon16 i-twitter gap-left0"></i> Conectar</a>-->
+                        <p class="center"><a href="<?= $login_url ?>" class="btn btn-primary"><i class="icon16 i-facebook gap-left0"></i> Acesse pelo Facebook</a></p>
                     </div>
                     <div id="reg">
                         <div class="page-header">

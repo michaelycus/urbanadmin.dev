@@ -63,4 +63,17 @@ class Login_model extends MY_Model
         }
         return false;
     }
+    
+    public function verify_email($email)
+    {
+        $q = $this->db->where('email', $email)
+                      ->limit(1)
+                      ->get('requerentes');
+
+        if ($q->num_rows > 0)
+        {
+            return $q->row();
+        }
+        return false;
+    }
 }

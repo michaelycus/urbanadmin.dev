@@ -6,6 +6,12 @@
     <div class="row">
         <ul class="search-results">
             <li>
+                <a href="#" class="search-string">1.5.0 - 21/07/2014</a>
+                <ul>
+                    <li>Sistema permite acesso pelo Facebook</li>
+                </ul>
+            </li>
+            <li>
                 <a href="#" class="search-string">1.4.1 - 10/07/2014</a>
                 <ul>
                     <li>Testando novos campos de cadastro de requerimento</li>

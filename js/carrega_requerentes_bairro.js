@@ -10,7 +10,7 @@ $(function() {
 
         $('#enviar_para').val('');
         
-        $.getJSON(path + 'requerentes/get_requerentes_newsletter/' + bairro, function(data) {
+        $.getJSON(path + 'requerentes/get_requerentes_newsletter_ajax/' + bairro, function(data) {
             
             var emails = [];
             

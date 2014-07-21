@@ -15,7 +15,77 @@ class Login extends MY_Controller
 
     public function index()
     {
-        if (isset($_SESSION['cpf']) || isset($_SESSION['cnpj']))
+        if (ENVIRONMENT != 'development')
+        {
+            // Carregando facebook
+            $this->load->library('facebook'); // Automatically picks appId and secret from config
+
+            $user = $this->facebook->getUser();
+
+            if ($user) // Se usuário está online
+            {
+                try
+                {
+                    $this->data['user_profile'] = $this->facebook->api('/me');
+
+                    $req = $this->login_model->verify_email($this->data['user_profile']['email']);                
+
+                    if ($req) // Se possui conta no sistema
+                    {
+                        // Checa e atualiza id facebook cadastrado
+                        $this->requerente_model->has_facebook_id($this->data['user_profile']['id'], $req->id);
+
+                        $_SESSION['id_facebook'] = $req->id_facebook;
+                        $_SESSION['nome'] = $req->nome;
+                        $_SESSION['autorizacao'] = $req->autorizacao;
+                        $_SESSION['id_user'] = $req->id;
+                        $_SESSION['id_bairro'] = $req->id_bairro;
+
+                        $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
+
+                        $this->requerente_model->update_last_visit($req->id);
+                    }
+                    else // não possui email cadastrado
+                    {
+                        $data['nome'] = $this->data['user_profile']['name'];
+                        $data['email'] = $this->data['user_profile']['email'];        
+                        $data['id_facebook'] = $this->data['user_profile']['id'];
+                        $data['data_cadastro'] = date('Y-m-d');
+                        $data['autorizacao'] = AUTORIZACAO_OPERADOR;
+                        $data['recebe_emails'] = REQUERENTE_RECEBE_EMAILS;
+                        $data['mora_cidade'] = MORA_NA_CIDADE;
+
+                        $this->requerente_model->insert($data);
+
+                        $this->session->set_userdata('primeiro_acesso','Como este é o seu primeiro acesso, por favor informe alguns dados sobre você!');
+
+                        $_SESSION['nome'] = $this->data['user_profile']['name'];
+                        $_SESSION['id_facebook'] = $this->data['user_profile']['id'];
+                        $_SESSION['autorizacao'] = AUTORIZACAO_OPERADOR;
+                        $_SESSION['id_user'] =  $this->requerente_model->get_last_id();
+
+                        $_SESSION['requerimentos'] = $this->requerimento_model->count_requerimentos_by_situacao(REQUERIMENTO_SITUACAO_EM_ANALISE);
+                    }
+
+                    redirect('login/inicio');                
+
+                } catch (FacebookApiException $e)
+                {
+                    $user = null;
+                }
+            }
+            else
+            {
+                $this->facebook->destroySession();
+            }
+
+            $this->data['login_url'] = $this->facebook->getLoginUrl(array(
+                'redirect_uri' => site_url('login'),
+                'scope' => array("email") // permissions here
+            ));     
+        }           
+        
+        if (isset($_SESSION['cpf']) || isset($_SESSION['cnpj']) || isset($_SESSION['id_facebook']))
         {
             redirect('login/inicio');
         }
@@ -28,16 +98,8 @@ class Login extends MY_Controller
 
         if ($this->form_validation->run() !== false)
         {
-            if ($this->input->post('cpf'))
-            {
-                $res = $this->login_model->verify_user_cpf($this->input->post('cpf'),
-                                                   $this->input->post('password'));
-            }
-            else
-            {
-                $res = $this->login_model->verify_user_cnpj($this->input->post('cnpj'),
-                                                   $this->input->post('password'));
-            }
+            $res = $this->login_model->verify_user_cpf($this->input->post('cpf'),
+                                                       $this->input->post('password'));
 
             if ($res !== false)
             {
@@ -78,6 +140,9 @@ class Login extends MY_Controller
             $this->data['total_requerimentos'] = $this->requerimento_model->count_all();
             $this->data['meus_requerimentos'] = $this->requerimento_model->count_meus_requerimentos($_SESSION['id_user']);
             $this->data['total_requerentes'] = $this->requerente_model->count_requerentes();
+            
+            if ($this->session->userdata('primeiro_acesso'))
+                redirect('requerentes/editar_requerente/'. $_SESSION['id_user']);
 
             $this->load_view('layouts/inicio_operador');
         }
@@ -106,13 +171,11 @@ class Login extends MY_Controller
             }
             $this->data['meses'] = array_reverse($meses);
 
-            $this->data['versao_atual'] = "1.4.1";
+            $this->data['versao_atual'] = "1.5.0";
 
             $json_str = '{"versoes":[
-                    {"versao":"1.4.1", "data":"10/07/2014", "changes":
-                         ["Testando novos campos de cadastro de requerimento",
-                          "Padronizando posicionamento de botões",
-                          "Corrigindo contagem de requerimentos por mês"
+                    {"versao":"1.5.0", "data":"21/07/2014", "changes":
+                         ["Sistema permite acesso pelo Facebook"
                           ]}
                     ]}';
 
@@ -125,6 +188,12 @@ class Login extends MY_Controller
 
     public function logout()
     {
+        $this->load->library('facebook');
+
+        // Logs off session from website
+        $this->facebook->destroySession();
+        // Make sure you destory website session as well.
+        
         session_destroy();
 
         redirect('login/inicio');

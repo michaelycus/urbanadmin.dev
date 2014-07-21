@@ -107,4 +107,18 @@ class Requerente_model extends MY_Model
         $this->db->where('email', $email);
         $this->db->update('requerentes', $data);
     }
+    
+    public function has_facebook_id($id_facebook, $id)
+    {
+        $q = $this->db->where('id_facebook', $id_facebook)
+                      ->limit(1)
+                      ->get('requerentes');
+        
+        if ($q->num_rows == 0)
+        {
+            $data = array('id_facebook' => $id_facebook);
+            $this->update($id, $data);
+        }
+        return false;
+    }
 }

@@ -156,8 +156,21 @@
                         <li class="divider-vertical"></li>
                         <li class="dropdown user">
                             <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
-                                <i class="icon20 i-user"></i>(<?php echo $_SESSION['nome']; ?>)
-                                <span class="more"><i class="icon16 i-arrow-down-2"></i></span>
+                                <?php 
+                                if ($_SESSION['id_facebook'])
+                                {
+                                    $url = 'https://graph.facebook.com/'.$_SESSION['id_facebook'].'/picture?type=square';
+                                    $imageURL = getFacebookImageFromURL($url);
+                                    
+                                    echo '<img src="'.$imageURL.'">';
+                                    echo '<span class="more"><i class="icon16 i-arrow-down-2"></i></span>';
+                                }                                
+                                else
+                                {
+                                    echo '<i class="icon20 i-user"></i>('.$_SESSION['nome'].')';
+                                    echo '<span class="more"><i class="icon16 i-arrow-down-2"></i></span>';
+                                }
+                                ?>
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <?php

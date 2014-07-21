@@ -204,7 +204,7 @@
                 echo    '<label for="notificar" class="col-lg-3 control-label">Notificação</label>';
                 echo    '<div class="col-lg-9">';
                 echo        form_checkbox(array('name' => 'notificar','id' => 'notificar',
-                            'class' => 'form-control', 'value' => 'notificar', 'checked' => $requerimento->notificar==1 ? TRUE: FALSE));
+                            'class' => 'form-control', 'value' => 'notificar', 'checked' => TRUE));
                 echo    ' Receber notificações sobre avanço do requerimento.';
                 echo    '</div>';
                 echo '</div>';

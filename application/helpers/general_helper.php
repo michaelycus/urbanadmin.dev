@@ -61,4 +61,16 @@ if (!function_exists('generate_key'))
        return $chave;
     }
 }
+
+if (!function_exists('getFacebookImageFromURL'))
+{
+    function getFacebookImageFromURL($url)
+    {
+        $headers = get_headers($url, 1);
+        if (isset($headers['Location']))
+        {
+            return $headers['Location'];
+        }
+    }
+}
 ?>

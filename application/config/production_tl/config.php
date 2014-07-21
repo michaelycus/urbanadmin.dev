@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://www.timelinguistico.com.br/urbanadmin/';
+$config['base_url']	= 'http://www.ranzi.com.br/teste/';
 
 /*
 |--------------------------------------------------------------------------
