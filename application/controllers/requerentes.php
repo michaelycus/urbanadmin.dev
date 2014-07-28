@@ -200,7 +200,7 @@ class Requerentes extends MY_Controller
 //        redirect('requerentes/visualizar/'.$this->input->post('id'));
     }
     
-    function get_requerentes_ajax($id_bairro)
+    public function get_requerentes_ajax($id_bairro)
     {
         $requerentes = $this->requerente_model->get_requerentes_by_bairro($id_bairro);
 
@@ -220,7 +220,7 @@ class Requerentes extends MY_Controller
         return;
     }
     
-    function get_requerentes_newsletter_ajax($id_bairro)
+    public function get_requerentes_newsletter_ajax($id_bairro)
     {
         $requerentes = $this->requerente_model->get_requerentes_newsletter_by_bairro($id_bairro);
 

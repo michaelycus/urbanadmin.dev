@@ -34,17 +34,17 @@ $(function() {
                     fill: "#dcbf00"}
               },{
                 min: 6,
-                max: 9,
+                max: 10,
                 attrs: {
                     fill: "#d4b400"}
               },{
-                min: 9,
-                max: 12,
+                min: 10,
+                max: 13,
                 attrs: {
                     fill: "#ccaa00"}
               },{
-                min: 12,
-                max: 15,
+                min: 13,
+                max: 16,
                 attrs: {
                     fill: "#c4a000"}
               },]
@@ -61,10 +61,10 @@ areas: {                    "alto_do_parque":{
                             }
                         }
                     },                    "americano":{
-                        value: "6",
-                        text: { content:  6 , attrs: {fill:"#222"} },
+                        value: "5",
+                        text: { content:  5 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerentes: 6"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Requerentes: 5"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 2 ).change();
@@ -111,10 +111,10 @@ areas: {                    "alto_do_parque":{
                             }
                         }
                     },                    "centro":{
-                        value: "14",
-                        text: { content:  14 , attrs: {fill:"#222"} },
+                        value: "15",
+                        text: { content:  15 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerentes: 14"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Requerentes: 15"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 7 ).change();
@@ -141,10 +141,10 @@ areas: {                    "alto_do_parque":{
                             }
                         }
                     },                    "florestal":{
-                        value: "6",
-                        text: { content:  6 , attrs: {fill:"#222"} },
+                        value: "7",
+                        text: { content:  7 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Requerentes: 6"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Florestal </span><br />Requerentes: 7"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 11 ).change();
@@ -161,30 +161,30 @@ areas: {                    "alto_do_parque":{
                             }
                         }
                     },                    "imigrante":{
-                        value: "2",
-                        text: { content:  2 , attrs: {fill:"#222"} },
+                        value: "1",
+                        text: { content:  1 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerentes: 2"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Imigrante </span><br />Requerentes: 1"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 14 ).change();
                             }
                         }
                     },                    "jardim_do_cedro":{
-                        value: "8",
-                        text: { content:  8 , attrs: {fill:"#222"} },
+                        value: "9",
+                        text: { content:  9 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerentes: 8"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Requerentes: 9"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 15 ).change();
                             }
                         }
                     },                    "moinhos":{
-                        value: "12",
-                        text: { content:  12 , attrs: {fill:"#222"} },
+                        value: "15",
+                        text: { content:  15 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerentes: 12"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos </span><br />Requerentes: 15"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 16 ).change();
@@ -201,10 +201,10 @@ areas: {                    "alto_do_parque":{
                             }
                         }
                     },                    "montanha":{
-                        value: "9",
-                        text: { content:  9 , attrs: {fill:"#222"} },
+                        value: "12",
+                        text: { content:  12 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Montanha </span><br />Requerentes: 9"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Montanha </span><br />Requerentes: 12"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 18 ).change();
@@ -221,10 +221,10 @@ areas: {                    "alto_do_parque":{
                             }
                         }
                     },                    "olarias":{
-                        value: "4",
-                        text: { content:  4 , attrs: {fill:"#222"} },
+                        value: "5",
+                        text: { content:  5 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Olarias </span><br />Requerentes: 4"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Olarias </span><br />Requerentes: 5"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 21 ).change();
@@ -261,10 +261,10 @@ areas: {                    "alto_do_parque":{
                             }
                         }
                     },                    "universitario":{
-                        value: "12",
-                        text: { content:  12 , attrs: {fill:"#222"} },
+                        value: "14",
+                        text: { content:  14 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Requerentes: 12"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Universitário </span><br />Requerentes: 14"},
                         eventHandlers : {
                             click : function() {
                                 $('#id_bairro').val( 27 ).change();

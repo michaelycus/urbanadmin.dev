@@ -50,24 +50,34 @@ $(function() {
               },]
     }
 },
-areas: {                    "campestre":{
+areas: {                    "americano":{
                         value: "1",
                         text: { content:  1 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Campestre </span><br />Newsletters: 1"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Americano </span><br />Newsletters: 1"},
                         eventHandlers : {
                             click : function() {
-                                $('#id_bairro').val( 4 ).change();
+                                $('#id_bairro').val( 2 ).change();
                             }
                         }
-                    },                    "conservas":{
+                    },                    "bom_pastor":{
                         value: "1",
                         text: { content:  1 , attrs: {fill:"#222"} },
                         href: "#",
-                        tooltip: {content: "<span style=\"font-weight:bold;\">Conservas </span><br />Newsletters: 1"},
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Bom Pastor </span><br />Newsletters: 1"},
                         eventHandlers : {
                             click : function() {
-                                $('#id_bairro').val( 8 ).change();
+                                $('#id_bairro').val( 3 ).change();
+                            }
+                        }
+                    },                    "centro":{
+                        value: "1",
+                        text: { content:  1 , attrs: {fill:"#222"} },
+                        href: "#",
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Centro </span><br />Newsletters: 1"},
+                        eventHandlers : {
+                            click : function() {
+                                $('#id_bairro').val( 7 ).change();
                             }
                         }
                     },}

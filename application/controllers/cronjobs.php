@@ -53,7 +53,7 @@ class Cronjobs extends CI_Controller {
         }
     }
     
-    function get_mail()
+    private function get_mail()
     {
         $mail = new PHPMailer();
         $mail->IsSMTP(); //Definimos que usaremos o protocolo SMTP para envio.

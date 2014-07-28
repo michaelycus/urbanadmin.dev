@@ -174,8 +174,9 @@ class Login extends MY_Controller
             $this->data['versao_atual'] = "1.5.0";
 
             $json_str = '{"versoes":[
-                    {"versao":"1.5.0", "data":"21/07/2014", "changes":
-                         ["Sistema permite acesso pelo Facebook"
+                    {"versao":"1.5.1", "data":"23/07/2014", "changes":
+                         ["Novo cadastro de requerimento",
+                          "Possibilidade de enviar mensagens de notificação manualmente"
                           ]}
                     ]}';
 

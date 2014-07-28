@@ -14,6 +14,9 @@ class Requerimento_model extends MY_Model
             'rules' => 'required|valid_date',
         )
     );
+    
+    protected $soft_delete = TRUE;
+    protected $soft_delete_key = 'requerimento_deleted';
 
     function __construct()
     {

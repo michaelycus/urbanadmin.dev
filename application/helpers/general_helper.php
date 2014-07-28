@@ -62,6 +62,44 @@ if (!function_exists('generate_key'))
     }
 }
 
+if (!function_exists('get_notification_icon'))
+{
+    function get_notification_icon($status) {
+       switch ($status)
+        {
+            case REQUERIMENTO_RETORNO_NAO_NOTIFICADO:
+                $status_retorno = '<span class="icon yellow tipR" title="Solicitante ainda não recebeu notificação de retorno"><i class="icon16 i-bubble-10"></i></span>';
+                break;
+
+            case REQUERIMENTO_RETORNO_NOTIFICADO:
+                $status_retorno = '<span class="icon orange tipR" title="Solicitante recebeu notificação de retorno"><i class="icon16 i-bubble-reply"></i></span>';
+                break;
+
+            case REQUERIMENTO_RETORNO_DEMORADO:
+                $status_retorno = '<span class="icon blue tipR" title="Solicitante está demorando pra responder notificação de retorno"><i class="icon16 i-history-2"></i></span>';
+                break;
+
+            case REQUERIMENTO_RETORNO_SERVICO_EFETIVADO:
+                $status_retorno = '<span class="icon green tipR" title="Conclusão do requerimento confirmada pelo solicitante"><i class="icon16 i-checkmark-3"></i></span>';
+                break;
+
+            case REQUERIMENTO_RETORNO_SERVICO_NAO_EFETIVADO:
+                $status_retorno = '<span class="icon red tipR" title="Solicitação não foi realizada"><i class="icon16 i-close-3"></i></span>';
+                break;
+
+            case REQUERIMENTO_RETORNO_REITERADO:
+                $status_retorno = '<span class="icon orange tipR" title="Requerimento foi reiterado"><i class="icon16 i-rotate"></i></span>';
+                break;
+            
+            default:
+                $status_retorno = '<span class="icon yellow tipR" title=""><i class="icon16 i-bubble-10"></i></span>';
+                break;
+        }
+        
+       return $status_retorno;
+    }
+}
+
 if (!function_exists('getFacebookImageFromURL'))
 {
     function getFacebookImageFromURL($url)

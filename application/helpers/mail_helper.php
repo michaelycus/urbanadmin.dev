@@ -243,6 +243,50 @@ if (!function_exists('send_newsletter')) {
     }
 }
 
+if (!function_exists('enviar_notificacao_por_email')) {
+    function enviar_notificacao_por_email ($requerimento, $requerente)
+    {
+        $ci =& get_instance();
+        
+        $ci->load->library('MY_PHPMailer');     
+        
+        $ci->load->model('requerimento_model');
+
+        $mail = get_mail();
+
+        $mail->AddAddress($requerente->email, $requerente->nome);
+
+        $mail->Subject = "Informe o andamento do seu requerimento";
+
+        $mail->Body = MESSAGE_HEADER;
+        $mail->Body .= '<div style="font-weight: bold; font-size: 18px; line-height: 24px; color: #D03C0F">
+        Informe o andamento do seu requerimento!
+        </div><br>';
+        
+        $date1 = new DateTime(date('Y-m-d'));
+        $date2 = new DateTime($requerimento->data_requerimento);
+        $interval = $date1->diff($date2);
+        
+        $mail->Body .= "Olá $requerente->nome,<br><br>";        
+
+        $mail->Body .= "Já fazem ". $interval->days ." dias desde que você cadastrou o seguinte requerimento:<br>";
+        $mail->Body .= "<span style='font-family: Andale Mono, Courier, monospace; color: #666;'>$requerimento->descricao</span><br><br>";
+
+        $mail->Body .= "Para melhorarmos nosso atendimento, gostaríamos de saber sua avaliação sobre o serviço prestado pela prefeitura.<br>";
+        $mail->Body .= "Por favor, clique " . anchor('requerimentos/informar_resultado/'.$requerimento->code, 'aqui', 'style="color:#2469A0; font-weight:bold"') . " para informar se o seu pedido foi atendido. Não leva nem um minuto!<br><br>";
+
+        $mail->Body .= "Atenciosamente,<br>";
+        $mail->Body .= "Gabinete do Vereador Ranzi<br><br>";
+
+        $mail->Body .= MESSAGE_ENDING;
+
+        $mail->Send();
+
+        $data['status_retorno'] = REQUERIMENTO_RETORNO_NOTIFICADO;
+        $ci->requerimento_model->update($requerimento->id,$data);
+    }
+}
+
 if (!function_exists('send_message')) {
     function send_message ($email_to, $message)
     {

@@ -8,12 +8,12 @@ class Upload extends CI_Controller
         $this->load->helper(array('form', 'url'));
     }
 
-    function index()
+    public function index()
     {
         $this->load->view('upload_form', array('error' => ' '));
     }
 
-    function do_upload()
+    public function do_upload()
     {
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'gif|jpg|png';

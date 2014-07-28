@@ -1,22 +1,22 @@
 $(function() {
     var data = {"0": { "areas": {"": {"text": {"content": ""}},"alto_do_parque": {"text": {"content": ""}},"americano": {"text": {"content": ""}},"bom_pastor": {"text": {"content": ""}},"campestre": {"text": {"content": ""}},"carneiros": {"text": {"content": ""}},"centenario": {"text": {"content": ""}},"centro": {"text": {"content": ""}},"conservas": {"text": {"content": ""}},"conventos": {"text": {"content": ""}},"floresta": {"text": {"content": ""}},"florestal": {"text": {"content": ""}},"hidraulica": {"text": {"content": ""}},"igrejinha": {"text": {"content": ""}},"imigrante": {"text": {"content": ""}},"jardim_do_cedro": {"text": {"content": ""}},"moinhos": {"text": {"content": ""}},"moinhos_dagua": {"text": {"content": ""}},"montanha": {"text": {"content": ""}},"morro_vinte_cinco": {"text": {"content": ""}},"nacoes": {"text": {"content": ""}},"olarias": {"text": {"content": ""}},"planalto": {"text": {"content": ""}},"santo_andre": {"text": {"content": ""}},"santo_antonio": {"text": {"content": ""}},"sao_bento": {"text": {"content": ""}},"sao_cristovao": {"text": {"content": ""}},"universitario": {"text": {"content": ""}},}},"1": { "areas": {"alto_do_parque": {
                     "value": 8,
-                    "attrs": { fill: "#6e9bcb"},
+                    "attrs": { fill: "#6e9bcc"},
                     "text": { "content":  "8" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 8"
                     }},"americano": {
-                    "value": 3,
+                    "value": 4,
                     "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "3" , attrs: {fill:"#222"} },
+                    "text": { "content":  "4" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 3"
+                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 4"
                     }},"bom_pastor": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "value": 4,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "4" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 2"
+                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 4"
                     }},"campestre": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -24,35 +24,29 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 1"
                     }},"carneiros": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 1"
-                    }},"centenario": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 1"
-                    }},"centro": {
-                    "value": 5,
-                    "attrs": { fill: "#6f9ccc"},
-                    "text": { "content":  "5" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 5"
-                    }},"conventos": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 2"
-                    }},"florestal": {
-                    "value": 9,
-                    "attrs": { fill: "#6d9acb"},
-                    "text": { "content":  "9" , attrs: {fill:"#222"} },
+                            "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 2"
+                    }},"centro": {
+                    "value": 7,
+                    "attrs": { fill: "#6f9ccc"},
+                    "text": { "content":  "7" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 9"
+                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 7"
+                    }},"conventos": {
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 3"
+                    }},"florestal": {
+                    "value": 18,
+                    "attrs": { fill: "#6b97c8"},
+                    "text": { "content":  "18" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 18"
                     }},"hidraulica": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
@@ -66,11 +60,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 4"
                     }},"moinhos": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 2"
+                            "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 3"
                     }},"moinhos_dagua": {
                     "value": 3,
                     "attrs": { fill: "#709dcd"},
@@ -83,27 +77,45 @@ $(function() {
                     "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 2"
-                    }},"olarias": {
-                    "value": 4,
-                    "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 4"
-                    }},"santo_antonio": {
+                    }},"nacoes": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Santo Antônio</span><br />Requerimentos : 1"
-                    }},"sao_cristovao": {
-                    "value": 10,
-                    "attrs": { fill: "#6d9aca"},
-                    "text": { "content":  "10" , attrs: {fill:"#222"} },
+                            "content": "<span style=\"font-weight:bold;\">Nações</span><br />Requerimentos : 1"
+                    }},"olarias": {
+                    "value": 5,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 10"
+                            "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 5"
+                    }},"planalto": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 1"
+                    }},"santo_andre": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Santo André</span><br />Requerimentos : 1"
+                    }},"santo_antonio": {
+                    "value": 2,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Santo Antônio</span><br />Requerimentos : 2"
+                    }},"sao_cristovao": {
+                    "value": 13,
+                    "attrs": { fill: "#6c99ca"},
+                    "text": { "content":  "13" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 13"
                     }},"universitario": {
                     "value": 8,
-                    "attrs": { fill: "#6e9bcb"},
+                    "attrs": { fill: "#6e9bcc"},
                     "text": { "content":  "8" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 8"
@@ -133,7 +145,7 @@ $(function() {
                             "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 2"
                     }},"centro": {
                     "value": 9,
-                    "attrs": { fill: "#6d9acb"},
+                    "attrs": { fill: "#6e9bcb"},
                     "text": { "content":  "9" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 9"
@@ -150,11 +162,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 3"
                     }},"florestal": {
-                    "value": 1,
+                    "value": 2,
                     "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 2"
                     }},"hidraulica": {
                     "value": 3,
                     "attrs": { fill: "#709dcd"},
@@ -162,35 +174,35 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Hidráulica</span><br />Requerimentos : 3"
                     }},"jardim_do_cedro": {
-                    "value": 5,
+                    "value": 6,
                     "attrs": { fill: "#6f9ccc"},
+                    "text": { "content":  "6" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 6"
+                    }},"moinhos_dagua": {
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 3"
+                    }},"montanha": {
+                    "value": 5,
+                    "attrs": { fill: "#709dcd"},
                     "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 5"
-                    }},"moinhos_dagua": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 2"
-                    }},"montanha": {
-                    "value": 4,
-                    "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 4"
+                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 5"
                     }},"nacoes": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Nações</span><br />Requerimentos : 2"
+                            "content": "<span style=\"font-weight:bold;\">Nações</span><br />Requerimentos : 3"
                     }},"planalto": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 3"
                     }},"sao_bento": {
                     "value": 3,
                     "attrs": { fill: "#709dcd"},
@@ -199,7 +211,7 @@ $(function() {
                             "content": "<span style=\"font-weight:bold;\">São Bento</span><br />Requerimentos : 3"
                     }},"sao_cristovao": {
                     "value": 7,
-                    "attrs": { fill: "#6e9bcc"},
+                    "attrs": { fill: "#6f9ccc"},
                     "text": { "content":  "7" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 7"
@@ -221,6 +233,12 @@ $(function() {
                     "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 2"
+                    }},"centenario": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 1"
                     }},"centro": {
                     "value": 4,
                     "attrs": { fill: "#709dcd"},
@@ -234,11 +252,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 3"
                     }},"florestal": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 3"
                     }},"imigrante": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -246,11 +264,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Imigrante</span><br />Requerimentos : 1"
                     }},"jardim_do_cedro": {
-                    "value": 3,
+                    "value": 5,
                     "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "3" , attrs: {fill:"#222"} },
+                    "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 3"
+                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 5"
                     }},"moinhos": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -264,29 +282,41 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 1"
                     }},"montanha": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 2"
-                    }},"sao_cristovao": {
-                    "value": 4,
+                    "value": 3,
                     "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 4"
-                    }},"universitario": {
+                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 3"
+                    }},"olarias": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 1"
+                    }},"sao_cristovao": {
                     "value": 5,
-                    "attrs": { fill: "#6f9ccc"},
+                    "attrs": { fill: "#709dcd"},
                     "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 5"
-                    }}}},"4": { "areas": {"jardim_do_cedro": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 5"
+                    }},"universitario": {
+                    "value": 7,
+                    "attrs": { fill: "#6f9ccc"},
+                    "text": { "content":  "7" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 2"
+                            "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 7"
+                    }}}},"4": { "areas": {"conventos": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 1"
+                    }},"jardim_do_cedro": {
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 3"
                     }},"moinhos": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -305,7 +335,13 @@ $(function() {
                     "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 2"
-                    }}}},"5": { "areas": {"centro": {
+                    }}}},"5": { "areas": {"campestre": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 1"
+                    }},"centro": {
                     "value": 3,
                     "attrs": { fill: "#709dcd"},
                     "text": { "content":  "3" , attrs: {fill:"#222"} },
@@ -329,6 +365,12 @@ $(function() {
                     "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 3"
+                    }},"campestre": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 1"
                     }},"centro": {
                     "value": 3,
                     "attrs": { fill: "#709dcd"},
@@ -336,11 +378,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 3"
                     }},"florestal": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 3"
                     }},"jardim_do_cedro": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
@@ -360,17 +402,17 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 1"
                     }},"sao_cristovao": {
-                    "value": 6,
-                    "attrs": { fill: "#6f9ccc"},
-                    "text": { "content":  "6" , attrs: {fill:"#222"} },
+                    "value": 8,
+                    "attrs": { fill: "#6e9bcc"},
+                    "text": { "content":  "8" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 6"
+                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 8"
                     }},"universitario": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 3"
                     }}}},"7": { "areas": {"alto_do_parque": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -396,17 +438,17 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 3"
                     }},"montanha": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 1"
-                    }},"olarias": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 2"
+                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 2"
+                    }},"olarias": {
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 3"
                     }},"planalto": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -427,7 +469,7 @@ $(function() {
                             "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 2"
                     }}}},"8": { "areas": {"alto_do_parque": {
                     "value": 5,
-                    "attrs": { fill: "#6f9ccc"},
+                    "attrs": { fill: "#709dcd"},
                     "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 5"
@@ -438,11 +480,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 1"
                     }},"bom_pastor": {
-                    "value": 7,
-                    "attrs": { fill: "#6e9bcc"},
-                    "text": { "content":  "7" , attrs: {fill:"#222"} },
+                    "value": 9,
+                    "attrs": { fill: "#6e9bcb"},
+                    "text": { "content":  "9" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 7"
+                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 9"
                     }},"campestre": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -456,11 +498,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 2"
                     }},"centro": {
-                    "value": 4,
+                    "value": 5,
                     "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                    "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 4"
+                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 5"
                     }},"conservas": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -474,14 +516,14 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 6"
                     }},"florestal": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 2"
+                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 3"
                     }},"hidraulica": {
                     "value": 5,
-                    "attrs": { fill: "#6f9ccc"},
+                    "attrs": { fill: "#709dcd"},
                     "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Hidráulica</span><br />Requerimentos : 5"
@@ -492,11 +534,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 2"
                     }},"moinhos": {
-                    "value": 4,
+                    "value": 5,
                     "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                    "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 4"
+                            "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 5"
                     }},"moinhos_dagua": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -523,13 +565,13 @@ $(function() {
                             "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 1"
                     }},"sao_cristovao": {
                     "value": 17,
-                    "attrs": { fill: "#6a96c8"},
+                    "attrs": { fill: "#6b98c9"},
                     "text": { "content":  "17" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 17"
                     }},"universitario": {
                     "value": 11,
-                    "attrs": { fill: "#6c99ca"},
+                    "attrs": { fill: "#6d9acb"},
                     "text": { "content":  "11" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 11"
@@ -570,11 +612,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Imigrante</span><br />Requerimentos : 1"
                     }},"jardim_do_cedro": {
-                    "value": 1,
+                    "value": 2,
                     "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 2"
                     }},"moinhos": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -612,14 +654,14 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 1"
                     }},"centro": {
-                    "value": 1,
+                    "value": 2,
                     "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 2"
                     }},"conservas": {
                     "value": 7,
-                    "attrs": { fill: "#6e9bcc"},
+                    "attrs": { fill: "#6f9ccc"},
                     "text": { "content":  "7" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 7"
@@ -660,11 +702,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 1"
                     }},"montanha": {
-                    "value": 6,
-                    "attrs": { fill: "#6f9ccc"},
-                    "text": { "content":  "6" , attrs: {fill:"#222"} },
+                    "value": 8,
+                    "attrs": { fill: "#6e9bcc"},
+                    "text": { "content":  "8" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 6"
+                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 8"
                     }},"nacoes": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -696,12 +738,18 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 3"
                     }},"universitario": {
+                    "value": 2,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 2"
+                    }}}},"11": { "areas": {"bom_pastor": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 1"
-                    }}}},"11": { "areas": {"campestre": {
+                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 1"
+                    }},"campestre": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
@@ -743,6 +791,12 @@ $(function() {
                     "text": { "content":  "4" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 4"
+                    }},"santo_andre": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Santo André</span><br />Requerimentos : 1"
                     }},"sao_cristovao": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -762,23 +816,23 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 2"
                     }},"centenario": {
-                    "value": 1,
+                    "value": 2,
                     "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 2"
                     }},"centro": {
-                    "value": 10,
-                    "attrs": { fill: "#6d9aca"},
-                    "text": { "content":  "10" , attrs: {fill:"#222"} },
+                    "value": 13,
+                    "attrs": { fill: "#6c99ca"},
+                    "text": { "content":  "13" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 10"
+                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 13"
                     }},"florestal": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "value": 6,
+                    "attrs": { fill: "#6f9ccc"},
+                    "text": { "content":  "6" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 6"
                     }},"hidraulica": {
                     "value": 6,
                     "attrs": { fill: "#6f9ccc"},
@@ -786,17 +840,29 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Hidráulica</span><br />Requerimentos : 6"
                     }},"moinhos": {
-                    "value": 6,
-                    "attrs": { fill: "#6f9ccc"},
-                    "text": { "content":  "6" , attrs: {fill:"#222"} },
+                    "value": 10,
+                    "attrs": { fill: "#6e9bcb"},
+                    "text": { "content":  "10" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 6"
-                    }},"olarias": {
-                    "value": 3,
+                            "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 10"
+                    }},"moinhos_dagua": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 1"
+                    }},"montanha": {
+                    "value": 5,
                     "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "3" , attrs: {fill:"#222"} },
+                    "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 3"
+                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 5"
+                    }},"olarias": {
+                    "value": 4,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 4"
                     }},"planalto": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
@@ -804,35 +870,23 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 2"
                     }},"sao_cristovao": {
-                    "value": 4,
-                    "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                    "value": 7,
+                    "attrs": { fill: "#6f9ccc"},
+                    "text": { "content":  "7" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 4"
+                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 7"
                     }},"universitario": {
-                    "value": 1,
+                    "value": 2,
                     "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 1"
-                    }}}},"13": { "areas": {"bom_pastor": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Bom Pastor</span><br />Requerimentos : 1"
-                    }},"centro": {
+                            "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 2"
+                    }}}},"13": { "areas": {"centro": {
                     "value": 4,
                     "attrs": { fill: "#709dcd"},
                     "text": { "content":  "4" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 4"
-                    }},"conservas": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 1"
                     }},"montanha": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -846,11 +900,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Santo André</span><br />Requerimentos : 1"
                     }},"sao_cristovao": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "value": 4,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "4" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 2"
+                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 4"
                     }}}},"14": { "areas": {"alto_do_parque": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
@@ -858,11 +912,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 2"
                     }},"campestre": {
-                    "value": 1,
+                    "value": 2,
                     "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 2"
                     }},"carneiros": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
@@ -883,7 +937,7 @@ $(function() {
                             "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 1"
                     }},"conventos": {
                     "value": 12,
-                    "attrs": { fill: "#6c99ca"},
+                    "attrs": { fill: "#6d9aca"},
                     "text": { "content":  "12" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 12"
@@ -894,11 +948,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Floresta</span><br />Requerimentos : 1"
                     }},"igrejinha": {
-                    "value": 1,
+                    "value": 2,
                     "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Igrejinha</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Igrejinha</span><br />Requerimentos : 2"
                     }},"imigrante": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
@@ -906,11 +960,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Imigrante</span><br />Requerimentos : 2"
                     }},"jardim_do_cedro": {
-                    "value": 6,
-                    "attrs": { fill: "#6f9ccc"},
-                    "text": { "content":  "6" , attrs: {fill:"#222"} },
+                    "value": 10,
+                    "attrs": { fill: "#6e9bcb"},
+                    "text": { "content":  "10" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 6"
+                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 10"
                     }},"moinhos": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -923,6 +977,12 @@ $(function() {
                     "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 2"
+                    }},"nacoes": {
+                    "value": 2,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Nações</span><br />Requerimentos : 2"
                     }},"olarias": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -930,11 +990,23 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 1"
                     }},"planalto": {
-                    "value": 4,
+                    "value": 5,
                     "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                    "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 4"
+                            "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 5"
+                    }},"sao_bento": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">São Bento</span><br />Requerimentos : 1"
+                    }},"sao_cristovao": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 1"
                     }},"universitario": {
                     "value": 6,
                     "attrs": { fill: "#6f9ccc"},
@@ -948,11 +1020,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 2"
                     }},"americano": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 3"
                     }},"bom_pastor": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
@@ -965,12 +1037,18 @@ $(function() {
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 1"
-                    }},"centro": {
-                    "value": 6,
-                    "attrs": { fill: "#6f9ccc"},
-                    "text": { "content":  "6" , attrs: {fill:"#222"} },
+                    }},"centenario": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 6"
+                            "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 1"
+                    }},"centro": {
+                    "value": 7,
+                    "attrs": { fill: "#6f9ccc"},
+                    "text": { "content":  "7" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 7"
                     }},"conservas": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -990,11 +1068,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Floresta</span><br />Requerimentos : 1"
                     }},"florestal": {
-                    "value": 1,
+                    "value": 2,
                     "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 2"
                     }},"hidraulica": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
@@ -1008,11 +1086,17 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Igrejinha</span><br />Requerimentos : 1"
                     }},"jardim_do_cedro": {
+                    "value": 2,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 2"
+                    }},"moinhos": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 1"
                     }},"moinhos_dagua": {
                     "value": 4,
                     "attrs": { fill: "#709dcd"},
@@ -1020,29 +1104,35 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 4"
                     }},"montanha": {
-                    "value": 2,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "value": 4,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "4" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 2"
+                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 4"
                     }},"olarias": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 2"
-                    }},"sao_bento": {
+                    }},"santo_andre": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">São Bento</span><br />Requerimentos : 1"
-                    }},"sao_cristovao": {
-                    "value": 4,
-                    "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                            "content": "<span style=\"font-weight:bold;\">Santo André</span><br />Requerimentos : 1"
+                    }},"sao_bento": {
+                    "value": 2,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 4"
+                            "content": "<span style=\"font-weight:bold;\">São Bento</span><br />Requerimentos : 2"
+                    }},"sao_cristovao": {
+                    "value": 6,
+                    "attrs": { fill: "#6f9ccc"},
+                    "text": { "content":  "6" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 6"
                     }},"universitario": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -1074,11 +1164,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 2"
                     }},"centro": {
-                    "value": 5,
+                    "value": 6,
                     "attrs": { fill: "#6f9ccc"},
-                    "text": { "content":  "5" , attrs: {fill:"#222"} },
+                    "text": { "content":  "6" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 5"
+                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 6"
                     }},"conservas": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -1091,18 +1181,36 @@ $(function() {
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 1"
+                    }},"hidraulica": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Hidráulica</span><br />Requerimentos : 1"
                     }},"imigrante": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Imigrante</span><br />Requerimentos : 1"
-                    }},"planalto": {
+                    }},"jardim_do_cedro": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 1"
+                    }},"olarias": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Olarias</span><br />Requerimentos : 1"
+                    }},"planalto": {
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 3"
                     }},"sao_bento": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -1110,11 +1218,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">São Bento</span><br />Requerimentos : 1"
                     }},"sao_cristovao": {
-                    "value": 8,
+                    "value": 10,
                     "attrs": { fill: "#6e9bcb"},
-                    "text": { "content":  "8" , attrs: {fill:"#222"} },
+                    "text": { "content":  "10" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 8"
+                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 10"
                     }},"universitario": {
                     "value": 4,
                     "attrs": { fill: "#709dcd"},
@@ -1133,6 +1241,18 @@ $(function() {
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 1"
+                    }},"conservas": {
+                    "value": 3,
+                    "attrs": { fill: "#709dcd"},
+                    "text": { "content":  "3" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 3"
+                    }},"conventos": {
+                    "value": 2,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 2"
                     }},"florestal": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -1182,11 +1302,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 2"
                     }},"centenario": {
-                    "value": 1,
+                    "value": 2,
                     "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 2"
                     }},"conservas": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -1223,18 +1343,24 @@ $(function() {
                     "text": { "content":  "3" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 3"
+                    }},"planalto": {
+                    "value": 2,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Planalto</span><br />Requerimentos : 2"
                     }},"universitario": {
-                    "value": 4,
-                    "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                    "value": 7,
+                    "attrs": { fill: "#6f9ccc"},
+                    "text": { "content":  "7" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 4"
+                            "content": "<span style=\"font-weight:bold;\">Universitário</span><br />Requerimentos : 7"
                     }}}},"19": { "areas": {"centro": {
-                    "value": 38,
-                    "attrs": { fill: "#608cbf"},
-                    "text": { "content":  "38" , attrs: {fill:"#222"} },
+                    "value": 48,
+                    "attrs": { fill: "#5f8bbe"},
+                    "text": { "content":  "48" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 38"
+                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 48"
                     }},"conventos": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -1271,24 +1397,54 @@ $(function() {
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Alto do Parque</span><br />Requerimentos : 1"
-                    }},"centro": {
-                    "value": 8,
-                    "attrs": { fill: "#6e9bcb"},
-                    "text": { "content":  "8" , attrs: {fill:"#222"} },
+                    }},"americano": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 8"
+                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 1"
+                    }},"centro": {
+                    "value": 17,
+                    "attrs": { fill: "#6b98c9"},
+                    "text": { "content":  "17" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 17"
                     }},"conservas": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 1"
+                    }},"floresta": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Floresta</span><br />Requerimentos : 1"
+                    }},"hidraulica": {
+                    "value": 2,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Hidráulica</span><br />Requerimentos : 2"
                     }},"imigrante": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Imigrante</span><br />Requerimentos : 1"
+                    }},"moinhos_dagua": {
+                    "value": 2,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "2" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 2"
+                    }},"montanha": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 1"
                     }},"sao_cristovao": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -1325,6 +1481,12 @@ $(function() {
                     "text": { "content":  "1" , attrs: {fill:"#222"} },
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Campestre</span><br />Requerimentos : 1"
+                    }},"carneiros": {
+                    "value": 1,
+                    "attrs": { fill: "#719ece"},
+                    "text": { "content":  "1" , attrs: {fill:"#222"} },
+                    "tooltip": {
+                            "content": "<span style=\"font-weight:bold;\">Carneiros</span><br />Requerimentos : 1"
                     }},"centenario": {
                     "value": 4,
                     "attrs": { fill: "#709dcd"},
@@ -1332,11 +1494,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Centenário</span><br />Requerimentos : 4"
                     }},"centro": {
-                    "value": 73,
-                    "attrs": { fill: "#507cb1"},
-                    "text": { "content":  "73" , attrs: {fill:"#222"} },
+                    "value": 80,
+                    "attrs": { fill: "#537fb3"},
+                    "text": { "content":  "80" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 73"
+                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 80"
                     }},"conservas": {
                     "value": 3,
                     "attrs": { fill: "#709dcd"},
@@ -1344,11 +1506,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Conservas</span><br />Requerimentos : 3"
                     }},"conventos": {
-                    "value": 4,
-                    "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                    "value": 6,
+                    "attrs": { fill: "#6f9ccc"},
+                    "text": { "content":  "6" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 4"
+                            "content": "<span style=\"font-weight:bold;\">Conventos</span><br />Requerimentos : 6"
                     }},"floresta": {
                     "value": 1,
                     "attrs": { fill: "#719ece"},
@@ -1362,11 +1524,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Florestal</span><br />Requerimentos : 4"
                     }},"hidraulica": {
-                    "value": 4,
+                    "value": 5,
                     "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                    "text": { "content":  "5" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Hidráulica</span><br />Requerimentos : 4"
+                            "content": "<span style=\"font-weight:bold;\">Hidráulica</span><br />Requerimentos : 5"
                     }},"igrejinha": {
                     "value": 2,
                     "attrs": { fill: "#719ece"},
@@ -1380,17 +1542,17 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Imigrante</span><br />Requerimentos : 1"
                     }},"jardim_do_cedro": {
-                    "value": 5,
+                    "value": 6,
                     "attrs": { fill: "#6f9ccc"},
-                    "text": { "content":  "5" , attrs: {fill:"#222"} },
+                    "text": { "content":  "6" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 5"
+                            "content": "<span style=\"font-weight:bold;\">Jardim do Cedro</span><br />Requerimentos : 6"
                     }},"moinhos": {
-                    "value": 4,
-                    "attrs": { fill: "#709dcd"},
-                    "text": { "content":  "4" , attrs: {fill:"#222"} },
+                    "value": 8,
+                    "attrs": { fill: "#6e9bcc"},
+                    "text": { "content":  "8" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 4"
+                            "content": "<span style=\"font-weight:bold;\">Moinhos</span><br />Requerimentos : 8"
                     }},"moinhos_dagua": {
                     "value": 3,
                     "attrs": { fill: "#709dcd"},
@@ -1398,11 +1560,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">Moinhos D' Água</span><br />Requerimentos : 3"
                     }},"montanha": {
-                    "value": 5,
+                    "value": 7,
                     "attrs": { fill: "#6f9ccc"},
-                    "text": { "content":  "5" , attrs: {fill:"#222"} },
+                    "text": { "content":  "7" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 5"
+                            "content": "<span style=\"font-weight:bold;\">Montanha</span><br />Requerimentos : 7"
                     }},"morro_vinte_cinco": {
                     "value": 4,
                     "attrs": { fill: "#709dcd"},
@@ -1440,29 +1602,11 @@ $(function() {
                     "tooltip": {
                             "content": "<span style=\"font-weight:bold;\">São Bento</span><br />Requerimentos : 2"
                     }},"sao_cristovao": {
-                    "value": 15,
-                    "attrs": { fill: "#6b97c8"},
-                    "text": { "content":  "15" , attrs: {fill:"#222"} },
+                    "value": 16,
+                    "attrs": { fill: "#6b98c9"},
+                    "text": { "content":  "16" , attrs: {fill:"#222"} },
                     "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 15"
-                    }}}},"22": { "areas": {"americano": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 1"
-                    }},"centro": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Centro</span><br />Requerimentos : 1"
-                    }}}},"23": { "areas": {"americano": {
-                    "value": 1,
-                    "attrs": { fill: "#719ece"},
-                    "text": { "content":  "1" , attrs: {fill:"#222"} },
-                    "tooltip": {
-                            "content": "<span style=\"font-weight:bold;\">Americano</span><br />Requerimentos : 1"
+                            "content": "<span style=\"font-weight:bold;\">São Cristóvão</span><br />Requerimentos : 16"
                     }}}},};
         $("#cat_requerimento").change(function() {
     value = $("#cat_requerimento").val();

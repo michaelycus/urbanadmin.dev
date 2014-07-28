@@ -9,10 +9,21 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
+                            
+                            <?php
+                            if ($this->session->userdata('mensagem_enviada'))
+                            {
+                                echo '<div class="alert alert-success">'. $this->session->userdata('mensagem_enviada') .'</div>';
+                                $this->session->unset_userdata('mensagem_enviada');
+                            }
+                            ?>
+                            
                             <h4><i class="icon16 i-resize"></i>Informações</h4>
                             <dl class="dl-horizontal">
                                 <?php                                
                                 $retornos  = unserialize(REQUERIMENTO_RETORNOS);
+                                
+                                $status_retorno = get_notification_icon($requerimento->status_retorno);
                                 
                                 echo '<dt>Descrição</dt>';
                                 echo '<dd><pre>' . $requerimento->descricao . '</pre></dd>';
@@ -62,9 +73,16 @@
                                           ($requerimento->situacao==REQUERIMENTO_SITUACAO_ANALISADO ?
                                                 '<img src="'.base_url().'images/avancar_situacao.png" style="cursor: pointer;" onclick="expediente(\''.base_url().'\','.$requerimento->id.')">' :
                                               anchor('requerimentos/avancar_situacao/'.$requerimento->id.'/'.$requerimento->situacao,
-                                                '<img src="'.base_url().'images/avancar_situacao.png">') ) ).
-                                                ' <em>('. $retornos[$requerimento->status_retorno].')</em>'.
+                                                '<img src="'.base_url().'images/avancar_situacao.png">') ) ).                                                
                                          '</dd>';
+                                    
+                                    echo '<dt>Notificação</dt>';
+                                    echo '<dd><em>' . $retornos[$requerimento->status_retorno] . ' ' . $status_retorno . '</em>';
+                                    if ($requerimento->status_retorno == REQUERIMENTO_RETORNO_NAO_NOTIFICADO)
+                                    {
+                                        echo anchor('requerimentos/enviar_notificacao/'.$requerimento->id,' ( Enviar ) ',array('class' => 'btn btn-primary btn-xs confirm_send' ));
+                                    }
+                                    echo '</dd>';
                                     
                                     if ($requerimento->expediente != 0)
                                     {
@@ -173,12 +191,9 @@
     </div><!-- End .row-fluid  -->
 </div>
 
-<link href="<?php echo base_url() ?>js/plugins/misc/gallery/bootstrap-image-gallery.css" rel="stylesheet" />
 <link href="<?php echo base_url() ?>js/plugins/misc/gallery/magnific-popup.css" rel="stylesheet" />
 
 <!-- Misc plugins -->
-<script src="<?php echo base_url() ?>js/plugins/misc/gallery/load-image.min.js"></script>
-<script src="<?php echo base_url() ?>js/plugins/misc/gallery/bootstrap-image-gallery.min.js"></script>
 <script src="<?php echo base_url() ?>js/plugins/misc/gallery/jquery.magnific-popup.min.js"></script>
 
 <script src="<?php echo base_url(); ?>js/maps/raphael.js" charset="utf-8" ></script>

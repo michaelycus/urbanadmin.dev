@@ -222,12 +222,10 @@
                 </div><!-- End .row-fluid  -->
             </div>
 
-            <link href="<?php echo base_url() ?>js/plugins/misc/gallery/bootstrap-image-gallery.css" rel="stylesheet" />
             <link href="<?php echo base_url() ?>js/plugins/misc/gallery/magnific-popup.css" rel="stylesheet" />
 
             <!-- Misc plugins -->
             <script src="<?php echo base_url() ?>js/plugins/misc/gallery/load-image.min.js"></script>
-            <script src="<?php echo base_url() ?>js/plugins/misc/gallery/bootstrap-image-gallery.min.js"></script>
             <script src="<?php echo base_url() ?>js/plugins/misc/gallery/jquery.magnific-popup.min.js"></script>
 
             <script type="text/javascript">

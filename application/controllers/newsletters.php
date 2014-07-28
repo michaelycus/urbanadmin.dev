@@ -15,7 +15,7 @@ class Newsletters extends MY_Controller
         $this->listar_newsletters();
     }
     
-    function criar_newsletter()
+    public function criar_newsletter()
     {
         $this->data['bairros'] = $this->bairro_model->get_bairros();
         
@@ -125,7 +125,7 @@ class Newsletters extends MY_Controller
         $this->load->view('newsletters/descadastrar', $this->data);
     }
     
-    function get_newsletters_ajax($id_bairro)
+    public function get_newsletters_ajax($id_bairro)
     {
         $newsletters = $this->newsletter_model->get_newsletters_by_bairro($id_bairro);
 

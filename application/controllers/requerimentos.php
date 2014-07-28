@@ -104,7 +104,7 @@ class Requerimentos extends MY_Controller
         $this->load_view('requerimentos/outros_requerimentos', TRUE);
     }
 
-    public function cadastrar_requerimento()
+    public function cadastrar_requerimento_old()
     {
         $this->load->library('image_lib');
 
@@ -125,11 +125,12 @@ class Requerimentos extends MY_Controller
         $this->data['cats_requerimento'] = $this->categoria_requerimento_model->order_by('ordem')->get_all();
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento',
+            $data = elements(array('id_bairro','id_rua','cat_requerimento',
                 'id_requerente','id_solicitante'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
 
-            $data['descricao_original'] = $this->input->post('descricao');
+            $data['descricao'] = addslashes($this->input->post('descricao'));
+            $data['descricao_original'] = addslashes($this->input->post('descricao'));
 
             $data['da_sessao'] = $this->input->post('da_sessao') ? 1 : 0;
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
@@ -202,7 +203,7 @@ class Requerimentos extends MY_Controller
         $this->load_view('requerimentos/cadastrar_requerimento');
     }
     
-    public function cadastrar_requerimento_teste()
+    public function cadastrar_requerimento()
     {
         $this->load->library('image_lib');
 
@@ -223,11 +224,12 @@ class Requerimentos extends MY_Controller
         $this->data['cats_requerimento'] = $this->categoria_requerimento_model->order_by('ordem')->get_all();
 
         if ($this->form_validation->run()==TRUE):
-            $data = elements(array('descricao','id_bairro','id_rua','cat_requerimento',
+            $data = elements(array('id_bairro','id_rua','cat_requerimento',
                 'id_requerente','id_solicitante'),$this->input->post());
             $data['data_requerimento'] = $this->form_validation->convert_human_to_sql($_POST['data_requerimento']);
 
-            $data['descricao_original'] = $this->input->post('descricao');
+            $data['descricao'] = addslashes($this->input->post('descricao'));
+            $data['descricao_original'] = addslashes($this->input->post('descricao'));
 
             $data['da_sessao'] = $this->input->post('da_sessao') ? 1 : 0;
             $data['notificar'] = $this->input->post('notificar') ? 1 : 0;
@@ -293,11 +295,11 @@ class Requerimentos extends MY_Controller
 
                 $this->session->set_userdata('requerimento_cadastrado','Requerimento cadastrado com sucesso!');
 
-                redirect('requerimentos/cadastrar_requerimento_teste');
+                redirect('requerimentos/cadastrar_requerimento');
             }
         endif;
 
-        $this->load_view('requerimentos/cadastrar_requerimento_teste');
+        $this->load_view('requerimentos/cadastrar_requerimento');
     }
 
     public function editar_requerimento($id)
@@ -522,8 +524,6 @@ class Requerimentos extends MY_Controller
 
     public function preparar_mensagem($id)
     {
-        $this->requerimento_model->get($id);
-
         $this->data['requerimento'] = $requerimento = $this->requerimento_model->get($id);
         $this->data['bairro'] = $this->bairro_model->get($requerimento->id_bairro);
         $this->data['solicitante'] = $this->requerente_model->get($requerimento->id_solicitante);
@@ -547,6 +547,21 @@ class Requerimentos extends MY_Controller
             $this->data['rua'] = $this->rua_model->get($requerimento->id_rua);
 
         $this->load_view('requerimentos/enviar_mensagem');
+    }
+    
+    public function enviar_notificacao($id)
+    {
+        if ($_SESSION['autorizacao']==AUTORIZACAO_ADMINISTRADOR)
+        {
+            $requerimento = $this->requerimento_model->get($id);
+            $requerente = $this->requerente_model->get($requerimento->id_solicitante);
+             
+            enviar_notificacao_por_email($requerimento, $requerente); 
+            
+            $this->session->set_userdata('mensagem_enviada','Mensagem enviada com sucesso!');
+            
+            redirect('requerimentos/visualizar/'.$id);
+        }
     }
 
     public function enviar_mensagem()
@@ -685,7 +700,7 @@ class Requerimentos extends MY_Controller
         return;
     }
     
-    function get_descricao_ajax($id_cat, $id_bairro, $id_rua)
+    public function get_descricao_ajax($id_cat, $id_bairro, $id_rua)
     {
         $categoria = $this->categoria_requerimento_model->get($id_cat);
         $bairro = $this->bairro_model->get($id_bairro);

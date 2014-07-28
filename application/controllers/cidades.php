@@ -10,7 +10,7 @@ class Cidades extends CI_Controller
         $this->load->model('requerimento_model');
     }
 
-    function get_cidades_ajax($id_estado)
+    public function get_cidades_ajax($id_estado)
     {
         $cidades = $this->cidade_model->get_cidades($id_estado);
 
