@@ -431,6 +431,7 @@ class Requerimentos extends MY_Controller
 
         $this->data['requerimento']->descricao = 'Reitero o Expediente '. $requerimento->expediente . '/' . $requerimento->ano_expediente . '.
     '. $requerimento->descricao;
+        $this->data['requerimento']->data_requerimento = date('Y-m-d');
 
         $this->data['bairros'] = $this->bairro_model->get_bairros();
         $this->data['solicitantes'] = $this->requerente_model->get_all();
