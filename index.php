@@ -20,7 +20,7 @@
  */
 switch ($_SERVER['HTTP_HOST'])
 {
-    case 'localhost':
+    case 'urbanadmin.dev':
         $env = 'development';
         break;
     case 'www.timelinguistico.com.br':

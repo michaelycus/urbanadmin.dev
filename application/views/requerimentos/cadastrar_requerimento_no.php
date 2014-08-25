@@ -42,14 +42,18 @@
                 {
                     echo '<div class="alert alert-success">'. $this->session->userdata('requerimento_cadastrado') .'</div>';
                     $this->session->unset_userdata('requerimento_cadastrado');
-                }
-
-                // descricao
+                }                
+                
+                // cat_requerimento
                 echo '<div class="form-group">';
-                echo form_label('Descrição', 'descricao', array('class' => 'col-lg-3 control-label'));
+                echo    '<label for="cat_requerimento" class="col-lg-3 control-label">Tipo Req.</label>';
                 echo    '<div class="col-lg-9">';
-                echo    form_textarea(array('name' => 'descricao','id' => 'descricao','placeholder' => 'Descrição do requerimento...',
-                            'class' => 'form-control','autofocus' => 'autofocus'), set_value('descricao',$requerimento->descricao));
+                echo        '<select id="cat_requerimento" name="cat_requerimento" class="col-lg-9">';
+                foreach ($cats_requerimento as $c_r)
+                {
+                    echo        '<option value="'.$c_r->id.'" '.set_select('cat_requerimento', $c_r->id, $c_r->id==$requerimento->cat_requerimento).'>'.$c_r->nome.'</option>';
+                }
+                echo        '</select>';
                 echo    '</div>';
                 echo '</div>';
 
@@ -84,19 +88,17 @@
                         }
                 echo    '</div>';
                 echo '</div>';
-
-                // cat_requerimento
+                
+                // descricao
                 echo '<div class="form-group">';
-                echo    '<label for="cat_requerimento" class="col-lg-3 control-label">Tipo Req.</label>';
+                echo form_label('Descrição', 'descricao', array('class' => 'col-lg-3 control-label'));
                 echo    '<div class="col-lg-9">';
-                echo        '<select id="cat_requerimento" name="cat_requerimento" class="col-lg-9">';
-                foreach ($cats_requerimento as $c_r)
-                {
-                    echo        '<option value="'.$c_r->id.'" '.set_select('cat_requerimento', $c_r->id, $c_r->id==$requerimento->cat_requerimento).'>'.$c_r->nome.'</option>';
-                }
-                echo        '</select>';
+                echo    form_textarea(array('name' => 'descricao','id' => 'descricao','placeholder' => 'Descrição do requerimento...',
+                            'class' => 'form-control'), set_value('descricao',$requerimento->descricao));
                 echo    '</div>';
                 echo '</div>';
+
+                
                 
                 ?>
                 <div class="alert alert-info start-hidden" id="div_alerta_lixeira">
@@ -207,7 +209,7 @@
                 echo    '</div>';
                 echo '</div>';
 
-                echo '<hr>';
+                echo '<hr>';               
 
                 echo '<div class="form-group">';
                 echo    '<div class="col-lg-offset-3">';
@@ -245,6 +247,7 @@
 </div>
 
 <script type="text/javascript" src="<?php echo base_url() . 'js/bairro_rua.js'; ?>"></script>
+
 <script type="text/javascript">
     var path = '<?php echo site_url(); ?>';
     
@@ -257,5 +260,30 @@
         {
             $('#div_alerta_lixeira').hide(400);
         }
+        atualizar_desc();
     });
+    
+    $('#id_bairro').change(function() {
+        atualizar_desc();
+    });
+    
+    $('#id_rua').change(function() {
+        atualizar_desc();
+    });
+    
+     $('#descricao').focus(function() {
+        $.jGrowl("<i class='icon16 i-info'></i> Por favor, informe mais detalhes sobre sua requisição no campo DESCRIÇÃO.", {
+            group: 'info',
+            closeTemplate: '<i class="icon16 i-close-2"></i>',
+            life: 15000,
+            pool: 1,
+            position: 'center',
+            animateOpen: {
+                width: 'show',
+                height: 'show'
+            },
+        });
+     });    
+    
 </script>
+<script type="text/javascript" src="<?php echo base_url() . 'js/atualiza_descricao.js'; ?>"></script>

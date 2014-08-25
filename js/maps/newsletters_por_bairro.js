@@ -80,6 +80,26 @@ areas: {                    "americano":{
                                 $('#id_bairro').val( 7 ).change();
                             }
                         }
+                    },                    "jardim_do_cedro":{
+                        value: "1",
+                        text: { content:  1 , attrs: {fill:"#222"} },
+                        href: "#",
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Jardim do Cedro </span><br />Newsletters: 1"},
+                        eventHandlers : {
+                            click : function() {
+                                $('#id_bairro').val( 15 ).change();
+                            }
+                        }
+                    },                    "moinhos_dagua":{
+                        value: "1",
+                        text: { content:  1 , attrs: {fill:"#222"} },
+                        href: "#",
+                        tooltip: {content: "<span style=\"font-weight:bold;\">Moinhos D' Água </span><br />Newsletters: 1"},
+                        eventHandlers : {
+                            click : function() {
+                                $('#id_bairro').val( 17 ).change();
+                            }
+                        }
                     },}
     });
 });

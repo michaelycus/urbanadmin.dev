@@ -6,6 +6,12 @@
     <div class="row">
         <ul class="search-results">
             <li>
+                <a href="#" class="search-string">1.5.2 - 25/08/2014</a>
+                <ul>
+                    <li>Possibilidade de enviar newsletter para todos os bairros</li>                    
+                </ul>
+            </li>
+            <li>
                 <a href="#" class="search-string">1.5.1 - 23/07/2014</a>
                 <ul>
                     <li>Novo cadastro de requerimento</li>

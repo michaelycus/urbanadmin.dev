@@ -15,8 +15,9 @@ class Requerimento_model extends MY_Model
         )
     );
     
-    protected $soft_delete = TRUE;
-    protected $soft_delete_key = 'requerimento_deleted';
+    // Implementar no futuro - Também restruturar todos esses selects
+//    protected $soft_delete = TRUE;
+//    protected $soft_delete_key = 'requerimento_deleted';
 
     function __construct()
     {

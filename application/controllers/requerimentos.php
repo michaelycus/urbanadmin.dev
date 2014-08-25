@@ -104,7 +104,7 @@ class Requerimentos extends MY_Controller
         $this->load_view('requerimentos/outros_requerimentos', TRUE);
     }
 
-    public function cadastrar_requerimento_old()
+    public function cadastrar_requerimento()
     {
         $this->load->library('image_lib');
 
@@ -203,7 +203,7 @@ class Requerimentos extends MY_Controller
         $this->load_view('requerimentos/cadastrar_requerimento');
     }
     
-    public function cadastrar_requerimento()
+    public function cadastrar_requerimento_no()
     {
         $this->load->library('image_lib');
 

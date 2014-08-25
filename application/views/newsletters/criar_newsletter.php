@@ -75,11 +75,12 @@
                 echo    '<label for="id_bairro" class="col-lg-3 control-label">Bairro</label>';
                 echo    '<div class="col-lg-9">';
                 echo        '<select id="id_bairro" name="id_bairro" class="col-lg-9">';
-                echo            '<option value=""> - Todos os bairros - </option>';
+                echo            '<option value=""> - Selecione - </option>';
                 foreach ($bairros as $bairro)
                 {
                     echo        '<option value="'.$bairro->id.'" '.set_select('id_bairro', $bairro->id).'>'.$bairro->nome.'</option>';
                 }
+                echo            '<option value="100">Todos os bairros</option>';
                 echo        '</select>';
                 echo    '</div>';
                 echo '</div>';
@@ -107,23 +108,6 @@
                 </div><!-- End .panel-body -->
            </div><!-- End .widget -->
        </div><!-- End .col-lg-6  -->
-       
-<!--       <script src="<?php echo base_url(); ?>js/maps/raphael.js" charset="utf-8" ></script>
-       <script src="<?php echo base_url(); ?>js/maps/jquery.mapael.js" charset="utf-8" ></script>
-       <script src="<?php echo base_url(); ?>js/maps/cidade.js" charset="utf-8" ></script>
-       <script src="<?php echo base_url(); ?>js/maps/newsletters_por_bairro.js" charset="utf-8" ></script>
-
-       <div class="col-lg-6">
-           <div class="panel panel-default">
-               <div class="panel-body">
-                   <div class="maparea1">
-                       <div class="map">
-                           <span>Alternative content for the map</span>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>-->
 
     </div><!-- End .row-fluid  -->
 </div>

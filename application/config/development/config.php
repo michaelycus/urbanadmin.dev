@@ -14,7 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/registra_requerimento/';
+$config['base_url']	= 'http://urbanadmin.dev/';
+//$config['base_url']	= 'http://localhost/registra_requerimento/';
 
 /*
 |--------------------------------------------------------------------------

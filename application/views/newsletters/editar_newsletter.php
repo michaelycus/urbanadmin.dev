@@ -79,17 +79,18 @@
                 
                 echo    '</div>';
                 echo '</div>';
-                
+                                
                 // id_bairro
                 echo '<div class="form-group">';
                 echo    '<label for="id_bairro" class="col-lg-3 control-label">Bairro</label>';
                 echo    '<div class="col-lg-9">';
                 echo        '<select id="id_bairro" name="id_bairro" class="col-lg-9">';
-                echo            '<option value=""> - Todos os bairros - </option>';
+                echo            '<option value=""> - Selecione - </option>';
                 foreach ($bairros as $bairro)
                 {
-                    echo        '<option value="'.$bairro->id.'" '.set_select('id_bairro', $bairro->id, $bairro->id==$newsletter->id_bairro).'>'.$bairro->nome.'</option>';
+                    echo        '<option value="'.$bairro->id.'" '.set_select('id_bairro', $bairro->id, $bairro->id==$newsletter->id_bairro).'>'.$bairro->nome.'</option>';                    
                 }
+                echo            '<option value="100" '. ($newsletter->id_bairro=100?'selected':'') .'>Todos os bairros</option>';
                 echo        '</select>';
                 echo    '</div>';
                 echo '</div>';
@@ -123,11 +124,13 @@
     </div><!-- End .row-fluid  -->
 </div>
 
+<script type="text/javascript" src="<?php echo base_url() . 'js/carrega_requerentes_bairro.js'; ?>"></script>
 <script>
+    var path = '<?php echo site_url(); ?>';
+    
     $('#editor').wysiwyg();
     
     $('#form').submit(function() {
         $('#mensagem').val($('#editor').html())
     });
 </script>
-
