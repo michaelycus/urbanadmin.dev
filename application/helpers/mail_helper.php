@@ -329,7 +329,7 @@ if (!function_exists('send_message')) {
         $mail->IsHTML(true);
 
         $mail->Username = "vereadorranzi@gmail.com";
-        $mail->Password = "jcilajeado15";
+        $mail->Password = "jl15";
         $mail->SetFrom('vereadorranzi@gmail.com', 'Vereador Carlos Ranzi'); //Quem está enviando o e-mail.
         $mail->AddReplyTo("vereadorranzi@gmail.com","Vereador Carlos Ranzi"); //Para que a resposta será enviada.
 
